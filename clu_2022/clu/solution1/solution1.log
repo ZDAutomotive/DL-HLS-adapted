@@ -1,0 +1,579 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu5ev-sfvc784-2-i'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu5ev-sfvc784-2-i 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: source ./clu/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.052 seconds; current allocated memory: 120.758 MB.
+INFO: [HLS 200-10] Analyzing design file 'uart.c' ... 
+WARNING: [HLS 207-4051] passing 'volatile unsigned char *' to parameter of type 'const void *' discards qualifiers (uart.c:132:34)
+INFO: [HLS 207-4414] passing argument to parameter '_Src' here (D:/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt\x86_64-w64-mingw32\include\string.h:50:95)
+WARNING: [HLS 207-4051] passing 'volatile unsigned char *' to parameter of type 'void *' discards qualifiers (uart.c:154:10)
+INFO: [HLS 207-4414] passing argument to parameter '_Dst' here (D:/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt\x86_64-w64-mingw32\include\string.h:50:64)
+INFO: [HLS 200-10] Analyzing design file 'dlin.c' ... 
+WARNING: [HLS 207-4051] passing 'volatile unsigned char *' to parameter of type 'const void *' discards qualifiers (dlin.c:98:34)
+INFO: [HLS 207-4414] passing argument to parameter '_Src' here (D:/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt\x86_64-w64-mingw32\include\string.h:50:95)
+WARNING: [HLS 207-4051] passing 'volatile unsigned char *' to parameter of type 'void *' discards qualifiers (dlin.c:120:11)
+INFO: [HLS 207-4414] passing argument to parameter '_Dst' here (D:/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt\x86_64-w64-mingw32\include\string.h:50:64)
+WARNING: [HLS 207-4051] passing 'volatile unsigned char *' to parameter of type 'const void *' discards qualifiers (dlin.c:121:5)
+WARNING: [HLS 207-4054] passing 'volatile int *' to parameter of type 'volatile unsigned int *' converts between pointers to integer types with different sign (dlin.c:256:55)
+INFO: [HLS 207-4414] passing argument to parameter 'linbase' here (dlin.c:209:38)
+WARNING: [HLS 207-4054] passing 'volatile int *' to parameter of type 'volatile unsigned int *' converts between pointers to integer types with different sign (dlin.c:256:73)
+INFO: [HLS 200-10] Analyzing design file 'clu.c' ... 
+WARNING: [HLS 207-4051] passing 'volatile unsigned char *' to parameter of type 'void *' discards qualifiers (clu.c:17:9)
+INFO: [HLS 207-4414] passing argument to parameter '_Dst' here (D:/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt\x86_64-w64-mingw32\include\string.h:50:64)
+WARNING: [HLS 207-5546] '#pragma HLS INTERFACE port=return register' is obsoleted and replaced by '#pragma HLS LATENCY min=1 max=1' (clu.c:29:9)
+INFO: [HLS 200-10] Analyzing design file 'can.c' ... 
+WARNING: [HLS 207-4051] passing 'volatile unsigned char *' to parameter of type 'const void *' discards qualifiers (can.c:103:34)
+INFO: [HLS 207-4414] passing argument to parameter '_Src' here (D:/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt\x86_64-w64-mingw32\include\string.h:50:95)
+WARNING: [HLS 207-4051] passing 'volatile unsigned char *' to parameter of type 'void *' discards qualifiers (can.c:126:10)
+INFO: [HLS 207-4414] passing argument to parameter '_Dst' here (D:/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt\x86_64-w64-mingw32\include\string.h:50:64)
+WARNING: [HLS 207-4054] passing 'unsigned char *' to parameter of type 'char *' converts between pointers to integer types with different sign (can.c:232:18)
+INFO: [HLS 207-4414] passing argument to parameter 'data' here (can.c:97:58)
+WARNING: [HLS 207-5292] unused parameter 'FifoNo' (can.c:141:7)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 6.299 seconds; current allocated memory: 121.875 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'update_write_index' into 'write_ddr' (can.c:97:0)
+INFO: [HLS 214-178] Inlining function 'XCanFd_GetDlc2len' into 'recvFrame_logic' (can.c:145:0)
+INFO: [HLS 214-178] Inlining function 'CanFd_Recv_Sequential' into 'can' (can.c:271:0)
+INFO: [HLS 214-178] Inlining function 'update_write_index' into 'ddr_write' (uart.c:126:0)
+INFO: [HLS 214-178] Inlining function 'update_write_index' into 'write_lin_ddr' (dlin.c:92:0)
+INFO: [HLS 214-178] Inlining function 'read_lin_reg' into 'single_lin_process' (dlin.c:133:0)
+INFO: [HLS 214-178] Inlining function 'write_lin_reg' into 'single_lin_process' (dlin.c:133:0)
+INFO: [HLS 214-178] Inlining function 'dlin_FSM' into 'dlin' (dlin.c:253:0)
+INFO: [HLS 214-178] Inlining function 'can' into 'clu' (clu.c:26:0)
+INFO: [HLS 214-178] Inlining function 'uart' into 'clu' (clu.c:26:0)
+INFO: [HLS 214-178] Inlining function 'dlin' into 'clu' (clu.c:26:0)
+INFO: [HLS 214-115] Multiple burst reads of length 28 and bit width 8 in loop 'anonymous'(can.c:103:2) has been inferred on bundle 'ps_ddr'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (can.c:103:2)
+INFO: [HLS 214-115] Multiple burst writes of length 92 and bit width 8 in loop 'anonymous'(can.c:126:3) has been inferred on bundle 'ps_ddr'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (can.c:126:3)
+INFO: [HLS 214-115] Multiple burst writes of length 4 and bit width 8 in loop 'anonymous'(clu.c:17:2) has been inferred on bundle 'ps_ddr'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (clu.c:17:2)
+INFO: [HLS 214-115] Multiple burst reads of length 28 and bit width 8 in loop 'anonymous'(uart.c:132:2) has been inferred on bundle 'ps_ddr'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (uart.c:132:2)
+INFO: [HLS 214-115] Multiple burst writes of length 204 and bit width 8 in loop 'anonymous'(uart.c:154:3) has been inferred on bundle 'ps_ddr'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (uart.c:154:3)
+INFO: [HLS 214-115] Multiple burst reads of length 28 and bit width 8 in loop 'anonymous'(dlin.c:98:2) has been inferred on bundle 'ps_ddr'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (dlin.c:98:2)
+INFO: [HLS 214-115] Multiple burst writes of length 28 and bit width 8 in loop 'anonymous'(dlin.c:120:3) has been inferred on bundle 'ps_ddr'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (dlin.c:120:3)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 6.813 seconds; current allocated memory: 124.090 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.004 seconds; current allocated memory: 124.148 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.093 seconds; current allocated memory: 131.551 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.089 seconds; current allocated memory: 134.051 MB.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' in function 'write_ddr.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-4' in function 'write_ddr.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' in function 'ddr_write.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-4' in function 'ddr_write.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_176_1' (dlin.c:79) in function 'single_lin_process.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' in function 'recvFrame_logic.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_205_1' (can.c:146) in function 'recvFrame_logic.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_219_2' (can.c:146) in function 'recvFrame_logic.1' automatically.
+INFO: [XFORM 203-102] Automatically partitioning small array 'write_index_array' (clu.c:12) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'write_index_array' (clu.c:12) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'write_index_array' (clu.c:12) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'write_index_array' (clu.c:12) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'write_index_array' (clu.c:12) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'write_index_array' (clu.c:12) in dimension 1 completely.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (can.c:150:46) to (can.c:202:7) in function 'recvFrame_logic.1'... converting 4 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.504 seconds; current allocated memory: 158.516 MB.
+INFO: [HLS 200-472] Inferring partial write operation for 'ringbuffer_header_bytes' 
+INFO: [HLS 200-472] Inferring partial write operation for 'ringbuffer_header_bytes' 
+INFO: [HLS 200-472] Inferring partial write operation for 'PL_Ctrl.first_timestamp' (uart.c:186:40)
+INFO: [HLS 200-472] Inferring partial write operation for 'PL_Ctrl.first_time' (uart.c:187:35)
+INFO: [HLS 200-472] Inferring partial write operation for 'uart_fifo' (uart.c:188:29)
+INFO: [HLS 200-472] Inferring partial write operation for 'uart_fifo' (uart.c:189:29)
+INFO: [HLS 200-472] Inferring partial write operation for 'uart_fifo' (uart.c:190:29)
+INFO: [HLS 200-472] Inferring partial write operation for 'uart_fifo' (uart.c:191:29)
+INFO: [HLS 200-472] Inferring partial write operation for 'uart_fifo' (uart.c:192:29)
+INFO: [HLS 200-472] Inferring partial write operation for 'uart_fifo' (uart.c:193:29)
+INFO: [HLS 200-472] Inferring partial write operation for 'uart_fifo' (uart.c:194:29)
+INFO: [HLS 200-472] Inferring partial write operation for 'uart_fifo' (uart.c:195:29)
+INFO: [HLS 200-472] Inferring partial write operation for 'uart_fifo' (uart.c:196:29)
+INFO: [HLS 200-472] Inferring partial write operation for 'uart_fifo' (uart.c:197:29)
+INFO: [HLS 200-472] Inferring partial write operation for 'uart_fifo' (uart.c:203:39)
+INFO: [HLS 200-472] Inferring partial write operation for 'PL_Ctrl.fifo_index' (uart.c:204:34)
+INFO: [HLS 200-472] Inferring partial write operation for 'PL_Header.pkt_len_bytes' (uart.c:205:39)
+INFO: [HLS 200-472] Inferring partial write operation for 'uart_fifo' (uart.c:206:29)
+INFO: [HLS 200-472] Inferring partial write operation for 'uart_fifo' (uart.c:207:29)
+INFO: [HLS 200-472] Inferring partial write operation for 'lin_frame' 
+INFO: [HLS 200-472] Inferring partial write operation for 'PLIN_Ctrl.run_state' (dlin.c:158:30)
+INFO: [HLS 200-472] Inferring partial write operation for 'lin_frame' (dlin.c:179:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'lin_frame' (dlin.c:182:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'lin_frame' (dlin.c:183:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'lin_frame' (dlin.c:184:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'lin_frame' (dlin.c:185:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'lin_frame' (dlin.c:186:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'lin_frame' (dlin.c:187:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'lin_frame' (dlin.c:188:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'lin_frame' (dlin.c:189:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'lin_frame' (dlin.c:190:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'lin_frame' (dlin.c:191:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'lin_frame' (dlin.c:192:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'lin_frame' (dlin.c:193:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'lin_frame' (dlin.c:195:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'lin_frame' (dlin.c:196:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'lin_frame' (dlin.c:197:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'lin_frame' (dlin.c:198:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'PLIN_Ctrl.run_state' (dlin.c:203:29)
+INFO: [HLS 200-472] Inferring partial write operation for 'can_frame' 
+INFO: [HLS 200-472] Inferring partial write operation for 'can_frame' (can.c:153:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'can_frame' (can.c:158:20)
+INFO: [HLS 200-472] Inferring partial write operation for 'can_frame' (can.c:165:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'can_frame' (can.c:166:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'can_frame' (can.c:167:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'can_frame' (can.c:168:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'can_frame' (can.c:185:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'can_frame' (can.c:186:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'can_frame' (can.c:187:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'can_frame' (can.c:188:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'can_frame' (can.c:189:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'can_frame' (can.c:190:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'can_frame' (can.c:191:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'can_frame' (can.c:192:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'can_frame' (can.c:193:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'can_frame' (can.c:194:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'can_frame' (can.c:195:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'can_frame' (can.c:196:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'can_frame' (can.c:198:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'can_frame' (can.c:200:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'can_frame' (can.c:209:28)
+INFO: [HLS 200-472] Inferring partial write operation for 'can_frame' (can.c:210:32)
+INFO: [HLS 200-472] Inferring partial write operation for 'can_frame' (can.c:211:32)
+INFO: [HLS 200-472] Inferring partial write operation for 'can_frame' (can.c:212:32)
+INFO: [HLS 200-472] Inferring partial write operation for 'can_frame' (can.c:222:28)
+INFO: [HLS 200-472] Inferring partial write operation for 'can_frame' (can.c:223:32)
+INFO: [HLS 200-472] Inferring partial write operation for 'can_frame' (can.c:224:32)
+INFO: [HLS 200-472] Inferring partial write operation for 'can_frame' (can.c:225:32)
+INFO: [HLS 200-472] Inferring partial write operation for 'ringbuffer_header_bytes' 
+INFO: [HLS 200-472] Inferring partial write operation for 'PL_Ctrl.fifo_index' (uart.c:160:32)
+INFO: [HLS 200-472] Inferring partial write operation for 'PL_Header.pkt_len_bytes' (uart.c:161:37)
+INFO: [HLS 200-472] Inferring partial write operation for 'PL_Ctrl.first_time' (uart.c:162:32)
+INFO: [HLS 200-472] Inferring partial write operation for 'PL_Ctrl.first_timestamp' (uart.c:163:37)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.002 seconds; current allocated memory: 278.953 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'clu' ...
+WARNING: [SYN 201-103] Legalizing function name 'ddr_write.1_Pipeline_1' to 'ddr_write_1_Pipeline_1'.
+WARNING: [SYN 201-103] Legalizing function name 'ddr_write.1_Pipeline_2' to 'ddr_write_1_Pipeline_2'.
+WARNING: [SYN 201-103] Legalizing function name 'ddr_write.1' to 'ddr_write_1'.
+WARNING: [SYN 201-103] Legalizing function name 'uart_data_read.1' to 'uart_data_read_1'.
+WARNING: [SYN 201-103] Legalizing function name 'single_lin_process.1_Pipeline_VITIS_LOOP_176_1' to 'single_lin_process_1_Pipeline_VITIS_LOOP_176_1'.
+WARNING: [SYN 201-103] Legalizing function name 'write_lin_ddr.1' to 'write_lin_ddr_1'.
+WARNING: [SYN 201-103] Legalizing function name 'single_lin_process.1' to 'single_lin_process_1'.
+WARNING: [SYN 201-103] Legalizing function name 'recvFrame_logic.1_Pipeline_1' to 'recvFrame_logic_1_Pipeline_1'.
+WARNING: [SYN 201-103] Legalizing function name 'recvFrame_logic.1_Pipeline_VITIS_LOOP_219_2' to 'recvFrame_logic_1_Pipeline_VITIS_LOOP_219_2'.
+WARNING: [SYN 201-103] Legalizing function name 'recvFrame_logic.1_Pipeline_VITIS_LOOP_205_1' to 'recvFrame_logic_1_Pipeline_VITIS_LOOP_205_1'.
+WARNING: [SYN 201-103] Legalizing function name 'write_ddr.1_Pipeline_1' to 'write_ddr_1_Pipeline_1'.
+WARNING: [SYN 201-103] Legalizing function name 'write_ddr.1_Pipeline_2' to 'write_ddr_1_Pipeline_2'.
+WARNING: [SYN 201-103] Legalizing function name 'write_ddr.1' to 'write_ddr_1'.
+WARNING: [SYN 201-103] Legalizing function name 'recvFrame_logic.1' to 'recvFrame_logic_1'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ddr_write_1_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.503 seconds; current allocated memory: 283.984 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 285.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ddr_write_1_Pipeline_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.108 seconds; current allocated memory: 285.578 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.085 seconds; current allocated memory: 285.613 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ddr_write_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.259 seconds; current allocated memory: 286.766 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.438 seconds; current allocated memory: 287.000 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'uart_data_read_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.353 seconds; current allocated memory: 288.027 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.273 seconds; current allocated memory: 288.496 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'single_lin_process_1_Pipeline_VITIS_LOOP_176_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_176_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 10, loop 'VITIS_LOOP_176_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.292 seconds; current allocated memory: 288.695 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.101 seconds; current allocated memory: 288.719 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'write_lin_ddr_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.291 seconds; current allocated memory: 289.984 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.466 seconds; current allocated memory: 290.145 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'single_lin_process_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [HLS 200-871] Estimated clock period (7.587ns) exceeds the target (target clock period: 10ns, clock uncertainty: 2.7ns, effective delay budget: 7.3ns).
+WARNING: [HLS 200-1016] The critical path in module 'single_lin_process_1' consists of the following:	bus read operation ('clu_addr_addr_read', dlin.c:81) on port 'clu_addr' (dlin.c:81) [44]  (7.3 ns)
+	blocking operation 0.287 ns on control path)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.389 seconds; current allocated memory: 291.191 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.316 seconds; current allocated memory: 291.328 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'recvFrame_logic_1_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.239 seconds; current allocated memory: 291.738 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.069 seconds; current allocated memory: 291.828 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'recvFrame_logic_1_Pipeline_VITIS_LOOP_219_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_219_2'.
+WARNING: [HLS 200-885] The II Violation in module 'recvFrame_logic_1_Pipeline_VITIS_LOOP_219_2' (loop 'VITIS_LOOP_219_2'): Unable to schedule 'store' operation ('can_frame_addr_1_write_ln223', can.c:223) of variable 'trunc_ln18', can.c:223 on array 'can_frame' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'can_frame'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 11, loop 'VITIS_LOOP_219_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.162 seconds; current allocated memory: 292.195 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.131 seconds; current allocated memory: 292.270 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'recvFrame_logic_1_Pipeline_VITIS_LOOP_205_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_205_1'.
+WARNING: [HLS 200-885] The II Violation in module 'recvFrame_logic_1_Pipeline_VITIS_LOOP_205_1' (loop 'VITIS_LOOP_205_1'): Unable to schedule 'store' operation ('can_frame_addr_4_write_ln210', can.c:210) of variable 'trunc_ln21', can.c:210 on array 'can_frame' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'can_frame'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 11, loop 'VITIS_LOOP_205_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.221 seconds; current allocated memory: 292.633 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.145 seconds; current allocated memory: 292.633 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'write_ddr_1_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.155 seconds; current allocated memory: 292.812 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.079 seconds; current allocated memory: 292.820 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'write_ddr_1_Pipeline_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.113 seconds; current allocated memory: 293.027 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.086 seconds; current allocated memory: 293.211 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'write_ddr_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.268 seconds; current allocated memory: 293.773 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.455 seconds; current allocated memory: 294.012 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'recvFrame_logic_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.368 seconds; current allocated memory: 295.188 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.34 seconds; current allocated memory: 295.645 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'clu' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.494 seconds; current allocated memory: 296.309 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.339 seconds; current allocated memory: 296.883 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ddr_write_1_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'ddr_write_1_Pipeline_1' pipeline 'Loop 1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'ddr_write_1_Pipeline_1/m_axi_ps_ddr_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ddr_write_1_Pipeline_1/m_axi_ps_ddr_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ddr_write_1_Pipeline_1/m_axi_ps_ddr_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ddr_write_1_Pipeline_1/m_axi_ps_ddr_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ddr_write_1_Pipeline_1/m_axi_ps_ddr_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ddr_write_1_Pipeline_1/m_axi_ps_ddr_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ddr_write_1_Pipeline_1/m_axi_ps_ddr_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ddr_write_1_Pipeline_1/m_axi_ps_ddr_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ddr_write_1_Pipeline_1/m_axi_ps_ddr_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ddr_write_1_Pipeline_1/m_axi_ps_ddr_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ddr_write_1_Pipeline_1/m_axi_ps_ddr_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ddr_write_1_Pipeline_1/m_axi_ps_ddr_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ddr_write_1_Pipeline_1/m_axi_ps_ddr_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ddr_write_1_Pipeline_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.901 seconds; current allocated memory: 298.988 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ddr_write_1_Pipeline_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'ddr_write_1_Pipeline_2' pipeline 'Loop 1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'ddr_write_1_Pipeline_2/m_axi_ps_ddr_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ddr_write_1_Pipeline_2/m_axi_ps_ddr_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ddr_write_1_Pipeline_2/m_axi_ps_ddr_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ddr_write_1_Pipeline_2/m_axi_ps_ddr_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ddr_write_1_Pipeline_2/m_axi_ps_ddr_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ddr_write_1_Pipeline_2/m_axi_ps_ddr_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ddr_write_1_Pipeline_2/m_axi_ps_ddr_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ddr_write_1_Pipeline_2/m_axi_ps_ddr_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ddr_write_1_Pipeline_2/m_axi_ps_ddr_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ddr_write_1_Pipeline_2/m_axi_ps_ddr_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ddr_write_1_Pipeline_2/m_axi_ps_ddr_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ddr_write_1_Pipeline_2/m_axi_ps_ddr_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ddr_write_1_Pipeline_2/m_axi_ps_ddr_BREADY' to 0.
+INFO: [RTGEN 206-100] Generating core module 'mux_42_8_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ddr_write_1_Pipeline_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.498 seconds; current allocated memory: 300.480 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ddr_write_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'dropped_uart_counter' is power-on initialization.
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_9ns_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_3ns_9ns_11_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_32ns_32ns_32_36_seq_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ddr_write_1'.
+INFO: [RTMG 210-278] Implementing memory 'clu_ddr_write_1_ringbuffer_header_bytes_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.365 seconds; current allocated memory: 303.500 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'uart_data_read_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'internal_uart_counter' is power-on initialization.
+INFO: [RTGEN 206-100] Generating core module 'mul_3ns_9ns_11_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'uart_data_read_1'.
+INFO: [RTMG 210-278] Implementing memory 'clu_uart_data_read_1_PL_Ctrl_fifo_index_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'clu_uart_data_read_1_PL_Ctrl_first_time_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'clu_uart_data_read_1_PL_Ctrl_first_timestamp_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'clu_uart_data_read_1_uart_fifo_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'clu_uart_data_read_1_PL_Header_pkt_len_bytes_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.509 seconds; current allocated memory: 306.746 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'single_lin_process_1_Pipeline_VITIS_LOOP_176_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'single_lin_process_1_Pipeline_VITIS_LOOP_176_1' pipeline 'VITIS_LOOP_176_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'single_lin_process_1_Pipeline_VITIS_LOOP_176_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.617 seconds; current allocated memory: 309.844 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'write_lin_ddr_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'dropped_lin_counter' is power-on initialization.
+INFO: [RTGEN 206-100] Generating core module 'mux_42_8_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_32ns_32ns_32_36_seq_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'write_lin_ddr_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.238 seconds; current allocated memory: 312.555 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'single_lin_process_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'PL_Data' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'internal_lin_counter' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'single_lin_process_1'.
+INFO: [RTMG 210-278] Implementing memory 'clu_single_lin_process_1_PLIN_Ctrl_run_state_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'clu_single_lin_process_1_lin_frame_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.489 seconds; current allocated memory: 316.219 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'recvFrame_logic_1_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'recvFrame_logic_1_Pipeline_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.41 seconds; current allocated memory: 318.699 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'recvFrame_logic_1_Pipeline_VITIS_LOOP_219_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'recvFrame_logic_1_Pipeline_VITIS_LOOP_219_2' pipeline 'VITIS_LOOP_219_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'recvFrame_logic_1_Pipeline_VITIS_LOOP_219_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.127 seconds; current allocated memory: 319.465 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'recvFrame_logic_1_Pipeline_VITIS_LOOP_205_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'recvFrame_logic_1_Pipeline_VITIS_LOOP_205_1' pipeline 'VITIS_LOOP_205_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'recvFrame_logic_1_Pipeline_VITIS_LOOP_205_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.302 seconds; current allocated memory: 321.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'write_ddr_1_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'write_ddr_1_Pipeline_1' pipeline 'Loop 1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_1/m_axi_ps_ddr_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_1/m_axi_ps_ddr_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_1/m_axi_ps_ddr_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_1/m_axi_ps_ddr_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_1/m_axi_ps_ddr_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_1/m_axi_ps_ddr_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_1/m_axi_ps_ddr_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_1/m_axi_ps_ddr_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_1/m_axi_ps_ddr_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_1/m_axi_ps_ddr_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_1/m_axi_ps_ddr_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_1/m_axi_ps_ddr_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_1/m_axi_ps_ddr_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'write_ddr_1_Pipeline_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.473 seconds; current allocated memory: 323.027 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'write_ddr_1_Pipeline_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'write_ddr_1_Pipeline_2' pipeline 'Loop 1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_2/m_axi_ps_ddr_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_2/m_axi_ps_ddr_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_2/m_axi_ps_ddr_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_2/m_axi_ps_ddr_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_2/m_axi_ps_ddr_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_2/m_axi_ps_ddr_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_2/m_axi_ps_ddr_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_2/m_axi_ps_ddr_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_2/m_axi_ps_ddr_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_2/m_axi_ps_ddr_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_2/m_axi_ps_ddr_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_2/m_axi_ps_ddr_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_2/m_axi_ps_ddr_BREADY' to 0.
+INFO: [RTGEN 206-100] Generating core module 'mux_42_8_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'write_ddr_1_Pipeline_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.378 seconds; current allocated memory: 323.836 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'write_ddr_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'dropped_can_counter' is power-on initialization.
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_8ns_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_32ns_32ns_32_36_seq_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'write_ddr_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.214 seconds; current allocated memory: 326.461 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'recvFrame_logic_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'internal_can_counter' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'recvFrame_logic_1'.
+INFO: [RTMG 210-278] Implementing memory 'clu_recvFrame_logic_1_can_frame_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.449 seconds; current allocated memory: 330.504 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'clu' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'clu/clu_addr' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'clu/ps_ddr' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'clu/can_ptr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'clu/uart_ptr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'clu/lin_ptr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'clu/received_can' to 's_axilite & ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'clu/received_uart' to 's_axilite & ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'clu/received_lin' to 's_axilite & ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'clu/can_en' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'clu/uart_en' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'clu/lin_en' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'clu/can_ddr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'clu/uart_ddr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'clu/lin_ddr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'clu/timestamp' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'clu' to 's_axilite & ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'mode_nr' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'can_ptr', 'uart_ptr', 'lin_ptr', 'received_can', 'received_uart', 'received_lin', 'can_en', 'uart_en', 'lin_en', 'can_ddr', 'uart_ddr', 'lin_ddr' and 'return' to AXI-Lite port EN.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'clu'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.232 seconds; current allocated memory: 336.344 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.115 seconds; current allocated memory: 342.879 MB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.381 seconds; current allocated memory: 354.426 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for clu.
+INFO: [VLOG 209-307] Generating Verilog RTL for clu.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 131.80 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 18 seconds. CPU system time: 1 seconds. Elapsed time: 34.723 seconds; current allocated memory: 233.707 MB.
+INFO: [HLS 200-112] Total CPU user time: 20 seconds. Total CPU system time: 3 seconds. Total elapsed time: 47.299 seconds; peak allocated memory: 354.508 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu5ev-sfvc784-2-i'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu5ev-sfvc784-2-i 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: source ./clu/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file clu/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 15.657 seconds; current allocated memory: 10.207 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 1 seconds. Total elapsed time: 28.107 seconds; peak allocated memory: 131.145 MB.

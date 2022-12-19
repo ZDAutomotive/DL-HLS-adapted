@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="can.c" path="D:\clu_2022\can.c"/>
+    <originFiles name="can.h" path="D:\clu_2022\can.h"/>
+    <originFiles name="clu.c" path="D:\clu_2022\clu.c"/>
+    <originFiles name="clu.h" path="D:\clu_2022\clu.h"/>
+    <originFiles name="dlin.c" path="D:\clu_2022\dlin.c"/>
+    <originFiles name="uart.c" path="D:\clu_2022\uart.c"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

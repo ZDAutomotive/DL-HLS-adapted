@@ -1,0 +1,1712 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1671196051929">
+  <ports id="1" name="clu_addr" type="PortType" coreId="1969317477" bitwidth="32" direction="DirInOut" iftype="IfTypeFifo">
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="ps_ddr" type="PortType" coreId="1885415022" bitwidth="8" direction="DirInOut" iftype="IfTypeFifo">
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataInputObjs>call</dataInputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="3" name="can_ptr" type="PortType" originalName="can_ptr" coreId="1819113472" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="uart_ptr" type="PortType" originalName="uart_ptr" coreId="1634301042" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="lin_ptr" type="PortType" originalName="lin_ptr" coreId="1881173089" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="6" name="received_can" type="PortType" originalName="received_can" coreId="1330010112" bitwidth="32" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="7" name="received_uart" type="PortType" originalName="received_uart" coreId="1818575932" bitwidth="32" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="8" name="received_lin" type="PortType" originalName="received_lin" coreId="4044794464" bitwidth="32" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="9" name="can_en" type="PortType" originalName="can_en" coreId="779709548" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="10" name="uart_en" type="PortType" originalName="uart_en" coreId="1869833472" bitwidth="8">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="11" name="lin_en" type="PortType" originalName="lin_en" coreId="1953394531" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="12" name="can_ddr" type="PortType" originalName="can_ddr" coreId="1701978146" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="13" name="uart_ddr" type="PortType" originalName="uart_ddr" coreId="0" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="14" name="lin_ddr" type="PortType" originalName="lin_ddr" coreId="3944183592" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="15" name="timestamp" type="PortType" originalName="timestamp" coreId="1819113472" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <edges id="190" source_obj="//@ports.14" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="193" source_obj="//@ports.13" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="195" source_obj="//@ports.12" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="197" source_obj="//@ports.11" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="199" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="201" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="203" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="204" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="205" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="206" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="209" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="212" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="217" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="218" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="222" source_obj="//@ports.8" sink_obj="//@blocks.11/@node_objs.1"/>
+  <edges id="223" source_obj="//@blocks.11/@node_objs.1" sink_obj="//@blocks.11/@node_objs.2"/>
+  <edges id="225" source_obj="//@blocks.11/@node_objs.0" sink_obj="//@blocks.11/@node_objs.3"/>
+  <edges id="226" edge_type="CtrlEdge" source_obj="//@blocks.12" sink_obj="//@blocks.11/@node_objs.4"/>
+  <edges id="227" source_obj="//@blocks.11/@node_objs.0" sink_obj="//@blocks.12/@node_objs.0"/>
+  <edges id="228" source_obj="//@blocks.12/@node_objs.0" sink_obj="//@blocks.12/@node_objs.1"/>
+  <edges id="231" source_obj="//@blocks.12/@node_objs.0" sink_obj="//@blocks.12/@node_objs.2"/>
+  <edges id="234" source_obj="//@blocks.12/@node_objs.1" sink_obj="//@blocks.12/@node_objs.3"/>
+  <edges id="235" edge_type="CtrlEdge" source_obj="//@blocks.13" sink_obj="//@blocks.12/@node_objs.3"/>
+  <edges id="236" edge_type="CtrlEdge" source_obj="//@blocks.18" sink_obj="//@blocks.12/@node_objs.3"/>
+  <edges id="237" source_obj="//@blocks.12/@node_objs.0" sink_obj="//@blocks.13/@node_objs.0"/>
+  <edges id="240" source_obj="//@blocks.13/@node_objs.0" sink_obj="//@blocks.13/@node_objs.1"/>
+  <edges id="241" source_obj="//@blocks.11/@node_objs.2" sink_obj="//@blocks.13/@node_objs.2"/>
+  <edges id="242" source_obj="//@blocks.13/@node_objs.1" sink_obj="//@blocks.13/@node_objs.2"/>
+  <edges id="243" source_obj="//@blocks.13/@node_objs.2" sink_obj="//@blocks.13/@node_objs.3"/>
+  <edges id="246" source_obj="//@blocks.13/@node_objs.3" sink_obj="//@blocks.13/@node_objs.4"/>
+  <edges id="247" edge_type="CtrlEdge" source_obj="//@blocks.14" sink_obj="//@blocks.13/@node_objs.4"/>
+  <edges id="248" edge_type="CtrlEdge" source_obj="//@blocks.17" sink_obj="//@blocks.13/@node_objs.4"/>
+  <edges id="251" source_obj="//@blocks.12/@node_objs.0" sink_obj="//@blocks.14/@node_objs.0"/>
+  <edges id="254" source_obj="//@blocks.14/@node_objs.0" sink_obj="//@blocks.14/@node_objs.1"/>
+  <edges id="255" source_obj="//@blocks.14/@node_objs.1" sink_obj="//@blocks.14/@node_objs.2"/>
+  <edges id="256" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.14/@node_objs.2"/>
+  <edges id="257" source_obj="//@blocks.14/@node_objs.0" sink_obj="//@blocks.14/@node_objs.3"/>
+  <edges id="260" source_obj="//@blocks.14/@node_objs.3" sink_obj="//@blocks.14/@node_objs.4"/>
+  <edges id="261" source_obj="//@blocks.14/@node_objs.4" sink_obj="//@blocks.14/@node_objs.5"/>
+  <edges id="262" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.14/@node_objs.5"/>
+  <edges id="265" source_obj="//@blocks.14/@node_objs.5" sink_obj="//@blocks.14/@node_objs.6"/>
+  <edges id="270" source_obj="//@blocks.14/@node_objs.6" sink_obj="//@blocks.14/@node_objs.7"/>
+  <edges id="271" source_obj="//@ports.0" sink_obj="//@blocks.14/@node_objs.8"/>
+  <edges id="272" source_obj="//@blocks.14/@node_objs.7" sink_obj="//@blocks.14/@node_objs.8"/>
+  <edges id="275" source_obj="//@blocks.14/@node_objs.8" sink_obj="//@blocks.14/@node_objs.9"/>
+  <edges id="279" source_obj="//@blocks.14/@node_objs.8" sink_obj="//@blocks.14/@node_objs.10"/>
+  <edges id="280" source_obj="//@blocks.14/@node_objs.10" sink_obj="//@blocks.14/@node_objs.11"/>
+  <edges id="283" source_obj="//@blocks.14/@node_objs.10" sink_obj="//@blocks.14/@node_objs.12"/>
+  <edges id="288" source_obj="//@blocks.14/@node_objs.12" sink_obj="//@blocks.14/@node_objs.13"/>
+  <edges id="292" source_obj="//@blocks.14/@node_objs.10" sink_obj="//@blocks.14/@node_objs.14"/>
+  <edges id="297" source_obj="//@blocks.14/@node_objs.14" sink_obj="//@blocks.14/@node_objs.15"/>
+  <edges id="300" source_obj="//@blocks.14/@node_objs.10" sink_obj="//@blocks.14/@node_objs.16"/>
+  <edges id="304" source_obj="//@blocks.14/@node_objs.10" sink_obj="//@blocks.14/@node_objs.17"/>
+  <edges id="309" source_obj="//@blocks.14/@node_objs.16" sink_obj="//@blocks.14/@node_objs.18"/>
+  <edges id="312" source_obj="//@blocks.14/@node_objs.17" sink_obj="//@blocks.14/@node_objs.18"/>
+  <edges id="315" source_obj="//@blocks.14/@node_objs.18" sink_obj="//@blocks.14/@node_objs.19"/>
+  <edges id="318" source_obj="//@blocks.14/@node_objs.19" sink_obj="//@blocks.14/@node_objs.20"/>
+  <edges id="319" edge_type="CtrlEdge" source_obj="//@blocks.15" sink_obj="//@blocks.14/@node_objs.20"/>
+  <edges id="320" edge_type="CtrlEdge" source_obj="//@blocks.16" sink_obj="//@blocks.14/@node_objs.20"/>
+  <edges id="321" source_obj="//@blocks.14/@node_objs.13" sink_obj="//@blocks.15/@node_objs.0"/>
+  <edges id="322" source_obj="//@blocks.14/@node_objs.11" sink_obj="//@blocks.15/@node_objs.0"/>
+  <edges id="325" source_obj="//@blocks.15/@node_objs.0" sink_obj="//@blocks.15/@node_objs.1"/>
+  <edges id="328" source_obj="//@blocks.14/@node_objs.10" sink_obj="//@blocks.15/@node_objs.2"/>
+  <edges id="333" source_obj="//@blocks.15/@node_objs.2" sink_obj="//@blocks.15/@node_objs.3"/>
+  <edges id="335" source_obj="//@blocks.14/@node_objs.15" sink_obj="//@blocks.15/@node_objs.4"/>
+  <edges id="336" source_obj="//@blocks.15/@node_objs.3" sink_obj="//@blocks.15/@node_objs.4"/>
+  <edges id="337" source_obj="//@blocks.15/@node_objs.1" sink_obj="//@blocks.15/@node_objs.4"/>
+  <edges id="340" source_obj="//@ports.0" sink_obj="//@blocks.15/@node_objs.5"/>
+  <edges id="341" source_obj="//@blocks.14/@node_objs.2" sink_obj="//@blocks.15/@node_objs.5"/>
+  <edges id="342" source_obj="//@ports.1" sink_obj="//@blocks.15/@node_objs.5"/>
+  <edges id="343" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.15/@node_objs.5"/>
+  <edges id="344" source_obj="//@blocks.15/@node_objs.4" sink_obj="//@blocks.15/@node_objs.5"/>
+  <edges id="345" source_obj="//@blocks.12/@node_objs.0" sink_obj="//@blocks.15/@node_objs.5"/>
+  <edges id="346" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.15/@node_objs.5"/>
+  <edges id="347" source_obj="//@blocks.15/@node_objs.5" sink_obj="//@ports.5"/>
+  <edges id="348" edge_type="CtrlEdge" source_obj="//@blocks.16" sink_obj="//@blocks.15/@node_objs.6"/>
+  <edges id="349" edge_type="CtrlEdge" source_obj="//@blocks.17" sink_obj="//@blocks.16/@node_objs.0"/>
+  <edges id="350" source_obj="//@blocks.12/@node_objs.2" sink_obj="//@blocks.17/@node_objs.0"/>
+  <edges id="351" source_obj="//@blocks.11/@node_objs.0" sink_obj="//@blocks.17/@node_objs.0"/>
+  <edges id="352" edge_type="CtrlEdge" source_obj="//@blocks.12" sink_obj="//@blocks.17/@node_objs.1"/>
+  <edges id="354" sink_obj="//@blocks.18/@node_objs.0"/>
+  <edges id="355" edge_type="CtrlEdge" source_obj="//@blocks.19" sink_obj="//@blocks.18/@node_objs.1"/>
+  <edges id="356" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="357" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="360" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="362" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="363" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="364" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="365" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="368" source_obj="//@ports.9" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="371" source_obj="//@ports.1" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="372" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="373" source_obj="//@ports.0" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="374" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="375" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="376" source_obj="//@blocks.3/@node_objs.1" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="377" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="378" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@ports.6"/>
+  <edges id="379" source_obj="//@blocks.2/@node_objs.2" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="380" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="381" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3/@node_objs.4"/>
+  <edges id="383" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="384" edge_type="CtrlEdge" source_obj="//@blocks.19" sink_obj="//@blocks.4/@node_objs.1"/>
+  <edges id="387" source_obj="//@ports.10" sink_obj="//@blocks.5/@node_objs.1"/>
+  <edges id="388" source_obj="//@blocks.5/@node_objs.1" sink_obj="//@blocks.5/@node_objs.2"/>
+  <edges id="390" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.5/@node_objs.3"/>
+  <edges id="391" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.5/@node_objs.4"/>
+  <edges id="392" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="393" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="396" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.6/@node_objs.2"/>
+  <edges id="398" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@blocks.6/@node_objs.3"/>
+  <edges id="399" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.6/@node_objs.3"/>
+  <edges id="400" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.6/@node_objs.3"/>
+  <edges id="401" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="404" source_obj="//@blocks.7/@node_objs.0" sink_obj="//@blocks.7/@node_objs.1"/>
+  <edges id="405" source_obj="//@blocks.5/@node_objs.2" sink_obj="//@blocks.7/@node_objs.2"/>
+  <edges id="406" source_obj="//@blocks.7/@node_objs.1" sink_obj="//@blocks.7/@node_objs.2"/>
+  <edges id="407" source_obj="//@blocks.7/@node_objs.2" sink_obj="//@blocks.7/@node_objs.3"/>
+  <edges id="410" source_obj="//@blocks.7/@node_objs.3" sink_obj="//@blocks.7/@node_objs.4"/>
+  <edges id="411" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.7/@node_objs.4"/>
+  <edges id="412" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.7/@node_objs.4"/>
+  <edges id="415" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="417" source_obj="//@blocks.8/@node_objs.0" sink_obj="//@blocks.8/@node_objs.1"/>
+  <edges id="418" source_obj="//@blocks.8/@node_objs.1" sink_obj="//@blocks.8/@node_objs.2"/>
+  <edges id="419" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.8/@node_objs.2"/>
+  <edges id="422" source_obj="//@ports.0" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="423" source_obj="//@blocks.8/@node_objs.2" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="424" source_obj="//@ports.1" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="425" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="426" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="427" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="428" source_obj="//@blocks.8/@node_objs.3" sink_obj="//@ports.7"/>
+  <edges id="429" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.8/@node_objs.4"/>
+  <edges id="430" source_obj="//@blocks.6/@node_objs.2" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="431" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="432" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.9/@node_objs.1"/>
+  <edges id="435" sink_obj="//@blocks.10/@node_objs.0"/>
+  <edges id="436" edge_type="CtrlEdge" source_obj="//@blocks.19" sink_obj="//@blocks.10/@node_objs.1"/>
+  <edges id="437" sink_obj="//@blocks.15/@node_objs.5"/>
+  <edges id="438" sink_obj="//@blocks.15/@node_objs.5"/>
+  <edges id="439" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="440" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="441" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="442" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="443" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="444" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="445" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="446" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="447" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="448" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="449" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="1057" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.11"/>
+  <edges id="1058" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.5"/>
+  <edges id="1059" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="1060" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="1061" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.4"/>
+  <edges id="1062" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3"/>
+  <edges id="1063" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.2" is_back_edge="1"/>
+  <edges id="1064" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.19"/>
+  <edges id="1065" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.6"/>
+  <edges id="1066" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.10"/>
+  <edges id="1067" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.7"/>
+  <edges id="1068" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.9"/>
+  <edges id="1069" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.8"/>
+  <edges id="1070" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.9"/>
+  <edges id="1071" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.6" is_back_edge="1"/>
+  <edges id="1072" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.19"/>
+  <edges id="1073" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.12"/>
+  <edges id="1074" edge_type="CtrlEdge" source_obj="//@blocks.12" sink_obj="//@blocks.18"/>
+  <edges id="1075" edge_type="CtrlEdge" source_obj="//@blocks.12" sink_obj="//@blocks.13"/>
+  <edges id="1076" edge_type="CtrlEdge" source_obj="//@blocks.13" sink_obj="//@blocks.17"/>
+  <edges id="1077" edge_type="CtrlEdge" source_obj="//@blocks.13" sink_obj="//@blocks.14"/>
+  <edges id="1078" edge_type="CtrlEdge" source_obj="//@blocks.14" sink_obj="//@blocks.16"/>
+  <edges id="1079" edge_type="CtrlEdge" source_obj="//@blocks.14" sink_obj="//@blocks.15"/>
+  <edges id="1080" edge_type="CtrlEdge" source_obj="//@blocks.15" sink_obj="//@blocks.16"/>
+  <edges id="1081" edge_type="CtrlEdge" source_obj="//@blocks.16" sink_obj="//@blocks.17"/>
+  <edges id="1082" edge_type="CtrlEdge" source_obj="//@blocks.17" sink_obj="//@blocks.12" is_back_edge="1"/>
+  <edges id="1083" edge_type="CtrlEdge" source_obj="//@blocks.18" sink_obj="//@blocks.19"/>
+  <edges id="1084" edge_type="VirtEdge" source_obj="//@blocks.14/@node_objs.9" sink_obj="//@blocks.14/@node_objs.10"/>
+  <edges id="1085" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.18/@node_objs.0"/>
+  <edges id="1086" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.10/@node_objs.0"/>
+  <edges id="1087" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="1088" edge_type="VirtEdge" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="1089" edge_type="VirtEdge" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="1090" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="1091" edge_type="VirtEdge" source_obj="//@blocks.5/@node_objs.3" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="1092" edge_type="VirtEdge" source_obj="//@blocks.5/@node_objs.3" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="1093" edge_type="VirtEdge" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="1094" edge_type="VirtEdge" source_obj="//@blocks.11/@node_objs.3" sink_obj="//@blocks.12/@node_objs.0"/>
+  <edges id="1095" edge_type="VirtEdge" source_obj="//@blocks.11/@node_objs.3" sink_obj="//@blocks.17/@node_objs.0"/>
+  <edges id="1096" edge_type="VirtEdge" source_obj="//@blocks.12/@node_objs.0" sink_obj="//@blocks.17/@node_objs.0"/>
+  <edges id="1097" edge_type="VirtEdge" source_obj="//@blocks.14/@node_objs.9" sink_obj="//@blocks.15/@node_objs.5"/>
+  <edges id="1098" edge_type="VirtEdge" source_obj="//@blocks.14/@node_objs.10" sink_obj="//@blocks.15/@node_objs.5"/>
+  <edges id="-271" source_obj="//@blocks.14/@node_objs.8" sink_obj="//@ports.0"/>
+  <edges id="-340" source_obj="//@blocks.15/@node_objs.5" sink_obj="//@ports.0"/>
+  <edges id="-342" source_obj="//@blocks.15/@node_objs.5" sink_obj="//@ports.1"/>
+  <edges id="-371" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@ports.1"/>
+  <edges id="-373" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@ports.0"/>
+  <edges id="-422" source_obj="//@blocks.8/@node_objs.3" sink_obj="//@ports.0"/>
+  <edges id="-424" source_obj="//@blocks.8/@node_objs.3" sink_obj="//@ports.1"/>
+  <blocks id="77" name="entry" type="BlockType">
+    <controlOutputObjs>sw.bb</controlOutputObjs>
+    <controlOutputObjs>sw.bb2</controlOutputObjs>
+    <controlOutputObjs>for.inc.i3.preheader</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="timestamp_read" lineNumber="22" originalName="timestamp" fileName="clu.c" fileDirectory=".." coreId="0" contextFuncName="clu" bitwidth="64" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clu.c" linenumber="22" fileDirectory="D:\clu_2022" functionName="clu"/>
+      <dataInputObjs>timestamp</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="lin_ddr_read" lineNumber="22" originalName="lin_ddr" fileName="clu.c" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="clu" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clu.c" linenumber="22" fileDirectory="D:\clu_2022" functionName="clu"/>
+      <dataInputObjs>lin_ddr</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="uart_ddr_read" lineNumber="22" originalName="uart_ddr" fileName="clu.c" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="clu" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clu.c" linenumber="22" fileDirectory="D:\clu_2022" functionName="clu"/>
+      <dataInputObjs>uart_ddr</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="can_ddr_read" lineNumber="22" originalName="can_ddr" fileName="clu.c" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="clu" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clu.c" linenumber="22" fileDirectory="D:\clu_2022" functionName="clu"/>
+      <dataInputObjs>can_ddr</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="lin_ptr_read" lineNumber="22" originalName="lin_ptr" fileName="clu.c" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="clu" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clu.c" linenumber="22" fileDirectory="D:\clu_2022" functionName="clu"/>
+      <dataInputObjs>lin_ptr</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="uart_ptr_read" lineNumber="22" originalName="uart_ptr" fileName="clu.c" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="clu" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clu.c" linenumber="22" fileDirectory="D:\clu_2022" functionName="clu"/>
+      <dataInputObjs>uart_ptr</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="can_ptr_read" lineNumber="22" originalName="can_ptr" fileName="clu.c" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="clu" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clu.c" linenumber="22" fileDirectory="D:\clu_2022" functionName="clu"/>
+      <dataInputObjs>can_ptr</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="mode_nr_load" lineNumber="57" fileName="clu.c" fileDirectory=".." coreId="0" contextFuncName="clu" bitwidth="2" opcode="load" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clu.c" linenumber="57" fileDirectory="D:\clu_2022" functionName="clu"/>
+      <dataOutputObjs>switch</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="_ln57" lineNumber="57" fileName="clu.c" fileDirectory=".." coreId="0" contextFuncName="clu" opcode="switch" m_display="0" m_delay="0.44" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clu.c" linenumber="57" fileDirectory="D:\clu_2022" functionName="clu"/>
+      <dataInputObjs>load</dataInputObjs>
+      <controlInputObjs>sw.bb</controlInputObjs>
+      <controlInputObjs>sw.bb2</controlInputObjs>
+      <controlInputObjs>for.inc.i3.preheader</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <fileValidLineNumbers fileName="clu.c">
+      <validLinenumbers>22</validLinenumbers>
+      <validLinenumbers>57</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="81" name="for.inc.i3.preheader" type="BlockType">
+    <controlInputObjs>entry</controlInputObjs>
+    <controlOutputObjs>switch</controlOutputObjs>
+    <controlOutputObjs>for.inc.i3</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="uart_i" originalName="uart_i" coreId="0" bitwidth="4" opcode="alloca" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="uart_i_write_ln240" lineNumber="240" fileName="uart.c" fileDirectory=".." coreId="0" contextFuncName="uart" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="uart.c" linenumber="240" fileDirectory="D:\clu_2022" functionName="uart"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="br_ln240" lineNumber="240" fileName="uart.c" fileDirectory=".." coreId="0" contextFuncName="uart" opcode="br" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="uart.c" linenumber="240" fileDirectory="D:\clu_2022" functionName="uart"/>
+      <controlInputObjs>for.inc.i3</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="uart.c">
+      <validLinenumbers>240</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="87" name="for.inc.i3" type="BlockType">
+    <controlInputObjs>for.inc.i3.preheader</controlInputObjs>
+    <controlInputObjs>for.inc.i3.split</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>uart.exit</controlOutputObjs>
+    <controlOutputObjs>for.inc.i3.split</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="82" name="uart_i_1" lineNumber="240" originalName="uart_i" fileName="uart.c" fileDirectory=".." coreId="0" contextFuncName="uart" bitwidth="4" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="uart.c" linenumber="240" fileDirectory="D:\clu_2022" functionName="uart"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="icmp_ln240" lineNumber="240" fileName="uart.c" fileDirectory=".." rtlName="icmp_ln240_fu_403_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="uart" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.72" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="uart.c" linenumber="240" fileDirectory="D:\clu_2022" functionName="uart"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="uart_i_2" lineNumber="240" originalName="uart_i" fileName="uart.c" fileDirectory=".." rtlName="uart_i_2_fu_409_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="uart" bitwidth="4" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.79" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="uart.c" linenumber="240" fileDirectory="D:\clu_2022" functionName="uart"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="86" name="br_ln240" lineNumber="240" fileName="uart.c" fileDirectory=".." coreId="0" contextFuncName="uart" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="uart.c" linenumber="240" fileDirectory="D:\clu_2022" functionName="uart"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>for.inc.i3.split</controlInputObjs>
+      <controlInputObjs>uart.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="uart.c">
+      <validLinenumbers>240</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="94" name="for.inc.i3.split" type="BlockType">
+    <controlInputObjs>for.inc.i3</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>for.inc.i3</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="89" name="trunc_ln240" lineNumber="240" fileName="uart.c" fileDirectory=".." rtlName="trunc_ln240_fu_415_p1" coreId="0" contextFuncName="uart" bitwidth="3" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="uart.c" linenumber="240" fileDirectory="D:\clu_2022" functionName="uart"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="90" name="uart_en_read" lineNumber="240" fileName="uart.c" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" contextFuncName="uart" bitwidth="8" opcode="read" nodeLabel="1.0" m_display="0" m_delay="1.0" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="uart.c" linenumber="240" fileDirectory="D:\clu_2022" functionName="uart"/>
+      <dataInputObjs>uart_en</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="91" name="_ln240" lineNumber="240" fileName="uart.c" fileDirectory=".." rtlName="grp_uart_data_read_1_fu_302" coreId="0" contextFuncName="uart" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="1.08" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="uart.c" linenumber="240" fileDirectory="D:\clu_2022" functionName="uart"/>
+      <dataInputObjs>ps_ddr</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>clu_addr</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>received_uart</dataOutputObjs>
+      <dataOutputObjs>ps_ddr</dataOutputObjs>
+      <dataOutputObjs>clu_addr</dataOutputObjs>
+      <constName>uart_data_read_1</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="92" name="uart_i_write_ln240" lineNumber="240" fileName="uart.c" fileDirectory=".." coreId="0" contextFuncName="uart" opcode="store" nodeLabel="1.0" m_display="0" m_delay="0.42" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="uart.c" linenumber="240" fileDirectory="D:\clu_2022" functionName="uart"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="93" name="br_ln240" lineNumber="240" fileName="uart.c" fileDirectory=".." coreId="0" contextFuncName="uart" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="69" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="uart.c" linenumber="240" fileDirectory="D:\clu_2022" functionName="uart"/>
+      <controlInputObjs>for.inc.i3</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="uart.c">
+      <validLinenumbers>240</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="97" name="uart.exit" type="BlockType">
+    <controlInputObjs>for.inc.i3</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>sw.epilog</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="mode_nr_write_ln64" lineNumber="64" fileName="clu.c" fileDirectory=".." coreId="0" contextFuncName="clu" opcode="store" nodeLabel="1.0" m_display="0" m_delay="0.47" m_topoIndex="31" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clu.c" linenumber="64" fileDirectory="D:\clu_2022" functionName="clu"/>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="96" name="br_ln65" lineNumber="65" fileName="clu.c" fileDirectory=".." coreId="0" contextFuncName="clu" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clu.c" linenumber="65" fileDirectory="D:\clu_2022" functionName="clu"/>
+      <controlInputObjs>sw.epilog</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="clu.c">
+      <validLinenumbers>64</validLinenumbers>
+      <validLinenumbers>65</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="103" name="sw.bb2" type="BlockType">
+    <controlInputObjs>entry</controlInputObjs>
+    <controlOutputObjs>switch</controlOutputObjs>
+    <controlOutputObjs>for.inc.i7</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="lin_nr" originalName="EN" coreId="0" bitwidth="4" opcode="alloca" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="99" name="lin_en_read" coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" bitwidth="32" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <dataInputObjs>lin_en</dataInputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="100" name="trunc_ln256" lineNumber="256" fileName="dlin.c" fileDirectory=".." rtlName="trunc_ln256_fu_382_p1" coreId="0" contextFuncName="dlin" bitwidth="10" opcode="trunc" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="dlin.c" linenumber="256" fileDirectory="D:\clu_2022" functionName="dlin"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="101" name="lin_nr_write_ln256" lineNumber="256" fileName="dlin.c" fileDirectory=".." coreId="0" contextFuncName="dlin" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="dlin.c" linenumber="256" fileDirectory="D:\clu_2022" functionName="dlin"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="102" name="br_ln256" lineNumber="256" fileName="dlin.c" fileDirectory=".." coreId="0" contextFuncName="dlin" opcode="br" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="dlin.c" linenumber="256" fileDirectory="D:\clu_2022" functionName="dlin"/>
+      <controlInputObjs>for.inc.i7</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="dlin.c">
+      <validLinenumbers>256</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="109" name="for.inc.i7" type="BlockType">
+    <controlInputObjs>sw.bb2</controlInputObjs>
+    <controlInputObjs>dlin_FSM.exit.i</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>dlin.exit</controlOutputObjs>
+    <controlOutputObjs>for.inc.i7.split</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="104" name="lin_nr_1" lineNumber="256" originalName="lin_nr" fileName="dlin.c" fileDirectory=".." coreId="0" contextFuncName="dlin" bitwidth="4" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="dlin.c" linenumber="256" fileDirectory="D:\clu_2022" functionName="dlin"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="105" name="icmp_ln256" lineNumber="256" fileName="dlin.c" fileDirectory=".." rtlName="icmp_ln256_fu_435_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="dlin" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.72" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="dlin.c" linenumber="256" fileDirectory="D:\clu_2022" functionName="dlin"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="107" name="lin_nr_2" lineNumber="256" originalName="lin_nr" fileName="dlin.c" fileDirectory=".." rtlName="lin_nr_2_fu_441_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="dlin" bitwidth="4" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.79" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="dlin.c" linenumber="256" fileDirectory="D:\clu_2022" functionName="dlin"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="108" name="br_ln256" lineNumber="256" fileName="dlin.c" fileDirectory=".." coreId="0" contextFuncName="dlin" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="dlin.c" linenumber="256" fileDirectory="D:\clu_2022" functionName="dlin"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>for.inc.i7.split</controlInputObjs>
+      <controlInputObjs>dlin.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="dlin.c">
+      <validLinenumbers>256</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="116" name="for.inc.i7.split" type="BlockType">
+    <controlInputObjs>for.inc.i7</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>dlin_FSM.exit.i</controlOutputObjs>
+    <controlOutputObjs>if.then.i.i12</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="111" name="zext_ln215" lineNumber="215" fileName="dlin.c" fileDirectory=".." rtlName="zext_ln215_fu_447_p1" coreId="0" contextFuncName="dlin_FSM" bitwidth="10" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="dlin.c" linenumber="215" fileDirectory="D:\clu_2022" functionName="dlin_FSM"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>shl</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="112" name="shl_ln215" lineNumber="215" fileName="dlin.c" fileDirectory=".." rtlName="shl_ln215_fu_451_p2" coreName="Shifter" implIndex="auto_pipe" control="no" opType="shl" coreId="75" contextFuncName="dlin_FSM" bitwidth="10" opcode="shl" nodeLabel="1.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="dlin.c" linenumber="215" fileDirectory="D:\clu_2022" functionName="dlin_FSM"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="113" name="and_ln215" lineNumber="215" fileName="dlin.c" fileDirectory=".." rtlName="and_ln215_fu_457_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="dlin_FSM" bitwidth="10" opcode="and" nodeLabel="1.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="dlin.c" linenumber="215" fileDirectory="D:\clu_2022" functionName="dlin_FSM"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>shl</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="114" name="icmp_ln215" lineNumber="215" fileName="dlin.c" fileDirectory=".." rtlName="icmp_ln215_fu_462_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="dlin_FSM" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.91" m_topoIndex="40" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="dlin.c" linenumber="215" fileDirectory="D:\clu_2022" functionName="dlin_FSM"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="115" name="br_ln215" lineNumber="215" fileName="dlin.c" fileDirectory=".." coreId="0" contextFuncName="dlin_FSM" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="dlin.c" linenumber="215" fileDirectory="D:\clu_2022" functionName="dlin_FSM"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>if.then.i.i12</controlInputObjs>
+      <controlInputObjs>dlin_FSM.exit.i</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="dlin.c">
+      <validLinenumbers>215</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="122" name="if.then.i.i12" type="BlockType">
+    <controlInputObjs>for.inc.i7.split</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>dlin_FSM.exit.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="117" name="shl_ln4" lineNumber="217" fileName="dlin.c" fileDirectory=".." rtlName="shl_ln4_fu_468_p3" coreId="0" contextFuncName="dlin_FSM" bitwidth="16" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="dlin.c" linenumber="217" fileDirectory="D:\clu_2022" functionName="dlin_FSM"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="118" name="zext_ln217" lineNumber="217" fileName="dlin.c" fileDirectory=".." rtlName="zext_ln217_fu_476_p1" coreId="4045278528" contextFuncName="dlin_FSM" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="dlin.c" linenumber="217" fileDirectory="D:\clu_2022" functionName="dlin_FSM"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="119" name="linbase_mod" lineNumber="217" originalName="linbase_mod" fileName="dlin.c" fileDirectory=".." rtlName="linbase_mod_fu_480_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="dlin_FSM" bitwidth="64" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.08" m_topoIndex="44" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="dlin.c" linenumber="217" fileDirectory="D:\clu_2022" functionName="dlin_FSM"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="120" name="_ln218" lineNumber="218" fileName="dlin.c" fileDirectory=".." rtlName="grp_single_lin_process_1_fu_332" coreId="0" contextFuncName="dlin_FSM" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="dlin.c" linenumber="218" fileDirectory="D:\clu_2022" functionName="dlin_FSM"/>
+      <dataInputObjs>clu_addr</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>ps_ddr</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>received_lin</dataOutputObjs>
+      <dataOutputObjs>clu_addr</dataOutputObjs>
+      <dataOutputObjs>ps_ddr</dataOutputObjs>
+      <constName>single_lin_process_1</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="121" name="br_ln221" lineNumber="221" fileName="dlin.c" fileDirectory=".." coreId="0" contextFuncName="dlin_FSM" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="70" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="dlin.c" linenumber="221" fileDirectory="D:\clu_2022" functionName="dlin_FSM"/>
+      <controlInputObjs>dlin_FSM.exit.i</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="dlin.c">
+      <validLinenumbers>217</validLinenumbers>
+      <validLinenumbers>218</validLinenumbers>
+      <validLinenumbers>221</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="125" name="dlin_FSM.exit.i" type="BlockType">
+    <controlInputObjs>for.inc.i7.split</controlInputObjs>
+    <controlInputObjs>if.then.i.i12</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>for.inc.i7</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="123" name="lin_nr_write_ln256" lineNumber="256" fileName="dlin.c" fileDirectory=".." coreId="0" contextFuncName="dlin" opcode="store" nodeLabel="3.0" m_display="0" m_delay="0.42" m_topoIndex="71" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="dlin.c" linenumber="256" fileDirectory="D:\clu_2022" functionName="dlin"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="124" name="br_ln256" lineNumber="256" fileName="dlin.c" fileDirectory=".." coreId="0" contextFuncName="dlin" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="72" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="dlin.c" linenumber="256" fileDirectory="D:\clu_2022" functionName="dlin"/>
+      <controlInputObjs>for.inc.i7</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="dlin.c">
+      <validLinenumbers>256</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="128" name="dlin.exit" type="BlockType">
+    <controlInputObjs>for.inc.i7</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>sw.epilog</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="126" name="mode_nr_write_ln68" lineNumber="68" fileName="clu.c" fileDirectory=".." coreId="4045186256" contextFuncName="clu" opcode="store" nodeLabel="1.0" m_display="0" m_delay="0.47" m_topoIndex="46" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clu.c" linenumber="68" fileDirectory="D:\clu_2022" functionName="clu"/>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="127" name="br_ln69" lineNumber="69" fileName="clu.c" fileDirectory=".." coreId="0" contextFuncName="clu" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clu.c" linenumber="69" fileDirectory="D:\clu_2022" functionName="clu"/>
+      <controlInputObjs>sw.epilog</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="clu.c">
+      <validLinenumbers>68</validLinenumbers>
+      <validLinenumbers>69</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="134" name="sw.bb" type="BlockType">
+    <controlInputObjs>entry</controlInputObjs>
+    <controlOutputObjs>switch</controlOutputObjs>
+    <controlOutputObjs>for.inc.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="129" name="jj" originalName="EN" coreId="0" bitwidth="4" opcode="alloca" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="130" name="can_en_read" coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="122" bitwidth="32" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <dataInputObjs>can_en</dataInputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="131" name="trunc_ln275" lineNumber="275" fileName="can.c" fileDirectory=".." rtlName="trunc_ln275_fu_391_p1" coreId="4045259840" contextFuncName="can" bitwidth="12" opcode="trunc" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="275" fileDirectory="D:\clu_2022" functionName="can"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="132" name="jj_write_ln275" lineNumber="275" fileName="can.c" fileDirectory=".." coreId="0" contextFuncName="can" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="275" fileDirectory="D:\clu_2022" functionName="can"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="133" name="br_ln275" lineNumber="275" fileName="can.c" fileDirectory=".." coreId="0" contextFuncName="can" opcode="br" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="275" fileDirectory="D:\clu_2022" functionName="can"/>
+      <controlInputObjs>for.inc.i</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="can.c">
+      <validLinenumbers>275</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="140" name="for.inc.i" type="BlockType">
+    <controlInputObjs>sw.bb</controlInputObjs>
+    <controlInputObjs>CanFd_Recv_Sequential.exit.i</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>can.exit</controlOutputObjs>
+    <controlOutputObjs>for.inc.i.split</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="135" name="jj_1" lineNumber="275" originalName="jj" fileName="can.c" fileDirectory=".." coreId="0" contextFuncName="can" bitwidth="4" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="275" fileDirectory="D:\clu_2022" functionName="can"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="136" name="icmp_ln275" lineNumber="275" fileName="can.c" fileDirectory=".." rtlName="icmp_ln275_fu_495_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="can" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.72" m_topoIndex="49" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="275" fileDirectory="D:\clu_2022" functionName="can"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="138" name="add_ln275" lineNumber="275" fileName="can.c" fileDirectory=".." rtlName="add_ln275_fu_501_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="can" bitwidth="4" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.79" m_topoIndex="50" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="275" fileDirectory="D:\clu_2022" functionName="can"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="139" name="br_ln275" lineNumber="275" fileName="can.c" fileDirectory=".." coreId="0" contextFuncName="can" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="275" fileDirectory="D:\clu_2022" functionName="can"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>for.inc.i.split</controlInputObjs>
+      <controlInputObjs>can.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="can.c">
+      <validLinenumbers>275</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="147" name="for.inc.i.split" type="BlockType">
+    <controlInputObjs>for.inc.i</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>CanFd_Recv_Sequential.exit.i</controlOutputObjs>
+    <controlOutputObjs>if.then.i.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="142" name="zext_ln245" lineNumber="245" fileName="can.c" fileDirectory=".." rtlName="zext_ln245_fu_507_p1" coreId="0" contextFuncName="CanFd_Recv_Sequential" bitwidth="12" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="can.c" linenumber="245" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>shl</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="143" name="shl_ln245" lineNumber="245" fileName="can.c" fileDirectory=".." rtlName="shl_ln245_fu_511_p2" coreName="Shifter" implIndex="auto_pipe" control="no" opType="shl" coreId="75" contextFuncName="CanFd_Recv_Sequential" bitwidth="12" opcode="shl" nodeLabel="1.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="can.c" linenumber="245" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="144" name="and_ln245" lineNumber="245" fileName="can.c" fileDirectory=".." rtlName="and_ln245_fu_517_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="CanFd_Recv_Sequential" bitwidth="12" opcode="and" nodeLabel="1.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="can.c" linenumber="245" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>shl</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="145" name="icmp_ln245" lineNumber="245" fileName="can.c" fileDirectory=".." rtlName="icmp_ln245_fu_522_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="CanFd_Recv_Sequential" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.97" m_topoIndex="55" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="can.c" linenumber="245" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="146" name="br_ln245" lineNumber="245" fileName="can.c" fileDirectory=".." coreId="0" contextFuncName="CanFd_Recv_Sequential" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="245" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>if.then.i.i</controlInputObjs>
+      <controlInputObjs>CanFd_Recv_Sequential.exit.i</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="can.c">
+      <validLinenumbers>245</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="169" name="if.then.i.i" type="BlockType">
+    <controlInputObjs>for.inc.i.split</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>if.end17.i.i</controlOutputObjs>
+    <controlOutputObjs>if.then6.i.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="148" name="shl_ln" lineNumber="247" fileName="can.c" fileDirectory=".." rtlName="shl_ln_fu_528_p3" coreId="4045260992" contextFuncName="CanFd_Recv_Sequential" bitwidth="20" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="247" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="149" name="zext_ln247" lineNumber="247" fileName="can.c" fileDirectory=".." rtlName="zext_ln247_fu_536_p1" coreId="0" contextFuncName="CanFd_Recv_Sequential" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="247" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="150" name="canaddr_mod" lineNumber="247" originalName="canaddr_mod" fileName="can.c" fileDirectory=".." rtlName="canaddr_mod_fu_540_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="CanFd_Recv_Sequential" bitwidth="64" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.08" m_topoIndex="59" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="247" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="151" name="or_ln248" lineNumber="248" fileName="can.c" fileDirectory=".." rtlName="or_ln248_fu_545_p2" coreId="0" contextFuncName="CanFd_Recv_Sequential" bitwidth="20" opcode="or" nodeLabel="1.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="3">
+      <inlineStackInfo fileName="can.c" linenumber="248" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="152" name="zext_ln248" lineNumber="248" fileName="can.c" fileDirectory=".." rtlName="zext_ln248_fu_551_p1" coreId="0" contextFuncName="CanFd_Recv_Sequential" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="3">
+      <inlineStackInfo fileName="can.c" linenumber="248" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="153" name="add_ln248" lineNumber="248" fileName="can.c" fileDirectory=".." rtlName="add_ln248_fu_555_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="CanFd_Recv_Sequential" bitwidth="64" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.08" m_topoIndex="62" m_clusterGroupNumber="3">
+      <inlineStackInfo fileName="can.c" linenumber="248" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="154" name="trunc_ln" lineNumber="248" fileName="can.c" fileDirectory=".." rtlName="trunc_ln_fu_560_p4" coreId="0" contextFuncName="CanFd_Recv_Sequential" bitwidth="62" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="248" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="155" name="sext_ln248" lineNumber="248" fileName="can.c" fileDirectory=".." rtlName="sext_ln248_fu_570_p1" coreId="4043360000" contextFuncName="CanFd_Recv_Sequential" bitwidth="64" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="248" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="156" name="clu_addr_addr" lineNumber="248" fileName="can.c" fileDirectory=".." coreId="0" contextFuncName="CanFd_Recv_Sequential" bitwidth="32" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="65" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="248" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>clu_addr</dataInputObjs>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>readreq</dataOutputObjs>
+      <dataOutputObjs>read</dataOutputObjs>
+      <dataOutputObjs>clu_addr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="157" name="result_req" lineNumber="248" fileName="can.c" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="121" contextFuncName="CanFd_Recv_Sequential" bitwidth="1" opcode="readreq" nodeLabel="4.0" nodeLatency="6" m_display="0" m_delay="7.3" m_topoIndex="73" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="248" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="158" name="result" lineNumber="248" originalName="result" fileName="can.c" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="121" contextFuncName="CanFd_Recv_Sequential" bitwidth="32" opcode="read" nodeLabel="11.0" m_display="0" m_delay="7.3" m_topoIndex="74" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="248" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>bitselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="159" name="trunc_ln248" lineNumber="248" fileName="can.c" fileDirectory=".." rtlName="trunc_ln248_fu_590_p1" coreId="0" contextFuncName="CanFd_Recv_Sequential" bitwidth="6" opcode="trunc" nodeLabel="11.0" m_display="0" m_topoIndex="75" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="248" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="160" name="tmp_9" lineNumber="250" fileName="can.c" fileDirectory=".." rtlName="tmp_9_reg_841" coreId="0" contextFuncName="CanFd_Recv_Sequential" bitwidth="7" opcode="partselect" nodeLabel="11.0" m_display="0" m_topoIndex="76" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="250" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="161" name="icmp_ln250" lineNumber="250" fileName="can.c" fileDirectory=".." rtlName="icmp_ln250_fu_634_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="CanFd_Recv_Sequential" bitwidth="1" opcode="icmp" nodeLabel="12.0" m_display="0" m_delay="0.81" m_topoIndex="80" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="250" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="162" name="tmp_10" lineNumber="250" fileName="can.c" fileDirectory=".." rtlName="tmp_10_reg_846" coreId="4045274536" contextFuncName="CanFd_Recv_Sequential" bitwidth="7" opcode="partselect" nodeLabel="11.0" m_display="0" m_topoIndex="77" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="250" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="163" name="icmp_ln250_1" lineNumber="250" fileName="can.c" fileDirectory=".." rtlName="icmp_ln250_1_fu_639_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="CanFd_Recv_Sequential" bitwidth="1" opcode="icmp" nodeLabel="12.0" m_display="0" m_delay="0.81" m_topoIndex="81" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="250" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="164" name="tmp" lineNumber="250" fileName="can.c" fileDirectory=".." rtlName="tmp_reg_851" coreId="4045270592" contextFuncName="CanFd_Recv_Sequential" bitwidth="7" opcode="partselect" nodeLabel="11.0" m_display="0" m_topoIndex="78" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="250" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="165" name="tmp_8" lineNumber="250" fileName="can.c" fileDirectory=".." rtlName="tmp_8_reg_856" coreId="0" contextFuncName="CanFd_Recv_Sequential" bitwidth="7" opcode="partselect" nodeLabel="11.0" m_display="0" m_topoIndex="79" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="250" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="166" name="and_ln" lineNumber="250" fileName="can.c" fileDirectory=".." rtlName="and_ln_fu_644_p5" coreId="6775040" contextFuncName="CanFd_Recv_Sequential" bitwidth="31" opcode="bitconcatenate" nodeLabel="12.0" m_display="0" m_topoIndex="82" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="250" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="167" name="icmp_ln250_2" lineNumber="250" fileName="can.c" fileDirectory=".." rtlName="icmp_ln250_2_fu_654_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="CanFd_Recv_Sequential" bitwidth="1" opcode="icmp" nodeLabel="12.0" m_display="0" m_delay="0.99" m_topoIndex="83" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="250" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="168" name="br_ln250" lineNumber="250" fileName="can.c" fileDirectory=".." coreId="0" contextFuncName="CanFd_Recv_Sequential" opcode="br" nodeLabel="12.0" m_display="0" m_topoIndex="84" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="250" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>if.then6.i.i</controlInputObjs>
+      <controlInputObjs>if.end17.i.i</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="can.c">
+      <validLinenumbers>247</validLinenumbers>
+      <validLinenumbers>248</validLinenumbers>
+      <validLinenumbers>250</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="177" name="if.then6.i.i" type="BlockType">
+    <controlInputObjs>if.then.i.i</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>if.end17.i.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="170" name="readIndex" lineNumber="252" originalName="readIndex" fileName="can.c" fileDirectory=".." rtlName="readIndex_fu_660_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="CanFd_Recv_Sequential" bitwidth="6" opcode="select" nodeLabel="12.0" m_display="0" m_topoIndex="85" m_clusterGroupNumber="4">
+      <inlineStackInfo fileName="can.c" linenumber="252" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="171" name="zext_ln249" lineNumber="249" fileName="can.c" fileDirectory=".." rtlName="zext_ln249_fu_667_p1" coreId="0" contextFuncName="CanFd_Recv_Sequential" bitwidth="8" opcode="zext" nodeLabel="12.0" m_display="0" m_topoIndex="86" m_clusterGroupNumber="4">
+      <inlineStackInfo fileName="can.c" linenumber="249" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="172" name="tmp_11" lineNumber="257" fileName="can.c" fileDirectory=".." rtlName="tmp_11_fu_671_p3" coreId="4045276864" contextFuncName="CanFd_Recv_Sequential" bitwidth="1" opcode="bitselect" nodeLabel="12.0" m_display="0" m_topoIndex="87" m_clusterGroupNumber="4">
+      <inlineStackInfo fileName="can.c" linenumber="257" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="173" name="readIndex_1" lineNumber="257" originalName="readIndex" fileName="can.c" fileDirectory=".." rtlName="readIndex_1_fu_678_p3" coreId="0" contextFuncName="CanFd_Recv_Sequential" bitwidth="8" opcode="bitconcatenate" nodeLabel="12.0" m_display="0" m_topoIndex="88" m_clusterGroupNumber="4">
+      <inlineStackInfo fileName="can.c" linenumber="257" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>bitselect</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="174" name="readIndex_2" lineNumber="256" originalName="readIndex" fileName="can.c" fileDirectory=".." rtlName="readIndex_2_fu_686_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="CanFd_Recv_Sequential" bitwidth="8" opcode="select" nodeLabel="12.0" m_display="0" m_delay="0.39" m_topoIndex="89" m_clusterGroupNumber="4">
+      <inlineStackInfo fileName="can.c" linenumber="256" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="175" name="_ln260" lineNumber="260" fileName="can.c" fileDirectory=".." rtlName="grp_recvFrame_logic_1_fu_354" coreId="4045188800" contextFuncName="CanFd_Recv_Sequential" opcode="call" nodeLabel="12.0" nodeLatency="1" m_display="0" m_delay="2.75" m_topoIndex="90" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="260" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <dataInputObjs>clu_addr</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>ps_ddr</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>received_can</dataOutputObjs>
+      <dataOutputObjs>clu_addr</dataOutputObjs>
+      <dataOutputObjs>ps_ddr</dataOutputObjs>
+      <constName>recvFrame_logic_1</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="176" name="br_ln261" lineNumber="261" fileName="can.c" fileDirectory=".." coreId="1145981184" contextFuncName="CanFd_Recv_Sequential" opcode="br" nodeLabel="13.0" m_display="0" m_topoIndex="91" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="261" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <controlInputObjs>if.end17.i.i</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="can.c">
+      <validLinenumbers>252</validLinenumbers>
+      <validLinenumbers>249</validLinenumbers>
+      <validLinenumbers>257</validLinenumbers>
+      <validLinenumbers>256</validLinenumbers>
+      <validLinenumbers>260</validLinenumbers>
+      <validLinenumbers>261</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="179" name="if.end17.i.i" type="BlockType">
+    <controlInputObjs>if.then.i.i</controlInputObjs>
+    <controlInputObjs>if.then6.i.i</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>CanFd_Recv_Sequential.exit.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="178" name="br_ln262" lineNumber="262" fileName="can.c" fileDirectory=".." coreId="0" contextFuncName="CanFd_Recv_Sequential" opcode="br" nodeLabel="13.0" m_display="0" m_topoIndex="92" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="262" fileDirectory="D:\clu_2022" functionName="CanFd_Recv_Sequential"/>
+      <controlInputObjs>CanFd_Recv_Sequential.exit.i</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="can.c">
+      <validLinenumbers>262</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="182" name="CanFd_Recv_Sequential.exit.i" type="BlockType">
+    <controlInputObjs>for.inc.i.split</controlInputObjs>
+    <controlInputObjs>if.end17.i.i</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>for.inc.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="180" name="jj_write_ln275" lineNumber="275" fileName="can.c" fileDirectory=".." coreId="0" contextFuncName="can" opcode="store" nodeLabel="13.0" m_display="0" m_delay="0.42" m_topoIndex="93" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="275" fileDirectory="D:\clu_2022" functionName="can"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="181" name="br_ln275" lineNumber="275" fileName="can.c" fileDirectory=".." coreId="1936942336" contextFuncName="can" opcode="br" nodeLabel="13.0" m_display="0" m_topoIndex="94" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="can.c" linenumber="275" fileDirectory="D:\clu_2022" functionName="can"/>
+      <controlInputObjs>for.inc.i</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="can.c">
+      <validLinenumbers>275</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="185" name="can.exit" type="BlockType">
+    <controlInputObjs>for.inc.i</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>sw.epilog</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="183" name="mode_nr_write_ln60" lineNumber="60" fileName="clu.c" fileDirectory=".." coreId="0" contextFuncName="clu" opcode="store" nodeLabel="1.0" m_display="0" m_delay="0.47" m_topoIndex="66" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clu.c" linenumber="60" fileDirectory="D:\clu_2022" functionName="clu"/>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="184" name="br_ln61" lineNumber="61" fileName="clu.c" fileDirectory=".." coreId="0" contextFuncName="clu" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="67" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clu.c" linenumber="61" fileDirectory="D:\clu_2022" functionName="clu"/>
+      <controlInputObjs>sw.epilog</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="clu.c">
+      <validLinenumbers>60</validLinenumbers>
+      <validLinenumbers>61</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="187" name="sw.epilog" type="BlockType">
+    <controlInputObjs>uart.exit</controlInputObjs>
+    <controlInputObjs>dlin.exit</controlInputObjs>
+    <controlInputObjs>can.exit</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="186" name="_ln73" lineNumber="73" fileName="clu.c" fileDirectory=".." coreId="0" contextFuncName="clu" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="68" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clu.c" linenumber="73" fileDirectory="D:\clu_2022" functionName="clu"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="clu.c">
+      <validLinenumbers>73</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <ScheduleInfo time="13"/>
+  <regnodes realName="trunc_ln248_reg_836">
+    <nodeIds>159</nodeIds>
+  </regnodes>
+  <regnodes realName="jj_reg_760">
+    <nodeIds>129</nodeIds>
+  </regnodes>
+  <regnodes realName="result_reg_831">
+    <nodeIds>158</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln275_reg_811">
+    <nodeIds>138</nodeIds>
+  </regnodes>
+  <regnodes realName="clu_addr_addr_reg_825">
+    <nodeIds>156</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln215_reg_796">
+    <nodeIds>114</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_9_reg_841">
+    <nodeIds>160</nodeIds>
+  </regnodes>
+  <regnodes realName="lin_nr_2_reg_791">
+    <nodeIds>107</nodeIds>
+  </regnodes>
+  <regnodes realName="mode_nr_load_reg_737">
+    <nodeIds>75</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln250_2_reg_861">
+    <nodeIds>167</nodeIds>
+  </regnodes>
+  <regnodes realName="lin_nr_reg_748">
+    <nodeIds>98</nodeIds>
+  </regnodes>
+  <regnodes realName="canaddr_mod_reg_820">
+    <nodeIds>150</nodeIds>
+  </regnodes>
+  <regnodes realName="can_ddr_read_reg_716">
+    <nodeIds>71</nodeIds>
+  </regnodes>
+  <regnodes realName="uart_i_reg_741">
+    <nodeIds>78</nodeIds>
+  </regnodes>
+  <regnodes realName="linbase_mod_reg_800">
+    <nodeIds>119</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_reg_851">
+    <nodeIds>164</nodeIds>
+  </regnodes>
+  <regnodes realName="readIndex_2_reg_865">
+    <nodeIds>174</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_10_reg_846">
+    <nodeIds>162</nodeIds>
+  </regnodes>
+  <regnodes realName="uart_ptr_read_reg_726">
+    <nodeIds>73</nodeIds>
+  </regnodes>
+  <regnodes realName="lin_ddr_read_reg_706">
+    <nodeIds>69</nodeIds>
+  </regnodes>
+  <regnodes realName="can_ptr_read_reg_731">
+    <nodeIds>74</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln275_reg_767">
+    <nodeIds>131</nodeIds>
+  </regnodes>
+  <regnodes realName="lin_ptr_read_reg_721">
+    <nodeIds>72</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_8_reg_856">
+    <nodeIds>165</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln245_reg_816">
+    <nodeIds>145</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln240_reg_775">
+    <nodeIds>89</nodeIds>
+  </regnodes>
+  <regnodes realName="timestamp_read_reg_699">
+    <nodeIds>68</nodeIds>
+  </regnodes>
+  <regnodes realName="uart_ddr_read_reg_711">
+    <nodeIds>70</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln256_reg_755">
+    <nodeIds>100</nodeIds>
+  </regnodes>
+  <regnodes realName="uart_en_read_reg_780">
+    <nodeIds>90</nodeIds>
+  </regnodes>
+  <expressionNodes realName="uart_i_2_fu_409">
+    <nodeIds>85</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="readIndex_fu_660">
+    <nodeIds>170</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln245_fu_522">
+    <nodeIds>145</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln215_fu_462">
+    <nodeIds>114</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln249_fu_667">
+    <nodeIds>171</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="jj_fu_226">
+    <nodeIds>129</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln215_fu_451">
+    <nodeIds>112</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln275_fu_501">
+    <nodeIds>138</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln240_fu_403">
+    <nodeIds>83</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln250_2_fu_654">
+    <nodeIds>167</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln275_fu_391">
+    <nodeIds>131</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln240_fu_415">
+    <nodeIds>89</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln250_1_fu_639">
+    <nodeIds>163</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln248_fu_545">
+    <nodeIds>151</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_8_fu_624">
+    <nodeIds>165</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln245_fu_507">
+    <nodeIds>142</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="clu_addr_addr_fu_574">
+    <nodeIds>156</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln275_fu_495">
+    <nodeIds>136</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_fu_614">
+    <nodeIds>164</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln217_fu_476">
+    <nodeIds>118</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln245_fu_517">
+    <nodeIds>144</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln4_fu_468">
+    <nodeIds>117</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="lin_nr_fu_222">
+    <nodeIds>98</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln248_fu_590">
+    <nodeIds>159</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln_fu_560">
+    <nodeIds>154</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln_fu_528">
+    <nodeIds>148</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="readIndex_1_fu_678">
+    <nodeIds>173</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln248_fu_555">
+    <nodeIds>153</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln247_fu_536">
+    <nodeIds>149</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln250_fu_634">
+    <nodeIds>161</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_11_fu_671">
+    <nodeIds>172</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln215_fu_457">
+    <nodeIds>113</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="linbase_mod_fu_480">
+    <nodeIds>119</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln256_fu_435">
+    <nodeIds>105</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_9_fu_594">
+    <nodeIds>160</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="lin_nr_2_fu_441">
+    <nodeIds>107</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln248_fu_551">
+    <nodeIds>152</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln215_fu_447">
+    <nodeIds>111</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln245_fu_511">
+    <nodeIds>143</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln_fu_644">
+    <nodeIds>166</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln256_fu_382">
+    <nodeIds>100</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="canaddr_mod_fu_540">
+    <nodeIds>150</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="readIndex_2_fu_686">
+    <nodeIds>174</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_10_fu_604">
+    <nodeIds>162</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="uart_i_fu_218">
+    <nodeIds>78</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln248_fu_570">
+    <nodeIds>155</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_single_lin_process_1_fu_332">
+    <nodeIds>120</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_recvFrame_logic_1_fu_354">
+    <nodeIds>175</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_uart_data_read_1_fu_302">
+    <nodeIds>91</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="uart_ddr_read_read_fu_242">
+    <nodeIds>70</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln60_store_fu_580">
+    <nodeIds>183</nodeIds>
+  </ioNodes>
+  <ioNodes realName="uart_ptr_read_read_fu_260">
+    <nodeIds>73</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln68_store_fu_486">
+    <nodeIds>126</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln240_store_fu_377">
+    <nodeIds>79</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln256_store_fu_586">
+    <nodeIds>123</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln256_store_fu_386">
+    <nodeIds>101</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln275_store_fu_695">
+    <nodeIds>180</nodeIds>
+  </ioNodes>
+  <ioNodes realName="timestamp_read_read_fu_230">
+    <nodeIds>68</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln275_store_fu_395">
+    <nodeIds>132</nodeIds>
+  </ioNodes>
+  <ioNodes realName="uart_en_read_read_fu_284">
+    <nodeIds>90</nodeIds>
+  </ioNodes>
+  <ioNodes realName="lin_ptr_read_read_fu_254">
+    <nodeIds>72</nodeIds>
+  </ioNodes>
+  <ioNodes realName="mode_nr_load_load_fu_373">
+    <nodeIds>75</nodeIds>
+  </ioNodes>
+  <ioNodes realName="lin_ddr_read_read_fu_236">
+    <nodeIds>69</nodeIds>
+  </ioNodes>
+  <ioNodes realName="lin_en_read_read_fu_272">
+    <nodeIds>99</nodeIds>
+  </ioNodes>
+  <ioNodes realName="uart_i_1_load_fu_400">
+    <nodeIds>82</nodeIds>
+  </ioNodes>
+  <ioNodes realName="lin_nr_1_load_fu_431">
+    <nodeIds>104</nodeIds>
+  </ioNodes>
+  <ioNodes realName="can_en_read_read_fu_278">
+    <nodeIds>130</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_readreq_fu_290">
+    <nodeIds>157</nodeIds>
+  </ioNodes>
+  <ioNodes realName="jj_1_load_fu_492">
+    <nodeIds>135</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln240_store_fu_420">
+    <nodeIds>92</nodeIds>
+  </ioNodes>
+  <ioNodes realName="result_read_fu_297">
+    <nodeIds>158</nodeIds>
+  </ioNodes>
+  <ioNodes realName="can_ptr_read_read_fu_266">
+    <nodeIds>74</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln64_store_fu_425">
+    <nodeIds>95</nodeIds>
+  </ioNodes>
+  <ioNodes realName="can_ddr_read_read_fu_248">
+    <nodeIds>71</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="PLIN_Ctrl_run_state" portID="100">
+    <nodeIds>120</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="PL_Ctrl_fifo_index" portID="100">
+    <nodeIds>91</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="PL_Ctrl_first_time" portID="100">
+    <nodeIds>91</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="PL_Ctrl_first_timestamp" portID="100">
+    <nodeIds>91</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="PL_Header_pkt_len_bytes" portID="100">
+    <nodeIds>91</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="uart_fifo" portID="100">
+    <nodeIds>91</nodeIds>
+  </memoryPorts>
+  <ioPorts name="can_ddr">
+    <contents name="read">
+      <nodeIds>71</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="can_en">
+    <contents name="read">
+      <nodeIds>130</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="can_ptr">
+    <contents name="read">
+      <nodeIds>74</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="clu_addr">
+    <contents name="call">
+      <nodeIds>175</nodeIds>
+      <nodeIds>91</nodeIds>
+      <nodeIds>120</nodeIds>
+    </contents>
+    <contents name="read">
+      <nodeIds>158</nodeIds>
+    </contents>
+    <contents name="readreq">
+      <nodeIds>157</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="lin_ddr">
+    <contents name="read">
+      <nodeIds>69</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="lin_en">
+    <contents name="read">
+      <nodeIds>99</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="lin_ptr">
+    <contents name="read">
+      <nodeIds>72</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ps_ddr">
+    <contents name="call">
+      <nodeIds>175</nodeIds>
+      <nodeIds>91</nodeIds>
+      <nodeIds>120</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="received_can">
+    <contents name="call">
+      <nodeIds>175</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="received_lin">
+    <contents name="call">
+      <nodeIds>120</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="received_uart">
+    <contents name="call">
+      <nodeIds>91</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="timestamp">
+    <contents name="read">
+      <nodeIds>68</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="uart_ddr">
+    <contents name="read">
+      <nodeIds>70</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="uart_en">
+    <contents name="read">
+      <nodeIds>90</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="uart_ptr">
+    <contents name="read">
+      <nodeIds>73</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="98" stage="1" latency="1"/>
+      <operations id="99" stage="1" latency="1"/>
+      <operations id="100" stage="1" latency="1"/>
+      <operations id="101" stage="1" latency="1"/>
+      <operations id="102" stage="1" latency="1"/>
+      <operations id="129" stage="1" latency="1"/>
+      <operations id="130" stage="1" latency="1"/>
+      <operations id="131" stage="1" latency="1"/>
+      <operations id="132" stage="1" latency="1"/>
+      <operations id="133" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="83" stage="1" latency="1"/>
+      <operations id="84" stage="1" latency="1"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="86" stage="1" latency="1"/>
+      <operations id="89" stage="1" latency="1"/>
+      <operations id="90" stage="1" latency="1"/>
+      <operations id="91" stage="2" latency="2"/>
+      <operations id="92" stage="1" latency="1"/>
+      <operations id="95" stage="1" latency="1"/>
+      <operations id="96" stage="1" latency="1"/>
+      <operations id="104" stage="1" latency="1"/>
+      <operations id="105" stage="1" latency="1"/>
+      <operations id="106" stage="1" latency="1"/>
+      <operations id="107" stage="1" latency="1"/>
+      <operations id="108" stage="1" latency="1"/>
+      <operations id="110" stage="1" latency="1"/>
+      <operations id="111" stage="1" latency="1"/>
+      <operations id="112" stage="1" latency="1"/>
+      <operations id="113" stage="1" latency="1"/>
+      <operations id="114" stage="1" latency="1"/>
+      <operations id="115" stage="1" latency="1"/>
+      <operations id="117" stage="1" latency="1"/>
+      <operations id="118" stage="1" latency="1"/>
+      <operations id="119" stage="1" latency="1"/>
+      <operations id="120" stage="2" latency="2"/>
+      <operations id="126" stage="1" latency="1"/>
+      <operations id="127" stage="1" latency="1"/>
+      <operations id="135" stage="1" latency="1"/>
+      <operations id="136" stage="1" latency="1"/>
+      <operations id="137" stage="1" latency="1"/>
+      <operations id="138" stage="1" latency="1"/>
+      <operations id="139" stage="1" latency="1"/>
+      <operations id="141" stage="1" latency="1"/>
+      <operations id="142" stage="1" latency="1"/>
+      <operations id="143" stage="1" latency="1"/>
+      <operations id="144" stage="1" latency="1"/>
+      <operations id="145" stage="1" latency="1"/>
+      <operations id="146" stage="1" latency="1"/>
+      <operations id="148" stage="1" latency="1"/>
+      <operations id="149" stage="1" latency="1"/>
+      <operations id="150" stage="1" latency="1"/>
+      <operations id="151" stage="1" latency="1"/>
+      <operations id="152" stage="1" latency="1"/>
+      <operations id="153" stage="1" latency="1"/>
+      <operations id="154" stage="1" latency="1"/>
+      <operations id="155" stage="1" latency="1"/>
+      <operations id="156" stage="1" latency="1"/>
+      <operations id="183" stage="1" latency="1"/>
+      <operations id="184" stage="1" latency="1"/>
+      <operations id="186" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="88" stage="1" latency="1"/>
+      <operations id="91" stage="1" latency="2"/>
+      <operations id="93" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="120" stage="1" latency="2"/>
+      <operations id="121" stage="1" latency="1"/>
+      <operations id="123" stage="1" latency="1"/>
+      <operations id="124" stage="1" latency="1"/>
+    </states>
+    <states id="5">
+      <operations id="157" stage="7" latency="7"/>
+    </states>
+    <states id="6">
+      <operations id="157" stage="6" latency="7"/>
+    </states>
+    <states id="7">
+      <operations id="157" stage="5" latency="7"/>
+    </states>
+    <states id="8">
+      <operations id="157" stage="4" latency="7"/>
+    </states>
+    <states id="9">
+      <operations id="157" stage="3" latency="7"/>
+    </states>
+    <states id="10">
+      <operations id="157" stage="2" latency="7"/>
+    </states>
+    <states id="11">
+      <operations id="157" stage="1" latency="7"/>
+    </states>
+    <states id="12">
+      <operations id="158" stage="1" latency="1"/>
+      <operations id="159" stage="1" latency="1"/>
+      <operations id="160" stage="1" latency="1"/>
+      <operations id="162" stage="1" latency="1"/>
+      <operations id="164" stage="1" latency="1"/>
+      <operations id="165" stage="1" latency="1"/>
+    </states>
+    <states id="13">
+      <operations id="161" stage="1" latency="1"/>
+      <operations id="163" stage="1" latency="1"/>
+      <operations id="166" stage="1" latency="1"/>
+      <operations id="167" stage="1" latency="1"/>
+      <operations id="168" stage="1" latency="1"/>
+      <operations id="170" stage="1" latency="1"/>
+      <operations id="171" stage="1" latency="1"/>
+      <operations id="172" stage="1" latency="1"/>
+      <operations id="173" stage="1" latency="1"/>
+      <operations id="174" stage="1" latency="1"/>
+      <operations id="175" stage="2" latency="2"/>
+    </states>
+    <states id="14">
+      <operations id="175" stage="1" latency="2"/>
+      <operations id="176" stage="1" latency="1"/>
+      <operations id="178" stage="1" latency="1"/>
+      <operations id="180" stage="1" latency="1"/>
+      <operations id="181" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="14">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="13" outState="14">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="14" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="clu" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <subRegions>5</subRegions>
+      <subRegions>6</subRegions>
+      <subRegions>7</subRegions>
+      <subRegions>8</subRegions>
+      <subRegions>9</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>77</basicBlocks>
+      <basicBlocks>81</basicBlocks>
+      <basicBlocks>103</basicBlocks>
+      <basicBlocks>134</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="VITIS_LOOP_240_1" mII="-1" mDepth="-1" mMinTripCount="8" mMaxTripCount="8" mMinLatency="24" mMaxLatency="3096" mType="1">
+      <basicBlocks>87</basicBlocks>
+      <basicBlocks>94</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Region 1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>97</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="5" mTag="VITIS_LOOP_256_1" mII="-1" mDepth="-1" mMinTripCount="10" mMaxTripCount="10" mMinLatency="20" mMaxLatency="-1" mType="1">
+      <basicBlocks>109</basicBlocks>
+      <basicBlocks>116</basicBlocks>
+      <basicBlocks>122</basicBlocks>
+      <basicBlocks>125</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="6" mTag="Region 2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>128</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="7" mTag="VITIS_LOOP_275_1" mII="-1" mDepth="-1" mMinTripCount="12" mMaxTripCount="12" mMinLatency="-1" mMaxLatency="-1" mType="1">
+      <basicBlocks>140</basicBlocks>
+      <basicBlocks>147</basicBlocks>
+      <basicBlocks>169</basicBlocks>
+      <basicBlocks>177</basicBlocks>
+      <basicBlocks>179</basicBlocks>
+      <basicBlocks>182</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="8" mTag="Region 3" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>185</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="9" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>187</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

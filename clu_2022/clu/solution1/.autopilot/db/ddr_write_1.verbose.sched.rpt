@@ -1,0 +1,838 @@
+
+
+================================================================
+== Vitis HLS Report for 'ddr_write_1'
+================================================================
+* Date:           Fri Dec 16 14:07:16 2022
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        clu
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu5ev-sfvc784-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      138|      358|  1.380 us|  3.580 us|  138|  358|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |       84|       84|         3|          -|          -|    28|        no|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 71
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 11 
+9 --> 10 
+10 --> 8 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 45 
+45 --> 46 
+46 --> 47 
+47 --> 48 
+48 --> 49 
+49 --> 50 65 
+50 --> 51 
+51 --> 52 
+52 --> 53 
+53 --> 54 
+54 --> 55 
+55 --> 56 
+56 --> 57 
+57 --> 58 
+58 --> 59 
+59 --> 60 
+60 --> 61 
+61 --> 62 
+62 --> 63 
+63 --> 64 
+64 --> 
+65 --> 66 
+66 --> 67 
+67 --> 68 
+68 --> 69 
+69 --> 70 
+70 --> 71 
+71 --> 64 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 7.30>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%loop_index9 = alloca i32 1"   --->   Operation 72 'alloca' 'loop_index9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%ddr_header_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %ddr_header"   --->   Operation 73 'read' 'ddr_header_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%ringbuffer_header_bytes = alloca i64 1" [uart.c:129]   --->   Operation 74 'alloca' 'ringbuffer_header_bytes' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%ps_ddr_addr = getelementptr i8 %ps_ddr, i64 %ddr_header_read" [uart.c:132]   --->   Operation 75 'getelementptr' 'ps_ddr_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [7/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i8, i8 %ps_ddr_addr, i32 28" [uart.c:132]   --->   Operation 76 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_1 : Operation 77 [1/1] (0.42ns)   --->   "%store_ln132 = store i5 0, i5 %loop_index9" [uart.c:132]   --->   Operation 77 'store' 'store_ln132' <Predicate = true> <Delay = 0.42>
+
+State 2 <SV = 1> <Delay = 7.30>
+ST_2 : Operation 78 [6/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i8, i8 %ps_ddr_addr, i32 28" [uart.c:132]   --->   Operation 78 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 3 <SV = 2> <Delay = 7.30>
+ST_3 : Operation 79 [5/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i8, i8 %ps_ddr_addr, i32 28" [uart.c:132]   --->   Operation 79 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 4 <SV = 3> <Delay = 7.30>
+ST_4 : Operation 80 [4/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i8, i8 %ps_ddr_addr, i32 28" [uart.c:132]   --->   Operation 80 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 5 <SV = 4> <Delay = 7.30>
+ST_5 : Operation 81 [3/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i8, i8 %ps_ddr_addr, i32 28" [uart.c:132]   --->   Operation 81 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 6 <SV = 5> <Delay = 7.30>
+ST_6 : Operation 82 [2/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i8, i8 %ps_ddr_addr, i32 28" [uart.c:132]   --->   Operation 82 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 6> <Delay = 7.30>
+ST_7 : Operation 83 [1/1] (0.00ns)   --->   "%device_id_read = read i3 @_ssdm_op_Read.ap_auto.i3, i3 %device_id"   --->   Operation 83 'read' 'device_id_read' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 84 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %ps_ddr, void @empty_23, i32 0, i32 0, void @empty_24, i32 0, i32 10, void @empty, void @empty_26, void @empty_24, i32 16, i32 16, i32 16, i32 16, void @empty_24, void @empty_24, i32 4294967295, i32 0"   --->   Operation 84 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 85 [1/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i8, i8 %ps_ddr_addr, i32 28" [uart.c:132]   --->   Operation 85 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_7 : Operation 86 [1/1] (0.00ns)   --->   "%br_ln132 = br void %load-store-loop8" [uart.c:132]   --->   Operation 86 'br' 'br_ln132' <Predicate = true> <Delay = 0.00>
+
+State 8 <SV = 7> <Delay = 1.21>
+ST_8 : Operation 87 [1/1] (0.00ns)   --->   "%loop_index9_load = load i5 %loop_index9"   --->   Operation 87 'load' 'loop_index9_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 88 [1/1] (0.00ns)   --->   "%loop_index9_cast = zext i5 %loop_index9_load"   --->   Operation 88 'zext' 'loop_index9_cast' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 89 [1/1] (0.75ns)   --->   "%exitcond116 = icmp_eq  i5 %loop_index9_load, i5 28"   --->   Operation 89 'icmp' 'exitcond116' <Predicate = true> <Delay = 0.75> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.75> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 90 [1/1] (0.00ns)   --->   "%empty_76 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 28, i64 28, i64 28"   --->   Operation 90 'speclooptripcount' 'empty_76' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 91 [1/1] (0.78ns)   --->   "%empty_77 = add i5 %loop_index9_load, i5 1"   --->   Operation 91 'add' 'empty_77' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 92 [1/1] (0.00ns)   --->   "%br_ln0 = br i1 %exitcond116, void %load-store-loop8.split, void %memcpy-split7"   --->   Operation 92 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 93 [1/1] (0.42ns)   --->   "%store_ln0 = store i5 %empty_77, i5 %loop_index9"   --->   Operation 93 'store' 'store_ln0' <Predicate = (!exitcond116)> <Delay = 0.42>
+ST_8 : Operation 94 [1/1] (0.00ns)   --->   "%ringbuffer_header_bytes_addr = getelementptr i8 %ringbuffer_header_bytes, i64 0, i64 12" [uart.c:133]   --->   Operation 94 'getelementptr' 'ringbuffer_header_bytes_addr' <Predicate = (exitcond116)> <Delay = 0.00>
+ST_8 : Operation 95 [2/2] (0.67ns)   --->   "%ringbuffer_header_bytes_load = load i5 %ringbuffer_header_bytes_addr" [uart.c:133]   --->   Operation 95 'load' 'ringbuffer_header_bytes_load' <Predicate = (exitcond116)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_8 : Operation 96 [1/1] (0.00ns)   --->   "%ringbuffer_header_bytes_addr_25 = getelementptr i8 %ringbuffer_header_bytes, i64 0, i64 13" [uart.c:134]   --->   Operation 96 'getelementptr' 'ringbuffer_header_bytes_addr_25' <Predicate = (exitcond116)> <Delay = 0.00>
+ST_8 : Operation 97 [2/2] (0.67ns)   --->   "%ringbuffer_header_bytes_load_23 = load i5 %ringbuffer_header_bytes_addr_25" [uart.c:134]   --->   Operation 97 'load' 'ringbuffer_header_bytes_load_23' <Predicate = (exitcond116)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+
+State 9 <SV = 8> <Delay = 7.30>
+ST_9 : Operation 98 [1/1] (7.30ns)   --->   "%ps_ddr_addr_read = read i8 @_ssdm_op_Read.m_axi.p1i8, i8 %ps_ddr_addr" [uart.c:132]   --->   Operation 98 'read' 'ps_ddr_addr_read' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 10 <SV = 9> <Delay = 0.67>
+ST_10 : Operation 99 [1/1] (0.00ns)   --->   "%ringbuffer_header_bytes_addr_36 = getelementptr i8 %ringbuffer_header_bytes, i64 0, i64 %loop_index9_cast"   --->   Operation 99 'getelementptr' 'ringbuffer_header_bytes_addr_36' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 100 [1/1] (0.67ns)   --->   "%store_ln132 = store i8 %ps_ddr_addr_read, i5 %ringbuffer_header_bytes_addr_36" [uart.c:132]   --->   Operation 100 'store' 'store_ln132' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_10 : Operation 101 [1/1] (0.00ns)   --->   "%br_ln0 = br void %load-store-loop8"   --->   Operation 101 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 11 <SV = 8> <Delay = 0.67>
+ST_11 : Operation 102 [1/2] (0.67ns)   --->   "%ringbuffer_header_bytes_load = load i5 %ringbuffer_header_bytes_addr" [uart.c:133]   --->   Operation 102 'load' 'ringbuffer_header_bytes_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_11 : Operation 103 [1/2] (0.67ns)   --->   "%ringbuffer_header_bytes_load_23 = load i5 %ringbuffer_header_bytes_addr_25" [uart.c:134]   --->   Operation 103 'load' 'ringbuffer_header_bytes_load_23' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_11 : Operation 104 [1/1] (0.00ns)   --->   "%ringbuffer_header_bytes_addr_26 = getelementptr i8 %ringbuffer_header_bytes, i64 0, i64 14" [uart.c:135]   --->   Operation 104 'getelementptr' 'ringbuffer_header_bytes_addr_26' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 105 [2/2] (0.67ns)   --->   "%ringbuffer_header_bytes_load_24 = load i5 %ringbuffer_header_bytes_addr_26" [uart.c:135]   --->   Operation 105 'load' 'ringbuffer_header_bytes_load_24' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_11 : Operation 106 [1/1] (0.00ns)   --->   "%ringbuffer_header_bytes_addr_27 = getelementptr i8 %ringbuffer_header_bytes, i64 0, i64 15" [uart.c:136]   --->   Operation 106 'getelementptr' 'ringbuffer_header_bytes_addr_27' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 107 [2/2] (0.67ns)   --->   "%ringbuffer_header_bytes_load_25 = load i5 %ringbuffer_header_bytes_addr_27" [uart.c:136]   --->   Operation 107 'load' 'ringbuffer_header_bytes_load_25' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+
+State 12 <SV = 9> <Delay = 0.67>
+ST_12 : Operation 108 [1/2] (0.67ns)   --->   "%ringbuffer_header_bytes_load_24 = load i5 %ringbuffer_header_bytes_addr_26" [uart.c:135]   --->   Operation 108 'load' 'ringbuffer_header_bytes_load_24' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_12 : Operation 109 [1/2] (0.67ns)   --->   "%ringbuffer_header_bytes_load_25 = load i5 %ringbuffer_header_bytes_addr_27" [uart.c:136]   --->   Operation 109 'load' 'ringbuffer_header_bytes_load_25' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_12 : Operation 110 [1/1] (0.00ns)   --->   "%ringbuffer_header_bytes_addr_32 = getelementptr i8 %ringbuffer_header_bytes, i64 0, i64 24" [uart.c:141]   --->   Operation 110 'getelementptr' 'ringbuffer_header_bytes_addr_32' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 111 [2/2] (0.67ns)   --->   "%ringbuffer_header_bytes_load_30 = load i5 %ringbuffer_header_bytes_addr_32" [uart.c:141]   --->   Operation 111 'load' 'ringbuffer_header_bytes_load_30' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_12 : Operation 112 [1/1] (0.00ns)   --->   "%ringbuffer_header_bytes_addr_33 = getelementptr i8 %ringbuffer_header_bytes, i64 0, i64 25" [uart.c:142]   --->   Operation 112 'getelementptr' 'ringbuffer_header_bytes_addr_33' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 113 [2/2] (0.67ns)   --->   "%ringbuffer_header_bytes_load_31 = load i5 %ringbuffer_header_bytes_addr_33" [uart.c:142]   --->   Operation 113 'load' 'ringbuffer_header_bytes_load_31' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+
+State 13 <SV = 10> <Delay = 0.67>
+ST_13 : Operation 114 [1/2] (0.67ns)   --->   "%ringbuffer_header_bytes_load_30 = load i5 %ringbuffer_header_bytes_addr_32" [uart.c:141]   --->   Operation 114 'load' 'ringbuffer_header_bytes_load_30' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_13 : Operation 115 [1/2] (0.67ns)   --->   "%ringbuffer_header_bytes_load_31 = load i5 %ringbuffer_header_bytes_addr_33" [uart.c:142]   --->   Operation 115 'load' 'ringbuffer_header_bytes_load_31' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_13 : Operation 116 [1/1] (0.00ns)   --->   "%ringbuffer_header_bytes_addr_34 = getelementptr i8 %ringbuffer_header_bytes, i64 0, i64 26" [uart.c:143]   --->   Operation 116 'getelementptr' 'ringbuffer_header_bytes_addr_34' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 117 [2/2] (0.67ns)   --->   "%ringbuffer_header_bytes_load_32 = load i5 %ringbuffer_header_bytes_addr_34" [uart.c:143]   --->   Operation 117 'load' 'ringbuffer_header_bytes_load_32' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_13 : Operation 118 [1/1] (0.00ns)   --->   "%ringbuffer_header_bytes_addr_35 = getelementptr i8 %ringbuffer_header_bytes, i64 0, i64 27" [uart.c:144]   --->   Operation 118 'getelementptr' 'ringbuffer_header_bytes_addr_35' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 119 [2/2] (0.67ns)   --->   "%ringbuffer_header_bytes_load_33 = load i5 %ringbuffer_header_bytes_addr_35" [uart.c:144]   --->   Operation 119 'load' 'ringbuffer_header_bytes_load_33' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+
+State 14 <SV = 11> <Delay = 3.16>
+ST_14 : Operation 120 [1/1] (0.00ns)   --->   "%max_uart_count = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8, i8 %ringbuffer_header_bytes_load, i8 %ringbuffer_header_bytes_load_23, i8 %ringbuffer_header_bytes_load_24, i8 %ringbuffer_header_bytes_load_25" [uart.c:135]   --->   Operation 120 'bitconcatenate' 'max_uart_count' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 121 [1/2] (0.67ns)   --->   "%ringbuffer_header_bytes_load_32 = load i5 %ringbuffer_header_bytes_addr_34" [uart.c:143]   --->   Operation 121 'load' 'ringbuffer_header_bytes_load_32' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_14 : Operation 122 [1/2] (0.67ns)   --->   "%ringbuffer_header_bytes_load_33 = load i5 %ringbuffer_header_bytes_addr_35" [uart.c:144]   --->   Operation 122 'load' 'ringbuffer_header_bytes_load_33' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_14 : Operation 123 [1/1] (0.00ns)   --->   "%writeUartIndex = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8, i8 %ringbuffer_header_bytes_load_30, i8 %ringbuffer_header_bytes_load_31, i8 %ringbuffer_header_bytes_load_32, i8 %ringbuffer_header_bytes_load_33" [uart.c:143]   --->   Operation 123 'bitconcatenate' 'writeUartIndex' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 124 [1/1] (1.01ns)   --->   "%add_ln145 = add i32 %writeUartIndex, i32 1" [uart.c:145]   --->   Operation 124 'add' 'add_ln145' <Predicate = true> <Delay = 1.01> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 125 [36/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 125 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 12> <Delay = 1.47>
+ST_15 : Operation 126 [35/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 126 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 13> <Delay = 1.47>
+ST_16 : Operation 127 [34/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 127 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 14> <Delay = 1.47>
+ST_17 : Operation 128 [33/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 128 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 15> <Delay = 1.47>
+ST_18 : Operation 129 [32/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 129 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 16> <Delay = 1.47>
+ST_19 : Operation 130 [31/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 130 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 17> <Delay = 1.47>
+ST_20 : Operation 131 [30/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 131 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 18> <Delay = 1.47>
+ST_21 : Operation 132 [29/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 132 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 19> <Delay = 1.47>
+ST_22 : Operation 133 [28/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 133 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 20> <Delay = 1.47>
+ST_23 : Operation 134 [27/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 134 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 21> <Delay = 1.47>
+ST_24 : Operation 135 [26/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 135 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 22> <Delay = 1.47>
+ST_25 : Operation 136 [25/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 136 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 23> <Delay = 1.47>
+ST_26 : Operation 137 [24/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 137 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 24> <Delay = 1.47>
+ST_27 : Operation 138 [23/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 138 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 28 <SV = 25> <Delay = 1.47>
+ST_28 : Operation 139 [22/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 139 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 29 <SV = 26> <Delay = 1.47>
+ST_29 : Operation 140 [21/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 140 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 30 <SV = 27> <Delay = 1.47>
+ST_30 : Operation 141 [20/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 141 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 31 <SV = 28> <Delay = 1.47>
+ST_31 : Operation 142 [19/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 142 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 32 <SV = 29> <Delay = 1.47>
+ST_32 : Operation 143 [18/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 143 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 33 <SV = 30> <Delay = 1.47>
+ST_33 : Operation 144 [17/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 144 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 34 <SV = 31> <Delay = 1.47>
+ST_34 : Operation 145 [16/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 145 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 35 <SV = 32> <Delay = 1.47>
+ST_35 : Operation 146 [15/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 146 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 36 <SV = 33> <Delay = 1.47>
+ST_36 : Operation 147 [14/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 147 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 37 <SV = 34> <Delay = 1.47>
+ST_37 : Operation 148 [13/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 148 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 38 <SV = 35> <Delay = 1.47>
+ST_38 : Operation 149 [12/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 149 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 39 <SV = 36> <Delay = 1.47>
+ST_39 : Operation 150 [11/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 150 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 40 <SV = 37> <Delay = 1.47>
+ST_40 : Operation 151 [10/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 151 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 41 <SV = 38> <Delay = 1.47>
+ST_41 : Operation 152 [9/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 152 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 42 <SV = 39> <Delay = 1.47>
+ST_42 : Operation 153 [8/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 153 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 43 <SV = 40> <Delay = 1.47>
+ST_43 : Operation 154 [7/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 154 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 44 <SV = 41> <Delay = 1.47>
+ST_44 : Operation 155 [6/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 155 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 45 <SV = 42> <Delay = 1.47>
+ST_45 : Operation 156 [5/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 156 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 46 <SV = 43> <Delay = 1.47>
+ST_46 : Operation 157 [4/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 157 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 47 <SV = 44> <Delay = 1.47>
+ST_47 : Operation 158 [1/1] (0.00ns)   --->   "%ringbuffer_header_bytes_addr_28 = getelementptr i8 %ringbuffer_header_bytes, i64 0, i64 20" [uart.c:137]   --->   Operation 158 'getelementptr' 'ringbuffer_header_bytes_addr_28' <Predicate = true> <Delay = 0.00>
+ST_47 : Operation 159 [2/2] (0.67ns)   --->   "%ringbuffer_header_bytes_load_26 = load i5 %ringbuffer_header_bytes_addr_28" [uart.c:137]   --->   Operation 159 'load' 'ringbuffer_header_bytes_load_26' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_47 : Operation 160 [1/1] (0.00ns)   --->   "%ringbuffer_header_bytes_addr_29 = getelementptr i8 %ringbuffer_header_bytes, i64 0, i64 21" [uart.c:138]   --->   Operation 160 'getelementptr' 'ringbuffer_header_bytes_addr_29' <Predicate = true> <Delay = 0.00>
+ST_47 : Operation 161 [2/2] (0.67ns)   --->   "%ringbuffer_header_bytes_load_27 = load i5 %ringbuffer_header_bytes_addr_29" [uart.c:138]   --->   Operation 161 'load' 'ringbuffer_header_bytes_load_27' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_47 : Operation 162 [3/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 162 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 48 <SV = 45> <Delay = 1.47>
+ST_48 : Operation 163 [1/2] (0.67ns)   --->   "%ringbuffer_header_bytes_load_26 = load i5 %ringbuffer_header_bytes_addr_28" [uart.c:137]   --->   Operation 163 'load' 'ringbuffer_header_bytes_load_26' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_48 : Operation 164 [1/2] (0.67ns)   --->   "%ringbuffer_header_bytes_load_27 = load i5 %ringbuffer_header_bytes_addr_29" [uart.c:138]   --->   Operation 164 'load' 'ringbuffer_header_bytes_load_27' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_48 : Operation 165 [1/1] (0.00ns)   --->   "%ringbuffer_header_bytes_addr_30 = getelementptr i8 %ringbuffer_header_bytes, i64 0, i64 22" [uart.c:139]   --->   Operation 165 'getelementptr' 'ringbuffer_header_bytes_addr_30' <Predicate = true> <Delay = 0.00>
+ST_48 : Operation 166 [2/2] (0.67ns)   --->   "%ringbuffer_header_bytes_load_28 = load i5 %ringbuffer_header_bytes_addr_30" [uart.c:139]   --->   Operation 166 'load' 'ringbuffer_header_bytes_load_28' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_48 : Operation 167 [1/1] (0.00ns)   --->   "%ringbuffer_header_bytes_addr_31 = getelementptr i8 %ringbuffer_header_bytes, i64 0, i64 23" [uart.c:140]   --->   Operation 167 'getelementptr' 'ringbuffer_header_bytes_addr_31' <Predicate = true> <Delay = 0.00>
+ST_48 : Operation 168 [2/2] (0.67ns)   --->   "%ringbuffer_header_bytes_load_29 = load i5 %ringbuffer_header_bytes_addr_31" [uart.c:140]   --->   Operation 168 'load' 'ringbuffer_header_bytes_load_29' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_48 : Operation 169 [2/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 169 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 49 <SV = 46> <Delay = 5.52>
+ST_49 : Operation 170 [1/2] (0.67ns)   --->   "%ringbuffer_header_bytes_load_28 = load i5 %ringbuffer_header_bytes_addr_30" [uart.c:139]   --->   Operation 170 'load' 'ringbuffer_header_bytes_load_28' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_49 : Operation 171 [1/2] (0.67ns)   --->   "%ringbuffer_header_bytes_load_29 = load i5 %ringbuffer_header_bytes_addr_31" [uart.c:140]   --->   Operation 171 'load' 'ringbuffer_header_bytes_load_29' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_49 : Operation 172 [1/1] (0.00ns)   --->   "%readUartIndex = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8, i8 %ringbuffer_header_bytes_load_26, i8 %ringbuffer_header_bytes_load_27, i8 %ringbuffer_header_bytes_load_28, i8 %ringbuffer_header_bytes_load_29" [uart.c:139]   --->   Operation 172 'bitconcatenate' 'readUartIndex' <Predicate = true> <Delay = 0.00>
+ST_49 : Operation 173 [1/36] (1.47ns)   --->   "%nextWriteUartIndex = urem i32 %add_ln145, i32 %max_uart_count" [uart.c:145]   --->   Operation 173 'urem' 'nextWriteUartIndex' <Predicate = true> <Delay = 1.47> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 1.47> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_49 : Operation 174 [1/1] (0.99ns)   --->   "%icmp_ln147 = icmp_eq  i32 %nextWriteUartIndex, i32 %readUartIndex" [uart.c:147]   --->   Operation 174 'icmp' 'icmp_ln147' <Predicate = true> <Delay = 0.99> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_49 : Operation 175 [1/1] (0.00ns)   --->   "%br_ln147 = br i1 %icmp_ln147, void %if.else, void %if.then" [uart.c:147]   --->   Operation 175 'br' 'br_ln147' <Predicate = true> <Delay = 0.00>
+ST_49 : Operation 176 [1/1] (3.42ns)   --->   "%mul_ln154 = mul i32 %writeUartIndex, i32 204" [uart.c:154]   --->   Operation 176 'mul' 'mul_ln154' <Predicate = (!icmp_ln147)> <Delay = 3.42> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.42> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_49 : Operation 177 [1/1] (0.00ns)   --->   "%zext_ln155 = zext i32 %mul_ln154" [uart.c:155]   --->   Operation 177 'zext' 'zext_ln155' <Predicate = (!icmp_ln147)> <Delay = 0.00>
+ST_49 : Operation 178 [1/1] (0.00ns)   --->   "%zext_ln155_1 = zext i3 %device_id_read" [uart.c:155]   --->   Operation 178 'zext' 'zext_ln155_1' <Predicate = (!icmp_ln147)> <Delay = 0.00>
+ST_49 : Operation 179 [1/1] (1.01ns)   --->   "%add_ln154 = add i33 %zext_ln155, i33 28" [uart.c:154]   --->   Operation 179 'add' 'add_ln154' <Predicate = (!icmp_ln147)> <Delay = 1.01> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_49 : Operation 180 [1/1] (0.00ns)   --->   "%zext_ln154 = zext i33 %add_ln154" [uart.c:154]   --->   Operation 180 'zext' 'zext_ln154' <Predicate = (!icmp_ln147)> <Delay = 0.00>
+ST_49 : Operation 181 [1/1] (1.08ns)   --->   "%add_ln154_1 = add i64 %zext_ln154, i64 %ddr_header_read" [uart.c:154]   --->   Operation 181 'add' 'add_ln154_1' <Predicate = (!icmp_ln147)> <Delay = 1.08> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_49 : Operation 182 [1/1] (0.00ns)   --->   "%PL_Ctrl_fifo_index_addr = getelementptr i32 %PL_Ctrl_fifo_index, i64 0, i64 %zext_ln155_1" [uart.c:160]   --->   Operation 182 'getelementptr' 'PL_Ctrl_fifo_index_addr' <Predicate = (!icmp_ln147)> <Delay = 0.00>
+ST_49 : Operation 183 [1/1] (0.67ns)   --->   "%store_ln160 = store i32 12, i3 %PL_Ctrl_fifo_index_addr" [uart.c:160]   --->   Operation 183 'store' 'store_ln160' <Predicate = (!icmp_ln147)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 8> <RAM>
+ST_49 : Operation 184 [1/1] (0.00ns)   --->   "%PL_Header_pkt_len_bytes_addr = getelementptr i16 %PL_Header_pkt_len_bytes, i64 0, i64 %zext_ln155_1" [uart.c:161]   --->   Operation 184 'getelementptr' 'PL_Header_pkt_len_bytes_addr' <Predicate = (!icmp_ln147)> <Delay = 0.00>
+ST_49 : Operation 185 [1/1] (0.67ns)   --->   "%store_ln161 = store i16 0, i3 %PL_Header_pkt_len_bytes_addr" [uart.c:161]   --->   Operation 185 'store' 'store_ln161' <Predicate = (!icmp_ln147)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 8> <RAM>
+ST_49 : Operation 186 [1/1] (0.00ns)   --->   "%PL_Ctrl_first_time_addr = getelementptr i1 %PL_Ctrl_first_time, i64 0, i64 %zext_ln155_1" [uart.c:162]   --->   Operation 186 'getelementptr' 'PL_Ctrl_first_time_addr' <Predicate = (!icmp_ln147)> <Delay = 0.00>
+ST_49 : Operation 187 [1/1] (0.67ns)   --->   "%store_ln162 = store i1 1, i3 %PL_Ctrl_first_time_addr" [uart.c:162]   --->   Operation 187 'store' 'store_ln162' <Predicate = (!icmp_ln147)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 8> <RAM>
+ST_49 : Operation 188 [1/1] (0.00ns)   --->   "%PL_Ctrl_first_timestamp_addr = getelementptr i64 %PL_Ctrl_first_timestamp, i64 0, i64 %zext_ln155_1" [uart.c:163]   --->   Operation 188 'getelementptr' 'PL_Ctrl_first_timestamp_addr' <Predicate = (!icmp_ln147)> <Delay = 0.00>
+ST_49 : Operation 189 [1/1] (0.67ns)   --->   "%store_ln163 = store i64 0, i3 %PL_Ctrl_first_timestamp_addr" [uart.c:163]   --->   Operation 189 'store' 'store_ln163' <Predicate = (!icmp_ln147)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_49 : Operation 190 [1/1] (1.08ns)   --->   "%add_ln149 = add i64 %ddr_header_read, i64 4" [uart.c:149]   --->   Operation 190 'add' 'add_ln149' <Predicate = (icmp_ln147)> <Delay = 1.08> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_49 : Operation 191 [1/1] (0.00ns)   --->   "%ps_ddr_addr_7 = getelementptr i8 %ps_ddr, i64 %add_ln149" [uart.c:149]   --->   Operation 191 'getelementptr' 'ps_ddr_addr_7' <Predicate = (icmp_ln147)> <Delay = 0.00>
+
+State 50 <SV = 47> <Delay = 7.30>
+ST_50 : Operation 192 [1/1] (0.00ns)   --->   "%ps_ddr_addr_8 = getelementptr i8 %ps_ddr, i64 %add_ln154_1" [uart.c:154]   --->   Operation 192 'getelementptr' 'ps_ddr_addr_8' <Predicate = true> <Delay = 0.00>
+ST_50 : Operation 193 [1/1] (7.30ns)   --->   "%empty_79 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i8, i8 %ps_ddr_addr_8, i32 204" [uart.c:154]   --->   Operation 193 'writereq' 'empty_79' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 51 <SV = 48> <Delay = 3.77>
+ST_51 : Operation 194 [1/1] (0.00ns)   --->   "%device_id_cast = zext i3 %device_id_read"   --->   Operation 194 'zext' 'device_id_cast' <Predicate = true> <Delay = 0.00>
+ST_51 : Operation 195 [1/1] (1.74ns)   --->   "%empty_78 = mul i11 %device_id_cast, i11 204"   --->   Operation 195 'mul' 'empty_78' <Predicate = true> <Delay = 1.74> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 1.74> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_51 : Operation 196 [2/2] (2.03ns)   --->   "%call_ln154 = call void @ddr_write.1_Pipeline_1, i8 %ps_ddr, i64 %add_ln154_1, i11 %empty_78, i8 %uart_fifo" [uart.c:154]   --->   Operation 196 'call' 'call_ln154' <Predicate = true> <Delay = 2.03> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 52 <SV = 49> <Delay = 0.00>
+ST_52 : Operation 197 [1/2] (0.00ns)   --->   "%call_ln154 = call void @ddr_write.1_Pipeline_1, i8 %ps_ddr, i64 %add_ln154_1, i11 %empty_78, i8 %uart_fifo" [uart.c:154]   --->   Operation 197 'call' 'call_ln154' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 53 <SV = 50> <Delay = 7.30>
+ST_53 : Operation 198 [5/5] (7.30ns)   --->   "%empty_80 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %ps_ddr_addr_8" [clu.c:10]   --->   Operation 198 'writeresp' 'empty_80' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 54 <SV = 51> <Delay = 7.30>
+ST_54 : Operation 199 [4/5] (7.30ns)   --->   "%empty_80 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %ps_ddr_addr_8" [clu.c:10]   --->   Operation 199 'writeresp' 'empty_80' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 55 <SV = 52> <Delay = 7.30>
+ST_55 : Operation 200 [3/5] (7.30ns)   --->   "%empty_80 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %ps_ddr_addr_8" [clu.c:10]   --->   Operation 200 'writeresp' 'empty_80' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 56 <SV = 53> <Delay = 7.30>
+ST_56 : Operation 201 [2/5] (7.30ns)   --->   "%empty_80 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %ps_ddr_addr_8" [clu.c:10]   --->   Operation 201 'writeresp' 'empty_80' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_56 : Operation 202 [1/1] (1.08ns)   --->   "%add_ln17 = add i64 %ddr_header_read, i64 24" [clu.c:17]   --->   Operation 202 'add' 'add_ln17' <Predicate = true> <Delay = 1.08> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 57 <SV = 54> <Delay = 7.30>
+ST_57 : Operation 203 [1/5] (7.30ns)   --->   "%empty_80 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %ps_ddr_addr_8" [clu.c:10]   --->   Operation 203 'writeresp' 'empty_80' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_57 : Operation 204 [1/1] (0.00ns)   --->   "%ps_ddr_addr_9 = getelementptr i8 %ps_ddr, i64 %add_ln17" [clu.c:17]   --->   Operation 204 'getelementptr' 'ps_ddr_addr_9' <Predicate = true> <Delay = 0.00>
+ST_57 : Operation 205 [1/1] (7.30ns)   --->   "%empty_81 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i8, i8 %ps_ddr_addr_9, i32 4" [clu.c:17]   --->   Operation 205 'writereq' 'empty_81' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 58 <SV = 55> <Delay = 0.52>
+ST_58 : Operation 206 [1/1] (0.00ns)   --->   "%write_index_array_0 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %nextWriteUartIndex, i32 24, i32 31" [clu.c:13]   --->   Operation 206 'partselect' 'write_index_array_0' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 207 [1/1] (0.00ns)   --->   "%write_index_array_1 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %nextWriteUartIndex, i32 16, i32 23" [clu.c:14]   --->   Operation 207 'partselect' 'write_index_array_1' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 208 [1/1] (0.00ns)   --->   "%write_index_array_2 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %nextWriteUartIndex, i32 8, i32 15" [clu.c:15]   --->   Operation 208 'partselect' 'write_index_array_2' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 209 [1/1] (0.00ns)   --->   "%write_index_array_3 = trunc i32 %nextWriteUartIndex" [clu.c:16]   --->   Operation 209 'trunc' 'write_index_array_3' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 210 [2/2] (0.52ns)   --->   "%call_ln17 = call void @ddr_write.1_Pipeline_2, i8 %ps_ddr, i64 %add_ln17, i8 %write_index_array_0, i8 %write_index_array_1, i8 %write_index_array_2, i8 %write_index_array_3" [clu.c:17]   --->   Operation 210 'call' 'call_ln17' <Predicate = true> <Delay = 0.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 59 <SV = 56> <Delay = 0.00>
+ST_59 : Operation 211 [1/2] (0.00ns)   --->   "%call_ln17 = call void @ddr_write.1_Pipeline_2, i8 %ps_ddr, i64 %add_ln17, i8 %write_index_array_0, i8 %write_index_array_1, i8 %write_index_array_2, i8 %write_index_array_3" [clu.c:17]   --->   Operation 211 'call' 'call_ln17' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 60 <SV = 57> <Delay = 7.30>
+ST_60 : Operation 212 [5/5] (7.30ns)   --->   "%empty_82 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %ps_ddr_addr_9" [clu.c:20]   --->   Operation 212 'writeresp' 'empty_82' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 61 <SV = 58> <Delay = 7.30>
+ST_61 : Operation 213 [4/5] (7.30ns)   --->   "%empty_82 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %ps_ddr_addr_9" [clu.c:20]   --->   Operation 213 'writeresp' 'empty_82' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 62 <SV = 59> <Delay = 7.30>
+ST_62 : Operation 214 [3/5] (7.30ns)   --->   "%empty_82 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %ps_ddr_addr_9" [clu.c:20]   --->   Operation 214 'writeresp' 'empty_82' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 63 <SV = 60> <Delay = 7.30>
+ST_63 : Operation 215 [2/5] (7.30ns)   --->   "%empty_82 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %ps_ddr_addr_9" [clu.c:20]   --->   Operation 215 'writeresp' 'empty_82' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 64 <SV = 61> <Delay = 7.30>
+ST_64 : Operation 216 [1/5] (7.30ns)   --->   "%empty_82 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i8, i8 %ps_ddr_addr_9" [clu.c:20]   --->   Operation 216 'writeresp' 'empty_82' <Predicate = (!icmp_ln147)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_64 : Operation 217 [1/1] (0.00ns)   --->   "%br_ln164 = br void %cleanup" [uart.c:164]   --->   Operation 217 'br' 'br_ln164' <Predicate = (!icmp_ln147)> <Delay = 0.00>
+ST_64 : Operation 218 [1/1] (0.00ns)   --->   "%ret_ln164 = ret" [uart.c:164]   --->   Operation 218 'ret' 'ret_ln164' <Predicate = true> <Delay = 0.00>
+
+State 65 <SV = 47> <Delay = 7.30>
+ST_65 : Operation 219 [1/1] (0.00ns)   --->   "%dropped_uart_counter_load = load i16 %dropped_uart_counter" [uart.c:148]   --->   Operation 219 'load' 'dropped_uart_counter_load' <Predicate = true> <Delay = 0.00>
+ST_65 : Operation 220 [1/1] (0.00ns)   --->   "%trunc_ln148 = trunc i16 %dropped_uart_counter_load" [uart.c:148]   --->   Operation 220 'trunc' 'trunc_ln148' <Predicate = true> <Delay = 0.00>
+ST_65 : Operation 221 [1/1] (0.85ns)   --->   "%add_ln148 = add i16 %dropped_uart_counter_load, i16 1" [uart.c:148]   --->   Operation 221 'add' 'add_ln148' <Predicate = true> <Delay = 0.85> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_65 : Operation 222 [1/1] (0.00ns)   --->   "%store_ln148 = store i16 %add_ln148, i16 %dropped_uart_counter" [uart.c:148]   --->   Operation 222 'store' 'store_ln148' <Predicate = true> <Delay = 0.00>
+ST_65 : Operation 223 [1/1] (0.76ns)   --->   "%add_ln149_1 = add i8 %trunc_ln148, i8 1" [uart.c:149]   --->   Operation 223 'add' 'add_ln149_1' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_65 : Operation 224 [1/1] (7.30ns)   --->   "%ps_ddr_addr_7_req = writereq i1 @_ssdm_op_WriteReq.m_axi.i8P1A, i8 %ps_ddr_addr_7, i32 1" [uart.c:149]   --->   Operation 224 'writereq' 'ps_ddr_addr_7_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 66 <SV = 48> <Delay = 7.30>
+ST_66 : Operation 225 [1/1] (7.30ns)   --->   "%write_ln149 = write void @_ssdm_op_Write.m_axi.volatile.i8P1A, i8 %ps_ddr_addr_7, i8 %add_ln149_1, i1 1" [uart.c:149]   --->   Operation 225 'write' 'write_ln149' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 67 <SV = 49> <Delay = 7.30>
+ST_67 : Operation 226 [5/5] (7.30ns)   --->   "%ps_ddr_addr_7_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i8P1A, i8 %ps_ddr_addr_7" [uart.c:149]   --->   Operation 226 'writeresp' 'ps_ddr_addr_7_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 68 <SV = 50> <Delay = 7.30>
+ST_68 : Operation 227 [4/5] (7.30ns)   --->   "%ps_ddr_addr_7_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i8P1A, i8 %ps_ddr_addr_7" [uart.c:149]   --->   Operation 227 'writeresp' 'ps_ddr_addr_7_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 69 <SV = 51> <Delay = 7.30>
+ST_69 : Operation 228 [3/5] (7.30ns)   --->   "%ps_ddr_addr_7_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i8P1A, i8 %ps_ddr_addr_7" [uart.c:149]   --->   Operation 228 'writeresp' 'ps_ddr_addr_7_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 70 <SV = 52> <Delay = 7.30>
+ST_70 : Operation 229 [2/5] (7.30ns)   --->   "%ps_ddr_addr_7_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i8P1A, i8 %ps_ddr_addr_7" [uart.c:149]   --->   Operation 229 'writeresp' 'ps_ddr_addr_7_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 71 <SV = 53> <Delay = 7.30>
+ST_71 : Operation 230 [1/5] (7.30ns)   --->   "%ps_ddr_addr_7_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i8P1A, i8 %ps_ddr_addr_7" [uart.c:149]   --->   Operation 230 'writeresp' 'ps_ddr_addr_7_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_71 : Operation 231 [1/1] (0.00ns)   --->   "%br_ln150 = br void %cleanup" [uart.c:150]   --->   Operation 231 'br' 'br_ln150' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 7.3ns
+The critical path consists of the following:
+	wire read operation ('ddr_header') on port 'ddr_header' [12]  (0 ns)
+	'getelementptr' operation ('ps_ddr_addr', uart.c:132) [15]  (0 ns)
+	bus request operation ('empty', uart.c:132) on port 'ps_ddr' (uart.c:132) [16]  (7.3 ns)
+
+ <State 2>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', uart.c:132) on port 'ps_ddr' (uart.c:132) [16]  (7.3 ns)
+
+ <State 3>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', uart.c:132) on port 'ps_ddr' (uart.c:132) [16]  (7.3 ns)
+
+ <State 4>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', uart.c:132) on port 'ps_ddr' (uart.c:132) [16]  (7.3 ns)
+
+ <State 5>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', uart.c:132) on port 'ps_ddr' (uart.c:132) [16]  (7.3 ns)
+
+ <State 6>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', uart.c:132) on port 'ps_ddr' (uart.c:132) [16]  (7.3 ns)
+
+ <State 7>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', uart.c:132) on port 'ps_ddr' (uart.c:132) [16]  (7.3 ns)
+
+ <State 8>: 1.22ns
+The critical path consists of the following:
+	'load' operation ('loop_index9_load') on local variable 'loop_index9' [20]  (0 ns)
+	'add' operation ('empty_77') [24]  (0.789 ns)
+	'store' operation ('store_ln0') of variable 'empty_77' on local variable 'loop_index9' [30]  (0.427 ns)
+
+ <State 9>: 7.3ns
+The critical path consists of the following:
+	bus read operation ('ps_ddr_addr_read', uart.c:132) on port 'ps_ddr' (uart.c:132) [27]  (7.3 ns)
+
+ <State 10>: 0.677ns
+The critical path consists of the following:
+	'getelementptr' operation ('ringbuffer_header_bytes_addr_36') [28]  (0 ns)
+	'store' operation ('store_ln132', uart.c:132) of variable 'ps_ddr_addr_read', uart.c:132 on array 'ringbuffer_header_bytes', uart.c:129 [29]  (0.677 ns)
+
+ <State 11>: 0.677ns
+The critical path consists of the following:
+	'load' operation ('ringbuffer_header_bytes_load', uart.c:133) on array 'ringbuffer_header_bytes', uart.c:129 [34]  (0.677 ns)
+
+ <State 12>: 0.677ns
+The critical path consists of the following:
+	'load' operation ('ringbuffer_header_bytes_load_24', uart.c:135) on array 'ringbuffer_header_bytes', uart.c:129 [38]  (0.677 ns)
+
+ <State 13>: 0.677ns
+The critical path consists of the following:
+	'load' operation ('ringbuffer_header_bytes_load_30', uart.c:141) on array 'ringbuffer_header_bytes', uart.c:129 [52]  (0.677 ns)
+
+ <State 14>: 3.17ns
+The critical path consists of the following:
+	'load' operation ('ringbuffer_header_bytes_load_32', uart.c:143) on array 'ringbuffer_header_bytes', uart.c:129 [56]  (0.677 ns)
+	'add' operation ('add_ln145', uart.c:145) [60]  (1.02 ns)
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 15>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 16>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 17>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 18>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 19>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 20>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 21>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 22>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 23>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 24>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 25>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 26>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 27>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 28>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 29>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 30>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 31>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 32>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 33>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 34>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 35>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 36>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 37>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 38>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 39>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 40>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 41>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 42>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 43>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 44>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 45>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 46>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 47>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 48>: 1.48ns
+The critical path consists of the following:
+	'urem' operation ('nextWriteUartIndex', uart.c:145) [61]  (1.48 ns)
+
+ <State 49>: 5.52ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln154', uart.c:154) [65]  (3.42 ns)
+	'add' operation ('add_ln154', uart.c:154) [70]  (1.02 ns)
+	'add' operation ('add_ln154_1', uart.c:154) [72]  (1.08 ns)
+
+ <State 50>: 7.3ns
+The critical path consists of the following:
+	'getelementptr' operation ('ps_ddr_addr_8', uart.c:154) [73]  (0 ns)
+	bus request operation ('empty_79', uart.c:154) on port 'ps_ddr' (uart.c:154) [74]  (7.3 ns)
+
+ <State 51>: 3.78ns
+The critical path consists of the following:
+	'mul' operation ('empty_78') [69]  (1.74 ns)
+	'call' operation ('call_ln154', uart.c:154) to 'ddr_write.1_Pipeline_1' [75]  (2.04 ns)
+
+ <State 52>: 0ns
+The critical path consists of the following:
+
+ <State 53>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_80', clu.c:10) on port 'ps_ddr' (clu.c:10) [76]  (7.3 ns)
+
+ <State 54>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_80', clu.c:10) on port 'ps_ddr' (clu.c:10) [76]  (7.3 ns)
+
+ <State 55>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_80', clu.c:10) on port 'ps_ddr' (clu.c:10) [76]  (7.3 ns)
+
+ <State 56>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_80', clu.c:10) on port 'ps_ddr' (clu.c:10) [76]  (7.3 ns)
+
+ <State 57>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_80', clu.c:10) on port 'ps_ddr' (clu.c:10) [76]  (7.3 ns)
+
+ <State 58>: 0.525ns
+The critical path consists of the following:
+	'call' operation ('call_ln17', clu.c:17) to 'ddr_write.1_Pipeline_2' [84]  (0.525 ns)
+
+ <State 59>: 0ns
+The critical path consists of the following:
+
+ <State 60>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_82', clu.c:20) on port 'ps_ddr' (clu.c:20) [85]  (7.3 ns)
+
+ <State 61>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_82', clu.c:20) on port 'ps_ddr' (clu.c:20) [85]  (7.3 ns)
+
+ <State 62>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_82', clu.c:20) on port 'ps_ddr' (clu.c:20) [85]  (7.3 ns)
+
+ <State 63>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_82', clu.c:20) on port 'ps_ddr' (clu.c:20) [85]  (7.3 ns)
+
+ <State 64>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_82', clu.c:20) on port 'ps_ddr' (clu.c:20) [85]  (7.3 ns)
+
+ <State 65>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('ps_ddr_addr_7_req', uart.c:149) on port 'ps_ddr' (uart.c:149) [103]  (7.3 ns)
+
+ <State 66>: 7.3ns
+The critical path consists of the following:
+	bus write operation ('write_ln149', uart.c:149) on port 'ps_ddr' (uart.c:149) [104]  (7.3 ns)
+
+ <State 67>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('ps_ddr_addr_7_resp', uart.c:149) on port 'ps_ddr' (uart.c:149) [105]  (7.3 ns)
+
+ <State 68>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('ps_ddr_addr_7_resp', uart.c:149) on port 'ps_ddr' (uart.c:149) [105]  (7.3 ns)
+
+ <State 69>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('ps_ddr_addr_7_resp', uart.c:149) on port 'ps_ddr' (uart.c:149) [105]  (7.3 ns)
+
+ <State 70>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('ps_ddr_addr_7_resp', uart.c:149) on port 'ps_ddr' (uart.c:149) [105]  (7.3 ns)
+
+ <State 71>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('ps_ddr_addr_7_resp', uart.c:149) on port 'ps_ddr' (uart.c:149) [105]  (7.3 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

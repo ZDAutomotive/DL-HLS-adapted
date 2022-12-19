@@ -1,0 +1,165 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="" msg_id="207-4051" msg_severity="WARNING" msg_loc="uart.c:132:34" msg_body="passing 'volatile unsigned char *' to parameter of type 'const void *' discards qualifiers">
+        <args ClangWarningOption="incompatible-pointer-types-discards-qualifiers"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4414" msg_severity="INFO" msg_loc="D:/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt\x86_64-w64-mingw32\include\string.h:50:95" msg_body="passing argument to parameter '_Src' here">
+        <args/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4051" msg_severity="WARNING" msg_loc="uart.c:154:10" msg_body="passing 'volatile unsigned char *' to parameter of type 'void *' discards qualifiers">
+        <args ClangWarningOption="incompatible-pointer-types-discards-qualifiers"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4414" msg_severity="INFO" msg_loc="D:/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt\x86_64-w64-mingw32\include\string.h:50:64" msg_body="passing argument to parameter '_Dst' here">
+        <args/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4051" msg_severity="WARNING" msg_loc="dlin.c:98:34" msg_body="passing 'volatile unsigned char *' to parameter of type 'const void *' discards qualifiers">
+        <args ClangWarningOption="incompatible-pointer-types-discards-qualifiers"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4414" msg_severity="INFO" msg_loc="D:/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt\x86_64-w64-mingw32\include\string.h:50:95" msg_body="passing argument to parameter '_Src' here">
+        <args/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4051" msg_severity="WARNING" msg_loc="dlin.c:120:11" msg_body="passing 'volatile unsigned char *' to parameter of type 'void *' discards qualifiers">
+        <args ClangWarningOption="incompatible-pointer-types-discards-qualifiers"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4414" msg_severity="INFO" msg_loc="D:/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt\x86_64-w64-mingw32\include\string.h:50:64" msg_body="passing argument to parameter '_Dst' here">
+        <args/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4051" msg_severity="WARNING" msg_loc="dlin.c:121:5" msg_body="passing 'volatile unsigned char *' to parameter of type 'const void *' discards qualifiers">
+        <args ClangWarningOption="incompatible-pointer-types-discards-qualifiers"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4054" msg_severity="WARNING" msg_loc="dlin.c:256:55" msg_body="passing 'volatile int *' to parameter of type 'volatile unsigned int *' converts between pointers to integer types with different sign">
+        <args ClangWarningOption="pointer-sign"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4414" msg_severity="INFO" msg_loc="dlin.c:209:38" msg_body="passing argument to parameter 'linbase' here">
+        <args/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4054" msg_severity="WARNING" msg_loc="dlin.c:256:73" msg_body="passing 'volatile int *' to parameter of type 'volatile unsigned int *' converts between pointers to integer types with different sign">
+        <args ClangWarningOption="pointer-sign"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4051" msg_severity="WARNING" msg_loc="clu.c:17:9" msg_body="passing 'volatile unsigned char *' to parameter of type 'void *' discards qualifiers">
+        <args ClangWarningOption="incompatible-pointer-types-discards-qualifiers"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4414" msg_severity="INFO" msg_loc="D:/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt\x86_64-w64-mingw32\include\string.h:50:64" msg_body="passing argument to parameter '_Dst' here">
+        <args/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5546" msg_severity="WARNING" msg_loc="clu.c:29:9" msg_body="'#pragma HLS INTERFACE port=return register' is obsoleted and replaced by '#pragma HLS LATENCY min=1 max=1'">
+        <args ClangWarningOption="obsoleted-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/clu_2022/clu/solution1/csynth.tcl:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="clu" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=clu" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="clu.c:29:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="clu" ARG_PragmaIsValid="0" ARG_PragmaOptions="port=timestamp register" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="clu.c:30:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="clu" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=EN port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="clu.c:33:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="clu" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=EN port=can_ptr" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="clu.c:34:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="clu" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi bundle=clu_addr depth=1 port=can_ptr offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="clu.c:35:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="clu" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=EN port=can_ddr" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="clu.c:36:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="clu" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi bundle=ps_ddr depth=10 port=can_ddr offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="clu.c:37:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="clu" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=EN port=can_en" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="clu.c:38:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="clu" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=EN port=received_can" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="clu.c:41:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="clu" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=EN port=uart_ptr" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="clu.c:42:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="clu" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi bundle=clu_addr depth=1 port=uart_ptr offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="clu.c:43:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="clu" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=EN port=uart_ddr" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="clu.c:44:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="clu" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi bundle=ps_ddr depth=10 port=uart_ddr offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="clu.c:45:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="clu" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=EN port=uart_en" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="clu.c:46:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="clu" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=EN port=received_uart" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="clu.c:49:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="clu" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=EN port=lin_ptr" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="clu.c:50:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="clu" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi bundle=clu_addr depth=1 port=lin_ptr offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="clu.c:51:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="clu" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=EN port=lin_ddr" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="clu.c:52:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="clu" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi bundle=ps_ddr depth=10 port=lin_ddr offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="clu.c:53:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="clu" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=EN port=lin_en" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="clu.c:54:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="clu" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite bundle=EN port=received_lin" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4051" msg_severity="WARNING" msg_loc="can.c:103:34" msg_body="passing 'volatile unsigned char *' to parameter of type 'const void *' discards qualifiers">
+        <args ClangWarningOption="incompatible-pointer-types-discards-qualifiers"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4414" msg_severity="INFO" msg_loc="D:/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt\x86_64-w64-mingw32\include\string.h:50:95" msg_body="passing argument to parameter '_Src' here">
+        <args/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4051" msg_severity="WARNING" msg_loc="can.c:126:10" msg_body="passing 'volatile unsigned char *' to parameter of type 'void *' discards qualifiers">
+        <args ClangWarningOption="incompatible-pointer-types-discards-qualifiers"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4414" msg_severity="INFO" msg_loc="D:/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt\x86_64-w64-mingw32\include\string.h:50:64" msg_body="passing argument to parameter '_Dst' here">
+        <args/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4054" msg_severity="WARNING" msg_loc="can.c:232:18" msg_body="passing 'unsigned char *' to parameter of type 'char *' converts between pointers to integer types with different sign">
+        <args ClangWarningOption="pointer-sign"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4414" msg_severity="INFO" msg_loc="can.c:97:58" msg_body="passing argument to parameter 'data' here">
+        <args/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="can.c:141:7" msg_body="unused parameter 'FifoNo'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="can.c:97:0" msg_body="Inlining function 'update_write_index' into 'write_ddr'">
+        <args Callee="update_write_index" Caller="write_ddr"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="can.c:145:0" msg_body="Inlining function 'XCanFd_GetDlc2len' into 'recvFrame_logic'">
+        <args Callee="XCanFd_GetDlc2len" Caller="recvFrame_logic"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="can.c:271:0" msg_body="Inlining function 'CanFd_Recv_Sequential' into 'can'">
+        <args Callee="CanFd_Recv_Sequential" Caller="can"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="uart.c:126:0" msg_body="Inlining function 'update_write_index' into 'ddr_write'">
+        <args Callee="update_write_index" Caller="ddr_write"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="dlin.c:92:0" msg_body="Inlining function 'update_write_index' into 'write_lin_ddr'">
+        <args Callee="update_write_index" Caller="write_lin_ddr"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="dlin.c:133:0" msg_body="Inlining function 'read_lin_reg' into 'single_lin_process'">
+        <args Callee="read_lin_reg" Caller="single_lin_process"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="dlin.c:133:0" msg_body="Inlining function 'write_lin_reg' into 'single_lin_process'">
+        <args Callee="write_lin_reg" Caller="single_lin_process"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="dlin.c:253:0" msg_body="Inlining function 'dlin_FSM' into 'dlin'">
+        <args Callee="dlin_FSM" Caller="dlin"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="clu.c:26:0" msg_body="Inlining function 'can' into 'clu'">
+        <args Callee="can" Caller="clu"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="clu.c:26:0" msg_body="Inlining function 'uart' into 'clu'">
+        <args Callee="uart" Caller="clu"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="clu.c:26:0" msg_body="Inlining function 'dlin' into 'clu'">
+        <args Callee="dlin" Caller="clu"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

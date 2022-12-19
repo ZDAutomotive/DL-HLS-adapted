@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'mode_nr' is power-on initialization." projectName="clu" solutionName="solution1" date="2022-12-16T14:07:30.319+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="clu" solutionName="solution1" date="2022-12-16T14:07:30.069+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'internal_can_counter' is power-on initialization." projectName="clu" solutionName="solution1" date="2022-12-16T14:07:29.163+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'dropped_can_counter' is power-on initialization." projectName="clu" solutionName="solution1" date="2022-12-16T14:07:28.694+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_2/m_axi_ps_ddr_BREADY' to 0." projectName="clu" solutionName="solution1" date="2022-12-16T14:07:28.476+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_2/m_axi_ps_ddr_AWUSER' to 0." projectName="clu" solutionName="solution1" date="2022-12-16T14:07:28.460+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_2/m_axi_ps_ddr_AWREGION' to 0." projectName="clu" solutionName="solution1" date="2022-12-16T14:07:28.444+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_2/m_axi_ps_ddr_AWQOS' to 0." projectName="clu" solutionName="solution1" date="2022-12-16T14:07:28.429+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_2/m_axi_ps_ddr_AWPROT' to 0." projectName="clu" solutionName="solution1" date="2022-12-16T14:07:28.429+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_2/m_axi_ps_ddr_AWCACHE' to 0." projectName="clu" solutionName="solution1" date="2022-12-16T14:07:28.398+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_2/m_axi_ps_ddr_AWLOCK' to 0." projectName="clu" solutionName="solution1" date="2022-12-16T14:07:28.382+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_2/m_axi_ps_ddr_AWBURST' to 0." projectName="clu" solutionName="solution1" date="2022-12-16T14:07:28.366+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_2/m_axi_ps_ddr_AWSIZE' to 0." projectName="clu" solutionName="solution1" date="2022-12-16T14:07:28.366+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_2/m_axi_ps_ddr_AWLEN' to 0." projectName="clu" solutionName="solution1" date="2022-12-16T14:07:28.335+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_2/m_axi_ps_ddr_AWID' to 0." projectName="clu" solutionName="solution1" date="2022-12-16T14:07:28.319+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_2/m_axi_ps_ddr_AWADDR' to 0." projectName="clu" solutionName="solution1" date="2022-12-16T14:07:28.304+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_2/m_axi_ps_ddr_AWVALID' to 0." projectName="clu" solutionName="solution1" date="2022-12-16T14:07:28.288+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_1/m_axi_ps_ddr_BREADY' to 0." projectName="clu" solutionName="solution1" date="2022-12-16T14:07:28.101+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_1/m_axi_ps_ddr_AWUSER' to 0." projectName="clu" solutionName="solution1" date="2022-12-16T14:07:28.085+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'write_ddr_1_Pipeline_1/m_axi_ps_ddr_AWREGION' to 0." projectName="clu" solutionName="solution1" date="2022-12-16T14:07:28.069+0100" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
