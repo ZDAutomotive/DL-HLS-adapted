@@ -1,0 +1,163 @@
+<root versionMajor = "1" versionMinor = "5">
+  <kernel src_name="clu" language="c" hwCtrl="ap_ctrl_hs" mem_layout="fpga64-xilinx-none">
+    <args>
+      <arg id="0" access_type="rw" src_name="can_ptr" src_type="*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="MAXI" hw_name="clu_addr" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0"/>
+          <constraint constraint_type="bitwidth" orig_bitwidth="32" final_bitwidth="32"/>
+        </hw>
+        <hw hw_usage="address" hw_interface="S_AXILite" hw_name="EN" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="16"/>
+        </hw>
+      </arg>
+      <arg id="1" access_type="rw" src_name="uart_ptr" src_type="*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="MAXI" hw_name="clu_addr" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0"/>
+          <constraint constraint_type="bitwidth" orig_bitwidth="32" final_bitwidth="32"/>
+        </hw>
+        <hw hw_usage="address" hw_interface="S_AXILite" hw_name="EN" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="24"/>
+        </hw>
+      </arg>
+      <arg id="2" access_type="rw" src_name="lin_ptr" src_type="*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="MAXI" hw_name="clu_addr" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0"/>
+          <constraint constraint_type="bitwidth" orig_bitwidth="32" final_bitwidth="32"/>
+        </hw>
+        <hw hw_usage="address" hw_interface="S_AXILite" hw_name="EN" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="32"/>
+        </hw>
+      </arg>
+      <arg id="3" access_type="w" src_name="can_0_received" src_type="*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="EN" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="1" offset="88"/>
+        </hw>
+      </arg>
+      <arg id="4" access_type="w" src_name="can_1_received" src_type="*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="EN" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="1" offset="96"/>
+        </hw>
+      </arg>
+      <arg id="5" access_type="w" src_name="can_2_received" src_type="*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="EN" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="1" offset="104"/>
+        </hw>
+      </arg>
+      <arg id="6" access_type="w" src_name="can_3_received" src_type="*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="EN" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="1" offset="112"/>
+        </hw>
+      </arg>
+      <arg id="7" access_type="w" src_name="can_4_received" src_type="*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="EN" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="1" offset="120"/>
+        </hw>
+      </arg>
+      <arg id="8" access_type="w" src_name="can_5_received" src_type="*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="EN" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="1" offset="128"/>
+        </hw>
+      </arg>
+      <arg id="9" access_type="w" src_name="can_6_received" src_type="*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="EN" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="1" offset="136"/>
+        </hw>
+      </arg>
+      <arg id="10" access_type="w" src_name="can_7_received" src_type="*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="EN" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="1" offset="144"/>
+        </hw>
+      </arg>
+      <arg id="11" access_type="w" src_name="can_8_received" src_type="*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="EN" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="1" offset="152"/>
+        </hw>
+      </arg>
+      <arg id="12" access_type="w" src_name="can_9_received" src_type="*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="EN" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="1" offset="160"/>
+        </hw>
+      </arg>
+      <arg id="13" access_type="w" src_name="can_10_received" src_type="*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="EN" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="1" offset="40"/>
+        </hw>
+      </arg>
+      <arg id="14" access_type="w" src_name="can_11_received" src_type="*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="EN" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="1" offset="56"/>
+        </hw>
+      </arg>
+      <arg id="15" access_type="" src_name="droped" src_type="*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="EN" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="1" offset="168"/>
+        </hw>
+      </arg>
+      <arg id="16" access_type="w" src_name="received_can" src_type="*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="EN" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="72"/>
+        </hw>
+      </arg>
+      <arg id="17" access_type="w" src_name="received_uart" src_type="*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="EN" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="104"/>
+        </hw>
+      </arg>
+      <arg id="18" access_type="w" src_name="received_lin" src_type="*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="EN" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="104"/>
+        </hw>
+      </arg>
+      <arg id="19" access_type="r" src_name="can_en" src_type="int*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="EN" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="104"/>
+        </hw>
+      </arg>
+      <arg id="20" access_type="r" src_name="uart_en" src_type="char*" src_isptr="1" src_bitwidth="8" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="EN" hw_bitwidth="8" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="104"/>
+        </hw>
+      </arg>
+      <arg id="21" access_type="r" src_name="lin_en" src_type="int*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="EN" hw_bitwidth="32" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="104"/>
+        </hw>
+      </arg>
+      <arg id="22" access_type="rw" src_name="can_ddr" src_type="*" src_isptr="1" src_bitwidth="8" src_size_or_depth="10">
+        <hw hw_usage="data" hw_interface="MAXI" hw_name="ps_ddr" hw_bitwidth="8" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0"/>
+          <constraint constraint_type="bitwidth" orig_bitwidth="8" final_bitwidth="8"/>
+        </hw>
+        <hw hw_usage="address" hw_interface="S_AXILite" hw_name="EN" hw_bitwidth="8" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="104"/>
+        </hw>
+      </arg>
+      <arg id="23" access_type="rw" src_name="uart_ddr" src_type="*" src_isptr="1" src_bitwidth="8" src_size_or_depth="10">
+        <hw hw_usage="data" hw_interface="MAXI" hw_name="ps_ddr" hw_bitwidth="8" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0"/>
+          <constraint constraint_type="bitwidth" orig_bitwidth="8" final_bitwidth="8"/>
+        </hw>
+        <hw hw_usage="address" hw_interface="S_AXILite" hw_name="EN" hw_bitwidth="8" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="104"/>
+        </hw>
+      </arg>
+      <arg id="24" access_type="rw" src_name="lin_ddr" src_type="*" src_isptr="1" src_bitwidth="8" src_size_or_depth="10">
+        <hw hw_usage="data" hw_interface="MAXI" hw_name="ps_ddr" hw_bitwidth="8" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0"/>
+          <constraint constraint_type="bitwidth" orig_bitwidth="8" final_bitwidth="8"/>
+        </hw>
+        <hw hw_usage="address" hw_interface="S_AXILite" hw_name="EN" hw_bitwidth="8" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="104"/>
+        </hw>
+      </arg>
+      <arg id="25" access_type="r" src_name="timestamp" src_type="long long int" src_isptr="0" src_bitwidth="64" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="Register" hw_name="timestamp" hw_bitwidth="64" hw_size_or_depth="1" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_none" register_option="0"/>
+        </hw>
+      </arg>
+    </args>
+    <return src_type="void" src_bitwidth="0" offset="0x0">
+      <hw hw_usage="data" hw_interface="" hw_name="" hw_bitwidth="0" hw_kernel_support="true"/>
+    </return>
+  </kernel>
+</root>

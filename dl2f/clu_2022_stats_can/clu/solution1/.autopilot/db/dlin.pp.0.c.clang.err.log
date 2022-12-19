@@ -1,0 +1,25 @@
+dlin.c:98:34: warning: passing 'volatile unsigned char *' to parameter of type 'const void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+ memcpy(ringbuffer_header_bytes, ddr_header, 28);
+                                 ^~~~~~~~~~
+D:/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt\x86_64-w64-mingw32\include\string.h:50:95: note: passing argument to parameter '_Src' here
+  void * __attribute__((__cdecl__)) memcpy(void * __restrict__ _Dst,const void * __restrict__ _Src,size_t _Size) ;
+                                                                                              ^
+dlin.c:120:11: warning: passing 'volatile unsigned char *' to parameter of type 'void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+  memcpy( ddr_header + 28 + writeLinIndex * (12 + 16),
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt\x86_64-w64-mingw32\include\string.h:50:64: note: passing argument to parameter '_Dst' here
+  void * __attribute__((__cdecl__)) memcpy(void * __restrict__ _Dst,const void * __restrict__ _Src,size_t _Size) ;
+                                                               ^
+dlin.c:121:5: warning: passing 'volatile unsigned char *' to parameter of type 'const void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    data,
+    ^~~~
+D:/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt\x86_64-w64-mingw32\include\string.h:50:95: note: passing argument to parameter '_Src' here
+  void * __attribute__((__cdecl__)) memcpy(void * __restrict__ _Dst,const void * __restrict__ _Src,size_t _Size) ;
+                                                                                              ^
+dlin.c:256:73: warning: passing 'volatile int *' to parameter of type 'volatile unsigned int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+ VITIS_LOOP_256_1: for (int lin_nr = 0; lin_nr < 10; lin_nr++) dlin_FSM(linbase, ddr, enable_device, lin_nr, timestamp, received_lin);
+                                                                        ^~~~~~~
+dlin.c:209:38: note: passing argument to parameter 'linbase' here
+void dlin_FSM(volatile unsigned int *linbase,
+                                     ^
+4 warnings generated.

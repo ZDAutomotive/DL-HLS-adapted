@@ -1,0 +1,275 @@
+
+
+================================================================
+== Vitis HLS Report for 'recvFrame_logic_1_Pipeline_VITIS_LOOP_261_2'
+================================================================
+* Date:           Thu Dec 15 12:14:11 2022
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        clu
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_261_2  |        ?|        ?|        12|          2|          1|     ?|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 2, depth = 12
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 12
+* Pipeline : 1
+  Pipeline-0 : II = 2, D = 12, States = { 1 2 3 4 5 6 7 8 9 10 11 12 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.96>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%Len = alloca i32 1"   --->   Operation 15 'alloca' 'Len' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%canIndex = alloca i32 1"   --->   Operation 16 'alloca' 'canIndex' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%canbase_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %canbase"   --->   Operation 17 'read' 'canbase_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%zext_ln261_read = read i15 @_ssdm_op_Read.ap_auto.i15, i15 %zext_ln261"   --->   Operation 18 'read' 'zext_ln261_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%zext_ln27_read = read i7 @_ssdm_op_Read.ap_auto.i7, i7 %zext_ln27"   --->   Operation 19 'read' 'zext_ln27_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%zext_ln261_cast = zext i15 %zext_ln261_read"   --->   Operation 20 'zext' 'zext_ln261_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%zext_ln27_cast = zext i7 %zext_ln27_read"   --->   Operation 21 'zext' 'zext_ln27_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %clu_addr, void @empty_29, i32 0, i32 0, void @empty_30, i32 0, i32 1, void @empty_31, void @empty_32, void @empty_30, i32 16, i32 16, i32 16, i32 16, void @empty_30, void @empty_30, i32 4294967295, i32 0"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (1.29ns)   --->   "%store_ln0 = store i64 8, i64 %canIndex"   --->   Operation 23 'store' 'store_ln0' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 24 [1/1] (1.29ns)   --->   "%store_ln0 = store i32 0, i32 %Len"   --->   Operation 24 'store' 'store_ln0' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc189"   --->   Operation 25 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%Len_2 = load i32 %Len" [can.c:263]   --->   Operation 26 'load' 'Len_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 27 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (1.96ns)   --->   "%icmp_ln261 = icmp_ult  i32 %Len_2, i32 %zext_ln27_cast" [can.c:261]   --->   Operation 28 'icmp' 'icmp_ln261' <Predicate = true> <Delay = 1.96> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.96> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%br_ln261 = br i1 %icmp_ln261, void %sw.bb198.loopexit.exitStub, void %for.inc189.split" [can.c:261]   --->   Operation 29 'br' 'br_ln261' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (1.89ns)   --->   "%add_ln263 = add i32 %Len_2, i32 %zext_ln261_cast" [can.c:263]   --->   Operation 30 'add' 'add_ln263' <Predicate = (icmp_ln261)> <Delay = 1.89> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 5.63>
+ST_2 : Operation 31 [1/1] (0.00ns) (grouped into LUT with out node add_ln262)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %add_ln263, i32 31" [can.c:263]   --->   Operation 31 'bitselect' 'tmp' <Predicate = (icmp_ln261)> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (1.89ns)   --->   "%sub_ln263 = sub i32 0, i32 %add_ln263" [can.c:263]   --->   Operation 32 'sub' 'sub_ln263' <Predicate = (icmp_ln261)> <Delay = 1.89> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%trunc_ln263_1 = partselect i30 @_ssdm_op_PartSelect.i30.i32.i32.i32, i32 %sub_ln263, i32 2, i32 31" [can.c:263]   --->   Operation 33 'partselect' 'trunc_ln263_1' <Predicate = (icmp_ln261)> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (1.84ns)   --->   "%sub_ln263_1 = sub i30 0, i30 %trunc_ln263_1" [can.c:263]   --->   Operation 34 'sub' 'sub_ln263_1' <Predicate = (icmp_ln261)> <Delay = 1.84> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 35 [1/1] (0.00ns) (grouped into LUT with out node add_ln262)   --->   "%tmp_7 = partselect i30 @_ssdm_op_PartSelect.i30.i32.i32.i32, i32 %add_ln263, i32 2, i32 31" [can.c:262]   --->   Operation 35 'partselect' 'tmp_7' <Predicate = (icmp_ln261)> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns) (grouped into LUT with out node add_ln262)   --->   "%select_ln263 = select i1 %tmp, i30 %sub_ln263_1, i30 %tmp_7" [can.c:263]   --->   Operation 36 'select' 'select_ln263' <Predicate = (icmp_ln261)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 37 [1/1] (0.00ns) (grouped into LUT with out node add_ln262)   --->   "%shl_ln2 = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i30.i2, i30 %select_ln263, i2 0" [can.c:262]   --->   Operation 37 'bitconcatenate' 'shl_ln2' <Predicate = (icmp_ln261)> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (1.89ns) (out node of the LUT)   --->   "%add_ln262 = add i32 %shl_ln2, i32 %canbase_read" [can.c:262]   --->   Operation 38 'add' 'add_ln262' <Predicate = (icmp_ln261)> <Delay = 1.89> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i30 @_ssdm_op_PartSelect.i30.i32.i32.i32, i32 %add_ln262, i32 2, i32 31" [can.c:262]   --->   Operation 39 'partselect' 'trunc_ln' <Predicate = (icmp_ln261)> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (1.89ns)   --->   "%Len_3 = add i32 %Len_2, i32 4" [can.c:261]   --->   Operation 40 'add' 'Len_3' <Predicate = (icmp_ln261)> <Delay = 1.89> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 41 [1/1] (1.29ns)   --->   "%store_ln261 = store i32 %Len_3, i32 %Len" [can.c:261]   --->   Operation 41 'store' 'store_ln261' <Predicate = (icmp_ln261)> <Delay = 1.29>
+
+State 3 <SV = 2> <Delay = 7.30>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%sext_ln262 = sext i30 %trunc_ln" [can.c:262]   --->   Operation 42 'sext' 'sext_ln262' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%clu_addr_addr = getelementptr i32 %clu_addr, i32 %sext_ln262" [can.c:262]   --->   Operation 43 'getelementptr' 'clu_addr_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 44 [7/7] (7.30ns)   --->   "%data_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %clu_addr_addr, i32 1" [can.c:262]   --->   Operation 44 'readreq' 'data_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 4 <SV = 3> <Delay = 7.30>
+ST_4 : Operation 45 [6/7] (7.30ns)   --->   "%data_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %clu_addr_addr, i32 1" [can.c:262]   --->   Operation 45 'readreq' 'data_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 5 <SV = 4> <Delay = 7.30>
+ST_5 : Operation 46 [5/7] (7.30ns)   --->   "%data_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %clu_addr_addr, i32 1" [can.c:262]   --->   Operation 46 'readreq' 'data_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 6 <SV = 5> <Delay = 7.30>
+ST_6 : Operation 47 [4/7] (7.30ns)   --->   "%data_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %clu_addr_addr, i32 1" [can.c:262]   --->   Operation 47 'readreq' 'data_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 6> <Delay = 7.30>
+ST_7 : Operation 48 [3/7] (7.30ns)   --->   "%data_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %clu_addr_addr, i32 1" [can.c:262]   --->   Operation 48 'readreq' 'data_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 7> <Delay = 7.30>
+ST_8 : Operation 49 [2/7] (7.30ns)   --->   "%data_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %clu_addr_addr, i32 1" [can.c:262]   --->   Operation 49 'readreq' 'data_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 9 <SV = 8> <Delay = 7.30>
+ST_9 : Operation 50 [1/7] (7.30ns)   --->   "%data_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %clu_addr_addr, i32 1" [can.c:262]   --->   Operation 50 'readreq' 'data_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 10 <SV = 9> <Delay = 7.30>
+ST_10 : Operation 51 [1/1] (7.30ns)   --->   "%data = read i32 @_ssdm_op_Read.m_axi.volatile.i32P1A, i32 %clu_addr_addr" [can.c:262]   --->   Operation 51 'read' 'data' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_10 : Operation 52 [1/1] (0.00ns)   --->   "%trunc_ln17 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %data, i32 24, i32 31" [can.c:264]   --->   Operation 52 'partselect' 'trunc_ln17' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 53 [1/1] (0.00ns)   --->   "%trunc_ln18 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %data, i32 16, i32 23" [can.c:265]   --->   Operation 53 'partselect' 'trunc_ln18' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 54 [1/1] (0.00ns)   --->   "%trunc_ln19 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %data, i32 8, i32 15" [can.c:266]   --->   Operation 54 'partselect' 'trunc_ln19' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 55 [1/1] (0.00ns)   --->   "%trunc_ln267 = trunc i32 %data" [can.c:267]   --->   Operation 55 'trunc' 'trunc_ln267' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 78 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 78 'ret' 'ret_ln0' <Predicate = (!icmp_ln261)> <Delay = 0.00>
+
+State 11 <SV = 10> <Delay = 3.98>
+ST_11 : Operation 56 [1/1] (0.00ns)   --->   "%canIndex_load = load i64 %canIndex" [can.c:264]   --->   Operation 56 'load' 'canIndex_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 57 [1/1] (0.00ns)   --->   "%trunc_ln264 = trunc i64 %canIndex_load" [can.c:264]   --->   Operation 57 'trunc' 'trunc_ln264' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 58 [1/1] (1.31ns)   --->   "%add_ln264 = add i7 %trunc_ln264, i7 12" [can.c:264]   --->   Operation 58 'add' 'add_ln264' <Predicate = true> <Delay = 1.31> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 59 [1/1] (0.00ns)   --->   "%zext_ln264 = zext i7 %add_ln264" [can.c:264]   --->   Operation 59 'zext' 'zext_ln264' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 60 [1/1] (0.00ns)   --->   "%can_frame_addr = getelementptr i8 %can_frame, i32 0, i32 %zext_ln264" [can.c:264]   --->   Operation 60 'getelementptr' 'can_frame_addr' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 61 [1/1] (1.75ns)   --->   "%store_ln264 = store i8 %trunc_ln17, i7 %can_frame_addr" [can.c:264]   --->   Operation 61 'store' 'store_ln264' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 92> <RAM>
+ST_11 : Operation 62 [1/1] (1.31ns)   --->   "%add_ln265 = add i7 %trunc_ln264, i7 13" [can.c:265]   --->   Operation 62 'add' 'add_ln265' <Predicate = true> <Delay = 1.31> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 63 [1/1] (0.00ns)   --->   "%zext_ln265 = zext i7 %add_ln265" [can.c:265]   --->   Operation 63 'zext' 'zext_ln265' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 64 [1/1] (0.00ns)   --->   "%can_frame_addr_1 = getelementptr i8 %can_frame, i32 0, i32 %zext_ln265" [can.c:265]   --->   Operation 64 'getelementptr' 'can_frame_addr_1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 65 [1/1] (1.75ns)   --->   "%store_ln265 = store i8 %trunc_ln18, i7 %can_frame_addr_1" [can.c:265]   --->   Operation 65 'store' 'store_ln265' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 92> <RAM>
+ST_11 : Operation 66 [1/1] (2.69ns)   --->   "%add_ln268 = add i64 %canIndex_load, i64 4" [can.c:268]   --->   Operation 66 'add' 'add_ln268' <Predicate = true> <Delay = 2.69> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.69> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 67 [1/1] (1.29ns)   --->   "%store_ln261 = store i64 %add_ln268, i64 %canIndex" [can.c:261]   --->   Operation 67 'store' 'store_ln261' <Predicate = true> <Delay = 1.29>
+
+State 12 <SV = 11> <Delay = 3.07>
+ST_12 : Operation 68 [1/1] (0.00ns)   --->   "%specloopname_ln188 = specloopname void @_ssdm_op_SpecLoopName, void @empty_28" [can.c:188]   --->   Operation 68 'specloopname' 'specloopname_ln188' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 69 [1/1] (1.31ns)   --->   "%add_ln266 = add i7 %trunc_ln264, i7 14" [can.c:266]   --->   Operation 69 'add' 'add_ln266' <Predicate = true> <Delay = 1.31> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 70 [1/1] (0.00ns)   --->   "%zext_ln266 = zext i7 %add_ln266" [can.c:266]   --->   Operation 70 'zext' 'zext_ln266' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 71 [1/1] (0.00ns)   --->   "%can_frame_addr_2 = getelementptr i8 %can_frame, i32 0, i32 %zext_ln266" [can.c:266]   --->   Operation 71 'getelementptr' 'can_frame_addr_2' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 72 [1/1] (1.75ns)   --->   "%store_ln266 = store i8 %trunc_ln19, i7 %can_frame_addr_2" [can.c:266]   --->   Operation 72 'store' 'store_ln266' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 92> <RAM>
+ST_12 : Operation 73 [1/1] (1.31ns)   --->   "%add_ln267 = add i7 %trunc_ln264, i7 15" [can.c:267]   --->   Operation 73 'add' 'add_ln267' <Predicate = true> <Delay = 1.31> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 74 [1/1] (0.00ns)   --->   "%zext_ln267 = zext i7 %add_ln267" [can.c:267]   --->   Operation 74 'zext' 'zext_ln267' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 75 [1/1] (0.00ns)   --->   "%can_frame_addr_3 = getelementptr i8 %can_frame, i32 0, i32 %zext_ln267" [can.c:267]   --->   Operation 75 'getelementptr' 'can_frame_addr_3' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 76 [1/1] (1.75ns)   --->   "%store_ln267 = store i8 %trunc_ln267, i7 %can_frame_addr_3" [can.c:267]   --->   Operation 76 'store' 'store_ln267' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 92> <RAM>
+ST_12 : Operation 77 [1/1] (0.00ns)   --->   "%br_ln261 = br void %for.inc189" [can.c:261]   --->   Operation 77 'br' 'br_ln261' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1.97ns
+The critical path consists of the following:
+	'alloca' operation ('Len') [6]  (0 ns)
+	'load' operation ('Len', can.c:263) on local variable 'Len' [18]  (0 ns)
+	'icmp' operation ('icmp_ln261', can.c:261) [20]  (1.97 ns)
+
+ <State 2>: 5.64ns
+The critical path consists of the following:
+	'sub' operation ('sub_ln263', can.c:263) [27]  (1.9 ns)
+	'sub' operation ('sub_ln263_1', can.c:263) [29]  (1.85 ns)
+	'select' operation ('select_ln263', can.c:263) [31]  (0 ns)
+	'add' operation ('add_ln262', can.c:262) [33]  (1.9 ns)
+
+ <State 3>: 7.3ns
+The critical path consists of the following:
+	'getelementptr' operation ('clu_addr_addr', can.c:262) [36]  (0 ns)
+	bus request operation ('data_req', can.c:262) on port 'clu_addr' (can.c:262) [37]  (7.3 ns)
+
+ <State 4>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('data_req', can.c:262) on port 'clu_addr' (can.c:262) [37]  (7.3 ns)
+
+ <State 5>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('data_req', can.c:262) on port 'clu_addr' (can.c:262) [37]  (7.3 ns)
+
+ <State 6>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('data_req', can.c:262) on port 'clu_addr' (can.c:262) [37]  (7.3 ns)
+
+ <State 7>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('data_req', can.c:262) on port 'clu_addr' (can.c:262) [37]  (7.3 ns)
+
+ <State 8>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('data_req', can.c:262) on port 'clu_addr' (can.c:262) [37]  (7.3 ns)
+
+ <State 9>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('data_req', can.c:262) on port 'clu_addr' (can.c:262) [37]  (7.3 ns)
+
+ <State 10>: 7.3ns
+The critical path consists of the following:
+	bus read operation ('data', can.c:262) on port 'clu_addr' (can.c:262) [38]  (7.3 ns)
+
+ <State 11>: 3.99ns
+The critical path consists of the following:
+	'load' operation ('canIndex_load', can.c:264) on local variable 'canIndex' [23]  (0 ns)
+	'add' operation ('add_ln268', can.c:268) [60]  (2.69 ns)
+	'store' operation ('store_ln261', can.c:261) of variable 'add_ln268', can.c:268 on local variable 'canIndex' [62]  (1.3 ns)
+
+ <State 12>: 3.07ns
+The critical path consists of the following:
+	'add' operation ('add_ln266', can.c:266) [51]  (1.32 ns)
+	'getelementptr' operation ('can_frame_addr_2', can.c:266) [53]  (0 ns)
+	'store' operation ('store_ln266', can.c:266) of variable 'trunc_ln19', can.c:266 on array 'can_frame' [54]  (1.75 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

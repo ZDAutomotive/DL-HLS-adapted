@@ -1,0 +1,5 @@
+D:\clu_2022_stats\clu\solution1\.autopilot\db\uart.pp.0.c:1243:2: warning: Added loop label VITIS_LOOP_240_1:   [xilinx-label-all-loops]
+ for (int uart_i = 0; uart_i < 8; uart_i++) uart_data_read (ddr, uartbase, ts_in, init_device, uart_i, received_uart);
+ ^~~
+ VITIS_LOOP_240_1: 
+D:\clu_2022_stats\clu\solution1\.autopilot\db\uart.pp.0.c:1243:2: note: FIX-IT applied suggested code changes

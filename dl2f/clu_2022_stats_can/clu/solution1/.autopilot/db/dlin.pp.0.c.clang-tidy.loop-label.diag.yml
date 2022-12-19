@@ -1,0 +1,22 @@
+---
+MainSourceFile:  'D:/clu_2022_stats/clu/solution1/.autopilot/db/dlin.pp.0.c'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_176_1:  '
+    FileOffset:      176
+    FilePath:        dlin.c
+    Replacements:    
+      - FilePath:        'D:\clu_2022_stats\clu\solution1\.autopilot\db\dlin.pp.0.c'
+        Offset:          61348
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_176_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_256_1:  '
+    FileOffset:      256
+    FilePath:        dlin.c
+    Replacements:    
+      - FilePath:        'D:\clu_2022_stats\clu\solution1\.autopilot\db\dlin.pp.0.c'
+        Offset:          63166
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_256_1: '
+...

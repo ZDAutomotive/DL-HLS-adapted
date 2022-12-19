@@ -1,0 +1,47 @@
+<pragmas>
+<pragma file="clu.c" line="43" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="" bundle="EN" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="clu.c" line="46" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="can_ptr" bundle="EN" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="clu.c" line="47" pragmaType="interface" parentfunction="clu" mode="m_axi" port="can_ptr" bundle="clu_addr" offset="slave" name="" depth="1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="clu.c" line="48" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="can_ddr" bundle="EN" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="clu.c" line="49" pragmaType="interface" parentfunction="clu" mode="m_axi" port="can_ddr" bundle="ps_ddr" offset="slave" name="" depth="10" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="clu.c" line="50" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="can_en" bundle="EN" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="clu.c" line="51" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="received_can" bundle="EN" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="clu.c" line="53" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="can_0_received" bundle="EN" offset="88" name="" clock="" impl="" register="1"/>
+<pragma file="clu.c" line="54" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="can_1_received" bundle="EN" offset="96" name="" clock="" impl="" register="1"/>
+<pragma file="clu.c" line="55" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="can_2_received" bundle="EN" offset="104" name="" clock="" impl="" register="1"/>
+<pragma file="clu.c" line="56" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="can_3_received" bundle="EN" offset="112" name="" clock="" impl="" register="1"/>
+<pragma file="clu.c" line="57" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="can_4_received" bundle="EN" offset="120" name="" clock="" impl="" register="1"/>
+<pragma file="clu.c" line="58" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="can_5_received" bundle="EN" offset="128" name="" clock="" impl="" register="1"/>
+<pragma file="clu.c" line="59" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="can_6_received" bundle="EN" offset="136" name="" clock="" impl="" register="1"/>
+<pragma file="clu.c" line="60" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="can_7_received" bundle="EN" offset="144" name="" clock="" impl="" register="1"/>
+<pragma file="clu.c" line="61" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="can_8_received" bundle="EN" offset="152" name="" clock="" impl="" register="1"/>
+<pragma file="clu.c" line="62" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="can_9_received" bundle="EN" offset="160" name="" clock="" impl="" register="1"/>
+<pragma file="clu.c" line="63" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="can_10_received" bundle="EN" offset="152" name="" clock="" impl="" register="1"/>
+<pragma file="clu.c" line="64" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="can_11_received" bundle="EN" offset="160" name="" clock="" impl="" register="1"/>
+<pragma file="clu.c" line="65" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="droped" bundle="EN" offset="168" name="" clock="" impl="" register="1"/>
+<pragma file="clu.c" line="68" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="uart_ptr" bundle="EN" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="clu.c" line="69" pragmaType="interface" parentfunction="clu" mode="m_axi" port="uart_ptr" bundle="clu_addr" offset="slave" name="" depth="1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="clu.c" line="70" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="uart_ddr" bundle="EN" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="clu.c" line="71" pragmaType="interface" parentfunction="clu" mode="m_axi" port="uart_ddr" bundle="ps_ddr" offset="slave" name="" depth="10" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="clu.c" line="72" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="uart_en" bundle="EN" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="clu.c" line="73" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="received_uart" bundle="EN" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="clu.c" line="76" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="lin_ptr" bundle="EN" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="clu.c" line="77" pragmaType="interface" parentfunction="clu" mode="m_axi" port="lin_ptr" bundle="clu_addr" offset="slave" name="" depth="1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="clu.c" line="78" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="lin_ddr" bundle="EN" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="clu.c" line="79" pragmaType="interface" parentfunction="clu" mode="m_axi" port="lin_ddr" bundle="ps_ddr" offset="slave" name="" depth="10" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="clu.c" line="80" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="lin_en" bundle="EN" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="clu.c" line="81" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="received_lin" bundle="EN" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="can.c" line="161" pragmaType="reset" parentfunction="recvFrame_logic" off="0" variable="recvFrame_logic.counter_can_0"/>
+<pragma file="can.c" line="163" pragmaType="reset" parentfunction="recvFrame_logic" off="0" variable="recvFrame_logic.counter_can_1"/>
+<pragma file="can.c" line="165" pragmaType="reset" parentfunction="recvFrame_logic" off="0" variable="recvFrame_logic.counter_can_2"/>
+<pragma file="can.c" line="167" pragmaType="reset" parentfunction="recvFrame_logic" off="0" variable="recvFrame_logic.counter_can_3"/>
+<pragma file="can.c" line="169" pragmaType="reset" parentfunction="recvFrame_logic" off="0" variable="recvFrame_logic.counter_can_4"/>
+<pragma file="can.c" line="171" pragmaType="reset" parentfunction="recvFrame_logic" off="0" variable="recvFrame_logic.counter_can_5"/>
+<pragma file="can.c" line="173" pragmaType="reset" parentfunction="recvFrame_logic" off="0" variable="recvFrame_logic.counter_can_6"/>
+<pragma file="can.c" line="175" pragmaType="reset" parentfunction="recvFrame_logic" off="0" variable="recvFrame_logic.counter_can_7"/>
+<pragma file="can.c" line="177" pragmaType="reset" parentfunction="recvFrame_logic" off="0" variable="recvFrame_logic.counter_can_8"/>
+<pragma file="can.c" line="179" pragmaType="reset" parentfunction="recvFrame_logic" off="0" variable="recvFrame_logic.counter_can_9"/>
+<pragma file="can.c" line="181" pragmaType="reset" parentfunction="recvFrame_logic" off="0" variable="recvFrame_logic.counter_can_10"/>
+<pragma file="can.c" line="183" pragmaType="reset" parentfunction="recvFrame_logic" off="0" variable="recvFrame_logic.counter_can_11"/>
+<pragma file="can.c" line="185" pragmaType="reset" parentfunction="recvFrame_logic" off="0" variable="recvFrame_logic.counter_droped"/>
+</pragmas>

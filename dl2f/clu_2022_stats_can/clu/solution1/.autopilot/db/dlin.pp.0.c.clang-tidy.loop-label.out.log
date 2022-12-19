@@ -1,0 +1,10 @@
+D:\clu_2022_stats\clu\solution1\.autopilot\db\dlin.pp.0.c:1184:5: warning: Added loop label VITIS_LOOP_176_1:   [xilinx-label-all-loops]
+    for(int i = 0; i < (PL_Data.llen + 1); i++)
+    ^~~
+    VITIS_LOOP_176_1: 
+D:\clu_2022_stats\clu\solution1\.autopilot\db\dlin.pp.0.c:1184:5: note: FIX-IT applied suggested code changes
+D:\clu_2022_stats\clu\solution1\.autopilot\db\dlin.pp.0.c:1239:2: warning: Added loop label VITIS_LOOP_256_1:   [xilinx-label-all-loops]
+ for (int lin_nr = 0; lin_nr < 10; lin_nr++) dlin_FSM(linbase, ddr, enable_device, lin_nr, timestamp, received_lin);
+ ^~~
+ VITIS_LOOP_256_1: 
+D:\clu_2022_stats\clu\solution1\.autopilot\db\dlin.pp.0.c:1239:2: note: FIX-IT applied suggested code changes

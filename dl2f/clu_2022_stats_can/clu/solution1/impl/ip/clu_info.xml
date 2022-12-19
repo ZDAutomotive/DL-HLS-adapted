@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <core name="" type="" target="">
+    <kernel name="clu" language="c" vlnv="xilinx.com:hls:clu:1.0" attributes="" hash="" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="false" interrupt="true">
+      <port name="S_AXI_EN" mode="slave" range="0x1000" dataWidth="32" portType="addressable" base="0x00000000"/>
+      <port name="M_AXI_CLU_ADDR" mode="master" range="0xFFFFFFFF" dataWidth="-1" portType="addressable" base="0x00000000"/>
+      <port name="M_AXI_PS_DDR" mode="master" range="0xFFFFFFFF" dataWidth="-1" portType="addressable" base="0x00000000"/>
+      <arg name="can_ptr" addressQualifier="1" id="0" port="M_AXI_CLU_ADDR" size="0x4" offset="0x10" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="uart_ptr" addressQualifier="1" id="1" port="M_AXI_CLU_ADDR" size="0x4" offset="0x18" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="lin_ptr" addressQualifier="1" id="2" port="M_AXI_CLU_ADDR" size="0x4" offset="0x20" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="can_0_received" addressQualifier="0" id="3" port="S_AXI_EN" size="0x4" offset="0x58" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="can_1_received" addressQualifier="0" id="4" port="S_AXI_EN" size="0x4" offset="0x60" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="can_2_received" addressQualifier="0" id="5" port="S_AXI_EN" size="0x4" offset="0x68" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="can_3_received" addressQualifier="0" id="6" port="S_AXI_EN" size="0x4" offset="0x70" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="can_4_received" addressQualifier="0" id="7" port="S_AXI_EN" size="0x4" offset="0x78" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="can_5_received" addressQualifier="0" id="8" port="S_AXI_EN" size="0x4" offset="0x80" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="can_6_received" addressQualifier="0" id="9" port="S_AXI_EN" size="0x4" offset="0x88" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="can_7_received" addressQualifier="0" id="10" port="S_AXI_EN" size="0x4" offset="0x90" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="can_8_received" addressQualifier="0" id="11" port="S_AXI_EN" size="0x4" offset="0x98" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="can_9_received" addressQualifier="0" id="12" port="S_AXI_EN" size="0x4" offset="0xA0" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="can_10_received" addressQualifier="0" id="13" port="S_AXI_EN" size="0x4" offset="0x28" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="can_11_received" addressQualifier="0" id="14" port="S_AXI_EN" size="0x4" offset="0x38" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="droped" addressQualifier="0" id="15" port="S_AXI_EN" size="0x4" offset="0xA8" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="received_can" addressQualifier="0" id="16" port="S_AXI_EN" size="0x4" offset="0x48" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="received_uart" addressQualifier="0" id="17" port="S_AXI_EN" size="0x4" offset="0x30" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="received_lin" addressQualifier="0" id="18" port="S_AXI_EN" size="0x4" offset="0x40" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="can_en" addressQualifier="0" id="19" port="S_AXI_EN" size="0x4" offset="0x50" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="uart_en" addressQualifier="0" id="20" port="S_AXI_EN" size="0x4" offset="0xB0" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="lin_en" addressQualifier="0" id="21" port="S_AXI_EN" size="0x4" offset="0xB8" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="can_ddr" addressQualifier="1" id="22" port="M_AXI_PS_DDR" size="0x4" offset="0xC0" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="uart_ddr" addressQualifier="1" id="23" port="M_AXI_PS_DDR" size="0x4" offset="0xC8" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="lin_ddr" addressQualifier="1" id="24" port="M_AXI_PS_DDR" size="0x4" offset="0xD0" hostOffset="0x0" hostSize="0x4" type=""/>
+      <compileWorkGroupSize x="1" y="1" z="1"/>
+    </kernel>
+  </core>
+</project>

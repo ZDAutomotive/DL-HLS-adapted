@@ -1,0 +1,5 @@
+passing 'volatile unsigned char *' to parameter of type 'const void *' discards qualifiers
+passing argument to parameter '_Src' here
+passing 'volatile unsigned char *' to parameter of type 'void *' discards qualifiers
+passing argument to parameter '_Dst' here
+2 warnings generated.
