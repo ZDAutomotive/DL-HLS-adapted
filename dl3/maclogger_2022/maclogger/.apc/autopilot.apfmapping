@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="recv_mac_msg.cpp" path="D:\maclogger_2022\recv_mac_msg.cpp"/>
+    <originFiles name="mac_logger_test.cpp" path="D:\maclogger_2022\mac_logger_test.cpp"/>
+    <originFiles name="mac_logger.h" path="D:\maclogger_2022\mac_logger.h"/>
+    <originFiles name="mac_logger.cpp" path="D:\maclogger_2022\mac_logger.cpp"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

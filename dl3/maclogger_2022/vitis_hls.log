@@ -1,0 +1,43 @@
+INFO: [HLS 200-10] Running 'D:/Vitis_HLS/2022.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'bo.liu' on host 'zd-igs-l011' (Windows NT_amd64 version 6.2) on Thu Nov 10 17:25:47 +0100 2022
+INFO: [HLS 200-10] In directory 'D:/maclogger_2022'
+Sourcing Tcl script 'D:/maclogger_2022/maclogger/solution1/export.tcl'
+INFO: [HLS 200-1510] Running: source D:/maclogger_2022/maclogger/solution1/export.tcl
+INFO: [HLS 200-1510] Running: open_project maclogger 
+INFO: [HLS 200-10] Opening project 'D:/maclogger_2022/maclogger'.
+INFO: [HLS 200-1510] Running: set_top mac_logger 
+INFO: [HLS 200-1510] Running: add_files mac_logger.cpp 
+INFO: [HLS 200-10] Adding design file 'mac_logger.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files mac_logger.h 
+INFO: [HLS 200-10] Adding design file 'mac_logger.h' to the project
+INFO: [HLS 200-1510] Running: add_files mac_logger_test.cpp 
+INFO: [HLS 200-10] Adding design file 'mac_logger_test.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files recv_mac_msg.cpp 
+INFO: [HLS 200-10] Adding design file 'recv_mac_msg.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'D:/maclogger_2022/maclogger/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu5ev-sfvc784-2-i'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xczu5ev-sfvc784-2-i 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+Running Dispatch Server on port: 53542
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+ipx::create_core: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 414.301 ; gain = 72.215
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2022.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 10 17:26:31 2022...
+INFO: [HLS 200-802] Generated output file maclogger/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 6 seconds. CPU system time: 0 seconds. Elapsed time: 33.942 seconds; current allocated memory: 14.426 MB.
+INFO: [HLS 200-112] Total CPU user time: 8 seconds. Total CPU system time: 1 seconds. Total elapsed time: 46.544 seconds; peak allocated memory: 134.562 MB.

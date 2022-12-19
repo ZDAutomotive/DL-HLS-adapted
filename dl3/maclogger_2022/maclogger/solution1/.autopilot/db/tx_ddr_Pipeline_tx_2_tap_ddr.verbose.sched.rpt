@@ -1,0 +1,156 @@
+
+
+================================================================
+== Vitis HLS Report for 'tx_ddr_Pipeline_tx_2_tap_ddr'
+================================================================
+* Date:           Thu Nov 10 17:24:45 2022
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        maclogger
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu5ev-sfvc784-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        6|      443|  60.000 ns|  4.430 us|    6|  443|       no|
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |                |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip  |          |
+        |    Loop Name   |   min   |   max   |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +----------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |- tx_2_tap_ddr  |        4|      441|         3|          1|          1|  3 ~ 440|       yes|
+        +----------------+---------+---------+----------+-----------+-----------+---------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.49>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 6 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%N_1_read = read i15 @_ssdm_op_Read.ap_auto.i15, i15 %N_1"   --->   Operation 7 'read' 'N_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%sext_ln570_read = read i62 @_ssdm_op_Read.ap_auto.i62, i62 %sext_ln570"   --->   Operation 8 'read' 'sext_ln570_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%sext_ln570_cast = sext i62 %sext_ln570_read"   --->   Operation 9 'sext' 'sext_ln570_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ps, void @empty_18, i32 0, i32 0, void @empty_34, i32 0, i32 102400, void @empty_37, void @empty_38, void @empty_34, i32 16, i32 16, i32 16, i32 64, void @empty_34, void @empty_34, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.42ns)   --->   "%store_ln0 = store i15 0, i15 %i"   --->   Operation 11 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc770"   --->   Operation 12 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%i_1 = load i15 %i" [mac_logger.cpp:570]   --->   Operation 13 'load' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (1.07ns)   --->   "%icmp_ln570 = icmp_eq  i15 %i_1, i15 %N_1_read" [mac_logger.cpp:570]   --->   Operation 14 'icmp' 'icmp_ln570' <Predicate = true> <Delay = 1.07> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (0.84ns)   --->   "%add_ln570 = add i15 %i_1, i15 1" [mac_logger.cpp:570]   --->   Operation 15 'add' 'add_ln570' <Predicate = true> <Delay = 0.84> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln570 = br i1 %icmp_ln570, void %for.inc770.split, void %for.end772.loopexit.exitStub" [mac_logger.cpp:570]   --->   Operation 16 'br' 'br_ln570' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%zext_ln570 = zext i15 %i_1" [mac_logger.cpp:570]   --->   Operation 17 'zext' 'zext_ln570' <Predicate = (!icmp_ln570)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%data_buf_addr = getelementptr i32 %data_buf, i64 0, i64 %zext_ln570" [mac_logger.cpp:574]   --->   Operation 18 'getelementptr' 'data_buf_addr' <Predicate = (!icmp_ln570)> <Delay = 0.00>
+ST_1 : Operation 19 [2/2] (1.23ns)   --->   "%data_buf_load = load i9 %data_buf_addr" [mac_logger.cpp:574]   --->   Operation 19 'load' 'data_buf_load' <Predicate = (!icmp_ln570)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_1 : Operation 20 [1/1] (0.42ns)   --->   "%store_ln570 = store i15 %add_ln570, i15 %i" [mac_logger.cpp:570]   --->   Operation 20 'store' 'store_ln570' <Predicate = (!icmp_ln570)> <Delay = 0.42>
+
+State 2 <SV = 1> <Delay = 1.23>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%ps_addr = getelementptr i32 %ps, i64 %sext_ln570_cast" [mac_logger.cpp:570]   --->   Operation 21 'getelementptr' 'ps_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/2] (1.23ns)   --->   "%data_buf_load = load i9 %data_buf_addr" [mac_logger.cpp:574]   --->   Operation 22 'load' 'data_buf_load' <Predicate = (!icmp_ln570)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 28 'ret' 'ret_ln0' <Predicate = (icmp_ln570)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 7.30>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%specpipeline_ln571 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_34" [mac_logger.cpp:571]   --->   Operation 23 'specpipeline' 'specpipeline_ln571' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%speclooptripcount_ln572 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 3, i64 440, i64 160" [mac_logger.cpp:572]   --->   Operation 24 'speclooptripcount' 'speclooptripcount_ln572' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%specloopname_ln570 = specloopname void @_ssdm_op_SpecLoopName, void @empty_15" [mac_logger.cpp:570]   --->   Operation 25 'specloopname' 'specloopname_ln570' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (7.30ns)   --->   "%write_ln573 = write void @_ssdm_op_Write.m_axi.p1i32, i32 %ps_addr, i32 %data_buf_load, i4 15" [mac_logger.cpp:573]   --->   Operation 26 'write' 'write_ln573' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%br_ln570 = br void %for.inc770" [mac_logger.cpp:570]   --->   Operation 27 'br' 'br_ln570' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1.5ns
+The critical path consists of the following:
+	'alloca' operation ('i') [5]  (0 ns)
+	'load' operation ('i', mac_logger.cpp:570) on local variable 'i' [13]  (0 ns)
+	'add' operation ('add_ln570', mac_logger.cpp:570) [16]  (0.842 ns)
+	'store' operation ('store_ln570', mac_logger.cpp:570) of variable 'add_ln570', mac_logger.cpp:570 on local variable 'i' [26]  (0.427 ns)
+	blocking operation 0.228 ns on control path)
+
+ <State 2>: 1.24ns
+The critical path consists of the following:
+	'load' operation ('data_buf_load', mac_logger.cpp:574) on array 'data_buf' [24]  (1.24 ns)
+
+ <State 3>: 7.3ns
+The critical path consists of the following:
+	bus write operation ('write_ln573', mac_logger.cpp:573) on port 'ps' (mac_logger.cpp:573) [25]  (7.3 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

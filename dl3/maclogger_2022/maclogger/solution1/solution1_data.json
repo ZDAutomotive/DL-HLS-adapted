@@ -1,0 +1,4005 @@
+{
+  "Top": "mac_logger",
+  "RtlTop": "mac_logger",
+  "RtlPrefix": "",
+  "RtlSubPrefix": "mac_logger_",
+  "SourceLanguage": "cpp",
+  "HostMachineBits": "64",
+  "FunctionProtocol": "ap_ctrl_chain",
+  "ResetStyle": "control",
+  "Target": {
+    "Family": "zynquplus",
+    "Device": "xczu5ev",
+    "Package": "-sfvc784",
+    "Speed": "-2-i",
+    "Triple": "fpga64-xilinx-none"
+  },
+  "Args": {
+    "fifo": {
+      "index": "0",
+      "direction": "in",
+      "srcType": "*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "interface",
+          "interface": "m_axi_mac_fifo",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "fifo_1",
+          "usage": "address",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "fifo_2",
+          "usage": "address",
+          "direction": "in"
+        }
+      ]
+    },
+    "log_ddr": {
+      "index": "1",
+      "direction": "inout",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "interface",
+          "interface": "m_axi_ps",
+          "name": "",
+          "usage": "data",
+          "direction": "inout"
+        },
+        {
+          "type": "interface",
+          "interface": "s_axi_axilites",
+          "name": "",
+          "usage": "address",
+          "direction": "inout"
+        }
+      ]
+    },
+    "tap_ddr": {
+      "index": "2",
+      "direction": "inout",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "interface",
+          "interface": "m_axi_ps",
+          "name": "",
+          "usage": "data",
+          "direction": "inout"
+        },
+        {
+          "type": "interface",
+          "interface": "s_axi_axilites",
+          "name": "",
+          "usage": "address",
+          "direction": "inout"
+        }
+      ]
+    },
+    "status": {
+      "index": "3",
+      "direction": "unused",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "status",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "writeStatus": {
+      "index": "4",
+      "direction": "unused",
+      "srcType": "unsigned short*",
+      "srcSize": "16",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "writeStatus",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "timestamp": {
+      "index": "5",
+      "direction": "in",
+      "srcType": "long long int",
+      "srcSize": "64",
+      "hwRefs": [{
+          "type": "port",
+          "interface": "timestamp",
+          "name": "timestamp",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "logger_vlan_enable_mask": {
+      "index": "6",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "logger_vlan_enable_mask",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "vlan100_received": {
+      "index": "7",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan100_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan100_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan101_received": {
+      "index": "8",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan101_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan101_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan102_received": {
+      "index": "9",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan102_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan102_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan103_received": {
+      "index": "10",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan103_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan103_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan104_received": {
+      "index": "11",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan104_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan104_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan105_received": {
+      "index": "12",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan105_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan105_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan106_received": {
+      "index": "13",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan106_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan106_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan107_received": {
+      "index": "14",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan107_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan107_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan108_received": {
+      "index": "15",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan108_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan108_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan109_received": {
+      "index": "16",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan109_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan109_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "droped": {
+      "index": "17",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "droped",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "droped_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "multicast_recv_enable": {
+      "index": "18",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "multicast_recv_enable",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_filter_enable": {
+      "index": "19",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_filter_enable",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan100_macaddr_lsb": {
+      "index": "20",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan100_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan100_macaddr_msb": {
+      "index": "21",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan100_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan101_macaddr_lsb": {
+      "index": "22",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan101_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan101_macaddr_msb": {
+      "index": "23",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan101_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan102_macaddr_lsb": {
+      "index": "24",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan102_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan102_macaddr_msb": {
+      "index": "25",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan102_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan103_macaddr_lsb": {
+      "index": "26",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan103_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan103_macaddr_msb": {
+      "index": "27",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan103_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan104_macaddr_lsb": {
+      "index": "28",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan104_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan104_macaddr_msb": {
+      "index": "29",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan104_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan105_macaddr_lsb": {
+      "index": "30",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan105_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan105_macaddr_msb": {
+      "index": "31",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan105_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan106_macaddr_lsb": {
+      "index": "32",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan106_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan106_macaddr_msb": {
+      "index": "33",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan106_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan107_macaddr_lsb": {
+      "index": "34",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan107_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan107_macaddr_msb": {
+      "index": "35",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan107_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan108_macaddr_lsb": {
+      "index": "36",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan108_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan108_macaddr_msb": {
+      "index": "37",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan108_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan109_macaddr_lsb": {
+      "index": "38",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan109_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan109_macaddr_msb": {
+      "index": "39",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan109_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "log_all_mask": {
+      "index": "40",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "log_all_mask",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "fifo_axi_full": {
+      "index": "41",
+      "direction": "in",
+      "srcType": "*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "interface",
+          "interface": "m_axi_fifo_axi_full",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "interface",
+          "interface": "s_axi_axilites",
+          "name": "",
+          "usage": "address",
+          "direction": "in"
+        }
+      ]
+    }
+  },
+  "HlsSolution": {
+    "FlowTarget": "vivado",
+    "ConfigTcl": [
+      "config_export -format=ip_catalog",
+      "config_export -rtl=verilog"
+    ],
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "KernelName": "mac_logger"
+  },
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "10",
+    "Uncertainty": "2.7",
+    "IsCombinational": "0",
+    "II": "undef",
+    "Latency": "undef"
+  },
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
+  "Ipx": {
+    "Vendor": "xilinx.com",
+    "Library": "hls",
+    "Name": "mac_logger",
+    "Version": "1.0",
+    "DisplayName": "Mac_logger",
+    "Revision": "2112764126",
+    "Description": "An IP generated by Vitis HLS",
+    "Taxonomy": "\/VITIS_HLS_IP",
+    "AutoFamilySupport": "",
+    "ZipFile": "xilinx_com_hls_mac_logger_1_0.zip"
+  },
+  "Files": {
+    "CSource": [
+      "..\/..\/recv_mac_msg.cpp",
+      "..\/..\/mac_logger_test.cpp",
+      "..\/..\/mac_logger.cpp"
+    ],
+    "Vhdl": [
+      "impl\/vhdl\/mac_logger_axilites_s_axi.vhd",
+      "impl\/vhdl\/mac_logger_dataflow_in_loop_VITIS_LOOP_697_1.vhd",
+      "impl\/vhdl\/mac_logger_dataflow_in_loop_VITIS_LOOP_697_1_data_buf3_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/mac_logger_dataflow_in_loop_VITIS_LOOP_697_1_data_buf3_RAM_AUTO_1R1W_memcore.vhd",
+      "impl\/vhdl\/mac_logger_dataflow_in_loop_VITIS_LOOP_697_1_log_header_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/mac_logger_dataflow_in_loop_VITIS_LOOP_697_1_log_header_RAM_AUTO_1R1W_memcore.vhd",
+      "impl\/vhdl\/mac_logger_entry_proc.vhd",
+      "impl\/vhdl\/mac_logger_fifo_axi_full_m_axi.vhd",
+      "impl\/vhdl\/mac_logger_fifo_w16_d3_S.vhd",
+      "impl\/vhdl\/mac_logger_fifo_w32_d3_S.vhd",
+      "impl\/vhdl\/mac_logger_fifo_w64_d2_S.vhd",
+      "impl\/vhdl\/mac_logger_flow_control_loop_pipe_sequential_init.vhd",
+      "impl\/vhdl\/mac_logger_mac_fifo_m_axi.vhd",
+      "impl\/vhdl\/mac_logger_mul_32s_32s_32_1_1.vhd",
+      "impl\/vhdl\/mac_logger_ps_m_axi.vhd",
+      "impl\/vhdl\/mac_logger_rx_fifo.vhd",
+      "impl\/vhdl\/mac_logger_rx_fifo_Pipeline_4.vhd",
+      "impl\/vhdl\/mac_logger_rx_fifo_Pipeline_rx_macfifo_data.vhd",
+      "impl\/vhdl\/mac_logger_rx_fifo_Pipeline_VITIS_LOOP_71_1.vhd",
+      "impl\/vhdl\/mac_logger_rx_fifo_Pipeline_VITIS_LOOP_91_2.vhd",
+      "impl\/vhdl\/mac_logger_rx_fifo_tmp_buf_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/mac_logger_rx_ringbuffer_header.vhd",
+      "impl\/vhdl\/mac_logger_rx_ringbuffer_header_Pipeline_VITIS_LOOP_28_1.vhd",
+      "impl\/vhdl\/mac_logger_rx_ringbuffer_header_Pipeline_VITIS_LOOP_32_2.vhd",
+      "impl\/vhdl\/mac_logger_tx_ddr.vhd",
+      "impl\/vhdl\/mac_logger_tx_ddr_log_header_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/mac_logger_tx_ddr_Pipeline_tx_2_log_ddr.vhd",
+      "impl\/vhdl\/mac_logger_tx_ddr_Pipeline_tx_2_tap_ddr.vhd",
+      "impl\/vhdl\/mac_logger_tx_ddr_Pipeline_VITIS_LOOP_471_1.vhd",
+      "impl\/vhdl\/mac_logger_tx_ddr_Pipeline_VITIS_LOOP_531_2.vhd",
+      "impl\/vhdl\/mac_logger_urem_32ns_32ns_32_36_seq_1.vhd",
+      "impl\/vhdl\/mac_logger.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/mac_logger_axilites_s_axi.v",
+      "impl\/verilog\/mac_logger_dataflow_in_loop_VITIS_LOOP_697_1.v",
+      "impl\/verilog\/mac_logger_dataflow_in_loop_VITIS_LOOP_697_1_data_buf3_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/mac_logger_dataflow_in_loop_VITIS_LOOP_697_1_data_buf3_RAM_AUTO_1R1W_memcore.v",
+      "impl\/verilog\/mac_logger_dataflow_in_loop_VITIS_LOOP_697_1_log_header_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/mac_logger_dataflow_in_loop_VITIS_LOOP_697_1_log_header_RAM_AUTO_1R1W_memcore.v",
+      "impl\/verilog\/mac_logger_entry_proc.v",
+      "impl\/verilog\/mac_logger_fifo_axi_full_m_axi.v",
+      "impl\/verilog\/mac_logger_fifo_w16_d3_S.v",
+      "impl\/verilog\/mac_logger_fifo_w32_d3_S.v",
+      "impl\/verilog\/mac_logger_fifo_w64_d2_S.v",
+      "impl\/verilog\/mac_logger_flow_control_loop_pipe_sequential_init.v",
+      "impl\/verilog\/mac_logger_hls_deadlock_detection_unit.v",
+      "impl\/verilog\/mac_logger_hls_deadlock_detector.vh",
+      "impl\/verilog\/mac_logger_hls_deadlock_report_unit.vh",
+      "impl\/verilog\/mac_logger_mac_fifo_m_axi.v",
+      "impl\/verilog\/mac_logger_mul_32s_32s_32_1_1.v",
+      "impl\/verilog\/mac_logger_ps_m_axi.v",
+      "impl\/verilog\/mac_logger_rx_fifo.v",
+      "impl\/verilog\/mac_logger_rx_fifo_Pipeline_4.v",
+      "impl\/verilog\/mac_logger_rx_fifo_Pipeline_rx_macfifo_data.v",
+      "impl\/verilog\/mac_logger_rx_fifo_Pipeline_VITIS_LOOP_71_1.v",
+      "impl\/verilog\/mac_logger_rx_fifo_Pipeline_VITIS_LOOP_91_2.v",
+      "impl\/verilog\/mac_logger_rx_fifo_tmp_buf_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/mac_logger_rx_ringbuffer_header.v",
+      "impl\/verilog\/mac_logger_rx_ringbuffer_header_Pipeline_VITIS_LOOP_28_1.v",
+      "impl\/verilog\/mac_logger_rx_ringbuffer_header_Pipeline_VITIS_LOOP_32_2.v",
+      "impl\/verilog\/mac_logger_tx_ddr.v",
+      "impl\/verilog\/mac_logger_tx_ddr_log_header_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/mac_logger_tx_ddr_Pipeline_tx_2_log_ddr.v",
+      "impl\/verilog\/mac_logger_tx_ddr_Pipeline_tx_2_tap_ddr.v",
+      "impl\/verilog\/mac_logger_tx_ddr_Pipeline_VITIS_LOOP_471_1.v",
+      "impl\/verilog\/mac_logger_tx_ddr_Pipeline_VITIS_LOOP_531_2.v",
+      "impl\/verilog\/mac_logger_urem_32ns_32ns_32_36_seq_1.v",
+      "impl\/verilog\/mac_logger.v"
+    ],
+    "SwDriver": [
+      "impl\/misc\/drivers\/mac_logger_v1_0\/data\/mac_logger.mdd",
+      "impl\/misc\/drivers\/mac_logger_v1_0\/data\/mac_logger.tcl",
+      "impl\/misc\/drivers\/mac_logger_v1_0\/src\/Makefile",
+      "impl\/misc\/drivers\/mac_logger_v1_0\/src\/xmac_logger.c",
+      "impl\/misc\/drivers\/mac_logger_v1_0\/src\/xmac_logger.h",
+      "impl\/misc\/drivers\/mac_logger_v1_0\/src\/xmac_logger_hw.h",
+      "impl\/misc\/drivers\/mac_logger_v1_0\/src\/xmac_logger_linux.c",
+      "impl\/misc\/drivers\/mac_logger_v1_0\/src\/xmac_logger_sinit.c"
+    ],
+    "IpMisc": ["impl\/misc\/logo.png"],
+    "CsynthXml": "syn\/report\/csynth.xml",
+    "DebugDir": ".debug",
+    "KernelXml": ".autopilot\/db\/kernel.internal.xml",
+    "Xo": "",
+    "XoHlsDir": "",
+    "ProtoInst": [".debug\/mac_logger.protoinst"]
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "Ip": []
+  },
+  "Interfaces": {
+    "s_axi_axilites": {
+      "type": "axi4lite",
+      "busTypeName": "aximm",
+      "mode": "slave",
+      "dataWidth": "32",
+      "addrWidth": "9",
+      "portPrefix": "s_axi_axilites_",
+      "paramPrefix": "C_S_AXI_AXILITES_",
+      "offsetMasterName": "m_axi_fifo_axi_full",
+      "ports": [
+        "s_axi_axilites_ARADDR",
+        "s_axi_axilites_ARREADY",
+        "s_axi_axilites_ARVALID",
+        "s_axi_axilites_AWADDR",
+        "s_axi_axilites_AWREADY",
+        "s_axi_axilites_AWVALID",
+        "s_axi_axilites_BREADY",
+        "s_axi_axilites_BRESP",
+        "s_axi_axilites_BVALID",
+        "s_axi_axilites_RDATA",
+        "s_axi_axilites_RREADY",
+        "s_axi_axilites_RRESP",
+        "s_axi_axilites_RVALID",
+        "s_axi_axilites_WDATA",
+        "s_axi_axilites_WREADY",
+        "s_axi_axilites_WSTRB",
+        "s_axi_axilites_WVALID"
+      ],
+      "registers": [
+        {
+          "offset": "0x00",
+          "name": "CTRL",
+          "access": "RW",
+          "description": "Control signals",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "AP_START",
+              "access": "RW",
+              "description": "Control signal Register for 'ap_start'."
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "AP_DONE",
+              "access": "R",
+              "description": "Control signal Register for 'ap_done'."
+            },
+            {
+              "offset": "2",
+              "width": "1",
+              "name": "AP_IDLE",
+              "access": "R",
+              "description": "Control signal Register for 'ap_idle'."
+            },
+            {
+              "offset": "3",
+              "width": "1",
+              "name": "AP_READY",
+              "access": "R",
+              "description": "Control signal Register for 'ap_ready'."
+            },
+            {
+              "offset": "4",
+              "width": "1",
+              "name": "AP_CONTINUE",
+              "access": "R",
+              "description": "Control signal Register for 'ap_continue'."
+            },
+            {
+              "offset": "5",
+              "width": "2",
+              "name": "RESERVED_1",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            },
+            {
+              "offset": "7",
+              "width": "1",
+              "name": "AUTO_RESTART",
+              "access": "RW",
+              "description": "Control signal Register for 'auto_restart'."
+            },
+            {
+              "offset": "8",
+              "width": "1",
+              "name": "RESERVED_2",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            },
+            {
+              "offset": "9",
+              "width": "1",
+              "name": "INTERRUPT",
+              "access": "R",
+              "description": "Control signal Register for 'interrupt'."
+            },
+            {
+              "offset": "10",
+              "width": "22",
+              "name": "RESERVED_3",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x04",
+          "name": "GIER",
+          "access": "RW",
+          "description": "Global Interrupt Enable Register",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "Enable",
+              "access": "RW",
+              "description": "Master enable for the device interrupt output to the system interrupt controller: 0 = Disabled, 1 = Enabled"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x08",
+          "name": "IP_IER",
+          "access": "RW",
+          "description": "IP Interrupt Enable Register",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "CHAN0_INT_EN",
+              "access": "RW",
+              "description": "Enable Channel 0 (ap_done) Interrupt.  0 = Disabled, 1 = Enabled."
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "CHAN1_INT_EN",
+              "access": "RW",
+              "description": "Enable Channel 1 (ap_ready) Interrupt.  0 = Disabled, 1 = Enabled."
+            },
+            {
+              "offset": "2",
+              "width": "30",
+              "name": "RESERVED_0",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x0c",
+          "name": "IP_ISR",
+          "access": "RW",
+          "description": "IP Interrupt Status Register",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "CHAN0_INT_ST",
+              "access": "RTOW",
+              "description": "Channel 0 (ap_done) Interrupt Status. 0 = No Channel 0 interrupt, 1 = Channel 0 interrupt."
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "CHAN1_INT_ST",
+              "access": "RTOW",
+              "description": "Channel 1 (ap_ready) Interrupt Status. 0 = No Channel 1 interrupt, 1 = Channel 1 interrupt."
+            },
+            {
+              "offset": "2",
+              "width": "30",
+              "name": "RESERVED_0",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x10",
+          "name": "fifo_1",
+          "access": "W",
+          "description": "Data signal of fifo",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "fifo",
+              "access": "W",
+              "description": "Bit 31 to 0 of fifo"
+            }]
+        },
+        {
+          "offset": "0x14",
+          "name": "fifo_2",
+          "access": "W",
+          "description": "Data signal of fifo",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "fifo",
+              "access": "W",
+              "description": "Bit 63 to 32 of fifo"
+            }]
+        },
+        {
+          "offset": "0x1c",
+          "name": "ddr_1",
+          "access": "W",
+          "description": "Data signal of ddr",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "ddr",
+              "access": "W",
+              "description": "Bit 31 to 0 of ddr"
+            }]
+        },
+        {
+          "offset": "0x20",
+          "name": "ddr_2",
+          "access": "W",
+          "description": "Data signal of ddr",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "ddr",
+              "access": "W",
+              "description": "Bit 63 to 32 of ddr"
+            }]
+        },
+        {
+          "offset": "0x28",
+          "name": "status",
+          "access": "W",
+          "description": "Data signal of status",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "status",
+              "access": "W",
+              "description": "Bit 31 to 0 of status"
+            }]
+        },
+        {
+          "offset": "0x30",
+          "name": "writeStatus",
+          "access": "W",
+          "description": "Data signal of writeStatus",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "16",
+              "name": "writeStatus",
+              "access": "W",
+              "description": "Bit 15 to 0 of writeStatus"
+            },
+            {
+              "offset": "16",
+              "width": "16",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x38",
+          "name": "logger_vlan_enable_mask",
+          "access": "W",
+          "description": "Data signal of logger_vlan_enable_mask",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "logger_vlan_enable_mask",
+              "access": "W",
+              "description": "Bit 31 to 0 of logger_vlan_enable_mask"
+            }]
+        },
+        {
+          "offset": "0x40",
+          "name": "vlan100_received",
+          "access": "R",
+          "description": "Data signal of vlan100_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan100_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan100_received"
+            }]
+        },
+        {
+          "offset": "0x44",
+          "name": "vlan100_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan100_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan100_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan100_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x48",
+          "name": "vlan101_received",
+          "access": "R",
+          "description": "Data signal of vlan101_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan101_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan101_received"
+            }]
+        },
+        {
+          "offset": "0x4c",
+          "name": "vlan101_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan101_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan101_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan101_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x50",
+          "name": "vlan102_received",
+          "access": "R",
+          "description": "Data signal of vlan102_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan102_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan102_received"
+            }]
+        },
+        {
+          "offset": "0x54",
+          "name": "vlan102_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan102_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan102_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan102_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x58",
+          "name": "vlan103_received",
+          "access": "R",
+          "description": "Data signal of vlan103_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan103_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan103_received"
+            }]
+        },
+        {
+          "offset": "0x5c",
+          "name": "vlan103_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan103_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan103_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan103_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x60",
+          "name": "vlan104_received",
+          "access": "R",
+          "description": "Data signal of vlan104_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan104_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan104_received"
+            }]
+        },
+        {
+          "offset": "0x64",
+          "name": "vlan104_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan104_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan104_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan104_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x68",
+          "name": "vlan105_received",
+          "access": "R",
+          "description": "Data signal of vlan105_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan105_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan105_received"
+            }]
+        },
+        {
+          "offset": "0x6c",
+          "name": "vlan105_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan105_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan105_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan105_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x70",
+          "name": "vlan106_received",
+          "access": "R",
+          "description": "Data signal of vlan106_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan106_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan106_received"
+            }]
+        },
+        {
+          "offset": "0x74",
+          "name": "vlan106_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan106_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan106_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan106_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x78",
+          "name": "vlan107_received",
+          "access": "R",
+          "description": "Data signal of vlan107_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan107_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan107_received"
+            }]
+        },
+        {
+          "offset": "0x7c",
+          "name": "vlan107_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan107_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan107_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan107_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x80",
+          "name": "vlan108_received",
+          "access": "R",
+          "description": "Data signal of vlan108_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan108_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan108_received"
+            }]
+        },
+        {
+          "offset": "0x84",
+          "name": "vlan108_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan108_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan108_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan108_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x88",
+          "name": "vlan109_received",
+          "access": "R",
+          "description": "Data signal of vlan109_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan109_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan109_received"
+            }]
+        },
+        {
+          "offset": "0x8c",
+          "name": "vlan109_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan109_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan109_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan109_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x90",
+          "name": "droped",
+          "access": "R",
+          "description": "Data signal of droped",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "droped",
+              "access": "R",
+              "description": "Bit 31 to 0 of droped"
+            }]
+        },
+        {
+          "offset": "0x94",
+          "name": "droped_ctrl",
+          "access": "R",
+          "description": "Control signal of droped",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "droped_ap_vld",
+              "access": "R",
+              "description": "Control signal droped_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x98",
+          "name": "multicast_recv_enable",
+          "access": "W",
+          "description": "Data signal of multicast_recv_enable",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "multicast_recv_enable",
+              "access": "W",
+              "description": "Bit 31 to 0 of multicast_recv_enable"
+            }]
+        },
+        {
+          "offset": "0xa0",
+          "name": "unicast_filter_enable",
+          "access": "W",
+          "description": "Data signal of unicast_filter_enable",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_filter_enable",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_filter_enable"
+            }]
+        },
+        {
+          "offset": "0xa8",
+          "name": "unicast_vlan100_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan100_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan100_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan100_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0xb0",
+          "name": "unicast_vlan100_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan100_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan100_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan100_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0xb8",
+          "name": "unicast_vlan101_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan101_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan101_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan101_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0xc0",
+          "name": "unicast_vlan101_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan101_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan101_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan101_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0xc8",
+          "name": "unicast_vlan102_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan102_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan102_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan102_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0xd0",
+          "name": "unicast_vlan102_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan102_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan102_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan102_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0xd8",
+          "name": "unicast_vlan103_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan103_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan103_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan103_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0xe0",
+          "name": "unicast_vlan103_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan103_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan103_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan103_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0xe8",
+          "name": "unicast_vlan104_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan104_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan104_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan104_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0xf0",
+          "name": "unicast_vlan104_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan104_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan104_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan104_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0xf8",
+          "name": "unicast_vlan105_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan105_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan105_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan105_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x100",
+          "name": "unicast_vlan105_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan105_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan105_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan105_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x108",
+          "name": "unicast_vlan106_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan106_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan106_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan106_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x110",
+          "name": "unicast_vlan106_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan106_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan106_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan106_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x118",
+          "name": "unicast_vlan107_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan107_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan107_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan107_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x120",
+          "name": "unicast_vlan107_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan107_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan107_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan107_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x128",
+          "name": "unicast_vlan108_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan108_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan108_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan108_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x130",
+          "name": "unicast_vlan108_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan108_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan108_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan108_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x138",
+          "name": "unicast_vlan109_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan109_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan109_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan109_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x140",
+          "name": "unicast_vlan109_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan109_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan109_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan109_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x148",
+          "name": "log_all_mask",
+          "access": "W",
+          "description": "Data signal of log_all_mask",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "log_all_mask",
+              "access": "W",
+              "description": "Bit 31 to 0 of log_all_mask"
+            }]
+        },
+        {
+          "offset": "0x150",
+          "name": "driver_1",
+          "access": "W",
+          "description": "Data signal of driver",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "driver",
+              "access": "W",
+              "description": "Bit 31 to 0 of driver"
+            }]
+        },
+        {
+          "offset": "0x154",
+          "name": "driver_2",
+          "access": "W",
+          "description": "Data signal of driver",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "driver",
+              "access": "W",
+              "description": "Bit 63 to 32 of driver"
+            }]
+        },
+        {
+          "offset": "0x160",
+          "name": "fifo_axi_full_offset_1",
+          "access": "W",
+          "description": "Data signal of fifo_axi_full_offset",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "fifo_axi_full_offset",
+              "access": "W",
+              "description": "Bit 31 to 0 of fifo_axi_full_offset"
+            }]
+        },
+        {
+          "offset": "0x164",
+          "name": "fifo_axi_full_offset_2",
+          "access": "W",
+          "description": "Data signal of fifo_axi_full_offset",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "fifo_axi_full_offset",
+              "access": "W",
+              "description": "Bit 63 to 32 of fifo_axi_full_offset"
+            }]
+        }
+      ],
+      "constraints": [
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "16",
+          "argName": "fifo"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "28",
+          "argName": "log_ddr"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "336",
+          "argName": "tap_ddr"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "40",
+          "argName": "status"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "48",
+          "argName": "writeStatus"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "56",
+          "argName": "logger_vlan_enable_mask"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "64",
+          "argName": "vlan100_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "72",
+          "argName": "vlan101_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "80",
+          "argName": "vlan102_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "88",
+          "argName": "vlan103_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "96",
+          "argName": "vlan104_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "104",
+          "argName": "vlan105_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "112",
+          "argName": "vlan106_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "120",
+          "argName": "vlan107_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "128",
+          "argName": "vlan108_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "136",
+          "argName": "vlan109_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "144",
+          "argName": "droped"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "152",
+          "argName": "multicast_recv_enable"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "160",
+          "argName": "unicast_filter_enable"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "168",
+          "argName": "unicast_vlan100_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "176",
+          "argName": "unicast_vlan100_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "184",
+          "argName": "unicast_vlan101_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "192",
+          "argName": "unicast_vlan101_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "200",
+          "argName": "unicast_vlan102_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "208",
+          "argName": "unicast_vlan102_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "216",
+          "argName": "unicast_vlan103_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "224",
+          "argName": "unicast_vlan103_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "232",
+          "argName": "unicast_vlan104_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "240",
+          "argName": "unicast_vlan104_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "248",
+          "argName": "unicast_vlan105_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "256",
+          "argName": "unicast_vlan105_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "264",
+          "argName": "unicast_vlan106_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "272",
+          "argName": "unicast_vlan106_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "280",
+          "argName": "unicast_vlan107_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "288",
+          "argName": "unicast_vlan107_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "296",
+          "argName": "unicast_vlan108_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "304",
+          "argName": "unicast_vlan108_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "312",
+          "argName": "unicast_vlan109_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "320",
+          "argName": "unicast_vlan109_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "328",
+          "argName": "log_all_mask"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "352",
+          "argName": "fifo_axi_full"
+        }
+      ]
+    },
+    "ap_clk": {
+      "type": "clock",
+      "busTypeName": "clock",
+      "mode": "slave",
+      "busParams": {
+        "ASSOCIATED_BUSIF": "s_axi_axilites:m_axi_fifo_axi_full:m_axi_mac_fifo:m_axi_ps",
+        "ASSOCIATED_RESET": "ap_rst_n"
+      },
+      "portMap": {"ap_clk": "CLK"},
+      "ports": ["ap_clk"]
+    },
+    "ap_rst_n": {
+      "type": "reset",
+      "busTypeName": "reset",
+      "mode": "slave",
+      "busParams": {"POLARITY": "ACTIVE_LOW"},
+      "portMap": {"ap_rst_n": "RST"},
+      "ports": ["ap_rst_n"]
+    },
+    "interrupt": {
+      "type": "interrupt",
+      "busTypeName": "interrupt",
+      "mode": "master",
+      "dataWidth": "1",
+      "busParams": {"SENSITIVITY": "LEVEL_HIGH"},
+      "portMap": {"interrupt": "INTERRUPT"},
+      "ports": ["interrupt"]
+    },
+    "m_axi_fifo_axi_full": {
+      "type": "axi4full",
+      "busTypeName": "aximm",
+      "mode": "master",
+      "dataWidth": "32",
+      "addrWidth": "64",
+      "portPrefix": "m_axi_fifo_axi_full_",
+      "paramPrefix": "C_M_AXI_FIFO_AXI_FULL_",
+      "offsetSlaveName": "s_axi_axilites",
+      "preferredUsageValue": "MEMORY",
+      "busParams": {
+        "NUM_READ_OUTSTANDING": "16",
+        "NUM_WRITE_OUTSTANDING": "16",
+        "MAX_READ_BURST_LENGTH": "16",
+        "MAX_WRITE_BURST_LENGTH": "16",
+        "MAX_BURST_LENGTH": "256",
+        "PROTOCOL": "AXI4",
+        "READ_WRITE_MODE": "READ_ONLY",
+        "HAS_BURST": "0",
+        "SUPPORTS_NARROW_BURST": "0"
+      },
+      "ports": [
+        "m_axi_fifo_axi_full_ARADDR",
+        "m_axi_fifo_axi_full_ARBURST",
+        "m_axi_fifo_axi_full_ARCACHE",
+        "m_axi_fifo_axi_full_ARID",
+        "m_axi_fifo_axi_full_ARLEN",
+        "m_axi_fifo_axi_full_ARLOCK",
+        "m_axi_fifo_axi_full_ARPROT",
+        "m_axi_fifo_axi_full_ARQOS",
+        "m_axi_fifo_axi_full_ARREADY",
+        "m_axi_fifo_axi_full_ARREGION",
+        "m_axi_fifo_axi_full_ARSIZE",
+        "m_axi_fifo_axi_full_ARUSER",
+        "m_axi_fifo_axi_full_ARVALID",
+        "m_axi_fifo_axi_full_AWADDR",
+        "m_axi_fifo_axi_full_AWBURST",
+        "m_axi_fifo_axi_full_AWCACHE",
+        "m_axi_fifo_axi_full_AWID",
+        "m_axi_fifo_axi_full_AWLEN",
+        "m_axi_fifo_axi_full_AWLOCK",
+        "m_axi_fifo_axi_full_AWPROT",
+        "m_axi_fifo_axi_full_AWQOS",
+        "m_axi_fifo_axi_full_AWREADY",
+        "m_axi_fifo_axi_full_AWREGION",
+        "m_axi_fifo_axi_full_AWSIZE",
+        "m_axi_fifo_axi_full_AWUSER",
+        "m_axi_fifo_axi_full_AWVALID",
+        "m_axi_fifo_axi_full_BID",
+        "m_axi_fifo_axi_full_BREADY",
+        "m_axi_fifo_axi_full_BRESP",
+        "m_axi_fifo_axi_full_BUSER",
+        "m_axi_fifo_axi_full_BVALID",
+        "m_axi_fifo_axi_full_RDATA",
+        "m_axi_fifo_axi_full_RID",
+        "m_axi_fifo_axi_full_RLAST",
+        "m_axi_fifo_axi_full_RREADY",
+        "m_axi_fifo_axi_full_RRESP",
+        "m_axi_fifo_axi_full_RUSER",
+        "m_axi_fifo_axi_full_RVALID",
+        "m_axi_fifo_axi_full_WDATA",
+        "m_axi_fifo_axi_full_WID",
+        "m_axi_fifo_axi_full_WLAST",
+        "m_axi_fifo_axi_full_WREADY",
+        "m_axi_fifo_axi_full_WSTRB",
+        "m_axi_fifo_axi_full_WUSER",
+        "m_axi_fifo_axi_full_WVALID"
+      ],
+      "constraints": [
+        {
+          "constraint_type": "pragma interface",
+          "mode": "m_axi",
+          "register_option": "0",
+          "offset": "slave",
+          "latency": "0",
+          "num_read_outstanding": "16",
+          "num_write_outstanding": "16",
+          "max_read_burst_length": "16",
+          "max_write_burst_length": "16",
+          "max_widen_bitwidth": "0",
+          "argName": "fifo_axi_full"
+        },
+        {
+          "constraint_type": "bitwidth",
+          "orig_bitwidth": "32",
+          "final_bitwidth": "32",
+          "argName": "fifo_axi_full"
+        }
+      ]
+    },
+    "m_axi_mac_fifo": {
+      "type": "axi4full",
+      "busTypeName": "aximm",
+      "mode": "master",
+      "dataWidth": "32",
+      "addrWidth": "64",
+      "portPrefix": "m_axi_mac_fifo_",
+      "paramPrefix": "C_M_AXI_MAC_FIFO_",
+      "offsetSlaveName": "s_axi_axilites",
+      "preferredUsageValue": "MEMORY",
+      "busParams": {
+        "NUM_READ_OUTSTANDING": "16",
+        "NUM_WRITE_OUTSTANDING": "16",
+        "MAX_READ_BURST_LENGTH": "16",
+        "MAX_WRITE_BURST_LENGTH": "16",
+        "MAX_BURST_LENGTH": "256",
+        "PROTOCOL": "AXI4",
+        "READ_WRITE_MODE": "READ_ONLY",
+        "HAS_BURST": "0",
+        "SUPPORTS_NARROW_BURST": "0"
+      },
+      "ports": [
+        "m_axi_mac_fifo_ARADDR",
+        "m_axi_mac_fifo_ARBURST",
+        "m_axi_mac_fifo_ARCACHE",
+        "m_axi_mac_fifo_ARID",
+        "m_axi_mac_fifo_ARLEN",
+        "m_axi_mac_fifo_ARLOCK",
+        "m_axi_mac_fifo_ARPROT",
+        "m_axi_mac_fifo_ARQOS",
+        "m_axi_mac_fifo_ARREADY",
+        "m_axi_mac_fifo_ARREGION",
+        "m_axi_mac_fifo_ARSIZE",
+        "m_axi_mac_fifo_ARUSER",
+        "m_axi_mac_fifo_ARVALID",
+        "m_axi_mac_fifo_AWADDR",
+        "m_axi_mac_fifo_AWBURST",
+        "m_axi_mac_fifo_AWCACHE",
+        "m_axi_mac_fifo_AWID",
+        "m_axi_mac_fifo_AWLEN",
+        "m_axi_mac_fifo_AWLOCK",
+        "m_axi_mac_fifo_AWPROT",
+        "m_axi_mac_fifo_AWQOS",
+        "m_axi_mac_fifo_AWREADY",
+        "m_axi_mac_fifo_AWREGION",
+        "m_axi_mac_fifo_AWSIZE",
+        "m_axi_mac_fifo_AWUSER",
+        "m_axi_mac_fifo_AWVALID",
+        "m_axi_mac_fifo_BID",
+        "m_axi_mac_fifo_BREADY",
+        "m_axi_mac_fifo_BRESP",
+        "m_axi_mac_fifo_BUSER",
+        "m_axi_mac_fifo_BVALID",
+        "m_axi_mac_fifo_RDATA",
+        "m_axi_mac_fifo_RID",
+        "m_axi_mac_fifo_RLAST",
+        "m_axi_mac_fifo_RREADY",
+        "m_axi_mac_fifo_RRESP",
+        "m_axi_mac_fifo_RUSER",
+        "m_axi_mac_fifo_RVALID",
+        "m_axi_mac_fifo_WDATA",
+        "m_axi_mac_fifo_WID",
+        "m_axi_mac_fifo_WLAST",
+        "m_axi_mac_fifo_WREADY",
+        "m_axi_mac_fifo_WSTRB",
+        "m_axi_mac_fifo_WUSER",
+        "m_axi_mac_fifo_WVALID"
+      ],
+      "constraints": [
+        {
+          "constraint_type": "pragma interface",
+          "mode": "m_axi",
+          "register_option": "0",
+          "offset": "slave",
+          "latency": "0",
+          "num_read_outstanding": "16",
+          "num_write_outstanding": "16",
+          "max_read_burst_length": "16",
+          "max_write_burst_length": "16",
+          "max_widen_bitwidth": "0",
+          "argName": "fifo"
+        },
+        {
+          "constraint_type": "bitwidth",
+          "orig_bitwidth": "32",
+          "final_bitwidth": "32",
+          "argName": "fifo"
+        }
+      ]
+    },
+    "m_axi_ps": {
+      "type": "axi4full",
+      "busTypeName": "aximm",
+      "mode": "master",
+      "dataWidth": "32",
+      "addrWidth": "64",
+      "portPrefix": "m_axi_ps_",
+      "paramPrefix": "C_M_AXI_PS_",
+      "offsetSlaveName": "s_axi_axilites",
+      "preferredUsageValue": "MEMORY",
+      "busParams": {
+        "NUM_READ_OUTSTANDING": "16",
+        "NUM_WRITE_OUTSTANDING": "16",
+        "MAX_READ_BURST_LENGTH": "16",
+        "MAX_WRITE_BURST_LENGTH": "64",
+        "MAX_BURST_LENGTH": "256",
+        "PROTOCOL": "AXI4",
+        "READ_WRITE_MODE": "READ_WRITE",
+        "HAS_BURST": "0",
+        "SUPPORTS_NARROW_BURST": "0"
+      },
+      "ports": [
+        "m_axi_ps_ARADDR",
+        "m_axi_ps_ARBURST",
+        "m_axi_ps_ARCACHE",
+        "m_axi_ps_ARID",
+        "m_axi_ps_ARLEN",
+        "m_axi_ps_ARLOCK",
+        "m_axi_ps_ARPROT",
+        "m_axi_ps_ARQOS",
+        "m_axi_ps_ARREADY",
+        "m_axi_ps_ARREGION",
+        "m_axi_ps_ARSIZE",
+        "m_axi_ps_ARUSER",
+        "m_axi_ps_ARVALID",
+        "m_axi_ps_AWADDR",
+        "m_axi_ps_AWBURST",
+        "m_axi_ps_AWCACHE",
+        "m_axi_ps_AWID",
+        "m_axi_ps_AWLEN",
+        "m_axi_ps_AWLOCK",
+        "m_axi_ps_AWPROT",
+        "m_axi_ps_AWQOS",
+        "m_axi_ps_AWREADY",
+        "m_axi_ps_AWREGION",
+        "m_axi_ps_AWSIZE",
+        "m_axi_ps_AWUSER",
+        "m_axi_ps_AWVALID",
+        "m_axi_ps_BID",
+        "m_axi_ps_BREADY",
+        "m_axi_ps_BRESP",
+        "m_axi_ps_BUSER",
+        "m_axi_ps_BVALID",
+        "m_axi_ps_RDATA",
+        "m_axi_ps_RID",
+        "m_axi_ps_RLAST",
+        "m_axi_ps_RREADY",
+        "m_axi_ps_RRESP",
+        "m_axi_ps_RUSER",
+        "m_axi_ps_RVALID",
+        "m_axi_ps_WDATA",
+        "m_axi_ps_WID",
+        "m_axi_ps_WLAST",
+        "m_axi_ps_WREADY",
+        "m_axi_ps_WSTRB",
+        "m_axi_ps_WUSER",
+        "m_axi_ps_WVALID"
+      ],
+      "constraints": [
+        {
+          "constraint_type": "pragma interface",
+          "mode": "m_axi",
+          "register_option": "0",
+          "offset": "slave",
+          "latency": "0",
+          "num_read_outstanding": "16",
+          "num_write_outstanding": "16",
+          "max_read_burst_length": "16",
+          "max_write_burst_length": "64",
+          "max_widen_bitwidth": "64",
+          "argName": "log_ddr"
+        },
+        {
+          "constraint_type": "bitwidth",
+          "orig_bitwidth": "32",
+          "final_bitwidth": "32",
+          "argName": "log_ddr"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "m_axi",
+          "register_option": "0",
+          "offset": "slave",
+          "latency": "0",
+          "num_read_outstanding": "16",
+          "num_write_outstanding": "16",
+          "max_read_burst_length": "16",
+          "max_write_burst_length": "64",
+          "max_widen_bitwidth": "64",
+          "argName": "tap_ddr"
+        },
+        {
+          "constraint_type": "bitwidth",
+          "orig_bitwidth": "32",
+          "final_bitwidth": "32",
+          "argName": "tap_ddr"
+        }
+      ]
+    },
+    "timestamp": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "slave",
+      "dataWidth": "64",
+      "portMap": {"timestamp": "DATA"},
+      "ports": ["timestamp"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "0",
+          "argName": "timestamp"
+        }]
+    }
+  },
+  "RtlPorts": {
+    "s_axi_axilites_AWVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_axilites_AWREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_axilites_AWADDR": {
+      "dir": "in",
+      "width": "9"
+    },
+    "s_axi_axilites_WVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_axilites_WREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_axilites_WDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "s_axi_axilites_WSTRB": {
+      "dir": "in",
+      "width": "4"
+    },
+    "s_axi_axilites_ARVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_axilites_ARREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_axilites_ARADDR": {
+      "dir": "in",
+      "width": "9"
+    },
+    "s_axi_axilites_RVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_axilites_RREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_axilites_RDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "s_axi_axilites_RRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "s_axi_axilites_BVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_axilites_BREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_axilites_BRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "interrupt": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_fifo_axi_full_AWVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_fifo_axi_full_AWREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_fifo_axi_full_AWADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_fifo_axi_full_AWID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_fifo_axi_full_AWLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_fifo_axi_full_AWSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_fifo_axi_full_AWBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_fifo_axi_full_AWLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_fifo_axi_full_AWCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_fifo_axi_full_AWPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_fifo_axi_full_AWQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_fifo_axi_full_AWREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_fifo_axi_full_AWUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_fifo_axi_full_WVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_fifo_axi_full_WREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_fifo_axi_full_WDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_fifo_axi_full_WSTRB": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_fifo_axi_full_WLAST": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_fifo_axi_full_WID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_fifo_axi_full_WUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_fifo_axi_full_ARVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_fifo_axi_full_ARREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_fifo_axi_full_ARADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_fifo_axi_full_ARID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_fifo_axi_full_ARLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_fifo_axi_full_ARSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_fifo_axi_full_ARBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_fifo_axi_full_ARLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_fifo_axi_full_ARCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_fifo_axi_full_ARPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_fifo_axi_full_ARQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_fifo_axi_full_ARREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_fifo_axi_full_ARUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_fifo_axi_full_RVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_fifo_axi_full_RREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_fifo_axi_full_RDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "m_axi_fifo_axi_full_RLAST": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_fifo_axi_full_RID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_fifo_axi_full_RUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_fifo_axi_full_RRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_fifo_axi_full_BVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_fifo_axi_full_BREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_fifo_axi_full_BRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_fifo_axi_full_BID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_fifo_axi_full_BUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_mac_fifo_AWVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_mac_fifo_AWREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_mac_fifo_AWADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_mac_fifo_AWID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_mac_fifo_AWLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_mac_fifo_AWSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_mac_fifo_AWBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_mac_fifo_AWLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_mac_fifo_AWCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_mac_fifo_AWPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_mac_fifo_AWQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_mac_fifo_AWREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_mac_fifo_AWUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_mac_fifo_WVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_mac_fifo_WREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_mac_fifo_WDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_mac_fifo_WSTRB": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_mac_fifo_WLAST": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_mac_fifo_WID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_mac_fifo_WUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_mac_fifo_ARVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_mac_fifo_ARREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_mac_fifo_ARADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_mac_fifo_ARID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_mac_fifo_ARLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_mac_fifo_ARSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_mac_fifo_ARBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_mac_fifo_ARLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_mac_fifo_ARCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_mac_fifo_ARPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_mac_fifo_ARQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_mac_fifo_ARREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_mac_fifo_ARUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_mac_fifo_RVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_mac_fifo_RREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_mac_fifo_RDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "m_axi_mac_fifo_RLAST": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_mac_fifo_RID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_mac_fifo_RUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_mac_fifo_RRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_mac_fifo_BVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_mac_fifo_BREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_mac_fifo_BRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_mac_fifo_BID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_mac_fifo_BUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_ps_AWVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_ps_AWREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_ps_AWADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_ps_AWID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_ps_AWLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_ps_AWSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_ps_AWBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_ps_AWLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_ps_AWCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_ps_AWPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_ps_AWQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_ps_AWREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_ps_AWUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_ps_WVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_ps_WREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_ps_WDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_ps_WSTRB": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_ps_WLAST": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_ps_WID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_ps_WUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_ps_ARVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_ps_ARREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_ps_ARADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_ps_ARID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_ps_ARLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_ps_ARSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_ps_ARBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_ps_ARLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_ps_ARCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_ps_ARPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_ps_ARQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_ps_ARREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_ps_ARUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_ps_RVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_ps_RREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_ps_RDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "m_axi_ps_RLAST": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_ps_RID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_ps_RUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_ps_RRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_ps_BVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_ps_BREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_ps_BRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_ps_BID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_ps_BUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "timestamp": {
+      "dir": "in",
+      "width": "64"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {
+      "ModuleName": "mac_logger",
+      "Instances": [{
+          "ModuleName": "dataflow_in_loop_VITIS_LOOP_697_1",
+          "InstanceName": "dataflow_in_loop_VITIS_LOOP_697_1_U0",
+          "Instances": [
+            {
+              "ModuleName": "entry_proc",
+              "InstanceName": "entry_proc_U0"
+            },
+            {
+              "ModuleName": "rx_ringbuffer_header",
+              "InstanceName": "rx_ringbuffer_header_U0",
+              "Instances": [
+                {
+                  "ModuleName": "rx_ringbuffer_header_Pipeline_VITIS_LOOP_28_1",
+                  "InstanceName": "grp_rx_ringbuffer_header_Pipeline_VITIS_LOOP_28_1_fu_74"
+                },
+                {
+                  "ModuleName": "rx_ringbuffer_header_Pipeline_VITIS_LOOP_32_2",
+                  "InstanceName": "grp_rx_ringbuffer_header_Pipeline_VITIS_LOOP_32_2_fu_83"
+                }
+              ]
+            },
+            {
+              "ModuleName": "rx_fifo",
+              "InstanceName": "rx_fifo_U0",
+              "Instances": [
+                {
+                  "ModuleName": "rx_fifo_Pipeline_VITIS_LOOP_71_1",
+                  "InstanceName": "grp_rx_fifo_Pipeline_VITIS_LOOP_71_1_fu_265"
+                },
+                {
+                  "ModuleName": "rx_fifo_Pipeline_VITIS_LOOP_91_2",
+                  "InstanceName": "grp_rx_fifo_Pipeline_VITIS_LOOP_91_2_fu_273"
+                },
+                {
+                  "ModuleName": "rx_fifo_Pipeline_rx_macfifo_data",
+                  "InstanceName": "grp_rx_fifo_Pipeline_rx_macfifo_data_fu_281"
+                },
+                {
+                  "ModuleName": "rx_fifo_Pipeline_4",
+                  "InstanceName": "grp_rx_fifo_Pipeline_4_fu_292"
+                }
+              ]
+            },
+            {
+              "ModuleName": "tx_ddr",
+              "InstanceName": "tx_ddr_U0",
+              "Instances": [
+                {
+                  "ModuleName": "tx_ddr_Pipeline_VITIS_LOOP_471_1",
+                  "InstanceName": "grp_tx_ddr_Pipeline_VITIS_LOOP_471_1_fu_1296"
+                },
+                {
+                  "ModuleName": "tx_ddr_Pipeline_tx_2_log_ddr",
+                  "InstanceName": "grp_tx_ddr_Pipeline_tx_2_log_ddr_fu_1303"
+                },
+                {
+                  "ModuleName": "tx_ddr_Pipeline_VITIS_LOOP_531_2",
+                  "InstanceName": "grp_tx_ddr_Pipeline_VITIS_LOOP_531_2_fu_1313"
+                },
+                {
+                  "ModuleName": "tx_ddr_Pipeline_tx_2_tap_ddr",
+                  "InstanceName": "grp_tx_ddr_Pipeline_tx_2_tap_ddr_fu_1320"
+                }
+              ]
+            }
+          ]
+        }]
+    },
+    "Info": {
+      "entry_proc": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "1"
+      },
+      "rx_ringbuffer_header_Pipeline_VITIS_LOOP_28_1": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "rx_ringbuffer_header_Pipeline_VITIS_LOOP_32_2": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "rx_ringbuffer_header": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "rx_fifo_Pipeline_VITIS_LOOP_71_1": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "rx_fifo_Pipeline_VITIS_LOOP_91_2": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "rx_fifo_Pipeline_rx_macfifo_data": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "rx_fifo_Pipeline_4": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "rx_fifo": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "tx_ddr_Pipeline_VITIS_LOOP_471_1": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "tx_ddr_Pipeline_tx_2_log_ddr": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "tx_ddr_Pipeline_VITIS_LOOP_531_2": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "tx_ddr_Pipeline_tx_2_tap_ddr": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "tx_ddr": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "dataflow_in_loop_VITIS_LOOP_697_1": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "mac_logger": {
+        "FunctionProtocol": "ap_ctrl_chain",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      }
+    },
+    "Metrics": {
+      "entry_proc": {
+        "Latency": {
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "0",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "1.838"
+        },
+        "Area": {
+          "FF": "2",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "~0",
+          "LUT": "227",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0"
+        }
+      },
+      "rx_ringbuffer_header_Pipeline_VITIS_LOOP_28_1": {
+        "Latency": {
+          "LatencyBest": "10",
+          "LatencyAvg": "10",
+          "LatencyWorst": "10",
+          "PipelineII": "10",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.300"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_28_1",
+            "TripCount": "7",
+            "Latency": "8",
+            "PipelineII": "1",
+            "PipelineDepth": "3"
+          }],
+        "Area": {
+          "FF": "47",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "~0",
+          "LUT": "69",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0"
+        }
+      },
+      "rx_ringbuffer_header_Pipeline_VITIS_LOOP_32_2": {
+        "Latency": {
+          "LatencyBest": "10",
+          "LatencyAvg": "10",
+          "LatencyWorst": "10",
+          "PipelineII": "10",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.300"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_32_2",
+            "TripCount": "7",
+            "Latency": "8",
+            "PipelineII": "1",
+            "PipelineDepth": "3"
+          }],
+        "Area": {
+          "FF": "47",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "~0",
+          "LUT": "69",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0"
+        }
+      },
+      "rx_ringbuffer_header": {
+        "Latency": {
+          "LatencyBest": "37",
+          "LatencyAvg": "37",
+          "LatencyWorst": "37",
+          "PipelineII": "37",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.300"
+        },
+        "Area": {
+          "FF": "367",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "~0",
+          "LUT": "479",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0"
+        }
+      },
+      "rx_fifo_Pipeline_VITIS_LOOP_71_1": {
+        "Latency": {
+          "LatencyBest": "14",
+          "LatencyAvg": "14",
+          "LatencyWorst": "14",
+          "PipelineII": "14",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.300"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_71_1",
+            "TripCount": "4",
+            "Latency": "12",
+            "PipelineII": "1",
+            "PipelineDepth": "10"
+          }],
+        "Area": {
+          "FF": "186",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "~0",
+          "LUT": "111",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0"
+        }
+      },
+      "rx_fifo_Pipeline_VITIS_LOOP_91_2": {
+        "Latency": {
+          "LatencyBest": "5",
+          "LatencyAvg": "",
+          "LatencyWorst": "6",
+          "PipelineIIMin": "5",
+          "PipelineIIMax": "6",
+          "PipelineII": "5 ~ 6",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "2.026"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_91_2",
+            "TripCount": "",
+            "LatencyMin": "3",
+            "LatencyMax": "4",
+            "Latency": "3 ~ 4",
+            "PipelineII": "1",
+            "PipelineDepth": "2"
+          }],
+        "Area": {
+          "FF": "8",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "~0",
+          "LUT": "68",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0"
+        }
+      },
+      "rx_fifo_Pipeline_rx_macfifo_data": {
+        "Latency": {
+          "LatencyBest": "",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineII": "",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.300"
+        },
+        "Loops": [{
+            "Name": "rx_macfifo_data",
+            "TripCount": "",
+            "Latency": "",
+            "PipelineII": "16",
+            "PipelineDepth": "25"
+          }],
+        "Area": {
+          "FF": "160",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "~0",
+          "LUT": "532",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0"
+        }
+      },
+      "rx_fifo_Pipeline_4": {
+        "Latency": {
+          "LatencyBest": "4",
+          "LatencyAvg": "",
+          "LatencyWorst": "18",
+          "PipelineIIMin": "4",
+          "PipelineIIMax": "18",
+          "PipelineII": "4 ~ 18",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.300"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "",
+            "LatencyMin": "2",
+            "LatencyMax": "16",
+            "Latency": "2 ~ 16",
+            "PipelineII": "1",
+            "PipelineDepth": "2"
+          }],
+        "Area": {
+          "FF": "44",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "~0",
+          "LUT": "86",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0"
+        }
+      },
+      "rx_fifo": {
+        "Latency": {
+          "LatencyBest": "",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineII": "",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.300"
+        },
+        "Area": {
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "0",
+          "FF": "857",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "~0",
+          "LUT": "2005",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "1",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "0"
+        }
+      },
+      "tx_ddr_Pipeline_VITIS_LOOP_471_1": {
+        "Latency": {
+          "LatencyBest": "9",
+          "LatencyAvg": "9",
+          "LatencyWorst": "9",
+          "PipelineII": "9",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "1.354"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_471_1",
+            "TripCount": "7",
+            "Latency": "7",
+            "PipelineII": "1",
+            "PipelineDepth": "2"
+          }],
+        "Area": {
+          "FF": "9",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "~0",
+          "LUT": "56",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0"
+        }
+      },
+      "tx_ddr_Pipeline_tx_2_log_ddr": {
+        "Latency": {
+          "LatencyBest": "6",
+          "LatencyAvg": "163",
+          "LatencyWorst": "423",
+          "PipelineIIMin": "6",
+          "PipelineIIMax": "423",
+          "PipelineII": "6 ~ 423",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.300"
+        },
+        "Loops": [{
+            "Name": "tx_2_log_ddr",
+            "TripCount": "",
+            "LatencyMin": "4",
+            "LatencyMax": "421",
+            "Latency": "4 ~ 421",
+            "PipelineII": "1",
+            "PipelineDepth": "3"
+          }],
+        "Area": {
+          "FF": "53",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "~0",
+          "LUT": "83",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0"
+        }
+      },
+      "tx_ddr_Pipeline_VITIS_LOOP_531_2": {
+        "Latency": {
+          "LatencyBest": "9",
+          "LatencyAvg": "9",
+          "LatencyWorst": "9",
+          "PipelineII": "9",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "1.354"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_531_2",
+            "TripCount": "7",
+            "Latency": "7",
+            "PipelineII": "1",
+            "PipelineDepth": "2"
+          }],
+        "Area": {
+          "FF": "9",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "~0",
+          "LUT": "56",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0"
+        }
+      },
+      "tx_ddr_Pipeline_tx_2_tap_ddr": {
+        "Latency": {
+          "LatencyBest": "6",
+          "LatencyAvg": "163",
+          "LatencyWorst": "443",
+          "PipelineIIMin": "6",
+          "PipelineIIMax": "443",
+          "PipelineII": "6 ~ 443",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.300"
+        },
+        "Loops": [{
+            "Name": "tx_2_tap_ddr",
+            "TripCount": "",
+            "LatencyMin": "4",
+            "LatencyMax": "441",
+            "Latency": "4 ~ 441",
+            "PipelineII": "1",
+            "PipelineDepth": "3"
+          }],
+        "Area": {
+          "FF": "53",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "~0",
+          "LUT": "83",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0"
+        }
+      },
+      "tx_ddr": {
+        "Latency": {
+          "LatencyBest": "2",
+          "LatencyAvg": "72",
+          "LatencyWorst": "987",
+          "PipelineIIMin": "2",
+          "PipelineIIMax": "987",
+          "PipelineII": "2 ~ 987",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.300"
+        },
+        "Area": {
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "0",
+          "DSP": "6",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "~0",
+          "FF": "3403",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "1",
+          "LUT": "5005",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "4",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0"
+        }
+      },
+      "dataflow_in_loop_VITIS_LOOP_697_1": {
+        "Latency": {
+          "LatencyBest": "",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineII": "",
+          "PipelineDepth": "",
+          "PipelineType": "dataflow"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.977"
+        },
+        "Area": {
+          "BRAM_18K": "4",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "1",
+          "DSP": "6",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "~0",
+          "FF": "7274",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "3",
+          "LUT": "9571",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "8",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0"
+        }
+      },
+      "mac_logger": {
+        "Latency": {
+          "LatencyBest": "",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineII": "",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.977"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_697_1",
+            "TripCount": "65535",
+            "Latency": "",
+            "PipelineII": "",
+            "PipelineDepth": ""
+          }],
+        "Area": {
+          "BRAM_18K": "4",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "1",
+          "DSP": "6",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "~0",
+          "FF": "11307",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "4",
+          "LUT": "17176",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "14",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0"
+        }
+      }
+    }
+  },
+  "GenerateBdFiles": "0",
+  "GenData": {
+    "DataVersion": "0.2",
+    "Time": "2022-11-10 17:26:03 +0100",
+    "ToolName": "vitis_hls",
+    "ToolVersion": "2022.2"
+  }
+}

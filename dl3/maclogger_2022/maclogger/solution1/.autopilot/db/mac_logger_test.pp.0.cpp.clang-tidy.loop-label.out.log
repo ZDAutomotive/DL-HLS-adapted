@@ -1,0 +1,65 @@
+D:\maclogger_2022\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp:2263:7: warning: Added loop label VITIS_LOOP_1211_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1211_1: 
+D:\maclogger_2022\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp:2263:7: note: FIX-IT applied suggested code changes
+D:\maclogger_2022\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp:3237:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+D:\maclogger_2022\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp:3237:5: note: FIX-IT applied suggested code changes
+D:\maclogger_2022\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp:3251:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+D:\maclogger_2022\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp:3251:5: note: FIX-IT applied suggested code changes
+D:\maclogger_2022\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp:3265:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+D:\maclogger_2022\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp:3265:5: note: FIX-IT applied suggested code changes
+D:\maclogger_2022\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp:4876:7: warning: Added loop label VITIS_LOOP_1245_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1245_1: 
+D:\maclogger_2022\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp:4876:7: note: FIX-IT applied suggested code changes
+D:\maclogger_2022\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp:7662:2: warning: Added loop label VITIS_LOOP_87_1:   [xilinx-label-all-loops]
+ for(i=0; i < 0x1002/4; i++){
+ ^~~
+ VITIS_LOOP_87_1: 
+D:\maclogger_2022\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp:7662:2: note: FIX-IT applied suggested code changes
+D:\maclogger_2022\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp:7669:2: warning: Added loop label VITIS_LOOP_94_2:   [xilinx-label-all-loops]
+ for(i=0; i < sizeof(fifo_axi_full); i++){
+ ^~~
+ VITIS_LOOP_94_2: 
+D:\maclogger_2022\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp:7669:2: note: FIX-IT applied suggested code changes
+D:\maclogger_2022\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp:7679:2: warning: Added loop label VITIS_LOOP_113_3:   [xilinx-label-all-loops]
+ for(i = 0; i < 2; i++) {
+ ^~~
+ VITIS_LOOP_113_3: 
+D:\maclogger_2022\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp:7679:2: note: FIX-IT applied suggested code changes
+D:\maclogger_2022\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp:7753:2: warning: Added loop label VITIS_LOOP_187_4:   [xilinx-label-all-loops]
+ for(int i = 0; i < 11; i++) {
+ ^~~
+ VITIS_LOOP_187_4: 
+D:\maclogger_2022\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp:7753:2: note: FIX-IT applied suggested code changes
+D:\maclogger_2022\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp:7761:2: warning: Added loop label VITIS_LOOP_195_5:   [xilinx-label-all-loops]
+ for(int j = 0; j < 30; j++) {
+ ^~~
+ VITIS_LOOP_195_5: 
+D:\maclogger_2022\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp:7761:2: note: FIX-IT applied suggested code changes
+D:\maclogger_2022\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp:7763:4: warning: Added loop label VITIS_LOOP_197_6:   [xilinx-label-all-loops]
+   for(i=0; i < 30; i++){
+   ^~~
+   VITIS_LOOP_197_6: 
+D:\maclogger_2022\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp:7763:4: note: FIX-IT applied suggested code changes
+D:\maclogger_2022\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp:7769:2: warning: Added loop label VITIS_LOOP_203_7:   [xilinx-label-all-loops]
+ for(int j = 0; j < 30; j++) {
+ ^~~
+ VITIS_LOOP_203_7: 
+D:\maclogger_2022\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp:7769:2: note: FIX-IT applied suggested code changes
+D:\maclogger_2022\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp:7771:4: warning: Added loop label VITIS_LOOP_205_8:   [xilinx-label-all-loops]
+   for(i=0; i < 30; i++){
+   ^~~
+   VITIS_LOOP_205_8: 
+D:\maclogger_2022\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp:7771:4: note: FIX-IT applied suggested code changes

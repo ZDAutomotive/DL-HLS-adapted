@@ -1,0 +1,74 @@
+<pragmas>
+<pragma file="mac_logger.cpp" line="33" pragmaType="pipeline" parentfunction="rx_ringbuffer_header" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="mac_logger.cpp" line="29" pragmaType="pipeline" parentfunction="rx_ringbuffer_header" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="mac_logger.cpp" line="189" pragmaType="inline" parentfunction="tx_ddr" off="1" region="0" recursive="0"/>
+<pragma file="mac_logger.cpp" line="571" pragmaType="pipeline" parentfunction="tx_ddr" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="mac_logger.cpp" line="572" pragmaType="loop_tripcount" parentfunction="tx_ddr" min="3" max="440" avg="160"/>
+<pragma file="mac_logger.cpp" line="532" pragmaType="pipeline" parentfunction="tx_ddr" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="mac_logger.cpp" line="513" pragmaType="pipeline" parentfunction="tx_ddr" off="0" ii="1" rewind="0" style=""/>
+<pragma file="mac_logger.cpp" line="514" pragmaType="loop_tripcount" parentfunction="tx_ddr" min="3" max="420" avg="160"/>
+<pragma file="mac_logger.cpp" line="472" pragmaType="pipeline" parentfunction="tx_ddr" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="mac_logger.cpp" line="192" pragmaType="reset" parentfunction="tx_ddr" off="0" variable="_ZZ6tx_ddrPjS_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_E15counter_vlan100"/>
+<pragma file="mac_logger.cpp" line="194" pragmaType="reset" parentfunction="tx_ddr" off="0" variable="_ZZ6tx_ddrPjS_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_E15counter_vlan101"/>
+<pragma file="mac_logger.cpp" line="196" pragmaType="reset" parentfunction="tx_ddr" off="0" variable="_ZZ6tx_ddrPjS_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_E15counter_vlan102"/>
+<pragma file="mac_logger.cpp" line="198" pragmaType="reset" parentfunction="tx_ddr" off="0" variable="_ZZ6tx_ddrPjS_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_E15counter_vlan103"/>
+<pragma file="mac_logger.cpp" line="200" pragmaType="reset" parentfunction="tx_ddr" off="0" variable="_ZZ6tx_ddrPjS_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_E15counter_vlan104"/>
+<pragma file="mac_logger.cpp" line="202" pragmaType="reset" parentfunction="tx_ddr" off="0" variable="_ZZ6tx_ddrPjS_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_E15counter_vlan105"/>
+<pragma file="mac_logger.cpp" line="204" pragmaType="reset" parentfunction="tx_ddr" off="0" variable="_ZZ6tx_ddrPjS_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_E15counter_vlan106"/>
+<pragma file="mac_logger.cpp" line="206" pragmaType="reset" parentfunction="tx_ddr" off="0" variable="_ZZ6tx_ddrPjS_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_E15counter_vlan107"/>
+<pragma file="mac_logger.cpp" line="208" pragmaType="reset" parentfunction="tx_ddr" off="0" variable="_ZZ6tx_ddrPjS_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_E15counter_vlan108"/>
+<pragma file="mac_logger.cpp" line="210" pragmaType="reset" parentfunction="tx_ddr" off="0" variable="_ZZ6tx_ddrPjS_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_E15counter_vlan109"/>
+<pragma file="mac_logger.cpp" line="212" pragmaType="reset" parentfunction="tx_ddr" off="0" variable="_ZZ6tx_ddrPjS_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_E14counter_droped"/>
+<pragma file="mac_logger.cpp" line="215" pragmaType="reset" parentfunction="tx_ddr" off="0" variable="_ZZ6tx_ddrPjS_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_E17last_log_tx_index"/>
+<pragma file="mac_logger.cpp" line="217" pragmaType="reset" parentfunction="tx_ddr" off="0" variable="_ZZ6tx_ddrPjS_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_E17last_tap_tx_index"/>
+<pragma file="mac_logger.cpp" line="48" pragmaType="inline" parentfunction="rx_fifo" off="1" region="0" recursive="0"/>
+<pragma file="mac_logger.cpp" line="92" pragmaType="pipeline" parentfunction="rx_fifo" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="mac_logger.cpp" line="698" pragmaType="dataflow" parentfunction="mac_logger" disable_start_propagation="0"/>
+<pragma file="mac_logger.cpp" line="630" pragmaType="interface" parentfunction="mac_logger" mode="m_axi" port="fifo" bundle="mac_fifo" offset="slave" name="" depth="5120" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="mac_logger.cpp" line="631" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="fifo" bundle="axilites" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="mac_logger.cpp" line="633" pragmaType="interface" parentfunction="mac_logger" mode="m_axi" port="fifo_axi_full" bundle="fifo_axi_full" offset="slave" name="" depth="1028" num_read_outstanding="16" num_write_outstanding="16" max_burst_read_length="16" max_burst_write_length="16" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="mac_logger.cpp" line="634" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="fifo_axi_full" bundle="axilites" offset="352" name="" clock="" impl="" register="0"/>
+<pragma file="mac_logger.cpp" line="639" pragmaType="interface" parentfunction="mac_logger" mode="m_axi" port="log_ddr" bundle="ps" offset="slave" name="ddr" depth="102400" num_read_outstanding="16" num_write_outstanding="16" max_burst_read_length="16" max_burst_write_length="64" latency="-1" max_widen_bitwidth="64" channel=""/>
+<pragma file="mac_logger.cpp" line="640" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="log_ddr" bundle="axilites" offset="-1" name="ddr" clock="" impl="" register="0"/>
+<pragma file="mac_logger.cpp" line="641" pragmaType="interface" parentfunction="mac_logger" mode="m_axi" port="tap_ddr" bundle="ps" offset="slave" name="driver" depth="102400" num_read_outstanding="16" num_write_outstanding="16" max_burst_read_length="16" max_burst_write_length="64" latency="-1" max_widen_bitwidth="64" channel=""/>
+<pragma file="mac_logger.cpp" line="642" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="tap_ddr" bundle="axilites" offset="336" name="driver" clock="" impl="" register="0"/>
+<pragma file="mac_logger.cpp" line="644" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="status" bundle="axilites" offset="40" name="" clock="" impl="" register="1"/>
+<pragma file="mac_logger.cpp" line="645" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="writeStatus" bundle="axilites" offset="48" name="" clock="" impl="" register="1"/>
+<pragma file="mac_logger.cpp" line="647" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="logger_vlan_enable_mask" bundle="axilites" offset="56" name="" clock="" impl="" register="0"/>
+<pragma file="mac_logger.cpp" line="649" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="vlan100_received" bundle="axilites" offset="64" name="" clock="" impl="" register="1"/>
+<pragma file="mac_logger.cpp" line="650" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="vlan101_received" bundle="axilites" offset="72" name="" clock="" impl="" register="1"/>
+<pragma file="mac_logger.cpp" line="651" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="vlan102_received" bundle="axilites" offset="80" name="" clock="" impl="" register="1"/>
+<pragma file="mac_logger.cpp" line="652" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="vlan103_received" bundle="axilites" offset="88" name="" clock="" impl="" register="1"/>
+<pragma file="mac_logger.cpp" line="653" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="vlan104_received" bundle="axilites" offset="96" name="" clock="" impl="" register="1"/>
+<pragma file="mac_logger.cpp" line="654" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="vlan105_received" bundle="axilites" offset="104" name="" clock="" impl="" register="1"/>
+<pragma file="mac_logger.cpp" line="655" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="vlan106_received" bundle="axilites" offset="112" name="" clock="" impl="" register="1"/>
+<pragma file="mac_logger.cpp" line="656" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="vlan107_received" bundle="axilites" offset="120" name="" clock="" impl="" register="1"/>
+<pragma file="mac_logger.cpp" line="657" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="vlan108_received" bundle="axilites" offset="128" name="" clock="" impl="" register="1"/>
+<pragma file="mac_logger.cpp" line="658" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="vlan109_received" bundle="axilites" offset="136" name="" clock="" impl="" register="1"/>
+<pragma file="mac_logger.cpp" line="659" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="droped" bundle="axilites" offset="144" name="" clock="" impl="" register="1"/>
+<pragma file="mac_logger.cpp" line="661" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="multicast_recv_enable" bundle="axilites" offset="152" name="" clock="" impl="" register="0"/>
+<pragma file="mac_logger.cpp" line="662" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="unicast_filter_enable" bundle="axilites" offset="160" name="" clock="" impl="" register="0"/>
+<pragma file="mac_logger.cpp" line="663" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="unicast_vlan100_macaddr_lsb" bundle="axilites" offset="168" name="" clock="" impl="" register="0"/>
+<pragma file="mac_logger.cpp" line="664" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="unicast_vlan100_macaddr_msb" bundle="axilites" offset="176" name="" clock="" impl="" register="0"/>
+<pragma file="mac_logger.cpp" line="665" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="unicast_vlan101_macaddr_lsb" bundle="axilites" offset="184" name="" clock="" impl="" register="0"/>
+<pragma file="mac_logger.cpp" line="666" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="unicast_vlan101_macaddr_msb" bundle="axilites" offset="192" name="" clock="" impl="" register="0"/>
+<pragma file="mac_logger.cpp" line="667" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="unicast_vlan102_macaddr_lsb" bundle="axilites" offset="200" name="" clock="" impl="" register="0"/>
+<pragma file="mac_logger.cpp" line="668" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="unicast_vlan102_macaddr_msb" bundle="axilites" offset="208" name="" clock="" impl="" register="0"/>
+<pragma file="mac_logger.cpp" line="669" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="unicast_vlan103_macaddr_lsb" bundle="axilites" offset="216" name="" clock="" impl="" register="0"/>
+<pragma file="mac_logger.cpp" line="670" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="unicast_vlan103_macaddr_msb" bundle="axilites" offset="224" name="" clock="" impl="" register="0"/>
+<pragma file="mac_logger.cpp" line="671" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="unicast_vlan104_macaddr_lsb" bundle="axilites" offset="232" name="" clock="" impl="" register="0"/>
+<pragma file="mac_logger.cpp" line="672" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="unicast_vlan104_macaddr_msb" bundle="axilites" offset="240" name="" clock="" impl="" register="0"/>
+<pragma file="mac_logger.cpp" line="673" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="unicast_vlan105_macaddr_lsb" bundle="axilites" offset="248" name="" clock="" impl="" register="0"/>
+<pragma file="mac_logger.cpp" line="674" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="unicast_vlan105_macaddr_msb" bundle="axilites" offset="256" name="" clock="" impl="" register="0"/>
+<pragma file="mac_logger.cpp" line="675" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="unicast_vlan106_macaddr_lsb" bundle="axilites" offset="264" name="" clock="" impl="" register="0"/>
+<pragma file="mac_logger.cpp" line="676" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="unicast_vlan106_macaddr_msb" bundle="axilites" offset="272" name="" clock="" impl="" register="0"/>
+<pragma file="mac_logger.cpp" line="677" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="unicast_vlan107_macaddr_lsb" bundle="axilites" offset="280" name="" clock="" impl="" register="0"/>
+<pragma file="mac_logger.cpp" line="678" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="unicast_vlan107_macaddr_msb" bundle="axilites" offset="288" name="" clock="" impl="" register="0"/>
+<pragma file="mac_logger.cpp" line="679" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="unicast_vlan108_macaddr_lsb" bundle="axilites" offset="296" name="" clock="" impl="" register="0"/>
+<pragma file="mac_logger.cpp" line="680" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="unicast_vlan108_macaddr_msb" bundle="axilites" offset="304" name="" clock="" impl="" register="0"/>
+<pragma file="mac_logger.cpp" line="681" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="unicast_vlan109_macaddr_lsb" bundle="axilites" offset="312" name="" clock="" impl="" register="0"/>
+<pragma file="mac_logger.cpp" line="682" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="unicast_vlan109_macaddr_msb" bundle="axilites" offset="320" name="" clock="" impl="" register="0"/>
+<pragma file="mac_logger.cpp" line="683" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="log_all_mask" bundle="axilites" offset="328" name="" clock="" impl="" register="0"/>
+<pragma file="mac_logger.cpp" line="687" pragmaType="interface" parentfunction="mac_logger" mode="s_axilite" port="" bundle="axilites" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="mac_logger.cpp" line="688" pragmaType="interface" parentfunction="mac_logger" mode="ap_ctrl_chain" port="return" name=""/>
+</pragmas>

@@ -1,0 +1,222 @@
+
+
+================================================================
+== Vitis HLS Report for 'dataflow_in_loop_VITIS_LOOP_697_1'
+================================================================
+* Date:           Thu Nov 10 17:24:49 2022
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        maclogger
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu5ev-sfvc784-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 4, States = { 1 2 3 4 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 7.30>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%timestamp_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %timestamp"   --->   Operation 5 'read' 'timestamp_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%fifo_axi_full_offset_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %fifo_axi_full_offset"   --->   Operation 6 'read' 'fifo_axi_full_offset_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%fifo_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %fifo"   --->   Operation 7 'read' 'fifo_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%driver_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %driver"   --->   Operation 8 'read' 'driver_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%ddr_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %ddr"   --->   Operation 9 'read' 'ddr_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%log_all_mask_c = alloca i64 1"   --->   Operation 10 'alloca' 'log_all_mask_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%unicast_vlan109_macaddr_msb_c = alloca i64 1"   --->   Operation 11 'alloca' 'unicast_vlan109_macaddr_msb_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 3> <FIFO>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%unicast_vlan109_macaddr_lsb_c = alloca i64 1"   --->   Operation 12 'alloca' 'unicast_vlan109_macaddr_lsb_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%unicast_vlan108_macaddr_msb_c = alloca i64 1"   --->   Operation 13 'alloca' 'unicast_vlan108_macaddr_msb_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 3> <FIFO>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%unicast_vlan108_macaddr_lsb_c = alloca i64 1"   --->   Operation 14 'alloca' 'unicast_vlan108_macaddr_lsb_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%unicast_vlan107_macaddr_msb_c = alloca i64 1"   --->   Operation 15 'alloca' 'unicast_vlan107_macaddr_msb_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 3> <FIFO>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%unicast_vlan107_macaddr_lsb_c = alloca i64 1"   --->   Operation 16 'alloca' 'unicast_vlan107_macaddr_lsb_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%unicast_vlan106_macaddr_msb_c = alloca i64 1"   --->   Operation 17 'alloca' 'unicast_vlan106_macaddr_msb_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 3> <FIFO>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%unicast_vlan106_macaddr_lsb_c = alloca i64 1"   --->   Operation 18 'alloca' 'unicast_vlan106_macaddr_lsb_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%unicast_vlan105_macaddr_msb_c = alloca i64 1"   --->   Operation 19 'alloca' 'unicast_vlan105_macaddr_msb_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 3> <FIFO>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%unicast_vlan105_macaddr_lsb_c = alloca i64 1"   --->   Operation 20 'alloca' 'unicast_vlan105_macaddr_lsb_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%unicast_vlan104_macaddr_msb_c = alloca i64 1"   --->   Operation 21 'alloca' 'unicast_vlan104_macaddr_msb_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 3> <FIFO>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%unicast_vlan104_macaddr_lsb_c = alloca i64 1"   --->   Operation 22 'alloca' 'unicast_vlan104_macaddr_lsb_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%unicast_vlan103_macaddr_msb_c = alloca i64 1"   --->   Operation 23 'alloca' 'unicast_vlan103_macaddr_msb_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 3> <FIFO>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%unicast_vlan103_macaddr_lsb_c = alloca i64 1"   --->   Operation 24 'alloca' 'unicast_vlan103_macaddr_lsb_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%unicast_vlan102_macaddr_msb_c = alloca i64 1"   --->   Operation 25 'alloca' 'unicast_vlan102_macaddr_msb_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 3> <FIFO>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%unicast_vlan102_macaddr_lsb_c = alloca i64 1"   --->   Operation 26 'alloca' 'unicast_vlan102_macaddr_lsb_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%unicast_vlan101_macaddr_msb_c = alloca i64 1"   --->   Operation 27 'alloca' 'unicast_vlan101_macaddr_msb_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 3> <FIFO>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%unicast_vlan101_macaddr_lsb_c = alloca i64 1"   --->   Operation 28 'alloca' 'unicast_vlan101_macaddr_lsb_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%unicast_vlan100_macaddr_msb_c = alloca i64 1"   --->   Operation 29 'alloca' 'unicast_vlan100_macaddr_msb_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 3> <FIFO>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%unicast_vlan100_macaddr_lsb_c = alloca i64 1"   --->   Operation 30 'alloca' 'unicast_vlan100_macaddr_lsb_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%unicast_filter_enable_c = alloca i64 1"   --->   Operation 31 'alloca' 'unicast_filter_enable_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%multicast_recv_enable_c = alloca i64 1"   --->   Operation 32 'alloca' 'multicast_recv_enable_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%logger_vlan_enable_mask_c = alloca i64 1"   --->   Operation 33 'alloca' 'logger_vlan_enable_mask_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%log_header = alloca i64 1" [mac_logger.cpp:700]   --->   Operation 34 'alloca' 'log_header' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%tap_header = alloca i64 1" [mac_logger.cpp:701]   --->   Operation 35 'alloca' 'tap_header' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%data_buf3 = alloca i64 1"   --->   Operation 36 'alloca' 'data_buf3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (1.83ns)   --->   "%call_ln0 = call void @entry_proc, i32 %logger_vlan_enable_mask, i32 %logger_vlan_enable_mask_c, i32 %multicast_recv_enable, i32 %multicast_recv_enable_c, i32 %unicast_filter_enable, i32 %unicast_filter_enable_c, i32 %unicast_vlan100_macaddr_lsb, i32 %unicast_vlan100_macaddr_lsb_c, i32 %unicast_vlan100_macaddr_msb, i16 %unicast_vlan100_macaddr_msb_c, i32 %unicast_vlan101_macaddr_lsb, i32 %unicast_vlan101_macaddr_lsb_c, i32 %unicast_vlan101_macaddr_msb, i16 %unicast_vlan101_macaddr_msb_c, i32 %unicast_vlan102_macaddr_lsb, i32 %unicast_vlan102_macaddr_lsb_c, i32 %unicast_vlan102_macaddr_msb, i16 %unicast_vlan102_macaddr_msb_c, i32 %unicast_vlan103_macaddr_lsb, i32 %unicast_vlan103_macaddr_lsb_c, i32 %unicast_vlan103_macaddr_msb, i16 %unicast_vlan103_macaddr_msb_c, i32 %unicast_vlan104_macaddr_lsb, i32 %unicast_vlan104_macaddr_lsb_c, i32 %unicast_vlan104_macaddr_msb, i16 %unicast_vlan104_macaddr_msb_c, i32 %unicast_vlan105_macaddr_lsb, i32 %unicast_vlan105_macaddr_lsb_c, i32 %unicast_vlan105_macaddr_msb, i16 %unicast_vlan105_macaddr_msb_c, i32 %unicast_vlan106_macaddr_lsb, i32 %unicast_vlan106_macaddr_lsb_c, i32 %unicast_vlan106_macaddr_msb, i16 %unicast_vlan106_macaddr_msb_c, i32 %unicast_vlan107_macaddr_lsb, i32 %unicast_vlan107_macaddr_lsb_c, i32 %unicast_vlan107_macaddr_msb, i16 %unicast_vlan107_macaddr_msb_c, i32 %unicast_vlan108_macaddr_lsb, i32 %unicast_vlan108_macaddr_lsb_c, i32 %unicast_vlan108_macaddr_msb, i16 %unicast_vlan108_macaddr_msb_c, i32 %unicast_vlan109_macaddr_lsb, i32 %unicast_vlan109_macaddr_lsb_c, i32 %unicast_vlan109_macaddr_msb, i16 %unicast_vlan109_macaddr_msb_c, i32 %log_all_mask, i32 %log_all_mask_c"   --->   Operation 37 'call' 'call_ln0' <Predicate = true> <Delay = 1.83> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 38 [2/2] (7.30ns)   --->   "%call_ret = call i128 @rx_ringbuffer_header, i32 %ps, i64 %ddr_read, i64 %driver_read, i32 %log_header, i32 %tap_header" [mac_logger.cpp:704]   --->   Operation 38 'call' 'call_ret' <Predicate = true> <Delay = 7.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 39 [2/2] (1.23ns)   --->   "%call_ln706 = call void @rx_fifo, i32 %mac_fifo, i64 %fifo_read, i32 %fifo_axi_full, i64 %fifo_axi_full_offset_read, i64 %timestamp_read, i32 %data_buf3" [mac_logger.cpp:706]   --->   Operation 39 'call' 'call_ln706' <Predicate = true> <Delay = 1.23> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 40 [1/2] (0.00ns)   --->   "%call_ret = call i128 @rx_ringbuffer_header, i32 %ps, i64 %ddr_read, i64 %driver_read, i32 %log_header, i32 %tap_header" [mac_logger.cpp:704]   --->   Operation 40 'call' 'call_ret' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%ddr_c_channel = extractvalue i128 %call_ret" [mac_logger.cpp:704]   --->   Operation 41 'extractvalue' 'ddr_c_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%driver_c_channel = extractvalue i128 %call_ret" [mac_logger.cpp:704]   --->   Operation 42 'extractvalue' 'driver_c_channel' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_2 : Operation 43 [1/2] (0.00ns)   --->   "%call_ln706 = call void @rx_fifo, i32 %mac_fifo, i64 %fifo_read, i32 %fifo_axi_full, i64 %fifo_axi_full_offset_read, i64 %timestamp_read, i32 %data_buf3" [mac_logger.cpp:706]   --->   Operation 43 'call' 'call_ln706' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 1.83>
+ST_3 : Operation 44 [2/2] (1.83ns)   --->   "%call_ln709 = call void @tx_ddr, i32 %data_buf3, i32 %log_header, i32 %tap_header, i32 %ps, i64 %ddr_c_channel, i64 %driver_c_channel, i32 %logger_vlan_enable_mask_c, i32 %multicast_recv_enable_c, i32 %unicast_filter_enable_c, i32 %unicast_vlan100_macaddr_lsb_c, i16 %unicast_vlan100_macaddr_msb_c, i32 %unicast_vlan101_macaddr_lsb_c, i16 %unicast_vlan101_macaddr_msb_c, i32 %unicast_vlan102_macaddr_lsb_c, i16 %unicast_vlan102_macaddr_msb_c, i32 %unicast_vlan103_macaddr_lsb_c, i16 %unicast_vlan103_macaddr_msb_c, i32 %unicast_vlan104_macaddr_lsb_c, i16 %unicast_vlan104_macaddr_msb_c, i32 %unicast_vlan105_macaddr_lsb_c, i16 %unicast_vlan105_macaddr_msb_c, i32 %unicast_vlan106_macaddr_lsb_c, i16 %unicast_vlan106_macaddr_msb_c, i32 %unicast_vlan107_macaddr_lsb_c, i16 %unicast_vlan107_macaddr_msb_c, i32 %unicast_vlan108_macaddr_lsb_c, i16 %unicast_vlan108_macaddr_msb_c, i32 %unicast_vlan109_macaddr_lsb_c, i16 %unicast_vlan109_macaddr_msb_c, i32 %log_all_mask_c, i32 %vlan100_received, i32 %vlan101_received, i32 %vlan102_received, i32 %vlan103_received, i32 %vlan104_received, i32 %vlan105_received, i32 %vlan106_received, i32 %vlan107_received, i32 %vlan108_received, i32 %vlan109_received, i32 %droped, i32 %counter_vlan100, i32 %counter_vlan101, i32 %counter_vlan102, i32 %counter_vlan103, i32 %counter_vlan104, i32 %counter_vlan105, i32 %counter_vlan106, i32 %counter_vlan107, i32 %counter_vlan108, i32 %counter_vlan109, i32 %counter_droped, i32 %last_log_tx_index, i32 %last_tap_tx_index" [mac_logger.cpp:709]   --->   Operation 44 'call' 'call_ln709' <Predicate = true> <Delay = 1.83> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 45 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @log_all_mask_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i32 %log_all_mask_c, i32 %log_all_mask_c"   --->   Operation 45 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 46 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %log_all_mask_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 46 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 47 [1/1] (0.00ns)   --->   "%empty_104 = specchannel i32 @_ssdm_op_SpecChannel, void @unicast_vlan109_macaddr_msb_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i16 %unicast_vlan109_macaddr_msb_c, i16 %unicast_vlan109_macaddr_msb_c"   --->   Operation 47 'specchannel' 'empty_104' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 48 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %unicast_vlan109_macaddr_msb_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 48 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 49 [1/1] (0.00ns)   --->   "%empty_105 = specchannel i32 @_ssdm_op_SpecChannel, void @unicast_vlan109_macaddr_lsb_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i32 %unicast_vlan109_macaddr_lsb_c, i32 %unicast_vlan109_macaddr_lsb_c"   --->   Operation 49 'specchannel' 'empty_105' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 50 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %unicast_vlan109_macaddr_lsb_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 50 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 51 [1/1] (0.00ns)   --->   "%empty_106 = specchannel i32 @_ssdm_op_SpecChannel, void @unicast_vlan108_macaddr_msb_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i16 %unicast_vlan108_macaddr_msb_c, i16 %unicast_vlan108_macaddr_msb_c"   --->   Operation 51 'specchannel' 'empty_106' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 52 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %unicast_vlan108_macaddr_msb_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 52 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 53 [1/1] (0.00ns)   --->   "%empty_107 = specchannel i32 @_ssdm_op_SpecChannel, void @unicast_vlan108_macaddr_lsb_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i32 %unicast_vlan108_macaddr_lsb_c, i32 %unicast_vlan108_macaddr_lsb_c"   --->   Operation 53 'specchannel' 'empty_107' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 54 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %unicast_vlan108_macaddr_lsb_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 54 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 55 [1/1] (0.00ns)   --->   "%empty_108 = specchannel i32 @_ssdm_op_SpecChannel, void @unicast_vlan107_macaddr_msb_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i16 %unicast_vlan107_macaddr_msb_c, i16 %unicast_vlan107_macaddr_msb_c"   --->   Operation 55 'specchannel' 'empty_108' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 56 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %unicast_vlan107_macaddr_msb_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 56 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 57 [1/1] (0.00ns)   --->   "%empty_109 = specchannel i32 @_ssdm_op_SpecChannel, void @unicast_vlan107_macaddr_lsb_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i32 %unicast_vlan107_macaddr_lsb_c, i32 %unicast_vlan107_macaddr_lsb_c"   --->   Operation 57 'specchannel' 'empty_109' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 58 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %unicast_vlan107_macaddr_lsb_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 58 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 59 [1/1] (0.00ns)   --->   "%empty_110 = specchannel i32 @_ssdm_op_SpecChannel, void @unicast_vlan106_macaddr_msb_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i16 %unicast_vlan106_macaddr_msb_c, i16 %unicast_vlan106_macaddr_msb_c"   --->   Operation 59 'specchannel' 'empty_110' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 60 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %unicast_vlan106_macaddr_msb_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 60 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 61 [1/1] (0.00ns)   --->   "%empty_111 = specchannel i32 @_ssdm_op_SpecChannel, void @unicast_vlan106_macaddr_lsb_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i32 %unicast_vlan106_macaddr_lsb_c, i32 %unicast_vlan106_macaddr_lsb_c"   --->   Operation 61 'specchannel' 'empty_111' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 62 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %unicast_vlan106_macaddr_lsb_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 62 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 63 [1/1] (0.00ns)   --->   "%empty_112 = specchannel i32 @_ssdm_op_SpecChannel, void @unicast_vlan105_macaddr_msb_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i16 %unicast_vlan105_macaddr_msb_c, i16 %unicast_vlan105_macaddr_msb_c"   --->   Operation 63 'specchannel' 'empty_112' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 64 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %unicast_vlan105_macaddr_msb_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 64 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 65 [1/1] (0.00ns)   --->   "%empty_113 = specchannel i32 @_ssdm_op_SpecChannel, void @unicast_vlan105_macaddr_lsb_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i32 %unicast_vlan105_macaddr_lsb_c, i32 %unicast_vlan105_macaddr_lsb_c"   --->   Operation 65 'specchannel' 'empty_113' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 66 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %unicast_vlan105_macaddr_lsb_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 66 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 67 [1/1] (0.00ns)   --->   "%empty_114 = specchannel i32 @_ssdm_op_SpecChannel, void @unicast_vlan104_macaddr_msb_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i16 %unicast_vlan104_macaddr_msb_c, i16 %unicast_vlan104_macaddr_msb_c"   --->   Operation 67 'specchannel' 'empty_114' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 68 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %unicast_vlan104_macaddr_msb_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 68 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 69 [1/1] (0.00ns)   --->   "%empty_115 = specchannel i32 @_ssdm_op_SpecChannel, void @unicast_vlan104_macaddr_lsb_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i32 %unicast_vlan104_macaddr_lsb_c, i32 %unicast_vlan104_macaddr_lsb_c"   --->   Operation 69 'specchannel' 'empty_115' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 70 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %unicast_vlan104_macaddr_lsb_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 70 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 71 [1/1] (0.00ns)   --->   "%empty_116 = specchannel i32 @_ssdm_op_SpecChannel, void @unicast_vlan103_macaddr_msb_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i16 %unicast_vlan103_macaddr_msb_c, i16 %unicast_vlan103_macaddr_msb_c"   --->   Operation 71 'specchannel' 'empty_116' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 72 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %unicast_vlan103_macaddr_msb_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 72 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 73 [1/1] (0.00ns)   --->   "%empty_117 = specchannel i32 @_ssdm_op_SpecChannel, void @unicast_vlan103_macaddr_lsb_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i32 %unicast_vlan103_macaddr_lsb_c, i32 %unicast_vlan103_macaddr_lsb_c"   --->   Operation 73 'specchannel' 'empty_117' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 74 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %unicast_vlan103_macaddr_lsb_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 74 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 75 [1/1] (0.00ns)   --->   "%empty_118 = specchannel i32 @_ssdm_op_SpecChannel, void @unicast_vlan102_macaddr_msb_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i16 %unicast_vlan102_macaddr_msb_c, i16 %unicast_vlan102_macaddr_msb_c"   --->   Operation 75 'specchannel' 'empty_118' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 76 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %unicast_vlan102_macaddr_msb_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 76 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 77 [1/1] (0.00ns)   --->   "%empty_119 = specchannel i32 @_ssdm_op_SpecChannel, void @unicast_vlan102_macaddr_lsb_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i32 %unicast_vlan102_macaddr_lsb_c, i32 %unicast_vlan102_macaddr_lsb_c"   --->   Operation 77 'specchannel' 'empty_119' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 78 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %unicast_vlan102_macaddr_lsb_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 78 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 79 [1/1] (0.00ns)   --->   "%empty_120 = specchannel i32 @_ssdm_op_SpecChannel, void @unicast_vlan101_macaddr_msb_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i16 %unicast_vlan101_macaddr_msb_c, i16 %unicast_vlan101_macaddr_msb_c"   --->   Operation 79 'specchannel' 'empty_120' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 80 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %unicast_vlan101_macaddr_msb_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 80 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 81 [1/1] (0.00ns)   --->   "%empty_121 = specchannel i32 @_ssdm_op_SpecChannel, void @unicast_vlan101_macaddr_lsb_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i32 %unicast_vlan101_macaddr_lsb_c, i32 %unicast_vlan101_macaddr_lsb_c"   --->   Operation 81 'specchannel' 'empty_121' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 82 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %unicast_vlan101_macaddr_lsb_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 82 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 83 [1/1] (0.00ns)   --->   "%empty_122 = specchannel i32 @_ssdm_op_SpecChannel, void @unicast_vlan100_macaddr_msb_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i16 %unicast_vlan100_macaddr_msb_c, i16 %unicast_vlan100_macaddr_msb_c"   --->   Operation 83 'specchannel' 'empty_122' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 84 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %unicast_vlan100_macaddr_msb_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 84 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 85 [1/1] (0.00ns)   --->   "%empty_123 = specchannel i32 @_ssdm_op_SpecChannel, void @unicast_vlan100_macaddr_lsb_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i32 %unicast_vlan100_macaddr_lsb_c, i32 %unicast_vlan100_macaddr_lsb_c"   --->   Operation 85 'specchannel' 'empty_123' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 86 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %unicast_vlan100_macaddr_lsb_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 86 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 87 [1/1] (0.00ns)   --->   "%empty_124 = specchannel i32 @_ssdm_op_SpecChannel, void @unicast_filter_enable_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i32 %unicast_filter_enable_c, i32 %unicast_filter_enable_c"   --->   Operation 87 'specchannel' 'empty_124' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 88 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %unicast_filter_enable_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 88 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 89 [1/1] (0.00ns)   --->   "%empty_125 = specchannel i32 @_ssdm_op_SpecChannel, void @multicast_recv_enable_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i32 %multicast_recv_enable_c, i32 %multicast_recv_enable_c"   --->   Operation 89 'specchannel' 'empty_125' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 90 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %multicast_recv_enable_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 90 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 91 [1/1] (0.00ns)   --->   "%empty_126 = specchannel i32 @_ssdm_op_SpecChannel, void @logger_vlan_enable_mask_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i32 %logger_vlan_enable_mask_c, i32 %logger_vlan_enable_mask_c"   --->   Operation 91 'specchannel' 'empty_126' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 92 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %logger_vlan_enable_mask_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 92 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 93 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %fifo_axi_full, void @empty_18, i32 0, i32 0, void @empty_34, i32 0, i32 1028, void @empty_29, void @empty_38, void @empty_34, i32 16, i32 16, i32 16, i32 16, void @empty_34, void @empty_34, i32 4294967295, i32 0"   --->   Operation 93 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 94 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ps, void @empty_18, i32 0, i32 0, void @empty_34, i32 0, i32 102400, void @empty_37, void @empty_38, void @empty_34, i32 16, i32 16, i32 16, i32 64, void @empty_34, void @empty_34, i32 4294967295, i32 0"   --->   Operation 94 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 95 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %mac_fifo, void @empty_18, i32 0, i32 0, void @empty_34, i32 0, i32 5120, void @empty_35, void @empty_38, void @empty_34, i32 16, i32 16, i32 16, i32 16, void @empty_34, void @empty_34, i32 4294967295, i32 0"   --->   Operation 95 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 96 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln698 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_34" [mac_logger.cpp:698]   --->   Operation 96 'specdataflowpipeline' 'specdataflowpipeline_ln698' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 97 [1/2] (0.00ns)   --->   "%call_ln709 = call void @tx_ddr, i32 %data_buf3, i32 %log_header, i32 %tap_header, i32 %ps, i64 %ddr_c_channel, i64 %driver_c_channel, i32 %logger_vlan_enable_mask_c, i32 %multicast_recv_enable_c, i32 %unicast_filter_enable_c, i32 %unicast_vlan100_macaddr_lsb_c, i16 %unicast_vlan100_macaddr_msb_c, i32 %unicast_vlan101_macaddr_lsb_c, i16 %unicast_vlan101_macaddr_msb_c, i32 %unicast_vlan102_macaddr_lsb_c, i16 %unicast_vlan102_macaddr_msb_c, i32 %unicast_vlan103_macaddr_lsb_c, i16 %unicast_vlan103_macaddr_msb_c, i32 %unicast_vlan104_macaddr_lsb_c, i16 %unicast_vlan104_macaddr_msb_c, i32 %unicast_vlan105_macaddr_lsb_c, i16 %unicast_vlan105_macaddr_msb_c, i32 %unicast_vlan106_macaddr_lsb_c, i16 %unicast_vlan106_macaddr_msb_c, i32 %unicast_vlan107_macaddr_lsb_c, i16 %unicast_vlan107_macaddr_msb_c, i32 %unicast_vlan108_macaddr_lsb_c, i16 %unicast_vlan108_macaddr_msb_c, i32 %unicast_vlan109_macaddr_lsb_c, i16 %unicast_vlan109_macaddr_msb_c, i32 %log_all_mask_c, i32 %vlan100_received, i32 %vlan101_received, i32 %vlan102_received, i32 %vlan103_received, i32 %vlan104_received, i32 %vlan105_received, i32 %vlan106_received, i32 %vlan107_received, i32 %vlan108_received, i32 %vlan109_received, i32 %droped, i32 %counter_vlan100, i32 %counter_vlan101, i32 %counter_vlan102, i32 %counter_vlan103, i32 %counter_vlan104, i32 %counter_vlan105, i32 %counter_vlan106, i32 %counter_vlan107, i32 %counter_vlan108, i32 %counter_vlan109, i32 %counter_droped, i32 %last_log_tx_index, i32 %last_tap_tx_index" [mac_logger.cpp:709]   --->   Operation 97 'call' 'call_ln709' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 98 [1/1] (0.00ns)   --->   "%ret_ln709 = ret" [mac_logger.cpp:709]   --->   Operation 98 'ret' 'ret_ln709' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 7.3ns
+The critical path consists of the following:
+	wire read operation ('driver_read') on port 'driver' [60]  (0 ns)
+	'call' operation ('call_ret', mac_logger.cpp:704) to 'rx_ringbuffer_header' [142]  (7.3 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 1.84ns
+The critical path consists of the following:
+	'call' operation ('call_ln709', mac_logger.cpp:709) to 'tx_ddr' [146]  (1.84 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

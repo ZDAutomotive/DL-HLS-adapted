@@ -1,0 +1,519 @@
+
+
+================================================================
+== Synthesis Summary Report of 'mac_logger'
+================================================================
++ General Information: 
+    * Date:           Thu Nov 10 17:25:04 2022
+    * Version:        2022.2 (Build 3670227 on Oct 13 2022)
+    * Project:        maclogger
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xczu5ev-sfvc784-2-i
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+--------+---------+------------+-------------+-----+
+    |                       Modules                       |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |        |         |            |             |     |
+    |                       & Loops                       |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM  |   DSP   |     FF     |     LUT     | URAM|
+    +-----------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+--------+---------+------------+-------------+-----+
+    |+ mac_logger                                         |  Timing|  -0.68|        -|          -|         -|        -|     -|        no|  4 (1%)|  6 (~0%)|  11307 (4%)|  17176 (14%)|    -|
+    | o VITIS_LOOP_697_1                                  |       -|   7.30|        -|          -|         -|        -|     -|        no|       -|        -|           -|            -|    -|
+    |  + dataflow_in_loop_VITIS_LOOP_697_1*               |  Timing|  -0.68|        -|          -|         -|        -|     -|  dataflow|  4 (1%)|  6 (~0%)|   7274 (3%)|    9571 (8%)|    -|
+    |   + entry_proc                                      |       -|   5.46|        0|      0.000|         -|        0|     -|        no|       -|        -|     2 (~0%)|    227 (~0%)|    -|
+    |   + rx_ringbuffer_header                            |       -|   0.00|       37|    370.000|         -|       37|     -|        no|       -|        -|   367 (~0%)|    479 (~0%)|    -|
+    |    + rx_ringbuffer_header_Pipeline_VITIS_LOOP_28_1  |       -|   0.00|       10|    100.000|         -|       10|     -|        no|       -|        -|    47 (~0%)|     69 (~0%)|    -|
+    |     o VITIS_LOOP_28_1                               |       -|   7.30|        8|     80.000|         3|        1|     7|       yes|       -|        -|           -|            -|    -|
+    |    + rx_ringbuffer_header_Pipeline_VITIS_LOOP_32_2  |       -|   0.00|       10|    100.000|         -|       10|     -|        no|       -|        -|    47 (~0%)|     69 (~0%)|    -|
+    |     o VITIS_LOOP_32_2                               |       -|   7.30|        8|     80.000|         3|        1|     7|       yes|       -|        -|           -|            -|    -|
+    |   + rx_fifo                                         |       -|   0.00|        -|          -|         -|        -|     -|        no|       -|        -|   857 (~0%)|    2005 (1%)|    -|
+    |    + rx_fifo_Pipeline_VITIS_LOOP_71_1               |       -|   0.00|       14|    140.000|         -|       14|     -|        no|       -|        -|   186 (~0%)|    111 (~0%)|    -|
+    |     o VITIS_LOOP_71_1                               |       -|   7.30|       12|    120.000|        10|        1|     4|       yes|       -|        -|           -|            -|    -|
+    |    + rx_fifo_Pipeline_VITIS_LOOP_91_2               |       -|   5.27|        6|     60.000|         -|        6|     -|        no|       -|        -|     8 (~0%)|     68 (~0%)|    -|
+    |     o VITIS_LOOP_91_2                               |       -|   7.30|        4|     40.000|         2|        1|     4|       yes|       -|        -|           -|            -|    -|
+    |    + rx_fifo_Pipeline_rx_macfifo_data               |       -|   0.00|        -|          -|         -|        -|     -|        no|       -|        -|   160 (~0%)|    532 (~0%)|    -|
+    |     o rx_macfifo_data                               |      II|   7.30|        -|          -|        25|       16|     -|       yes|       -|        -|           -|            -|    -|
+    |    + rx_fifo_Pipeline_4                             |       -|   0.00|       18|    180.000|         -|       18|     -|        no|       -|        -|    44 (~0%)|     86 (~0%)|    -|
+    |     o Loop 1                                        |       -|   7.30|       16|    160.000|         2|        1|    15|       yes|       -|        -|           -|            -|    -|
+    |   + tx_ddr                                          |       -|   0.00|      987|  9.870e+03|         -|      987|     -|        no|       -|  6 (~0%)|   3403 (1%)|    5005 (4%)|    -|
+    |    + tx_ddr_Pipeline_VITIS_LOOP_471_1               |       -|   5.95|        9|     90.000|         -|        9|     -|        no|       -|        -|     9 (~0%)|     56 (~0%)|    -|
+    |     o VITIS_LOOP_471_1                              |       -|   7.30|        7|     70.000|         2|        1|     7|       yes|       -|        -|           -|            -|    -|
+    |    + tx_ddr_Pipeline_tx_2_log_ddr                   |       -|   0.00|      423|  4.230e+03|         -|      423|     -|        no|       -|        -|    53 (~0%)|     83 (~0%)|    -|
+    |     o tx_2_log_ddr                                  |       -|   7.30|      421|  4.210e+03|         3|        1|   420|       yes|       -|        -|           -|            -|    -|
+    |    + tx_ddr_Pipeline_VITIS_LOOP_531_2               |       -|   5.95|        9|     90.000|         -|        9|     -|        no|       -|        -|     9 (~0%)|     56 (~0%)|    -|
+    |     o VITIS_LOOP_531_2                              |       -|   7.30|        7|     70.000|         2|        1|     7|       yes|       -|        -|           -|            -|    -|
+    |    + tx_ddr_Pipeline_tx_2_tap_ddr                   |       -|   0.00|      443|  4.430e+03|         -|      443|     -|        no|       -|        -|    53 (~0%)|     83 (~0%)|    -|
+    |     o tx_2_tap_ddr                                  |       -|   7.30|      441|  4.410e+03|         3|        1|   440|       yes|       -|        -|           -|            -|    -|
+    +-----------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+--------+---------+------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++---------------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| Interface           | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
+|                     | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
++---------------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| m_axi_fifo_axi_full | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
+| m_axi_mac_fifo      | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
+| m_axi_ps            | 32 -> 32   | 64            | 0       | slave  | 0        | 64        | 16           | 64           | 16          | 16          |
++---------------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+
+* S_AXILITE Interfaces
++----------------+------------+---------------+--------+----------+
+| Interface      | Data Width | Address Width | Offset | Register |
++----------------+------------+---------------+--------+----------+
+| s_axi_axilites | 32         | 9             | 16     | 0        |
++----------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++----------------+-----------------------------+--------+-------+--------+--------------------------------------------+------------------------------------------------------------------------------------+
+| Interface      | Register                    | Offset | Width | Access | Description                                | Bit Fields                                                                         |
++----------------+-----------------------------+--------+-------+--------+--------------------------------------------+------------------------------------------------------------------------------------+
+| s_axi_axilites | CTRL                        | 0x00   | 32    | RW     | Control signals                            | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 4=AP_CONTINUE 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_axilites | GIER                        | 0x04   | 32    | RW     | Global Interrupt Enable Register           | 0=Enable                                                                           |
+| s_axi_axilites | IP_IER                      | 0x08   | 32    | RW     | IP Interrupt Enable Register               | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                                      |
+| s_axi_axilites | IP_ISR                      | 0x0c   | 32    | RW     | IP Interrupt Status Register               | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                                      |
+| s_axi_axilites | fifo_1                      | 0x10   | 32    | W      | Data signal of fifo                        |                                                                                    |
+| s_axi_axilites | fifo_2                      | 0x14   | 32    | W      | Data signal of fifo                        |                                                                                    |
+| s_axi_axilites | ddr_1                       | 0x1c   | 32    | W      | Data signal of ddr                         |                                                                                    |
+| s_axi_axilites | ddr_2                       | 0x20   | 32    | W      | Data signal of ddr                         |                                                                                    |
+| s_axi_axilites | status                      | 0x28   | 32    | W      | Data signal of status                      |                                                                                    |
+| s_axi_axilites | writeStatus                 | 0x30   | 32    | W      | Data signal of writeStatus                 |                                                                                    |
+| s_axi_axilites | logger_vlan_enable_mask     | 0x38   | 32    | W      | Data signal of logger_vlan_enable_mask     |                                                                                    |
+| s_axi_axilites | vlan100_received            | 0x40   | 32    | R      | Data signal of vlan100_received            |                                                                                    |
+| s_axi_axilites | vlan100_received_ctrl       | 0x44   | 32    | R      | Control signal of vlan100_received         | 0=vlan100_received_ap_vld                                                          |
+| s_axi_axilites | vlan101_received            | 0x48   | 32    | R      | Data signal of vlan101_received            |                                                                                    |
+| s_axi_axilites | vlan101_received_ctrl       | 0x4c   | 32    | R      | Control signal of vlan101_received         | 0=vlan101_received_ap_vld                                                          |
+| s_axi_axilites | vlan102_received            | 0x50   | 32    | R      | Data signal of vlan102_received            |                                                                                    |
+| s_axi_axilites | vlan102_received_ctrl       | 0x54   | 32    | R      | Control signal of vlan102_received         | 0=vlan102_received_ap_vld                                                          |
+| s_axi_axilites | vlan103_received            | 0x58   | 32    | R      | Data signal of vlan103_received            |                                                                                    |
+| s_axi_axilites | vlan103_received_ctrl       | 0x5c   | 32    | R      | Control signal of vlan103_received         | 0=vlan103_received_ap_vld                                                          |
+| s_axi_axilites | vlan104_received            | 0x60   | 32    | R      | Data signal of vlan104_received            |                                                                                    |
+| s_axi_axilites | vlan104_received_ctrl       | 0x64   | 32    | R      | Control signal of vlan104_received         | 0=vlan104_received_ap_vld                                                          |
+| s_axi_axilites | vlan105_received            | 0x68   | 32    | R      | Data signal of vlan105_received            |                                                                                    |
+| s_axi_axilites | vlan105_received_ctrl       | 0x6c   | 32    | R      | Control signal of vlan105_received         | 0=vlan105_received_ap_vld                                                          |
+| s_axi_axilites | vlan106_received            | 0x70   | 32    | R      | Data signal of vlan106_received            |                                                                                    |
+| s_axi_axilites | vlan106_received_ctrl       | 0x74   | 32    | R      | Control signal of vlan106_received         | 0=vlan106_received_ap_vld                                                          |
+| s_axi_axilites | vlan107_received            | 0x78   | 32    | R      | Data signal of vlan107_received            |                                                                                    |
+| s_axi_axilites | vlan107_received_ctrl       | 0x7c   | 32    | R      | Control signal of vlan107_received         | 0=vlan107_received_ap_vld                                                          |
+| s_axi_axilites | vlan108_received            | 0x80   | 32    | R      | Data signal of vlan108_received            |                                                                                    |
+| s_axi_axilites | vlan108_received_ctrl       | 0x84   | 32    | R      | Control signal of vlan108_received         | 0=vlan108_received_ap_vld                                                          |
+| s_axi_axilites | vlan109_received            | 0x88   | 32    | R      | Data signal of vlan109_received            |                                                                                    |
+| s_axi_axilites | vlan109_received_ctrl       | 0x8c   | 32    | R      | Control signal of vlan109_received         | 0=vlan109_received_ap_vld                                                          |
+| s_axi_axilites | droped                      | 0x90   | 32    | R      | Data signal of droped                      |                                                                                    |
+| s_axi_axilites | droped_ctrl                 | 0x94   | 32    | R      | Control signal of droped                   | 0=droped_ap_vld                                                                    |
+| s_axi_axilites | multicast_recv_enable       | 0x98   | 32    | W      | Data signal of multicast_recv_enable       |                                                                                    |
+| s_axi_axilites | unicast_filter_enable       | 0xa0   | 32    | W      | Data signal of unicast_filter_enable       |                                                                                    |
+| s_axi_axilites | unicast_vlan100_macaddr_lsb | 0xa8   | 32    | W      | Data signal of unicast_vlan100_macaddr_lsb |                                                                                    |
+| s_axi_axilites | unicast_vlan100_macaddr_msb | 0xb0   | 32    | W      | Data signal of unicast_vlan100_macaddr_msb |                                                                                    |
+| s_axi_axilites | unicast_vlan101_macaddr_lsb | 0xb8   | 32    | W      | Data signal of unicast_vlan101_macaddr_lsb |                                                                                    |
+| s_axi_axilites | unicast_vlan101_macaddr_msb | 0xc0   | 32    | W      | Data signal of unicast_vlan101_macaddr_msb |                                                                                    |
+| s_axi_axilites | unicast_vlan102_macaddr_lsb | 0xc8   | 32    | W      | Data signal of unicast_vlan102_macaddr_lsb |                                                                                    |
+| s_axi_axilites | unicast_vlan102_macaddr_msb | 0xd0   | 32    | W      | Data signal of unicast_vlan102_macaddr_msb |                                                                                    |
+| s_axi_axilites | unicast_vlan103_macaddr_lsb | 0xd8   | 32    | W      | Data signal of unicast_vlan103_macaddr_lsb |                                                                                    |
+| s_axi_axilites | unicast_vlan103_macaddr_msb | 0xe0   | 32    | W      | Data signal of unicast_vlan103_macaddr_msb |                                                                                    |
+| s_axi_axilites | unicast_vlan104_macaddr_lsb | 0xe8   | 32    | W      | Data signal of unicast_vlan104_macaddr_lsb |                                                                                    |
+| s_axi_axilites | unicast_vlan104_macaddr_msb | 0xf0   | 32    | W      | Data signal of unicast_vlan104_macaddr_msb |                                                                                    |
+| s_axi_axilites | unicast_vlan105_macaddr_lsb | 0xf8   | 32    | W      | Data signal of unicast_vlan105_macaddr_lsb |                                                                                    |
+| s_axi_axilites | unicast_vlan105_macaddr_msb | 0x100  | 32    | W      | Data signal of unicast_vlan105_macaddr_msb |                                                                                    |
+| s_axi_axilites | unicast_vlan106_macaddr_lsb | 0x108  | 32    | W      | Data signal of unicast_vlan106_macaddr_lsb |                                                                                    |
+| s_axi_axilites | unicast_vlan106_macaddr_msb | 0x110  | 32    | W      | Data signal of unicast_vlan106_macaddr_msb |                                                                                    |
+| s_axi_axilites | unicast_vlan107_macaddr_lsb | 0x118  | 32    | W      | Data signal of unicast_vlan107_macaddr_lsb |                                                                                    |
+| s_axi_axilites | unicast_vlan107_macaddr_msb | 0x120  | 32    | W      | Data signal of unicast_vlan107_macaddr_msb |                                                                                    |
+| s_axi_axilites | unicast_vlan108_macaddr_lsb | 0x128  | 32    | W      | Data signal of unicast_vlan108_macaddr_lsb |                                                                                    |
+| s_axi_axilites | unicast_vlan108_macaddr_msb | 0x130  | 32    | W      | Data signal of unicast_vlan108_macaddr_msb |                                                                                    |
+| s_axi_axilites | unicast_vlan109_macaddr_lsb | 0x138  | 32    | W      | Data signal of unicast_vlan109_macaddr_lsb |                                                                                    |
+| s_axi_axilites | unicast_vlan109_macaddr_msb | 0x140  | 32    | W      | Data signal of unicast_vlan109_macaddr_msb |                                                                                    |
+| s_axi_axilites | log_all_mask                | 0x148  | 32    | W      | Data signal of log_all_mask                |                                                                                    |
+| s_axi_axilites | driver_1                    | 0x150  | 32    | W      | Data signal of driver                      |                                                                                    |
+| s_axi_axilites | driver_2                    | 0x154  | 32    | W      | Data signal of driver                      |                                                                                    |
+| s_axi_axilites | fifo_axi_full_offset_1      | 0x160  | 32    | W      | Data signal of fifo_axi_full_offset        |                                                                                    |
+| s_axi_axilites | fifo_axi_full_offset_2      | 0x164  | 32    | W      | Data signal of fifo_axi_full_offset        |                                                                                    |
++----------------+-----------------------------+--------+-------+--------+--------------------------------------------+------------------------------------------------------------------------------------+
+
+* Other Ports
++-----------+---------+----------+
+| Interface | Mode    | Bitwidth |
++-----------+---------+----------+
+| timestamp | ap_none | 64       |
++-----------+---------+----------+
+
+* TOP LEVEL CONTROL
++-----------+---------------+-----------+
+| Interface | Type          | Ports     |
++-----------+---------------+-----------+
+| ap_clk    | clock         | ap_clk    |
+| ap_rst_n  | reset         | ap_rst_n  |
+| interrupt | interrupt     | interrupt |
+| ap_ctrl   | ap_ctrl_chain |           |
++-----------+---------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-----------------------------+-----------+-----------------+
+| Argument                    | Direction | Datatype        |
++-----------------------------+-----------+-----------------+
+| fifo                        | in        | pointer         |
+| log_ddr                     | inout     | unsigned int*   |
+| tap_ddr                     | inout     | unsigned int*   |
+| status                      | unused    | unsigned int*   |
+| writeStatus                 | unused    | unsigned short* |
+| timestamp                   | in        | long long int   |
+| logger_vlan_enable_mask     | in        | unsigned int*   |
+| vlan100_received            | out       | unsigned int*   |
+| vlan101_received            | out       | unsigned int*   |
+| vlan102_received            | out       | unsigned int*   |
+| vlan103_received            | out       | unsigned int*   |
+| vlan104_received            | out       | unsigned int*   |
+| vlan105_received            | out       | unsigned int*   |
+| vlan106_received            | out       | unsigned int*   |
+| vlan107_received            | out       | unsigned int*   |
+| vlan108_received            | out       | unsigned int*   |
+| vlan109_received            | out       | unsigned int*   |
+| droped                      | out       | unsigned int*   |
+| multicast_recv_enable       | in        | unsigned int*   |
+| unicast_filter_enable       | in        | unsigned int*   |
+| unicast_vlan100_macaddr_lsb | in        | unsigned int*   |
+| unicast_vlan100_macaddr_msb | in        | unsigned int*   |
+| unicast_vlan101_macaddr_lsb | in        | unsigned int*   |
+| unicast_vlan101_macaddr_msb | in        | unsigned int*   |
+| unicast_vlan102_macaddr_lsb | in        | unsigned int*   |
+| unicast_vlan102_macaddr_msb | in        | unsigned int*   |
+| unicast_vlan103_macaddr_lsb | in        | unsigned int*   |
+| unicast_vlan103_macaddr_msb | in        | unsigned int*   |
+| unicast_vlan104_macaddr_lsb | in        | unsigned int*   |
+| unicast_vlan104_macaddr_msb | in        | unsigned int*   |
+| unicast_vlan105_macaddr_lsb | in        | unsigned int*   |
+| unicast_vlan105_macaddr_msb | in        | unsigned int*   |
+| unicast_vlan106_macaddr_lsb | in        | unsigned int*   |
+| unicast_vlan106_macaddr_msb | in        | unsigned int*   |
+| unicast_vlan107_macaddr_lsb | in        | unsigned int*   |
+| unicast_vlan107_macaddr_msb | in        | unsigned int*   |
+| unicast_vlan108_macaddr_lsb | in        | unsigned int*   |
+| unicast_vlan108_macaddr_msb | in        | unsigned int*   |
+| unicast_vlan109_macaddr_lsb | in        | unsigned int*   |
+| unicast_vlan109_macaddr_msb | in        | unsigned int*   |
+| log_all_mask                | in        | unsigned int*   |
+| fifo_axi_full               | in        | pointer         |
++-----------------------------+-----------+-----------------+
+
+* SW-to-HW Mapping
++-----------------------------+---------------------+-----------+----------+--------------------------------------------------------+
+| Argument                    | HW Interface        | HW Type   | HW Usage | HW Info                                                |
++-----------------------------+---------------------+-----------+----------+--------------------------------------------------------+
+| fifo                        | m_axi_mac_fifo      | interface |          |                                                        |
+| fifo                        | s_axi_axilites      | register  | offset   | name=fifo_1 offset=0x10 range=32                       |
+| fifo                        | s_axi_axilites      | register  | offset   | name=fifo_2 offset=0x14 range=32                       |
+| log_ddr                     | m_axi_ps            | interface |          |                                                        |
+| log_ddr                     | s_axi_axilites      | interface | offset   |                                                        |
+| tap_ddr                     | m_axi_ps            | interface |          |                                                        |
+| tap_ddr                     | s_axi_axilites      | interface | offset   |                                                        |
+| status                      | s_axi_axilites      | register  |          | name=status offset=0x28 range=32                       |
+| writeStatus                 | s_axi_axilites      | register  |          | name=writeStatus offset=0x30 range=32                  |
+| timestamp                   | timestamp           | port      |          |                                                        |
+| logger_vlan_enable_mask     | s_axi_axilites      | register  |          | name=logger_vlan_enable_mask offset=0x38 range=32      |
+| vlan100_received            | s_axi_axilites      | register  |          | name=vlan100_received offset=0x40 range=32             |
+| vlan100_received            | s_axi_axilites      | register  |          | name=vlan100_received_ctrl offset=0x44 range=32        |
+| vlan101_received            | s_axi_axilites      | register  |          | name=vlan101_received offset=0x48 range=32             |
+| vlan101_received            | s_axi_axilites      | register  |          | name=vlan101_received_ctrl offset=0x4c range=32        |
+| vlan102_received            | s_axi_axilites      | register  |          | name=vlan102_received offset=0x50 range=32             |
+| vlan102_received            | s_axi_axilites      | register  |          | name=vlan102_received_ctrl offset=0x54 range=32        |
+| vlan103_received            | s_axi_axilites      | register  |          | name=vlan103_received offset=0x58 range=32             |
+| vlan103_received            | s_axi_axilites      | register  |          | name=vlan103_received_ctrl offset=0x5c range=32        |
+| vlan104_received            | s_axi_axilites      | register  |          | name=vlan104_received offset=0x60 range=32             |
+| vlan104_received            | s_axi_axilites      | register  |          | name=vlan104_received_ctrl offset=0x64 range=32        |
+| vlan105_received            | s_axi_axilites      | register  |          | name=vlan105_received offset=0x68 range=32             |
+| vlan105_received            | s_axi_axilites      | register  |          | name=vlan105_received_ctrl offset=0x6c range=32        |
+| vlan106_received            | s_axi_axilites      | register  |          | name=vlan106_received offset=0x70 range=32             |
+| vlan106_received            | s_axi_axilites      | register  |          | name=vlan106_received_ctrl offset=0x74 range=32        |
+| vlan107_received            | s_axi_axilites      | register  |          | name=vlan107_received offset=0x78 range=32             |
+| vlan107_received            | s_axi_axilites      | register  |          | name=vlan107_received_ctrl offset=0x7c range=32        |
+| vlan108_received            | s_axi_axilites      | register  |          | name=vlan108_received offset=0x80 range=32             |
+| vlan108_received            | s_axi_axilites      | register  |          | name=vlan108_received_ctrl offset=0x84 range=32        |
+| vlan109_received            | s_axi_axilites      | register  |          | name=vlan109_received offset=0x88 range=32             |
+| vlan109_received            | s_axi_axilites      | register  |          | name=vlan109_received_ctrl offset=0x8c range=32        |
+| droped                      | s_axi_axilites      | register  |          | name=droped offset=0x90 range=32                       |
+| droped                      | s_axi_axilites      | register  |          | name=droped_ctrl offset=0x94 range=32                  |
+| multicast_recv_enable       | s_axi_axilites      | register  |          | name=multicast_recv_enable offset=0x98 range=32        |
+| unicast_filter_enable       | s_axi_axilites      | register  |          | name=unicast_filter_enable offset=0xa0 range=32        |
+| unicast_vlan100_macaddr_lsb | s_axi_axilites      | register  |          | name=unicast_vlan100_macaddr_lsb offset=0xa8 range=32  |
+| unicast_vlan100_macaddr_msb | s_axi_axilites      | register  |          | name=unicast_vlan100_macaddr_msb offset=0xb0 range=32  |
+| unicast_vlan101_macaddr_lsb | s_axi_axilites      | register  |          | name=unicast_vlan101_macaddr_lsb offset=0xb8 range=32  |
+| unicast_vlan101_macaddr_msb | s_axi_axilites      | register  |          | name=unicast_vlan101_macaddr_msb offset=0xc0 range=32  |
+| unicast_vlan102_macaddr_lsb | s_axi_axilites      | register  |          | name=unicast_vlan102_macaddr_lsb offset=0xc8 range=32  |
+| unicast_vlan102_macaddr_msb | s_axi_axilites      | register  |          | name=unicast_vlan102_macaddr_msb offset=0xd0 range=32  |
+| unicast_vlan103_macaddr_lsb | s_axi_axilites      | register  |          | name=unicast_vlan103_macaddr_lsb offset=0xd8 range=32  |
+| unicast_vlan103_macaddr_msb | s_axi_axilites      | register  |          | name=unicast_vlan103_macaddr_msb offset=0xe0 range=32  |
+| unicast_vlan104_macaddr_lsb | s_axi_axilites      | register  |          | name=unicast_vlan104_macaddr_lsb offset=0xe8 range=32  |
+| unicast_vlan104_macaddr_msb | s_axi_axilites      | register  |          | name=unicast_vlan104_macaddr_msb offset=0xf0 range=32  |
+| unicast_vlan105_macaddr_lsb | s_axi_axilites      | register  |          | name=unicast_vlan105_macaddr_lsb offset=0xf8 range=32  |
+| unicast_vlan105_macaddr_msb | s_axi_axilites      | register  |          | name=unicast_vlan105_macaddr_msb offset=0x100 range=32 |
+| unicast_vlan106_macaddr_lsb | s_axi_axilites      | register  |          | name=unicast_vlan106_macaddr_lsb offset=0x108 range=32 |
+| unicast_vlan106_macaddr_msb | s_axi_axilites      | register  |          | name=unicast_vlan106_macaddr_msb offset=0x110 range=32 |
+| unicast_vlan107_macaddr_lsb | s_axi_axilites      | register  |          | name=unicast_vlan107_macaddr_lsb offset=0x118 range=32 |
+| unicast_vlan107_macaddr_msb | s_axi_axilites      | register  |          | name=unicast_vlan107_macaddr_msb offset=0x120 range=32 |
+| unicast_vlan108_macaddr_lsb | s_axi_axilites      | register  |          | name=unicast_vlan108_macaddr_lsb offset=0x128 range=32 |
+| unicast_vlan108_macaddr_msb | s_axi_axilites      | register  |          | name=unicast_vlan108_macaddr_msb offset=0x130 range=32 |
+| unicast_vlan109_macaddr_lsb | s_axi_axilites      | register  |          | name=unicast_vlan109_macaddr_lsb offset=0x138 range=32 |
+| unicast_vlan109_macaddr_msb | s_axi_axilites      | register  |          | name=unicast_vlan109_macaddr_msb offset=0x140 range=32 |
+| log_all_mask                | s_axi_axilites      | register  |          | name=log_all_mask offset=0x148 range=32                |
+| fifo_axi_full               | m_axi_fifo_axi_full | interface |          |                                                        |
+| fifo_axi_full               | s_axi_axilites      | interface | offset   |                                                        |
++-----------------------------+---------------------+-----------+----------+--------------------------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++---------------------+-----------------+-----------+----------+-------+----------------------+
+| HW Interface        | Loop            | Direction | Length   | Width | Location             |
++---------------------+-----------------+-----------+----------+-------+----------------------+
+| m_axi_ps            | VITIS_LOOP_28_1 | read      | 7        | 32    | mac_logger.cpp:28:19 |
+| m_axi_ps            | VITIS_LOOP_32_2 | read      | 7        | 32    | mac_logger.cpp:32:19 |
+| m_axi_fifo_axi_full | anonymous       | read      | 16       | 32    | mac_logger.cpp:101:3 |
+| m_axi_ps            | tx_2_log_ddr    | write     | variable | 32    | mac_logger.cpp:512:4 |
+| m_axi_ps            | tx_2_tap_ddr    | write     | variable | 32    | mac_logger.cpp:570:4 |
++---------------------+-----------------+-----------+----------+-------+----------------------+
+
+* Inferred Bursts and Widening Missed
++---------------------+---------------+-----------------+-------------------------------------------------------------------------------------------------------+------------+----------------------+
+| HW Interface        | Variable      | Loop            | Problem                                                                                               | Resolution | Location             |
++---------------------+---------------+-----------------+-------------------------------------------------------------------------------------------------------+------------+----------------------+
+| m_axi_mac_fifo      | fifo_axi_lite |                 | Volatile or Atomic access cannot be transformed                                                       | 214-227    | mac_logger.cpp:54:34 |
+| m_axi_fifo_axi_full | fifo_axi_full |                 | Volatile or Atomic access cannot be transformed                                                       | 214-227    | mac_logger.cpp:73:13 |
+| m_axi_fifo_axi_full | fifo_axi_full | rx_macfifo_data | Could not analyze pattern                                                                             | 214-229    | mac_logger.cpp:100:2 |
+| m_axi_mac_fifo      | fifo_axi_lite |                 | Volatile or Atomic access cannot be transformed                                                       | 214-227    | mac_logger.cpp:53:5  |
+| m_axi_ps            | tap_ddr       | VITIS_LOOP_32_2 | Could not widen since type i32 size is greater than or equal to alignment 1(bytes)                    | 214-307    | mac_logger.cpp:32:19 |
+| m_axi_ps            | log_ddr       | VITIS_LOOP_28_1 | Could not widen since type i32 size is greater than or equal to alignment 1(bytes)                    | 214-307    | mac_logger.cpp:28:19 |
+| m_axi_fifo_axi_full | fifo_axi_full | anonymous       | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | mac_logger.cpp:101:3 |
+| m_axi_ps            | tap_ddr       | tx_2_tap_ddr    | Could not widen since type i32 size is greater than or equal to alignment 1(bytes)                    | 214-307    | mac_logger.cpp:570:4 |
+| m_axi_ps            | log_ddr       | tx_2_log_ddr    | Could not widen since type i32 size is greater than or equal to alignment 1(bytes)                    | 214-307    | mac_logger.cpp:512:4 |
++---------------------+---------------+-----------------+-------------------------------------------------------------------------------------------------------+------------+----------------------+
+
+    * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------------------------+-----+--------+--------------------+------+--------+---------+
+| Name                                               | DSP | Pragma | Variable           | Op   | Impl   | Latency |
++----------------------------------------------------+-----+--------+--------------------+------+--------+---------+
+| + mac_logger                                       | 6   |        |                    |      |        |         |
+|  + dataflow_in_loop_VITIS_LOOP_697_1               | 6   |        |                    |      |        |         |
+|    ddr_c_channel_U                                 | -   |        | ddr_c_channel      | fifo | srl    | 0       |
+|    driver_c_channel_U                              | -   |        | driver_c_channel   | fifo | srl    | 0       |
+|   + rx_ringbuffer_header                           | 0   |        |                    |      |        |         |
+|    + rx_ringbuffer_header_Pipeline_VITIS_LOOP_28_1 | 0   |        |                    |      |        |         |
+|      add_ln28_fu_96_p2                             | -   |        | add_ln28           | add  | fabric | 0       |
+|    + rx_ringbuffer_header_Pipeline_VITIS_LOOP_32_2 | 0   |        |                    |      |        |         |
+|      add_ln32_fu_96_p2                             | -   |        | add_ln32           | add  | fabric | 0       |
+|   + rx_fifo                                        | 0   |        |                    |      |        |         |
+|     add_ln53_fu_303_p2                             | -   |        | add_ln53           | add  | fabric | 0       |
+|     add_ln54_fu_334_p2                             | -   |        | add_ln54           | add  | fabric | 0       |
+|     WordLength_fu_517_p2                           | -   |        | WordLength         | add  | fabric | 0       |
+|     empty_92_fu_459_p2                             | -   |        | empty_92           | add  | fabric | 0       |
+|     add_ln83_fu_566_p2                             | -   |        | add_ln83           | add  | fabric | 0       |
+|     add_ln84_fu_576_p2                             | -   |        | add_ln84           | add  | fabric | 0       |
+|     add_ln97_fu_671_p2                             | -   |        | add_ln97           | add  | fabric | 0       |
+|     add_ln97_2_fu_677_p2                           | -   |        | add_ln97_2         | add  | fabric | 0       |
+|    + rx_fifo_Pipeline_VITIS_LOOP_71_1              | 0   |        |                    |      |        |         |
+|      add_ln71_fu_105_p2                            | -   |        | add_ln71           | add  | fabric | 0       |
+|    + rx_fifo_Pipeline_VITIS_LOOP_91_2              | 0   |        |                    |      |        |         |
+|      add_ln91_fu_97_p2                             | -   |        | add_ln91           | add  | fabric | 0       |
+|      add_ln93_fu_128_p2                            | -   |        | add_ln93           | add  | fabric | 0       |
+|    + rx_fifo_Pipeline_rx_macfifo_data              | 0   |        |                    |      |        |         |
+|      add_ln100_fu_292_p2                           | -   |        | add_ln100          | add  | fabric | 0       |
+|      arrayidx94_sum1_1_fu_320_p2                   | -   |        | arrayidx94_sum1_1  | add  | fabric | 0       |
+|      arrayidx94_sum1_2_fu_330_p2                   | -   |        | arrayidx94_sum1_2  | add  | fabric | 0       |
+|      arrayidx94_sum1_3_fu_340_p2                   | -   |        | arrayidx94_sum1_3  | add  | fabric | 0       |
+|      arrayidx94_sum1_4_fu_350_p2                   | -   |        | arrayidx94_sum1_4  | add  | fabric | 0       |
+|      arrayidx94_sum1_5_fu_360_p2                   | -   |        | arrayidx94_sum1_5  | add  | fabric | 0       |
+|      arrayidx94_sum1_6_fu_370_p2                   | -   |        | arrayidx94_sum1_6  | add  | fabric | 0       |
+|      arrayidx94_sum1_7_fu_380_p2                   | -   |        | arrayidx94_sum1_7  | add  | fabric | 0       |
+|      arrayidx94_sum1_9_fu_400_p2                   | -   |        | arrayidx94_sum1_9  | add  | fabric | 0       |
+|      arrayidx94_sum1_10_fu_410_p2                  | -   |        | arrayidx94_sum1_10 | add  | fabric | 0       |
+|      arrayidx94_sum1_11_fu_420_p2                  | -   |        | arrayidx94_sum1_11 | add  | fabric | 0       |
+|      arrayidx94_sum1_12_fu_430_p2                  | -   |        | arrayidx94_sum1_12 | add  | fabric | 0       |
+|      arrayidx94_sum1_13_fu_440_p2                  | -   |        | arrayidx94_sum1_13 | add  | fabric | 0       |
+|      arrayidx94_sum1_14_fu_450_p2                  | -   |        | arrayidx94_sum1_14 | add  | fabric | 0       |
+|      arrayidx94_sum1_15_fu_460_p2                  | -   |        | arrayidx94_sum1_15 | add  | fabric | 0       |
+|    + rx_fifo_Pipeline_4                            | 0   |        |                    |      |        |         |
+|      arrayidx103_sum3_fu_133_p2                    | -   |        | arrayidx103_sum3   | add  | fabric | 0       |
+|      empty_fu_113_p2                               | -   |        | empty              | add  | fabric | 0       |
+|   + tx_ddr                                         | 6   |        |                    |      |        |         |
+|     add_ln274_fu_1555_p2                           | -   |        | add_ln274          | add  | fabric | 0       |
+|     add_ln270_fu_1567_p2                           | -   |        | add_ln270          | add  | fabric | 0       |
+|     add_ln266_fu_1579_p2                           | -   |        | add_ln266          | add  | fabric | 0       |
+|     add_ln262_fu_1591_p2                           | -   |        | add_ln262          | add  | fabric | 0       |
+|     add_ln258_fu_1603_p2                           | -   |        | add_ln258          | add  | fabric | 0       |
+|     add_ln254_fu_1615_p2                           | -   |        | add_ln254          | add  | fabric | 0       |
+|     add_ln250_fu_1627_p2                           | -   |        | add_ln250          | add  | fabric | 0       |
+|     add_ln246_fu_1639_p2                           | -   |        | add_ln246          | add  | fabric | 0       |
+|     add_ln242_fu_1651_p2                           | -   |        | add_ln242          | add  | fabric | 0       |
+|     add_ln238_fu_1663_p2                           | -   |        | add_ln238          | add  | fabric | 0       |
+|     add_ln278_fu_1675_p2                           | -   |        | add_ln278          | add  | fabric | 0       |
+|     add_ln311_fu_2596_p2                           | -   |        | add_ln311          | add  | fabric | 0       |
+|     add_ln311_1_fu_2627_p2                         | -   |        | add_ln311_1        | add  | fabric | 0       |
+|     next_header_1_fu_2658_p2                       | -   |        | next_header_1      | add  | fabric | 0       |
+|     next_header_2_fu_2663_p2                       | -   |        | next_header_2      | add  | fabric | 0       |
+|     add_ln322_fu_2711_p2                           | -   |        | add_ln322          | add  | fabric | 0       |
+|     grp_fu_2855_p0                                 | -   |        | add_ln504          | add  | fabric | 0       |
+|     grp_fu_1429_p2                                 | -   |        | add_ln509          | add  | fabric | 0       |
+|     N_fu_2960_p2                                   | -   |        | N                  | add  | fabric | 0       |
+|     mul_32s_32s_32_1_1_U96                         | 3   |        | mul                | mul  | auto   | 0       |
+|     add_ln512_fu_2993_p2                           | -   |        | add_ln512          | add  | fabric | 0       |
+|     add_ln512_1_fu_3003_p2                         | -   |        | add_ln512_1        | add  | fabric | 0       |
+|     add_ln521_fu_3018_p2                           | -   |        | add_ln521          | add  | fabric | 0       |
+|     grp_fu_3132_p0                                 | -   |        | add_ln564          | add  | fabric | 0       |
+|     grp_fu_1429_p2                                 | -   |        | add_ln567          | add  | fabric | 0       |
+|     N_1_fu_3237_p2                                 | -   |        | N_1                | add  | fabric | 0       |
+|     mul_32s_32s_32_1_1_U98                         | 3   |        | mul764             | mul  | auto   | 0       |
+|     add_ln570_fu_3270_p2                           | -   |        | add_ln570          | add  | fabric | 0       |
+|     add_ln570_1_fu_3280_p2                         | -   |        | add_ln570_1        | add  | fabric | 0       |
+|     add_ln579_fu_3295_p2                           | -   |        | add_ln579          | add  | fabric | 0       |
+|    + tx_ddr_Pipeline_VITIS_LOOP_471_1              | 0   |        |                    |      |        |         |
+|      add_ln471_fu_75_p2                            | -   |        | add_ln471          | add  | fabric | 0       |
+|    + tx_ddr_Pipeline_tx_2_log_ddr                  | 0   |        |                    |      |        |         |
+|      add_ln512_fu_113_p2                           | -   |        | add_ln512          | add  | fabric | 0       |
+|    + tx_ddr_Pipeline_VITIS_LOOP_531_2              | 0   |        |                    |      |        |         |
+|      add_ln531_fu_75_p2                            | -   |        | add_ln531          | add  | fabric | 0       |
+|    + tx_ddr_Pipeline_tx_2_tap_ddr                  | 0   |        |                    |      |        |         |
+|      add_ln570_fu_113_p2                           | -   |        | add_ln570          | add  | fabric | 0       |
++----------------------------------------------------+-----+--------+--------------------+------+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++--------------------------------------+------+------+--------+-------------------------------+---------+------+---------+
+| Name                                 | BRAM | URAM | Pragma | Variable                      | Storage | Impl | Latency |
++--------------------------------------+------+------+--------+-------------------------------+---------+------+---------+
+| + mac_logger                         | 4    | 0    |        |                               |         |      |         |
+|  + dataflow_in_loop_VITIS_LOOP_697_1 | 4    | 0    |        |                               |         |      |         |
+|    log_all_mask_c_U                  | -    | -    |        | log_all_mask_c                | fifo    | srl  | 0       |
+|    unicast_vlan109_macaddr_msb_c_U   | -    | -    |        | unicast_vlan109_macaddr_msb_c | fifo    | srl  | 0       |
+|    unicast_vlan109_macaddr_lsb_c_U   | -    | -    |        | unicast_vlan109_macaddr_lsb_c | fifo    | srl  | 0       |
+|    unicast_vlan108_macaddr_msb_c_U   | -    | -    |        | unicast_vlan108_macaddr_msb_c | fifo    | srl  | 0       |
+|    unicast_vlan108_macaddr_lsb_c_U   | -    | -    |        | unicast_vlan108_macaddr_lsb_c | fifo    | srl  | 0       |
+|    unicast_vlan107_macaddr_msb_c_U   | -    | -    |        | unicast_vlan107_macaddr_msb_c | fifo    | srl  | 0       |
+|    unicast_vlan107_macaddr_lsb_c_U   | -    | -    |        | unicast_vlan107_macaddr_lsb_c | fifo    | srl  | 0       |
+|    unicast_vlan106_macaddr_msb_c_U   | -    | -    |        | unicast_vlan106_macaddr_msb_c | fifo    | srl  | 0       |
+|    unicast_vlan106_macaddr_lsb_c_U   | -    | -    |        | unicast_vlan106_macaddr_lsb_c | fifo    | srl  | 0       |
+|    unicast_vlan105_macaddr_msb_c_U   | -    | -    |        | unicast_vlan105_macaddr_msb_c | fifo    | srl  | 0       |
+|    unicast_vlan105_macaddr_lsb_c_U   | -    | -    |        | unicast_vlan105_macaddr_lsb_c | fifo    | srl  | 0       |
+|    unicast_vlan104_macaddr_msb_c_U   | -    | -    |        | unicast_vlan104_macaddr_msb_c | fifo    | srl  | 0       |
+|    unicast_vlan104_macaddr_lsb_c_U   | -    | -    |        | unicast_vlan104_macaddr_lsb_c | fifo    | srl  | 0       |
+|    unicast_vlan103_macaddr_msb_c_U   | -    | -    |        | unicast_vlan103_macaddr_msb_c | fifo    | srl  | 0       |
+|    unicast_vlan103_macaddr_lsb_c_U   | -    | -    |        | unicast_vlan103_macaddr_lsb_c | fifo    | srl  | 0       |
+|    unicast_vlan102_macaddr_msb_c_U   | -    | -    |        | unicast_vlan102_macaddr_msb_c | fifo    | srl  | 0       |
+|    unicast_vlan102_macaddr_lsb_c_U   | -    | -    |        | unicast_vlan102_macaddr_lsb_c | fifo    | srl  | 0       |
+|    unicast_vlan101_macaddr_msb_c_U   | -    | -    |        | unicast_vlan101_macaddr_msb_c | fifo    | srl  | 0       |
+|    unicast_vlan101_macaddr_lsb_c_U   | -    | -    |        | unicast_vlan101_macaddr_lsb_c | fifo    | srl  | 0       |
+|    unicast_vlan100_macaddr_msb_c_U   | -    | -    |        | unicast_vlan100_macaddr_msb_c | fifo    | srl  | 0       |
+|    unicast_vlan100_macaddr_lsb_c_U   | -    | -    |        | unicast_vlan100_macaddr_lsb_c | fifo    | srl  | 0       |
+|    unicast_filter_enable_c_U         | -    | -    |        | unicast_filter_enable_c       | fifo    | srl  | 0       |
+|    multicast_recv_enable_c_U         | -    | -    |        | multicast_recv_enable_c       | fifo    | srl  | 0       |
+|    logger_vlan_enable_mask_c_U       | -    | -    |        | logger_vlan_enable_mask_c     | fifo    | srl  | 0       |
+|    log_header_U                      | -    | -    |        | log_header                    | ram_1p  | auto | 1       |
+|    tap_header_U                      | -    | -    |        | tap_header                    | ram_1p  | auto | 1       |
+|    data_buf3_U                       | 2    | -    |        | data_buf3                     | ram_t2p | auto | 1       |
+|   + rx_fifo                          | 0    | 0    |        |                               |         |      |         |
+|     tmp_buf_U                        | -    | -    |        | tmp_buf                       | ram_1p  | auto | 1       |
+|   + tx_ddr                           | 0    | 0    |        |                               |         |      |         |
+|     log_header_U                     | -    | -    |        | log_header                    | ram_s2p | auto | 1       |
+|     tap_header_U                     | -    | -    |        | tap_header                    | ram_s2p | auto | 1       |
++--------------------------------------+------+------+--------+-------------------------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+
+| Type           | Options                                                                                                                                                                                          | Location                                                      |
++----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+
+| pipeline       |                                                                                                                                                                                                  | mac_logger.cpp:29 in rx_ringbuffer_header                     |
+| pipeline       |                                                                                                                                                                                                  | mac_logger.cpp:33 in rx_ringbuffer_header                     |
+| inline         | off                                                                                                                                                                                              | mac_logger.cpp:48 in rx_fifo                                  |
+| pipeline       |                                                                                                                                                                                                  | mac_logger.cpp:92 in rx_fifo                                  |
+| inline         | off                                                                                                                                                                                              | mac_logger.cpp:189 in tx_ddr                                  |
+| reset          | variable = counter_vlan100                                                                                                                                                                       | mac_logger.cpp:192 in tx_ddr                                  |
+| reset          | variable = counter_vlan101                                                                                                                                                                       | mac_logger.cpp:194 in tx_ddr                                  |
+| reset          | variable = counter_vlan102                                                                                                                                                                       | mac_logger.cpp:196 in tx_ddr                                  |
+| reset          | variable = counter_vlan103                                                                                                                                                                       | mac_logger.cpp:198 in tx_ddr                                  |
+| reset          | variable = counter_vlan104                                                                                                                                                                       | mac_logger.cpp:200 in tx_ddr                                  |
+| reset          | variable = counter_vlan105                                                                                                                                                                       | mac_logger.cpp:202 in tx_ddr                                  |
+| reset          | variable = counter_vlan106                                                                                                                                                                       | mac_logger.cpp:204 in tx_ddr                                  |
+| reset          | variable = counter_vlan107                                                                                                                                                                       | mac_logger.cpp:206 in tx_ddr                                  |
+| reset          | variable = counter_vlan108                                                                                                                                                                       | mac_logger.cpp:208 in tx_ddr                                  |
+| reset          | variable = counter_vlan109                                                                                                                                                                       | mac_logger.cpp:210 in tx_ddr                                  |
+| reset          | variable = counter_droped                                                                                                                                                                        | mac_logger.cpp:212 in tx_ddr                                  |
+| reset          | variable=last_log_tx_index                                                                                                                                                                       | mac_logger.cpp:215 in tx_ddr, last_log_tx_index               |
+| reset          | variable=last_tap_tx_index                                                                                                                                                                       | mac_logger.cpp:217 in tx_ddr, last_tap_tx_index               |
+| pipeline       |                                                                                                                                                                                                  | mac_logger.cpp:472 in tx_ddr                                  |
+| pipeline       | II=1                                                                                                                                                                                             | mac_logger.cpp:513 in tx_ddr                                  |
+| loop_tripcount | min=3 max=420 avg=160                                                                                                                                                                            | mac_logger.cpp:514 in tx_ddr                                  |
+| pipeline       |                                                                                                                                                                                                  | mac_logger.cpp:532 in tx_ddr                                  |
+| pipeline       |                                                                                                                                                                                                  | mac_logger.cpp:571 in tx_ddr                                  |
+| loop_tripcount | min=3 max=440 avg=160                                                                                                                                                                            | mac_logger.cpp:572 in tx_ddr                                  |
+| interface      | m_axi depth=1024*5 port=fifo offset=slave bundle=mac_fifo                                                                                                                                        | mac_logger.cpp:630 in mac_logger, fifo                        |
+| interface      | s_axilite port=fifo bundle=axilites                                                                                                                                                              | mac_logger.cpp:631 in mac_logger, fifo                        |
+| interface      | mode=m_axi bundle=fifo_axi_full depth=1028 max_read_burst_length=16 max_write_burst_length=16 num_read_outstanding=16 num_write_outstanding=16 port=fifo_axi_full offset=slave                   | mac_logger.cpp:633 in mac_logger, fifo_axi_full               |
+| interface      | s_axilite port=fifo_axi_full bundle=axilites offset=0x160                                                                                                                                        | mac_logger.cpp:634 in mac_logger, fifo_axi_full               |
+| interface      | m_axi depth=2048*200/4 port=log_ddr name=ddr offset=slave bundle=ps num_read_outstanding=16 num_write_outstanding=16 max_read_burst_length=16 max_write_burst_length=64 max_widen_bitwidth=64    | mac_logger.cpp:639 in mac_logger, log_ddr                     |
+| interface      | s_axilite port=log_ddr bundle=axilites name=ddr                                                                                                                                                  | mac_logger.cpp:640 in mac_logger, log_ddr                     |
+| interface      | m_axi depth=2048*200/4 port=tap_ddr name=driver offset=slave bundle=ps num_read_outstanding=16 num_write_outstanding=16 max_read_burst_length=16 max_write_burst_length=64 max_widen_bitwidth=64 | mac_logger.cpp:641 in mac_logger, tap_ddr                     |
+| interface      | s_axilite port=tap_ddr bundle=axilites name=driver offset=0x150                                                                                                                                  | mac_logger.cpp:642 in mac_logger, tap_ddr                     |
+| interface      | mode=s_axilite port=status offset=0x28 register bundle=axilites                                                                                                                                  | mac_logger.cpp:644 in mac_logger, status                      |
+| interface      | mode=s_axilite port=writeStatus offset=0x30 register bundle=axilites                                                                                                                             | mac_logger.cpp:645 in mac_logger, writeStatus                 |
+| interface      | mode=s_axilite port=logger_vlan_enable_mask offset=0x38 bundle=axilites                                                                                                                          | mac_logger.cpp:647 in mac_logger, logger_vlan_enable_mask     |
+| interface      | s_axilite register port=vlan100_received offset=0x40 bundle=axilites                                                                                                                             | mac_logger.cpp:649 in mac_logger, vlan100_received            |
+| interface      | s_axilite register port=vlan101_received offset=0x48 bundle=axilites                                                                                                                             | mac_logger.cpp:650 in mac_logger, vlan101_received            |
+| interface      | s_axilite register port=vlan102_received offset=0x50 bundle=axilites                                                                                                                             | mac_logger.cpp:651 in mac_logger, vlan102_received            |
+| interface      | s_axilite register port=vlan103_received offset=0x58 bundle=axilites                                                                                                                             | mac_logger.cpp:652 in mac_logger, vlan103_received            |
+| interface      | s_axilite register port=vlan104_received offset=0x60 bundle=axilites                                                                                                                             | mac_logger.cpp:653 in mac_logger, vlan104_received            |
+| interface      | s_axilite register port=vlan105_received offset=0x68 bundle=axilites                                                                                                                             | mac_logger.cpp:654 in mac_logger, vlan105_received            |
+| interface      | s_axilite register port=vlan106_received offset=0x70 bundle=axilites                                                                                                                             | mac_logger.cpp:655 in mac_logger, vlan106_received            |
+| interface      | s_axilite register port=vlan107_received offset=0x78 bundle=axilites                                                                                                                             | mac_logger.cpp:656 in mac_logger, vlan107_received            |
+| interface      | s_axilite register port=vlan108_received offset=0x80 bundle=axilites                                                                                                                             | mac_logger.cpp:657 in mac_logger, vlan108_received            |
+| interface      | s_axilite register port=vlan109_received offset=0x88 bundle=axilites                                                                                                                             | mac_logger.cpp:658 in mac_logger, vlan109_received            |
+| interface      | s_axilite register port=droped offset=0x90 bundle=axilites                                                                                                                                       | mac_logger.cpp:659 in mac_logger, droped                      |
+| interface      | s_axilite port=multicast_recv_enable offset=0x98 bundle=axilites                                                                                                                                 | mac_logger.cpp:661 in mac_logger, multicast_recv_enable       |
+| interface      | s_axilite port=unicast_filter_enable offset=0xa0 bundle=axilites                                                                                                                                 | mac_logger.cpp:662 in mac_logger, unicast_filter_enable       |
+| interface      | s_axilite port=unicast_vlan100_macaddr_lsb offset=0xa8 bundle=axilites                                                                                                                           | mac_logger.cpp:663 in mac_logger, unicast_vlan100_macaddr_lsb |
+| interface      | s_axilite port=unicast_vlan100_macaddr_msb offset=0xb0 bundle=axilites                                                                                                                           | mac_logger.cpp:664 in mac_logger, unicast_vlan100_macaddr_msb |
+| interface      | s_axilite port=unicast_vlan101_macaddr_lsb offset=0xb8 bundle=axilites                                                                                                                           | mac_logger.cpp:665 in mac_logger, unicast_vlan101_macaddr_lsb |
+| interface      | s_axilite port=unicast_vlan101_macaddr_msb offset=0xc0 bundle=axilites                                                                                                                           | mac_logger.cpp:666 in mac_logger, unicast_vlan101_macaddr_msb |
+| interface      | s_axilite port=unicast_vlan102_macaddr_lsb offset=0xc8 bundle=axilites                                                                                                                           | mac_logger.cpp:667 in mac_logger, unicast_vlan102_macaddr_lsb |
+| interface      | s_axilite port=unicast_vlan102_macaddr_msb offset=0xd0 bundle=axilites                                                                                                                           | mac_logger.cpp:668 in mac_logger, unicast_vlan102_macaddr_msb |
+| interface      | s_axilite port=unicast_vlan103_macaddr_lsb offset=0xd8 bundle=axilites                                                                                                                           | mac_logger.cpp:669 in mac_logger, unicast_vlan103_macaddr_lsb |
+| interface      | s_axilite port=unicast_vlan103_macaddr_msb offset=0xe0 bundle=axilites                                                                                                                           | mac_logger.cpp:670 in mac_logger, unicast_vlan103_macaddr_msb |
+| interface      | s_axilite port=unicast_vlan104_macaddr_lsb offset=0xe8 bundle=axilites                                                                                                                           | mac_logger.cpp:671 in mac_logger, unicast_vlan104_macaddr_lsb |
+| interface      | s_axilite port=unicast_vlan104_macaddr_msb offset=0xf0 bundle=axilites                                                                                                                           | mac_logger.cpp:672 in mac_logger, unicast_vlan104_macaddr_msb |
+| interface      | s_axilite port=unicast_vlan105_macaddr_lsb offset=0xf8 bundle=axilites                                                                                                                           | mac_logger.cpp:673 in mac_logger, unicast_vlan105_macaddr_lsb |
+| interface      | s_axilite port=unicast_vlan105_macaddr_msb offset=0x100 bundle=axilites                                                                                                                          | mac_logger.cpp:674 in mac_logger, unicast_vlan105_macaddr_msb |
+| interface      | s_axilite port=unicast_vlan106_macaddr_lsb offset=0x108 bundle=axilites                                                                                                                          | mac_logger.cpp:675 in mac_logger, unicast_vlan106_macaddr_lsb |
+| interface      | s_axilite port=unicast_vlan106_macaddr_msb offset=0x110 bundle=axilites                                                                                                                          | mac_logger.cpp:676 in mac_logger, unicast_vlan106_macaddr_msb |
+| interface      | s_axilite port=unicast_vlan107_macaddr_lsb offset=0x118 bundle=axilites                                                                                                                          | mac_logger.cpp:677 in mac_logger, unicast_vlan107_macaddr_lsb |
+| interface      | s_axilite port=unicast_vlan107_macaddr_msb offset=0x120 bundle=axilites                                                                                                                          | mac_logger.cpp:678 in mac_logger, unicast_vlan107_macaddr_msb |
+| interface      | s_axilite port=unicast_vlan108_macaddr_lsb offset=0x128 bundle=axilites                                                                                                                          | mac_logger.cpp:679 in mac_logger, unicast_vlan108_macaddr_lsb |
+| interface      | s_axilite port=unicast_vlan108_macaddr_msb offset=0x130 bundle=axilites                                                                                                                          | mac_logger.cpp:680 in mac_logger, unicast_vlan108_macaddr_msb |
+| interface      | s_axilite port=unicast_vlan109_macaddr_lsb offset=0x138 bundle=axilites                                                                                                                          | mac_logger.cpp:681 in mac_logger, unicast_vlan109_macaddr_lsb |
+| interface      | s_axilite port=unicast_vlan109_macaddr_msb offset=0x140 bundle=axilites                                                                                                                          | mac_logger.cpp:682 in mac_logger, unicast_vlan109_macaddr_msb |
+| interface      | s_axilite port=log_all_mask offset=0x148 bundle=axilites                                                                                                                                         | mac_logger.cpp:683 in mac_logger, log_all_mask                |
+| interface      | s_axilite port=return bundle=axilites                                                                                                                                                            | mac_logger.cpp:687 in mac_logger, return                      |
+| interface      | mode=ap_ctrl_chain port=return                                                                                                                                                                   | mac_logger.cpp:688 in mac_logger, return                      |
+| dataflow       |                                                                                                                                                                                                  | mac_logger.cpp:698 in mac_logger                              |
++----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+
+
+

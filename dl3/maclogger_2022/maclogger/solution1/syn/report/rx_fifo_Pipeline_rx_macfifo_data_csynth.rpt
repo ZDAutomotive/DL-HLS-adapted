@@ -1,0 +1,221 @@
+
+
+================================================================
+== Vitis HLS Report for 'rx_fifo_Pipeline_rx_macfifo_data'
+================================================================
+* Date:           Thu Nov 10 17:24:53 2022
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        maclogger
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu5ev-sfvc784-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- rx_macfifo_data  |        ?|        ?|        25|         16|          1|     ?|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|     298|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|     234|    -|
+|Register         |        -|     -|     160|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     160|     532|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      288|  1248|  234240|  117120|   64|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name           | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln100_fu_292_p2                |         +|   0|  0|  35|          28|           1|
+    |arrayidx94_sum1_10_fu_410_p2       |         +|   0|  0|  16|           9|           4|
+    |arrayidx94_sum1_11_fu_420_p2       |         +|   0|  0|  16|           9|           4|
+    |arrayidx94_sum1_12_fu_430_p2       |         +|   0|  0|  16|           9|           4|
+    |arrayidx94_sum1_13_fu_440_p2       |         +|   0|  0|  16|           9|           4|
+    |arrayidx94_sum1_14_fu_450_p2       |         +|   0|  0|  16|           9|           4|
+    |arrayidx94_sum1_15_fu_460_p2       |         +|   0|  0|  16|           9|           4|
+    |arrayidx94_sum1_1_fu_320_p2        |         +|   0|  0|  16|           9|           1|
+    |arrayidx94_sum1_2_fu_330_p2        |         +|   0|  0|  16|           9|           2|
+    |arrayidx94_sum1_3_fu_340_p2        |         +|   0|  0|  16|           9|           2|
+    |arrayidx94_sum1_4_fu_350_p2        |         +|   0|  0|  16|           9|           3|
+    |arrayidx94_sum1_5_fu_360_p2        |         +|   0|  0|  16|           9|           3|
+    |arrayidx94_sum1_6_fu_370_p2        |         +|   0|  0|  16|           9|           3|
+    |arrayidx94_sum1_7_fu_380_p2        |         +|   0|  0|  16|           9|           3|
+    |arrayidx94_sum1_9_fu_400_p2        |         +|   0|  0|  16|           9|           4|
+    |ap_block_pp0_stage0_11001          |       and|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage10_11001         |       and|   0|  0|   2|           1|           1|
+    |ap_block_state10_pp0_stage9_iter0  |       and|   0|  0|   2|           1|           1|
+    |ap_block_state2_io                 |       and|   0|  0|   2|           1|           1|
+    |icmp_ln100_fu_286_p2               |      icmp|   0|  0|  18|          28|          28|
+    |ap_block_pp0_stage1_11001          |        or|   0|  0|   2|           1|           1|
+    |arrayidx94_sum1_85_fu_390_p2       |        or|   0|  0|   9|           9|           4|
+    |ap_enable_pp0                      |       xor|   0|  0|   2|           1|           2|
+    +-----------------------------------+----------+----+---+----+------------+------------+
+    |Total                              |          |   0|  0| 298|         197|          85|
+    +-----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------+----+-----------+-----+-----------+
+    |             Name            | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                    |  81|         17|    1|         17|
+    |ap_done_int                  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter0      |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter0_reg  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1      |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_6         |   9|          2|   28|         56|
+    |data_buf_address0            |  81|         17|    9|        153|
+    |fifo_axi_full_blk_n_AR       |   9|          2|    1|          2|
+    |fifo_axi_full_blk_n_R        |   9|          2|    1|          2|
+    |i_fu_88                      |   9|          2|   28|         56|
+    +-----------------------------+----+-----------+-----+-----------+
+    |Total                        | 234|         50|   72|        294|
+    +-----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------+----+----+-----+-----------+
+    |             Name            | FF | LUT| Bits| Const Bits|
+    +-----------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                    |  16|   0|   16|          0|
+    |ap_done_reg                  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0_reg  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1      |   1|   0|    1|          0|
+    |fifo_axi_full_addr_reg_482   |  64|   0|   64|          0|
+    |i_fu_88                      |  28|   0|   28|          0|
+    |icmp_ln100_reg_488           |   1|   0|    1|          0|
+    |or_ln4_reg_497               |   8|   0|    9|          1|
+    |reg_255                      |  32|   0|   32|          0|
+    |sext_ln100_cast_reg_477      |   3|   0|    3|          0|
+    |trunc_ln101_reg_492          |   5|   0|    5|          0|
+    +-----------------------------+----+----+-----+-----------+
+    |Total                        | 160|   0|  161|          1|
+    +-----------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------+-----+-----+------------+----------------------------------+--------------+
+|           RTL Ports          | Dir | Bits|  Protocol  |           Source Object          |    C Type    |
++------------------------------+-----+-----+------------+----------------------------------+--------------+
+|ap_clk                        |   in|    1|  ap_ctrl_hs|  rx_fifo_Pipeline_rx_macfifo_data|  return value|
+|ap_rst                        |   in|    1|  ap_ctrl_hs|  rx_fifo_Pipeline_rx_macfifo_data|  return value|
+|ap_start                      |   in|    1|  ap_ctrl_hs|  rx_fifo_Pipeline_rx_macfifo_data|  return value|
+|ap_done                       |  out|    1|  ap_ctrl_hs|  rx_fifo_Pipeline_rx_macfifo_data|  return value|
+|ap_idle                       |  out|    1|  ap_ctrl_hs|  rx_fifo_Pipeline_rx_macfifo_data|  return value|
+|ap_ready                      |  out|    1|  ap_ctrl_hs|  rx_fifo_Pipeline_rx_macfifo_data|  return value|
+|m_axi_fifo_axi_full_AWVALID   |  out|    1|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWREADY   |   in|    1|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWADDR    |  out|   64|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWID      |  out|    1|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWLEN     |  out|   32|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWSIZE    |  out|    3|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWBURST   |  out|    2|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWLOCK    |  out|    2|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWCACHE   |  out|    4|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWPROT    |  out|    3|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWQOS     |  out|    4|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWREGION  |  out|    4|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWUSER    |  out|    1|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_WVALID    |  out|    1|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_WREADY    |   in|    1|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_WDATA     |  out|   32|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_WSTRB     |  out|    4|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_WLAST     |  out|    1|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_WID       |  out|    1|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_WUSER     |  out|    1|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARVALID   |  out|    1|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARREADY   |   in|    1|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARADDR    |  out|   64|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARID      |  out|    1|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARLEN     |  out|   32|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARSIZE    |  out|    3|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARBURST   |  out|    2|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARLOCK    |  out|    2|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARCACHE   |  out|    4|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARPROT    |  out|    3|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARQOS     |  out|    4|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARREGION  |  out|    4|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARUSER    |  out|    1|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_RVALID    |   in|    1|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_RREADY    |  out|    1|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_RDATA     |   in|   32|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_RLAST     |   in|    1|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_RID       |   in|    1|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_RFIFONUM  |   in|    9|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_RUSER     |   in|    1|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_RRESP     |   in|    2|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_BVALID    |   in|    1|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_BREADY    |  out|    1|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_BRESP     |   in|    2|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_BID       |   in|    1|       m_axi|                     fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_BUSER     |   in|    1|       m_axi|                     fifo_axi_full|       pointer|
+|sext_ln73                     |   in|   62|     ap_none|                         sext_ln73|        scalar|
+|sext_ln97                     |   in|    6|     ap_none|                         sext_ln97|        scalar|
+|sext_ln100                    |   in|    2|     ap_none|                        sext_ln100|        scalar|
+|data_buf_address0             |  out|    9|   ap_memory|                          data_buf|         array|
+|data_buf_ce0                  |  out|    1|   ap_memory|                          data_buf|         array|
+|data_buf_we0                  |  out|    1|   ap_memory|                          data_buf|         array|
+|data_buf_d0                   |  out|   32|   ap_memory|                          data_buf|         array|
++------------------------------+-----+-----+------------+----------------------------------+--------------+
+
