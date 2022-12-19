@@ -1,0 +1,554 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'dataflow_in_loop_VITIS_LOOP_1263_1'" level="0">
+<item name = "Date">Tue Nov 15 12:03:51 2022
+</item>
+<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Project">maclogger</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu5ev-sfvc784-2-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.977 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="entry_proc_U0">entry_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="rx_ringbuffer_header_U0">rx_ringbuffer_header, 37, 37, 0.370 us, 0.370 us, 37, 37, no</column>
+<column name="rx_fifo_U0">rx_fifo, ?, ?, ?, ?, ?, ?, no</column>
+<column name="tx_ddr_U0">tx_ddr, 2, 987, 20.000 ns, 9.870 us, 2, 987, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 36, -</column>
+<column name="FIFO">-, -, 6534, 4422, -</column>
+<column name="Instance">0, 6, 7609, 11097, 0</column>
+<column name="Memory">4, -, 64, 14, 0</column>
+<column name="Multiplexer">-, -, -, 63, -</column>
+<column name="Register">-, -, 7, -, -</column>
+<specialColumn name="Available">288, 1248, 234240, 117120, 64</specialColumn>
+<specialColumn name="Utilization (%)">1, ~0, 6, 13, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="entry_proc_U0">entry_proc, 0, 0, 2, 587, 0</column>
+<column name="rx_fifo_U0">rx_fifo, 0, 0, 857, 2005, 0</column>
+<column name="rx_ringbuffer_header_U0">rx_ringbuffer_header, 0, 0, 367, 479, 0</column>
+<column name="tx_ddr_U0">tx_ddr, 0, 6, 6383, 8026, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="data_buf3_U">dataflow_in_loop_VITIS_LOOP_1263_1_data_buf3_RAM_AUTO_1R1W, 4, 0, 0, 0, 512, 32, 1, 16384</column>
+<column name="log_header_U">dataflow_in_loop_VITIS_LOOP_1263_1_log_header_RAM_AUTO_1R1W, 0, 32, 7, 0, 7, 32, 1, 224</column>
+<column name="tap_header_U">dataflow_in_loop_VITIS_LOOP_1263_1_log_header_RAM_AUTO_1R1W, 0, 32, 7, 0, 7, 32, 1, 224</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+<column name="ddr_c_channel_U">0, 99, 0, -, 2, 64, 128</column>
+<column name="driver_c_channel_U">0, 99, 0, -, 2, 64, 128</column>
+<column name="log_all_mask_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="logger_vlan_enable_mask_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="multicast_recv_enable_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_filter_enable_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan100_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan100_macaddr_msb_c_U">0, 99, 0, -, 3, 16, 48</column>
+<column name="unicast_vlan101_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan101_macaddr_msb_c_U">0, 99, 0, -, 3, 16, 48</column>
+<column name="unicast_vlan102_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan102_macaddr_msb_c_U">0, 99, 0, -, 3, 16, 48</column>
+<column name="unicast_vlan103_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan103_macaddr_msb_c_U">0, 99, 0, -, 3, 16, 48</column>
+<column name="unicast_vlan104_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan104_macaddr_msb_c_U">0, 99, 0, -, 3, 16, 48</column>
+<column name="unicast_vlan105_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan105_macaddr_msb_c_U">0, 99, 0, -, 3, 16, 48</column>
+<column name="unicast_vlan106_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan106_macaddr_msb_c_U">0, 99, 0, -, 3, 16, 48</column>
+<column name="unicast_vlan107_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan107_macaddr_msb_c_U">0, 99, 0, -, 3, 16, 48</column>
+<column name="unicast_vlan108_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan108_macaddr_msb_c_U">0, 99, 0, -, 3, 16, 48</column>
+<column name="unicast_vlan109_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan109_macaddr_msb_c_U">0, 99, 0, -, 3, 16, 48</column>
+<column name="unicast_vlan110_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan110_macaddr_msb_c_U">0, 99, 0, -, 3, 16, 48</column>
+<column name="unicast_vlan111_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan111_macaddr_msb_c_U">0, 99, 0, -, 3, 16, 48</column>
+<column name="unicast_vlan112_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan112_macaddr_msb_c_U">0, 99, 0, -, 3, 16, 48</column>
+<column name="unicast_vlan113_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan113_macaddr_msb_c_U">0, 99, 0, -, 3, 16, 48</column>
+<column name="unicast_vlan114_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan114_macaddr_msb_c_U">0, 99, 0, -, 3, 16, 48</column>
+<column name="unicast_vlan115_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan115_macaddr_msb_c_U">0, 99, 0, -, 3, 16, 48</column>
+<column name="unicast_vlan116_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan116_macaddr_msb_c_U">0, 99, 0, -, 3, 16, 48</column>
+<column name="unicast_vlan117_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan117_macaddr_msb_c_U">0, 99, 0, -, 3, 16, 48</column>
+<column name="unicast_vlan118_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan118_macaddr_msb_c_U">0, 99, 0, -, 3, 16, 48</column>
+<column name="unicast_vlan119_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan119_macaddr_msb_c_U">0, 99, 0, -, 3, 16, 48</column>
+<column name="unicast_vlan120_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan120_macaddr_msb_c_U">0, 99, 0, -, 3, 16, 48</column>
+<column name="unicast_vlan121_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan121_macaddr_msb_c_U">0, 99, 0, -, 3, 16, 48</column>
+<column name="unicast_vlan122_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan122_macaddr_msb_c_U">0, 99, 0, -, 3, 16, 48</column>
+<column name="unicast_vlan123_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan123_macaddr_msb_c_U">0, 99, 0, -, 3, 16, 48</column>
+<column name="unicast_vlan124_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan124_macaddr_msb_c_U">0, 99, 0, -, 3, 16, 48</column>
+<column name="unicast_vlan125_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan125_macaddr_msb_c_U">0, 99, 0, -, 3, 16, 48</column>
+<column name="unicast_vlan126_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan126_macaddr_msb_c_U">0, 99, 0, -, 3, 16, 48</column>
+<column name="unicast_vlan127_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan127_macaddr_msb_c_U">0, 99, 0, -, 3, 16, 48</column>
+<column name="unicast_vlan128_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan128_macaddr_msb_c_U">0, 99, 0, -, 3, 16, 48</column>
+<column name="unicast_vlan129_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan129_macaddr_msb_c_U">0, 99, 0, -, 3, 16, 48</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_channel_done_ddr_c_channel">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_driver_c_channel">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_log_header">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_tap_header">and, 0, 0, 2, 1, 1</column>
+<column name="ap_idle">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_ready">and, 0, 0, 2, 1, 1</column>
+<column name="entry_proc_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="rx_fifo_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="rx_ringbuffer_header_U0_ap_continue">and, 0, 0, 2, 1, 1</column>
+<column name="rx_ringbuffer_header_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="tx_ddr_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_ddr_c_channel">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_driver_c_channel">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_log_header">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_tap_header">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_entry_proc_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_rx_fifo_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_rx_ringbuffer_header_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_sync_reg_channel_write_ddr_c_channel">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_driver_c_channel">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_log_header">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_tap_header">9, 2, 1, 2</column>
+<column name="ap_sync_reg_entry_proc_U0_ap_ready">9, 2, 1, 2</column>
+<column name="ap_sync_reg_rx_fifo_U0_ap_ready">9, 2, 1, 2</column>
+<column name="ap_sync_reg_rx_ringbuffer_header_U0_ap_ready">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_sync_reg_channel_write_ddr_c_channel">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_driver_c_channel">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_log_header">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_tap_header">1, 0, 1, 0</column>
+<column name="ap_sync_reg_entry_proc_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_rx_fifo_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_rx_ringbuffer_header_U0_ap_ready">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, dataflow_in_loop_VITIS_LOOP_1263_1, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, dataflow_in_loop_VITIS_LOOP_1263_1, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, dataflow_in_loop_VITIS_LOOP_1263_1, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, dataflow_in_loop_VITIS_LOOP_1263_1, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, dataflow_in_loop_VITIS_LOOP_1263_1, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, dataflow_in_loop_VITIS_LOOP_1263_1, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, dataflow_in_loop_VITIS_LOOP_1263_1, return value</column>
+<column name="m_axi_ps_AWVALID">out, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_AWREADY">in, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_AWADDR">out, 64, m_axi, ps, pointer</column>
+<column name="m_axi_ps_AWID">out, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_AWLEN">out, 32, m_axi, ps, pointer</column>
+<column name="m_axi_ps_AWSIZE">out, 3, m_axi, ps, pointer</column>
+<column name="m_axi_ps_AWBURST">out, 2, m_axi, ps, pointer</column>
+<column name="m_axi_ps_AWLOCK">out, 2, m_axi, ps, pointer</column>
+<column name="m_axi_ps_AWCACHE">out, 4, m_axi, ps, pointer</column>
+<column name="m_axi_ps_AWPROT">out, 3, m_axi, ps, pointer</column>
+<column name="m_axi_ps_AWQOS">out, 4, m_axi, ps, pointer</column>
+<column name="m_axi_ps_AWREGION">out, 4, m_axi, ps, pointer</column>
+<column name="m_axi_ps_AWUSER">out, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_WVALID">out, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_WREADY">in, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_WDATA">out, 32, m_axi, ps, pointer</column>
+<column name="m_axi_ps_WSTRB">out, 4, m_axi, ps, pointer</column>
+<column name="m_axi_ps_WLAST">out, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_WID">out, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_WUSER">out, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_ARVALID">out, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_ARREADY">in, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_ARADDR">out, 64, m_axi, ps, pointer</column>
+<column name="m_axi_ps_ARID">out, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_ARLEN">out, 32, m_axi, ps, pointer</column>
+<column name="m_axi_ps_ARSIZE">out, 3, m_axi, ps, pointer</column>
+<column name="m_axi_ps_ARBURST">out, 2, m_axi, ps, pointer</column>
+<column name="m_axi_ps_ARLOCK">out, 2, m_axi, ps, pointer</column>
+<column name="m_axi_ps_ARCACHE">out, 4, m_axi, ps, pointer</column>
+<column name="m_axi_ps_ARPROT">out, 3, m_axi, ps, pointer</column>
+<column name="m_axi_ps_ARQOS">out, 4, m_axi, ps, pointer</column>
+<column name="m_axi_ps_ARREGION">out, 4, m_axi, ps, pointer</column>
+<column name="m_axi_ps_ARUSER">out, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_RVALID">in, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_RREADY">out, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_RDATA">in, 32, m_axi, ps, pointer</column>
+<column name="m_axi_ps_RLAST">in, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_RID">in, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_RFIFONUM">in, 9, m_axi, ps, pointer</column>
+<column name="m_axi_ps_RUSER">in, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_RRESP">in, 2, m_axi, ps, pointer</column>
+<column name="m_axi_ps_BVALID">in, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_BREADY">out, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_BRESP">in, 2, m_axi, ps, pointer</column>
+<column name="m_axi_ps_BID">in, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_BUSER">in, 1, m_axi, ps, pointer</column>
+<column name="ddr">in, 64, ap_none, ddr, scalar</column>
+<column name="ddr_ap_vld">in, 1, ap_none, ddr, scalar</column>
+<column name="driver">in, 64, ap_none, driver, scalar</column>
+<column name="driver_ap_vld">in, 1, ap_none, driver, scalar</column>
+<column name="m_axi_mac_fifo_AWVALID">out, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_AWREADY">in, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_AWADDR">out, 64, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_AWID">out, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_AWLEN">out, 32, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_AWSIZE">out, 3, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_AWBURST">out, 2, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_AWLOCK">out, 2, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_AWCACHE">out, 4, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_AWPROT">out, 3, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_AWQOS">out, 4, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_AWREGION">out, 4, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_AWUSER">out, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_WVALID">out, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_WREADY">in, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_WDATA">out, 32, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_WSTRB">out, 4, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_WLAST">out, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_WID">out, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_WUSER">out, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_ARVALID">out, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_ARREADY">in, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_ARADDR">out, 64, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_ARID">out, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_ARLEN">out, 32, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_ARSIZE">out, 3, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_ARBURST">out, 2, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_ARLOCK">out, 2, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_ARCACHE">out, 4, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_ARPROT">out, 3, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_ARQOS">out, 4, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_ARREGION">out, 4, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_ARUSER">out, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_RVALID">in, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_RREADY">out, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_RDATA">in, 32, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_RLAST">in, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_RID">in, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_RFIFONUM">in, 9, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_RUSER">in, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_RRESP">in, 2, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_BVALID">in, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_BREADY">out, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_BRESP">in, 2, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_BID">in, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_BUSER">in, 1, m_axi, mac_fifo, pointer</column>
+<column name="fifo">in, 64, ap_none, fifo, scalar</column>
+<column name="fifo_ap_vld">in, 1, ap_none, fifo, scalar</column>
+<column name="m_axi_fifo_axi_full_AWVALID">out, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_AWREADY">in, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_AWADDR">out, 64, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_AWID">out, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_AWLEN">out, 32, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_AWSIZE">out, 3, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_AWBURST">out, 2, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_AWLOCK">out, 2, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_AWCACHE">out, 4, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_AWPROT">out, 3, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_AWQOS">out, 4, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_AWREGION">out, 4, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_AWUSER">out, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_WVALID">out, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_WREADY">in, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_WDATA">out, 32, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_WSTRB">out, 4, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_WLAST">out, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_WID">out, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_WUSER">out, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_ARVALID">out, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_ARREADY">in, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_ARADDR">out, 64, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_ARID">out, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_ARLEN">out, 32, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_ARSIZE">out, 3, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_ARBURST">out, 2, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_ARLOCK">out, 2, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_ARCACHE">out, 4, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_ARPROT">out, 3, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_ARQOS">out, 4, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_ARREGION">out, 4, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_ARUSER">out, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_RVALID">in, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_RREADY">out, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_RDATA">in, 32, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_RLAST">in, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_RID">in, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_RFIFONUM">in, 9, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_RUSER">in, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_RRESP">in, 2, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_BVALID">in, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_BREADY">out, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_BRESP">in, 2, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_BID">in, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_BUSER">in, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="fifo_axi_full_offset">in, 64, ap_none, fifo_axi_full_offset, scalar</column>
+<column name="fifo_axi_full_offset_ap_vld">in, 1, ap_none, fifo_axi_full_offset, scalar</column>
+<column name="timestamp">in, 64, ap_none, timestamp, scalar</column>
+<column name="timestamp_ap_vld">in, 1, ap_none, timestamp, scalar</column>
+<column name="logger_vlan_enable_mask">in, 32, ap_none, logger_vlan_enable_mask, pointer</column>
+<column name="logger_vlan_enable_mask_ap_vld">in, 1, ap_none, logger_vlan_enable_mask, pointer</column>
+<column name="multicast_recv_enable">in, 32, ap_none, multicast_recv_enable, pointer</column>
+<column name="multicast_recv_enable_ap_vld">in, 1, ap_none, multicast_recv_enable, pointer</column>
+<column name="unicast_filter_enable">in, 32, ap_none, unicast_filter_enable, pointer</column>
+<column name="unicast_filter_enable_ap_vld">in, 1, ap_none, unicast_filter_enable, pointer</column>
+<column name="unicast_vlan100_macaddr_lsb">in, 32, ap_none, unicast_vlan100_macaddr_lsb, pointer</column>
+<column name="unicast_vlan100_macaddr_lsb_ap_vld">in, 1, ap_none, unicast_vlan100_macaddr_lsb, pointer</column>
+<column name="unicast_vlan100_macaddr_msb">in, 32, ap_none, unicast_vlan100_macaddr_msb, pointer</column>
+<column name="unicast_vlan100_macaddr_msb_ap_vld">in, 1, ap_none, unicast_vlan100_macaddr_msb, pointer</column>
+<column name="unicast_vlan101_macaddr_lsb">in, 32, ap_none, unicast_vlan101_macaddr_lsb, pointer</column>
+<column name="unicast_vlan101_macaddr_lsb_ap_vld">in, 1, ap_none, unicast_vlan101_macaddr_lsb, pointer</column>
+<column name="unicast_vlan101_macaddr_msb">in, 32, ap_none, unicast_vlan101_macaddr_msb, pointer</column>
+<column name="unicast_vlan101_macaddr_msb_ap_vld">in, 1, ap_none, unicast_vlan101_macaddr_msb, pointer</column>
+<column name="unicast_vlan102_macaddr_lsb">in, 32, ap_none, unicast_vlan102_macaddr_lsb, pointer</column>
+<column name="unicast_vlan102_macaddr_lsb_ap_vld">in, 1, ap_none, unicast_vlan102_macaddr_lsb, pointer</column>
+<column name="unicast_vlan102_macaddr_msb">in, 32, ap_none, unicast_vlan102_macaddr_msb, pointer</column>
+<column name="unicast_vlan102_macaddr_msb_ap_vld">in, 1, ap_none, unicast_vlan102_macaddr_msb, pointer</column>
+<column name="unicast_vlan103_macaddr_lsb">in, 32, ap_none, unicast_vlan103_macaddr_lsb, pointer</column>
+<column name="unicast_vlan103_macaddr_lsb_ap_vld">in, 1, ap_none, unicast_vlan103_macaddr_lsb, pointer</column>
+<column name="unicast_vlan103_macaddr_msb">in, 32, ap_none, unicast_vlan103_macaddr_msb, pointer</column>
+<column name="unicast_vlan103_macaddr_msb_ap_vld">in, 1, ap_none, unicast_vlan103_macaddr_msb, pointer</column>
+<column name="unicast_vlan104_macaddr_lsb">in, 32, ap_none, unicast_vlan104_macaddr_lsb, pointer</column>
+<column name="unicast_vlan104_macaddr_lsb_ap_vld">in, 1, ap_none, unicast_vlan104_macaddr_lsb, pointer</column>
+<column name="unicast_vlan104_macaddr_msb">in, 32, ap_none, unicast_vlan104_macaddr_msb, pointer</column>
+<column name="unicast_vlan104_macaddr_msb_ap_vld">in, 1, ap_none, unicast_vlan104_macaddr_msb, pointer</column>
+<column name="unicast_vlan105_macaddr_lsb">in, 32, ap_none, unicast_vlan105_macaddr_lsb, pointer</column>
+<column name="unicast_vlan105_macaddr_lsb_ap_vld">in, 1, ap_none, unicast_vlan105_macaddr_lsb, pointer</column>
+<column name="unicast_vlan105_macaddr_msb">in, 32, ap_none, unicast_vlan105_macaddr_msb, pointer</column>
+<column name="unicast_vlan105_macaddr_msb_ap_vld">in, 1, ap_none, unicast_vlan105_macaddr_msb, pointer</column>
+<column name="unicast_vlan106_macaddr_lsb">in, 32, ap_none, unicast_vlan106_macaddr_lsb, pointer</column>
+<column name="unicast_vlan106_macaddr_lsb_ap_vld">in, 1, ap_none, unicast_vlan106_macaddr_lsb, pointer</column>
+<column name="unicast_vlan106_macaddr_msb">in, 32, ap_none, unicast_vlan106_macaddr_msb, pointer</column>
+<column name="unicast_vlan106_macaddr_msb_ap_vld">in, 1, ap_none, unicast_vlan106_macaddr_msb, pointer</column>
+<column name="unicast_vlan107_macaddr_lsb">in, 32, ap_none, unicast_vlan107_macaddr_lsb, pointer</column>
+<column name="unicast_vlan107_macaddr_lsb_ap_vld">in, 1, ap_none, unicast_vlan107_macaddr_lsb, pointer</column>
+<column name="unicast_vlan107_macaddr_msb">in, 32, ap_none, unicast_vlan107_macaddr_msb, pointer</column>
+<column name="unicast_vlan107_macaddr_msb_ap_vld">in, 1, ap_none, unicast_vlan107_macaddr_msb, pointer</column>
+<column name="unicast_vlan108_macaddr_lsb">in, 32, ap_none, unicast_vlan108_macaddr_lsb, pointer</column>
+<column name="unicast_vlan108_macaddr_lsb_ap_vld">in, 1, ap_none, unicast_vlan108_macaddr_lsb, pointer</column>
+<column name="unicast_vlan108_macaddr_msb">in, 32, ap_none, unicast_vlan108_macaddr_msb, pointer</column>
+<column name="unicast_vlan108_macaddr_msb_ap_vld">in, 1, ap_none, unicast_vlan108_macaddr_msb, pointer</column>
+<column name="unicast_vlan109_macaddr_lsb">in, 32, ap_none, unicast_vlan109_macaddr_lsb, pointer</column>
+<column name="unicast_vlan109_macaddr_lsb_ap_vld">in, 1, ap_none, unicast_vlan109_macaddr_lsb, pointer</column>
+<column name="unicast_vlan109_macaddr_msb">in, 32, ap_none, unicast_vlan109_macaddr_msb, pointer</column>
+<column name="unicast_vlan109_macaddr_msb_ap_vld">in, 1, ap_none, unicast_vlan109_macaddr_msb, pointer</column>
+<column name="unicast_vlan110_macaddr_lsb">in, 32, ap_none, unicast_vlan110_macaddr_lsb, pointer</column>
+<column name="unicast_vlan110_macaddr_lsb_ap_vld">in, 1, ap_none, unicast_vlan110_macaddr_lsb, pointer</column>
+<column name="unicast_vlan110_macaddr_msb">in, 32, ap_none, unicast_vlan110_macaddr_msb, pointer</column>
+<column name="unicast_vlan110_macaddr_msb_ap_vld">in, 1, ap_none, unicast_vlan110_macaddr_msb, pointer</column>
+<column name="unicast_vlan111_macaddr_lsb">in, 32, ap_none, unicast_vlan111_macaddr_lsb, pointer</column>
+<column name="unicast_vlan111_macaddr_lsb_ap_vld">in, 1, ap_none, unicast_vlan111_macaddr_lsb, pointer</column>
+<column name="unicast_vlan111_macaddr_msb">in, 32, ap_none, unicast_vlan111_macaddr_msb, pointer</column>
+<column name="unicast_vlan111_macaddr_msb_ap_vld">in, 1, ap_none, unicast_vlan111_macaddr_msb, pointer</column>
+<column name="unicast_vlan112_macaddr_lsb">in, 32, ap_none, unicast_vlan112_macaddr_lsb, pointer</column>
+<column name="unicast_vlan112_macaddr_lsb_ap_vld">in, 1, ap_none, unicast_vlan112_macaddr_lsb, pointer</column>
+<column name="unicast_vlan112_macaddr_msb">in, 32, ap_none, unicast_vlan112_macaddr_msb, pointer</column>
+<column name="unicast_vlan112_macaddr_msb_ap_vld">in, 1, ap_none, unicast_vlan112_macaddr_msb, pointer</column>
+<column name="unicast_vlan113_macaddr_lsb">in, 32, ap_none, unicast_vlan113_macaddr_lsb, pointer</column>
+<column name="unicast_vlan113_macaddr_lsb_ap_vld">in, 1, ap_none, unicast_vlan113_macaddr_lsb, pointer</column>
+<column name="unicast_vlan113_macaddr_msb">in, 32, ap_none, unicast_vlan113_macaddr_msb, pointer</column>
+<column name="unicast_vlan113_macaddr_msb_ap_vld">in, 1, ap_none, unicast_vlan113_macaddr_msb, pointer</column>
+<column name="unicast_vlan114_macaddr_lsb">in, 32, ap_none, unicast_vlan114_macaddr_lsb, pointer</column>
+<column name="unicast_vlan114_macaddr_lsb_ap_vld">in, 1, ap_none, unicast_vlan114_macaddr_lsb, pointer</column>
+<column name="unicast_vlan114_macaddr_msb">in, 32, ap_none, unicast_vlan114_macaddr_msb, pointer</column>
+<column name="unicast_vlan114_macaddr_msb_ap_vld">in, 1, ap_none, unicast_vlan114_macaddr_msb, pointer</column>
+<column name="unicast_vlan115_macaddr_lsb">in, 32, ap_none, unicast_vlan115_macaddr_lsb, pointer</column>
+<column name="unicast_vlan115_macaddr_lsb_ap_vld">in, 1, ap_none, unicast_vlan115_macaddr_lsb, pointer</column>
+<column name="unicast_vlan115_macaddr_msb">in, 32, ap_none, unicast_vlan115_macaddr_msb, pointer</column>
+<column name="unicast_vlan115_macaddr_msb_ap_vld">in, 1, ap_none, unicast_vlan115_macaddr_msb, pointer</column>
+<column name="unicast_vlan116_macaddr_lsb">in, 32, ap_none, unicast_vlan116_macaddr_lsb, pointer</column>
+<column name="unicast_vlan116_macaddr_lsb_ap_vld">in, 1, ap_none, unicast_vlan116_macaddr_lsb, pointer</column>
+<column name="unicast_vlan116_macaddr_msb">in, 32, ap_none, unicast_vlan116_macaddr_msb, pointer</column>
+<column name="unicast_vlan116_macaddr_msb_ap_vld">in, 1, ap_none, unicast_vlan116_macaddr_msb, pointer</column>
+<column name="unicast_vlan117_macaddr_lsb">in, 32, ap_none, unicast_vlan117_macaddr_lsb, pointer</column>
+<column name="unicast_vlan117_macaddr_lsb_ap_vld">in, 1, ap_none, unicast_vlan117_macaddr_lsb, pointer</column>
+<column name="unicast_vlan117_macaddr_msb">in, 32, ap_none, unicast_vlan117_macaddr_msb, pointer</column>
+<column name="unicast_vlan117_macaddr_msb_ap_vld">in, 1, ap_none, unicast_vlan117_macaddr_msb, pointer</column>
+<column name="unicast_vlan118_macaddr_lsb">in, 32, ap_none, unicast_vlan118_macaddr_lsb, pointer</column>
+<column name="unicast_vlan118_macaddr_lsb_ap_vld">in, 1, ap_none, unicast_vlan118_macaddr_lsb, pointer</column>
+<column name="unicast_vlan118_macaddr_msb">in, 32, ap_none, unicast_vlan118_macaddr_msb, pointer</column>
+<column name="unicast_vlan118_macaddr_msb_ap_vld">in, 1, ap_none, unicast_vlan118_macaddr_msb, pointer</column>
+<column name="unicast_vlan119_macaddr_lsb">in, 32, ap_none, unicast_vlan119_macaddr_lsb, pointer</column>
+<column name="unicast_vlan119_macaddr_lsb_ap_vld">in, 1, ap_none, unicast_vlan119_macaddr_lsb, pointer</column>
+<column name="unicast_vlan119_macaddr_msb">in, 32, ap_none, unicast_vlan119_macaddr_msb, pointer</column>
+<column name="unicast_vlan119_macaddr_msb_ap_vld">in, 1, ap_none, unicast_vlan119_macaddr_msb, pointer</column>
+<column name="unicast_vlan120_macaddr_lsb">in, 32, ap_none, unicast_vlan120_macaddr_lsb, pointer</column>
+<column name="unicast_vlan120_macaddr_lsb_ap_vld">in, 1, ap_none, unicast_vlan120_macaddr_lsb, pointer</column>
+<column name="unicast_vlan120_macaddr_msb">in, 32, ap_none, unicast_vlan120_macaddr_msb, pointer</column>
+<column name="unicast_vlan120_macaddr_msb_ap_vld">in, 1, ap_none, unicast_vlan120_macaddr_msb, pointer</column>
+<column name="unicast_vlan121_macaddr_lsb">in, 32, ap_none, unicast_vlan121_macaddr_lsb, pointer</column>
+<column name="unicast_vlan121_macaddr_lsb_ap_vld">in, 1, ap_none, unicast_vlan121_macaddr_lsb, pointer</column>
+<column name="unicast_vlan121_macaddr_msb">in, 32, ap_none, unicast_vlan121_macaddr_msb, pointer</column>
+<column name="unicast_vlan121_macaddr_msb_ap_vld">in, 1, ap_none, unicast_vlan121_macaddr_msb, pointer</column>
+<column name="unicast_vlan122_macaddr_lsb">in, 32, ap_none, unicast_vlan122_macaddr_lsb, pointer</column>
+<column name="unicast_vlan122_macaddr_lsb_ap_vld">in, 1, ap_none, unicast_vlan122_macaddr_lsb, pointer</column>
+<column name="unicast_vlan122_macaddr_msb">in, 32, ap_none, unicast_vlan122_macaddr_msb, pointer</column>
+<column name="unicast_vlan122_macaddr_msb_ap_vld">in, 1, ap_none, unicast_vlan122_macaddr_msb, pointer</column>
+<column name="unicast_vlan123_macaddr_lsb">in, 32, ap_none, unicast_vlan123_macaddr_lsb, pointer</column>
+<column name="unicast_vlan123_macaddr_lsb_ap_vld">in, 1, ap_none, unicast_vlan123_macaddr_lsb, pointer</column>
+<column name="unicast_vlan123_macaddr_msb">in, 32, ap_none, unicast_vlan123_macaddr_msb, pointer</column>
+<column name="unicast_vlan123_macaddr_msb_ap_vld">in, 1, ap_none, unicast_vlan123_macaddr_msb, pointer</column>
+<column name="unicast_vlan124_macaddr_lsb">in, 32, ap_none, unicast_vlan124_macaddr_lsb, pointer</column>
+<column name="unicast_vlan124_macaddr_lsb_ap_vld">in, 1, ap_none, unicast_vlan124_macaddr_lsb, pointer</column>
+<column name="unicast_vlan124_macaddr_msb">in, 32, ap_none, unicast_vlan124_macaddr_msb, pointer</column>
+<column name="unicast_vlan124_macaddr_msb_ap_vld">in, 1, ap_none, unicast_vlan124_macaddr_msb, pointer</column>
+<column name="unicast_vlan125_macaddr_lsb">in, 32, ap_none, unicast_vlan125_macaddr_lsb, pointer</column>
+<column name="unicast_vlan125_macaddr_lsb_ap_vld">in, 1, ap_none, unicast_vlan125_macaddr_lsb, pointer</column>
+<column name="unicast_vlan125_macaddr_msb">in, 32, ap_none, unicast_vlan125_macaddr_msb, pointer</column>
+<column name="unicast_vlan125_macaddr_msb_ap_vld">in, 1, ap_none, unicast_vlan125_macaddr_msb, pointer</column>
+<column name="unicast_vlan126_macaddr_lsb">in, 32, ap_none, unicast_vlan126_macaddr_lsb, pointer</column>
+<column name="unicast_vlan126_macaddr_lsb_ap_vld">in, 1, ap_none, unicast_vlan126_macaddr_lsb, pointer</column>
+<column name="unicast_vlan126_macaddr_msb">in, 32, ap_none, unicast_vlan126_macaddr_msb, pointer</column>
+<column name="unicast_vlan126_macaddr_msb_ap_vld">in, 1, ap_none, unicast_vlan126_macaddr_msb, pointer</column>
+<column name="unicast_vlan127_macaddr_lsb">in, 32, ap_none, unicast_vlan127_macaddr_lsb, pointer</column>
+<column name="unicast_vlan127_macaddr_lsb_ap_vld">in, 1, ap_none, unicast_vlan127_macaddr_lsb, pointer</column>
+<column name="unicast_vlan127_macaddr_msb">in, 32, ap_none, unicast_vlan127_macaddr_msb, pointer</column>
+<column name="unicast_vlan127_macaddr_msb_ap_vld">in, 1, ap_none, unicast_vlan127_macaddr_msb, pointer</column>
+<column name="unicast_vlan128_macaddr_lsb">in, 32, ap_none, unicast_vlan128_macaddr_lsb, pointer</column>
+<column name="unicast_vlan128_macaddr_lsb_ap_vld">in, 1, ap_none, unicast_vlan128_macaddr_lsb, pointer</column>
+<column name="unicast_vlan128_macaddr_msb">in, 32, ap_none, unicast_vlan128_macaddr_msb, pointer</column>
+<column name="unicast_vlan128_macaddr_msb_ap_vld">in, 1, ap_none, unicast_vlan128_macaddr_msb, pointer</column>
+<column name="unicast_vlan129_macaddr_lsb">in, 32, ap_none, unicast_vlan129_macaddr_lsb, pointer</column>
+<column name="unicast_vlan129_macaddr_lsb_ap_vld">in, 1, ap_none, unicast_vlan129_macaddr_lsb, pointer</column>
+<column name="unicast_vlan129_macaddr_msb">in, 32, ap_none, unicast_vlan129_macaddr_msb, pointer</column>
+<column name="unicast_vlan129_macaddr_msb_ap_vld">in, 1, ap_none, unicast_vlan129_macaddr_msb, pointer</column>
+<column name="log_all_mask">in, 32, ap_none, log_all_mask, pointer</column>
+<column name="log_all_mask_ap_vld">in, 1, ap_none, log_all_mask, pointer</column>
+<column name="vlan100_received">out, 32, ap_vld, vlan100_received, pointer</column>
+<column name="vlan100_received_ap_vld">out, 1, ap_vld, vlan100_received, pointer</column>
+<column name="vlan101_received">out, 32, ap_vld, vlan101_received, pointer</column>
+<column name="vlan101_received_ap_vld">out, 1, ap_vld, vlan101_received, pointer</column>
+<column name="vlan102_received">out, 32, ap_vld, vlan102_received, pointer</column>
+<column name="vlan102_received_ap_vld">out, 1, ap_vld, vlan102_received, pointer</column>
+<column name="vlan103_received">out, 32, ap_vld, vlan103_received, pointer</column>
+<column name="vlan103_received_ap_vld">out, 1, ap_vld, vlan103_received, pointer</column>
+<column name="vlan104_received">out, 32, ap_vld, vlan104_received, pointer</column>
+<column name="vlan104_received_ap_vld">out, 1, ap_vld, vlan104_received, pointer</column>
+<column name="vlan105_received">out, 32, ap_vld, vlan105_received, pointer</column>
+<column name="vlan105_received_ap_vld">out, 1, ap_vld, vlan105_received, pointer</column>
+<column name="vlan106_received">out, 32, ap_vld, vlan106_received, pointer</column>
+<column name="vlan106_received_ap_vld">out, 1, ap_vld, vlan106_received, pointer</column>
+<column name="vlan107_received">out, 32, ap_vld, vlan107_received, pointer</column>
+<column name="vlan107_received_ap_vld">out, 1, ap_vld, vlan107_received, pointer</column>
+<column name="vlan108_received">out, 32, ap_vld, vlan108_received, pointer</column>
+<column name="vlan108_received_ap_vld">out, 1, ap_vld, vlan108_received, pointer</column>
+<column name="vlan109_received">out, 32, ap_vld, vlan109_received, pointer</column>
+<column name="vlan109_received_ap_vld">out, 1, ap_vld, vlan109_received, pointer</column>
+<column name="vlan110_received">out, 32, ap_vld, vlan110_received, pointer</column>
+<column name="vlan110_received_ap_vld">out, 1, ap_vld, vlan110_received, pointer</column>
+<column name="vlan111_received">out, 32, ap_vld, vlan111_received, pointer</column>
+<column name="vlan111_received_ap_vld">out, 1, ap_vld, vlan111_received, pointer</column>
+<column name="vlan112_received">out, 32, ap_vld, vlan112_received, pointer</column>
+<column name="vlan112_received_ap_vld">out, 1, ap_vld, vlan112_received, pointer</column>
+<column name="vlan113_received">out, 32, ap_vld, vlan113_received, pointer</column>
+<column name="vlan113_received_ap_vld">out, 1, ap_vld, vlan113_received, pointer</column>
+<column name="vlan114_received">out, 32, ap_vld, vlan114_received, pointer</column>
+<column name="vlan114_received_ap_vld">out, 1, ap_vld, vlan114_received, pointer</column>
+<column name="vlan115_received">out, 32, ap_vld, vlan115_received, pointer</column>
+<column name="vlan115_received_ap_vld">out, 1, ap_vld, vlan115_received, pointer</column>
+<column name="vlan116_received">out, 32, ap_vld, vlan116_received, pointer</column>
+<column name="vlan116_received_ap_vld">out, 1, ap_vld, vlan116_received, pointer</column>
+<column name="vlan117_received">out, 32, ap_vld, vlan117_received, pointer</column>
+<column name="vlan117_received_ap_vld">out, 1, ap_vld, vlan117_received, pointer</column>
+<column name="vlan118_received">out, 32, ap_vld, vlan118_received, pointer</column>
+<column name="vlan118_received_ap_vld">out, 1, ap_vld, vlan118_received, pointer</column>
+<column name="vlan119_received">out, 32, ap_vld, vlan119_received, pointer</column>
+<column name="vlan119_received_ap_vld">out, 1, ap_vld, vlan119_received, pointer</column>
+<column name="vlan120_received">out, 32, ap_vld, vlan120_received, pointer</column>
+<column name="vlan120_received_ap_vld">out, 1, ap_vld, vlan120_received, pointer</column>
+<column name="vlan121_received">out, 32, ap_vld, vlan121_received, pointer</column>
+<column name="vlan121_received_ap_vld">out, 1, ap_vld, vlan121_received, pointer</column>
+<column name="vlan122_received">out, 32, ap_vld, vlan122_received, pointer</column>
+<column name="vlan122_received_ap_vld">out, 1, ap_vld, vlan122_received, pointer</column>
+<column name="vlan123_received">out, 32, ap_vld, vlan123_received, pointer</column>
+<column name="vlan123_received_ap_vld">out, 1, ap_vld, vlan123_received, pointer</column>
+<column name="vlan124_received">out, 32, ap_vld, vlan124_received, pointer</column>
+<column name="vlan124_received_ap_vld">out, 1, ap_vld, vlan124_received, pointer</column>
+<column name="vlan125_received">out, 32, ap_vld, vlan125_received, pointer</column>
+<column name="vlan125_received_ap_vld">out, 1, ap_vld, vlan125_received, pointer</column>
+<column name="vlan126_received">out, 32, ap_vld, vlan126_received, pointer</column>
+<column name="vlan126_received_ap_vld">out, 1, ap_vld, vlan126_received, pointer</column>
+<column name="vlan127_received">out, 32, ap_vld, vlan127_received, pointer</column>
+<column name="vlan127_received_ap_vld">out, 1, ap_vld, vlan127_received, pointer</column>
+<column name="vlan128_received">out, 32, ap_vld, vlan128_received, pointer</column>
+<column name="vlan128_received_ap_vld">out, 1, ap_vld, vlan128_received, pointer</column>
+<column name="vlan129_received">out, 32, ap_vld, vlan129_received, pointer</column>
+<column name="vlan129_received_ap_vld">out, 1, ap_vld, vlan129_received, pointer</column>
+<column name="droped">out, 32, ap_vld, droped, pointer</column>
+<column name="droped_ap_vld">out, 1, ap_vld, droped, pointer</column>
+</table>
+</item>
+</section>
+</profile>

@@ -1,0 +1,475 @@
+In file included from mac_logger.cpp:1:
+In file included from ./mac_logger.h:5:
+In file included from D:/Vitis_HLS/2022.2/common/technology/autopilot\ap_int.h:12:
+D:/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_ref.h:678:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=and_reduce_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+D:/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_ref.h:692:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=or_reduce_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+D:/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_ref.h:706:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xor_reduce_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+mac_logger.cpp:29:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=rx_ringbuffer_header_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+mac_logger.cpp:33:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=rx_ringbuffer_header_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+mac_logger.cpp:48:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=rx_fifo_XLX_SEP_ PragmaOptions=off_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline off
+        ^
+mac_logger.cpp:92:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=rx_fifo_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+mac_logger.cpp:249:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=off_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline off
+        ^
+mac_logger.cpp:252:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_vlan100_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_vlan100
+        ^
+mac_logger.cpp:254:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_vlan101_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_vlan101
+        ^
+mac_logger.cpp:256:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_vlan102_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_vlan102
+        ^
+mac_logger.cpp:258:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_vlan103_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_vlan103
+        ^
+mac_logger.cpp:260:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_vlan104_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_vlan104
+        ^
+mac_logger.cpp:262:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_vlan105_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_vlan105
+        ^
+mac_logger.cpp:264:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_vlan106_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_vlan106
+        ^
+mac_logger.cpp:266:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_vlan107_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_vlan107
+        ^
+mac_logger.cpp:268:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_vlan108_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_vlan108
+        ^
+mac_logger.cpp:270:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_vlan109_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_vlan109
+        ^
+mac_logger.cpp:273:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_vlan110_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_vlan110
+        ^
+mac_logger.cpp:275:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_vlan111_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_vlan111
+        ^
+mac_logger.cpp:277:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_vlan112_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_vlan112
+        ^
+mac_logger.cpp:279:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_vlan113_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_vlan113
+        ^
+mac_logger.cpp:281:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_vlan114_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_vlan114
+        ^
+mac_logger.cpp:283:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_vlan115_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_vlan115
+        ^
+mac_logger.cpp:285:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_vlan116_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_vlan116
+        ^
+mac_logger.cpp:287:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_vlan117_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_vlan117
+        ^
+mac_logger.cpp:289:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_vlan118_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_vlan118
+        ^
+mac_logger.cpp:291:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_vlan119_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_vlan119
+        ^
+mac_logger.cpp:294:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_vlan120_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_vlan120
+        ^
+mac_logger.cpp:296:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_vlan121_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_vlan121
+        ^
+mac_logger.cpp:298:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_vlan122_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_vlan122
+        ^
+mac_logger.cpp:300:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_vlan123_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_vlan123
+        ^
+mac_logger.cpp:302:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_vlan124_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_vlan124
+        ^
+mac_logger.cpp:304:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_vlan125_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_vlan125
+        ^
+mac_logger.cpp:306:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_vlan126_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_vlan126
+        ^
+mac_logger.cpp:308:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_vlan127_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_vlan127
+        ^
+mac_logger.cpp:310:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_vlan128_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_vlan128
+        ^
+mac_logger.cpp:312:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_vlan129_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_vlan129
+        ^
+mac_logger.cpp:315:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable = counter_droped_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_droped
+        ^
+mac_logger.cpp:318:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable=last_log_tx_index_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable=last_log_tx_index
+        ^
+mac_logger.cpp:320:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=variable=last_tap_tx_index_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable=last_tap_tx_index
+        ^
+mac_logger.cpp:916:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+mac_logger.cpp:957:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+mac_logger.cpp:958:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=min=3 max=420 avg=160_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_TRIPCOUNT min=3 max=420 avg=160
+        ^
+mac_logger.cpp:976:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+mac_logger.cpp:1015:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+mac_logger.cpp:1016:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=tx_ddr_XLX_SEP_ PragmaOptions=min=3 max=440 avg=160_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_TRIPCOUNT min=3 max=440 avg=160
+        ^
+D:/maclogger_2022_30port/maclogger/solution1/csynth.tcl:17:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=name=mac_logger_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=mac_logger
+        ^
+D:/maclogger_2022_30port/maclogger/solution1/directives.tcl:6:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=name=mac_logger_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=mac_logger
+        ^
+mac_logger.cpp:1134:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=m_axi depth=1024*5 port=fifo offset=slave bundle=mac_fifo_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=1024*5 port=fifo offset=slave bundle=mac_fifo
+        ^
+mac_logger.cpp:1135:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=fifo bundle=axilites offset=0x10_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=fifo bundle=axilites offset=0x10
+        ^
+mac_logger.cpp:1137:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=mode=m_axi bundle=fifo_axi_full depth=1028 max_read_burst_length=16 max_write_burst_length=16 num_read_outstanding=16 num_write_outstanding=16 port=fifo_axi_full offset=slave_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=m_axi bundle=fifo_axi_full depth=1028 max_read_burst_length=16 max_write_burst_length=16 num_read_outstanding=16 num_write_outstanding=16 port=fifo_axi_full offset=slave
+        ^
+mac_logger.cpp:1138:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=fifo_axi_full bundle=axilites offset=0x1c_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=fifo_axi_full bundle=axilites offset=0x1c
+        ^
+mac_logger.cpp:1143:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=m_axi depth=2048*200/4 port=log_ddr name=ddr offset=slave bundle=ps num_read_outstanding=16 num_write_outstanding=16 max_read_burst_length=16 max_write_burst_length=64 max_widen_bitwidth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=2048*200/4 port=log_ddr name=ddr offset=slave bundle=ps num_read_outstanding=16 num_write_outstanding=16 max_read_burst_length=16 max_write_burst_length=64 max_widen_bitwidth=64
+        ^
+mac_logger.cpp:1144:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=log_ddr bundle=axilites name=ddr offset=0x28_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=log_ddr bundle=axilites name=ddr offset=0x28
+        ^
+mac_logger.cpp:1145:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=m_axi depth=2048*200/4 port=tap_ddr name=driver offset=slave bundle=ps num_read_outstanding=16 num_write_outstanding=16 max_read_burst_length=16 max_write_burst_length=64 max_widen_bitwidth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=2048*200/4 port=tap_ddr name=driver offset=slave bundle=ps num_read_outstanding=16 num_write_outstanding=16 max_read_burst_length=16 max_write_burst_length=64 max_widen_bitwidth=64
+        ^
+mac_logger.cpp:1146:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=tap_ddr bundle=axilites name=driver offset=0x34_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=tap_ddr bundle=axilites name=driver offset=0x34
+        ^
+mac_logger.cpp:1148:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=mode=s_axilite port=status offset=0x40 register bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite port=status offset=0x40 register bundle=axilites
+        ^
+mac_logger.cpp:1149:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=mode=s_axilite port=writeStatus offset=0x48 register bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite port=writeStatus offset=0x48 register bundle=axilites
+        ^
+mac_logger.cpp:1151:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=mode=s_axilite port=logger_vlan_enable_mask offset=0x50 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite port=logger_vlan_enable_mask offset=0x50 bundle=axilites
+        ^
+mac_logger.cpp:1153:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=vlan100_received offset=0x58 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=vlan100_received offset=0x58 bundle=axilites
+        ^
+mac_logger.cpp:1154:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=vlan101_received offset=0x60 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=vlan101_received offset=0x60 bundle=axilites
+        ^
+mac_logger.cpp:1155:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=vlan102_received offset=0x68 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=vlan102_received offset=0x68 bundle=axilites
+        ^
+mac_logger.cpp:1156:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=vlan103_received offset=0x70 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=vlan103_received offset=0x70 bundle=axilites
+        ^
+mac_logger.cpp:1157:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=vlan104_received offset=0x78 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=vlan104_received offset=0x78 bundle=axilites
+        ^
+mac_logger.cpp:1158:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=vlan105_received offset=0x80 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=vlan105_received offset=0x80 bundle=axilites
+        ^
+mac_logger.cpp:1159:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=vlan106_received offset=0x88 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=vlan106_received offset=0x88 bundle=axilites
+        ^
+mac_logger.cpp:1160:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=vlan107_received offset=0x90 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=vlan107_received offset=0x90 bundle=axilites
+        ^
+mac_logger.cpp:1161:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=vlan108_received offset=0x98 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=vlan108_received offset=0x98 bundle=axilites
+        ^
+mac_logger.cpp:1162:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=vlan109_received offset=0xa0 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=vlan109_received offset=0xa0 bundle=axilites
+        ^
+mac_logger.cpp:1164:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=vlan110_received offset=0xa8 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=vlan110_received offset=0xa8 bundle=axilites
+        ^
+mac_logger.cpp:1165:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=vlan111_received offset=0xb0 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=vlan111_received offset=0xb0 bundle=axilites
+        ^
+mac_logger.cpp:1166:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=vlan112_received offset=0xb8 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=vlan112_received offset=0xb8 bundle=axilites
+        ^
+mac_logger.cpp:1167:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=vlan113_received offset=0xc0 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=vlan113_received offset=0xc0 bundle=axilites
+        ^
+mac_logger.cpp:1168:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=vlan114_received offset=0xc8 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=vlan114_received offset=0xc8 bundle=axilites
+        ^
+mac_logger.cpp:1169:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=vlan115_received offset=0xd0 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=vlan115_received offset=0xd0 bundle=axilites
+        ^
+mac_logger.cpp:1170:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=vlan116_received offset=0xd8 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=vlan116_received offset=0xd8 bundle=axilites
+        ^
+mac_logger.cpp:1171:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=vlan117_received offset=0xe0 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=vlan117_received offset=0xe0 bundle=axilites
+        ^
+mac_logger.cpp:1172:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=vlan118_received offset=0xe8 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=vlan118_received offset=0xe8 bundle=axilites
+        ^
+mac_logger.cpp:1173:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=vlan119_received offset=0xf0 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=vlan119_received offset=0xf0 bundle=axilites
+        ^
+mac_logger.cpp:1175:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=vlan120_received offset=0xf8 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=vlan120_received offset=0xf8 bundle=axilites
+        ^
+mac_logger.cpp:1176:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=vlan121_received offset=0x110 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=vlan121_received offset=0x110 bundle=axilites
+        ^
+mac_logger.cpp:1177:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=vlan122_received offset=0x118 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=vlan122_received offset=0x118 bundle=axilites
+        ^
+mac_logger.cpp:1178:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=vlan123_received offset=0x120 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=vlan123_received offset=0x120 bundle=axilites
+        ^
+mac_logger.cpp:1179:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=vlan124_received offset=0x128 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=vlan124_received offset=0x128 bundle=axilites
+        ^
+mac_logger.cpp:1180:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=vlan125_received offset=0x130 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=vlan125_received offset=0x130 bundle=axilites
+        ^
+mac_logger.cpp:1181:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=vlan126_received offset=0x138 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=vlan126_received offset=0x138 bundle=axilites
+        ^
+mac_logger.cpp:1182:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=vlan127_received offset=0x140 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=vlan127_received offset=0x140 bundle=axilites
+        ^
+mac_logger.cpp:1183:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=vlan128_received offset=0x148 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=vlan128_received offset=0x148 bundle=axilites
+        ^
+mac_logger.cpp:1184:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=vlan129_received offset=0x150 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=vlan129_received offset=0x150 bundle=axilites
+        ^
+mac_logger.cpp:1185:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite register port=droped offset=0x158 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite register port=droped offset=0x158 bundle=axilites
+        ^
+mac_logger.cpp:1187:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=multicast_recv_enable offset=0x160 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=multicast_recv_enable offset=0x160 bundle=axilites
+        ^
+mac_logger.cpp:1188:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_filter_enable offset=0x168 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_filter_enable offset=0x168 bundle=axilites
+        ^
+mac_logger.cpp:1189:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan100_macaddr_lsb offset=0x170 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan100_macaddr_lsb offset=0x170 bundle=axilites
+        ^
+mac_logger.cpp:1190:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan100_macaddr_msb offset=0x178 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan100_macaddr_msb offset=0x178 bundle=axilites
+        ^
+mac_logger.cpp:1191:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan101_macaddr_lsb offset=0x180 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan101_macaddr_lsb offset=0x180 bundle=axilites
+        ^
+mac_logger.cpp:1192:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan101_macaddr_msb offset=0x188 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan101_macaddr_msb offset=0x188 bundle=axilites
+        ^
+mac_logger.cpp:1193:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan102_macaddr_lsb offset=0x190 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan102_macaddr_lsb offset=0x190 bundle=axilites
+        ^
+mac_logger.cpp:1194:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan102_macaddr_msb offset=0x198 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan102_macaddr_msb offset=0x198 bundle=axilites
+        ^
+mac_logger.cpp:1195:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan103_macaddr_lsb offset=0x1a0 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan103_macaddr_lsb offset=0x1a0 bundle=axilites
+        ^
+mac_logger.cpp:1196:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan103_macaddr_msb offset=0x1a8 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan103_macaddr_msb offset=0x1a8 bundle=axilites
+        ^
+mac_logger.cpp:1197:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan104_macaddr_lsb offset=0x1b0 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan104_macaddr_lsb offset=0x1b0 bundle=axilites
+        ^
+mac_logger.cpp:1198:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan104_macaddr_msb offset=0x1b8 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan104_macaddr_msb offset=0x1b8 bundle=axilites
+        ^
+mac_logger.cpp:1199:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan105_macaddr_lsb offset=0x1c0 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan105_macaddr_lsb offset=0x1c0 bundle=axilites
+        ^
+mac_logger.cpp:1200:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan105_macaddr_msb offset=0x1c8 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan105_macaddr_msb offset=0x1c8 bundle=axilites
+        ^
+mac_logger.cpp:1201:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan106_macaddr_lsb offset=0x1d0 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan106_macaddr_lsb offset=0x1d0 bundle=axilites
+        ^
+mac_logger.cpp:1202:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan106_macaddr_msb offset=0x1d8 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan106_macaddr_msb offset=0x1d8 bundle=axilites
+        ^
+mac_logger.cpp:1203:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan107_macaddr_lsb offset=0x1e0 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan107_macaddr_lsb offset=0x1e0 bundle=axilites
+        ^
+mac_logger.cpp:1204:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan107_macaddr_msb offset=0x1e8 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan107_macaddr_msb offset=0x1e8 bundle=axilites
+        ^
+mac_logger.cpp:1205:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan108_macaddr_lsb offset=0x1f0 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan108_macaddr_lsb offset=0x1f0 bundle=axilites
+        ^
+mac_logger.cpp:1206:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan108_macaddr_msb offset=0x1f8 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan108_macaddr_msb offset=0x1f8 bundle=axilites
+        ^
+mac_logger.cpp:1207:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan109_macaddr_lsb offset=0x200 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan109_macaddr_lsb offset=0x200 bundle=axilites
+        ^
+mac_logger.cpp:1208:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan109_macaddr_msb offset=0x208 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan109_macaddr_msb offset=0x208 bundle=axilites
+        ^
+mac_logger.cpp:1209:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan110_macaddr_lsb offset=0x210 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan110_macaddr_lsb offset=0x210 bundle=axilites
+        ^
+mac_logger.cpp:1210:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan110_macaddr_msb offset=0x218 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan110_macaddr_msb offset=0x218 bundle=axilites
+        ^
+mac_logger.cpp:1211:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan111_macaddr_lsb offset=0x220 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan111_macaddr_lsb offset=0x220 bundle=axilites
+        ^
+mac_logger.cpp:1212:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan111_macaddr_msb offset=0x228 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan111_macaddr_msb offset=0x228 bundle=axilites
+        ^
+mac_logger.cpp:1213:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan112_macaddr_lsb offset=0x230 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan112_macaddr_lsb offset=0x230 bundle=axilites
+        ^
+mac_logger.cpp:1214:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan112_macaddr_msb offset=0x238 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan112_macaddr_msb offset=0x238 bundle=axilites
+        ^
+mac_logger.cpp:1215:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan113_macaddr_lsb offset=0x240 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan113_macaddr_lsb offset=0x240 bundle=axilites
+        ^
+mac_logger.cpp:1216:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan113_macaddr_msb offset=0x248 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan113_macaddr_msb offset=0x248 bundle=axilites
+        ^
+mac_logger.cpp:1217:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan114_macaddr_lsb offset=0x250 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan114_macaddr_lsb offset=0x250 bundle=axilites
+        ^
+mac_logger.cpp:1218:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan114_macaddr_msb offset=0x258 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan114_macaddr_msb offset=0x258 bundle=axilites
+        ^
+mac_logger.cpp:1219:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan115_macaddr_lsb offset=0x260 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan115_macaddr_lsb offset=0x260 bundle=axilites
+        ^
+mac_logger.cpp:1220:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan115_macaddr_msb offset=0x268 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan115_macaddr_msb offset=0x268 bundle=axilites
+        ^
+mac_logger.cpp:1221:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan116_macaddr_lsb offset=0x270 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan116_macaddr_lsb offset=0x270 bundle=axilites
+        ^
+mac_logger.cpp:1222:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan116_macaddr_msb offset=0x278 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan116_macaddr_msb offset=0x278 bundle=axilites
+        ^
+mac_logger.cpp:1223:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan117_macaddr_lsb offset=0x280 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan117_macaddr_lsb offset=0x280 bundle=axilites
+        ^
+mac_logger.cpp:1224:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan117_macaddr_msb offset=0x288 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan117_macaddr_msb offset=0x288 bundle=axilites
+        ^
+mac_logger.cpp:1225:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan118_macaddr_lsb offset=0x290 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan118_macaddr_lsb offset=0x290 bundle=axilites
+        ^
+mac_logger.cpp:1226:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan118_macaddr_msb offset=0x298 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan118_macaddr_msb offset=0x298 bundle=axilites
+        ^
+mac_logger.cpp:1227:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan119_macaddr_lsb offset=0x2a0 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan119_macaddr_lsb offset=0x2a0 bundle=axilites
+        ^
+mac_logger.cpp:1228:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan119_macaddr_msb offset=0x2a8 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan119_macaddr_msb offset=0x2a8 bundle=axilites
+        ^
+mac_logger.cpp:1229:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan120_macaddr_lsb offset=0x2b0 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan120_macaddr_lsb offset=0x2b0 bundle=axilites
+        ^
+mac_logger.cpp:1230:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan120_macaddr_msb offset=0x2b8 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan120_macaddr_msb offset=0x2b8 bundle=axilites
+        ^
+mac_logger.cpp:1231:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan121_macaddr_lsb offset=0x2c0 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan121_macaddr_lsb offset=0x2c0 bundle=axilites
+        ^
+mac_logger.cpp:1232:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan121_macaddr_msb offset=0x2c8 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan121_macaddr_msb offset=0x2c8 bundle=axilites
+        ^
+mac_logger.cpp:1233:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan122_macaddr_lsb offset=0x2d0 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan122_macaddr_lsb offset=0x2d0 bundle=axilites
+        ^
+mac_logger.cpp:1234:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan122_macaddr_msb offset=0x2d8 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan122_macaddr_msb offset=0x2d8 bundle=axilites
+        ^
+mac_logger.cpp:1235:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan123_macaddr_lsb offset=0x2e0 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan123_macaddr_lsb offset=0x2e0 bundle=axilites
+        ^
+mac_logger.cpp:1236:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan123_macaddr_msb offset=0x2e8 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan123_macaddr_msb offset=0x2e8 bundle=axilites
+        ^
+mac_logger.cpp:1237:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan124_macaddr_lsb offset=0x2f0 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan124_macaddr_lsb offset=0x2f0 bundle=axilites
+        ^
+mac_logger.cpp:1238:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan124_macaddr_msb offset=0x2f8 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan124_macaddr_msb offset=0x2f8 bundle=axilites
+        ^
+mac_logger.cpp:1239:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan125_macaddr_lsb offset=0x300 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan125_macaddr_lsb offset=0x300 bundle=axilites
+        ^
+mac_logger.cpp:1240:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan125_macaddr_msb offset=0x308 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan125_macaddr_msb offset=0x308 bundle=axilites
+        ^
+mac_logger.cpp:1241:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan126_macaddr_lsb offset=0x310 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan126_macaddr_lsb offset=0x310 bundle=axilites
+        ^
+mac_logger.cpp:1242:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan126_macaddr_msb offset=0x318 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan126_macaddr_msb offset=0x318 bundle=axilites
+        ^
+mac_logger.cpp:1243:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan127_macaddr_lsb offset=0x320 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan127_macaddr_lsb offset=0x320 bundle=axilites
+        ^
+mac_logger.cpp:1244:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan127_macaddr_msb offset=0x328 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan127_macaddr_msb offset=0x328 bundle=axilites
+        ^
+mac_logger.cpp:1245:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan128_macaddr_lsb offset=0x330 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan128_macaddr_lsb offset=0x330 bundle=axilites
+        ^
+mac_logger.cpp:1246:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan128_macaddr_msb offset=0x338 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan128_macaddr_msb offset=0x338 bundle=axilites
+        ^
+mac_logger.cpp:1247:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan129_macaddr_lsb offset=0x340 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan129_macaddr_lsb offset=0x340 bundle=axilites
+        ^
+mac_logger.cpp:1248:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=unicast_vlan129_macaddr_msb offset=0x348 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=unicast_vlan129_macaddr_msb offset=0x348 bundle=axilites
+        ^
+mac_logger.cpp:1249:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=log_all_mask offset=0x350 bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=log_all_mask offset=0x350 bundle=axilites
+        ^
+mac_logger.cpp:1253:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=axilites_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS interface s_axilite port=return bundle=axilites
+        ^
+mac_logger.cpp:1254:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=mode=ap_ctrl_chain port=return_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=ap_ctrl_chain port=return
+        ^
+mac_logger.cpp:1264:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_logger_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS DATAFLOW
+        ^
+157 warnings generated.

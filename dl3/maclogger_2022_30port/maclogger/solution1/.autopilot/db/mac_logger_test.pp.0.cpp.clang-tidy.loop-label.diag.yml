@@ -1,0 +1,121 @@
+---
+MainSourceFile:  'D:/maclogger_2022_30port/maclogger/solution1/.autopilot/db/mac_logger_test.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1211_1:  '
+    FileOffset:      1211
+    FilePath:        'D:\Vitis_HLS\2022.2\common\technology\autopilot\ap_int_base.h'
+    Replacements:    
+      - FilePath:        'D:\maclogger_2022_30port\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp'
+        Offset:          103079
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1211_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        'D:\Vitis_HLS\2022.2\common\technology\autopilot\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'D:\maclogger_2022_30port\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp'
+        Offset:          309899
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        'D:\Vitis_HLS\2022.2\common\technology\autopilot\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'D:\maclogger_2022_30port\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp'
+        Offset:          310338
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        'D:\Vitis_HLS\2022.2\common\technology\autopilot\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'D:\maclogger_2022_30port\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp'
+        Offset:          310778
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1245_1:  '
+    FileOffset:      1245
+    FilePath:        'D:\Vitis_HLS\2022.2\common\technology\autopilot\ap_fixed_base.h'
+    Replacements:    
+      - FilePath:        'D:\maclogger_2022_30port\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp'
+        Offset:          572258
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1245_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_87_1:  '
+    FileOffset:      87
+    FilePath:        mac_logger_test.cpp
+    Replacements:    
+      - FilePath:        'D:\maclogger_2022_30port\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp'
+        Offset:          955600
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_87_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_94_2:  '
+    FileOffset:      94
+    FilePath:        mac_logger_test.cpp
+    Replacements:    
+      - FilePath:        'D:\maclogger_2022_30port\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp'
+        Offset:          955763
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_94_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_113_3:  '
+    FileOffset:      113
+    FilePath:        mac_logger_test.cpp
+    Replacements:    
+      - FilePath:        'D:\maclogger_2022_30port\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp'
+        Offset:          955961
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_113_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_187_4:  '
+    FileOffset:      187
+    FilePath:        mac_logger_test.cpp
+    Replacements:    
+      - FilePath:        'D:\maclogger_2022_30port\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp'
+        Offset:          957765
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_187_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_195_5:  '
+    FileOffset:      195
+    FilePath:        mac_logger_test.cpp
+    Replacements:    
+      - FilePath:        'D:\maclogger_2022_30port\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp'
+        Offset:          958049
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_195_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_197_6:  '
+    FileOffset:      197
+    FilePath:        mac_logger_test.cpp
+    Replacements:    
+      - FilePath:        'D:\maclogger_2022_30port\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp'
+        Offset:          958110
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_197_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_203_7:  '
+    FileOffset:      203
+    FilePath:        mac_logger_test.cpp
+    Replacements:    
+      - FilePath:        'D:\maclogger_2022_30port\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp'
+        Offset:          958248
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_203_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_205_8:  '
+    FileOffset:      205
+    FilePath:        mac_logger_test.cpp
+    Replacements:    
+      - FilePath:        'D:\maclogger_2022_30port\maclogger\solution1\.autopilot\db\mac_logger_test.pp.0.cpp'
+        Offset:          958309
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_205_8: '
+...

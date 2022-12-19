@@ -1,0 +1,324 @@
+
+
+================================================================
+== Vitis HLS Report for 'rx_fifo'
+================================================================
+* Date:           Tue Nov 15 12:03:42 2022
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        maclogger
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu5ev-sfvc784-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------------------+----------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |                                             |                                  |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+        |                   Instance                  |              Module              |   min   |   max   |    min    |    max    | min | max |   Type  |
+        +---------------------------------------------+----------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |grp_rx_fifo_Pipeline_VITIS_LOOP_71_1_fu_265  |rx_fifo_Pipeline_VITIS_LOOP_71_1  |       14|       14|   0.140 us|   0.140 us|   14|   14|       no|
+        |grp_rx_fifo_Pipeline_VITIS_LOOP_91_2_fu_273  |rx_fifo_Pipeline_VITIS_LOOP_91_2  |        5|        6|  50.000 ns|  60.000 ns|    5|    6|       no|
+        |grp_rx_fifo_Pipeline_rx_macfifo_data_fu_281  |rx_fifo_Pipeline_rx_macfifo_data  |        ?|        ?|          ?|          ?|    ?|    ?|       no|
+        |grp_rx_fifo_Pipeline_4_fu_292                |rx_fifo_Pipeline_4                |        4|       18|  40.000 ns|   0.180 us|    4|   18|       no|
+        +---------------------------------------------+----------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|     517|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|     398|     797|    -|
+|Memory           |        0|     -|      32|       2|    0|
+|Multiplexer      |        -|     -|       -|     689|    -|
+|Register         |        -|     -|     427|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     857|    2005|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      288|  1248|  234240|  117120|   64|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|       1|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------------------+----------------------------------+---------+----+-----+-----+-----+
+    |                   Instance                  |              Module              | BRAM_18K| DSP|  FF | LUT | URAM|
+    +---------------------------------------------+----------------------------------+---------+----+-----+-----+-----+
+    |grp_rx_fifo_Pipeline_4_fu_292                |rx_fifo_Pipeline_4                |        0|   0|   44|   86|    0|
+    |grp_rx_fifo_Pipeline_VITIS_LOOP_71_1_fu_265  |rx_fifo_Pipeline_VITIS_LOOP_71_1  |        0|   0|  186|  111|    0|
+    |grp_rx_fifo_Pipeline_VITIS_LOOP_91_2_fu_273  |rx_fifo_Pipeline_VITIS_LOOP_91_2  |        0|   0|    8|   68|    0|
+    |grp_rx_fifo_Pipeline_rx_macfifo_data_fu_281  |rx_fifo_Pipeline_rx_macfifo_data  |        0|   0|  160|  532|    0|
+    +---------------------------------------------+----------------------------------+---------+----+-----+-----+-----+
+    |Total                                        |                                  |        0|   0|  398|  797|    0|
+    +---------------------------------------------+----------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +-----------+-------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |   Memory  |             Module            | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-----------+-------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |tmp_buf_U  |rx_fifo_tmp_buf_RAM_AUTO_1R1W  |        0|  32|   2|    0|     4|   32|     1|          128|
+    +-----------+-------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Total      |                               |        0|  32|   2|    0|     4|   32|     1|          128|
+    +-----------+-------------------------------+---------+----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |M_fu_649_p2                       |         +|   0|  0|   7|           4|           4|
+    |WordLength_fu_517_p2              |         +|   0|  0|  16|           9|           9|
+    |add_ln53_fu_303_p2                |         +|   0|  0|  71|          64|           5|
+    |add_ln54_fu_334_p2                |         +|   0|  0|  71|          64|           6|
+    |add_ln83_fu_566_p2                |         +|   0|  0|  28|          21|          16|
+    |add_ln84_fu_576_p2                |         +|   0|  0|  23|          16|           4|
+    |add_ln97_1_fu_644_p2              |         +|   0|  0|   7|           4|           4|
+    |add_ln97_2_fu_677_p2              |         +|   0|  0|  16|           9|           4|
+    |add_ln97_fu_671_p2                |         +|   0|  0|  17|          10|           4|
+    |empty_152_fu_459_p2               |         +|   0|  0|  71|          64|          13|
+    |ap_block_state32_on_subcall_done  |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op146_call_state32   |       and|   0|  0|   2|           1|           1|
+    |icmp_ln103_fu_736_p2              |      icmp|   0|  0|   9|           4|           1|
+    |icmp_ln53_fu_329_p2               |      icmp|   0|  0|  20|          32|           1|
+    |icmp_ln55_fu_504_p2               |      icmp|   0|  0|   8|           2|           1|
+    |icmp_ln80_fu_526_p2               |      icmp|   0|  0|  13|          16|          16|
+    |ap_block_state1                   |        or|   0|  0|   2|           1|           1|
+    |or_ln84_1_fu_611_p2               |        or|   0|  0|  32|          32|           1|
+    |or_ln84_fu_605_p2                 |        or|   0|  0|  32|          32|          32|
+    |or_ln88_fu_629_p2                 |        or|   0|  0|  32|          32|          16|
+    |select_ln80_fu_635_p3             |    select|   0|  0|  32|           1|          32|
+    |select_ln91_fu_655_p3             |    select|   0|  0|   4|           1|           2|
+    |offset_fu_666_p2                  |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0| 517|         421|         176|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------+-----+-----------+-----+-----------+
+    |             Name             | LUT | Input Size| Bits| Total Bits|
+    +------------------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm                     |  152|         33|    1|         33|
+    |ap_done                       |    9|          2|    1|          2|
+    |data_buf_address0             |   37|          7|    9|         63|
+    |data_buf_address1             |   20|          4|    9|         36|
+    |data_buf_ce0                  |   26|          5|    1|          5|
+    |data_buf_d0                   |   31|          6|   32|        192|
+    |data_buf_d1                   |   20|          4|   32|        128|
+    |data_buf_we0                  |   26|          5|    1|          5|
+    |fifo_axi_full_blk_n_AR        |    9|          2|    1|          2|
+    |m_axi_fifo_axi_full_ARADDR    |   26|          5|   64|        320|
+    |m_axi_fifo_axi_full_ARBURST   |   20|          4|    2|          8|
+    |m_axi_fifo_axi_full_ARCACHE   |   20|          4|    4|         16|
+    |m_axi_fifo_axi_full_ARID      |   20|          4|    1|          4|
+    |m_axi_fifo_axi_full_ARLEN     |   26|          5|   32|        160|
+    |m_axi_fifo_axi_full_ARLOCK    |   20|          4|    2|          8|
+    |m_axi_fifo_axi_full_ARPROT    |   20|          4|    3|         12|
+    |m_axi_fifo_axi_full_ARQOS     |   20|          4|    4|         16|
+    |m_axi_fifo_axi_full_ARREGION  |   20|          4|    4|         16|
+    |m_axi_fifo_axi_full_ARSIZE    |   20|          4|    3|         12|
+    |m_axi_fifo_axi_full_ARUSER    |   20|          4|    1|          4|
+    |m_axi_fifo_axi_full_ARVALID   |   26|          5|    1|          5|
+    |m_axi_fifo_axi_full_RREADY    |   20|          4|    1|          4|
+    |m_axi_mac_fifo_ARADDR         |   14|          3|   64|        192|
+    |mac_fifo_blk_n_AR             |    9|          2|    1|          2|
+    |mac_fifo_blk_n_R              |    9|          2|    1|          2|
+    |tmp_buf_address0              |   20|          4|    2|          8|
+    |tmp_buf_ce0                   |   20|          4|    1|          4|
+    |tmp_buf_we0                   |    9|          2|    1|          2|
+    +------------------------------+-----+-----------+-----+-----------+
+    |Total                         |  689|        140|  279|       1261|
+    +------------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------------+----+----+-----+-----------+
+    |                           Name                           | FF | LUT| Bits| Const Bits|
+    +----------------------------------------------------------+----+----+-----+-----------+
+    |M_reg_833                                                 |   4|   0|    4|          0|
+    |WordLength_reg_821                                        |   9|   0|    9|          0|
+    |add_reg_850                                               |   1|   0|    2|          1|
+    |ap_CS_fsm                                                 |  32|   0|   32|          0|
+    |ap_done_reg                                               |   1|   0|    1|          0|
+    |fifo_axi_full_addr_reg_861                                |  64|   0|   64|          0|
+    |frame_len_bytes_reg_790                                   |  32|   0|   32|          0|
+    |grp_rx_fifo_Pipeline_4_fu_292_ap_start_reg                |   1|   0|    1|          0|
+    |grp_rx_fifo_Pipeline_VITIS_LOOP_71_1_fu_265_ap_start_reg  |   1|   0|    1|          0|
+    |grp_rx_fifo_Pipeline_VITIS_LOOP_91_2_fu_273_ap_start_reg  |   1|   0|    1|          0|
+    |grp_rx_fifo_Pipeline_rx_macfifo_data_fu_281_ap_start_reg  |   1|   0|    1|          0|
+    |icmp_ln103_reg_876                                        |   1|   0|    1|          0|
+    |icmp_ln53_reg_772                                         |   1|   0|    1|          0|
+    |icmp_ln80_reg_827                                         |   1|   0|    1|          0|
+    |mac_fifo_addr_1_reg_776                                   |  64|   0|   64|          0|
+    |mac_fifo_addr_read_reg_767                                |  32|   0|   32|          0|
+    |mac_fifo_addr_reg_746                                     |  64|   0|   64|          0|
+    |or_ln3_reg_871                                            |   6|   0|    9|          3|
+    |select_ln91_reg_840                                       |   3|   0|    3|          0|
+    |tmp_20_reg_856                                            |   5|   0|    5|          0|
+    |trunc_ln54_1_reg_795                                      |  16|   0|   16|          0|
+    |trunc_ln54_2_reg_801                                      |   2|   0|    2|          0|
+    |trunc_ln55_1_reg_811                                      |   4|   0|    4|          0|
+    |trunc_ln55_reg_806                                        |   9|   0|    9|          0|
+    |trunc_ln73_reg_782                                        |  62|   0|   62|          0|
+    |trunc_ln97_reg_845                                        |   6|   0|    6|          0|
+    |zext_ln98_reg_866                                         |   4|   0|   32|         28|
+    +----------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                     | 427|   0|  459|         32|
+    +----------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------+-----+-----+------------+----------------+--------------+
+|           RTL Ports          | Dir | Bits|  Protocol  |  Source Object |    C Type    |
++------------------------------+-----+-----+------------+----------------+--------------+
+|ap_clk                        |   in|    1|  ap_ctrl_hs|         rx_fifo|  return value|
+|ap_rst                        |   in|    1|  ap_ctrl_hs|         rx_fifo|  return value|
+|ap_start                      |   in|    1|  ap_ctrl_hs|         rx_fifo|  return value|
+|ap_done                       |  out|    1|  ap_ctrl_hs|         rx_fifo|  return value|
+|ap_continue                   |   in|    1|  ap_ctrl_hs|         rx_fifo|  return value|
+|ap_idle                       |  out|    1|  ap_ctrl_hs|         rx_fifo|  return value|
+|ap_ready                      |  out|    1|  ap_ctrl_hs|         rx_fifo|  return value|
+|m_axi_mac_fifo_AWVALID        |  out|    1|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_AWREADY        |   in|    1|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_AWADDR         |  out|   64|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_AWID           |  out|    1|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_AWLEN          |  out|   32|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_AWSIZE         |  out|    3|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_AWBURST        |  out|    2|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_AWLOCK         |  out|    2|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_AWCACHE        |  out|    4|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_AWPROT         |  out|    3|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_AWQOS          |  out|    4|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_AWREGION       |  out|    4|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_AWUSER         |  out|    1|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_WVALID         |  out|    1|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_WREADY         |   in|    1|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_WDATA          |  out|   32|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_WSTRB          |  out|    4|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_WLAST          |  out|    1|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_WID            |  out|    1|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_WUSER          |  out|    1|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_ARVALID        |  out|    1|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_ARREADY        |   in|    1|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_ARADDR         |  out|   64|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_ARID           |  out|    1|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_ARLEN          |  out|   32|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_ARSIZE         |  out|    3|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_ARBURST        |  out|    2|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_ARLOCK         |  out|    2|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_ARCACHE        |  out|    4|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_ARPROT         |  out|    3|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_ARQOS          |  out|    4|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_ARREGION       |  out|    4|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_ARUSER         |  out|    1|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_RVALID         |   in|    1|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_RREADY         |  out|    1|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_RDATA          |   in|   32|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_RLAST          |   in|    1|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_RID            |   in|    1|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_RFIFONUM       |   in|    9|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_RUSER          |   in|    1|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_RRESP          |   in|    2|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_BVALID         |   in|    1|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_BREADY         |  out|    1|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_BRESP          |   in|    2|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_BID            |   in|    1|       m_axi|        mac_fifo|       pointer|
+|m_axi_mac_fifo_BUSER          |   in|    1|       m_axi|        mac_fifo|       pointer|
+|fifo_axi_lite                 |   in|   64|     ap_none|   fifo_axi_lite|        scalar|
+|m_axi_fifo_axi_full_AWVALID   |  out|    1|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWREADY   |   in|    1|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWADDR    |  out|   64|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWID      |  out|    1|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWLEN     |  out|   32|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWSIZE    |  out|    3|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWBURST   |  out|    2|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWLOCK    |  out|    2|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWCACHE   |  out|    4|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWPROT    |  out|    3|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWQOS     |  out|    4|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWREGION  |  out|    4|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWUSER    |  out|    1|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_WVALID    |  out|    1|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_WREADY    |   in|    1|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_WDATA     |  out|   32|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_WSTRB     |  out|    4|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_WLAST     |  out|    1|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_WID       |  out|    1|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_WUSER     |  out|    1|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARVALID   |  out|    1|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARREADY   |   in|    1|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARADDR    |  out|   64|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARID      |  out|    1|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARLEN     |  out|   32|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARSIZE    |  out|    3|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARBURST   |  out|    2|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARLOCK    |  out|    2|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARCACHE   |  out|    4|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARPROT    |  out|    3|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARQOS     |  out|    4|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARREGION  |  out|    4|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARUSER    |  out|    1|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_RVALID    |   in|    1|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_RREADY    |  out|    1|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_RDATA     |   in|   32|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_RLAST     |   in|    1|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_RID       |   in|    1|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_RFIFONUM  |   in|    9|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_RUSER     |   in|    1|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_RRESP     |   in|    2|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_BVALID    |   in|    1|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_BREADY    |  out|    1|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_BRESP     |   in|    2|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_BID       |   in|    1|       m_axi|   fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_BUSER     |   in|    1|       m_axi|   fifo_axi_full|       pointer|
+|fifo_axi_full1                |   in|   64|     ap_none|  fifo_axi_full1|        scalar|
+|timestamp                     |   in|   64|     ap_none|       timestamp|        scalar|
+|data_buf_address0             |  out|    9|   ap_memory|        data_buf|         array|
+|data_buf_ce0                  |  out|    1|   ap_memory|        data_buf|         array|
+|data_buf_we0                  |  out|    1|   ap_memory|        data_buf|         array|
+|data_buf_d0                   |  out|   32|   ap_memory|        data_buf|         array|
+|data_buf_address1             |  out|    9|   ap_memory|        data_buf|         array|
+|data_buf_ce1                  |  out|    1|   ap_memory|        data_buf|         array|
+|data_buf_we1                  |  out|    1|   ap_memory|        data_buf|         array|
+|data_buf_d1                   |  out|   32|   ap_memory|        data_buf|         array|
++------------------------------+-----+-----+------------+----------------+--------------+
+

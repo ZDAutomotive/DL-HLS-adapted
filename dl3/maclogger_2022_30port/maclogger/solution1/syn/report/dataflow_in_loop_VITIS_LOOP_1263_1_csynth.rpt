@@ -1,0 +1,586 @@
+
+
+================================================================
+== Vitis HLS Report for 'dataflow_in_loop_VITIS_LOOP_1263_1'
+================================================================
+* Date:           Tue Nov 15 12:03:51 2022
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        maclogger
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu5ev-sfvc784-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.977 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------+----------------------+---------+---------+-----------+----------+-----+-----+---------+
+        |                         |                      |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+        |         Instance        |        Module        |   min   |   max   |    min    |    max   | min | max |   Type  |
+        +-------------------------+----------------------+---------+---------+-----------+----------+-----+-----+---------+
+        |entry_proc_U0            |entry_proc            |        0|        0|       0 ns|      0 ns|    0|    0|       no|
+        |rx_ringbuffer_header_U0  |rx_ringbuffer_header  |       37|       37|   0.370 us|  0.370 us|   37|   37|       no|
+        |rx_fifo_U0               |rx_fifo               |        ?|        ?|          ?|         ?|    ?|    ?|       no|
+        |tx_ddr_U0                |tx_ddr                |        2|      987|  20.000 ns|  9.870 us|    2|  987|       no|
+        +-------------------------+----------------------+---------+---------+-----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      36|    -|
+|FIFO             |        -|     -|    6534|    4422|    -|
+|Instance         |        0|     6|    7609|   11097|    0|
+|Memory           |        4|     -|      64|      14|    0|
+|Multiplexer      |        -|     -|       -|      63|    -|
+|Register         |        -|     -|       7|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        4|     6|   14214|   15632|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      288|  1248|  234240|  117120|   64|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        1|    ~0|       6|      13|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+----------------------+---------+----+------+------+-----+
+    |         Instance        |        Module        | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +-------------------------+----------------------+---------+----+------+------+-----+
+    |entry_proc_U0            |entry_proc            |        0|   0|     2|   587|    0|
+    |rx_fifo_U0               |rx_fifo               |        0|   0|   857|  2005|    0|
+    |rx_ringbuffer_header_U0  |rx_ringbuffer_header  |        0|   0|   367|   479|    0|
+    |tx_ddr_U0                |tx_ddr                |        0|   6|  6383|  8026|    0|
+    +-------------------------+----------------------+---------+----+------+------+-----+
+    |Total                    |                      |        0|   6|  7609| 11097|    0|
+    +-------------------------+----------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +--------------+-------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |    Memory    |                            Module                           | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +--------------+-------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |data_buf3_U   |dataflow_in_loop_VITIS_LOOP_1263_1_data_buf3_RAM_AUTO_1R1W   |        4|   0|   0|    0|   512|   32|     1|        16384|
+    |log_header_U  |dataflow_in_loop_VITIS_LOOP_1263_1_log_header_RAM_AUTO_1R1W  |        0|  32|   7|    0|     7|   32|     1|          224|
+    |tap_header_U  |dataflow_in_loop_VITIS_LOOP_1263_1_log_header_RAM_AUTO_1R1W  |        0|  32|   7|    0|     7|   32|     1|          224|
+    +--------------+-------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Total         |                                                             |        4|  64|  14|    0|   526|   96|     3|        16832|
+    +--------------+-------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    +---------------------------------+---------+----+----+-----+------+-----+---------+
+    |               Name              | BRAM_18K| FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +---------------------------------+---------+----+----+-----+------+-----+---------+
+    |ddr_c_channel_U                  |        0|  99|   0|    -|     2|   64|      128|
+    |driver_c_channel_U               |        0|  99|   0|    -|     2|   64|      128|
+    |log_all_mask_c_U                 |        0|  99|   0|    -|     3|   32|       96|
+    |logger_vlan_enable_mask_c_U      |        0|  99|   0|    -|     3|   32|       96|
+    |multicast_recv_enable_c_U        |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_filter_enable_c_U        |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan100_macaddr_lsb_c_U  |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan100_macaddr_msb_c_U  |        0|  99|   0|    -|     3|   16|       48|
+    |unicast_vlan101_macaddr_lsb_c_U  |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan101_macaddr_msb_c_U  |        0|  99|   0|    -|     3|   16|       48|
+    |unicast_vlan102_macaddr_lsb_c_U  |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan102_macaddr_msb_c_U  |        0|  99|   0|    -|     3|   16|       48|
+    |unicast_vlan103_macaddr_lsb_c_U  |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan103_macaddr_msb_c_U  |        0|  99|   0|    -|     3|   16|       48|
+    |unicast_vlan104_macaddr_lsb_c_U  |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan104_macaddr_msb_c_U  |        0|  99|   0|    -|     3|   16|       48|
+    |unicast_vlan105_macaddr_lsb_c_U  |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan105_macaddr_msb_c_U  |        0|  99|   0|    -|     3|   16|       48|
+    |unicast_vlan106_macaddr_lsb_c_U  |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan106_macaddr_msb_c_U  |        0|  99|   0|    -|     3|   16|       48|
+    |unicast_vlan107_macaddr_lsb_c_U  |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan107_macaddr_msb_c_U  |        0|  99|   0|    -|     3|   16|       48|
+    |unicast_vlan108_macaddr_lsb_c_U  |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan108_macaddr_msb_c_U  |        0|  99|   0|    -|     3|   16|       48|
+    |unicast_vlan109_macaddr_lsb_c_U  |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan109_macaddr_msb_c_U  |        0|  99|   0|    -|     3|   16|       48|
+    |unicast_vlan110_macaddr_lsb_c_U  |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan110_macaddr_msb_c_U  |        0|  99|   0|    -|     3|   16|       48|
+    |unicast_vlan111_macaddr_lsb_c_U  |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan111_macaddr_msb_c_U  |        0|  99|   0|    -|     3|   16|       48|
+    |unicast_vlan112_macaddr_lsb_c_U  |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan112_macaddr_msb_c_U  |        0|  99|   0|    -|     3|   16|       48|
+    |unicast_vlan113_macaddr_lsb_c_U  |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan113_macaddr_msb_c_U  |        0|  99|   0|    -|     3|   16|       48|
+    |unicast_vlan114_macaddr_lsb_c_U  |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan114_macaddr_msb_c_U  |        0|  99|   0|    -|     3|   16|       48|
+    |unicast_vlan115_macaddr_lsb_c_U  |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan115_macaddr_msb_c_U  |        0|  99|   0|    -|     3|   16|       48|
+    |unicast_vlan116_macaddr_lsb_c_U  |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan116_macaddr_msb_c_U  |        0|  99|   0|    -|     3|   16|       48|
+    |unicast_vlan117_macaddr_lsb_c_U  |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan117_macaddr_msb_c_U  |        0|  99|   0|    -|     3|   16|       48|
+    |unicast_vlan118_macaddr_lsb_c_U  |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan118_macaddr_msb_c_U  |        0|  99|   0|    -|     3|   16|       48|
+    |unicast_vlan119_macaddr_lsb_c_U  |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan119_macaddr_msb_c_U  |        0|  99|   0|    -|     3|   16|       48|
+    |unicast_vlan120_macaddr_lsb_c_U  |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan120_macaddr_msb_c_U  |        0|  99|   0|    -|     3|   16|       48|
+    |unicast_vlan121_macaddr_lsb_c_U  |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan121_macaddr_msb_c_U  |        0|  99|   0|    -|     3|   16|       48|
+    |unicast_vlan122_macaddr_lsb_c_U  |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan122_macaddr_msb_c_U  |        0|  99|   0|    -|     3|   16|       48|
+    |unicast_vlan123_macaddr_lsb_c_U  |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan123_macaddr_msb_c_U  |        0|  99|   0|    -|     3|   16|       48|
+    |unicast_vlan124_macaddr_lsb_c_U  |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan124_macaddr_msb_c_U  |        0|  99|   0|    -|     3|   16|       48|
+    |unicast_vlan125_macaddr_lsb_c_U  |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan125_macaddr_msb_c_U  |        0|  99|   0|    -|     3|   16|       48|
+    |unicast_vlan126_macaddr_lsb_c_U  |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan126_macaddr_msb_c_U  |        0|  99|   0|    -|     3|   16|       48|
+    |unicast_vlan127_macaddr_lsb_c_U  |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan127_macaddr_msb_c_U  |        0|  99|   0|    -|     3|   16|       48|
+    |unicast_vlan128_macaddr_lsb_c_U  |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan128_macaddr_msb_c_U  |        0|  99|   0|    -|     3|   16|       48|
+    |unicast_vlan129_macaddr_lsb_c_U  |        0|  99|   0|    -|     3|   32|       96|
+    |unicast_vlan129_macaddr_msb_c_U  |        0|  99|   0|    -|     3|   16|       48|
+    +---------------------------------+---------+----+----+-----+------+-----+---------+
+    |Total                            |        0|6534|   0|    0|   196| 1696|     4960|
+    +---------------------------------+---------+----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +------------------------------------------+----------+----+---+----+------------+------------+
+    |               Variable Name              | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------------------+----------+----+---+----+------------+------------+
+    |ap_channel_done_ddr_c_channel             |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_driver_c_channel          |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_log_header                |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_tap_header                |       and|   0|  0|   2|           1|           1|
+    |ap_idle                                   |       and|   0|  0|   2|           1|           1|
+    |ap_sync_ready                             |       and|   0|  0|   2|           1|           1|
+    |entry_proc_U0_ap_start                    |       and|   0|  0|   2|           1|           1|
+    |rx_fifo_U0_ap_start                       |       and|   0|  0|   2|           1|           1|
+    |rx_ringbuffer_header_U0_ap_continue       |       and|   0|  0|   2|           1|           1|
+    |rx_ringbuffer_header_U0_ap_start          |       and|   0|  0|   2|           1|           1|
+    |tx_ddr_U0_ap_start                        |       and|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_ddr_c_channel       |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_driver_c_channel    |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_log_header          |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_tap_header          |        or|   0|  0|   2|           1|           1|
+    |ap_sync_entry_proc_U0_ap_ready            |        or|   0|  0|   2|           1|           1|
+    |ap_sync_rx_fifo_U0_ap_ready               |        or|   0|  0|   2|           1|           1|
+    |ap_sync_rx_ringbuffer_header_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
+    +------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                     |          |   0|  0|  36|          18|          18|
+    +------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |                     Name                     | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_channel_write_ddr_c_channel       |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_driver_c_channel    |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_log_header          |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_tap_header          |   9|          2|    1|          2|
+    |ap_sync_reg_entry_proc_U0_ap_ready            |   9|          2|    1|          2|
+    |ap_sync_reg_rx_fifo_U0_ap_ready               |   9|          2|    1|          2|
+    |ap_sync_reg_rx_ringbuffer_header_U0_ap_ready  |   9|          2|    1|          2|
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |Total                                         |  63|         14|    7|         14|
+    +----------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------+---+----+-----+-----------+
+    |                     Name                     | FF| LUT| Bits| Const Bits|
+    +----------------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_channel_write_ddr_c_channel       |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_driver_c_channel    |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_log_header          |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_tap_header          |  1|   0|    1|          0|
+    |ap_sync_reg_entry_proc_U0_ap_ready            |  1|   0|    1|          0|
+    |ap_sync_reg_rx_fifo_U0_ap_ready               |  1|   0|    1|          0|
+    |ap_sync_reg_rx_ringbuffer_header_U0_ap_ready  |  1|   0|    1|          0|
+    +----------------------------------------------+---+----+-----+-----------+
+    |Total                                         |  7|   0|    7|          0|
+    +----------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------------+-----+-----+------------+------------------------------------+--------------+
+|              RTL Ports             | Dir | Bits|  Protocol  |            Source Object           |    C Type    |
++------------------------------------+-----+-----+------------+------------------------------------+--------------+
+|ap_clk                              |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_VITIS_LOOP_1263_1|  return value|
+|ap_rst                              |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_VITIS_LOOP_1263_1|  return value|
+|ap_start                            |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_VITIS_LOOP_1263_1|  return value|
+|ap_done                             |  out|    1|  ap_ctrl_hs|  dataflow_in_loop_VITIS_LOOP_1263_1|  return value|
+|ap_ready                            |  out|    1|  ap_ctrl_hs|  dataflow_in_loop_VITIS_LOOP_1263_1|  return value|
+|ap_idle                             |  out|    1|  ap_ctrl_hs|  dataflow_in_loop_VITIS_LOOP_1263_1|  return value|
+|ap_continue                         |   in|    1|  ap_ctrl_hs|  dataflow_in_loop_VITIS_LOOP_1263_1|  return value|
+|m_axi_ps_AWVALID                    |  out|    1|       m_axi|                                  ps|       pointer|
+|m_axi_ps_AWREADY                    |   in|    1|       m_axi|                                  ps|       pointer|
+|m_axi_ps_AWADDR                     |  out|   64|       m_axi|                                  ps|       pointer|
+|m_axi_ps_AWID                       |  out|    1|       m_axi|                                  ps|       pointer|
+|m_axi_ps_AWLEN                      |  out|   32|       m_axi|                                  ps|       pointer|
+|m_axi_ps_AWSIZE                     |  out|    3|       m_axi|                                  ps|       pointer|
+|m_axi_ps_AWBURST                    |  out|    2|       m_axi|                                  ps|       pointer|
+|m_axi_ps_AWLOCK                     |  out|    2|       m_axi|                                  ps|       pointer|
+|m_axi_ps_AWCACHE                    |  out|    4|       m_axi|                                  ps|       pointer|
+|m_axi_ps_AWPROT                     |  out|    3|       m_axi|                                  ps|       pointer|
+|m_axi_ps_AWQOS                      |  out|    4|       m_axi|                                  ps|       pointer|
+|m_axi_ps_AWREGION                   |  out|    4|       m_axi|                                  ps|       pointer|
+|m_axi_ps_AWUSER                     |  out|    1|       m_axi|                                  ps|       pointer|
+|m_axi_ps_WVALID                     |  out|    1|       m_axi|                                  ps|       pointer|
+|m_axi_ps_WREADY                     |   in|    1|       m_axi|                                  ps|       pointer|
+|m_axi_ps_WDATA                      |  out|   32|       m_axi|                                  ps|       pointer|
+|m_axi_ps_WSTRB                      |  out|    4|       m_axi|                                  ps|       pointer|
+|m_axi_ps_WLAST                      |  out|    1|       m_axi|                                  ps|       pointer|
+|m_axi_ps_WID                        |  out|    1|       m_axi|                                  ps|       pointer|
+|m_axi_ps_WUSER                      |  out|    1|       m_axi|                                  ps|       pointer|
+|m_axi_ps_ARVALID                    |  out|    1|       m_axi|                                  ps|       pointer|
+|m_axi_ps_ARREADY                    |   in|    1|       m_axi|                                  ps|       pointer|
+|m_axi_ps_ARADDR                     |  out|   64|       m_axi|                                  ps|       pointer|
+|m_axi_ps_ARID                       |  out|    1|       m_axi|                                  ps|       pointer|
+|m_axi_ps_ARLEN                      |  out|   32|       m_axi|                                  ps|       pointer|
+|m_axi_ps_ARSIZE                     |  out|    3|       m_axi|                                  ps|       pointer|
+|m_axi_ps_ARBURST                    |  out|    2|       m_axi|                                  ps|       pointer|
+|m_axi_ps_ARLOCK                     |  out|    2|       m_axi|                                  ps|       pointer|
+|m_axi_ps_ARCACHE                    |  out|    4|       m_axi|                                  ps|       pointer|
+|m_axi_ps_ARPROT                     |  out|    3|       m_axi|                                  ps|       pointer|
+|m_axi_ps_ARQOS                      |  out|    4|       m_axi|                                  ps|       pointer|
+|m_axi_ps_ARREGION                   |  out|    4|       m_axi|                                  ps|       pointer|
+|m_axi_ps_ARUSER                     |  out|    1|       m_axi|                                  ps|       pointer|
+|m_axi_ps_RVALID                     |   in|    1|       m_axi|                                  ps|       pointer|
+|m_axi_ps_RREADY                     |  out|    1|       m_axi|                                  ps|       pointer|
+|m_axi_ps_RDATA                      |   in|   32|       m_axi|                                  ps|       pointer|
+|m_axi_ps_RLAST                      |   in|    1|       m_axi|                                  ps|       pointer|
+|m_axi_ps_RID                        |   in|    1|       m_axi|                                  ps|       pointer|
+|m_axi_ps_RFIFONUM                   |   in|    9|       m_axi|                                  ps|       pointer|
+|m_axi_ps_RUSER                      |   in|    1|       m_axi|                                  ps|       pointer|
+|m_axi_ps_RRESP                      |   in|    2|       m_axi|                                  ps|       pointer|
+|m_axi_ps_BVALID                     |   in|    1|       m_axi|                                  ps|       pointer|
+|m_axi_ps_BREADY                     |  out|    1|       m_axi|                                  ps|       pointer|
+|m_axi_ps_BRESP                      |   in|    2|       m_axi|                                  ps|       pointer|
+|m_axi_ps_BID                        |   in|    1|       m_axi|                                  ps|       pointer|
+|m_axi_ps_BUSER                      |   in|    1|       m_axi|                                  ps|       pointer|
+|ddr                                 |   in|   64|     ap_none|                                 ddr|        scalar|
+|ddr_ap_vld                          |   in|    1|     ap_none|                                 ddr|        scalar|
+|driver                              |   in|   64|     ap_none|                              driver|        scalar|
+|driver_ap_vld                       |   in|    1|     ap_none|                              driver|        scalar|
+|m_axi_mac_fifo_AWVALID              |  out|    1|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_AWREADY              |   in|    1|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_AWADDR               |  out|   64|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_AWID                 |  out|    1|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_AWLEN                |  out|   32|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_AWSIZE               |  out|    3|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_AWBURST              |  out|    2|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_AWLOCK               |  out|    2|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_AWCACHE              |  out|    4|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_AWPROT               |  out|    3|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_AWQOS                |  out|    4|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_AWREGION             |  out|    4|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_AWUSER               |  out|    1|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_WVALID               |  out|    1|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_WREADY               |   in|    1|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_WDATA                |  out|   32|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_WSTRB                |  out|    4|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_WLAST                |  out|    1|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_WID                  |  out|    1|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_WUSER                |  out|    1|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_ARVALID              |  out|    1|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_ARREADY              |   in|    1|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_ARADDR               |  out|   64|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_ARID                 |  out|    1|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_ARLEN                |  out|   32|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_ARSIZE               |  out|    3|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_ARBURST              |  out|    2|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_ARLOCK               |  out|    2|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_ARCACHE              |  out|    4|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_ARPROT               |  out|    3|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_ARQOS                |  out|    4|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_ARREGION             |  out|    4|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_ARUSER               |  out|    1|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_RVALID               |   in|    1|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_RREADY               |  out|    1|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_RDATA                |   in|   32|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_RLAST                |   in|    1|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_RID                  |   in|    1|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_RFIFONUM             |   in|    9|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_RUSER                |   in|    1|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_RRESP                |   in|    2|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_BVALID               |   in|    1|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_BREADY               |  out|    1|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_BRESP                |   in|    2|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_BID                  |   in|    1|       m_axi|                            mac_fifo|       pointer|
+|m_axi_mac_fifo_BUSER                |   in|    1|       m_axi|                            mac_fifo|       pointer|
+|fifo                                |   in|   64|     ap_none|                                fifo|        scalar|
+|fifo_ap_vld                         |   in|    1|     ap_none|                                fifo|        scalar|
+|m_axi_fifo_axi_full_AWVALID         |  out|    1|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWREADY         |   in|    1|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWADDR          |  out|   64|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWID            |  out|    1|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWLEN           |  out|   32|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWSIZE          |  out|    3|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWBURST         |  out|    2|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWLOCK          |  out|    2|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWCACHE         |  out|    4|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWPROT          |  out|    3|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWQOS           |  out|    4|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWREGION        |  out|    4|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_AWUSER          |  out|    1|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_WVALID          |  out|    1|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_WREADY          |   in|    1|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_WDATA           |  out|   32|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_WSTRB           |  out|    4|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_WLAST           |  out|    1|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_WID             |  out|    1|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_WUSER           |  out|    1|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARVALID         |  out|    1|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARREADY         |   in|    1|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARADDR          |  out|   64|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARID            |  out|    1|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARLEN           |  out|   32|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARSIZE          |  out|    3|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARBURST         |  out|    2|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARLOCK          |  out|    2|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARCACHE         |  out|    4|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARPROT          |  out|    3|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARQOS           |  out|    4|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARREGION        |  out|    4|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_ARUSER          |  out|    1|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_RVALID          |   in|    1|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_RREADY          |  out|    1|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_RDATA           |   in|   32|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_RLAST           |   in|    1|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_RID             |   in|    1|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_RFIFONUM        |   in|    9|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_RUSER           |   in|    1|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_RRESP           |   in|    2|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_BVALID          |   in|    1|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_BREADY          |  out|    1|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_BRESP           |   in|    2|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_BID             |   in|    1|       m_axi|                       fifo_axi_full|       pointer|
+|m_axi_fifo_axi_full_BUSER           |   in|    1|       m_axi|                       fifo_axi_full|       pointer|
+|fifo_axi_full_offset                |   in|   64|     ap_none|                fifo_axi_full_offset|        scalar|
+|fifo_axi_full_offset_ap_vld         |   in|    1|     ap_none|                fifo_axi_full_offset|        scalar|
+|timestamp                           |   in|   64|     ap_none|                           timestamp|        scalar|
+|timestamp_ap_vld                    |   in|    1|     ap_none|                           timestamp|        scalar|
+|logger_vlan_enable_mask             |   in|   32|     ap_none|             logger_vlan_enable_mask|       pointer|
+|logger_vlan_enable_mask_ap_vld      |   in|    1|     ap_none|             logger_vlan_enable_mask|       pointer|
+|multicast_recv_enable               |   in|   32|     ap_none|               multicast_recv_enable|       pointer|
+|multicast_recv_enable_ap_vld        |   in|    1|     ap_none|               multicast_recv_enable|       pointer|
+|unicast_filter_enable               |   in|   32|     ap_none|               unicast_filter_enable|       pointer|
+|unicast_filter_enable_ap_vld        |   in|    1|     ap_none|               unicast_filter_enable|       pointer|
+|unicast_vlan100_macaddr_lsb         |   in|   32|     ap_none|         unicast_vlan100_macaddr_lsb|       pointer|
+|unicast_vlan100_macaddr_lsb_ap_vld  |   in|    1|     ap_none|         unicast_vlan100_macaddr_lsb|       pointer|
+|unicast_vlan100_macaddr_msb         |   in|   32|     ap_none|         unicast_vlan100_macaddr_msb|       pointer|
+|unicast_vlan100_macaddr_msb_ap_vld  |   in|    1|     ap_none|         unicast_vlan100_macaddr_msb|       pointer|
+|unicast_vlan101_macaddr_lsb         |   in|   32|     ap_none|         unicast_vlan101_macaddr_lsb|       pointer|
+|unicast_vlan101_macaddr_lsb_ap_vld  |   in|    1|     ap_none|         unicast_vlan101_macaddr_lsb|       pointer|
+|unicast_vlan101_macaddr_msb         |   in|   32|     ap_none|         unicast_vlan101_macaddr_msb|       pointer|
+|unicast_vlan101_macaddr_msb_ap_vld  |   in|    1|     ap_none|         unicast_vlan101_macaddr_msb|       pointer|
+|unicast_vlan102_macaddr_lsb         |   in|   32|     ap_none|         unicast_vlan102_macaddr_lsb|       pointer|
+|unicast_vlan102_macaddr_lsb_ap_vld  |   in|    1|     ap_none|         unicast_vlan102_macaddr_lsb|       pointer|
+|unicast_vlan102_macaddr_msb         |   in|   32|     ap_none|         unicast_vlan102_macaddr_msb|       pointer|
+|unicast_vlan102_macaddr_msb_ap_vld  |   in|    1|     ap_none|         unicast_vlan102_macaddr_msb|       pointer|
+|unicast_vlan103_macaddr_lsb         |   in|   32|     ap_none|         unicast_vlan103_macaddr_lsb|       pointer|
+|unicast_vlan103_macaddr_lsb_ap_vld  |   in|    1|     ap_none|         unicast_vlan103_macaddr_lsb|       pointer|
+|unicast_vlan103_macaddr_msb         |   in|   32|     ap_none|         unicast_vlan103_macaddr_msb|       pointer|
+|unicast_vlan103_macaddr_msb_ap_vld  |   in|    1|     ap_none|         unicast_vlan103_macaddr_msb|       pointer|
+|unicast_vlan104_macaddr_lsb         |   in|   32|     ap_none|         unicast_vlan104_macaddr_lsb|       pointer|
+|unicast_vlan104_macaddr_lsb_ap_vld  |   in|    1|     ap_none|         unicast_vlan104_macaddr_lsb|       pointer|
+|unicast_vlan104_macaddr_msb         |   in|   32|     ap_none|         unicast_vlan104_macaddr_msb|       pointer|
+|unicast_vlan104_macaddr_msb_ap_vld  |   in|    1|     ap_none|         unicast_vlan104_macaddr_msb|       pointer|
+|unicast_vlan105_macaddr_lsb         |   in|   32|     ap_none|         unicast_vlan105_macaddr_lsb|       pointer|
+|unicast_vlan105_macaddr_lsb_ap_vld  |   in|    1|     ap_none|         unicast_vlan105_macaddr_lsb|       pointer|
+|unicast_vlan105_macaddr_msb         |   in|   32|     ap_none|         unicast_vlan105_macaddr_msb|       pointer|
+|unicast_vlan105_macaddr_msb_ap_vld  |   in|    1|     ap_none|         unicast_vlan105_macaddr_msb|       pointer|
+|unicast_vlan106_macaddr_lsb         |   in|   32|     ap_none|         unicast_vlan106_macaddr_lsb|       pointer|
+|unicast_vlan106_macaddr_lsb_ap_vld  |   in|    1|     ap_none|         unicast_vlan106_macaddr_lsb|       pointer|
+|unicast_vlan106_macaddr_msb         |   in|   32|     ap_none|         unicast_vlan106_macaddr_msb|       pointer|
+|unicast_vlan106_macaddr_msb_ap_vld  |   in|    1|     ap_none|         unicast_vlan106_macaddr_msb|       pointer|
+|unicast_vlan107_macaddr_lsb         |   in|   32|     ap_none|         unicast_vlan107_macaddr_lsb|       pointer|
+|unicast_vlan107_macaddr_lsb_ap_vld  |   in|    1|     ap_none|         unicast_vlan107_macaddr_lsb|       pointer|
+|unicast_vlan107_macaddr_msb         |   in|   32|     ap_none|         unicast_vlan107_macaddr_msb|       pointer|
+|unicast_vlan107_macaddr_msb_ap_vld  |   in|    1|     ap_none|         unicast_vlan107_macaddr_msb|       pointer|
+|unicast_vlan108_macaddr_lsb         |   in|   32|     ap_none|         unicast_vlan108_macaddr_lsb|       pointer|
+|unicast_vlan108_macaddr_lsb_ap_vld  |   in|    1|     ap_none|         unicast_vlan108_macaddr_lsb|       pointer|
+|unicast_vlan108_macaddr_msb         |   in|   32|     ap_none|         unicast_vlan108_macaddr_msb|       pointer|
+|unicast_vlan108_macaddr_msb_ap_vld  |   in|    1|     ap_none|         unicast_vlan108_macaddr_msb|       pointer|
+|unicast_vlan109_macaddr_lsb         |   in|   32|     ap_none|         unicast_vlan109_macaddr_lsb|       pointer|
+|unicast_vlan109_macaddr_lsb_ap_vld  |   in|    1|     ap_none|         unicast_vlan109_macaddr_lsb|       pointer|
+|unicast_vlan109_macaddr_msb         |   in|   32|     ap_none|         unicast_vlan109_macaddr_msb|       pointer|
+|unicast_vlan109_macaddr_msb_ap_vld  |   in|    1|     ap_none|         unicast_vlan109_macaddr_msb|       pointer|
+|unicast_vlan110_macaddr_lsb         |   in|   32|     ap_none|         unicast_vlan110_macaddr_lsb|       pointer|
+|unicast_vlan110_macaddr_lsb_ap_vld  |   in|    1|     ap_none|         unicast_vlan110_macaddr_lsb|       pointer|
+|unicast_vlan110_macaddr_msb         |   in|   32|     ap_none|         unicast_vlan110_macaddr_msb|       pointer|
+|unicast_vlan110_macaddr_msb_ap_vld  |   in|    1|     ap_none|         unicast_vlan110_macaddr_msb|       pointer|
+|unicast_vlan111_macaddr_lsb         |   in|   32|     ap_none|         unicast_vlan111_macaddr_lsb|       pointer|
+|unicast_vlan111_macaddr_lsb_ap_vld  |   in|    1|     ap_none|         unicast_vlan111_macaddr_lsb|       pointer|
+|unicast_vlan111_macaddr_msb         |   in|   32|     ap_none|         unicast_vlan111_macaddr_msb|       pointer|
+|unicast_vlan111_macaddr_msb_ap_vld  |   in|    1|     ap_none|         unicast_vlan111_macaddr_msb|       pointer|
+|unicast_vlan112_macaddr_lsb         |   in|   32|     ap_none|         unicast_vlan112_macaddr_lsb|       pointer|
+|unicast_vlan112_macaddr_lsb_ap_vld  |   in|    1|     ap_none|         unicast_vlan112_macaddr_lsb|       pointer|
+|unicast_vlan112_macaddr_msb         |   in|   32|     ap_none|         unicast_vlan112_macaddr_msb|       pointer|
+|unicast_vlan112_macaddr_msb_ap_vld  |   in|    1|     ap_none|         unicast_vlan112_macaddr_msb|       pointer|
+|unicast_vlan113_macaddr_lsb         |   in|   32|     ap_none|         unicast_vlan113_macaddr_lsb|       pointer|
+|unicast_vlan113_macaddr_lsb_ap_vld  |   in|    1|     ap_none|         unicast_vlan113_macaddr_lsb|       pointer|
+|unicast_vlan113_macaddr_msb         |   in|   32|     ap_none|         unicast_vlan113_macaddr_msb|       pointer|
+|unicast_vlan113_macaddr_msb_ap_vld  |   in|    1|     ap_none|         unicast_vlan113_macaddr_msb|       pointer|
+|unicast_vlan114_macaddr_lsb         |   in|   32|     ap_none|         unicast_vlan114_macaddr_lsb|       pointer|
+|unicast_vlan114_macaddr_lsb_ap_vld  |   in|    1|     ap_none|         unicast_vlan114_macaddr_lsb|       pointer|
+|unicast_vlan114_macaddr_msb         |   in|   32|     ap_none|         unicast_vlan114_macaddr_msb|       pointer|
+|unicast_vlan114_macaddr_msb_ap_vld  |   in|    1|     ap_none|         unicast_vlan114_macaddr_msb|       pointer|
+|unicast_vlan115_macaddr_lsb         |   in|   32|     ap_none|         unicast_vlan115_macaddr_lsb|       pointer|
+|unicast_vlan115_macaddr_lsb_ap_vld  |   in|    1|     ap_none|         unicast_vlan115_macaddr_lsb|       pointer|
+|unicast_vlan115_macaddr_msb         |   in|   32|     ap_none|         unicast_vlan115_macaddr_msb|       pointer|
+|unicast_vlan115_macaddr_msb_ap_vld  |   in|    1|     ap_none|         unicast_vlan115_macaddr_msb|       pointer|
+|unicast_vlan116_macaddr_lsb         |   in|   32|     ap_none|         unicast_vlan116_macaddr_lsb|       pointer|
+|unicast_vlan116_macaddr_lsb_ap_vld  |   in|    1|     ap_none|         unicast_vlan116_macaddr_lsb|       pointer|
+|unicast_vlan116_macaddr_msb         |   in|   32|     ap_none|         unicast_vlan116_macaddr_msb|       pointer|
+|unicast_vlan116_macaddr_msb_ap_vld  |   in|    1|     ap_none|         unicast_vlan116_macaddr_msb|       pointer|
+|unicast_vlan117_macaddr_lsb         |   in|   32|     ap_none|         unicast_vlan117_macaddr_lsb|       pointer|
+|unicast_vlan117_macaddr_lsb_ap_vld  |   in|    1|     ap_none|         unicast_vlan117_macaddr_lsb|       pointer|
+|unicast_vlan117_macaddr_msb         |   in|   32|     ap_none|         unicast_vlan117_macaddr_msb|       pointer|
+|unicast_vlan117_macaddr_msb_ap_vld  |   in|    1|     ap_none|         unicast_vlan117_macaddr_msb|       pointer|
+|unicast_vlan118_macaddr_lsb         |   in|   32|     ap_none|         unicast_vlan118_macaddr_lsb|       pointer|
+|unicast_vlan118_macaddr_lsb_ap_vld  |   in|    1|     ap_none|         unicast_vlan118_macaddr_lsb|       pointer|
+|unicast_vlan118_macaddr_msb         |   in|   32|     ap_none|         unicast_vlan118_macaddr_msb|       pointer|
+|unicast_vlan118_macaddr_msb_ap_vld  |   in|    1|     ap_none|         unicast_vlan118_macaddr_msb|       pointer|
+|unicast_vlan119_macaddr_lsb         |   in|   32|     ap_none|         unicast_vlan119_macaddr_lsb|       pointer|
+|unicast_vlan119_macaddr_lsb_ap_vld  |   in|    1|     ap_none|         unicast_vlan119_macaddr_lsb|       pointer|
+|unicast_vlan119_macaddr_msb         |   in|   32|     ap_none|         unicast_vlan119_macaddr_msb|       pointer|
+|unicast_vlan119_macaddr_msb_ap_vld  |   in|    1|     ap_none|         unicast_vlan119_macaddr_msb|       pointer|
+|unicast_vlan120_macaddr_lsb         |   in|   32|     ap_none|         unicast_vlan120_macaddr_lsb|       pointer|
+|unicast_vlan120_macaddr_lsb_ap_vld  |   in|    1|     ap_none|         unicast_vlan120_macaddr_lsb|       pointer|
+|unicast_vlan120_macaddr_msb         |   in|   32|     ap_none|         unicast_vlan120_macaddr_msb|       pointer|
+|unicast_vlan120_macaddr_msb_ap_vld  |   in|    1|     ap_none|         unicast_vlan120_macaddr_msb|       pointer|
+|unicast_vlan121_macaddr_lsb         |   in|   32|     ap_none|         unicast_vlan121_macaddr_lsb|       pointer|
+|unicast_vlan121_macaddr_lsb_ap_vld  |   in|    1|     ap_none|         unicast_vlan121_macaddr_lsb|       pointer|
+|unicast_vlan121_macaddr_msb         |   in|   32|     ap_none|         unicast_vlan121_macaddr_msb|       pointer|
+|unicast_vlan121_macaddr_msb_ap_vld  |   in|    1|     ap_none|         unicast_vlan121_macaddr_msb|       pointer|
+|unicast_vlan122_macaddr_lsb         |   in|   32|     ap_none|         unicast_vlan122_macaddr_lsb|       pointer|
+|unicast_vlan122_macaddr_lsb_ap_vld  |   in|    1|     ap_none|         unicast_vlan122_macaddr_lsb|       pointer|
+|unicast_vlan122_macaddr_msb         |   in|   32|     ap_none|         unicast_vlan122_macaddr_msb|       pointer|
+|unicast_vlan122_macaddr_msb_ap_vld  |   in|    1|     ap_none|         unicast_vlan122_macaddr_msb|       pointer|
+|unicast_vlan123_macaddr_lsb         |   in|   32|     ap_none|         unicast_vlan123_macaddr_lsb|       pointer|
+|unicast_vlan123_macaddr_lsb_ap_vld  |   in|    1|     ap_none|         unicast_vlan123_macaddr_lsb|       pointer|
+|unicast_vlan123_macaddr_msb         |   in|   32|     ap_none|         unicast_vlan123_macaddr_msb|       pointer|
+|unicast_vlan123_macaddr_msb_ap_vld  |   in|    1|     ap_none|         unicast_vlan123_macaddr_msb|       pointer|
+|unicast_vlan124_macaddr_lsb         |   in|   32|     ap_none|         unicast_vlan124_macaddr_lsb|       pointer|
+|unicast_vlan124_macaddr_lsb_ap_vld  |   in|    1|     ap_none|         unicast_vlan124_macaddr_lsb|       pointer|
+|unicast_vlan124_macaddr_msb         |   in|   32|     ap_none|         unicast_vlan124_macaddr_msb|       pointer|
+|unicast_vlan124_macaddr_msb_ap_vld  |   in|    1|     ap_none|         unicast_vlan124_macaddr_msb|       pointer|
+|unicast_vlan125_macaddr_lsb         |   in|   32|     ap_none|         unicast_vlan125_macaddr_lsb|       pointer|
+|unicast_vlan125_macaddr_lsb_ap_vld  |   in|    1|     ap_none|         unicast_vlan125_macaddr_lsb|       pointer|
+|unicast_vlan125_macaddr_msb         |   in|   32|     ap_none|         unicast_vlan125_macaddr_msb|       pointer|
+|unicast_vlan125_macaddr_msb_ap_vld  |   in|    1|     ap_none|         unicast_vlan125_macaddr_msb|       pointer|
+|unicast_vlan126_macaddr_lsb         |   in|   32|     ap_none|         unicast_vlan126_macaddr_lsb|       pointer|
+|unicast_vlan126_macaddr_lsb_ap_vld  |   in|    1|     ap_none|         unicast_vlan126_macaddr_lsb|       pointer|
+|unicast_vlan126_macaddr_msb         |   in|   32|     ap_none|         unicast_vlan126_macaddr_msb|       pointer|
+|unicast_vlan126_macaddr_msb_ap_vld  |   in|    1|     ap_none|         unicast_vlan126_macaddr_msb|       pointer|
+|unicast_vlan127_macaddr_lsb         |   in|   32|     ap_none|         unicast_vlan127_macaddr_lsb|       pointer|
+|unicast_vlan127_macaddr_lsb_ap_vld  |   in|    1|     ap_none|         unicast_vlan127_macaddr_lsb|       pointer|
+|unicast_vlan127_macaddr_msb         |   in|   32|     ap_none|         unicast_vlan127_macaddr_msb|       pointer|
+|unicast_vlan127_macaddr_msb_ap_vld  |   in|    1|     ap_none|         unicast_vlan127_macaddr_msb|       pointer|
+|unicast_vlan128_macaddr_lsb         |   in|   32|     ap_none|         unicast_vlan128_macaddr_lsb|       pointer|
+|unicast_vlan128_macaddr_lsb_ap_vld  |   in|    1|     ap_none|         unicast_vlan128_macaddr_lsb|       pointer|
+|unicast_vlan128_macaddr_msb         |   in|   32|     ap_none|         unicast_vlan128_macaddr_msb|       pointer|
+|unicast_vlan128_macaddr_msb_ap_vld  |   in|    1|     ap_none|         unicast_vlan128_macaddr_msb|       pointer|
+|unicast_vlan129_macaddr_lsb         |   in|   32|     ap_none|         unicast_vlan129_macaddr_lsb|       pointer|
+|unicast_vlan129_macaddr_lsb_ap_vld  |   in|    1|     ap_none|         unicast_vlan129_macaddr_lsb|       pointer|
+|unicast_vlan129_macaddr_msb         |   in|   32|     ap_none|         unicast_vlan129_macaddr_msb|       pointer|
+|unicast_vlan129_macaddr_msb_ap_vld  |   in|    1|     ap_none|         unicast_vlan129_macaddr_msb|       pointer|
+|log_all_mask                        |   in|   32|     ap_none|                        log_all_mask|       pointer|
+|log_all_mask_ap_vld                 |   in|    1|     ap_none|                        log_all_mask|       pointer|
+|vlan100_received                    |  out|   32|      ap_vld|                    vlan100_received|       pointer|
+|vlan100_received_ap_vld             |  out|    1|      ap_vld|                    vlan100_received|       pointer|
+|vlan101_received                    |  out|   32|      ap_vld|                    vlan101_received|       pointer|
+|vlan101_received_ap_vld             |  out|    1|      ap_vld|                    vlan101_received|       pointer|
+|vlan102_received                    |  out|   32|      ap_vld|                    vlan102_received|       pointer|
+|vlan102_received_ap_vld             |  out|    1|      ap_vld|                    vlan102_received|       pointer|
+|vlan103_received                    |  out|   32|      ap_vld|                    vlan103_received|       pointer|
+|vlan103_received_ap_vld             |  out|    1|      ap_vld|                    vlan103_received|       pointer|
+|vlan104_received                    |  out|   32|      ap_vld|                    vlan104_received|       pointer|
+|vlan104_received_ap_vld             |  out|    1|      ap_vld|                    vlan104_received|       pointer|
+|vlan105_received                    |  out|   32|      ap_vld|                    vlan105_received|       pointer|
+|vlan105_received_ap_vld             |  out|    1|      ap_vld|                    vlan105_received|       pointer|
+|vlan106_received                    |  out|   32|      ap_vld|                    vlan106_received|       pointer|
+|vlan106_received_ap_vld             |  out|    1|      ap_vld|                    vlan106_received|       pointer|
+|vlan107_received                    |  out|   32|      ap_vld|                    vlan107_received|       pointer|
+|vlan107_received_ap_vld             |  out|    1|      ap_vld|                    vlan107_received|       pointer|
+|vlan108_received                    |  out|   32|      ap_vld|                    vlan108_received|       pointer|
+|vlan108_received_ap_vld             |  out|    1|      ap_vld|                    vlan108_received|       pointer|
+|vlan109_received                    |  out|   32|      ap_vld|                    vlan109_received|       pointer|
+|vlan109_received_ap_vld             |  out|    1|      ap_vld|                    vlan109_received|       pointer|
+|vlan110_received                    |  out|   32|      ap_vld|                    vlan110_received|       pointer|
+|vlan110_received_ap_vld             |  out|    1|      ap_vld|                    vlan110_received|       pointer|
+|vlan111_received                    |  out|   32|      ap_vld|                    vlan111_received|       pointer|
+|vlan111_received_ap_vld             |  out|    1|      ap_vld|                    vlan111_received|       pointer|
+|vlan112_received                    |  out|   32|      ap_vld|                    vlan112_received|       pointer|
+|vlan112_received_ap_vld             |  out|    1|      ap_vld|                    vlan112_received|       pointer|
+|vlan113_received                    |  out|   32|      ap_vld|                    vlan113_received|       pointer|
+|vlan113_received_ap_vld             |  out|    1|      ap_vld|                    vlan113_received|       pointer|
+|vlan114_received                    |  out|   32|      ap_vld|                    vlan114_received|       pointer|
+|vlan114_received_ap_vld             |  out|    1|      ap_vld|                    vlan114_received|       pointer|
+|vlan115_received                    |  out|   32|      ap_vld|                    vlan115_received|       pointer|
+|vlan115_received_ap_vld             |  out|    1|      ap_vld|                    vlan115_received|       pointer|
+|vlan116_received                    |  out|   32|      ap_vld|                    vlan116_received|       pointer|
+|vlan116_received_ap_vld             |  out|    1|      ap_vld|                    vlan116_received|       pointer|
+|vlan117_received                    |  out|   32|      ap_vld|                    vlan117_received|       pointer|
+|vlan117_received_ap_vld             |  out|    1|      ap_vld|                    vlan117_received|       pointer|
+|vlan118_received                    |  out|   32|      ap_vld|                    vlan118_received|       pointer|
+|vlan118_received_ap_vld             |  out|    1|      ap_vld|                    vlan118_received|       pointer|
+|vlan119_received                    |  out|   32|      ap_vld|                    vlan119_received|       pointer|
+|vlan119_received_ap_vld             |  out|    1|      ap_vld|                    vlan119_received|       pointer|
+|vlan120_received                    |  out|   32|      ap_vld|                    vlan120_received|       pointer|
+|vlan120_received_ap_vld             |  out|    1|      ap_vld|                    vlan120_received|       pointer|
+|vlan121_received                    |  out|   32|      ap_vld|                    vlan121_received|       pointer|
+|vlan121_received_ap_vld             |  out|    1|      ap_vld|                    vlan121_received|       pointer|
+|vlan122_received                    |  out|   32|      ap_vld|                    vlan122_received|       pointer|
+|vlan122_received_ap_vld             |  out|    1|      ap_vld|                    vlan122_received|       pointer|
+|vlan123_received                    |  out|   32|      ap_vld|                    vlan123_received|       pointer|
+|vlan123_received_ap_vld             |  out|    1|      ap_vld|                    vlan123_received|       pointer|
+|vlan124_received                    |  out|   32|      ap_vld|                    vlan124_received|       pointer|
+|vlan124_received_ap_vld             |  out|    1|      ap_vld|                    vlan124_received|       pointer|
+|vlan125_received                    |  out|   32|      ap_vld|                    vlan125_received|       pointer|
+|vlan125_received_ap_vld             |  out|    1|      ap_vld|                    vlan125_received|       pointer|
+|vlan126_received                    |  out|   32|      ap_vld|                    vlan126_received|       pointer|
+|vlan126_received_ap_vld             |  out|    1|      ap_vld|                    vlan126_received|       pointer|
+|vlan127_received                    |  out|   32|      ap_vld|                    vlan127_received|       pointer|
+|vlan127_received_ap_vld             |  out|    1|      ap_vld|                    vlan127_received|       pointer|
+|vlan128_received                    |  out|   32|      ap_vld|                    vlan128_received|       pointer|
+|vlan128_received_ap_vld             |  out|    1|      ap_vld|                    vlan128_received|       pointer|
+|vlan129_received                    |  out|   32|      ap_vld|                    vlan129_received|       pointer|
+|vlan129_received_ap_vld             |  out|    1|      ap_vld|                    vlan129_received|       pointer|
+|droped                              |  out|   32|      ap_vld|                              droped|       pointer|
+|droped_ap_vld                       |  out|    1|      ap_vld|                              droped|       pointer|
++------------------------------------+-----+-----+------------+------------------------------------+--------------+
+

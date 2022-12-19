@@ -1,0 +1,492 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_ref.h:678:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_ref.h:692:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="or_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_ref.h:706:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="xor_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:29:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="rx_ringbuffer_header" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:33:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="rx_ringbuffer_header" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:48:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="rx_fifo" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:92:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="rx_fifo" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:249:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:252:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_vlan100" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:254:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_vlan101" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:256:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_vlan102" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:258:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_vlan103" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:260:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_vlan104" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:262:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_vlan105" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:264:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_vlan106" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:266:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_vlan107" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:268:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_vlan108" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:270:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_vlan109" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:273:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_vlan110" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:275:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_vlan111" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:277:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_vlan112" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:279:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_vlan113" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:281:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_vlan114" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:283:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_vlan115" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:285:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_vlan116" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:287:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_vlan117" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:289:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_vlan118" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:291:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_vlan119" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:294:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_vlan120" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:296:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_vlan121" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:298:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_vlan122" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:300:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_vlan123" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:302:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_vlan124" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:304:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_vlan125" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:306:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_vlan126" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:308:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_vlan127" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:310:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_vlan128" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:312:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_vlan129" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:315:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = counter_droped" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:318:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=last_log_tx_index" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:320:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=last_tap_tx_index" ARG_PragmaType="reset" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:916:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:957:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:958:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=3 max=420 avg=160" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:976:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1015:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1016:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tx_ddr" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=3 max=440 avg=160" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/maclogger_2022_30port/maclogger/solution1/csynth.tcl:17:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=mac_logger" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/maclogger_2022_30port/maclogger/solution1/directives.tcl:6:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=mac_logger" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1134:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=1024*5 port=fifo offset=slave bundle=mac_fifo" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1135:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=fifo bundle=axilites offset=0x10" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1137:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi bundle=fifo_axi_full depth=1028 max_read_burst_length=16 max_write_burst_length=16 num_read_outstanding=16 num_write_outstanding=16 port=fifo_axi_full offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1138:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=fifo_axi_full bundle=axilites offset=0x1c" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1143:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=2048*200/4 port=log_ddr name=ddr offset=slave bundle=ps num_read_outstanding=16 num_write_outstanding=16 max_read_burst_length=16 max_write_burst_length=64 max_widen_bitwidth=64" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1144:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=log_ddr bundle=axilites name=ddr offset=0x28" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1145:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=2048*200/4 port=tap_ddr name=driver offset=slave bundle=ps num_read_outstanding=16 num_write_outstanding=16 max_read_burst_length=16 max_write_burst_length=64 max_widen_bitwidth=64" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1146:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=tap_ddr bundle=axilites name=driver offset=0x34" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1148:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=status offset=0x40 register bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1149:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=writeStatus offset=0x48 register bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1151:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=logger_vlan_enable_mask offset=0x50 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1153:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=vlan100_received offset=0x58 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1154:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=vlan101_received offset=0x60 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1155:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=vlan102_received offset=0x68 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1156:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=vlan103_received offset=0x70 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1157:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=vlan104_received offset=0x78 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1158:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=vlan105_received offset=0x80 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1159:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=vlan106_received offset=0x88 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1160:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=vlan107_received offset=0x90 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1161:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=vlan108_received offset=0x98 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1162:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=vlan109_received offset=0xa0 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1164:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=vlan110_received offset=0xa8 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1165:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=vlan111_received offset=0xb0 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1166:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=vlan112_received offset=0xb8 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1167:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=vlan113_received offset=0xc0 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1168:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=vlan114_received offset=0xc8 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1169:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=vlan115_received offset=0xd0 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1170:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=vlan116_received offset=0xd8 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1171:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=vlan117_received offset=0xe0 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1172:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=vlan118_received offset=0xe8 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1173:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=vlan119_received offset=0xf0 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1175:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=vlan120_received offset=0xf8 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1176:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=vlan121_received offset=0x110 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1177:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=vlan122_received offset=0x118 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1178:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=vlan123_received offset=0x120 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1179:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=vlan124_received offset=0x128 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1180:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=vlan125_received offset=0x130 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1181:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=vlan126_received offset=0x138 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1182:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=vlan127_received offset=0x140 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1183:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=vlan128_received offset=0x148 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1184:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=vlan129_received offset=0x150 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1185:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=droped offset=0x158 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1187:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=multicast_recv_enable offset=0x160 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1188:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_filter_enable offset=0x168 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1189:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan100_macaddr_lsb offset=0x170 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1190:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan100_macaddr_msb offset=0x178 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1191:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan101_macaddr_lsb offset=0x180 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1192:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan101_macaddr_msb offset=0x188 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1193:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan102_macaddr_lsb offset=0x190 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1194:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan102_macaddr_msb offset=0x198 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1195:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan103_macaddr_lsb offset=0x1a0 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1196:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan103_macaddr_msb offset=0x1a8 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1197:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan104_macaddr_lsb offset=0x1b0 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1198:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan104_macaddr_msb offset=0x1b8 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1199:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan105_macaddr_lsb offset=0x1c0 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1200:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan105_macaddr_msb offset=0x1c8 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1201:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan106_macaddr_lsb offset=0x1d0 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1202:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan106_macaddr_msb offset=0x1d8 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1203:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan107_macaddr_lsb offset=0x1e0 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1204:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan107_macaddr_msb offset=0x1e8 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1205:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan108_macaddr_lsb offset=0x1f0 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1206:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan108_macaddr_msb offset=0x1f8 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1207:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan109_macaddr_lsb offset=0x200 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1208:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan109_macaddr_msb offset=0x208 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1209:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan110_macaddr_lsb offset=0x210 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1210:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan110_macaddr_msb offset=0x218 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1211:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan111_macaddr_lsb offset=0x220 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1212:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan111_macaddr_msb offset=0x228 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1213:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan112_macaddr_lsb offset=0x230 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1214:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan112_macaddr_msb offset=0x238 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1215:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan113_macaddr_lsb offset=0x240 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1216:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan113_macaddr_msb offset=0x248 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1217:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan114_macaddr_lsb offset=0x250 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1218:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan114_macaddr_msb offset=0x258 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1219:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan115_macaddr_lsb offset=0x260 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1220:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan115_macaddr_msb offset=0x268 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1221:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan116_macaddr_lsb offset=0x270 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1222:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan116_macaddr_msb offset=0x278 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1223:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan117_macaddr_lsb offset=0x280 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1224:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan117_macaddr_msb offset=0x288 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1225:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan118_macaddr_lsb offset=0x290 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1226:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan118_macaddr_msb offset=0x298 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1227:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan119_macaddr_lsb offset=0x2a0 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1228:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan119_macaddr_msb offset=0x2a8 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1229:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan120_macaddr_lsb offset=0x2b0 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1230:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan120_macaddr_msb offset=0x2b8 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1231:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan121_macaddr_lsb offset=0x2c0 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1232:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan121_macaddr_msb offset=0x2c8 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1233:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan122_macaddr_lsb offset=0x2d0 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1234:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan122_macaddr_msb offset=0x2d8 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1235:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan123_macaddr_lsb offset=0x2e0 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1236:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan123_macaddr_msb offset=0x2e8 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1237:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan124_macaddr_lsb offset=0x2f0 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1238:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan124_macaddr_msb offset=0x2f8 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1239:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan125_macaddr_lsb offset=0x300 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1240:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan125_macaddr_msb offset=0x308 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1241:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan126_macaddr_lsb offset=0x310 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1242:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan126_macaddr_msb offset=0x318 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1243:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan127_macaddr_lsb offset=0x320 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1244:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan127_macaddr_msb offset=0x328 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1245:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan128_macaddr_lsb offset=0x330 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1246:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan128_macaddr_msb offset=0x338 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1247:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan129_macaddr_lsb offset=0x340 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1248:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=unicast_vlan129_macaddr_msb offset=0x348 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1249:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=log_all_mask offset=0x350 bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1253:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=axilites" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1254:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=ap_ctrl_chain port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mac_logger.cpp:1264:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_logger" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_ref.h:678:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_ref.h:692:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="or_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_ref.h:706:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="xor_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_ref.h:678:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_ref.h:692:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="or_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_ref.h:706:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="xor_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+
