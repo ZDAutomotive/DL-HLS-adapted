@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="maclogger" solutionName="solution1" date="2022-12-19T09:55:22.279+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'last_tap_tx_index' is power-on initialization." projectName="maclogger" solutionName="solution1" date="2022-12-19T09:55:18.243+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'last_log_tx_index' is power-on initialization." projectName="maclogger" solutionName="solution1" date="2022-12-19T09:55:16.958+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'counter_droped' is power-on initialization." projectName="maclogger" solutionName="solution1" date="2022-12-19T09:55:16.887+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'counter_vlan129' is power-on initialization." projectName="maclogger" solutionName="solution1" date="2022-12-19T09:55:16.836+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'counter_vlan128' is power-on initialization." projectName="maclogger" solutionName="solution1" date="2022-12-19T09:55:16.804+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'counter_vlan127' is power-on initialization." projectName="maclogger" solutionName="solution1" date="2022-12-19T09:55:16.765+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'counter_vlan126' is power-on initialization." projectName="maclogger" solutionName="solution1" date="2022-12-19T09:55:16.745+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'counter_vlan125' is power-on initialization." projectName="maclogger" solutionName="solution1" date="2022-12-19T09:55:16.711+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'counter_vlan124' is power-on initialization." projectName="maclogger" solutionName="solution1" date="2022-12-19T09:55:16.680+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'counter_vlan123' is power-on initialization." projectName="maclogger" solutionName="solution1" date="2022-12-19T09:55:16.664+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'counter_vlan122' is power-on initialization." projectName="maclogger" solutionName="solution1" date="2022-12-19T09:55:16.633+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'counter_vlan121' is power-on initialization." projectName="maclogger" solutionName="solution1" date="2022-12-19T09:55:16.595+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'counter_vlan120' is power-on initialization." projectName="maclogger" solutionName="solution1" date="2022-12-19T09:55:16.579+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'counter_vlan119' is power-on initialization." projectName="maclogger" solutionName="solution1" date="2022-12-19T09:55:16.564+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'counter_vlan118' is power-on initialization." projectName="maclogger" solutionName="solution1" date="2022-12-19T09:55:16.533+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'counter_vlan117' is power-on initialization." projectName="maclogger" solutionName="solution1" date="2022-12-19T09:55:16.526+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'counter_vlan116' is power-on initialization." projectName="maclogger" solutionName="solution1" date="2022-12-19T09:55:16.510+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'counter_vlan115' is power-on initialization." projectName="maclogger" solutionName="solution1" date="2022-12-19T09:55:16.495+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'counter_vlan114' is power-on initialization." projectName="maclogger" solutionName="solution1" date="2022-12-19T09:55:16.448+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'counter_vlan113' is power-on initialization." projectName="maclogger" solutionName="solution1" date="2022-12-19T09:55:16.432+0100" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

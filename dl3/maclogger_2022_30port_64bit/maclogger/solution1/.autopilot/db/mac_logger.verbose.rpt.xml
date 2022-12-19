@@ -1,0 +1,369 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'mac_logger'" level="0">
+<item name = "Date">Mon Dec 19 09:55:25 2022
+</item>
+<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Project">maclogger</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu5ev-sfvc784-2-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">34, 7781, 0.340 us, 77.810 us, 32, 6800, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="entry_proc_U0">entry_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="rx_ringbuffer_header_U0">rx_ringbuffer_header, 31, 31, 0.310 us, 0.310 us, 31, 31, no</column>
+<column name="rx_fifo_U0">rx_fifo, 10, 6799, 0.100 us, 67.990 us, 10, 6799, no</column>
+<column name="tx_ddr_U0">tx_ddr, 2, 981, 20.000 ns, 9.810 us, 2, 981, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 36, -</column>
+<column name="FIFO">-, -, 6534, 4422, -</column>
+<column name="Instance">0, 6, 14500, 22708, 0</column>
+<column name="Memory">4, -, 128, 16, 0</column>
+<column name="Multiplexer">-, -, -, 63, -</column>
+<column name="Register">-, -, 7, -, -</column>
+<specialColumn name="Available">288, 1248, 234240, 117120, 64</specialColumn>
+<specialColumn name="Utilization (%)">1, ~0, 9, 23, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="axilites_s_axi_U">axilites_s_axi, 0, 0, 3986, 6728, 0</column>
+<column name="entry_proc_U0">entry_proc, 0, 0, 2, 587, 0</column>
+<column name="fifo_axi_full_m_axi_U">fifo_axi_full_m_axi, 0, 0, 710, 1274, 0</column>
+<column name="mac_fifo_m_axi_U">mac_fifo_m_axi, 0, 0, 710, 1274, 0</column>
+<column name="ps_m_axi_U">ps_m_axi, 0, 0, 764, 2297, 0</column>
+<column name="rx_fifo_U0">rx_fifo, 0, 0, 857, 2005, 0</column>
+<column name="rx_ringbuffer_header_U0">rx_ringbuffer_header, 0, 0, 429, 481, 0</column>
+<column name="tx_ddr_U0">tx_ddr, 0, 6, 7042, 8062, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="data_buf_U">data_buf_RAM_AUTO_1R1W, 4, 0, 0, 0, 512, 32, 1, 16384</column>
+<column name="log_header_U">log_header_RAM_AUTO_1R1W, 0, 64, 8, 0, 4, 64, 1, 256</column>
+<column name="tap_header_U">log_header_RAM_AUTO_1R1W, 0, 64, 8, 0, 4, 64, 1, 256</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+<column name="ddr_c_channel_U">0, 99, 0, -, 2, 64, 128</column>
+<column name="driver_c_channel_U">0, 99, 0, -, 2, 64, 128</column>
+<column name="log_all_mask_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="logger_vlan_enable_mask_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="multicast_recv_enable_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_filter_enable_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan100_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan100_macaddr_msb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan101_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan101_macaddr_msb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan102_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan102_macaddr_msb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan103_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan103_macaddr_msb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan104_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan104_macaddr_msb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan105_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan105_macaddr_msb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan106_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan106_macaddr_msb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan107_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan107_macaddr_msb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan108_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan108_macaddr_msb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan109_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan109_macaddr_msb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan110_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan110_macaddr_msb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan111_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan111_macaddr_msb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan112_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan112_macaddr_msb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan113_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan113_macaddr_msb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan114_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan114_macaddr_msb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan115_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan115_macaddr_msb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan116_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan116_macaddr_msb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan117_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan117_macaddr_msb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan118_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan118_macaddr_msb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan119_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan119_macaddr_msb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan120_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan120_macaddr_msb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan121_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan121_macaddr_msb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan122_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan122_macaddr_msb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan123_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan123_macaddr_msb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan124_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan124_macaddr_msb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan125_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan125_macaddr_msb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan126_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan126_macaddr_msb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan127_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan127_macaddr_msb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan128_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan128_macaddr_msb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan129_macaddr_lsb_c_U">0, 99, 0, -, 3, 32, 96</column>
+<column name="unicast_vlan129_macaddr_msb_c_U">0, 99, 0, -, 3, 32, 96</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_channel_done_ddr_c_channel">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_driver_c_channel">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_log_header">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_tap_header">and, 0, 0, 2, 1, 1</column>
+<column name="ap_idle">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_ready">and, 0, 0, 2, 1, 1</column>
+<column name="entry_proc_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="rx_fifo_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="rx_ringbuffer_header_U0_ap_continue">and, 0, 0, 2, 1, 1</column>
+<column name="rx_ringbuffer_header_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="tx_ddr_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_ddr_c_channel">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_driver_c_channel">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_log_header">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_tap_header">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_entry_proc_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_rx_fifo_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_rx_ringbuffer_header_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_sync_reg_channel_write_ddr_c_channel">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_driver_c_channel">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_log_header">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_tap_header">9, 2, 1, 2</column>
+<column name="ap_sync_reg_entry_proc_U0_ap_ready">9, 2, 1, 2</column>
+<column name="ap_sync_reg_rx_fifo_U0_ap_ready">9, 2, 1, 2</column>
+<column name="ap_sync_reg_rx_ringbuffer_header_U0_ap_ready">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_sync_reg_channel_write_ddr_c_channel">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_driver_c_channel">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_log_header">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_tap_header">1, 0, 1, 0</column>
+<column name="ap_sync_reg_entry_proc_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_rx_fifo_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_rx_ringbuffer_header_U0_ap_ready">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="s_axi_axilites_AWVALID">in, 1, s_axi, axilites, pointer</column>
+<column name="s_axi_axilites_AWREADY">out, 1, s_axi, axilites, pointer</column>
+<column name="s_axi_axilites_AWADDR">in, 10, s_axi, axilites, pointer</column>
+<column name="s_axi_axilites_WVALID">in, 1, s_axi, axilites, pointer</column>
+<column name="s_axi_axilites_WREADY">out, 1, s_axi, axilites, pointer</column>
+<column name="s_axi_axilites_WDATA">in, 32, s_axi, axilites, pointer</column>
+<column name="s_axi_axilites_WSTRB">in, 4, s_axi, axilites, pointer</column>
+<column name="s_axi_axilites_ARVALID">in, 1, s_axi, axilites, pointer</column>
+<column name="s_axi_axilites_ARREADY">out, 1, s_axi, axilites, pointer</column>
+<column name="s_axi_axilites_ARADDR">in, 10, s_axi, axilites, pointer</column>
+<column name="s_axi_axilites_RVALID">out, 1, s_axi, axilites, pointer</column>
+<column name="s_axi_axilites_RREADY">in, 1, s_axi, axilites, pointer</column>
+<column name="s_axi_axilites_RDATA">out, 32, s_axi, axilites, pointer</column>
+<column name="s_axi_axilites_RRESP">out, 2, s_axi, axilites, pointer</column>
+<column name="s_axi_axilites_BVALID">out, 1, s_axi, axilites, pointer</column>
+<column name="s_axi_axilites_BREADY">in, 1, s_axi, axilites, pointer</column>
+<column name="s_axi_axilites_BRESP">out, 2, s_axi, axilites, pointer</column>
+<column name="ap_clk">in, 1, ap_ctrl_chain, mac_logger, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_chain, mac_logger, return value</column>
+<column name="interrupt">out, 1, ap_ctrl_chain, mac_logger, return value</column>
+<column name="m_axi_fifo_axi_full_AWVALID">out, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_AWREADY">in, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_AWADDR">out, 64, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_AWID">out, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_AWLEN">out, 8, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_AWSIZE">out, 3, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_AWBURST">out, 2, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_AWLOCK">out, 2, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_AWCACHE">out, 4, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_AWPROT">out, 3, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_AWQOS">out, 4, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_AWREGION">out, 4, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_AWUSER">out, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_WVALID">out, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_WREADY">in, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_WDATA">out, 32, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_WSTRB">out, 4, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_WLAST">out, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_WID">out, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_WUSER">out, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_ARVALID">out, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_ARREADY">in, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_ARADDR">out, 64, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_ARID">out, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_ARLEN">out, 8, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_ARSIZE">out, 3, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_ARBURST">out, 2, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_ARLOCK">out, 2, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_ARCACHE">out, 4, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_ARPROT">out, 3, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_ARQOS">out, 4, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_ARREGION">out, 4, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_ARUSER">out, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_RVALID">in, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_RREADY">out, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_RDATA">in, 32, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_RLAST">in, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_RID">in, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_RUSER">in, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_RRESP">in, 2, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_BVALID">in, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_BREADY">out, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_BRESP">in, 2, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_BID">in, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_fifo_axi_full_BUSER">in, 1, m_axi, fifo_axi_full, pointer</column>
+<column name="m_axi_mac_fifo_AWVALID">out, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_AWREADY">in, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_AWADDR">out, 64, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_AWID">out, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_AWLEN">out, 8, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_AWSIZE">out, 3, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_AWBURST">out, 2, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_AWLOCK">out, 2, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_AWCACHE">out, 4, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_AWPROT">out, 3, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_AWQOS">out, 4, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_AWREGION">out, 4, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_AWUSER">out, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_WVALID">out, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_WREADY">in, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_WDATA">out, 32, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_WSTRB">out, 4, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_WLAST">out, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_WID">out, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_WUSER">out, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_ARVALID">out, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_ARREADY">in, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_ARADDR">out, 64, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_ARID">out, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_ARLEN">out, 8, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_ARSIZE">out, 3, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_ARBURST">out, 2, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_ARLOCK">out, 2, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_ARCACHE">out, 4, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_ARPROT">out, 3, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_ARQOS">out, 4, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_ARREGION">out, 4, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_ARUSER">out, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_RVALID">in, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_RREADY">out, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_RDATA">in, 32, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_RLAST">in, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_RID">in, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_RUSER">in, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_RRESP">in, 2, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_BVALID">in, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_BREADY">out, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_BRESP">in, 2, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_BID">in, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_mac_fifo_BUSER">in, 1, m_axi, mac_fifo, pointer</column>
+<column name="m_axi_ps_AWVALID">out, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_AWREADY">in, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_AWADDR">out, 64, m_axi, ps, pointer</column>
+<column name="m_axi_ps_AWID">out, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_AWLEN">out, 8, m_axi, ps, pointer</column>
+<column name="m_axi_ps_AWSIZE">out, 3, m_axi, ps, pointer</column>
+<column name="m_axi_ps_AWBURST">out, 2, m_axi, ps, pointer</column>
+<column name="m_axi_ps_AWLOCK">out, 2, m_axi, ps, pointer</column>
+<column name="m_axi_ps_AWCACHE">out, 4, m_axi, ps, pointer</column>
+<column name="m_axi_ps_AWPROT">out, 3, m_axi, ps, pointer</column>
+<column name="m_axi_ps_AWQOS">out, 4, m_axi, ps, pointer</column>
+<column name="m_axi_ps_AWREGION">out, 4, m_axi, ps, pointer</column>
+<column name="m_axi_ps_AWUSER">out, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_WVALID">out, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_WREADY">in, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_WDATA">out, 64, m_axi, ps, pointer</column>
+<column name="m_axi_ps_WSTRB">out, 8, m_axi, ps, pointer</column>
+<column name="m_axi_ps_WLAST">out, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_WID">out, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_WUSER">out, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_ARVALID">out, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_ARREADY">in, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_ARADDR">out, 64, m_axi, ps, pointer</column>
+<column name="m_axi_ps_ARID">out, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_ARLEN">out, 8, m_axi, ps, pointer</column>
+<column name="m_axi_ps_ARSIZE">out, 3, m_axi, ps, pointer</column>
+<column name="m_axi_ps_ARBURST">out, 2, m_axi, ps, pointer</column>
+<column name="m_axi_ps_ARLOCK">out, 2, m_axi, ps, pointer</column>
+<column name="m_axi_ps_ARCACHE">out, 4, m_axi, ps, pointer</column>
+<column name="m_axi_ps_ARPROT">out, 3, m_axi, ps, pointer</column>
+<column name="m_axi_ps_ARQOS">out, 4, m_axi, ps, pointer</column>
+<column name="m_axi_ps_ARREGION">out, 4, m_axi, ps, pointer</column>
+<column name="m_axi_ps_ARUSER">out, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_RVALID">in, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_RREADY">out, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_RDATA">in, 64, m_axi, ps, pointer</column>
+<column name="m_axi_ps_RLAST">in, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_RID">in, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_RUSER">in, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_RRESP">in, 2, m_axi, ps, pointer</column>
+<column name="m_axi_ps_BVALID">in, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_BREADY">out, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_BRESP">in, 2, m_axi, ps, pointer</column>
+<column name="m_axi_ps_BID">in, 1, m_axi, ps, pointer</column>
+<column name="m_axi_ps_BUSER">in, 1, m_axi, ps, pointer</column>
+<column name="timestamp">in, 64, ap_none, timestamp, scalar</column>
+</table>
+</item>
+</section>
+</profile>

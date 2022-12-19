@@ -1,0 +1,705 @@
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: mac_logger.cpp, Line: 28, Column: 19 }
+Function:        _Z20rx_ringbuffer_headerPxS_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '4'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc.load.4
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        log_ddrseq
+  - String:          ' '
+  - ArrayName:       log_ddr
+  - String:          ' '
+  - BundleName:      ps
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_28_1
+  - String:          ' '
+  - LoopLoc:         'mac_logger.cpp:28:19'
+  - String:          ' '
+  - Function:        'rx_ringbuffer_header(long long*, long long*, long long*, long long*)'
+    DebugLoc:        { File: mac_logger.cpp, Line: 27, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: mac_logger.cpp, Line: 32, Column: 19 }
+Function:        _Z20rx_ringbuffer_headerPxS_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '4'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc12.load.4
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        tap_ddrseq
+  - String:          ' '
+  - ArrayName:       tap_ddr
+  - String:          ' '
+  - BundleName:      ps
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_32_2
+  - String:          ' '
+  - LoopLoc:         'mac_logger.cpp:32:19'
+  - String:          ' '
+  - Function:        'rx_ringbuffer_header(long long*, long long*, long long*, long long*)'
+    DebugLoc:        { File: mac_logger.cpp, Line: 27, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: mac_logger.cpp, Line: 103, Column: 2 }
+Function:        _Z7rx_fifoPVjS0_xPj
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '16'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          load-store-loop.load.4
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       fifo_axi_full
+  - String:          ' '
+  - BundleName:      fifo_axi_full
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'mac_logger.cpp:103:2'
+  - String:          ' '
+  - Function:        'rx_fifo(unsigned int volatile*, unsigned int volatile*, long long, unsigned int*)'
+    DebugLoc:        { File: mac_logger.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+Function:        _Z7rx_fifoPVjS0_xPj
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          loop-memcpy-expansion.load.4
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep20seq
+  - String:          ' '
+  - ArrayName:       fifo_axi_full
+  - String:          ' '
+  - BundleName:      fifo_axi_full
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'rx_fifo(unsigned int volatile*, unsigned int volatile*, long long, unsigned int*)'
+    DebugLoc:        { File: mac_logger.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: mac_logger.cpp, Line: 54, Column: 34 }
+Function:        _Z7rx_fifoPVjS0_xPj
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        if.then.load.1
+  - String:          ' '
+  - ArrayName:       fifo_axi_lite
+  - String:          ' '
+  - BundleName:      mac_fifo
+  - String:          ' '
+  - Function:        'rx_fifo(unsigned int volatile*, unsigned int volatile*, long long, unsigned int*)'
+    DebugLoc:        { File: mac_logger.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: mac_logger.cpp, Line: 73, Column: 13 }
+Function:        _Z7rx_fifoPVjS0_xPj
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.inc.load.2
+  - String:          ' '
+  - ArrayName:       fifo_axi_full
+  - String:          ' '
+  - BundleName:      fifo_axi_full
+  - String:          ' '
+  - Function:        'rx_fifo(unsigned int volatile*, unsigned int volatile*, long long, unsigned int*)'
+    DebugLoc:        { File: mac_logger.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: mac_logger.cpp, Line: 103, Column: 2 }
+Function:        _Z7rx_fifoPVjS0_xPj
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       fifo_axi_full
+  - String:          ' '
+  - BundleName:      fifo_axi_full
+  - String:          ' '
+  - LoopName:        rx_macfifo_data
+  - String:          ' '
+  - LoopLoc:         'mac_logger.cpp:100:2'
+  - String:          ' '
+  - Function:        'rx_fifo(unsigned int volatile*, unsigned int volatile*, long long, unsigned int*)'
+    DebugLoc:        { File: mac_logger.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: mac_logger.cpp, Line: 53, Column: 5 }
+Function:        _Z7rx_fifoPVjS0_xPj
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        entry.load.11
+  - String:          ' '
+  - ArrayName:       fifo_axi_lite
+  - String:          ' '
+  - BundleName:      mac_fifo
+  - String:          ' '
+  - Function:        'rx_fifo(unsigned int volatile*, unsigned int volatile*, long long, unsigned int*)'
+    DebugLoc:        { File: mac_logger.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: mac_logger.cpp, Line: 965, Column: 4 }
+Function:        _Z6tx_ddrPjPxS0_S0_S0_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc1426.store.15
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       log_ddr
+  - String:          ' '
+  - BundleName:      ps
+  - String:          ' '
+  - LoopName:        tx_2_log_ddr
+  - String:          ' '
+  - LoopLoc:         'mac_logger.cpp:965:4'
+  - String:          ' '
+  - Function:        'tx_ddr(unsigned int*, long long*, long long*, long long*, long long*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*)'
+    DebugLoc:        { File: mac_logger.cpp, Line: 251, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: mac_logger.cpp, Line: 1025, Column: 4 }
+Function:        _Z6tx_ddrPjPxS0_S0_S0_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc1589.store.15
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep29seq
+  - String:          ' '
+  - ArrayName:       tap_ddr
+  - String:          ' '
+  - BundleName:      ps
+  - String:          ' '
+  - LoopName:        tx_2_tap_ddr
+  - String:          ' '
+  - LoopLoc:         'mac_logger.cpp:1025:4'
+  - String:          ' '
+  - Function:        'tx_ddr(unsigned int*, long long*, long long*, long long*, long long*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*)'
+    DebugLoc:        { File: mac_logger.cpp, Line: 251, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: mac_logger.cpp, Line: 32, Column: 19 }
+Function:        _Z20rx_ringbuffer_headerPxS_S_S_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i64
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '64'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        tap_ddrseq
+  - String:          ' '
+  - ArrayName:       tap_ddr
+  - String:          ' '
+  - BundleName:      ps
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_32_2
+  - String:          ' '
+  - LoopLoc:         'mac_logger.cpp:32:19'
+  - String:          ' '
+  - Function:        'rx_ringbuffer_header(long long*, long long*, long long*, long long*)'
+    DebugLoc:        { File: mac_logger.cpp, Line: 27, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: mac_logger.cpp, Line: 28, Column: 19 }
+Function:        _Z20rx_ringbuffer_headerPxS_S_S_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i64
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '64'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        log_ddrseq
+  - String:          ' '
+  - ArrayName:       log_ddr
+  - String:          ' '
+  - BundleName:      ps
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_28_1
+  - String:          ' '
+  - LoopLoc:         'mac_logger.cpp:28:19'
+  - String:          ' '
+  - Function:        'rx_ringbuffer_header(long long*, long long*, long long*, long long*)'
+    DebugLoc:        { File: mac_logger.cpp, Line: 27, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+Function:        _Z7rx_fifoPVjS0_xPj
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep20seq
+  - String:          ' '
+  - ArrayName:       fifo_axi_full
+  - String:          ' '
+  - BundleName:      fifo_axi_full
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'rx_fifo(unsigned int volatile*, unsigned int volatile*, long long, unsigned int*)'
+    DebugLoc:        { File: mac_logger.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: mac_logger.cpp, Line: 103, Column: 2 }
+Function:        _Z7rx_fifoPVjS0_xPj
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       fifo_axi_full
+  - String:          ' '
+  - BundleName:      fifo_axi_full
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'mac_logger.cpp:103:2'
+  - String:          ' '
+  - Function:        'rx_fifo(unsigned int volatile*, unsigned int volatile*, long long, unsigned int*)'
+    DebugLoc:        { File: mac_logger.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: mac_logger.cpp, Line: 1025, Column: 4 }
+Function:        _Z6tx_ddrPjPxS0_S0_S0_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i64
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '64'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep29seq
+  - String:          ' '
+  - ArrayName:       tap_ddr
+  - String:          ' '
+  - BundleName:      ps
+  - String:          ' '
+  - LoopName:        tx_2_tap_ddr
+  - String:          ' '
+  - LoopLoc:         'mac_logger.cpp:1025:4'
+  - String:          ' '
+  - Function:        'tx_ddr(unsigned int*, long long*, long long*, long long*, long long*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*)'
+    DebugLoc:        { File: mac_logger.cpp, Line: 251, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: mac_logger.cpp, Line: 965, Column: 4 }
+Function:        _Z6tx_ddrPjPxS0_S0_S0_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i64
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '64'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       log_ddr
+  - String:          ' '
+  - BundleName:      ps
+  - String:          ' '
+  - LoopName:        tx_2_log_ddr
+  - String:          ' '
+  - LoopLoc:         'mac_logger.cpp:965:4'
+  - String:          ' '
+  - Function:        'tx_ddr(unsigned int*, long long*, long long*, long long*, long long*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*)'
+    DebugLoc:        { File: mac_logger.cpp, Line: 251, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: mac_logger.cpp, Line: 28, Column: 19 }
+Function:        _Z20rx_ringbuffer_headerPxS_S_S_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '4'
+  - String:          ' and bit width '
+  - Width:           '64'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      ps
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_28_1
+  - String:          ' '
+  - LoopLoc:         'mac_logger.cpp:28:19'
+  - String:          ' '
+  - Function:        'rx_ringbuffer_header(long long*, long long*, long long*, long long*) (.1)'
+    DebugLoc:        { File: mac_logger.cpp, Line: 27, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: mac_logger.cpp, Line: 28, Column: 19 }
+Function:        _Z20rx_ringbuffer_headerPxS_S_S_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '4'
+  - String:          ' and bit width '
+  - Width:           '64'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_28_1
+  - String:          '''('
+  - LoopLoc:         'mac_logger.cpp:28:19'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      ps
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: mac_logger.cpp, Line: 32, Column: 19 }
+Function:        _Z20rx_ringbuffer_headerPxS_S_S_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '4'
+  - String:          ' and bit width '
+  - Width:           '64'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      ps
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_32_2
+  - String:          ' '
+  - LoopLoc:         'mac_logger.cpp:32:19'
+  - String:          ' '
+  - Function:        'rx_ringbuffer_header(long long*, long long*, long long*, long long*) (.1)'
+    DebugLoc:        { File: mac_logger.cpp, Line: 27, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: mac_logger.cpp, Line: 32, Column: 19 }
+Function:        _Z20rx_ringbuffer_headerPxS_S_S_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '4'
+  - String:          ' and bit width '
+  - Width:           '64'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_32_2
+  - String:          '''('
+  - LoopLoc:         'mac_logger.cpp:32:19'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      ps
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: mac_logger.cpp, Line: 103, Column: 2 }
+Function:        _Z7rx_fifoPVjS0_xPj.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '16'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      fifo_axi_full
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'mac_logger.cpp:103:2'
+  - String:          ' '
+  - Function:        'rx_fifo(unsigned int volatile*, unsigned int volatile*, long long, unsigned int*) (.1)'
+    DebugLoc:        { File: mac_logger.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: mac_logger.cpp, Line: 103, Column: 2 }
+Function:        _Z7rx_fifoPVjS0_xPj.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '16'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         'mac_logger.cpp:103:2'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      fifo_axi_full
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+Function:        _Z7rx_fifoPVjS0_xPj.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      fifo_axi_full
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         ''
+  - String:          ' '
+  - Function:        'rx_fifo(unsigned int volatile*, unsigned int volatile*, long long, unsigned int*) (.1)'
+    DebugLoc:        { File: mac_logger.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+Function:        _Z7rx_fifoPVjS0_xPj.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         ''
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      fifo_axi_full
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: mac_logger.cpp, Line: 965, Column: 4 }
+Function:        _Z6tx_ddrPjPxS0_S0_S0_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '64'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      ps
+  - String:          ' '
+  - LoopName:        tx_2_log_ddr
+  - String:          ' '
+  - LoopLoc:         'mac_logger.cpp:965:4'
+  - String:          ' '
+  - Function:        'tx_ddr(unsigned int*, long long*, long long*, long long*, long long*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*) (.1)'
+    DebugLoc:        { File: mac_logger.cpp, Line: 251, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: mac_logger.cpp, Line: 965, Column: 4 }
+Function:        _Z6tx_ddrPjPxS0_S0_S0_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '64'
+  - String:          ' in loop '''
+  - LoopName:        tx_2_log_ddr
+  - String:          '''('
+  - LoopLoc:         'mac_logger.cpp:965:4'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      ps
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: mac_logger.cpp, Line: 1025, Column: 4 }
+Function:        _Z6tx_ddrPjPxS0_S0_S0_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '64'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      ps
+  - String:          ' '
+  - LoopName:        tx_2_tap_ddr
+  - String:          ' '
+  - LoopLoc:         'mac_logger.cpp:1025:4'
+  - String:          ' '
+  - Function:        'tx_ddr(unsigned int*, long long*, long long*, long long*, long long*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*) (.1)'
+    DebugLoc:        { File: mac_logger.cpp, Line: 251, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: mac_logger.cpp, Line: 1025, Column: 4 }
+Function:        _Z6tx_ddrPjPxS0_S0_S0_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_S_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '64'
+  - String:          ' in loop '''
+  - LoopName:        tx_2_tap_ddr
+  - String:          '''('
+  - LoopLoc:         'mac_logger.cpp:1025:4'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      ps
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

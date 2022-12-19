@@ -1,0 +1,6640 @@
+{
+  "Top": "mac_logger",
+  "RtlTop": "mac_logger",
+  "RtlPrefix": "",
+  "RtlSubPrefix": "mac_logger_",
+  "SourceLanguage": "cpp",
+  "HostMachineBits": "64",
+  "FunctionProtocol": "ap_ctrl_chain",
+  "ResetStyle": "control",
+  "Target": {
+    "Family": "zynquplus",
+    "Device": "xczu5ev",
+    "Package": "-sfvc784",
+    "Speed": "-2-i",
+    "Triple": "fpga64-xilinx-none"
+  },
+  "Args": {
+    "fifo": {
+      "index": "0",
+      "direction": "in",
+      "srcType": "*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "interface",
+          "interface": "m_axi_mac_fifo",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "fifo_1",
+          "usage": "address",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "fifo_2",
+          "usage": "address",
+          "direction": "in"
+        }
+      ]
+    },
+    "log_ddr": {
+      "index": "1",
+      "direction": "inout",
+      "srcType": "long long int*",
+      "srcSize": "64",
+      "hwRefs": [
+        {
+          "type": "interface",
+          "interface": "m_axi_ps",
+          "name": "",
+          "usage": "data",
+          "direction": "inout"
+        },
+        {
+          "type": "interface",
+          "interface": "s_axi_axilites",
+          "name": "",
+          "usage": "address",
+          "direction": "inout"
+        }
+      ]
+    },
+    "tap_ddr": {
+      "index": "2",
+      "direction": "inout",
+      "srcType": "long long int*",
+      "srcSize": "64",
+      "hwRefs": [
+        {
+          "type": "interface",
+          "interface": "m_axi_ps",
+          "name": "",
+          "usage": "data",
+          "direction": "inout"
+        },
+        {
+          "type": "interface",
+          "interface": "s_axi_axilites",
+          "name": "",
+          "usage": "address",
+          "direction": "inout"
+        }
+      ]
+    },
+    "status": {
+      "index": "3",
+      "direction": "unused",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "status",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "writeStatus": {
+      "index": "4",
+      "direction": "unused",
+      "srcType": "unsigned short*",
+      "srcSize": "16",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "writeStatus",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "timestamp": {
+      "index": "5",
+      "direction": "in",
+      "srcType": "long long int",
+      "srcSize": "64",
+      "hwRefs": [{
+          "type": "port",
+          "interface": "timestamp",
+          "name": "timestamp",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "logger_vlan_enable_mask": {
+      "index": "6",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "logger_vlan_enable_mask",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "vlan100_received": {
+      "index": "7",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan100_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan100_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan101_received": {
+      "index": "8",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan101_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan101_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan102_received": {
+      "index": "9",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan102_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan102_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan103_received": {
+      "index": "10",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan103_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan103_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan104_received": {
+      "index": "11",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan104_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan104_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan105_received": {
+      "index": "12",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan105_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan105_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan106_received": {
+      "index": "13",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan106_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan106_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan107_received": {
+      "index": "14",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan107_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan107_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan108_received": {
+      "index": "15",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan108_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan108_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan109_received": {
+      "index": "16",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan109_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan109_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan110_received": {
+      "index": "17",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan110_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan110_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan111_received": {
+      "index": "18",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan111_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan111_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan112_received": {
+      "index": "19",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan112_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan112_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan113_received": {
+      "index": "20",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan113_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan113_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan114_received": {
+      "index": "21",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan114_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan114_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan115_received": {
+      "index": "22",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan115_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan115_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan116_received": {
+      "index": "23",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan116_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan116_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan117_received": {
+      "index": "24",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan117_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan117_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan118_received": {
+      "index": "25",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan118_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan118_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan119_received": {
+      "index": "26",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan119_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan119_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan120_received": {
+      "index": "27",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan120_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan120_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan121_received": {
+      "index": "28",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan121_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan121_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan122_received": {
+      "index": "29",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan122_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan122_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan123_received": {
+      "index": "30",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan123_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan123_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan124_received": {
+      "index": "31",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan124_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan124_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan125_received": {
+      "index": "32",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan125_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan125_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan126_received": {
+      "index": "33",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan126_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan126_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan127_received": {
+      "index": "34",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan127_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan127_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan128_received": {
+      "index": "35",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan128_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan128_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "vlan129_received": {
+      "index": "36",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan129_received",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "vlan129_received_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "droped": {
+      "index": "37",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "droped",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "droped_ctrl",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "multicast_recv_enable": {
+      "index": "38",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "multicast_recv_enable",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_filter_enable": {
+      "index": "39",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_filter_enable",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan100_macaddr_lsb": {
+      "index": "40",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan100_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan100_macaddr_msb": {
+      "index": "41",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan100_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan101_macaddr_lsb": {
+      "index": "42",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan101_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan101_macaddr_msb": {
+      "index": "43",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan101_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan102_macaddr_lsb": {
+      "index": "44",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan102_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan102_macaddr_msb": {
+      "index": "45",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan102_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan103_macaddr_lsb": {
+      "index": "46",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan103_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan103_macaddr_msb": {
+      "index": "47",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan103_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan104_macaddr_lsb": {
+      "index": "48",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan104_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan104_macaddr_msb": {
+      "index": "49",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan104_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan105_macaddr_lsb": {
+      "index": "50",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan105_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan105_macaddr_msb": {
+      "index": "51",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan105_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan106_macaddr_lsb": {
+      "index": "52",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan106_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan106_macaddr_msb": {
+      "index": "53",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan106_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan107_macaddr_lsb": {
+      "index": "54",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan107_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan107_macaddr_msb": {
+      "index": "55",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan107_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan108_macaddr_lsb": {
+      "index": "56",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan108_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan108_macaddr_msb": {
+      "index": "57",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan108_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan109_macaddr_lsb": {
+      "index": "58",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan109_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan109_macaddr_msb": {
+      "index": "59",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan109_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan110_macaddr_lsb": {
+      "index": "60",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan110_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan110_macaddr_msb": {
+      "index": "61",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan110_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan111_macaddr_lsb": {
+      "index": "62",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan111_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan111_macaddr_msb": {
+      "index": "63",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan111_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan112_macaddr_lsb": {
+      "index": "64",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan112_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan112_macaddr_msb": {
+      "index": "65",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan112_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan113_macaddr_lsb": {
+      "index": "66",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan113_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan113_macaddr_msb": {
+      "index": "67",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan113_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan114_macaddr_lsb": {
+      "index": "68",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan114_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan114_macaddr_msb": {
+      "index": "69",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan114_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan115_macaddr_lsb": {
+      "index": "70",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan115_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan115_macaddr_msb": {
+      "index": "71",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan115_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan116_macaddr_lsb": {
+      "index": "72",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan116_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan116_macaddr_msb": {
+      "index": "73",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan116_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan117_macaddr_lsb": {
+      "index": "74",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan117_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan117_macaddr_msb": {
+      "index": "75",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan117_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan118_macaddr_lsb": {
+      "index": "76",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan118_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan118_macaddr_msb": {
+      "index": "77",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan118_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan119_macaddr_lsb": {
+      "index": "78",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan119_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan119_macaddr_msb": {
+      "index": "79",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan119_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan120_macaddr_lsb": {
+      "index": "80",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan120_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan120_macaddr_msb": {
+      "index": "81",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan120_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan121_macaddr_lsb": {
+      "index": "82",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan121_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan121_macaddr_msb": {
+      "index": "83",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan121_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan122_macaddr_lsb": {
+      "index": "84",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan122_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan122_macaddr_msb": {
+      "index": "85",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan122_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan123_macaddr_lsb": {
+      "index": "86",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan123_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan123_macaddr_msb": {
+      "index": "87",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan123_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan124_macaddr_lsb": {
+      "index": "88",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan124_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan124_macaddr_msb": {
+      "index": "89",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan124_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan125_macaddr_lsb": {
+      "index": "90",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan125_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan125_macaddr_msb": {
+      "index": "91",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan125_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan126_macaddr_lsb": {
+      "index": "92",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan126_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan126_macaddr_msb": {
+      "index": "93",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan126_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan127_macaddr_lsb": {
+      "index": "94",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan127_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan127_macaddr_msb": {
+      "index": "95",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan127_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan128_macaddr_lsb": {
+      "index": "96",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan128_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan128_macaddr_msb": {
+      "index": "97",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan128_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan129_macaddr_lsb": {
+      "index": "98",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan129_macaddr_lsb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "unicast_vlan129_macaddr_msb": {
+      "index": "99",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "unicast_vlan129_macaddr_msb",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "log_all_mask": {
+      "index": "100",
+      "direction": "in",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_axilites",
+          "name": "log_all_mask",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "fifo_axi_full": {
+      "index": "101",
+      "direction": "in",
+      "srcType": "*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "interface",
+          "interface": "m_axi_fifo_axi_full",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "interface",
+          "interface": "s_axi_axilites",
+          "name": "",
+          "usage": "address",
+          "direction": "in"
+        }
+      ]
+    }
+  },
+  "HlsSolution": {
+    "FlowTarget": "vivado",
+    "ConfigTcl": [
+      "config_export -format=ip_catalog",
+      "config_export -rtl=verilog"
+    ],
+    "DirectiveTcl": ["set_directive_top mac_logger -name mac_logger"],
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "KernelName": "mac_logger"
+  },
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "10",
+    "Uncertainty": "2.7",
+    "IsCombinational": "0",
+    "II": "32 ~ 6800",
+    "Latency": "34"
+  },
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
+  "Ipx": {
+    "Vendor": "xilinx.com",
+    "Library": "hls",
+    "Name": "mac_logger",
+    "Version": "1.0",
+    "DisplayName": "Mac_logger",
+    "Revision": "2112819837",
+    "Description": "An IP generated by Vitis HLS",
+    "Taxonomy": "\/VITIS_HLS_IP",
+    "AutoFamilySupport": "",
+    "ZipFile": "xilinx_com_hls_mac_logger_1_0.zip"
+  },
+  "Files": {
+    "CSource": [
+      "..\/..\/recv_mac_msg.cpp",
+      "..\/..\/mac_logger_test.cpp",
+      "..\/..\/mac_logger.cpp"
+    ],
+    "Vhdl": [
+      "impl\/vhdl\/mac_logger_axilites_s_axi.vhd",
+      "impl\/vhdl\/mac_logger_data_buf_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/mac_logger_data_buf_RAM_AUTO_1R1W_memcore.vhd",
+      "impl\/vhdl\/mac_logger_entry_proc.vhd",
+      "impl\/vhdl\/mac_logger_fifo_axi_full_m_axi.vhd",
+      "impl\/vhdl\/mac_logger_fifo_w32_d3_S.vhd",
+      "impl\/vhdl\/mac_logger_fifo_w64_d2_S.vhd",
+      "impl\/vhdl\/mac_logger_flow_control_loop_pipe_sequential_init.vhd",
+      "impl\/vhdl\/mac_logger_log_header_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/mac_logger_log_header_RAM_AUTO_1R1W_memcore.vhd",
+      "impl\/vhdl\/mac_logger_mac_fifo_m_axi.vhd",
+      "impl\/vhdl\/mac_logger_mul_32s_32s_32_1_1.vhd",
+      "impl\/vhdl\/mac_logger_ps_m_axi.vhd",
+      "impl\/vhdl\/mac_logger_rx_fifo.vhd",
+      "impl\/vhdl\/mac_logger_rx_fifo_Pipeline_4.vhd",
+      "impl\/vhdl\/mac_logger_rx_fifo_Pipeline_rx_macfifo_data.vhd",
+      "impl\/vhdl\/mac_logger_rx_fifo_Pipeline_VITIS_LOOP_71_1.vhd",
+      "impl\/vhdl\/mac_logger_rx_fifo_Pipeline_VITIS_LOOP_91_2.vhd",
+      "impl\/vhdl\/mac_logger_rx_fifo_tmp_buf_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/mac_logger_rx_ringbuffer_header.vhd",
+      "impl\/vhdl\/mac_logger_rx_ringbuffer_header_Pipeline_VITIS_LOOP_28_1.vhd",
+      "impl\/vhdl\/mac_logger_rx_ringbuffer_header_Pipeline_VITIS_LOOP_32_2.vhd",
+      "impl\/vhdl\/mac_logger_tx_ddr.vhd",
+      "impl\/vhdl\/mac_logger_tx_ddr_log_header_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/mac_logger_tx_ddr_Pipeline_tx_2_log_ddr.vhd",
+      "impl\/vhdl\/mac_logger_tx_ddr_Pipeline_tx_2_tap_ddr.vhd",
+      "impl\/vhdl\/mac_logger_tx_ddr_Pipeline_VITIS_LOOP_924_1.vhd",
+      "impl\/vhdl\/mac_logger_tx_ddr_Pipeline_VITIS_LOOP_986_2.vhd",
+      "impl\/vhdl\/mac_logger_urem_32ns_32ns_32_36_seq_1.vhd",
+      "impl\/vhdl\/mac_logger.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/mac_logger_axilites_s_axi.v",
+      "impl\/verilog\/mac_logger_data_buf_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/mac_logger_data_buf_RAM_AUTO_1R1W_memcore.v",
+      "impl\/verilog\/mac_logger_entry_proc.v",
+      "impl\/verilog\/mac_logger_fifo_axi_full_m_axi.v",
+      "impl\/verilog\/mac_logger_fifo_w32_d3_S.v",
+      "impl\/verilog\/mac_logger_fifo_w64_d2_S.v",
+      "impl\/verilog\/mac_logger_flow_control_loop_pipe_sequential_init.v",
+      "impl\/verilog\/mac_logger_hls_deadlock_detection_unit.v",
+      "impl\/verilog\/mac_logger_hls_deadlock_detector.vh",
+      "impl\/verilog\/mac_logger_hls_deadlock_report_unit.vh",
+      "impl\/verilog\/mac_logger_log_header_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/mac_logger_log_header_RAM_AUTO_1R1W_memcore.v",
+      "impl\/verilog\/mac_logger_mac_fifo_m_axi.v",
+      "impl\/verilog\/mac_logger_mul_32s_32s_32_1_1.v",
+      "impl\/verilog\/mac_logger_ps_m_axi.v",
+      "impl\/verilog\/mac_logger_rx_fifo.v",
+      "impl\/verilog\/mac_logger_rx_fifo_Pipeline_4.v",
+      "impl\/verilog\/mac_logger_rx_fifo_Pipeline_rx_macfifo_data.v",
+      "impl\/verilog\/mac_logger_rx_fifo_Pipeline_VITIS_LOOP_71_1.v",
+      "impl\/verilog\/mac_logger_rx_fifo_Pipeline_VITIS_LOOP_91_2.v",
+      "impl\/verilog\/mac_logger_rx_fifo_tmp_buf_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/mac_logger_rx_ringbuffer_header.v",
+      "impl\/verilog\/mac_logger_rx_ringbuffer_header_Pipeline_VITIS_LOOP_28_1.v",
+      "impl\/verilog\/mac_logger_rx_ringbuffer_header_Pipeline_VITIS_LOOP_32_2.v",
+      "impl\/verilog\/mac_logger_tx_ddr.v",
+      "impl\/verilog\/mac_logger_tx_ddr_log_header_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/mac_logger_tx_ddr_Pipeline_tx_2_log_ddr.v",
+      "impl\/verilog\/mac_logger_tx_ddr_Pipeline_tx_2_tap_ddr.v",
+      "impl\/verilog\/mac_logger_tx_ddr_Pipeline_VITIS_LOOP_924_1.v",
+      "impl\/verilog\/mac_logger_tx_ddr_Pipeline_VITIS_LOOP_986_2.v",
+      "impl\/verilog\/mac_logger_urem_32ns_32ns_32_36_seq_1.v",
+      "impl\/verilog\/mac_logger.v"
+    ],
+    "SwDriver": [
+      "impl\/misc\/drivers\/mac_logger_v1_0\/data\/mac_logger.mdd",
+      "impl\/misc\/drivers\/mac_logger_v1_0\/data\/mac_logger.tcl",
+      "impl\/misc\/drivers\/mac_logger_v1_0\/src\/Makefile",
+      "impl\/misc\/drivers\/mac_logger_v1_0\/src\/xmac_logger.c",
+      "impl\/misc\/drivers\/mac_logger_v1_0\/src\/xmac_logger.h",
+      "impl\/misc\/drivers\/mac_logger_v1_0\/src\/xmac_logger_hw.h",
+      "impl\/misc\/drivers\/mac_logger_v1_0\/src\/xmac_logger_linux.c",
+      "impl\/misc\/drivers\/mac_logger_v1_0\/src\/xmac_logger_sinit.c"
+    ],
+    "IpMisc": ["impl\/misc\/logo.png"],
+    "CsynthXml": "syn\/report\/csynth.xml",
+    "DebugDir": ".debug",
+    "KernelXml": ".autopilot\/db\/kernel.internal.xml",
+    "Xo": "",
+    "XoHlsDir": "",
+    "ProtoInst": [".debug\/mac_logger.protoinst"]
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "Ip": []
+  },
+  "Interfaces": {
+    "s_axi_axilites": {
+      "type": "axi4lite",
+      "busTypeName": "aximm",
+      "mode": "slave",
+      "dataWidth": "32",
+      "addrWidth": "10",
+      "portPrefix": "s_axi_axilites_",
+      "paramPrefix": "C_S_AXI_AXILITES_",
+      "offsetMasterName": "m_axi_fifo_axi_full",
+      "ports": [
+        "s_axi_axilites_ARADDR",
+        "s_axi_axilites_ARREADY",
+        "s_axi_axilites_ARVALID",
+        "s_axi_axilites_AWADDR",
+        "s_axi_axilites_AWREADY",
+        "s_axi_axilites_AWVALID",
+        "s_axi_axilites_BREADY",
+        "s_axi_axilites_BRESP",
+        "s_axi_axilites_BVALID",
+        "s_axi_axilites_RDATA",
+        "s_axi_axilites_RREADY",
+        "s_axi_axilites_RRESP",
+        "s_axi_axilites_RVALID",
+        "s_axi_axilites_WDATA",
+        "s_axi_axilites_WREADY",
+        "s_axi_axilites_WSTRB",
+        "s_axi_axilites_WVALID"
+      ],
+      "registers": [
+        {
+          "offset": "0x00",
+          "name": "CTRL",
+          "access": "RW",
+          "description": "Control signals",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "AP_START",
+              "access": "RW",
+              "description": "Control signal Register for 'ap_start'."
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "AP_DONE",
+              "access": "R",
+              "description": "Control signal Register for 'ap_done'."
+            },
+            {
+              "offset": "2",
+              "width": "1",
+              "name": "AP_IDLE",
+              "access": "R",
+              "description": "Control signal Register for 'ap_idle'."
+            },
+            {
+              "offset": "3",
+              "width": "1",
+              "name": "AP_READY",
+              "access": "R",
+              "description": "Control signal Register for 'ap_ready'."
+            },
+            {
+              "offset": "4",
+              "width": "1",
+              "name": "AP_CONTINUE",
+              "access": "R",
+              "description": "Control signal Register for 'ap_continue'."
+            },
+            {
+              "offset": "5",
+              "width": "2",
+              "name": "RESERVED_1",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            },
+            {
+              "offset": "7",
+              "width": "1",
+              "name": "AUTO_RESTART",
+              "access": "RW",
+              "description": "Control signal Register for 'auto_restart'."
+            },
+            {
+              "offset": "8",
+              "width": "1",
+              "name": "RESERVED_2",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            },
+            {
+              "offset": "9",
+              "width": "1",
+              "name": "INTERRUPT",
+              "access": "R",
+              "description": "Control signal Register for 'interrupt'."
+            },
+            {
+              "offset": "10",
+              "width": "22",
+              "name": "RESERVED_3",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x04",
+          "name": "GIER",
+          "access": "RW",
+          "description": "Global Interrupt Enable Register",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "Enable",
+              "access": "RW",
+              "description": "Master enable for the device interrupt output to the system interrupt controller: 0 = Disabled, 1 = Enabled"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x08",
+          "name": "IP_IER",
+          "access": "RW",
+          "description": "IP Interrupt Enable Register",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "CHAN0_INT_EN",
+              "access": "RW",
+              "description": "Enable Channel 0 (ap_done) Interrupt.  0 = Disabled, 1 = Enabled."
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "CHAN1_INT_EN",
+              "access": "RW",
+              "description": "Enable Channel 1 (ap_ready) Interrupt.  0 = Disabled, 1 = Enabled."
+            },
+            {
+              "offset": "2",
+              "width": "30",
+              "name": "RESERVED_0",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x0c",
+          "name": "IP_ISR",
+          "access": "RW",
+          "description": "IP Interrupt Status Register",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "CHAN0_INT_ST",
+              "access": "RTOW",
+              "description": "Channel 0 (ap_done) Interrupt Status. 0 = No Channel 0 interrupt, 1 = Channel 0 interrupt."
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "CHAN1_INT_ST",
+              "access": "RTOW",
+              "description": "Channel 1 (ap_ready) Interrupt Status. 0 = No Channel 1 interrupt, 1 = Channel 1 interrupt."
+            },
+            {
+              "offset": "2",
+              "width": "30",
+              "name": "RESERVED_0",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x10",
+          "name": "fifo_1",
+          "access": "W",
+          "description": "Data signal of fifo",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "fifo",
+              "access": "W",
+              "description": "Bit 31 to 0 of fifo"
+            }]
+        },
+        {
+          "offset": "0x14",
+          "name": "fifo_2",
+          "access": "W",
+          "description": "Data signal of fifo",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "fifo",
+              "access": "W",
+              "description": "Bit 63 to 32 of fifo"
+            }]
+        },
+        {
+          "offset": "0x1c",
+          "name": "fifo_axi_full_offset_1",
+          "access": "W",
+          "description": "Data signal of fifo_axi_full_offset",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "fifo_axi_full_offset",
+              "access": "W",
+              "description": "Bit 31 to 0 of fifo_axi_full_offset"
+            }]
+        },
+        {
+          "offset": "0x20",
+          "name": "fifo_axi_full_offset_2",
+          "access": "W",
+          "description": "Data signal of fifo_axi_full_offset",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "fifo_axi_full_offset",
+              "access": "W",
+              "description": "Bit 63 to 32 of fifo_axi_full_offset"
+            }]
+        },
+        {
+          "offset": "0x28",
+          "name": "ddr_1",
+          "access": "W",
+          "description": "Data signal of ddr",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "ddr",
+              "access": "W",
+              "description": "Bit 31 to 0 of ddr"
+            }]
+        },
+        {
+          "offset": "0x2c",
+          "name": "ddr_2",
+          "access": "W",
+          "description": "Data signal of ddr",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "ddr",
+              "access": "W",
+              "description": "Bit 63 to 32 of ddr"
+            }]
+        },
+        {
+          "offset": "0x34",
+          "name": "driver_1",
+          "access": "W",
+          "description": "Data signal of driver",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "driver",
+              "access": "W",
+              "description": "Bit 31 to 0 of driver"
+            }]
+        },
+        {
+          "offset": "0x38",
+          "name": "driver_2",
+          "access": "W",
+          "description": "Data signal of driver",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "driver",
+              "access": "W",
+              "description": "Bit 63 to 32 of driver"
+            }]
+        },
+        {
+          "offset": "0x40",
+          "name": "status",
+          "access": "W",
+          "description": "Data signal of status",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "status",
+              "access": "W",
+              "description": "Bit 31 to 0 of status"
+            }]
+        },
+        {
+          "offset": "0x48",
+          "name": "writeStatus",
+          "access": "W",
+          "description": "Data signal of writeStatus",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "16",
+              "name": "writeStatus",
+              "access": "W",
+              "description": "Bit 15 to 0 of writeStatus"
+            },
+            {
+              "offset": "16",
+              "width": "16",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x50",
+          "name": "logger_vlan_enable_mask",
+          "access": "W",
+          "description": "Data signal of logger_vlan_enable_mask",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "logger_vlan_enable_mask",
+              "access": "W",
+              "description": "Bit 31 to 0 of logger_vlan_enable_mask"
+            }]
+        },
+        {
+          "offset": "0x58",
+          "name": "vlan100_received",
+          "access": "R",
+          "description": "Data signal of vlan100_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan100_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan100_received"
+            }]
+        },
+        {
+          "offset": "0x5c",
+          "name": "vlan100_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan100_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan100_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan100_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x60",
+          "name": "vlan101_received",
+          "access": "R",
+          "description": "Data signal of vlan101_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan101_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan101_received"
+            }]
+        },
+        {
+          "offset": "0x64",
+          "name": "vlan101_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan101_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan101_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan101_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x68",
+          "name": "vlan102_received",
+          "access": "R",
+          "description": "Data signal of vlan102_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan102_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan102_received"
+            }]
+        },
+        {
+          "offset": "0x6c",
+          "name": "vlan102_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan102_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan102_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan102_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x70",
+          "name": "vlan103_received",
+          "access": "R",
+          "description": "Data signal of vlan103_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan103_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan103_received"
+            }]
+        },
+        {
+          "offset": "0x74",
+          "name": "vlan103_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan103_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan103_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan103_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x78",
+          "name": "vlan104_received",
+          "access": "R",
+          "description": "Data signal of vlan104_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan104_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan104_received"
+            }]
+        },
+        {
+          "offset": "0x7c",
+          "name": "vlan104_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan104_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan104_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan104_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x80",
+          "name": "vlan105_received",
+          "access": "R",
+          "description": "Data signal of vlan105_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan105_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan105_received"
+            }]
+        },
+        {
+          "offset": "0x84",
+          "name": "vlan105_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan105_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan105_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan105_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x88",
+          "name": "vlan106_received",
+          "access": "R",
+          "description": "Data signal of vlan106_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan106_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan106_received"
+            }]
+        },
+        {
+          "offset": "0x8c",
+          "name": "vlan106_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan106_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan106_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan106_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x90",
+          "name": "vlan107_received",
+          "access": "R",
+          "description": "Data signal of vlan107_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan107_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan107_received"
+            }]
+        },
+        {
+          "offset": "0x94",
+          "name": "vlan107_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan107_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan107_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan107_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x98",
+          "name": "vlan108_received",
+          "access": "R",
+          "description": "Data signal of vlan108_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan108_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan108_received"
+            }]
+        },
+        {
+          "offset": "0x9c",
+          "name": "vlan108_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan108_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan108_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan108_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0xa0",
+          "name": "vlan109_received",
+          "access": "R",
+          "description": "Data signal of vlan109_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan109_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan109_received"
+            }]
+        },
+        {
+          "offset": "0xa4",
+          "name": "vlan109_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan109_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan109_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan109_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0xa8",
+          "name": "vlan110_received",
+          "access": "R",
+          "description": "Data signal of vlan110_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan110_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan110_received"
+            }]
+        },
+        {
+          "offset": "0xac",
+          "name": "vlan110_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan110_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan110_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan110_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0xb0",
+          "name": "vlan111_received",
+          "access": "R",
+          "description": "Data signal of vlan111_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan111_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan111_received"
+            }]
+        },
+        {
+          "offset": "0xb4",
+          "name": "vlan111_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan111_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan111_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan111_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0xb8",
+          "name": "vlan112_received",
+          "access": "R",
+          "description": "Data signal of vlan112_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan112_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan112_received"
+            }]
+        },
+        {
+          "offset": "0xbc",
+          "name": "vlan112_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan112_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan112_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan112_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0xc0",
+          "name": "vlan113_received",
+          "access": "R",
+          "description": "Data signal of vlan113_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan113_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan113_received"
+            }]
+        },
+        {
+          "offset": "0xc4",
+          "name": "vlan113_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan113_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan113_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan113_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0xc8",
+          "name": "vlan114_received",
+          "access": "R",
+          "description": "Data signal of vlan114_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan114_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan114_received"
+            }]
+        },
+        {
+          "offset": "0xcc",
+          "name": "vlan114_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan114_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan114_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan114_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0xd0",
+          "name": "vlan115_received",
+          "access": "R",
+          "description": "Data signal of vlan115_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan115_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan115_received"
+            }]
+        },
+        {
+          "offset": "0xd4",
+          "name": "vlan115_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan115_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan115_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan115_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0xd8",
+          "name": "vlan116_received",
+          "access": "R",
+          "description": "Data signal of vlan116_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan116_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan116_received"
+            }]
+        },
+        {
+          "offset": "0xdc",
+          "name": "vlan116_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan116_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan116_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan116_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0xe0",
+          "name": "vlan117_received",
+          "access": "R",
+          "description": "Data signal of vlan117_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan117_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan117_received"
+            }]
+        },
+        {
+          "offset": "0xe4",
+          "name": "vlan117_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan117_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan117_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan117_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0xe8",
+          "name": "vlan118_received",
+          "access": "R",
+          "description": "Data signal of vlan118_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan118_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan118_received"
+            }]
+        },
+        {
+          "offset": "0xec",
+          "name": "vlan118_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan118_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan118_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan118_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0xf0",
+          "name": "vlan119_received",
+          "access": "R",
+          "description": "Data signal of vlan119_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan119_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan119_received"
+            }]
+        },
+        {
+          "offset": "0xf4",
+          "name": "vlan119_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan119_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan119_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan119_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0xf8",
+          "name": "vlan120_received",
+          "access": "R",
+          "description": "Data signal of vlan120_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan120_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan120_received"
+            }]
+        },
+        {
+          "offset": "0xfc",
+          "name": "vlan120_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan120_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan120_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan120_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x110",
+          "name": "vlan121_received",
+          "access": "R",
+          "description": "Data signal of vlan121_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan121_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan121_received"
+            }]
+        },
+        {
+          "offset": "0x114",
+          "name": "vlan121_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan121_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan121_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan121_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x118",
+          "name": "vlan122_received",
+          "access": "R",
+          "description": "Data signal of vlan122_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan122_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan122_received"
+            }]
+        },
+        {
+          "offset": "0x11c",
+          "name": "vlan122_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan122_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan122_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan122_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x120",
+          "name": "vlan123_received",
+          "access": "R",
+          "description": "Data signal of vlan123_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan123_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan123_received"
+            }]
+        },
+        {
+          "offset": "0x124",
+          "name": "vlan123_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan123_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan123_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan123_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x128",
+          "name": "vlan124_received",
+          "access": "R",
+          "description": "Data signal of vlan124_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan124_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan124_received"
+            }]
+        },
+        {
+          "offset": "0x12c",
+          "name": "vlan124_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan124_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan124_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan124_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x130",
+          "name": "vlan125_received",
+          "access": "R",
+          "description": "Data signal of vlan125_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan125_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan125_received"
+            }]
+        },
+        {
+          "offset": "0x134",
+          "name": "vlan125_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan125_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan125_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan125_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x138",
+          "name": "vlan126_received",
+          "access": "R",
+          "description": "Data signal of vlan126_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan126_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan126_received"
+            }]
+        },
+        {
+          "offset": "0x13c",
+          "name": "vlan126_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan126_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan126_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan126_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x140",
+          "name": "vlan127_received",
+          "access": "R",
+          "description": "Data signal of vlan127_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan127_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan127_received"
+            }]
+        },
+        {
+          "offset": "0x144",
+          "name": "vlan127_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan127_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan127_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan127_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x148",
+          "name": "vlan128_received",
+          "access": "R",
+          "description": "Data signal of vlan128_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan128_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan128_received"
+            }]
+        },
+        {
+          "offset": "0x14c",
+          "name": "vlan128_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan128_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan128_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan128_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x150",
+          "name": "vlan129_received",
+          "access": "R",
+          "description": "Data signal of vlan129_received",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "vlan129_received",
+              "access": "R",
+              "description": "Bit 31 to 0 of vlan129_received"
+            }]
+        },
+        {
+          "offset": "0x154",
+          "name": "vlan129_received_ctrl",
+          "access": "R",
+          "description": "Control signal of vlan129_received",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "vlan129_received_ap_vld",
+              "access": "R",
+              "description": "Control signal vlan129_received_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x158",
+          "name": "droped",
+          "access": "R",
+          "description": "Data signal of droped",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "droped",
+              "access": "R",
+              "description": "Bit 31 to 0 of droped"
+            }]
+        },
+        {
+          "offset": "0x15c",
+          "name": "droped_ctrl",
+          "access": "R",
+          "description": "Control signal of droped",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "droped_ap_vld",
+              "access": "R",
+              "description": "Control signal droped_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x160",
+          "name": "multicast_recv_enable",
+          "access": "W",
+          "description": "Data signal of multicast_recv_enable",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "multicast_recv_enable",
+              "access": "W",
+              "description": "Bit 31 to 0 of multicast_recv_enable"
+            }]
+        },
+        {
+          "offset": "0x168",
+          "name": "unicast_filter_enable",
+          "access": "W",
+          "description": "Data signal of unicast_filter_enable",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_filter_enable",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_filter_enable"
+            }]
+        },
+        {
+          "offset": "0x170",
+          "name": "unicast_vlan100_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan100_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan100_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan100_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x178",
+          "name": "unicast_vlan100_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan100_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan100_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan100_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x180",
+          "name": "unicast_vlan101_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan101_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan101_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan101_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x188",
+          "name": "unicast_vlan101_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan101_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan101_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan101_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x190",
+          "name": "unicast_vlan102_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan102_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan102_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan102_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x198",
+          "name": "unicast_vlan102_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan102_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan102_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan102_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x1a0",
+          "name": "unicast_vlan103_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan103_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan103_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan103_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x1a8",
+          "name": "unicast_vlan103_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan103_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan103_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan103_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x1b0",
+          "name": "unicast_vlan104_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan104_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan104_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan104_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x1b8",
+          "name": "unicast_vlan104_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan104_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan104_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan104_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x1c0",
+          "name": "unicast_vlan105_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan105_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan105_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan105_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x1c8",
+          "name": "unicast_vlan105_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan105_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan105_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan105_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x1d0",
+          "name": "unicast_vlan106_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan106_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan106_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan106_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x1d8",
+          "name": "unicast_vlan106_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan106_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan106_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan106_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x1e0",
+          "name": "unicast_vlan107_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan107_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan107_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan107_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x1e8",
+          "name": "unicast_vlan107_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan107_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan107_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan107_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x1f0",
+          "name": "unicast_vlan108_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan108_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan108_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan108_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x1f8",
+          "name": "unicast_vlan108_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan108_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan108_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan108_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x200",
+          "name": "unicast_vlan109_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan109_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan109_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan109_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x208",
+          "name": "unicast_vlan109_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan109_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan109_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan109_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x210",
+          "name": "unicast_vlan110_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan110_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan110_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan110_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x218",
+          "name": "unicast_vlan110_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan110_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan110_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan110_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x220",
+          "name": "unicast_vlan111_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan111_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan111_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan111_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x228",
+          "name": "unicast_vlan111_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan111_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan111_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan111_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x230",
+          "name": "unicast_vlan112_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan112_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan112_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan112_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x238",
+          "name": "unicast_vlan112_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan112_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan112_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan112_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x240",
+          "name": "unicast_vlan113_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan113_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan113_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan113_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x248",
+          "name": "unicast_vlan113_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan113_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan113_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan113_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x250",
+          "name": "unicast_vlan114_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan114_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan114_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan114_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x258",
+          "name": "unicast_vlan114_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan114_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan114_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan114_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x260",
+          "name": "unicast_vlan115_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan115_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan115_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan115_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x268",
+          "name": "unicast_vlan115_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan115_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan115_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan115_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x270",
+          "name": "unicast_vlan116_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan116_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan116_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan116_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x278",
+          "name": "unicast_vlan116_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan116_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan116_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan116_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x280",
+          "name": "unicast_vlan117_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan117_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan117_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan117_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x288",
+          "name": "unicast_vlan117_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan117_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan117_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan117_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x290",
+          "name": "unicast_vlan118_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan118_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan118_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan118_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x298",
+          "name": "unicast_vlan118_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan118_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan118_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan118_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x2a0",
+          "name": "unicast_vlan119_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan119_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan119_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan119_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x2a8",
+          "name": "unicast_vlan119_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan119_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan119_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan119_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x2b0",
+          "name": "unicast_vlan120_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan120_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan120_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan120_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x2b8",
+          "name": "unicast_vlan120_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan120_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan120_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan120_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x2c0",
+          "name": "unicast_vlan121_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan121_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan121_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan121_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x2c8",
+          "name": "unicast_vlan121_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan121_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan121_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan121_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x2d0",
+          "name": "unicast_vlan122_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan122_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan122_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan122_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x2d8",
+          "name": "unicast_vlan122_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan122_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan122_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan122_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x2e0",
+          "name": "unicast_vlan123_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan123_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan123_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan123_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x2e8",
+          "name": "unicast_vlan123_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan123_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan123_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan123_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x2f0",
+          "name": "unicast_vlan124_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan124_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan124_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan124_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x2f8",
+          "name": "unicast_vlan124_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan124_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan124_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan124_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x300",
+          "name": "unicast_vlan125_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan125_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan125_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan125_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x308",
+          "name": "unicast_vlan125_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan125_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan125_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan125_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x310",
+          "name": "unicast_vlan126_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan126_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan126_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan126_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x318",
+          "name": "unicast_vlan126_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan126_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan126_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan126_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x320",
+          "name": "unicast_vlan127_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan127_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan127_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan127_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x328",
+          "name": "unicast_vlan127_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan127_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan127_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan127_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x330",
+          "name": "unicast_vlan128_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan128_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan128_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan128_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x338",
+          "name": "unicast_vlan128_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan128_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan128_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan128_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x340",
+          "name": "unicast_vlan129_macaddr_lsb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan129_macaddr_lsb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan129_macaddr_lsb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan129_macaddr_lsb"
+            }]
+        },
+        {
+          "offset": "0x348",
+          "name": "unicast_vlan129_macaddr_msb",
+          "access": "W",
+          "description": "Data signal of unicast_vlan129_macaddr_msb",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unicast_vlan129_macaddr_msb",
+              "access": "W",
+              "description": "Bit 31 to 0 of unicast_vlan129_macaddr_msb"
+            }]
+        },
+        {
+          "offset": "0x350",
+          "name": "log_all_mask",
+          "access": "W",
+          "description": "Data signal of log_all_mask",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "log_all_mask",
+              "access": "W",
+              "description": "Bit 31 to 0 of log_all_mask"
+            }]
+        }
+      ],
+      "constraints": [
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "16",
+          "argName": "fifo"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "40",
+          "argName": "log_ddr"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "52",
+          "argName": "tap_ddr"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "64",
+          "argName": "status"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "72",
+          "argName": "writeStatus"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "80",
+          "argName": "logger_vlan_enable_mask"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "88",
+          "argName": "vlan100_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "96",
+          "argName": "vlan101_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "104",
+          "argName": "vlan102_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "112",
+          "argName": "vlan103_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "120",
+          "argName": "vlan104_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "128",
+          "argName": "vlan105_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "136",
+          "argName": "vlan106_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "144",
+          "argName": "vlan107_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "152",
+          "argName": "vlan108_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "160",
+          "argName": "vlan109_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "168",
+          "argName": "vlan110_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "176",
+          "argName": "vlan111_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "184",
+          "argName": "vlan112_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "192",
+          "argName": "vlan113_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "200",
+          "argName": "vlan114_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "208",
+          "argName": "vlan115_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "216",
+          "argName": "vlan116_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "224",
+          "argName": "vlan117_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "232",
+          "argName": "vlan118_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "240",
+          "argName": "vlan119_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "248",
+          "argName": "vlan120_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "272",
+          "argName": "vlan121_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "280",
+          "argName": "vlan122_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "288",
+          "argName": "vlan123_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "296",
+          "argName": "vlan124_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "304",
+          "argName": "vlan125_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "312",
+          "argName": "vlan126_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "320",
+          "argName": "vlan127_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "328",
+          "argName": "vlan128_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "336",
+          "argName": "vlan129_received"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "1",
+          "offset": "344",
+          "argName": "droped"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "352",
+          "argName": "multicast_recv_enable"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "360",
+          "argName": "unicast_filter_enable"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "368",
+          "argName": "unicast_vlan100_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "376",
+          "argName": "unicast_vlan100_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "384",
+          "argName": "unicast_vlan101_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "392",
+          "argName": "unicast_vlan101_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "400",
+          "argName": "unicast_vlan102_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "408",
+          "argName": "unicast_vlan102_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "416",
+          "argName": "unicast_vlan103_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "424",
+          "argName": "unicast_vlan103_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "432",
+          "argName": "unicast_vlan104_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "440",
+          "argName": "unicast_vlan104_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "448",
+          "argName": "unicast_vlan105_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "456",
+          "argName": "unicast_vlan105_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "464",
+          "argName": "unicast_vlan106_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "472",
+          "argName": "unicast_vlan106_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "480",
+          "argName": "unicast_vlan107_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "488",
+          "argName": "unicast_vlan107_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "496",
+          "argName": "unicast_vlan108_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "504",
+          "argName": "unicast_vlan108_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "512",
+          "argName": "unicast_vlan109_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "520",
+          "argName": "unicast_vlan109_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "528",
+          "argName": "unicast_vlan110_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "536",
+          "argName": "unicast_vlan110_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "544",
+          "argName": "unicast_vlan111_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "552",
+          "argName": "unicast_vlan111_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "560",
+          "argName": "unicast_vlan112_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "568",
+          "argName": "unicast_vlan112_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "576",
+          "argName": "unicast_vlan113_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "584",
+          "argName": "unicast_vlan113_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "592",
+          "argName": "unicast_vlan114_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "600",
+          "argName": "unicast_vlan114_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "608",
+          "argName": "unicast_vlan115_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "616",
+          "argName": "unicast_vlan115_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "624",
+          "argName": "unicast_vlan116_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "632",
+          "argName": "unicast_vlan116_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "640",
+          "argName": "unicast_vlan117_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "648",
+          "argName": "unicast_vlan117_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "656",
+          "argName": "unicast_vlan118_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "664",
+          "argName": "unicast_vlan118_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "672",
+          "argName": "unicast_vlan119_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "680",
+          "argName": "unicast_vlan119_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "688",
+          "argName": "unicast_vlan120_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "696",
+          "argName": "unicast_vlan120_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "704",
+          "argName": "unicast_vlan121_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "712",
+          "argName": "unicast_vlan121_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "720",
+          "argName": "unicast_vlan122_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "728",
+          "argName": "unicast_vlan122_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "736",
+          "argName": "unicast_vlan123_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "744",
+          "argName": "unicast_vlan123_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "752",
+          "argName": "unicast_vlan124_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "760",
+          "argName": "unicast_vlan124_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "768",
+          "argName": "unicast_vlan125_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "776",
+          "argName": "unicast_vlan125_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "784",
+          "argName": "unicast_vlan126_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "792",
+          "argName": "unicast_vlan126_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "800",
+          "argName": "unicast_vlan127_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "808",
+          "argName": "unicast_vlan127_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "816",
+          "argName": "unicast_vlan128_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "824",
+          "argName": "unicast_vlan128_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "832",
+          "argName": "unicast_vlan129_macaddr_lsb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "840",
+          "argName": "unicast_vlan129_macaddr_msb"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "848",
+          "argName": "log_all_mask"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "28",
+          "argName": "fifo_axi_full"
+        }
+      ]
+    },
+    "ap_clk": {
+      "type": "clock",
+      "busTypeName": "clock",
+      "mode": "slave",
+      "busParams": {
+        "ASSOCIATED_BUSIF": "s_axi_axilites:m_axi_fifo_axi_full:m_axi_mac_fifo:m_axi_ps",
+        "ASSOCIATED_RESET": "ap_rst_n"
+      },
+      "portMap": {"ap_clk": "CLK"},
+      "ports": ["ap_clk"]
+    },
+    "ap_rst_n": {
+      "type": "reset",
+      "busTypeName": "reset",
+      "mode": "slave",
+      "busParams": {"POLARITY": "ACTIVE_LOW"},
+      "portMap": {"ap_rst_n": "RST"},
+      "ports": ["ap_rst_n"]
+    },
+    "interrupt": {
+      "type": "interrupt",
+      "busTypeName": "interrupt",
+      "mode": "master",
+      "dataWidth": "1",
+      "busParams": {"SENSITIVITY": "LEVEL_HIGH"},
+      "portMap": {"interrupt": "INTERRUPT"},
+      "ports": ["interrupt"]
+    },
+    "m_axi_fifo_axi_full": {
+      "type": "axi4full",
+      "busTypeName": "aximm",
+      "mode": "master",
+      "dataWidth": "32",
+      "addrWidth": "64",
+      "portPrefix": "m_axi_fifo_axi_full_",
+      "paramPrefix": "C_M_AXI_FIFO_AXI_FULL_",
+      "offsetSlaveName": "s_axi_axilites",
+      "preferredUsageValue": "MEMORY",
+      "busParams": {
+        "NUM_READ_OUTSTANDING": "16",
+        "NUM_WRITE_OUTSTANDING": "16",
+        "MAX_READ_BURST_LENGTH": "16",
+        "MAX_WRITE_BURST_LENGTH": "16",
+        "MAX_BURST_LENGTH": "256",
+        "PROTOCOL": "AXI4",
+        "READ_WRITE_MODE": "READ_ONLY",
+        "HAS_BURST": "0",
+        "SUPPORTS_NARROW_BURST": "0"
+      },
+      "ports": [
+        "m_axi_fifo_axi_full_ARADDR",
+        "m_axi_fifo_axi_full_ARBURST",
+        "m_axi_fifo_axi_full_ARCACHE",
+        "m_axi_fifo_axi_full_ARID",
+        "m_axi_fifo_axi_full_ARLEN",
+        "m_axi_fifo_axi_full_ARLOCK",
+        "m_axi_fifo_axi_full_ARPROT",
+        "m_axi_fifo_axi_full_ARQOS",
+        "m_axi_fifo_axi_full_ARREADY",
+        "m_axi_fifo_axi_full_ARREGION",
+        "m_axi_fifo_axi_full_ARSIZE",
+        "m_axi_fifo_axi_full_ARUSER",
+        "m_axi_fifo_axi_full_ARVALID",
+        "m_axi_fifo_axi_full_AWADDR",
+        "m_axi_fifo_axi_full_AWBURST",
+        "m_axi_fifo_axi_full_AWCACHE",
+        "m_axi_fifo_axi_full_AWID",
+        "m_axi_fifo_axi_full_AWLEN",
+        "m_axi_fifo_axi_full_AWLOCK",
+        "m_axi_fifo_axi_full_AWPROT",
+        "m_axi_fifo_axi_full_AWQOS",
+        "m_axi_fifo_axi_full_AWREADY",
+        "m_axi_fifo_axi_full_AWREGION",
+        "m_axi_fifo_axi_full_AWSIZE",
+        "m_axi_fifo_axi_full_AWUSER",
+        "m_axi_fifo_axi_full_AWVALID",
+        "m_axi_fifo_axi_full_BID",
+        "m_axi_fifo_axi_full_BREADY",
+        "m_axi_fifo_axi_full_BRESP",
+        "m_axi_fifo_axi_full_BUSER",
+        "m_axi_fifo_axi_full_BVALID",
+        "m_axi_fifo_axi_full_RDATA",
+        "m_axi_fifo_axi_full_RID",
+        "m_axi_fifo_axi_full_RLAST",
+        "m_axi_fifo_axi_full_RREADY",
+        "m_axi_fifo_axi_full_RRESP",
+        "m_axi_fifo_axi_full_RUSER",
+        "m_axi_fifo_axi_full_RVALID",
+        "m_axi_fifo_axi_full_WDATA",
+        "m_axi_fifo_axi_full_WID",
+        "m_axi_fifo_axi_full_WLAST",
+        "m_axi_fifo_axi_full_WREADY",
+        "m_axi_fifo_axi_full_WSTRB",
+        "m_axi_fifo_axi_full_WUSER",
+        "m_axi_fifo_axi_full_WVALID"
+      ],
+      "constraints": [
+        {
+          "constraint_type": "pragma interface",
+          "mode": "m_axi",
+          "register_option": "0",
+          "offset": "slave",
+          "latency": "0",
+          "num_read_outstanding": "16",
+          "num_write_outstanding": "16",
+          "max_read_burst_length": "16",
+          "max_write_burst_length": "16",
+          "max_widen_bitwidth": "0",
+          "argName": "fifo_axi_full"
+        },
+        {
+          "constraint_type": "bitwidth",
+          "orig_bitwidth": "32",
+          "final_bitwidth": "32",
+          "argName": "fifo_axi_full"
+        }
+      ]
+    },
+    "m_axi_mac_fifo": {
+      "type": "axi4full",
+      "busTypeName": "aximm",
+      "mode": "master",
+      "dataWidth": "32",
+      "addrWidth": "64",
+      "portPrefix": "m_axi_mac_fifo_",
+      "paramPrefix": "C_M_AXI_MAC_FIFO_",
+      "offsetSlaveName": "s_axi_axilites",
+      "preferredUsageValue": "MEMORY",
+      "busParams": {
+        "NUM_READ_OUTSTANDING": "16",
+        "NUM_WRITE_OUTSTANDING": "16",
+        "MAX_READ_BURST_LENGTH": "16",
+        "MAX_WRITE_BURST_LENGTH": "16",
+        "MAX_BURST_LENGTH": "256",
+        "PROTOCOL": "AXI4",
+        "READ_WRITE_MODE": "READ_ONLY",
+        "HAS_BURST": "0",
+        "SUPPORTS_NARROW_BURST": "0"
+      },
+      "ports": [
+        "m_axi_mac_fifo_ARADDR",
+        "m_axi_mac_fifo_ARBURST",
+        "m_axi_mac_fifo_ARCACHE",
+        "m_axi_mac_fifo_ARID",
+        "m_axi_mac_fifo_ARLEN",
+        "m_axi_mac_fifo_ARLOCK",
+        "m_axi_mac_fifo_ARPROT",
+        "m_axi_mac_fifo_ARQOS",
+        "m_axi_mac_fifo_ARREADY",
+        "m_axi_mac_fifo_ARREGION",
+        "m_axi_mac_fifo_ARSIZE",
+        "m_axi_mac_fifo_ARUSER",
+        "m_axi_mac_fifo_ARVALID",
+        "m_axi_mac_fifo_AWADDR",
+        "m_axi_mac_fifo_AWBURST",
+        "m_axi_mac_fifo_AWCACHE",
+        "m_axi_mac_fifo_AWID",
+        "m_axi_mac_fifo_AWLEN",
+        "m_axi_mac_fifo_AWLOCK",
+        "m_axi_mac_fifo_AWPROT",
+        "m_axi_mac_fifo_AWQOS",
+        "m_axi_mac_fifo_AWREADY",
+        "m_axi_mac_fifo_AWREGION",
+        "m_axi_mac_fifo_AWSIZE",
+        "m_axi_mac_fifo_AWUSER",
+        "m_axi_mac_fifo_AWVALID",
+        "m_axi_mac_fifo_BID",
+        "m_axi_mac_fifo_BREADY",
+        "m_axi_mac_fifo_BRESP",
+        "m_axi_mac_fifo_BUSER",
+        "m_axi_mac_fifo_BVALID",
+        "m_axi_mac_fifo_RDATA",
+        "m_axi_mac_fifo_RID",
+        "m_axi_mac_fifo_RLAST",
+        "m_axi_mac_fifo_RREADY",
+        "m_axi_mac_fifo_RRESP",
+        "m_axi_mac_fifo_RUSER",
+        "m_axi_mac_fifo_RVALID",
+        "m_axi_mac_fifo_WDATA",
+        "m_axi_mac_fifo_WID",
+        "m_axi_mac_fifo_WLAST",
+        "m_axi_mac_fifo_WREADY",
+        "m_axi_mac_fifo_WSTRB",
+        "m_axi_mac_fifo_WUSER",
+        "m_axi_mac_fifo_WVALID"
+      ],
+      "constraints": [
+        {
+          "constraint_type": "pragma interface",
+          "mode": "m_axi",
+          "register_option": "0",
+          "offset": "slave",
+          "latency": "0",
+          "num_read_outstanding": "16",
+          "num_write_outstanding": "16",
+          "max_read_burst_length": "16",
+          "max_write_burst_length": "16",
+          "max_widen_bitwidth": "0",
+          "argName": "fifo"
+        },
+        {
+          "constraint_type": "bitwidth",
+          "orig_bitwidth": "32",
+          "final_bitwidth": "32",
+          "argName": "fifo"
+        }
+      ]
+    },
+    "m_axi_ps": {
+      "type": "axi4full",
+      "busTypeName": "aximm",
+      "mode": "master",
+      "dataWidth": "64",
+      "addrWidth": "64",
+      "portPrefix": "m_axi_ps_",
+      "paramPrefix": "C_M_AXI_PS_",
+      "offsetSlaveName": "s_axi_axilites",
+      "preferredUsageValue": "MEMORY",
+      "busParams": {
+        "NUM_READ_OUTSTANDING": "16",
+        "NUM_WRITE_OUTSTANDING": "16",
+        "MAX_READ_BURST_LENGTH": "16",
+        "MAX_WRITE_BURST_LENGTH": "64",
+        "MAX_BURST_LENGTH": "256",
+        "PROTOCOL": "AXI4",
+        "READ_WRITE_MODE": "READ_WRITE",
+        "HAS_BURST": "0",
+        "SUPPORTS_NARROW_BURST": "0"
+      },
+      "ports": [
+        "m_axi_ps_ARADDR",
+        "m_axi_ps_ARBURST",
+        "m_axi_ps_ARCACHE",
+        "m_axi_ps_ARID",
+        "m_axi_ps_ARLEN",
+        "m_axi_ps_ARLOCK",
+        "m_axi_ps_ARPROT",
+        "m_axi_ps_ARQOS",
+        "m_axi_ps_ARREADY",
+        "m_axi_ps_ARREGION",
+        "m_axi_ps_ARSIZE",
+        "m_axi_ps_ARUSER",
+        "m_axi_ps_ARVALID",
+        "m_axi_ps_AWADDR",
+        "m_axi_ps_AWBURST",
+        "m_axi_ps_AWCACHE",
+        "m_axi_ps_AWID",
+        "m_axi_ps_AWLEN",
+        "m_axi_ps_AWLOCK",
+        "m_axi_ps_AWPROT",
+        "m_axi_ps_AWQOS",
+        "m_axi_ps_AWREADY",
+        "m_axi_ps_AWREGION",
+        "m_axi_ps_AWSIZE",
+        "m_axi_ps_AWUSER",
+        "m_axi_ps_AWVALID",
+        "m_axi_ps_BID",
+        "m_axi_ps_BREADY",
+        "m_axi_ps_BRESP",
+        "m_axi_ps_BUSER",
+        "m_axi_ps_BVALID",
+        "m_axi_ps_RDATA",
+        "m_axi_ps_RID",
+        "m_axi_ps_RLAST",
+        "m_axi_ps_RREADY",
+        "m_axi_ps_RRESP",
+        "m_axi_ps_RUSER",
+        "m_axi_ps_RVALID",
+        "m_axi_ps_WDATA",
+        "m_axi_ps_WID",
+        "m_axi_ps_WLAST",
+        "m_axi_ps_WREADY",
+        "m_axi_ps_WSTRB",
+        "m_axi_ps_WUSER",
+        "m_axi_ps_WVALID"
+      ],
+      "constraints": [
+        {
+          "constraint_type": "pragma interface",
+          "mode": "m_axi",
+          "register_option": "0",
+          "offset": "slave",
+          "latency": "0",
+          "num_read_outstanding": "16",
+          "num_write_outstanding": "16",
+          "max_read_burst_length": "16",
+          "max_write_burst_length": "64",
+          "max_widen_bitwidth": "64",
+          "argName": "log_ddr"
+        },
+        {
+          "constraint_type": "bitwidth",
+          "orig_bitwidth": "64",
+          "final_bitwidth": "64",
+          "argName": "log_ddr"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "m_axi",
+          "register_option": "0",
+          "offset": "slave",
+          "latency": "0",
+          "num_read_outstanding": "16",
+          "num_write_outstanding": "16",
+          "max_read_burst_length": "16",
+          "max_write_burst_length": "64",
+          "max_widen_bitwidth": "64",
+          "argName": "tap_ddr"
+        },
+        {
+          "constraint_type": "bitwidth",
+          "orig_bitwidth": "64",
+          "final_bitwidth": "64",
+          "argName": "tap_ddr"
+        }
+      ]
+    },
+    "timestamp": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "slave",
+      "dataWidth": "64",
+      "portMap": {"timestamp": "DATA"},
+      "ports": ["timestamp"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "0",
+          "argName": "timestamp"
+        }]
+    }
+  },
+  "RtlPorts": {
+    "s_axi_axilites_AWVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_axilites_AWREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_axilites_AWADDR": {
+      "dir": "in",
+      "width": "10"
+    },
+    "s_axi_axilites_WVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_axilites_WREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_axilites_WDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "s_axi_axilites_WSTRB": {
+      "dir": "in",
+      "width": "4"
+    },
+    "s_axi_axilites_ARVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_axilites_ARREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_axilites_ARADDR": {
+      "dir": "in",
+      "width": "10"
+    },
+    "s_axi_axilites_RVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_axilites_RREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_axilites_RDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "s_axi_axilites_RRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "s_axi_axilites_BVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_axilites_BREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_axilites_BRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "interrupt": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_fifo_axi_full_AWVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_fifo_axi_full_AWREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_fifo_axi_full_AWADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_fifo_axi_full_AWID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_fifo_axi_full_AWLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_fifo_axi_full_AWSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_fifo_axi_full_AWBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_fifo_axi_full_AWLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_fifo_axi_full_AWCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_fifo_axi_full_AWPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_fifo_axi_full_AWQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_fifo_axi_full_AWREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_fifo_axi_full_AWUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_fifo_axi_full_WVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_fifo_axi_full_WREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_fifo_axi_full_WDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_fifo_axi_full_WSTRB": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_fifo_axi_full_WLAST": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_fifo_axi_full_WID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_fifo_axi_full_WUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_fifo_axi_full_ARVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_fifo_axi_full_ARREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_fifo_axi_full_ARADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_fifo_axi_full_ARID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_fifo_axi_full_ARLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_fifo_axi_full_ARSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_fifo_axi_full_ARBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_fifo_axi_full_ARLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_fifo_axi_full_ARCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_fifo_axi_full_ARPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_fifo_axi_full_ARQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_fifo_axi_full_ARREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_fifo_axi_full_ARUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_fifo_axi_full_RVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_fifo_axi_full_RREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_fifo_axi_full_RDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "m_axi_fifo_axi_full_RLAST": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_fifo_axi_full_RID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_fifo_axi_full_RUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_fifo_axi_full_RRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_fifo_axi_full_BVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_fifo_axi_full_BREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_fifo_axi_full_BRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_fifo_axi_full_BID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_fifo_axi_full_BUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_mac_fifo_AWVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_mac_fifo_AWREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_mac_fifo_AWADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_mac_fifo_AWID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_mac_fifo_AWLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_mac_fifo_AWSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_mac_fifo_AWBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_mac_fifo_AWLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_mac_fifo_AWCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_mac_fifo_AWPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_mac_fifo_AWQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_mac_fifo_AWREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_mac_fifo_AWUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_mac_fifo_WVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_mac_fifo_WREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_mac_fifo_WDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_mac_fifo_WSTRB": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_mac_fifo_WLAST": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_mac_fifo_WID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_mac_fifo_WUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_mac_fifo_ARVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_mac_fifo_ARREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_mac_fifo_ARADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_mac_fifo_ARID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_mac_fifo_ARLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_mac_fifo_ARSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_mac_fifo_ARBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_mac_fifo_ARLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_mac_fifo_ARCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_mac_fifo_ARPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_mac_fifo_ARQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_mac_fifo_ARREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_mac_fifo_ARUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_mac_fifo_RVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_mac_fifo_RREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_mac_fifo_RDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "m_axi_mac_fifo_RLAST": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_mac_fifo_RID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_mac_fifo_RUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_mac_fifo_RRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_mac_fifo_BVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_mac_fifo_BREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_mac_fifo_BRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_mac_fifo_BID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_mac_fifo_BUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_ps_AWVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_ps_AWREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_ps_AWADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_ps_AWID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_ps_AWLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_ps_AWSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_ps_AWBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_ps_AWLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_ps_AWCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_ps_AWPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_ps_AWQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_ps_AWREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_ps_AWUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_ps_WVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_ps_WREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_ps_WDATA": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_ps_WSTRB": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_ps_WLAST": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_ps_WID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_ps_WUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_ps_ARVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_ps_ARREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_ps_ARADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_ps_ARID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_ps_ARLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_ps_ARSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_ps_ARBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_ps_ARLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_ps_ARCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_ps_ARPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_ps_ARQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_ps_ARREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_ps_ARUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_ps_RVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_ps_RREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_ps_RDATA": {
+      "dir": "in",
+      "width": "64"
+    },
+    "m_axi_ps_RLAST": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_ps_RID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_ps_RUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_ps_RRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_ps_BVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_ps_BREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_ps_BRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_ps_BID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_ps_BUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "timestamp": {
+      "dir": "in",
+      "width": "64"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {
+      "ModuleName": "mac_logger",
+      "Instances": [
+        {
+          "ModuleName": "entry_proc",
+          "InstanceName": "entry_proc_U0"
+        },
+        {
+          "ModuleName": "rx_ringbuffer_header",
+          "InstanceName": "rx_ringbuffer_header_U0",
+          "Instances": [
+            {
+              "ModuleName": "rx_ringbuffer_header_Pipeline_VITIS_LOOP_28_1",
+              "InstanceName": "grp_rx_ringbuffer_header_Pipeline_VITIS_LOOP_28_1_fu_74"
+            },
+            {
+              "ModuleName": "rx_ringbuffer_header_Pipeline_VITIS_LOOP_32_2",
+              "InstanceName": "grp_rx_ringbuffer_header_Pipeline_VITIS_LOOP_32_2_fu_83"
+            }
+          ]
+        },
+        {
+          "ModuleName": "rx_fifo",
+          "InstanceName": "rx_fifo_U0",
+          "Instances": [
+            {
+              "ModuleName": "rx_fifo_Pipeline_VITIS_LOOP_71_1",
+              "InstanceName": "grp_rx_fifo_Pipeline_VITIS_LOOP_71_1_fu_265"
+            },
+            {
+              "ModuleName": "rx_fifo_Pipeline_VITIS_LOOP_91_2",
+              "InstanceName": "grp_rx_fifo_Pipeline_VITIS_LOOP_91_2_fu_273"
+            },
+            {
+              "ModuleName": "rx_fifo_Pipeline_rx_macfifo_data",
+              "InstanceName": "grp_rx_fifo_Pipeline_rx_macfifo_data_fu_281"
+            },
+            {
+              "ModuleName": "rx_fifo_Pipeline_4",
+              "InstanceName": "grp_rx_fifo_Pipeline_4_fu_292"
+            }
+          ]
+        },
+        {
+          "ModuleName": "tx_ddr",
+          "InstanceName": "tx_ddr_U0",
+          "Instances": [
+            {
+              "ModuleName": "tx_ddr_Pipeline_VITIS_LOOP_924_1",
+              "InstanceName": "grp_tx_ddr_Pipeline_VITIS_LOOP_924_1_fu_4084"
+            },
+            {
+              "ModuleName": "tx_ddr_Pipeline_tx_2_log_ddr",
+              "InstanceName": "grp_tx_ddr_Pipeline_tx_2_log_ddr_fu_4091"
+            },
+            {
+              "ModuleName": "tx_ddr_Pipeline_VITIS_LOOP_986_2",
+              "InstanceName": "grp_tx_ddr_Pipeline_VITIS_LOOP_986_2_fu_4101"
+            },
+            {
+              "ModuleName": "tx_ddr_Pipeline_tx_2_tap_ddr",
+              "InstanceName": "grp_tx_ddr_Pipeline_tx_2_tap_ddr_fu_4108"
+            }
+          ]
+        }
+      ]
+    },
+    "Info": {
+      "entry_proc": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "1"
+      },
+      "rx_ringbuffer_header_Pipeline_VITIS_LOOP_28_1": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "rx_ringbuffer_header_Pipeline_VITIS_LOOP_32_2": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "rx_ringbuffer_header": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "rx_fifo_Pipeline_VITIS_LOOP_71_1": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "rx_fifo_Pipeline_VITIS_LOOP_91_2": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "rx_fifo_Pipeline_rx_macfifo_data": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "rx_fifo_Pipeline_4": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "rx_fifo": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "tx_ddr_Pipeline_VITIS_LOOP_924_1": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "tx_ddr_Pipeline_tx_2_log_ddr": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "tx_ddr_Pipeline_VITIS_LOOP_986_2": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "tx_ddr_Pipeline_tx_2_tap_ddr": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "tx_ddr": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "mac_logger": {
+        "FunctionProtocol": "ap_ctrl_chain",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      }
+    },
+    "Metrics": {
+      "entry_proc": {
+        "Latency": {
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "0",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "1.838"
+        },
+        "Area": {
+          "FF": "2",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "~0",
+          "LUT": "587",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0"
+        }
+      },
+      "rx_ringbuffer_header_Pipeline_VITIS_LOOP_28_1": {
+        "Latency": {
+          "LatencyBest": "7",
+          "LatencyAvg": "7",
+          "LatencyWorst": "7",
+          "PipelineII": "7",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.300"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_28_1",
+            "TripCount": "4",
+            "Latency": "5",
+            "PipelineII": "1",
+            "PipelineDepth": "3"
+          }],
+        "Area": {
+          "FF": "79",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "~0",
+          "LUT": "70",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0"
+        }
+      },
+      "rx_ringbuffer_header_Pipeline_VITIS_LOOP_32_2": {
+        "Latency": {
+          "LatencyBest": "7",
+          "LatencyAvg": "7",
+          "LatencyWorst": "7",
+          "PipelineII": "7",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.300"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_32_2",
+            "TripCount": "4",
+            "Latency": "5",
+            "PipelineII": "1",
+            "PipelineDepth": "3"
+          }],
+        "Area": {
+          "FF": "79",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "~0",
+          "LUT": "70",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0"
+        }
+      },
+      "rx_ringbuffer_header": {
+        "Latency": {
+          "LatencyBest": "31",
+          "LatencyAvg": "31",
+          "LatencyWorst": "31",
+          "PipelineII": "31",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.300"
+        },
+        "Area": {
+          "FF": "429",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "~0",
+          "LUT": "481",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0"
+        }
+      },
+      "rx_fifo_Pipeline_VITIS_LOOP_71_1": {
+        "Latency": {
+          "LatencyBest": "14",
+          "LatencyAvg": "14",
+          "LatencyWorst": "14",
+          "PipelineII": "14",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.300"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_71_1",
+            "TripCount": "4",
+            "Latency": "12",
+            "PipelineII": "1",
+            "PipelineDepth": "10"
+          }],
+        "Area": {
+          "FF": "186",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "~0",
+          "LUT": "111",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0"
+        }
+      },
+      "rx_fifo_Pipeline_VITIS_LOOP_91_2": {
+        "Latency": {
+          "LatencyBest": "5",
+          "LatencyAvg": "",
+          "LatencyWorst": "6",
+          "PipelineIIMin": "5",
+          "PipelineIIMax": "6",
+          "PipelineII": "5 ~ 6",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "2.026"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_91_2",
+            "TripCount": "",
+            "LatencyMin": "3",
+            "LatencyMax": "4",
+            "Latency": "3 ~ 4",
+            "PipelineII": "1",
+            "PipelineDepth": "2"
+          }],
+        "Area": {
+          "FF": "8",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "~0",
+          "LUT": "68",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0"
+        }
+      },
+      "rx_fifo_Pipeline_rx_macfifo_data": {
+        "Latency": {
+          "LatencyBest": "58",
+          "LatencyAvg": "2570",
+          "LatencyWorst": "6730",
+          "PipelineIIMin": "58",
+          "PipelineIIMax": "6730",
+          "PipelineII": "58 ~ 6730",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.300"
+        },
+        "Loops": [{
+            "Name": "rx_macfifo_data",
+            "TripCount": "",
+            "LatencyMin": "56",
+            "LatencyMax": "6728",
+            "Latency": "56 ~ 6728",
+            "PipelineII": "16",
+            "PipelineDepth": "25"
+          }],
+        "Area": {
+          "FF": "160",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "~0",
+          "LUT": "532",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0"
+        }
+      },
+      "rx_fifo_Pipeline_4": {
+        "Latency": {
+          "LatencyBest": "4",
+          "LatencyAvg": "",
+          "LatencyWorst": "18",
+          "PipelineIIMin": "4",
+          "PipelineIIMax": "18",
+          "PipelineII": "4 ~ 18",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.300"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "",
+            "LatencyMin": "2",
+            "LatencyMax": "16",
+            "Latency": "2 ~ 16",
+            "PipelineII": "1",
+            "PipelineDepth": "2"
+          }],
+        "Area": {
+          "FF": "44",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "~0",
+          "LUT": "86",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0"
+        }
+      },
+      "rx_fifo": {
+        "Latency": {
+          "LatencyBest": "10",
+          "LatencyAvg": "",
+          "LatencyWorst": "6799",
+          "PipelineIIMin": "10",
+          "PipelineIIMax": "6799",
+          "PipelineII": "10 ~ 6799",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.300"
+        },
+        "Area": {
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "0",
+          "FF": "857",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "~0",
+          "LUT": "2005",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "1",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "0"
+        }
+      },
+      "tx_ddr_Pipeline_VITIS_LOOP_924_1": {
+        "Latency": {
+          "LatencyBest": "6",
+          "LatencyAvg": "6",
+          "LatencyWorst": "6",
+          "PipelineII": "6",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "1.354"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_924_1",
+            "TripCount": "4",
+            "Latency": "4",
+            "PipelineII": "1",
+            "PipelineDepth": "2"
+          }],
+        "Area": {
+          "FF": "9",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "~0",
+          "LUT": "57",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0"
+        }
+      },
+      "tx_ddr_Pipeline_tx_2_log_ddr": {
+        "Latency": {
+          "LatencyBest": "6",
+          "LatencyAvg": "163",
+          "LatencyWorst": "423",
+          "PipelineIIMin": "6",
+          "PipelineIIMax": "423",
+          "PipelineII": "6 ~ 423",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.300"
+        },
+        "Loops": [{
+            "Name": "tx_2_log_ddr",
+            "TripCount": "",
+            "LatencyMin": "4",
+            "LatencyMax": "421",
+            "Latency": "4 ~ 421",
+            "PipelineII": "1",
+            "PipelineDepth": "3"
+          }],
+        "Area": {
+          "FF": "84",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "~0",
+          "LUT": "91",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0"
+        }
+      },
+      "tx_ddr_Pipeline_VITIS_LOOP_986_2": {
+        "Latency": {
+          "LatencyBest": "6",
+          "LatencyAvg": "6",
+          "LatencyWorst": "6",
+          "PipelineII": "6",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "1.354"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_986_2",
+            "TripCount": "4",
+            "Latency": "4",
+            "PipelineII": "1",
+            "PipelineDepth": "2"
+          }],
+        "Area": {
+          "FF": "9",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "~0",
+          "LUT": "57",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0"
+        }
+      },
+      "tx_ddr_Pipeline_tx_2_tap_ddr": {
+        "Latency": {
+          "LatencyBest": "6",
+          "LatencyAvg": "163",
+          "LatencyWorst": "443",
+          "PipelineIIMin": "6",
+          "PipelineIIMax": "443",
+          "PipelineII": "6 ~ 443",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.300"
+        },
+        "Loops": [{
+            "Name": "tx_2_tap_ddr",
+            "TripCount": "",
+            "LatencyMin": "4",
+            "LatencyMax": "441",
+            "Latency": "4 ~ 441",
+            "PipelineII": "1",
+            "PipelineDepth": "3"
+          }],
+        "Area": {
+          "FF": "84",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "~0",
+          "LUT": "91",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0"
+        }
+      },
+      "tx_ddr": {
+        "Latency": {
+          "LatencyBest": "2",
+          "LatencyAvg": "70",
+          "LatencyWorst": "981",
+          "PipelineIIMin": "2",
+          "PipelineIIMax": "981",
+          "PipelineII": "2 ~ 981",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.300"
+        },
+        "Area": {
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "0",
+          "DSP": "6",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "~0",
+          "FF": "7042",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "3",
+          "LUT": "8062",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "6",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0"
+        }
+      },
+      "mac_logger": {
+        "Latency": {
+          "LatencyBest": "34",
+          "LatencyAvg": "",
+          "LatencyWorst": "7781",
+          "PipelineIIMin": "32",
+          "PipelineIIMax": "6800",
+          "PipelineII": "32 ~ 6800",
+          "PipelineDepth": "",
+          "PipelineType": "dataflow"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.300"
+        },
+        "Area": {
+          "BRAM_18K": "4",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "1",
+          "DSP": "6",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "~0",
+          "FF": "21169",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "9",
+          "LUT": "27245",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "23",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0"
+        }
+      }
+    }
+  },
+  "GenerateBdFiles": "0",
+  "GenData": {
+    "DataVersion": "0.2",
+    "Time": "2022-12-19 09:57:38 +0100",
+    "ToolName": "vitis_hls",
+    "ToolVersion": "2022.2"
+  }
+}
