@@ -259,7 +259,7 @@ attribute shreg_extract : string;
     attribute fsm_encoding of ap_CS_fsm : signal is "none";
     signal ap_CS_fsm_state1 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state1 : signal is "none";
-    signal counter_can_2 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
+    signal counter_droped_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
     signal internal_can_counter : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
     signal can_addr_blk_n_AR : STD_LOGIC;
     signal ap_CS_fsm_state2 : STD_LOGIC;
@@ -336,10 +336,10 @@ attribute shreg_extract : string;
     attribute fsm_encoding of ap_CS_fsm_state13 : signal is "none";
     signal NofBytes_fu_1239_p3 : STD_LOGIC_VECTOR (6 downto 0);
     signal NofBytes_reg_1548 : STD_LOGIC_VECTOR (6 downto 0);
-    signal add156_fu_1267_p2 : STD_LOGIC_VECTOR (14 downto 0);
-    signal add156_reg_1553 : STD_LOGIC_VECTOR (14 downto 0);
-    signal icmp_ln237_fu_1272_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal icmp_ln237_reg_1559 : STD_LOGIC_VECTOR (0 downto 0);
+    signal add115_fu_1267_p2 : STD_LOGIC_VECTOR (14 downto 0);
+    signal add115_reg_1553 : STD_LOGIC_VECTOR (14 downto 0);
+    signal icmp_ln223_fu_1272_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal icmp_ln223_reg_1559 : STD_LOGIC_VECTOR (0 downto 0);
     signal trunc_ln16_reg_1563 : STD_LOGIC_VECTOR (3 downto 0);
     signal trunc_ln17_reg_1568 : STD_LOGIC_VECTOR (29 downto 0);
     signal ap_CS_fsm_state15 : STD_LOGIC;
@@ -512,7 +512,7 @@ attribute shreg_extract : string;
     signal sext_ln168_fu_682_p1 : STD_LOGIC_VECTOR (31 downto 0);
     signal sext_ln191_fu_810_p1 : STD_LOGIC_VECTOR (31 downto 0);
     signal sext_ln281_fu_1353_p1 : STD_LOGIC_VECTOR (31 downto 0);
-    signal add_ln259_fu_1298_p2 : STD_LOGIC_VECTOR (31 downto 0);
+    signal add_ln267_fu_1298_p2 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_predicate_op209_call_state15 : BOOLEAN;
     signal ap_block_state15_on_subcall_done : BOOLEAN;
     signal add_ln278_fu_1315_p2 : STD_LOGIC_VECTOR (31 downto 0);
@@ -689,7 +689,7 @@ attribute shreg_extract : string;
         m_axi_can_addr_BID : IN STD_LOGIC_VECTOR (0 downto 0);
         m_axi_can_addr_BUSER : IN STD_LOGIC_VECTOR (0 downto 0);
         zext_ln27 : IN STD_LOGIC_VECTOR (6 downto 0);
-        zext_ln237 : IN STD_LOGIC_VECTOR (14 downto 0);
+        zext_ln223 : IN STD_LOGIC_VECTOR (14 downto 0);
         canbase : IN STD_LOGIC_VECTOR (31 downto 0);
         can_frame_address0 : OUT STD_LOGIC_VECTOR (6 downto 0);
         can_frame_ce0 : OUT STD_LOGIC;
@@ -758,7 +758,7 @@ attribute shreg_extract : string;
         m_axi_can_addr_BUSER : IN STD_LOGIC_VECTOR (0 downto 0);
         add_ln223_1 : IN STD_LOGIC_VECTOR (4 downto 0);
         canbase : IN STD_LOGIC_VECTOR (31 downto 0);
-        zext_ln237 : IN STD_LOGIC_VECTOR (14 downto 0);
+        zext_ln223 : IN STD_LOGIC_VECTOR (14 downto 0);
         can_frame_address0 : OUT STD_LOGIC_VECTOR (6 downto 0);
         can_frame_ce0 : OUT STD_LOGIC;
         can_frame_we0 : OUT STD_LOGIC;
@@ -939,7 +939,7 @@ begin
         m_axi_can_addr_BID => ap_const_lv1_0,
         m_axi_can_addr_BUSER => ap_const_lv1_0,
         zext_ln27 => NofBytes_reg_1548,
-        zext_ln237 => add156_reg_1553,
+        zext_ln223 => add115_reg_1553,
         canbase => canbase,
         can_frame_address0 => grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_can_frame_address0,
         can_frame_ce0 => grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_can_frame_ce0,
@@ -1006,7 +1006,7 @@ begin
         m_axi_can_addr_BUSER => ap_const_lv1_0,
         add_ln223_1 => add_ln223_1_reg_1573,
         canbase => canbase,
-        zext_ln237 => add156_reg_1553,
+        zext_ln223 => add115_reg_1553,
         can_frame_address0 => grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_can_frame_address0,
         can_frame_ce0 => grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_can_frame_ce0,
         can_frame_we0 => grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_can_frame_we0,
@@ -1091,14 +1091,14 @@ begin
     end process;
 
 
-    counter_can_2_assign_proc : process(ap_clk)
+    counter_droped_1_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst = '1') then
-                counter_can_2 <= ap_const_lv32_0;
+                counter_droped_1 <= ap_const_lv32_0;
             else
                 if (((ap_const_boolean_0 = ap_block_state15_on_subcall_done) and (ap_const_logic_1 = ap_CS_fsm_state15))) then 
-                    counter_can_2 <= add_ln259_fu_1298_p2;
+                    counter_droped_1 <= add_ln267_fu_1298_p2;
                 end if; 
             end if;
         end if;
@@ -1173,8 +1173,8 @@ begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state13)) then
                 NofBytes_reg_1548 <= NofBytes_fu_1239_p3;
-                    add156_reg_1553(14 downto 3) <= add156_fu_1267_p2(14 downto 3);
-                icmp_ln237_reg_1559 <= icmp_ln237_fu_1272_p2;
+                    add115_reg_1553(14 downto 3) <= add115_fu_1267_p2(14 downto 3);
+                icmp_ln223_reg_1559 <= icmp_ln223_fu_1272_p2;
             end if;
         end if;
     end process;
@@ -1284,7 +1284,7 @@ begin
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((icmp_ln237_fu_1272_p2 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state13))) then
+            if (((icmp_ln223_fu_1272_p2 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state13))) then
                 trunc_ln16_reg_1563 <= add_ln223_fu_1278_p2(5 downto 2);
             end if;
         end if;
@@ -1298,9 +1298,9 @@ begin
         end if;
     end process;
     add_ln168_2_reg_1377(2 downto 0) <= "000";
-    add156_reg_1553(2 downto 0) <= "000";
+    add115_reg_1553(2 downto 0) <= "000";
 
-    ap_NS_fsm_assign_proc : process (ap_start, ap_CS_fsm, ap_CS_fsm_state1, m_axi_can_addr_AWREADY, m_axi_can_addr_WREADY, m_axi_can_addr_ARREADY, m_axi_can_addr_RVALID, m_axi_can_addr_BVALID, ap_CS_fsm_state2, ap_CS_fsm_state9, ap_CS_fsm_state4, ap_CS_fsm_state11, ap_CS_fsm_state17, ap_CS_fsm_state24, ap_CS_fsm_state25, ap_CS_fsm_state26, ap_CS_fsm_state31, tmp_7_reg_1489, ap_CS_fsm_state13, icmp_ln237_fu_1272_p2, ap_CS_fsm_state15, grp_recvFrame_logic_1_Pipeline_1_fu_572_ap_done, grp_write_ddr_1_fu_598_ap_done, ap_CS_fsm_state18, ap_block_state15_on_subcall_done)
+    ap_NS_fsm_assign_proc : process (ap_start, ap_CS_fsm, ap_CS_fsm_state1, m_axi_can_addr_AWREADY, m_axi_can_addr_WREADY, m_axi_can_addr_ARREADY, m_axi_can_addr_RVALID, m_axi_can_addr_BVALID, ap_CS_fsm_state2, ap_CS_fsm_state9, ap_CS_fsm_state4, ap_CS_fsm_state11, ap_CS_fsm_state17, ap_CS_fsm_state24, ap_CS_fsm_state25, ap_CS_fsm_state26, ap_CS_fsm_state31, tmp_7_reg_1489, ap_CS_fsm_state13, icmp_ln223_fu_1272_p2, ap_CS_fsm_state15, grp_recvFrame_logic_1_Pipeline_1_fu_572_ap_done, grp_write_ddr_1_fu_598_ap_done, ap_CS_fsm_state18, ap_block_state15_on_subcall_done)
     begin
         case ap_CS_fsm is
             when ap_ST_fsm_state1 => 
@@ -1348,9 +1348,9 @@ begin
             when ap_ST_fsm_state12 => 
                 ap_NS_fsm <= ap_ST_fsm_state13;
             when ap_ST_fsm_state13 => 
-                if (((icmp_ln237_fu_1272_p2 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state13))) then
+                if (((icmp_ln223_fu_1272_p2 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state13))) then
                     ap_NS_fsm <= ap_ST_fsm_state16;
-                elsif (((icmp_ln237_fu_1272_p2 = ap_const_lv1_1) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state13))) then
+                elsif (((icmp_ln223_fu_1272_p2 = ap_const_lv1_1) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state13))) then
                     ap_NS_fsm <= ap_ST_fsm_state15;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state14;
@@ -1431,7 +1431,7 @@ begin
     NofBytes_fu_1239_p3 <= 
         empty_fu_1228_p3 when (empty_86_fu_1235_p2(0) = '1') else 
         zext_ln32_5_fu_1224_p1;
-    add156_fu_1267_p2 <= std_logic_vector(unsigned(add_ln168_2_reg_1377) + unsigned(ap_const_lv15_2108));
+    add115_fu_1267_p2 <= std_logic_vector(unsigned(add_ln168_2_reg_1377) + unsigned(ap_const_lv15_2108));
     add_ln168_1_fu_666_p2 <= std_logic_vector(unsigned(zext_ln168_2_fu_662_p1) + unsigned(canbase));
     add_ln168_2_fu_632_p2 <= std_logic_vector(unsigned(zext_ln168_fu_616_p1) + unsigned(zext_ln168_1_fu_628_p1));
     add_ln168_fu_638_p2 <= std_logic_vector(unsigned(add_ln168_2_fu_632_p2) + unsigned(ap_const_lv15_2100));
@@ -1440,7 +1440,7 @@ begin
     add_ln214_fu_1256_p2 <= std_logic_vector(unsigned(NofBytes_fu_1239_p3) + unsigned(ap_const_lv7_8));
     add_ln223_1_fu_1346_p2 <= std_logic_vector(unsigned(zext_ln223_fu_1343_p1) + unsigned(ap_const_lv5_1));
     add_ln223_fu_1278_p2 <= std_logic_vector(unsigned(trunc_ln27_fu_1247_p1) + unsigned(ap_const_lv6_3F));
-    add_ln259_fu_1298_p2 <= std_logic_vector(unsigned(counter_can_2) + unsigned(ap_const_lv32_1));
+    add_ln267_fu_1298_p2 <= std_logic_vector(unsigned(counter_droped_1) + unsigned(ap_const_lv32_1));
     add_ln278_fu_1315_p2 <= std_logic_vector(unsigned(internal_can_counter) + unsigned(ap_const_lv32_1));
     add_ln281_fu_1328_p2 <= std_logic_vector(unsigned(canbase) + unsigned(ap_const_lv32_E8));
     and_ln28_fu_978_p2 <= (xor_ln28_fu_968_p2 and icmp_ln28_fu_973_p2);
@@ -1632,9 +1632,9 @@ begin
     end process;
 
 
-    ap_predicate_op209_call_state15_assign_proc : process(tmp_7_reg_1489, icmp_ln237_reg_1559)
+    ap_predicate_op209_call_state15_assign_proc : process(tmp_7_reg_1489, icmp_ln223_reg_1559)
     begin
-                ap_predicate_op209_call_state15 <= ((icmp_ln237_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1));
+                ap_predicate_op209_call_state15 <= ((icmp_ln223_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1));
     end process;
 
 
@@ -1669,11 +1669,11 @@ begin
         end if; 
     end process;
 
-    can_2_received <= std_logic_vector(unsigned(counter_can_2) + unsigned(ap_const_lv32_1));
+    can_2_received <= ap_const_lv32_0;
 
-    can_2_received_ap_vld_assign_proc : process(ap_CS_fsm_state15, ap_block_state15_on_subcall_done)
+    can_2_received_ap_vld_assign_proc : process(m_axi_can_addr_BVALID, ap_CS_fsm_state31)
     begin
-        if (((ap_const_boolean_0 = ap_block_state15_on_subcall_done) and (ap_const_logic_1 = ap_CS_fsm_state15))) then 
+        if (((m_axi_can_addr_BVALID = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state31))) then 
             can_2_received_ap_vld <= ap_const_logic_1;
         else 
             can_2_received_ap_vld <= ap_const_logic_0;
@@ -1741,11 +1741,11 @@ begin
         end if; 
     end process;
 
-    can_dropped <= ap_const_lv32_0;
+    can_dropped <= std_logic_vector(unsigned(counter_droped_1) + unsigned(ap_const_lv32_1));
 
-    can_dropped_ap_vld_assign_proc : process(m_axi_can_addr_BVALID, ap_CS_fsm_state31)
+    can_dropped_ap_vld_assign_proc : process(ap_CS_fsm_state15, ap_block_state15_on_subcall_done)
     begin
-        if (((m_axi_can_addr_BVALID = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state31))) then 
+        if (((ap_const_boolean_0 = ap_block_state15_on_subcall_done) and (ap_const_logic_1 = ap_CS_fsm_state15))) then 
             can_dropped_ap_vld <= ap_const_logic_1;
         else 
             can_dropped_ap_vld <= ap_const_logic_0;
@@ -1753,7 +1753,7 @@ begin
     end process;
 
 
-    can_frame_address0_assign_proc : process(ap_CS_fsm_state2, ap_CS_fsm_state4, ap_CS_fsm_state11, ap_CS_fsm_state3, ap_CS_fsm_state10, tmp_7_reg_1489, ap_CS_fsm_state12, ap_CS_fsm_state13, icmp_ln237_reg_1559, ap_CS_fsm_state15, grp_recvFrame_logic_1_Pipeline_1_fu_572_can_frame_address0, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_can_frame_address0, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_can_frame_address0, grp_write_ddr_1_fu_598_data_address0, ap_CS_fsm_state18, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, ap_CS_fsm_state8)
+    can_frame_address0_assign_proc : process(ap_CS_fsm_state2, ap_CS_fsm_state4, ap_CS_fsm_state11, ap_CS_fsm_state3, ap_CS_fsm_state10, tmp_7_reg_1489, ap_CS_fsm_state12, ap_CS_fsm_state13, icmp_ln223_reg_1559, ap_CS_fsm_state15, grp_recvFrame_logic_1_Pipeline_1_fu_572_can_frame_address0, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_can_frame_address0, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_can_frame_address0, grp_write_ddr_1_fu_598_data_address0, ap_CS_fsm_state18, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, ap_CS_fsm_state8)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state13)) then 
             can_frame_address0 <= ap_const_lv32_13(7 - 1 downto 0);
@@ -1777,7 +1777,7 @@ begin
             can_frame_address0 <= ap_const_lv32_1(7 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state18)) then 
             can_frame_address0 <= grp_write_ddr_1_fu_598_data_address0;
-        elsif (((icmp_ln237_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15))) then 
+        elsif (((icmp_ln223_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15))) then 
             can_frame_address0 <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_can_frame_address0;
         elsif (((tmp_7_reg_1489 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state15))) then 
             can_frame_address0 <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_can_frame_address0;
@@ -1789,7 +1789,7 @@ begin
     end process;
 
 
-    can_frame_address1_assign_proc : process(ap_CS_fsm_state4, ap_CS_fsm_state11, ap_CS_fsm_state3, ap_CS_fsm_state10, tmp_7_reg_1489, ap_CS_fsm_state12, ap_CS_fsm_state13, icmp_ln237_reg_1559, ap_CS_fsm_state15, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_can_frame_address1, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_can_frame_address1, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, ap_CS_fsm_state8)
+    can_frame_address1_assign_proc : process(ap_CS_fsm_state4, ap_CS_fsm_state11, ap_CS_fsm_state3, ap_CS_fsm_state10, tmp_7_reg_1489, ap_CS_fsm_state12, ap_CS_fsm_state13, icmp_ln223_reg_1559, ap_CS_fsm_state15, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_can_frame_address1, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_can_frame_address1, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, ap_CS_fsm_state8)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state13)) then 
             can_frame_address1 <= ap_const_lv32_B(7 - 1 downto 0);
@@ -1811,7 +1811,7 @@ begin
             can_frame_address1 <= ap_const_lv32_2(7 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_CS_fsm_state3)) then 
             can_frame_address1 <= ap_const_lv32_0(7 - 1 downto 0);
-        elsif (((icmp_ln237_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15))) then 
+        elsif (((icmp_ln223_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15))) then 
             can_frame_address1 <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_can_frame_address1;
         elsif (((tmp_7_reg_1489 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state15))) then 
             can_frame_address1 <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_can_frame_address1;
@@ -1821,13 +1821,13 @@ begin
     end process;
 
 
-    can_frame_ce0_assign_proc : process(m_axi_can_addr_ARREADY, m_axi_can_addr_RVALID, ap_CS_fsm_state2, ap_CS_fsm_state4, ap_CS_fsm_state11, ap_CS_fsm_state3, ap_CS_fsm_state10, tmp_7_reg_1489, ap_CS_fsm_state12, ap_CS_fsm_state13, icmp_ln237_reg_1559, ap_CS_fsm_state15, grp_recvFrame_logic_1_Pipeline_1_fu_572_can_frame_ce0, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_can_frame_ce0, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_can_frame_ce0, grp_write_ddr_1_fu_598_data_ce0, ap_CS_fsm_state18, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, ap_CS_fsm_state8)
+    can_frame_ce0_assign_proc : process(m_axi_can_addr_ARREADY, m_axi_can_addr_RVALID, ap_CS_fsm_state2, ap_CS_fsm_state4, ap_CS_fsm_state11, ap_CS_fsm_state3, ap_CS_fsm_state10, tmp_7_reg_1489, ap_CS_fsm_state12, ap_CS_fsm_state13, icmp_ln223_reg_1559, ap_CS_fsm_state15, grp_recvFrame_logic_1_Pipeline_1_fu_572_can_frame_ce0, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_can_frame_ce0, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_can_frame_ce0, grp_write_ddr_1_fu_598_data_ce0, ap_CS_fsm_state18, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, ap_CS_fsm_state8)
     begin
         if (((ap_const_logic_1 = ap_CS_fsm_state8) or (ap_const_logic_1 = ap_CS_fsm_state7) or (ap_const_logic_1 = ap_CS_fsm_state6) or (ap_const_logic_1 = ap_CS_fsm_state5) or (ap_const_logic_1 = ap_CS_fsm_state13) or (ap_const_logic_1 = ap_CS_fsm_state12) or (ap_const_logic_1 = ap_CS_fsm_state10) or (ap_const_logic_1 = ap_CS_fsm_state3) or ((m_axi_can_addr_RVALID = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state11)) or ((m_axi_can_addr_ARREADY = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state4)))) then 
             can_frame_ce0 <= ap_const_logic_1;
         elsif ((ap_const_logic_1 = ap_CS_fsm_state18)) then 
             can_frame_ce0 <= grp_write_ddr_1_fu_598_data_ce0;
-        elsif (((icmp_ln237_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15))) then 
+        elsif (((icmp_ln223_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15))) then 
             can_frame_ce0 <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_can_frame_ce0;
         elsif (((tmp_7_reg_1489 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state15))) then 
             can_frame_ce0 <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_can_frame_ce0;
@@ -1839,11 +1839,11 @@ begin
     end process;
 
 
-    can_frame_ce1_assign_proc : process(m_axi_can_addr_ARREADY, m_axi_can_addr_RVALID, ap_CS_fsm_state4, ap_CS_fsm_state11, ap_CS_fsm_state3, ap_CS_fsm_state10, tmp_7_reg_1489, ap_CS_fsm_state12, ap_CS_fsm_state13, icmp_ln237_reg_1559, ap_CS_fsm_state15, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_can_frame_ce1, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_can_frame_ce1, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, ap_CS_fsm_state8)
+    can_frame_ce1_assign_proc : process(m_axi_can_addr_ARREADY, m_axi_can_addr_RVALID, ap_CS_fsm_state4, ap_CS_fsm_state11, ap_CS_fsm_state3, ap_CS_fsm_state10, tmp_7_reg_1489, ap_CS_fsm_state12, ap_CS_fsm_state13, icmp_ln223_reg_1559, ap_CS_fsm_state15, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_can_frame_ce1, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_can_frame_ce1, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, ap_CS_fsm_state8)
     begin
         if (((ap_const_logic_1 = ap_CS_fsm_state8) or (ap_const_logic_1 = ap_CS_fsm_state7) or (ap_const_logic_1 = ap_CS_fsm_state6) or (ap_const_logic_1 = ap_CS_fsm_state5) or (ap_const_logic_1 = ap_CS_fsm_state13) or (ap_const_logic_1 = ap_CS_fsm_state12) or (ap_const_logic_1 = ap_CS_fsm_state10) or (ap_const_logic_1 = ap_CS_fsm_state3) or ((m_axi_can_addr_RVALID = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state11)) or ((m_axi_can_addr_ARREADY = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state4)))) then 
             can_frame_ce1 <= ap_const_logic_1;
-        elsif (((icmp_ln237_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15))) then 
+        elsif (((icmp_ln223_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15))) then 
             can_frame_ce1 <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_can_frame_ce1;
         elsif (((tmp_7_reg_1489 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state15))) then 
             can_frame_ce1 <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_can_frame_ce1;
@@ -1853,7 +1853,7 @@ begin
     end process;
 
 
-    can_frame_d0_assign_proc : process(timestamp, ap_CS_fsm_state2, ap_CS_fsm_state4, ap_CS_fsm_state11, ap_CS_fsm_state3, trunc_ln12_reg_1404, trunc_ln14_reg_1414, trunc_ln210_reg_1424, ap_CS_fsm_state10, trunc_ln_reg_1468, trunc_ln186_reg_1478, tmp_7_reg_1489, ap_CS_fsm_state12, ap_CS_fsm_state13, icmp_ln237_reg_1559, ap_CS_fsm_state15, grp_recvFrame_logic_1_Pipeline_1_fu_572_can_frame_d0, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_can_frame_d0, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_can_frame_d0, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, ap_CS_fsm_state8, zext_ln197_1_fu_830_p1, zext_ln176_1_fu_900_p1, zext_ln214_fu_1251_p1)
+    can_frame_d0_assign_proc : process(timestamp, ap_CS_fsm_state2, ap_CS_fsm_state4, ap_CS_fsm_state11, ap_CS_fsm_state3, trunc_ln12_reg_1404, trunc_ln14_reg_1414, trunc_ln210_reg_1424, ap_CS_fsm_state10, trunc_ln_reg_1468, trunc_ln186_reg_1478, tmp_7_reg_1489, ap_CS_fsm_state12, ap_CS_fsm_state13, icmp_ln223_reg_1559, ap_CS_fsm_state15, grp_recvFrame_logic_1_Pipeline_1_fu_572_can_frame_d0, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_can_frame_d0, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_can_frame_d0, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, ap_CS_fsm_state8, zext_ln197_1_fu_830_p1, zext_ln176_1_fu_900_p1, zext_ln214_fu_1251_p1)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state13)) then 
             can_frame_d0 <= zext_ln214_fu_1251_p1;
@@ -1875,7 +1875,7 @@ begin
             can_frame_d0 <= trunc_ln12_reg_1404;
         elsif ((ap_const_logic_1 = ap_CS_fsm_state3)) then 
             can_frame_d0 <= timestamp(55 downto 48);
-        elsif (((icmp_ln237_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15))) then 
+        elsif (((icmp_ln223_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15))) then 
             can_frame_d0 <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_can_frame_d0;
         elsif (((tmp_7_reg_1489 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state15))) then 
             can_frame_d0 <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_can_frame_d0;
@@ -1887,7 +1887,7 @@ begin
     end process;
 
 
-    can_frame_d1_assign_proc : process(timestamp, ap_CS_fsm_state4, ap_CS_fsm_state11, ap_CS_fsm_state3, trunc_ln11_reg_1399, trunc_ln13_reg_1409, trunc_ln15_reg_1419, ap_CS_fsm_state10, trunc_ln8_reg_1473, tmp_7_reg_1489, ap_CS_fsm_state12, ap_CS_fsm_state13, icmp_ln237_reg_1559, ap_CS_fsm_state15, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_can_frame_d1, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_can_frame_d1, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, ap_CS_fsm_state8, zext_ln171_fu_875_p1, zext_ln183_fu_939_p1, zext_ln214_1_fu_1262_p1)
+    can_frame_d1_assign_proc : process(timestamp, ap_CS_fsm_state4, ap_CS_fsm_state11, ap_CS_fsm_state3, trunc_ln11_reg_1399, trunc_ln13_reg_1409, trunc_ln15_reg_1419, ap_CS_fsm_state10, trunc_ln8_reg_1473, tmp_7_reg_1489, ap_CS_fsm_state12, ap_CS_fsm_state13, icmp_ln223_reg_1559, ap_CS_fsm_state15, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_can_frame_d1, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_can_frame_d1, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, ap_CS_fsm_state8, zext_ln171_fu_875_p1, zext_ln183_fu_939_p1, zext_ln214_1_fu_1262_p1)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state13)) then 
             can_frame_d1 <= zext_ln214_1_fu_1262_p1;
@@ -1909,7 +1909,7 @@ begin
             can_frame_d1 <= trunc_ln11_reg_1399;
         elsif ((ap_const_logic_1 = ap_CS_fsm_state3)) then 
             can_frame_d1 <= timestamp(63 downto 56);
-        elsif (((icmp_ln237_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15))) then 
+        elsif (((icmp_ln223_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15))) then 
             can_frame_d1 <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_can_frame_d1;
         elsif (((tmp_7_reg_1489 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state15))) then 
             can_frame_d1 <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_can_frame_d1;
@@ -1919,11 +1919,11 @@ begin
     end process;
 
 
-    can_frame_we0_assign_proc : process(m_axi_can_addr_ARREADY, m_axi_can_addr_RVALID, ap_CS_fsm_state2, ap_CS_fsm_state4, ap_CS_fsm_state11, ap_CS_fsm_state3, ap_CS_fsm_state10, tmp_7_reg_1489, ap_CS_fsm_state12, ap_CS_fsm_state13, icmp_ln237_reg_1559, ap_CS_fsm_state15, grp_recvFrame_logic_1_Pipeline_1_fu_572_can_frame_we0, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_can_frame_we0, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_can_frame_we0, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, ap_CS_fsm_state8)
+    can_frame_we0_assign_proc : process(m_axi_can_addr_ARREADY, m_axi_can_addr_RVALID, ap_CS_fsm_state2, ap_CS_fsm_state4, ap_CS_fsm_state11, ap_CS_fsm_state3, ap_CS_fsm_state10, tmp_7_reg_1489, ap_CS_fsm_state12, ap_CS_fsm_state13, icmp_ln223_reg_1559, ap_CS_fsm_state15, grp_recvFrame_logic_1_Pipeline_1_fu_572_can_frame_we0, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_can_frame_we0, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_can_frame_we0, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, ap_CS_fsm_state8)
     begin
         if (((ap_const_logic_1 = ap_CS_fsm_state8) or (ap_const_logic_1 = ap_CS_fsm_state7) or (ap_const_logic_1 = ap_CS_fsm_state6) or (ap_const_logic_1 = ap_CS_fsm_state5) or (ap_const_logic_1 = ap_CS_fsm_state13) or (ap_const_logic_1 = ap_CS_fsm_state12) or (ap_const_logic_1 = ap_CS_fsm_state10) or (ap_const_logic_1 = ap_CS_fsm_state3) or ((m_axi_can_addr_RVALID = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state11)) or ((m_axi_can_addr_ARREADY = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state4)))) then 
             can_frame_we0 <= ap_const_logic_1;
-        elsif (((icmp_ln237_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15))) then 
+        elsif (((icmp_ln223_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15))) then 
             can_frame_we0 <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_can_frame_we0;
         elsif (((tmp_7_reg_1489 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state15))) then 
             can_frame_we0 <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_can_frame_we0;
@@ -1935,11 +1935,11 @@ begin
     end process;
 
 
-    can_frame_we1_assign_proc : process(m_axi_can_addr_ARREADY, m_axi_can_addr_RVALID, ap_CS_fsm_state4, ap_CS_fsm_state11, ap_CS_fsm_state3, ap_CS_fsm_state10, tmp_7_reg_1489, ap_CS_fsm_state12, ap_CS_fsm_state13, icmp_ln237_reg_1559, ap_CS_fsm_state15, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_can_frame_we1, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_can_frame_we1, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, ap_CS_fsm_state8)
+    can_frame_we1_assign_proc : process(m_axi_can_addr_ARREADY, m_axi_can_addr_RVALID, ap_CS_fsm_state4, ap_CS_fsm_state11, ap_CS_fsm_state3, ap_CS_fsm_state10, tmp_7_reg_1489, ap_CS_fsm_state12, ap_CS_fsm_state13, icmp_ln223_reg_1559, ap_CS_fsm_state15, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_can_frame_we1, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_can_frame_we1, ap_CS_fsm_state5, ap_CS_fsm_state6, ap_CS_fsm_state7, ap_CS_fsm_state8)
     begin
         if (((ap_const_logic_1 = ap_CS_fsm_state8) or (ap_const_logic_1 = ap_CS_fsm_state7) or (ap_const_logic_1 = ap_CS_fsm_state6) or (ap_const_logic_1 = ap_CS_fsm_state5) or (ap_const_logic_1 = ap_CS_fsm_state13) or (ap_const_logic_1 = ap_CS_fsm_state12) or (ap_const_logic_1 = ap_CS_fsm_state10) or (ap_const_logic_1 = ap_CS_fsm_state3) or ((m_axi_can_addr_RVALID = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state11)) or ((m_axi_can_addr_ARREADY = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state4)))) then 
             can_frame_we1 <= ap_const_logic_1;
-        elsif (((icmp_ln237_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15))) then 
+        elsif (((icmp_ln223_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15))) then 
             can_frame_we1 <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_can_frame_we1;
         elsif (((tmp_7_reg_1489 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state15))) then 
             can_frame_we1 <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_can_frame_we1;
@@ -1956,7 +1956,7 @@ begin
     grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_ap_start <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_ap_start_reg;
     grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_ap_start <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_ap_start_reg;
     grp_write_ddr_1_fu_598_ap_start <= grp_write_ddr_1_fu_598_ap_start_reg;
-    icmp_ln237_fu_1272_p2 <= "1" when (NofBytes_fu_1239_p3 = ap_const_lv7_0) else "0";
+    icmp_ln223_fu_1272_p2 <= "1" when (NofBytes_fu_1239_p3 = ap_const_lv7_0) else "0";
     icmp_ln28_fu_973_p2 <= "1" when (unsigned(frameDLC_reg_1483) > unsigned(ap_const_lv32_8FFFFFFF)) else "0";
     icmp_ln32_10_fu_1126_p2 <= "1" when (select_ln28_fu_984_p3 = ap_const_lv32_B0000000) else "0";
     icmp_ln32_11_fu_1132_p2 <= "1" when (select_ln28_fu_984_p3 = ap_const_lv32_C0000000) else "0";
@@ -1975,7 +1975,7 @@ begin
     icmp_ln32_fu_992_p2 <= "1" when (select_ln28_fu_984_p3 = ap_const_lv32_10000000) else "0";
     id_can_fu_824_p2 <= std_logic_vector(unsigned(zext_ln197_fu_820_p1) + unsigned(ap_const_lv5_8));
 
-    m_axi_can_addr_ARADDR_assign_proc : process(m_axi_can_addr_ARREADY, ap_CS_fsm_state2, ap_CS_fsm_state4, ap_CS_fsm_state17, tmp_7_reg_1489, icmp_ln237_reg_1559, ap_CS_fsm_state15, ap_CS_fsm_state16, grp_recvFrame_logic_1_Pipeline_1_fu_572_ap_done, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARADDR, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARADDR, ap_CS_fsm_state14, sext_ln168_fu_682_p1, sext_ln191_fu_810_p1, sext_ln281_fu_1353_p1)
+    m_axi_can_addr_ARADDR_assign_proc : process(m_axi_can_addr_ARREADY, ap_CS_fsm_state2, ap_CS_fsm_state4, ap_CS_fsm_state17, tmp_7_reg_1489, icmp_ln223_reg_1559, ap_CS_fsm_state15, ap_CS_fsm_state16, grp_recvFrame_logic_1_Pipeline_1_fu_572_ap_done, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARADDR, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARADDR, ap_CS_fsm_state14, sext_ln168_fu_682_p1, sext_ln191_fu_810_p1, sext_ln281_fu_1353_p1)
     begin
         if (((m_axi_can_addr_ARREADY = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state17))) then 
             m_axi_can_addr_ARADDR <= sext_ln281_fu_1353_p1;
@@ -1983,7 +1983,7 @@ begin
             m_axi_can_addr_ARADDR <= sext_ln191_fu_810_p1;
         elsif ((not(((m_axi_can_addr_ARREADY = ap_const_logic_0) or (grp_recvFrame_logic_1_Pipeline_1_fu_572_ap_done = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
             m_axi_can_addr_ARADDR <= sext_ln168_fu_682_p1;
-        elsif (((ap_const_logic_1 = ap_CS_fsm_state16) or ((icmp_ln237_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
+        elsif (((ap_const_logic_1 = ap_CS_fsm_state16) or ((icmp_ln223_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
             m_axi_can_addr_ARADDR <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARADDR;
         elsif (((ap_const_logic_1 = ap_CS_fsm_state14) or ((tmp_7_reg_1489 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
             m_axi_can_addr_ARADDR <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARADDR;
@@ -1993,9 +1993,9 @@ begin
     end process;
 
 
-    m_axi_can_addr_ARBURST_assign_proc : process(tmp_7_reg_1489, icmp_ln237_reg_1559, ap_CS_fsm_state15, ap_CS_fsm_state16, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARBURST, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARBURST, ap_CS_fsm_state14)
+    m_axi_can_addr_ARBURST_assign_proc : process(tmp_7_reg_1489, icmp_ln223_reg_1559, ap_CS_fsm_state15, ap_CS_fsm_state16, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARBURST, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARBURST, ap_CS_fsm_state14)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state16) or ((icmp_ln237_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state16) or ((icmp_ln223_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
             m_axi_can_addr_ARBURST <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARBURST;
         elsif (((ap_const_logic_1 = ap_CS_fsm_state14) or ((tmp_7_reg_1489 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
             m_axi_can_addr_ARBURST <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARBURST;
@@ -2005,9 +2005,9 @@ begin
     end process;
 
 
-    m_axi_can_addr_ARCACHE_assign_proc : process(tmp_7_reg_1489, icmp_ln237_reg_1559, ap_CS_fsm_state15, ap_CS_fsm_state16, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARCACHE, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARCACHE, ap_CS_fsm_state14)
+    m_axi_can_addr_ARCACHE_assign_proc : process(tmp_7_reg_1489, icmp_ln223_reg_1559, ap_CS_fsm_state15, ap_CS_fsm_state16, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARCACHE, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARCACHE, ap_CS_fsm_state14)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state16) or ((icmp_ln237_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state16) or ((icmp_ln223_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
             m_axi_can_addr_ARCACHE <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARCACHE;
         elsif (((ap_const_logic_1 = ap_CS_fsm_state14) or ((tmp_7_reg_1489 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
             m_axi_can_addr_ARCACHE <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARCACHE;
@@ -2017,9 +2017,9 @@ begin
     end process;
 
 
-    m_axi_can_addr_ARID_assign_proc : process(tmp_7_reg_1489, icmp_ln237_reg_1559, ap_CS_fsm_state15, ap_CS_fsm_state16, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARID, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARID, ap_CS_fsm_state14)
+    m_axi_can_addr_ARID_assign_proc : process(tmp_7_reg_1489, icmp_ln223_reg_1559, ap_CS_fsm_state15, ap_CS_fsm_state16, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARID, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARID, ap_CS_fsm_state14)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state16) or ((icmp_ln237_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state16) or ((icmp_ln223_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
             m_axi_can_addr_ARID <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARID;
         elsif (((ap_const_logic_1 = ap_CS_fsm_state14) or ((tmp_7_reg_1489 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
             m_axi_can_addr_ARID <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARID;
@@ -2029,11 +2029,11 @@ begin
     end process;
 
 
-    m_axi_can_addr_ARLEN_assign_proc : process(m_axi_can_addr_ARREADY, ap_CS_fsm_state2, ap_CS_fsm_state4, ap_CS_fsm_state17, tmp_7_reg_1489, icmp_ln237_reg_1559, ap_CS_fsm_state15, ap_CS_fsm_state16, grp_recvFrame_logic_1_Pipeline_1_fu_572_ap_done, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARLEN, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARLEN, ap_CS_fsm_state14)
+    m_axi_can_addr_ARLEN_assign_proc : process(m_axi_can_addr_ARREADY, ap_CS_fsm_state2, ap_CS_fsm_state4, ap_CS_fsm_state17, tmp_7_reg_1489, icmp_ln223_reg_1559, ap_CS_fsm_state15, ap_CS_fsm_state16, grp_recvFrame_logic_1_Pipeline_1_fu_572_ap_done, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARLEN, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARLEN, ap_CS_fsm_state14)
     begin
         if (((not(((m_axi_can_addr_ARREADY = ap_const_logic_0) or (grp_recvFrame_logic_1_Pipeline_1_fu_572_ap_done = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state2)) or ((m_axi_can_addr_ARREADY = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state17)) or ((m_axi_can_addr_ARREADY = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state4)))) then 
             m_axi_can_addr_ARLEN <= ap_const_lv32_1;
-        elsif (((ap_const_logic_1 = ap_CS_fsm_state16) or ((icmp_ln237_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
+        elsif (((ap_const_logic_1 = ap_CS_fsm_state16) or ((icmp_ln223_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
             m_axi_can_addr_ARLEN <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARLEN;
         elsif (((ap_const_logic_1 = ap_CS_fsm_state14) or ((tmp_7_reg_1489 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
             m_axi_can_addr_ARLEN <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARLEN;
@@ -2043,9 +2043,9 @@ begin
     end process;
 
 
-    m_axi_can_addr_ARLOCK_assign_proc : process(tmp_7_reg_1489, icmp_ln237_reg_1559, ap_CS_fsm_state15, ap_CS_fsm_state16, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARLOCK, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARLOCK, ap_CS_fsm_state14)
+    m_axi_can_addr_ARLOCK_assign_proc : process(tmp_7_reg_1489, icmp_ln223_reg_1559, ap_CS_fsm_state15, ap_CS_fsm_state16, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARLOCK, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARLOCK, ap_CS_fsm_state14)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state16) or ((icmp_ln237_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state16) or ((icmp_ln223_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
             m_axi_can_addr_ARLOCK <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARLOCK;
         elsif (((ap_const_logic_1 = ap_CS_fsm_state14) or ((tmp_7_reg_1489 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
             m_axi_can_addr_ARLOCK <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARLOCK;
@@ -2055,9 +2055,9 @@ begin
     end process;
 
 
-    m_axi_can_addr_ARPROT_assign_proc : process(tmp_7_reg_1489, icmp_ln237_reg_1559, ap_CS_fsm_state15, ap_CS_fsm_state16, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARPROT, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARPROT, ap_CS_fsm_state14)
+    m_axi_can_addr_ARPROT_assign_proc : process(tmp_7_reg_1489, icmp_ln223_reg_1559, ap_CS_fsm_state15, ap_CS_fsm_state16, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARPROT, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARPROT, ap_CS_fsm_state14)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state16) or ((icmp_ln237_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state16) or ((icmp_ln223_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
             m_axi_can_addr_ARPROT <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARPROT;
         elsif (((ap_const_logic_1 = ap_CS_fsm_state14) or ((tmp_7_reg_1489 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
             m_axi_can_addr_ARPROT <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARPROT;
@@ -2067,9 +2067,9 @@ begin
     end process;
 
 
-    m_axi_can_addr_ARQOS_assign_proc : process(tmp_7_reg_1489, icmp_ln237_reg_1559, ap_CS_fsm_state15, ap_CS_fsm_state16, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARQOS, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARQOS, ap_CS_fsm_state14)
+    m_axi_can_addr_ARQOS_assign_proc : process(tmp_7_reg_1489, icmp_ln223_reg_1559, ap_CS_fsm_state15, ap_CS_fsm_state16, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARQOS, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARQOS, ap_CS_fsm_state14)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state16) or ((icmp_ln237_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state16) or ((icmp_ln223_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
             m_axi_can_addr_ARQOS <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARQOS;
         elsif (((ap_const_logic_1 = ap_CS_fsm_state14) or ((tmp_7_reg_1489 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
             m_axi_can_addr_ARQOS <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARQOS;
@@ -2079,9 +2079,9 @@ begin
     end process;
 
 
-    m_axi_can_addr_ARREGION_assign_proc : process(tmp_7_reg_1489, icmp_ln237_reg_1559, ap_CS_fsm_state15, ap_CS_fsm_state16, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARREGION, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARREGION, ap_CS_fsm_state14)
+    m_axi_can_addr_ARREGION_assign_proc : process(tmp_7_reg_1489, icmp_ln223_reg_1559, ap_CS_fsm_state15, ap_CS_fsm_state16, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARREGION, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARREGION, ap_CS_fsm_state14)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state16) or ((icmp_ln237_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state16) or ((icmp_ln223_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
             m_axi_can_addr_ARREGION <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARREGION;
         elsif (((ap_const_logic_1 = ap_CS_fsm_state14) or ((tmp_7_reg_1489 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
             m_axi_can_addr_ARREGION <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARREGION;
@@ -2091,9 +2091,9 @@ begin
     end process;
 
 
-    m_axi_can_addr_ARSIZE_assign_proc : process(tmp_7_reg_1489, icmp_ln237_reg_1559, ap_CS_fsm_state15, ap_CS_fsm_state16, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARSIZE, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARSIZE, ap_CS_fsm_state14)
+    m_axi_can_addr_ARSIZE_assign_proc : process(tmp_7_reg_1489, icmp_ln223_reg_1559, ap_CS_fsm_state15, ap_CS_fsm_state16, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARSIZE, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARSIZE, ap_CS_fsm_state14)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state16) or ((icmp_ln237_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state16) or ((icmp_ln223_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
             m_axi_can_addr_ARSIZE <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARSIZE;
         elsif (((ap_const_logic_1 = ap_CS_fsm_state14) or ((tmp_7_reg_1489 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
             m_axi_can_addr_ARSIZE <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARSIZE;
@@ -2103,9 +2103,9 @@ begin
     end process;
 
 
-    m_axi_can_addr_ARUSER_assign_proc : process(tmp_7_reg_1489, icmp_ln237_reg_1559, ap_CS_fsm_state15, ap_CS_fsm_state16, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARUSER, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARUSER, ap_CS_fsm_state14)
+    m_axi_can_addr_ARUSER_assign_proc : process(tmp_7_reg_1489, icmp_ln223_reg_1559, ap_CS_fsm_state15, ap_CS_fsm_state16, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARUSER, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARUSER, ap_CS_fsm_state14)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state16) or ((icmp_ln237_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state16) or ((icmp_ln223_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
             m_axi_can_addr_ARUSER <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARUSER;
         elsif (((ap_const_logic_1 = ap_CS_fsm_state14) or ((tmp_7_reg_1489 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
             m_axi_can_addr_ARUSER <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARUSER;
@@ -2115,11 +2115,11 @@ begin
     end process;
 
 
-    m_axi_can_addr_ARVALID_assign_proc : process(m_axi_can_addr_ARREADY, ap_CS_fsm_state2, ap_CS_fsm_state4, ap_CS_fsm_state17, tmp_7_reg_1489, icmp_ln237_reg_1559, ap_CS_fsm_state15, ap_CS_fsm_state16, grp_recvFrame_logic_1_Pipeline_1_fu_572_ap_done, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARVALID, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARVALID, ap_CS_fsm_state14)
+    m_axi_can_addr_ARVALID_assign_proc : process(m_axi_can_addr_ARREADY, ap_CS_fsm_state2, ap_CS_fsm_state4, ap_CS_fsm_state17, tmp_7_reg_1489, icmp_ln223_reg_1559, ap_CS_fsm_state15, ap_CS_fsm_state16, grp_recvFrame_logic_1_Pipeline_1_fu_572_ap_done, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARVALID, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARVALID, ap_CS_fsm_state14)
     begin
         if (((not(((m_axi_can_addr_ARREADY = ap_const_logic_0) or (grp_recvFrame_logic_1_Pipeline_1_fu_572_ap_done = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state2)) or ((m_axi_can_addr_ARREADY = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state17)) or ((m_axi_can_addr_ARREADY = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state4)))) then 
             m_axi_can_addr_ARVALID <= ap_const_logic_1;
-        elsif (((ap_const_logic_1 = ap_CS_fsm_state16) or ((icmp_ln237_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
+        elsif (((ap_const_logic_1 = ap_CS_fsm_state16) or ((icmp_ln223_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
             m_axi_can_addr_ARVALID <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_ARVALID;
         elsif (((ap_const_logic_1 = ap_CS_fsm_state14) or ((tmp_7_reg_1489 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
             m_axi_can_addr_ARVALID <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_ARVALID;
@@ -2160,11 +2160,11 @@ begin
     end process;
 
 
-    m_axi_can_addr_RREADY_assign_proc : process(m_axi_can_addr_RVALID, ap_CS_fsm_state9, ap_CS_fsm_state11, ap_CS_fsm_state24, tmp_7_reg_1489, icmp_ln237_reg_1559, ap_CS_fsm_state15, ap_CS_fsm_state16, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_RREADY, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_RREADY, ap_CS_fsm_state14)
+    m_axi_can_addr_RREADY_assign_proc : process(m_axi_can_addr_RVALID, ap_CS_fsm_state9, ap_CS_fsm_state11, ap_CS_fsm_state24, tmp_7_reg_1489, icmp_ln223_reg_1559, ap_CS_fsm_state15, ap_CS_fsm_state16, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_RREADY, grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_RREADY, ap_CS_fsm_state14)
     begin
         if ((((m_axi_can_addr_RVALID = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state24)) or ((m_axi_can_addr_RVALID = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state11)) or ((m_axi_can_addr_RVALID = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state9)))) then 
             m_axi_can_addr_RREADY <= ap_const_logic_1;
-        elsif (((ap_const_logic_1 = ap_CS_fsm_state16) or ((icmp_ln237_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
+        elsif (((ap_const_logic_1 = ap_CS_fsm_state16) or ((icmp_ln223_reg_1559 = ap_const_lv1_0) and (tmp_7_reg_1489 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
             m_axi_can_addr_RREADY <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_m_axi_can_addr_RREADY;
         elsif (((ap_const_logic_1 = ap_CS_fsm_state14) or ((tmp_7_reg_1489 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state15)))) then 
             m_axi_can_addr_RREADY <= grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_m_axi_can_addr_RREADY;

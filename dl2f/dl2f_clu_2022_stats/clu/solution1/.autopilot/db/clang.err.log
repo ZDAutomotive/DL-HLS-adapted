@@ -1,13 +1,19 @@
-uart.c:132:34: warning: passing 'volatile unsigned char *' to parameter of type 'const void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+can.c:103:34: warning: passing 'volatile unsigned char *' to parameter of type 'const void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
  memcpy(ringbuffer_header_bytes, ddr_header, 28);
                                  ^~~~~~~~~~
 D:/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt\x86_64-w64-mingw32\include\string.h:50:95: note: passing argument to parameter '_Src' here
   void * __attribute__((__cdecl__)) memcpy(void * __restrict__ _Dst,const void * __restrict__ _Src,size_t _Size) ;
                                                                                               ^
-uart.c:154:10: warning: passing 'volatile unsigned char *' to parameter of type 'void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
-  memcpy(ddr_header + 28 + writeUartIndex * (12 + 192),
-         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+can.c:126:10: warning: passing 'volatile unsigned char *' to parameter of type 'void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+  memcpy(ddr_header + 28 + writeCanIndex * (12 + 80),
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 D:/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt\x86_64-w64-mingw32\include\string.h:50:64: note: passing argument to parameter '_Dst' here
   void * __attribute__((__cdecl__)) memcpy(void * __restrict__ _Dst,const void * __restrict__ _Src,size_t _Size) ;
                                                                ^
-2 warnings generated.
+can.c:280:18: warning: passing 'unsigned char *' to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+  write_ddr(ddr, &can_frame[0]);
+                 ^~~~~~~~~~~~~
+can.c:97:58: note: passing argument to parameter 'data' here
+void write_ddr(volatile unsigned char *ddr_header, char *data) {
+                                                         ^
+3 warnings generated.

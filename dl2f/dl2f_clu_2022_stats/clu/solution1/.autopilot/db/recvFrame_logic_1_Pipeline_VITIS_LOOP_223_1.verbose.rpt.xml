@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1'" level="0">
-<item name = "Date">Thu Dec 22 10:53:24 2022
+<item name = "Date">Thu Dec 22 11:33:39 2022
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">clu</item>
@@ -202,7 +202,7 @@
 <column name="m_axi_can_addr_BUSER">in, 1, m_axi, can_addr, pointer</column>
 <column name="add_ln223_1">in, 5, ap_none, add_ln223_1, scalar</column>
 <column name="canbase">in, 32, ap_none, canbase, scalar</column>
-<column name="zext_ln237">in, 15, ap_none, zext_ln237, scalar</column>
+<column name="zext_ln223">in, 15, ap_none, zext_ln223, scalar</column>
 <column name="can_frame_address0">out, 7, ap_memory, can_frame, array</column>
 <column name="can_frame_ce0">out, 1, ap_memory, can_frame, array</column>
 <column name="can_frame_we0">out, 1, ap_memory, can_frame, array</column>

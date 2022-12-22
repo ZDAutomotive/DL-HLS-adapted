@@ -163,8 +163,8 @@ set RtlHierarchyInfo {[
 					{"Name" : "ps_ddr_blk_n_W", "Type" : "RtlSignal"},
 					{"Name" : "ps_ddr_blk_n_B", "Type" : "RtlSignal"}],
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_write_ddr_1_Pipeline_2_fu_281", "Port" : "ps_ddr", "Inst_start_state" : "59", "Inst_end_state" : "60"},
-					{"ID" : "2", "SubInstance" : "grp_write_ddr_1_Pipeline_1_fu_272", "Port" : "ps_ddr", "Inst_start_state" : "52", "Inst_end_state" : "53"}]},
+					{"ID" : "2", "SubInstance" : "grp_write_ddr_1_Pipeline_1_fu_272", "Port" : "ps_ddr", "Inst_start_state" : "52", "Inst_end_state" : "53"},
+					{"ID" : "4", "SubInstance" : "grp_write_ddr_1_Pipeline_2_fu_281", "Port" : "ps_ddr", "Inst_start_state" : "59", "Inst_end_state" : "60"}]},
 			{"Name" : "ddr_header", "Type" : "None", "Direction" : "I"},
 			{"Name" : "data", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [

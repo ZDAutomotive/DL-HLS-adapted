@@ -2567,7 +2567,7 @@
                             <BindInstances>ringbuffer_header_bytes_U empty_77_fu_323_p2 grp_fu_364_p0 mul_32s_8ns_32_1_1_U55 add_ln17_fu_420_p2 add_ln119_fu_473_p2 add_ln120_2_fu_485_p2 add_ln120_fu_393_p2</BindInstances>
                         </Instance>
                     </InstancesList>
-                    <BindInstances>can_frame_U add_ln168_2_fu_632_p2 add_ln168_fu_638_p2 add_ln168_1_fu_666_p2 add_ln191_fu_692_p2 add_ln191_1_fu_719_p2 id_can_fu_824_p2 add_ln214_fu_1256_p2 add156_fu_1267_p2 add_ln223_fu_1278_p2 add_ln223_1_fu_1346_p2 can_2_received received_can add_ln281_fu_1328_p2</BindInstances>
+                    <BindInstances>can_frame_U add_ln168_2_fu_632_p2 add_ln168_fu_638_p2 add_ln168_1_fu_666_p2 add_ln191_fu_692_p2 add_ln191_1_fu_719_p2 id_can_fu_824_p2 add_ln214_fu_1256_p2 add115_fu_1267_p2 add_ln223_fu_1278_p2 add_ln223_1_fu_1346_p2 can_dropped received_can add_ln281_fu_1328_p2</BindInstances>
                 </Instance>
             </InstancesList>
             <BindInstances>lin_nr_2_fu_489_p2 linbase_mod_fu_528_p2 add_ln335_fu_553_p2 canaddr_mod_fu_592_p2 add_ln302_fu_607_p2</BindInstances>
@@ -3222,10 +3222,10 @@
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln191_1_fu_719_p2" SOURCE="can.c:191" URAM="0" VARIABLE="add_ln191_1"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="id_can_fu_824_p2" SOURCE="can.c:197" URAM="0" VARIABLE="id_can"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln214_fu_1256_p2" SOURCE="can.c:214" URAM="0" VARIABLE="add_ln214"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add156_fu_1267_p2" SOURCE="can.c:168" URAM="0" VARIABLE="add156"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add115_fu_1267_p2" SOURCE="can.c:168" URAM="0" VARIABLE="add115"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln223_fu_1278_p2" SOURCE="can.c:223" URAM="0" VARIABLE="add_ln223"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln223_1_fu_1346_p2" SOURCE="can.c:223" URAM="0" VARIABLE="add_ln223_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="can_2_received" SOURCE="can.c:259" URAM="0" VARIABLE="add_ln259"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="can_dropped" SOURCE="can.c:267" URAM="0" VARIABLE="add_ln267"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="received_can" SOURCE="can.c:278" URAM="0" VARIABLE="add_ln278"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln281_fu_1328_p2" SOURCE="can.c:281" URAM="0" VARIABLE="add_ln281"/>
             </BindNodes>
@@ -4332,30 +4332,30 @@
             <item name="Inferred Bursts and Widening Missed">
                 <table>
                     <keys size="6">HW Interface, Variable, Loop, Problem, Resolution, Location</keys>
-                    <column name="m_axi_ps_ddr">ddr_header, , Volatile or Atomic access cannot be transformed, 214-227, can.c:120:21</column>
+                    <column name="m_axi_ps_ddr">ddr_header, , Volatile or Atomic access cannot be transformed, 214-227, dlin.c:115:21</column>
+                    <column name="m_axi_lin_addr">linbase, , Volatile or Atomic access cannot be transformed, 214-227, dlin.c:81:24</column>
+                    <column name="m_axi_lin_addr">linbase, , Volatile or Atomic access cannot be transformed, 214-227, dlin.c:87:29</column>
+                    <column name="m_axi_lin_addr">linbase, , Volatile or Atomic access cannot be transformed, 214-227, dlin.c:81:24</column>
+                    <column name="m_axi_lin_addr">linbase, , Volatile or Atomic access cannot be transformed, 214-227, dlin.c:81:24</column>
+                    <column name="m_axi_lin_addr">linbase, , Volatile or Atomic access cannot be transformed, 214-227, dlin.c:81:24</column>
+                    <column name="m_axi_lin_addr">linbase, , Volatile or Atomic access cannot be transformed, 214-227, dlin.c:87:29</column>
+                    <column name="m_axi_lin_addr">linbase, , Volatile or Atomic access cannot be transformed, 214-227, dlin.c:87:29</column>
+                    <column name="m_axi_lin_addr">linbase, , Volatile or Atomic access cannot be transformed, 214-227, dlin.c:81:24</column>
+                    <column name="m_axi_lin_addr">linbase, , Volatile or Atomic access cannot be transformed, 214-227, dlin.c:81:24</column>
+                    <column name="m_axi_can_addr">can_ptr, , Volatile or Atomic access cannot be transformed, 214-227, can.c:302:16</column>
                     <column name="m_axi_can_addr">canbase, , Volatile or Atomic access cannot be transformed, 214-227, can.c:168:15</column>
                     <column name="m_axi_can_addr">canbase, , Volatile or Atomic access cannot be transformed, 214-227, can.c:191:14</column>
                     <column name="m_axi_can_addr">canbase, , Volatile or Atomic access cannot be transformed, 214-227, can.c:225:14</column>
                     <column name="m_axi_can_addr">canbase, , Volatile or Atomic access cannot be transformed, 214-227, can.c:238:14</column>
                     <column name="m_axi_can_addr">canbase, , Volatile or Atomic access cannot be transformed, 214-227, can.c:281:12</column>
                     <column name="m_axi_can_addr">canbase, , Volatile or Atomic access cannot be transformed, 214-227, can.c:283:26</column>
-                    <column name="m_axi_can_addr">can_ptr, , Volatile or Atomic access cannot be transformed, 214-227, can.c:302:16</column>
-                    <column name="m_axi_lin_addr">linbase, , Volatile or Atomic access cannot be transformed, 214-227, dlin.c:81:24</column>
-                    <column name="m_axi_lin_addr">linbase, , Volatile or Atomic access cannot be transformed, 214-227, dlin.c:87:29</column>
-                    <column name="m_axi_lin_addr">linbase, , Volatile or Atomic access cannot be transformed, 214-227, dlin.c:81:24</column>
-                    <column name="m_axi_lin_addr">linbase, , Volatile or Atomic access cannot be transformed, 214-227, dlin.c:81:24</column>
-                    <column name="m_axi_lin_addr">linbase, , Volatile or Atomic access cannot be transformed, 214-227, dlin.c:81:24</column>
-                    <column name="m_axi_lin_addr">linbase, , Volatile or Atomic access cannot be transformed, 214-227, dlin.c:87:29</column>
-                    <column name="m_axi_lin_addr">linbase, , Volatile or Atomic access cannot be transformed, 214-227, dlin.c:87:29</column>
-                    <column name="m_axi_lin_addr">linbase, , Volatile or Atomic access cannot be transformed, 214-227, dlin.c:81:24</column>
-                    <column name="m_axi_lin_addr">linbase, , Volatile or Atomic access cannot be transformed, 214-227, dlin.c:81:24</column>
-                    <column name="m_axi_ps_ddr">ddr_header, , Volatile or Atomic access cannot be transformed, 214-227, dlin.c:115:21</column>
-                    <column name="m_axi_ps_ddr">ddr_header, anonymous, Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0, 214-353, clu.c:17:2</column>
-                    <column name="m_axi_ps_ddr">ddr_header, anonymous, Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0, 214-353, can.c:126:3</column>
-                    <column name="m_axi_ps_ddr">ddr_header, anonymous, Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0, 214-353, can.c:103:2</column>
+                    <column name="m_axi_ps_ddr">ddr_header, , Volatile or Atomic access cannot be transformed, 214-227, can.c:120:21</column>
                     <column name="m_axi_ps_ddr">ddr_header, anonymous, Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0, 214-353, clu.c:17:2</column>
                     <column name="m_axi_ps_ddr">ddr_header, anonymous, Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0, 214-353, dlin.c:120:3</column>
                     <column name="m_axi_ps_ddr">ddr_header, anonymous, Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0, 214-353, dlin.c:98:2</column>
+                    <column name="m_axi_ps_ddr">ddr_header, anonymous, Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0, 214-353, clu.c:17:2</column>
+                    <column name="m_axi_ps_ddr">ddr_header, anonymous, Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0, 214-353, can.c:126:3</column>
+                    <column name="m_axi_ps_ddr">ddr_header, anonymous, Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0, 214-353, can.c:103:2</column>
                 </table>
             </item>
         </section>

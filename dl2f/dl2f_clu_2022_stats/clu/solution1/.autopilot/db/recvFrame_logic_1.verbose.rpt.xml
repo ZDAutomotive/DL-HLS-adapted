@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'recvFrame_logic_1'" level="0">
-<item name = "Date">Thu Dec 22 10:53:25 2022
+<item name = "Date">Thu Dec 22 11:33:41 2022
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">clu</item>
@@ -86,7 +86,7 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add156_fu_1267_p2">+, 0, 0, 15, 15, 14</column>
+<column name="add115_fu_1267_p2">+, 0, 0, 15, 15, 14</column>
 <column name="add_ln168_1_fu_666_p2">+, 0, 0, 32, 32, 32</column>
 <column name="add_ln168_2_fu_632_p2">+, 0, 0, 15, 15, 15</column>
 <column name="add_ln168_fu_638_p2">+, 0, 0, 15, 15, 14</column>
@@ -95,13 +95,13 @@
 <column name="add_ln214_fu_1256_p2">+, 0, 0, 7, 7, 4</column>
 <column name="add_ln223_1_fu_1346_p2">+, 0, 0, 7, 5, 1</column>
 <column name="add_ln223_fu_1278_p2">+, 0, 0, 6, 6, 2</column>
-<column name="add_ln259_fu_1298_p2">+, 0, 0, 32, 32, 1</column>
+<column name="add_ln267_fu_1298_p2">+, 0, 0, 32, 32, 1</column>
 <column name="add_ln278_fu_1315_p2">+, 0, 0, 32, 32, 1</column>
 <column name="add_ln281_fu_1328_p2">+, 0, 0, 32, 32, 8</column>
 <column name="id_can_fu_824_p2">+, 0, 0, 7, 5, 4</column>
 <column name="and_ln28_fu_978_p2">and, 0, 0, 1, 1, 1</column>
 <column name="ap_predicate_op209_call_state15">and, 0, 0, 1, 1, 1</column>
-<column name="icmp_ln237_fu_1272_p2">icmp, 0, 0, 3, 7, 1</column>
+<column name="icmp_ln223_fu_1272_p2">icmp, 0, 0, 3, 7, 1</column>
 <column name="icmp_ln28_fu_973_p2">icmp, 0, 0, 12, 32, 32</column>
 <column name="icmp_ln32_10_fu_1126_p2">icmp, 0, 0, 12, 32, 32</column>
 <column name="icmp_ln32_11_fu_1132_p2">icmp, 0, 0, 12, 32, 32</column>
@@ -186,19 +186,19 @@
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="NofBytes_reg_1548">7, 0, 7, 0</column>
-<column name="add156_reg_1553">12, 0, 15, 3</column>
+<column name="add115_reg_1553">12, 0, 15, 3</column>
 <column name="add_ln168_2_reg_1377">12, 0, 15, 3</column>
 <column name="add_ln223_1_reg_1573">5, 0, 5, 0</column>
 <column name="ap_CS_fsm">31, 0, 31, 0</column>
 <column name="can_addr_addr_2_read_reg_1585">32, 0, 32, 0</column>
 <column name="can_addr_addr_2_reg_1578">32, 0, 32, 0</column>
-<column name="counter_can_2">32, 0, 32, 0</column>
+<column name="counter_droped_1">32, 0, 32, 0</column>
 <column name="frameDLC_reg_1483">32, 0, 32, 0</column>
 <column name="grp_recvFrame_logic_1_Pipeline_1_fu_572_ap_start_reg">1, 0, 1, 0</column>
 <column name="grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_ap_start_reg">1, 0, 1, 0</column>
 <column name="grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_ap_start_reg">1, 0, 1, 0</column>
 <column name="grp_write_ddr_1_fu_598_ap_start_reg">1, 0, 1, 0</column>
-<column name="icmp_ln237_reg_1559">1, 0, 1, 0</column>
+<column name="icmp_ln223_reg_1559">1, 0, 1, 0</column>
 <column name="icmp_ln32_10_reg_1515">1, 0, 1, 0</column>
 <column name="icmp_ln32_11_reg_1521">1, 0, 1, 0</column>
 <column name="icmp_ln32_12_reg_1526">1, 0, 1, 0</column>

@@ -61,7 +61,7 @@ module clu_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2 (
         m_axi_can_addr_BID,
         m_axi_can_addr_BUSER,
         zext_ln27,
-        zext_ln237,
+        zext_ln223,
         canbase,
         can_frame_address0,
         can_frame_ce0,
@@ -129,7 +129,7 @@ input  [1:0] m_axi_can_addr_BRESP;
 input  [0:0] m_axi_can_addr_BID;
 input  [0:0] m_axi_can_addr_BUSER;
 input  [6:0] zext_ln27;
-input  [14:0] zext_ln237;
+input  [14:0] zext_ln223;
 input  [31:0] canbase;
 output  [6:0] can_frame_address0;
 output   can_frame_ce0;
@@ -210,7 +210,7 @@ reg   [31:0] ap_sig_allocacmp_Len_2;
 reg   [63:0] canIndex_fu_88;
 wire   [63:0] add_ln244_fu_347_p2;
 wire   [31:0] zext_ln27_cast_fu_167_p1;
-wire   [31:0] zext_ln237_cast_fu_163_p1;
+wire   [31:0] zext_ln223_cast_fu_163_p1;
 wire   [31:0] sub_ln239_fu_203_p2;
 wire   [29:0] trunc_ln239_1_fu_208_p4;
 wire   [0:0] tmp_fu_196_p3;
@@ -616,7 +616,7 @@ assign Len_3_fu_264_p2 = (Len_2_reg_397 + 32'd4);
 
 assign add_ln238_fu_249_p2 = (shl_ln2_fu_241_p3 + canbase);
 
-assign add_ln239_fu_190_p2 = (ap_sig_allocacmp_Len_2 + zext_ln237_cast_fu_163_p1);
+assign add_ln239_fu_190_p2 = (ap_sig_allocacmp_Len_2 + zext_ln223_cast_fu_163_p1);
 
 assign add_ln240_fu_325_p2 = (trunc_ln240_fu_321_p1 + 7'd12);
 
@@ -764,7 +764,7 @@ assign trunc_ln240_fu_321_p1 = canIndex_fu_88[6:0];
 
 assign trunc_ln243_fu_314_p1 = m_axi_can_addr_RDATA[7:0];
 
-assign zext_ln237_cast_fu_163_p1 = zext_ln237;
+assign zext_ln223_cast_fu_163_p1 = zext_ln223;
 
 assign zext_ln240_fu_331_p1 = add_ln240_fu_325_p2;
 

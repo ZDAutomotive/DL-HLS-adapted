@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'clu'
 ================================================================
 + General Information: 
-    * Date:           Thu Dec 22 10:53:29 2022
+    * Date:           Thu Dec 22 11:33:46 2022
     * Version:        2022.2 (Build 3670227 on Oct 13 2022)
     * Project:        clu
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -259,30 +259,30 @@
 +----------------+------------+-----------+------------------------------------------------------------------------------------------------------+------------+---------------+
 | HW Interface   | Variable   | Loop      | Problem                                                                                              | Resolution | Location      |
 +----------------+------------+-----------+------------------------------------------------------------------------------------------------------+------------+---------------+
-| m_axi_ps_ddr   | ddr_header |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | can.c:120:21  |
+| m_axi_ps_ddr   | ddr_header |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | dlin.c:115:21 |
+| m_axi_lin_addr | linbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | dlin.c:81:24  |
+| m_axi_lin_addr | linbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | dlin.c:87:29  |
+| m_axi_lin_addr | linbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | dlin.c:81:24  |
+| m_axi_lin_addr | linbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | dlin.c:81:24  |
+| m_axi_lin_addr | linbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | dlin.c:81:24  |
+| m_axi_lin_addr | linbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | dlin.c:87:29  |
+| m_axi_lin_addr | linbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | dlin.c:87:29  |
+| m_axi_lin_addr | linbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | dlin.c:81:24  |
+| m_axi_lin_addr | linbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | dlin.c:81:24  |
+| m_axi_can_addr | can_ptr    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | can.c:302:16  |
 | m_axi_can_addr | canbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | can.c:168:15  |
 | m_axi_can_addr | canbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | can.c:191:14  |
 | m_axi_can_addr | canbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | can.c:225:14  |
 | m_axi_can_addr | canbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | can.c:238:14  |
 | m_axi_can_addr | canbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | can.c:281:12  |
 | m_axi_can_addr | canbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | can.c:283:26  |
-| m_axi_can_addr | can_ptr    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | can.c:302:16  |
-| m_axi_lin_addr | linbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | dlin.c:81:24  |
-| m_axi_lin_addr | linbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | dlin.c:87:29  |
-| m_axi_lin_addr | linbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | dlin.c:81:24  |
-| m_axi_lin_addr | linbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | dlin.c:81:24  |
-| m_axi_lin_addr | linbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | dlin.c:81:24  |
-| m_axi_lin_addr | linbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | dlin.c:87:29  |
-| m_axi_lin_addr | linbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | dlin.c:87:29  |
-| m_axi_lin_addr | linbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | dlin.c:81:24  |
-| m_axi_lin_addr | linbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | dlin.c:81:24  |
-| m_axi_ps_ddr   | ddr_header |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | dlin.c:115:21 |
-| m_axi_ps_ddr   | ddr_header | anonymous | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | clu.c:17:2    |
-| m_axi_ps_ddr   | ddr_header | anonymous | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | can.c:126:3   |
-| m_axi_ps_ddr   | ddr_header | anonymous | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | can.c:103:2   |
+| m_axi_ps_ddr   | ddr_header |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | can.c:120:21  |
 | m_axi_ps_ddr   | ddr_header | anonymous | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | clu.c:17:2    |
 | m_axi_ps_ddr   | ddr_header | anonymous | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | dlin.c:120:3  |
 | m_axi_ps_ddr   | ddr_header | anonymous | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | dlin.c:98:2   |
+| m_axi_ps_ddr   | ddr_header | anonymous | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | clu.c:17:2    |
+| m_axi_ps_ddr   | ddr_header | anonymous | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | can.c:126:3   |
+| m_axi_ps_ddr   | ddr_header | anonymous | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | can.c:103:2   |
 +----------------+------------+-----------+------------------------------------------------------------------------------------------------------+------------+---------------+
 
     * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
@@ -339,10 +339,10 @@
 |    add_ln191_1_fu_719_p2                           | -   |        | add_ln191_1 | add | fabric | 0       |
 |    id_can_fu_824_p2                                | -   |        | id_can      | add | fabric | 0       |
 |    add_ln214_fu_1256_p2                            | -   |        | add_ln214   | add | fabric | 0       |
-|    add156_fu_1267_p2                               | -   |        | add156      | add | fabric | 0       |
+|    add115_fu_1267_p2                               | -   |        | add115      | add | fabric | 0       |
 |    add_ln223_fu_1278_p2                            | -   |        | add_ln223   | add | fabric | 0       |
 |    add_ln223_1_fu_1346_p2                          | -   |        | add_ln223_1 | add | fabric | 0       |
-|    can_2_received                                  | -   |        | add_ln259   | add | fabric | 0       |
+|    can_dropped                                     | -   |        | add_ln267   | add | fabric | 0       |
 |    received_can                                    | -   |        | add_ln278   | add | fabric | 0       |
 |    add_ln281_fu_1328_p2                            | -   |        | add_ln281   | add | fabric | 0       |
 |   + recvFrame_logic_1_Pipeline_1                   | 0   |        |             |     |        |         |

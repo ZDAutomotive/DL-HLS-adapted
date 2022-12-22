@@ -65,7 +65,7 @@ port (
     m_axi_can_addr_BUSER : IN STD_LOGIC_VECTOR (0 downto 0);
     add_ln223_1 : IN STD_LOGIC_VECTOR (4 downto 0);
     canbase : IN STD_LOGIC_VECTOR (31 downto 0);
-    zext_ln237 : IN STD_LOGIC_VECTOR (14 downto 0);
+    zext_ln223 : IN STD_LOGIC_VECTOR (14 downto 0);
     can_frame_address0 : OUT STD_LOGIC_VECTOR (6 downto 0);
     can_frame_ce0 : OUT STD_LOGIC;
     can_frame_we0 : OUT STD_LOGIC;
@@ -173,7 +173,7 @@ attribute shreg_extract : string;
     signal shl_ln3_fu_202_p3 : STD_LOGIC_VECTOR (5 downto 0);
     signal zext_ln225_fu_210_p1 : STD_LOGIC_VECTOR (31 downto 0);
     signal add_ln225_1_fu_214_p2 : STD_LOGIC_VECTOR (31 downto 0);
-    signal zext_ln237_cast_fu_169_p1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal zext_ln223_cast_fu_169_p1 : STD_LOGIC_VECTOR (31 downto 0);
     signal add_ln225_fu_220_p2 : STD_LOGIC_VECTOR (31 downto 0);
     signal add_ln227_fu_288_p2 : STD_LOGIC_VECTOR (6 downto 0);
     signal add_ln228_fu_299_p2 : STD_LOGIC_VECTOR (6 downto 0);
@@ -471,7 +471,7 @@ begin
     end process;
     DwIndex_2_fu_192_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_DwIndex_1) + unsigned(ap_const_lv5_1));
     add_ln225_1_fu_214_p2 <= std_logic_vector(unsigned(zext_ln225_fu_210_p1) + unsigned(canbase));
-    add_ln225_fu_220_p2 <= std_logic_vector(unsigned(add_ln225_1_fu_214_p2) + unsigned(zext_ln237_cast_fu_169_p1));
+    add_ln225_fu_220_p2 <= std_logic_vector(unsigned(add_ln225_1_fu_214_p2) + unsigned(zext_ln223_cast_fu_169_p1));
     add_ln227_fu_288_p2 <= std_logic_vector(unsigned(canIndex_fu_94) + unsigned(ap_const_lv7_C));
     add_ln228_fu_299_p2 <= std_logic_vector(unsigned(canIndex_fu_94) + unsigned(ap_const_lv7_D));
     add_ln229_fu_321_p2 <= std_logic_vector(unsigned(canIndex_load_reg_390) + unsigned(ap_const_lv7_E));
@@ -803,10 +803,10 @@ begin
     shl_ln3_fu_202_p3 <= (trunc_ln226_fu_198_p1 & ap_const_lv2_0);
     trunc_ln226_fu_198_p1 <= ap_sig_allocacmp_DwIndex_1(4 - 1 downto 0);
     trunc_ln230_fu_281_p1 <= m_axi_can_addr_RDATA(8 - 1 downto 0);
+    zext_ln223_cast_fu_169_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(zext_ln223),32));
     zext_ln225_fu_210_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(shl_ln3_fu_202_p3),32));
     zext_ln227_fu_294_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(add_ln227_fu_288_p2),32));
     zext_ln228_fu_305_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(add_ln228_fu_299_p2),32));
     zext_ln229_fu_326_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(add_ln229_fu_321_p2),32));
     zext_ln230_fu_336_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(add_ln230_fu_331_p2),32));
-    zext_ln237_cast_fu_169_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(zext_ln237),32));
 end behav;

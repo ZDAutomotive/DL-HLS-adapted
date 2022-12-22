@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="can.c" path="D:\HLS\dl2f_clu_2022_stats\can.c"/>
-    <originFiles name="can.h" path="D:\HLS\dl2f_clu_2022_stats\can.h"/>
-    <originFiles name="clu.c" path="D:\HLS\dl2f_clu_2022_stats\clu.c"/>
-    <originFiles name="clu.h" path="D:\HLS\dl2f_clu_2022_stats\clu.h"/>
-    <originFiles name="dlin.c" path="D:\HLS\dl2f_clu_2022_stats\dlin.c"/>
-    <originFiles name="uart.c" path="D:\HLS\dl2f_clu_2022_stats\uart.c"/>
+    <originFiles name="can.c" path="D:\HLS\dl2f\dl2f_clu_2022_stats\can.c"/>
+    <originFiles name="can.h" path="D:\HLS\dl2f\dl2f_clu_2022_stats\can.h"/>
+    <originFiles name="clu.c" path="D:\HLS\dl2f\dl2f_clu_2022_stats\clu.c"/>
+    <originFiles name="clu.h" path="D:\HLS\dl2f\dl2f_clu_2022_stats\clu.h"/>
+    <originFiles name="dlin.c" path="D:\HLS\dl2f\dl2f_clu_2022_stats\dlin.c"/>
+    <originFiles name="uart.c" path="D:\HLS\dl2f\dl2f_clu_2022_stats\uart.c"/>
   </source>
   <testbench/>
 </autopilotfilemapping:AutoPilotFileMapping>

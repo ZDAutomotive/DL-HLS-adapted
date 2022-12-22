@@ -85,7 +85,7 @@
 <trans id="266" from="13" to="15">
 <condition id="-1">
 <or_exp><and_exp><literal name="tmp_7" val="1"/>
-<literal name="icmp_ln237" val="1"/>
+<literal name="icmp_ln223" val="1"/>
 </and_exp></or_exp>
 </condition>
 </trans>
@@ -93,7 +93,7 @@
 <trans id="267" from="13" to="16">
 <condition id="-1">
 <or_exp><and_exp><literal name="tmp_7" val="1"/>
-<literal name="icmp_ln237" val="0"/>
+<literal name="icmp_ln223" val="0"/>
 </and_exp></or_exp>
 </condition>
 </trans>
@@ -2400,10 +2400,10 @@ entry:6 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ca
 
 <Node id="25" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="64" op_3_bw="0">
 <![CDATA[
-entry:8 %specreset_ln157 = specreset void @_ssdm_op_SpecReset, i32 %counter_can_2, i64 1, void @empty_43
+entry:8 %specreset_ln161 = specreset void @_ssdm_op_SpecReset, i32 %counter_droped_1, i64 1, void @empty_43
 
 ]]></Node>
-<StgValue><ssdm name="specreset_ln157"/></StgValue>
+<StgValue><ssdm name="specreset_ln161"/></StgValue>
 </operation>
 
 <operation id="176" st_id="13" stage="1" lat="1">
@@ -2775,10 +2775,10 @@ entry:154 %store_ln218 = store i8 %zext_ln214, i7 %can_frame_addr_20
 
 <Node id="172" bw="15" op_0_bw="15" op_1_bw="15">
 <![CDATA[
-entry:155 %add156 = add i15 %add_ln168_2, i15 8456
+entry:155 %add115 = add i15 %add_ln168_2, i15 8456
 
 ]]></Node>
-<StgValue><ssdm name="add156"/></StgValue>
+<StgValue><ssdm name="add115"/></StgValue>
 </operation>
 
 <operation id="201" st_id="13" stage="1" lat="1">
@@ -2790,10 +2790,10 @@ entry:155 %add156 = add i15 %add_ln168_2, i15 8456
 
 <Node id="173" bw="1" op_0_bw="7" op_1_bw="7">
 <![CDATA[
-entry:156 %icmp_ln237 = icmp_eq  i7 %NofBytes, i7 0
+entry:156 %icmp_ln223 = icmp_eq  i7 %NofBytes, i7 0
 
 ]]></Node>
-<StgValue><ssdm name="icmp_ln237"/></StgValue>
+<StgValue><ssdm name="icmp_ln223"/></StgValue>
 </operation>
 
 <operation id="202" st_id="13" stage="1" lat="1">
@@ -2821,7 +2821,7 @@ entry:157 %br_ln220 = br i1 %tmp_7, void %for.inc189.preheader, void %VITIS_LOOP
 
 <Node id="179" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-VITIS_LOOP_223_1:0 %br_ln223 = br i1 %icmp_ln237, void %for.body.lr.ph, void %for.end
+VITIS_LOOP_223_1:0 %br_ln223 = br i1 %icmp_ln223, void %for.body.lr.ph, void %for.end
 
 ]]></Node>
 <StgValue><ssdm name="br_ln223"/></StgValue>
@@ -2832,7 +2832,7 @@ VITIS_LOOP_223_1:0 %br_ln223 = br i1 %icmp_ln237, void %for.body.lr.ph, void %fo
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp><literal name="tmp_7" val="1"/>
-<literal name="icmp_ln237" val="0"/>
+<literal name="icmp_ln223" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2849,7 +2849,7 @@ for.body.lr.ph:0 %add_ln223 = add i6 %trunc_ln27, i6 63
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp><literal name="tmp_7" val="1"/>
-<literal name="icmp_ln237" val="0"/>
+<literal name="icmp_ln223" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2873,7 +2873,7 @@ for.body.lr.ph:1 %trunc_ln16 = partselect i4 @_ssdm_op_PartSelect.i4.i6.i32.i32,
 
 <Node id="176" bw="0" op_0_bw="0" op_1_bw="7" op_2_bw="15" op_3_bw="32" op_4_bw="32" op_5_bw="8" op_6_bw="0" op_7_bw="0" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="0" op_12_bw="0" op_13_bw="0" op_14_bw="0" op_15_bw="0" op_16_bw="0" op_17_bw="0" op_18_bw="0" op_19_bw="0" op_20_bw="0" op_21_bw="0" op_22_bw="0" op_23_bw="0" op_24_bw="0" op_25_bw="0" op_26_bw="0" op_27_bw="0" op_28_bw="0" op_29_bw="0" op_30_bw="0" op_31_bw="0">
 <![CDATA[
-for.inc189.preheader:0 %call_ln214 = call void @recvFrame_logic.1_Pipeline_VITIS_LOOP_237_2, i7 %NofBytes, i15 %add156, i32 %canbase_read, i32 %can_addr, i8 %can_frame
+for.inc189.preheader:0 %call_ln214 = call void @recvFrame_logic.1_Pipeline_VITIS_LOOP_237_2, i7 %NofBytes, i15 %add115, i32 %canbase_read, i32 %can_addr, i8 %can_frame
 
 ]]></Node>
 <StgValue><ssdm name="call_ln214"/></StgValue>
@@ -2892,7 +2892,7 @@ for.inc189.preheader:0 %call_ln214 = call void @recvFrame_logic.1_Pipeline_VITIS
 
 <Node id="176" bw="0" op_0_bw="0" op_1_bw="7" op_2_bw="15" op_3_bw="32" op_4_bw="32" op_5_bw="8" op_6_bw="0" op_7_bw="0" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="0" op_12_bw="0" op_13_bw="0" op_14_bw="0" op_15_bw="0" op_16_bw="0" op_17_bw="0" op_18_bw="0" op_19_bw="0" op_20_bw="0" op_21_bw="0" op_22_bw="0" op_23_bw="0" op_24_bw="0" op_25_bw="0" op_26_bw="0" op_27_bw="0" op_28_bw="0" op_29_bw="0" op_30_bw="0" op_31_bw="0">
 <![CDATA[
-for.inc189.preheader:0 %call_ln214 = call void @recvFrame_logic.1_Pipeline_VITIS_LOOP_237_2, i7 %NofBytes, i15 %add156, i32 %canbase_read, i32 %can_addr, i8 %can_frame
+for.inc189.preheader:0 %call_ln214 = call void @recvFrame_logic.1_Pipeline_VITIS_LOOP_237_2, i7 %NofBytes, i15 %add115, i32 %canbase_read, i32 %can_addr, i8 %can_frame
 
 ]]></Node>
 <StgValue><ssdm name="call_ln214"/></StgValue>
@@ -2908,7 +2908,7 @@ for.inc189.preheader:0 %call_ln214 = call void @recvFrame_logic.1_Pipeline_VITIS
 
 <Node id="177" bw="0" op_0_bw="0">
 <![CDATA[
-for.inc189.preheader:1 %br_ln0 = br void %sw.bb198
+for.inc189.preheader:1 %br_ln0 = br void %if.end192
 
 ]]></Node>
 <StgValue><ssdm name="br_ln0"/></StgValue>
@@ -2919,13 +2919,13 @@ for.inc189.preheader:1 %br_ln0 = br void %sw.bb198
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp><literal name="tmp_7" val="1"/>
-<literal name="icmp_ln237" val="0"/>
+<literal name="icmp_ln223" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="185" bw="0" op_0_bw="0" op_1_bw="5" op_2_bw="32" op_3_bw="15" op_4_bw="32" op_5_bw="8" op_6_bw="0" op_7_bw="0" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="0" op_12_bw="0" op_13_bw="0" op_14_bw="0" op_15_bw="0" op_16_bw="0" op_17_bw="0" op_18_bw="0" op_19_bw="0" op_20_bw="0" op_21_bw="0" op_22_bw="0" op_23_bw="0" op_24_bw="0" op_25_bw="0" op_26_bw="0" op_27_bw="0" op_28_bw="0" op_29_bw="0" op_30_bw="0" op_31_bw="0">
 <![CDATA[
-for.body.lr.ph:4 %call_ln223 = call void @recvFrame_logic.1_Pipeline_VITIS_LOOP_223_1, i5 %add_ln223_1, i32 %canbase_read, i15 %add156, i32 %can_addr, i8 %can_frame
+for.body.lr.ph:4 %call_ln223 = call void @recvFrame_logic.1_Pipeline_VITIS_LOOP_223_1, i5 %add_ln223_1, i32 %canbase_read, i15 %add115, i32 %can_addr, i8 %can_frame
 
 ]]></Node>
 <StgValue><ssdm name="call_ln223"/></StgValue>
@@ -2936,7 +2936,7 @@ for.body.lr.ph:4 %call_ln223 = call void @recvFrame_logic.1_Pipeline_VITIS_LOOP_
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp><literal name="tmp_7" val="1"/>
-<literal name="icmp_ln237" val="0"/>
+<literal name="icmp_ln223" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -2958,7 +2958,7 @@ for.body.lr.ph:5 %br_ln0 = br void %for.end
 
 <Node id="188" bw="0" op_0_bw="0">
 <![CDATA[
-for.end:0 %br_ln234 = br void %sw.bb198
+for.end:0 %br_ln234 = br void %if.end192
 
 ]]></Node>
 <StgValue><ssdm name="br_ln234"/></StgValue>
@@ -2973,10 +2973,10 @@ for.end:0 %br_ln234 = br void %sw.bb198
 
 <Node id="190" bw="32" op_0_bw="32">
 <![CDATA[
-sw.bb198:0 %counter_can_2_load = load i32 %counter_can_2
+if.end192:0 %counter_droped_1_load = load i32 %counter_droped_1
 
 ]]></Node>
-<StgValue><ssdm name="counter_can_2_load"/></StgValue>
+<StgValue><ssdm name="counter_droped_1_load"/></StgValue>
 </operation>
 
 <operation id="213" st_id="15" stage="1" lat="1">
@@ -2988,10 +2988,10 @@ sw.bb198:0 %counter_can_2_load = load i32 %counter_can_2
 
 <Node id="191" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-sw.bb198:1 %add_ln259 = add i32 %counter_can_2_load, i32 1
+if.end192:1 %add_ln267 = add i32 %counter_droped_1_load, i32 1
 
 ]]></Node>
-<StgValue><ssdm name="add_ln259"/></StgValue>
+<StgValue><ssdm name="add_ln267"/></StgValue>
 </operation>
 
 <operation id="214" st_id="15" stage="1" lat="1">
@@ -3003,10 +3003,10 @@ sw.bb198:1 %add_ln259 = add i32 %counter_can_2_load, i32 1
 
 <Node id="192" bw="0" op_0_bw="32" op_1_bw="32" op_2_bw="0">
 <![CDATA[
-sw.bb198:2 %store_ln259 = store i32 %add_ln259, i32 %counter_can_2
+if.end192:2 %store_ln267 = store i32 %add_ln267, i32 %counter_droped_1
 
 ]]></Node>
-<StgValue><ssdm name="store_ln259"/></StgValue>
+<StgValue><ssdm name="store_ln267"/></StgValue>
 </operation>
 
 <operation id="215" st_id="15" stage="1" lat="1">
@@ -3016,12 +3016,12 @@ sw.bb198:2 %store_ln259 = store i32 %add_ln259, i32 %counter_can_2
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="195" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
+<Node id="197" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-sw.bb198:5 %write_ln274 = write void @_ssdm_op_Write.ap_auto.volatile.i32P0A, i32 %can_2_received, i32 %add_ln259
+if.end192:7 %write_ln276 = write void @_ssdm_op_Write.ap_auto.volatile.i32P0A, i32 %can_dropped, i32 %add_ln267
 
 ]]></Node>
-<StgValue><ssdm name="write_ln274"/></StgValue>
+<StgValue><ssdm name="write_ln276"/></StgValue>
 </operation>
 
 <operation id="216" st_id="15" stage="1" lat="1">
@@ -3033,7 +3033,7 @@ sw.bb198:5 %write_ln274 = write void @_ssdm_op_Write.ap_auto.volatile.i32P0A, i3
 
 <Node id="198" bw="32" op_0_bw="32">
 <![CDATA[
-sw.bb198:8 %internal_can_counter_load = load i32 %internal_can_counter
+if.end192:8 %internal_can_counter_load = load i32 %internal_can_counter
 
 ]]></Node>
 <StgValue><ssdm name="internal_can_counter_load"/></StgValue>
@@ -3048,7 +3048,7 @@ sw.bb198:8 %internal_can_counter_load = load i32 %internal_can_counter
 
 <Node id="199" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-sw.bb198:9 %add_ln278 = add i32 %internal_can_counter_load, i32 1
+if.end192:9 %add_ln278 = add i32 %internal_can_counter_load, i32 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln278"/></StgValue>
@@ -3063,7 +3063,7 @@ sw.bb198:9 %add_ln278 = add i32 %internal_can_counter_load, i32 1
 
 <Node id="200" bw="0" op_0_bw="32" op_1_bw="32" op_2_bw="0">
 <![CDATA[
-sw.bb198:10 %store_ln278 = store i32 %add_ln278, i32 %internal_can_counter
+if.end192:10 %store_ln278 = store i32 %add_ln278, i32 %internal_can_counter
 
 ]]></Node>
 <StgValue><ssdm name="store_ln278"/></StgValue>
@@ -3078,7 +3078,7 @@ sw.bb198:10 %store_ln278 = store i32 %add_ln278, i32 %internal_can_counter
 
 <Node id="201" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-sw.bb198:11 %write_ln279 = write void @_ssdm_op_Write.ap_auto.volatile.i32P0A, i32 %received_can, i32 %add_ln278
+if.end192:11 %write_ln279 = write void @_ssdm_op_Write.ap_auto.volatile.i32P0A, i32 %received_can, i32 %add_ln278
 
 ]]></Node>
 <StgValue><ssdm name="write_ln279"/></StgValue>
@@ -3093,7 +3093,7 @@ sw.bb198:11 %write_ln279 = write void @_ssdm_op_Write.ap_auto.volatile.i32P0A, i
 
 <Node id="203" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-sw.bb198:13 %add_ln281 = add i32 %canbase_read, i32 232
+if.end192:13 %add_ln281 = add i32 %canbase_read, i32 232
 
 ]]></Node>
 <StgValue><ssdm name="add_ln281"/></StgValue>
@@ -3108,7 +3108,7 @@ sw.bb198:13 %add_ln281 = add i32 %canbase_read, i32 232
 
 <Node id="204" bw="30" op_0_bw="30" op_1_bw="32" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-sw.bb198:14 %trunc_ln17 = partselect i30 @_ssdm_op_PartSelect.i30.i32.i32.i32, i32 %add_ln281, i32 2, i32 31
+if.end192:14 %trunc_ln17 = partselect i30 @_ssdm_op_PartSelect.i30.i32.i32.i32, i32 %add_ln281, i32 2, i32 31
 
 ]]></Node>
 <StgValue><ssdm name="trunc_ln17"/></StgValue>
@@ -3156,7 +3156,7 @@ for.body.lr.ph:3 %add_ln223_1 = add i5 %zext_ln223, i5 1
 
 <Node id="185" bw="0" op_0_bw="0" op_1_bw="5" op_2_bw="32" op_3_bw="15" op_4_bw="32" op_5_bw="8" op_6_bw="0" op_7_bw="0" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="0" op_12_bw="0" op_13_bw="0" op_14_bw="0" op_15_bw="0" op_16_bw="0" op_17_bw="0" op_18_bw="0" op_19_bw="0" op_20_bw="0" op_21_bw="0" op_22_bw="0" op_23_bw="0" op_24_bw="0" op_25_bw="0" op_26_bw="0" op_27_bw="0" op_28_bw="0" op_29_bw="0" op_30_bw="0" op_31_bw="0">
 <![CDATA[
-for.body.lr.ph:4 %call_ln223 = call void @recvFrame_logic.1_Pipeline_VITIS_LOOP_223_1, i5 %add_ln223_1, i32 %canbase_read, i15 %add156, i32 %can_addr, i8 %can_frame
+for.body.lr.ph:4 %call_ln223 = call void @recvFrame_logic.1_Pipeline_VITIS_LOOP_223_1, i5 %add_ln223_1, i32 %canbase_read, i15 %add115, i32 %can_addr, i8 %can_frame
 
 ]]></Node>
 <StgValue><ssdm name="call_ln223"/></StgValue>
@@ -3174,7 +3174,7 @@ for.body.lr.ph:4 %call_ln223 = call void @recvFrame_logic.1_Pipeline_VITIS_LOOP_
 
 <Node id="202" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="32" op_3_bw="8" op_4_bw="16" op_5_bw="0" op_6_bw="0" op_7_bw="0" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="0" op_12_bw="0" op_13_bw="0" op_14_bw="0" op_15_bw="0" op_16_bw="0" op_17_bw="0" op_18_bw="0" op_19_bw="0" op_20_bw="0" op_21_bw="0" op_22_bw="0" op_23_bw="0" op_24_bw="0" op_25_bw="0" op_26_bw="0" op_27_bw="0" op_28_bw="0" op_29_bw="0" op_30_bw="0">
 <![CDATA[
-sw.bb198:12 %call_ln280 = call void @write_ddr.1, i8 %ps_ddr, i32 %ddr_read, i8 %can_frame, i16 %dropped_can_counter
+if.end192:12 %call_ln280 = call void @write_ddr.1, i8 %ps_ddr, i32 %ddr_read, i8 %can_frame, i16 %dropped_can_counter
 
 ]]></Node>
 <StgValue><ssdm name="call_ln280"/></StgValue>
@@ -3189,7 +3189,7 @@ sw.bb198:12 %call_ln280 = call void @write_ddr.1, i8 %ps_ddr, i32 %ddr_read, i8 
 
 <Node id="205" bw="32" op_0_bw="30">
 <![CDATA[
-sw.bb198:15 %sext_ln281 = sext i30 %trunc_ln17
+if.end192:15 %sext_ln281 = sext i30 %trunc_ln17
 
 ]]></Node>
 <StgValue><ssdm name="sext_ln281"/></StgValue>
@@ -3204,7 +3204,7 @@ sw.bb198:15 %sext_ln281 = sext i30 %trunc_ln17
 
 <Node id="206" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-sw.bb198:16 %can_addr_addr_2 = getelementptr i32 %can_addr, i32 %sext_ln281
+if.end192:16 %can_addr_addr_2 = getelementptr i32 %can_addr, i32 %sext_ln281
 
 ]]></Node>
 <StgValue><ssdm name="can_addr_addr_2"/></StgValue>
@@ -3219,7 +3219,7 @@ sw.bb198:16 %can_addr_addr_2 = getelementptr i32 %can_addr, i32 %sext_ln281
 
 <Node id="207" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32" op_3_bw="0" op_4_bw="0" op_5_bw="0" op_6_bw="0">
 <![CDATA[
-sw.bb198:17 %can_addr_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %can_addr_addr_2, i32 1
+if.end192:17 %can_addr_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %can_addr_addr_2, i32 1
 
 ]]></Node>
 <StgValue><ssdm name="can_addr_load_req"/></StgValue>
@@ -3237,7 +3237,7 @@ sw.bb198:17 %can_addr_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 
 
 <Node id="202" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="32" op_3_bw="8" op_4_bw="16" op_5_bw="0" op_6_bw="0" op_7_bw="0" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="0" op_12_bw="0" op_13_bw="0" op_14_bw="0" op_15_bw="0" op_16_bw="0" op_17_bw="0" op_18_bw="0" op_19_bw="0" op_20_bw="0" op_21_bw="0" op_22_bw="0" op_23_bw="0" op_24_bw="0" op_25_bw="0" op_26_bw="0" op_27_bw="0" op_28_bw="0" op_29_bw="0" op_30_bw="0">
 <![CDATA[
-sw.bb198:12 %call_ln280 = call void @write_ddr.1, i8 %ps_ddr, i32 %ddr_read, i8 %can_frame, i16 %dropped_can_counter
+if.end192:12 %call_ln280 = call void @write_ddr.1, i8 %ps_ddr, i32 %ddr_read, i8 %can_frame, i16 %dropped_can_counter
 
 ]]></Node>
 <StgValue><ssdm name="call_ln280"/></StgValue>
@@ -3252,7 +3252,7 @@ sw.bb198:12 %call_ln280 = call void @write_ddr.1, i8 %ps_ddr, i32 %ddr_read, i8 
 
 <Node id="207" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32" op_3_bw="0" op_4_bw="0" op_5_bw="0" op_6_bw="0">
 <![CDATA[
-sw.bb198:17 %can_addr_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %can_addr_addr_2, i32 1
+if.end192:17 %can_addr_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %can_addr_addr_2, i32 1
 
 ]]></Node>
 <StgValue><ssdm name="can_addr_load_req"/></StgValue>
@@ -3270,7 +3270,7 @@ sw.bb198:17 %can_addr_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 
 
 <Node id="207" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32" op_3_bw="0" op_4_bw="0" op_5_bw="0" op_6_bw="0">
 <![CDATA[
-sw.bb198:17 %can_addr_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %can_addr_addr_2, i32 1
+if.end192:17 %can_addr_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %can_addr_addr_2, i32 1
 
 ]]></Node>
 <StgValue><ssdm name="can_addr_load_req"/></StgValue>
@@ -3288,7 +3288,7 @@ sw.bb198:17 %can_addr_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 
 
 <Node id="207" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32" op_3_bw="0" op_4_bw="0" op_5_bw="0" op_6_bw="0">
 <![CDATA[
-sw.bb198:17 %can_addr_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %can_addr_addr_2, i32 1
+if.end192:17 %can_addr_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %can_addr_addr_2, i32 1
 
 ]]></Node>
 <StgValue><ssdm name="can_addr_load_req"/></StgValue>
@@ -3306,7 +3306,7 @@ sw.bb198:17 %can_addr_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 
 
 <Node id="207" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32" op_3_bw="0" op_4_bw="0" op_5_bw="0" op_6_bw="0">
 <![CDATA[
-sw.bb198:17 %can_addr_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %can_addr_addr_2, i32 1
+if.end192:17 %can_addr_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %can_addr_addr_2, i32 1
 
 ]]></Node>
 <StgValue><ssdm name="can_addr_load_req"/></StgValue>
@@ -3324,7 +3324,7 @@ sw.bb198:17 %can_addr_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 
 
 <Node id="207" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32" op_3_bw="0" op_4_bw="0" op_5_bw="0" op_6_bw="0">
 <![CDATA[
-sw.bb198:17 %can_addr_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %can_addr_addr_2, i32 1
+if.end192:17 %can_addr_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %can_addr_addr_2, i32 1
 
 ]]></Node>
 <StgValue><ssdm name="can_addr_load_req"/></StgValue>
@@ -3342,7 +3342,7 @@ sw.bb198:17 %can_addr_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 
 
 <Node id="207" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32" op_3_bw="0" op_4_bw="0" op_5_bw="0" op_6_bw="0">
 <![CDATA[
-sw.bb198:17 %can_addr_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %can_addr_addr_2, i32 1
+if.end192:17 %can_addr_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %can_addr_addr_2, i32 1
 
 ]]></Node>
 <StgValue><ssdm name="can_addr_load_req"/></StgValue>
@@ -3360,7 +3360,7 @@ sw.bb198:17 %can_addr_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 
 
 <Node id="208" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="0" op_3_bw="0" op_4_bw="0" op_5_bw="0" op_6_bw="0" op_7_bw="0" op_8_bw="0">
 <![CDATA[
-sw.bb198:18 %can_addr_addr_2_read = read i32 @_ssdm_op_Read.m_axi.volatile.i32P1A, i32 %can_addr_addr_2
+if.end192:18 %can_addr_addr_2_read = read i32 @_ssdm_op_Read.m_axi.volatile.i32P1A, i32 %can_addr_addr_2
 
 ]]></Node>
 <StgValue><ssdm name="can_addr_addr_2_read"/></StgValue>
@@ -3378,7 +3378,7 @@ sw.bb198:18 %can_addr_addr_2_read = read i32 @_ssdm_op_Read.m_axi.volatile.i32P1
 
 <Node id="210" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32" op_3_bw="0" op_4_bw="0" op_5_bw="0">
 <![CDATA[
-sw.bb198:20 %can_addr_addr_4_req = writereq i1 @_ssdm_op_WriteReq.m_axi.i32P1A, i32 %can_addr_addr_2, i32 1
+if.end192:20 %can_addr_addr_4_req = writereq i1 @_ssdm_op_WriteReq.m_axi.i32P1A, i32 %can_addr_addr_2, i32 1
 
 ]]></Node>
 <StgValue><ssdm name="can_addr_addr_4_req"/></StgValue>
@@ -3396,7 +3396,7 @@ sw.bb198:20 %can_addr_addr_4_req = writereq i1 @_ssdm_op_WriteReq.m_axi.i32P1A, 
 
 <Node id="209" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-sw.bb198:19 %or_ln282 = or i32 %can_addr_addr_2_read, i32 128
+if.end192:19 %or_ln282 = or i32 %can_addr_addr_2_read, i32 128
 
 ]]></Node>
 <StgValue><ssdm name="or_ln282"/></StgValue>
@@ -3411,7 +3411,7 @@ sw.bb198:19 %or_ln282 = or i32 %can_addr_addr_2_read, i32 128
 
 <Node id="211" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="4" op_4_bw="0" op_5_bw="0" op_6_bw="0" op_7_bw="0" op_8_bw="0">
 <![CDATA[
-sw.bb198:21 %write_ln283 = write void @_ssdm_op_Write.m_axi.volatile.i32P1A, i32 %can_addr_addr_2, i32 %or_ln282, i4 15
+if.end192:21 %write_ln283 = write void @_ssdm_op_Write.m_axi.volatile.i32P1A, i32 %can_addr_addr_2, i32 %or_ln282, i4 15
 
 ]]></Node>
 <StgValue><ssdm name="write_ln283"/></StgValue>
@@ -3429,7 +3429,7 @@ sw.bb198:21 %write_ln283 = write void @_ssdm_op_Write.m_axi.volatile.i32P1A, i32
 
 <Node id="212" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="0" op_3_bw="0" op_4_bw="0">
 <![CDATA[
-sw.bb198:22 %can_addr_addr_4_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %can_addr_addr_2
+if.end192:22 %can_addr_addr_4_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %can_addr_addr_2
 
 ]]></Node>
 <StgValue><ssdm name="can_addr_addr_4_resp"/></StgValue>
@@ -3447,7 +3447,7 @@ sw.bb198:22 %can_addr_addr_4_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1
 
 <Node id="212" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="0" op_3_bw="0" op_4_bw="0">
 <![CDATA[
-sw.bb198:22 %can_addr_addr_4_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %can_addr_addr_2
+if.end192:22 %can_addr_addr_4_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %can_addr_addr_2
 
 ]]></Node>
 <StgValue><ssdm name="can_addr_addr_4_resp"/></StgValue>
@@ -3465,7 +3465,7 @@ sw.bb198:22 %can_addr_addr_4_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1
 
 <Node id="212" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="0" op_3_bw="0" op_4_bw="0">
 <![CDATA[
-sw.bb198:22 %can_addr_addr_4_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %can_addr_addr_2
+if.end192:22 %can_addr_addr_4_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %can_addr_addr_2
 
 ]]></Node>
 <StgValue><ssdm name="can_addr_addr_4_resp"/></StgValue>
@@ -3483,7 +3483,7 @@ sw.bb198:22 %can_addr_addr_4_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1
 
 <Node id="212" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="0" op_3_bw="0" op_4_bw="0">
 <![CDATA[
-sw.bb198:22 %can_addr_addr_4_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %can_addr_addr_2
+if.end192:22 %can_addr_addr_4_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %can_addr_addr_2
 
 ]]></Node>
 <StgValue><ssdm name="can_addr_addr_4_resp"/></StgValue>
@@ -3501,7 +3501,7 @@ sw.bb198:22 %can_addr_addr_4_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1
 
 <Node id="193" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-sw.bb198:3 %write_ln272 = write void @_ssdm_op_Write.ap_auto.volatile.i32P0A, i32 %can_0_received, i32 0
+if.end192:3 %write_ln272 = write void @_ssdm_op_Write.ap_auto.volatile.i32P0A, i32 %can_0_received, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="write_ln272"/></StgValue>
@@ -3516,7 +3516,7 @@ sw.bb198:3 %write_ln272 = write void @_ssdm_op_Write.ap_auto.volatile.i32P0A, i3
 
 <Node id="194" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-sw.bb198:4 %write_ln273 = write void @_ssdm_op_Write.ap_auto.volatile.i32P0A, i32 %can_1_received, i32 0
+if.end192:4 %write_ln273 = write void @_ssdm_op_Write.ap_auto.volatile.i32P0A, i32 %can_1_received, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="write_ln273"/></StgValue>
@@ -3529,12 +3529,12 @@ sw.bb198:4 %write_ln273 = write void @_ssdm_op_Write.ap_auto.volatile.i32P0A, i3
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="196" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
+<Node id="195" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-sw.bb198:6 %write_ln275 = write void @_ssdm_op_Write.ap_auto.volatile.i32P0A, i32 %can_3_received, i32 0
+if.end192:5 %write_ln274 = write void @_ssdm_op_Write.ap_auto.volatile.i32P0A, i32 %can_2_received, i32 0
 
 ]]></Node>
-<StgValue><ssdm name="write_ln275"/></StgValue>
+<StgValue><ssdm name="write_ln274"/></StgValue>
 </operation>
 
 <operation id="247" st_id="31" stage="1" lat="1">
@@ -3544,12 +3544,12 @@ sw.bb198:6 %write_ln275 = write void @_ssdm_op_Write.ap_auto.volatile.i32P0A, i3
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="197" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
+<Node id="196" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-sw.bb198:7 %write_ln276 = write void @_ssdm_op_Write.ap_auto.volatile.i32P0A, i32 %can_dropped, i32 0
+if.end192:6 %write_ln275 = write void @_ssdm_op_Write.ap_auto.volatile.i32P0A, i32 %can_3_received, i32 0
 
 ]]></Node>
-<StgValue><ssdm name="write_ln276"/></StgValue>
+<StgValue><ssdm name="write_ln275"/></StgValue>
 </operation>
 
 <operation id="248" st_id="31" stage="1" lat="5">
@@ -3561,7 +3561,7 @@ sw.bb198:7 %write_ln276 = write void @_ssdm_op_Write.ap_auto.volatile.i32P0A, i3
 
 <Node id="212" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="0" op_3_bw="0" op_4_bw="0">
 <![CDATA[
-sw.bb198:22 %can_addr_addr_4_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %can_addr_addr_2
+if.end192:22 %can_addr_addr_4_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %can_addr_addr_2
 
 ]]></Node>
 <StgValue><ssdm name="can_addr_addr_4_resp"/></StgValue>
@@ -3576,7 +3576,7 @@ sw.bb198:22 %can_addr_addr_4_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1
 
 <Node id="213" bw="0">
 <![CDATA[
-sw.bb198:23 %ret_ln0 = ret
+if.end192:23 %ret_ln0 = ret
 
 ]]></Node>
 <StgValue><ssdm name="ret_ln0"/></StgValue>
@@ -3625,8 +3625,8 @@ sw.bb198:23 %ret_ln0 = ret
 <port id="298" name="received_can" dir="1" iftype="0">
 <core>NULL</core><StgValue><ssdm name="received_can"/></StgValue>
 </port>
-<port id="299" name="counter_can_2" dir="2" iftype="0">
-<core>NULL</core><StgValue><ssdm name="counter_can_2"/></StgValue>
+<port id="299" name="counter_droped_1" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="counter_droped_1"/></StgValue>
 </port>
 <port id="300" name="internal_can_counter" dir="2" iftype="0">
 <core>NULL</core><StgValue><ssdm name="internal_can_counter"/></StgValue>
@@ -4410,13 +4410,13 @@ sw.bb198:23 %ret_ln0 = ret
 </dataflow>
 <dataflow id="781" from="StgValue_391" to="specinterface_ln0" fromId="391" toId="174">
 </dataflow>
-<dataflow id="783" from="_ssdm_op_SpecReset" to="specreset_ln157" fromId="782" toId="175">
+<dataflow id="783" from="_ssdm_op_SpecReset" to="specreset_ln161" fromId="782" toId="175">
 </dataflow>
-<dataflow id="784" from="counter_can_2" to="specreset_ln157" fromId="299" toId="175">
+<dataflow id="784" from="counter_droped_1" to="specreset_ln161" fromId="299" toId="175">
 </dataflow>
-<dataflow id="786" from="StgValue_785" to="specreset_ln157" fromId="785" toId="175">
+<dataflow id="786" from="StgValue_785" to="specreset_ln161" fromId="785" toId="175">
 </dataflow>
-<dataflow id="787" from="empty_43" to="specreset_ln157" fromId="744" toId="175">
+<dataflow id="787" from="empty_43" to="specreset_ln161" fromId="744" toId="175">
 </dataflow>
 <dataflow id="788" from="select_ln32_5" to="zext_ln32_2" fromId="163" toId="176">
 </dataflow>
@@ -4520,17 +4520,17 @@ sw.bb198:23 %ret_ln0 = ret
 </dataflow>
 <dataflow id="848" from="can_frame_addr_20" to="store_ln218" fromId="198" toId="199">
 </dataflow>
-<dataflow id="849" from="add_ln168_2" to="add156" fromId="40" toId="200">
+<dataflow id="849" from="add_ln168_2" to="add115" fromId="40" toId="200">
 </dataflow>
-<dataflow id="851" from="StgValue_850" to="add156" fromId="850" toId="200">
+<dataflow id="851" from="StgValue_850" to="add115" fromId="850" toId="200">
 </dataflow>
-<dataflow id="852" from="NofBytes" to="icmp_ln237" fromId="191" toId="201">
+<dataflow id="852" from="NofBytes" to="icmp_ln223" fromId="191" toId="201">
 </dataflow>
-<dataflow id="854" from="StgValue_853" to="icmp_ln237" fromId="853" toId="201">
+<dataflow id="854" from="StgValue_853" to="icmp_ln223" fromId="853" toId="201">
 </dataflow>
 <dataflow id="855" from="tmp_7" to="br_ln220" fromId="135" toId="202">
 </dataflow>
-<dataflow id="856" from="icmp_ln237" to="br_ln223" fromId="201" toId="203">
+<dataflow id="856" from="icmp_ln223" to="br_ln223" fromId="201" toId="203">
 </dataflow>
 <dataflow id="857" from="trunc_ln27" to="add_ln223" fromId="192" toId="204">
 </dataflow>
@@ -4548,7 +4548,7 @@ sw.bb198:23 %ret_ln0 = ret
 </dataflow>
 <dataflow id="867" from="NofBytes" to="call_ln214" fromId="191" toId="206">
 </dataflow>
-<dataflow id="868" from="add156" to="call_ln214" fromId="200" toId="206">
+<dataflow id="868" from="add115" to="call_ln214" fromId="200" toId="206">
 </dataflow>
 <dataflow id="869" from="canbase_read" to="call_ln214" fromId="33" toId="206">
 </dataflow>
@@ -4560,7 +4560,7 @@ sw.bb198:23 %ret_ln0 = ret
 </dataflow>
 <dataflow id="873" from="NofBytes" to="call_ln214" fromId="191" toId="207">
 </dataflow>
-<dataflow id="874" from="add156" to="call_ln214" fromId="200" toId="207">
+<dataflow id="874" from="add115" to="call_ln214" fromId="200" toId="207">
 </dataflow>
 <dataflow id="875" from="canbase_read" to="call_ln214" fromId="33" toId="207">
 </dataflow>
@@ -4574,27 +4574,27 @@ sw.bb198:23 %ret_ln0 = ret
 </dataflow>
 <dataflow id="881" from="canbase_read" to="call_ln223" fromId="33" toId="209">
 </dataflow>
-<dataflow id="882" from="add156" to="call_ln223" fromId="200" toId="209">
+<dataflow id="882" from="add115" to="call_ln223" fromId="200" toId="209">
 </dataflow>
 <dataflow id="883" from="can_addr" to="call_ln223" fromId="286" toId="209">
 </dataflow>
 <dataflow id="884" from="can_frame" to="call_ln223" fromId="34" toId="209">
 </dataflow>
-<dataflow id="885" from="counter_can_2" to="counter_can_2_load" fromId="299" toId="212">
+<dataflow id="885" from="counter_droped_1" to="counter_droped_1_load" fromId="299" toId="212">
 </dataflow>
-<dataflow id="886" from="counter_can_2_load" to="add_ln259" fromId="212" toId="213">
+<dataflow id="886" from="counter_droped_1_load" to="add_ln267" fromId="212" toId="213">
 </dataflow>
-<dataflow id="887" from="StgValue_308" to="add_ln259" fromId="308" toId="213">
+<dataflow id="887" from="StgValue_308" to="add_ln267" fromId="308" toId="213">
 </dataflow>
-<dataflow id="888" from="add_ln259" to="store_ln259" fromId="213" toId="214">
+<dataflow id="888" from="add_ln267" to="store_ln267" fromId="213" toId="214">
 </dataflow>
-<dataflow id="889" from="counter_can_2" to="store_ln259" fromId="299" toId="214">
+<dataflow id="889" from="counter_droped_1" to="store_ln267" fromId="299" toId="214">
 </dataflow>
-<dataflow id="891" from="_ssdm_op_Write.ap_auto.volatile.i32P0A" to="write_ln274" fromId="890" toId="215">
+<dataflow id="891" from="_ssdm_op_Write.ap_auto.volatile.i32P0A" to="write_ln276" fromId="890" toId="215">
 </dataflow>
-<dataflow id="892" from="can_2_received" to="write_ln274" fromId="295" toId="215">
+<dataflow id="892" from="can_dropped" to="write_ln276" fromId="297" toId="215">
 </dataflow>
-<dataflow id="893" from="add_ln259" to="write_ln274" fromId="213" toId="215">
+<dataflow id="893" from="add_ln267" to="write_ln276" fromId="213" toId="215">
 </dataflow>
 <dataflow id="894" from="internal_can_counter" to="internal_can_counter_load" fromId="300" toId="216">
 </dataflow>
@@ -4636,7 +4636,7 @@ sw.bb198:23 %ret_ln0 = ret
 </dataflow>
 <dataflow id="915" from="canbase_read" to="call_ln223" fromId="33" toId="224">
 </dataflow>
-<dataflow id="916" from="add156" to="call_ln223" fromId="200" toId="224">
+<dataflow id="916" from="add115" to="call_ln223" fromId="200" toId="224">
 </dataflow>
 <dataflow id="917" from="can_addr" to="call_ln223" fromId="286" toId="224">
 </dataflow>
@@ -4760,17 +4760,17 @@ sw.bb198:23 %ret_ln0 = ret
 </dataflow>
 <dataflow id="983" from="StgValue_391" to="write_ln273" fromId="391" toId="245">
 </dataflow>
-<dataflow id="984" from="_ssdm_op_Write.ap_auto.volatile.i32P0A" to="write_ln275" fromId="890" toId="246">
+<dataflow id="984" from="_ssdm_op_Write.ap_auto.volatile.i32P0A" to="write_ln274" fromId="890" toId="246">
 </dataflow>
-<dataflow id="985" from="can_3_received" to="write_ln275" fromId="296" toId="246">
+<dataflow id="985" from="can_2_received" to="write_ln274" fromId="295" toId="246">
 </dataflow>
-<dataflow id="986" from="StgValue_391" to="write_ln275" fromId="391" toId="246">
+<dataflow id="986" from="StgValue_391" to="write_ln274" fromId="391" toId="246">
 </dataflow>
-<dataflow id="987" from="_ssdm_op_Write.ap_auto.volatile.i32P0A" to="write_ln276" fromId="890" toId="247">
+<dataflow id="987" from="_ssdm_op_Write.ap_auto.volatile.i32P0A" to="write_ln275" fromId="890" toId="247">
 </dataflow>
-<dataflow id="988" from="can_dropped" to="write_ln276" fromId="297" toId="247">
+<dataflow id="988" from="can_3_received" to="write_ln275" fromId="296" toId="247">
 </dataflow>
-<dataflow id="989" from="StgValue_391" to="write_ln276" fromId="391" toId="247">
+<dataflow id="989" from="StgValue_391" to="write_ln275" fromId="391" toId="247">
 </dataflow>
 <dataflow id="990" from="_ssdm_op_WriteResp.m_axi.i32P1A" to="can_addr_addr_4_resp" fromId="969" toId="248">
 </dataflow>
@@ -4780,11 +4780,11 @@ sw.bb198:23 %ret_ln0 = ret
 </dataflow>
 <dataflow id="993" from="tmp_7" to="StgValue_13" fromId="135" toId="13">
 </dataflow>
-<dataflow id="994" from="icmp_ln237" to="StgValue_13" fromId="201" toId="13">
+<dataflow id="994" from="icmp_ln223" to="StgValue_13" fromId="201" toId="13">
 </dataflow>
 <dataflow id="995" from="tmp_7" to="StgValue_15" fromId="135" toId="15">
 </dataflow>
-<dataflow id="996" from="icmp_ln237" to="StgValue_15" fromId="201" toId="15">
+<dataflow id="996" from="icmp_ln223" to="StgValue_15" fromId="201" toId="15">
 </dataflow>
 </dataflows>
 

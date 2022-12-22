@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1'
 ================================================================
-* Date:           Thu Dec 22 10:53:19 2022
+* Date:           Thu Dec 22 11:33:34 2022
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        clu
@@ -96,10 +96,10 @@ IsGatedGlobalClock: 0
 State 1 <SV = 0> <Delay = 3.58>
 ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%DwIndex = alloca i32 1"   --->   Operation 14 'alloca' 'DwIndex' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%canIndex = alloca i32 1"   --->   Operation 15 'alloca' 'canIndex' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%zext_ln237_read = read i15 @_ssdm_op_Read.ap_auto.i15, i15 %zext_ln237"   --->   Operation 16 'read' 'zext_ln237_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%zext_ln223_read = read i15 @_ssdm_op_Read.ap_auto.i15, i15 %zext_ln223"   --->   Operation 16 'read' 'zext_ln223_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%canbase_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %canbase"   --->   Operation 17 'read' 'canbase_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%add_ln223_1_read = read i5 @_ssdm_op_Read.ap_auto.i5, i5 %add_ln223_1"   --->   Operation 18 'read' 'add_ln223_1_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%zext_ln237_cast = zext i15 %zext_ln237_read"   --->   Operation 19 'zext' 'zext_ln237_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%zext_ln223_cast = zext i15 %zext_ln223_read"   --->   Operation 19 'zext' 'zext_ln223_cast' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %can_addr, void @empty_42, i32 0, i32 0, void @empty_43, i32 0, i32 1, void @empty_44, void @empty, void @empty_43, i32 16, i32 16, i32 16, i32 16, void @empty_43, void @empty_43, i32 4294967295, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 21 [1/1] (1.29ns)   --->   "%store_ln0 = store i7 8, i7 %canIndex"   --->   Operation 21 'store' 'store_ln0' <Predicate = true> <Delay = 1.29>
 ST_1 : Operation 22 [1/1] (1.29ns)   --->   "%store_ln0 = store i5 0, i5 %DwIndex"   --->   Operation 22 'store' 'store_ln0' <Predicate = true> <Delay = 1.29>
@@ -114,7 +114,7 @@ ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%trunc_ln226 = trunc i5 %DwIndex_1"
 ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%shl_ln3 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i4.i2, i4 %trunc_ln226, i2 0" [can.c:226]   --->   Operation 31 'bitconcatenate' 'shl_ln3' <Predicate = (!icmp_ln223)> <Delay = 0.00>
 ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%zext_ln225 = zext i6 %shl_ln3" [can.c:225]   --->   Operation 32 'zext' 'zext_ln225' <Predicate = (!icmp_ln223)> <Delay = 0.00>
 ST_1 : Operation 33 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln225_1 = add i32 %zext_ln225, i32 %canbase_read" [can.c:225]   --->   Operation 33 'add' 'add_ln225_1' <Predicate = (!icmp_ln223)> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.79> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_1 : Operation 34 [1/1] (3.58ns) (root node of TernaryAdder)   --->   "%add_ln225 = add i32 %add_ln225_1, i32 %zext_ln237_cast" [can.c:225]   --->   Operation 34 'add' 'add_ln225' <Predicate = (!icmp_ln223)> <Delay = 3.58> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.79> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 34 [1/1] (3.58ns) (root node of TernaryAdder)   --->   "%add_ln225 = add i32 %add_ln225_1, i32 %zext_ln223_cast" [can.c:225]   --->   Operation 34 'add' 'add_ln225' <Predicate = (!icmp_ln223)> <Delay = 3.58> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.79> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
 ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i30 @_ssdm_op_PartSelect.i30.i32.i32.i32, i32 %add_ln225, i32 2, i32 31" [can.c:225]   --->   Operation 35 'partselect' 'trunc_ln' <Predicate = (!icmp_ln223)> <Delay = 0.00>
 ST_1 : Operation 36 [1/1] (1.29ns)   --->   "%store_ln223 = store i5 %DwIndex_2, i5 %DwIndex" [can.c:223]   --->   Operation 36 'store' 'store_ln223' <Predicate = (!icmp_ln223)> <Delay = 1.29>
 
@@ -188,7 +188,7 @@ STG Binding:
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
 Port [ add_ln223_1]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
 Port [ canbase]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ zext_ln237]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ zext_ln223]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
 Port [ can_addr]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=4; pingpong=0; private_global=0; IO mode=m_axi:ce=0
 Port [ can_frame]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[00]; IO mode=ap_memory:ce=0
 ---------------- STG Properties END ------------------
@@ -199,10 +199,10 @@ Port [ can_frame]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; 
 <method=bitvector/>
 DwIndex            (alloca           ) [ 010000000000]
 canIndex           (alloca           ) [ 011111111110]
-zext_ln237_read    (read             ) [ 000000000000]
+zext_ln223_read    (read             ) [ 000000000000]
 canbase_read       (read             ) [ 000000000000]
 add_ln223_1_read   (read             ) [ 000000000000]
-zext_ln237_cast    (zext             ) [ 000000000000]
+zext_ln223_cast    (zext             ) [ 000000000000]
 specinterface_ln0  (specinterface    ) [ 000000000000]
 store_ln0          (store            ) [ 000000000000]
 store_ln0          (store            ) [ 000000000000]
@@ -273,12 +273,12 @@ ret_ln0            (ret              ) [ 000000000000]
 </bind>
 </comp>
 
-<comp id="4" class="1000" name="zext_ln237">
+<comp id="4" class="1000" name="zext_ln223">
 <pin_list>
 <pin id="5" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="zext_ln237"/></StgValue>
+<StgValue><ssdm name="zext_ln223"/></StgValue>
 </bind>
 </comp>
 
@@ -683,7 +683,7 @@ ret_ln0            (ret              ) [ 000000000000]
 </bind>
 </comp>
 
-<comp id="98" class="1004" name="zext_ln237_read_read_fu_98">
+<comp id="98" class="1004" name="zext_ln223_read_read_fu_98">
 <pin_list>
 <pin id="99" dir="0" index="0" bw="15" slack="0"/>
 <pin id="100" dir="0" index="1" bw="15" slack="0"/>
@@ -691,7 +691,7 @@ ret_ln0            (ret              ) [ 000000000000]
 </pin_list>
 <bind>
 <opcode="read(1150) " fcode="read"/>
-<opset="zext_ln237_read/1 "/>
+<opset="zext_ln223_read/1 "/>
 </bind>
 </comp>
 
@@ -813,14 +813,14 @@ ret_ln0            (ret              ) [ 000000000000]
 </bind>
 </comp>
 
-<comp id="169" class="1004" name="zext_ln237_cast_fu_169">
+<comp id="169" class="1004" name="zext_ln223_cast_fu_169">
 <pin_list>
 <pin id="170" dir="0" index="0" bw="15" slack="0"/>
 <pin id="171" dir="1" index="1" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln237_cast/1 "/>
+<opset="zext_ln223_cast/1 "/>
 </bind>
 </comp>
 
@@ -1489,7 +1489,7 @@ ret_ln0            (ret              ) [ 000000000000]
  - Input state : 
 	Port: recvFrame_logic.1_Pipeline_VITIS_LOOP_223_1 : add_ln223_1 | {1 }
 	Port: recvFrame_logic.1_Pipeline_VITIS_LOOP_223_1 : canbase | {1 }
-	Port: recvFrame_logic.1_Pipeline_VITIS_LOOP_223_1 : zext_ln237 | {1 }
+	Port: recvFrame_logic.1_Pipeline_VITIS_LOOP_223_1 : zext_ln223 | {1 }
 	Port: recvFrame_logic.1_Pipeline_VITIS_LOOP_223_1 : can_addr | {2 3 4 5 6 7 8 9 }
   - Chain level:
 	State 1
@@ -1555,14 +1555,14 @@ ret_ln0            (ret              ) [ 000000000000]
 |----------|------------------------------|---------|---------|
 |   icmp   |       icmp_ln223_fu_186      |    0    |    2    |
 |----------|------------------------------|---------|---------|
-|          |  zext_ln237_read_read_fu_98  |    0    |    0    |
+|          |  zext_ln223_read_read_fu_98  |    0    |    0    |
 |   read   |   canbase_read_read_fu_104   |    0    |    0    |
 |          | add_ln223_1_read_read_fu_110 |    0    |    0    |
 |          |       data_read_fu_123       |    0    |    0    |
 |----------|------------------------------|---------|---------|
 |  readreq |      grp_readreq_fu_116      |    0    |    0    |
 |----------|------------------------------|---------|---------|
-|          |    zext_ln237_cast_fu_169    |    0    |    0    |
+|          |    zext_ln223_cast_fu_169    |    0    |    0    |
 |          |       zext_ln225_fu_210      |    0    |    0    |
 |   zext   |       zext_ln227_fu_294      |    0    |    0    |
 |          |       zext_ln228_fu_305      |    0    |    0    |

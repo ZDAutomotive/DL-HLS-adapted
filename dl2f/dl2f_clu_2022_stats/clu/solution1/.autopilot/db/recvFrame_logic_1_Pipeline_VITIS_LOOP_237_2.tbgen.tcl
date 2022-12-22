@@ -14,14 +14,14 @@ set C_modelName {recvFrame_logic.1_Pipeline_VITIS_LOOP_237_2}
 set C_modelType { void 0 }
 set C_modelArgList {
 	{ zext_ln27 int 7 regular  }
-	{ zext_ln237 int 15 regular  }
+	{ zext_ln223 int 15 regular  }
 	{ canbase int 32 regular  }
 	{ can_addr int 32 regular {axi_master 0}  }
 	{ can_frame int 8 regular {array 92 { 0 0 } 0 1 }  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "zext_ln27", "interface" : "wire", "bitwidth" : 7, "direction" : "READONLY"} , 
- 	{ "Name" : "zext_ln237", "interface" : "wire", "bitwidth" : 15, "direction" : "READONLY"} , 
+ 	{ "Name" : "zext_ln223", "interface" : "wire", "bitwidth" : 15, "direction" : "READONLY"} , 
  	{ "Name" : "canbase", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
  	{ "Name" : "can_addr", "interface" : "axi_master", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[ {"cElement": [{"cName": "can_ptr","offset": { "type": "dynamic","port_name": "can_ptr","bundle": "EN"},"direction": "READWRITE"}]}]} , 
  	{ "Name" : "can_frame", "interface" : "memory", "bitwidth" : 8, "direction" : "WRITEONLY"} ]}
@@ -81,7 +81,7 @@ set portList {
 	{ m_axi_can_addr_BID sc_in sc_lv 1 signal 3 } 
 	{ m_axi_can_addr_BUSER sc_in sc_lv 1 signal 3 } 
 	{ zext_ln27 sc_in sc_lv 7 signal 0 } 
-	{ zext_ln237 sc_in sc_lv 15 signal 1 } 
+	{ zext_ln223 sc_in sc_lv 15 signal 1 } 
 	{ canbase sc_in sc_lv 32 signal 2 } 
 	{ can_frame_address0 sc_out sc_lv 7 signal 4 } 
 	{ can_frame_ce0 sc_out sc_logic 1 signal 4 } 
@@ -146,7 +146,7 @@ set NewPortList {[
  	{ "name": "m_axi_can_addr_BID", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "can_addr", "role": "BID" }} , 
  	{ "name": "m_axi_can_addr_BUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "can_addr", "role": "BUSER" }} , 
  	{ "name": "zext_ln27", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "zext_ln27", "role": "default" }} , 
- 	{ "name": "zext_ln237", "direction": "in", "datatype": "sc_lv", "bitwidth":15, "type": "signal", "bundle":{"name": "zext_ln237", "role": "default" }} , 
+ 	{ "name": "zext_ln223", "direction": "in", "datatype": "sc_lv", "bitwidth":15, "type": "signal", "bundle":{"name": "zext_ln223", "role": "default" }} , 
  	{ "name": "canbase", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "canbase", "role": "default" }} , 
  	{ "name": "can_frame_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "can_frame", "role": "address0" }} , 
  	{ "name": "can_frame_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "can_frame", "role": "ce0" }} , 
@@ -174,7 +174,7 @@ set RtlHierarchyInfo {[
 		"IsBlackBox" : "0",
 		"Port" : [
 			{"Name" : "zext_ln27", "Type" : "None", "Direction" : "I"},
-			{"Name" : "zext_ln237", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln223", "Type" : "None", "Direction" : "I"},
 			{"Name" : "canbase", "Type" : "None", "Direction" : "I"},
 			{"Name" : "can_addr", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
@@ -190,7 +190,7 @@ set RtlHierarchyInfo {[
 set ArgLastReadFirstWriteLatency {
 	recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2 {
 		zext_ln27 {Type I LastRead 0 FirstWrite -1}
-		zext_ln237 {Type I LastRead 0 FirstWrite -1}
+		zext_ln223 {Type I LastRead 0 FirstWrite -1}
 		canbase {Type I LastRead 0 FirstWrite -1}
 		can_addr {Type I LastRead 9 FirstWrite -1}
 		can_frame {Type O LastRead -1 FirstWrite 10}}}
@@ -208,7 +208,7 @@ set PipelineEnableSignalInfo {[
 
 set Spec2ImplPortList { 
 	zext_ln27 { ap_none {  { zext_ln27 in_data 0 7 } } }
-	zext_ln237 { ap_none {  { zext_ln237 in_data 0 15 } } }
+	zext_ln223 { ap_none {  { zext_ln223 in_data 0 15 } } }
 	canbase { ap_none {  { canbase in_data 0 32 } } }
 	 { m_axi {  { m_axi_can_addr_AWVALID VALID 1 1 }  { m_axi_can_addr_AWREADY READY 0 1 }  { m_axi_can_addr_AWADDR ADDR 1 32 }  { m_axi_can_addr_AWID ID 1 1 }  { m_axi_can_addr_AWLEN SIZE 1 32 }  { m_axi_can_addr_AWSIZE BURST 1 3 }  { m_axi_can_addr_AWBURST LOCK 1 2 }  { m_axi_can_addr_AWLOCK CACHE 1 2 }  { m_axi_can_addr_AWCACHE PROT 1 4 }  { m_axi_can_addr_AWPROT QOS 1 3 }  { m_axi_can_addr_AWQOS REGION 1 4 }  { m_axi_can_addr_AWREGION USER 1 4 }  { m_axi_can_addr_AWUSER DATA 1 1 }  { m_axi_can_addr_WVALID VALID 1 1 }  { m_axi_can_addr_WREADY READY 0 1 }  { m_axi_can_addr_WDATA FIFONUM 1 32 }  { m_axi_can_addr_WSTRB STRB 1 4 }  { m_axi_can_addr_WLAST LAST 1 1 }  { m_axi_can_addr_WID ID 1 1 }  { m_axi_can_addr_WUSER DATA 1 1 }  { m_axi_can_addr_ARVALID VALID 1 1 }  { m_axi_can_addr_ARREADY READY 0 1 }  { m_axi_can_addr_ARADDR ADDR 1 32 }  { m_axi_can_addr_ARID ID 1 1 }  { m_axi_can_addr_ARLEN SIZE 1 32 }  { m_axi_can_addr_ARSIZE BURST 1 3 }  { m_axi_can_addr_ARBURST LOCK 1 2 }  { m_axi_can_addr_ARLOCK CACHE 1 2 }  { m_axi_can_addr_ARCACHE PROT 1 4 }  { m_axi_can_addr_ARPROT QOS 1 3 }  { m_axi_can_addr_ARQOS REGION 1 4 }  { m_axi_can_addr_ARREGION USER 1 4 }  { m_axi_can_addr_ARUSER DATA 1 1 }  { m_axi_can_addr_RVALID VALID 0 1 }  { m_axi_can_addr_RREADY READY 1 1 }  { m_axi_can_addr_RDATA FIFONUM 0 32 }  { m_axi_can_addr_RLAST LAST 0 1 }  { m_axi_can_addr_RID ID 0 1 }  { m_axi_can_addr_RFIFONUM LEN 0 9 }  { m_axi_can_addr_RUSER DATA 0 1 }  { m_axi_can_addr_RRESP RESP 0 2 }  { m_axi_can_addr_BVALID VALID 0 1 }  { m_axi_can_addr_BREADY READY 1 1 }  { m_axi_can_addr_BRESP RESP 0 2 }  { m_axi_can_addr_BID ID 0 1 }  { m_axi_can_addr_BUSER DATA 0 1 } } }
 	can_frame { ap_memory {  { can_frame_address0 mem_address 1 7 }  { can_frame_ce0 mem_ce 1 1 }  { can_frame_we0 mem_we 1 1 }  { can_frame_d0 mem_din 1 8 }  { can_frame_address1 MemPortADDR2 1 7 }  { can_frame_ce1 MemPortCE2 1 1 }  { can_frame_we1 MemPortWE2 1 1 }  { can_frame_d1 MemPortDIN2 1 8 } } }

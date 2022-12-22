@@ -70,7 +70,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1953394531</coreId>
+						<coreId>171847728</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -146,7 +146,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1397508130</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -188,7 +188,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>570451809</coreId>
+						<coreId>257444136</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -215,7 +215,7 @@
 						<id>8</id>
 						<name>ringbuffer_header_bytes</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>100</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -223,7 +223,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item class_id="11" tracking_level="0" version="0">
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second class_id="12" tracking_level="0" version="0">
 									<count>1</count>
 									<item_version>0</item_version>
@@ -245,7 +245,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1397508130</coreId>
+						<coreId>1702257920</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -271,7 +271,7 @@
 						<id>9</id>
 						<name>ps_ddr_addr</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>103</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -279,7 +279,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -301,7 +301,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1953394531</coreId>
+						<coreId>1397508096</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -328,7 +328,7 @@
 						<id>10</id>
 						<name>empty</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>103</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -336,7 +336,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -358,7 +358,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>691223088</coreId>
+						<coreId>1330007552</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -386,7 +386,7 @@
 						<id>11</id>
 						<name>loop_index4_write_ln103</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>103</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -394,7 +394,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -416,7 +416,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1702035557</coreId>
+						<coreId>257425992</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -443,7 +443,7 @@
 						<id>12</id>
 						<name>br_ln103</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>103</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -451,7 +451,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -473,7 +473,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2036689696</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -515,7 +515,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1226965113</coreId>
+						<coreId>255208704</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -601,7 +601,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>960</coreId>
+						<coreId>1953394432</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -672,7 +672,7 @@
 						<id>20</id>
 						<name>ps_ddr_addr_read</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>103</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -680,7 +680,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -702,7 +702,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>257435064</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -746,7 +746,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>257429768</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -788,7 +788,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>968</coreId>
+						<coreId>257444816</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -816,7 +816,7 @@
 						<id>23</id>
 						<name>ringbuffer_header_bytes_addr_24_write_ln103</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>103</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -824,7 +824,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -846,7 +846,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>257441112</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -889,7 +889,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>257451344</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -934,7 +934,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>257421824</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -960,7 +960,7 @@
 						<id>27</id>
 						<name>ringbuffer_header_bytes_addr</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>104</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -968,7 +968,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -990,7 +990,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>255889072</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -1018,7 +1018,7 @@
 						<id>28</id>
 						<name>ringbuffer_header_bytes_load</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>104</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -1026,7 +1026,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1048,7 +1048,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>867</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -1074,7 +1074,7 @@
 						<id>29</id>
 						<name>ringbuffer_header_bytes_addr_13</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>105</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -1082,7 +1082,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1104,7 +1104,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>257445944</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -1132,7 +1132,7 @@
 						<id>30</id>
 						<name>ringbuffer_header_bytes_load_12</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>105</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -1140,7 +1140,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1188,7 +1188,7 @@
 						<id>31</id>
 						<name>ringbuffer_header_bytes_addr_14</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>106</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -1196,7 +1196,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1218,7 +1218,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>257442640</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -1246,7 +1246,7 @@
 						<id>32</id>
 						<name>ringbuffer_header_bytes_load_13</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>106</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -1254,7 +1254,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1276,7 +1276,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>257433680</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -1302,7 +1302,7 @@
 						<id>33</id>
 						<name>ringbuffer_header_bytes_addr_15</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>107</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -1310,7 +1310,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1332,7 +1332,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>544502383</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -1360,7 +1360,7 @@
 						<id>34</id>
 						<name>ringbuffer_header_bytes_load_14</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>107</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -1368,7 +1368,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1416,7 +1416,7 @@
 						<id>35</id>
 						<name>max_can_count</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>106</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -1424,7 +1424,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1446,7 +1446,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>974</coreId>
+						<coreId>1330007552</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1476,7 +1476,7 @@
 						<id>36</id>
 						<name>ringbuffer_header_bytes_addr_16</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>108</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -1484,7 +1484,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1506,7 +1506,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>257216416</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -1534,7 +1534,7 @@
 						<id>37</id>
 						<name>ringbuffer_header_bytes_load_15</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>108</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -1542,7 +1542,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1564,7 +1564,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>574454132</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -1590,7 +1590,7 @@
 						<id>38</id>
 						<name>ringbuffer_header_bytes_addr_17</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>109</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -1598,7 +1598,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1620,7 +1620,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>257436472</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -1648,7 +1648,7 @@
 						<id>39</id>
 						<name>ringbuffer_header_bytes_load_16</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>109</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -1656,7 +1656,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1678,7 +1678,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>256325574</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -1704,7 +1704,7 @@
 						<id>40</id>
 						<name>ringbuffer_header_bytes_addr_18</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>110</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -1712,7 +1712,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1762,7 +1762,7 @@
 						<id>41</id>
 						<name>ringbuffer_header_bytes_load_17</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>110</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -1770,7 +1770,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1792,7 +1792,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>257424312</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -1818,7 +1818,7 @@
 						<id>42</id>
 						<name>ringbuffer_header_bytes_addr_19</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>111</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -1826,7 +1826,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1876,7 +1876,7 @@
 						<id>43</id>
 						<name>ringbuffer_header_bytes_load_18</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>111</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -1884,7 +1884,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1906,7 +1906,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>255893200</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -1932,7 +1932,7 @@
 						<id>44</id>
 						<name>readCanIndex</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>110</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -1940,7 +1940,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1962,7 +1962,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>946</coreId>
+						<coreId>1919250543</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1992,7 +1992,7 @@
 						<id>45</id>
 						<name>ringbuffer_header_bytes_addr_20</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>112</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -2000,7 +2000,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2050,7 +2050,7 @@
 						<id>46</id>
 						<name>ringbuffer_header_bytes_load_19</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>112</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -2058,7 +2058,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2080,7 +2080,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>917</coreId>
+						<coreId>1936942413</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -2106,7 +2106,7 @@
 						<id>47</id>
 						<name>ringbuffer_header_bytes_addr_21</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>113</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -2114,7 +2114,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2136,7 +2136,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>971</coreId>
+						<coreId>7955712</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -2164,7 +2164,7 @@
 						<id>48</id>
 						<name>ringbuffer_header_bytes_load_20</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>113</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -2172,7 +2172,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2220,7 +2220,7 @@
 						<id>49</id>
 						<name>ringbuffer_header_bytes_addr_22</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>114</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -2228,7 +2228,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2250,7 +2250,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>257953176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -2278,7 +2278,7 @@
 						<id>50</id>
 						<name>ringbuffer_header_bytes_load_21</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>114</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -2286,7 +2286,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2308,7 +2308,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1869833472</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -2334,7 +2334,7 @@
 						<id>51</id>
 						<name>ringbuffer_header_bytes_addr_23</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>115</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -2342,7 +2342,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2392,7 +2392,7 @@
 						<id>52</id>
 						<name>ringbuffer_header_bytes_load_22</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>115</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -2400,7 +2400,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2422,7 +2422,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>257971320</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -2448,7 +2448,7 @@
 						<id>53</id>
 						<name>writeCanIndex</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>114</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -2456,7 +2456,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2478,7 +2478,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1869833472</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2508,7 +2508,7 @@
 						<id>54</id>
 						<name>add_ln116</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>116</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -2516,7 +2516,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2538,7 +2538,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>7</coreId>
+						<coreId>7955712</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2565,7 +2565,7 @@
 						<id>55</id>
 						<name>nextWriteCanIndex</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>116</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -2573,7 +2573,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2622,7 +2622,7 @@
 						<id>56</id>
 						<name>icmp_ln118</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>118</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -2630,7 +2630,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2652,7 +2652,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>899</coreId>
+						<coreId>1953394432</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -2679,7 +2679,7 @@
 						<id>57</id>
 						<name>br_ln118</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>118</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -2687,7 +2687,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2709,7 +2709,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>257972784</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2737,7 +2737,7 @@
 						<id>59</id>
 						<name>mul_ln126</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>126</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -2745,7 +2745,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2767,7 +2767,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>257828832</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2794,7 +2794,7 @@
 						<id>60</id>
 						<name>add_ln126</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>126</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -2802,7 +2802,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2824,7 +2824,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>257972112</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2851,7 +2851,7 @@
 						<id>61</id>
 						<name>add_ln126_1</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>126</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -2859,7 +2859,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2908,7 +2908,7 @@
 						<id>62</id>
 						<name>ps_ddr_addr_5</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>126</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -2916,7 +2916,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2938,7 +2938,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>257826240</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -2965,7 +2965,7 @@
 						<id>63</id>
 						<name>empty_78</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>126</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -2973,7 +2973,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2995,7 +2995,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>257965720</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -3023,7 +3023,7 @@
 						<id>64</id>
 						<name>_ln126</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>126</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -3031,7 +3031,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3053,7 +3053,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1330007552</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3084,7 +3084,7 @@
 						<id>65</id>
 						<name>empty_79</name>
 						<fileName>clu.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>10</lineNumber>
 						<contextFuncName>update_write_index</contextFuncName>
 						<contextNormFuncName>update_write_index</contextNormFuncName>
@@ -3092,7 +3092,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3142,7 +3142,7 @@
 						<id>66</id>
 						<name>write_index_array_0</name>
 						<fileName>clu.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>13</lineNumber>
 						<contextFuncName>update_write_index</contextFuncName>
 						<contextNormFuncName>update_write_index</contextNormFuncName>
@@ -3150,7 +3150,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3172,7 +3172,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>250810880</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -3201,7 +3201,7 @@
 						<id>67</id>
 						<name>write_index_array_1</name>
 						<fileName>clu.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>14</lineNumber>
 						<contextFuncName>update_write_index</contextFuncName>
 						<contextNormFuncName>update_write_index</contextNormFuncName>
@@ -3209,7 +3209,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3260,7 +3260,7 @@
 						<id>68</id>
 						<name>write_index_array_2</name>
 						<fileName>clu.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>15</lineNumber>
 						<contextFuncName>update_write_index</contextFuncName>
 						<contextNormFuncName>update_write_index</contextNormFuncName>
@@ -3268,7 +3268,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3290,7 +3290,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>857</coreId>
+						<coreId>257884240</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -3319,7 +3319,7 @@
 						<id>69</id>
 						<name>write_index_array_3</name>
 						<fileName>clu.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>16</lineNumber>
 						<contextFuncName>update_write_index</contextFuncName>
 						<contextNormFuncName>update_write_index</contextNormFuncName>
@@ -3327,7 +3327,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3375,7 +3375,7 @@
 						<id>70</id>
 						<name>add_ln17</name>
 						<fileName>clu.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>17</lineNumber>
 						<contextFuncName>update_write_index</contextFuncName>
 						<contextNormFuncName>update_write_index</contextNormFuncName>
@@ -3383,7 +3383,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3405,7 +3405,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>871</coreId>
+						<coreId>257958448</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -3432,7 +3432,7 @@
 						<id>71</id>
 						<name>ps_ddr_addr_6</name>
 						<fileName>clu.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>17</lineNumber>
 						<contextFuncName>update_write_index</contextFuncName>
 						<contextNormFuncName>update_write_index</contextNormFuncName>
@@ -3440,7 +3440,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3462,7 +3462,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1702257920</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -3489,7 +3489,7 @@
 						<id>72</id>
 						<name>empty_80</name>
 						<fileName>clu.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>17</lineNumber>
 						<contextFuncName>update_write_index</contextFuncName>
 						<contextNormFuncName>update_write_index</contextNormFuncName>
@@ -3497,7 +3497,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3548,7 +3548,7 @@
 						<id>73</id>
 						<name>_ln17</name>
 						<fileName>clu.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>17</lineNumber>
 						<contextFuncName>update_write_index</contextFuncName>
 						<contextNormFuncName>update_write_index</contextNormFuncName>
@@ -3556,7 +3556,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3578,7 +3578,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>920</coreId>
+						<coreId>257962896</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3614,7 +3614,7 @@
 						<id>74</id>
 						<name>empty_81</name>
 						<fileName>clu.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>20</lineNumber>
 						<contextFuncName>update_write_index</contextFuncName>
 						<contextNormFuncName>update_write_index</contextNormFuncName>
@@ -3622,7 +3622,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3644,7 +3644,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>913</coreId>
+						<coreId>257980416</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -3672,7 +3672,7 @@
 						<id>75</id>
 						<name>br_ln131</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>131</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -3680,7 +3680,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3702,7 +3702,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>878</coreId>
+						<coreId>257978032</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3728,7 +3728,7 @@
 						<id>77</id>
 						<name>dropped_can_counter_load</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>119</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -3736,7 +3736,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3784,7 +3784,7 @@
 						<id>78</id>
 						<name>trunc_ln119</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>119</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -3792,7 +3792,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3840,7 +3840,7 @@
 						<id>79</id>
 						<name>add_ln119</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>119</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -3848,7 +3848,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3897,7 +3897,7 @@
 						<id>80</id>
 						<name>dropped_can_counter_write_ln119</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>119</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -3905,7 +3905,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3955,7 +3955,7 @@
 						<id>81</id>
 						<name>add_ln120_2</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>120</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -3963,7 +3963,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -3985,7 +3985,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>257953400</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -4012,7 +4012,7 @@
 						<id>82</id>
 						<name>add_ln120</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>120</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -4020,7 +4020,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4069,7 +4069,7 @@
 						<id>83</id>
 						<name>ps_ddr_addr_4</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>120</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -4077,7 +4077,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4126,7 +4126,7 @@
 						<id>84</id>
 						<name>ps_ddr_addr_4_req</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>120</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -4134,7 +4134,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4156,7 +4156,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1330007552</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -4184,7 +4184,7 @@
 						<id>85</id>
 						<name>ps_ddr_addr_4_write_ln120</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>120</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -4192,7 +4192,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4214,7 +4214,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1717924352</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -4245,7 +4245,7 @@
 						<id>86</id>
 						<name>ps_ddr_addr_4_resp</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>120</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -4253,7 +4253,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4275,7 +4275,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>257962616</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -4303,7 +4303,7 @@
 						<id>87</id>
 						<name>br_ln121</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>121</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -4311,7 +4311,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4333,7 +4333,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>257827152</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -4359,7 +4359,7 @@
 						<id>89</id>
 						<name>_ln131</name>
 						<fileName>can.c</fileName>
-						<fileDirectory>D:\HLS\clu_2022_stats</fileDirectory>
+						<fileDirectory>D:\HLS\dl2f\dl2f_clu_2022_stats</fileDirectory>
 						<lineNumber>131</lineNumber>
 						<contextFuncName>write_ddr</contextFuncName>
 						<contextNormFuncName>write_ddr</contextNormFuncName>
@@ -4367,7 +4367,7 @@
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>D:\HLS\clu_2022_stats</first>
+								<first>D:\HLS\dl2f\dl2f_clu_2022_stats</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -4389,7 +4389,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>257952384</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -4434,7 +4434,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>171847728</coreId>
+						<coreId>808591443</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4465,7 +4465,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1684367475</coreId>
+						<coreId>1953394531</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4496,7 +4496,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1881154119</coreId>
+						<coreId>1953394531</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4527,7 +4527,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1953394531</coreId>
+						<coreId>1668183366</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4558,7 +4558,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>828321841</coreId>
+						<coreId>1668183366</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -4620,7 +4620,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1999451190</coreId>
+						<coreId>542329856</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4651,7 +4651,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>171847728</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4682,7 +4682,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>825569332</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4713,7 +4713,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1668183366</coreId>
+						<coreId>1953394531</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4744,7 +4744,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1869902965</coreId>
+						<coreId>1702257920</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4775,7 +4775,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>1885415026</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4806,7 +4806,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1668183366</coreId>
+						<coreId>1953394531</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4837,7 +4837,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1953394531</coreId>
+						<coreId>170488686</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4868,7 +4868,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1970037614</coreId>
+						<coreId>171847728</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4899,7 +4899,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1701667186</coreId>
+						<coreId>7955712</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4930,7 +4930,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1953394531</coreId>
+						<coreId>1948283762</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4961,7 +4961,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1030185332</coreId>
+						<coreId>256528704</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4992,7 +4992,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2003267177</coreId>
+						<coreId>256526248</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -5023,7 +5023,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>256869584</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -5054,7 +5054,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>60</coreId>
+						<coreId>256353024</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5116,7 +5116,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>544044397</coreId>
+						<coreId>256363008</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5178,7 +5178,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2002727263</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5209,7 +5209,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1819113472</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5240,7 +5240,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2494523376</coreId>
+						<coreId>256522280</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5271,7 +5271,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>256362752</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -5305,7 +5305,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1986360064</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -5342,7 +5342,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1330405203</coreId>
+					<coreId>1751326820</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -5376,7 +5376,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2634022912</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -5412,7 +5412,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>828326990</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -5520,7 +5520,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2228334</coreId>
+					<coreId>257400168</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -5561,7 +5561,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>543434016</coreId>
+					<coreId>809120051</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>

@@ -1,6 +1,6 @@
 <dict>
   <key>main-file</key>
-  <string>D:/HLS/clu_2022_stats/clu/solution1/.autopilot/db/clu.pp.0.c</string>
+  <string>D:/HLS/dl2f/dl2f_clu_2022_stats/clu/solution1/.autopilot/db/clu.pp.0.c</string>
   <key>diagnostics</key>
   <array>
     <dict>
@@ -37,7 +37,7 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>D:/HLS/clu_2022_stats/clu/solution1/csynth.tcl</string>
+      <string>D:/HLS/dl2f/dl2f_clu_2022_stats/clu/solution1/csynth.tcl</string>
       <key>line</key>
       <integer>20</integer>
       <key>column</key>
@@ -53,7 +53,7 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>D:/HLS/clu_2022_stats/clu/solution1/directives.tcl</string>
+      <string>D:/HLS/dl2f/dl2f_clu_2022_stats/clu/solution1/directives.tcl</string>
       <key>line</key>
       <integer>6</integer>
       <key>column</key>

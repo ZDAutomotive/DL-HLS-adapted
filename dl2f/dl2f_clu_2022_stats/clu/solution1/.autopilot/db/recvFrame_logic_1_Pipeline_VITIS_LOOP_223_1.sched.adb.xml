@@ -109,10 +109,10 @@ newFuncRoot:1 %canIndex = alloca i32 1
 
 <Node id="8" bw="15" op_0_bw="15" op_1_bw="15">
 <![CDATA[
-newFuncRoot:2 %zext_ln237_read = read i15 @_ssdm_op_Read.ap_auto.i15, i15 %zext_ln237
+newFuncRoot:2 %zext_ln223_read = read i15 @_ssdm_op_Read.ap_auto.i15, i15 %zext_ln223
 
 ]]></Node>
-<StgValue><ssdm name="zext_ln237_read"/></StgValue>
+<StgValue><ssdm name="zext_ln223_read"/></StgValue>
 </operation>
 
 <operation id="17" st_id="1" stage="1" lat="1">
@@ -154,10 +154,10 @@ newFuncRoot:4 %add_ln223_1_read = read i5 @_ssdm_op_Read.ap_auto.i5, i5 %add_ln2
 
 <Node id="11" bw="32" op_0_bw="15">
 <![CDATA[
-newFuncRoot:5 %zext_ln237_cast = zext i15 %zext_ln237_read
+newFuncRoot:5 %zext_ln223_cast = zext i15 %zext_ln223_read
 
 ]]></Node>
-<StgValue><ssdm name="zext_ln237_cast"/></StgValue>
+<StgValue><ssdm name="zext_ln223_cast"/></StgValue>
 </operation>
 
 <operation id="20" st_id="1" stage="1" lat="1">
@@ -384,7 +384,7 @@ for.inc.split:5 %add_ln225_1 = add i32 %zext_ln225, i32 %canbase_read
 
 <Node id="30" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.inc.split:6 %add_ln225 = add i32 %add_ln225_1, i32 %zext_ln237_cast
+for.inc.split:6 %add_ln225 = add i32 %add_ln225_1, i32 %zext_ln223_cast
 
 ]]></Node>
 <StgValue><ssdm name="add_ln225"/></StgValue>

@@ -246,7 +246,7 @@ int recvFrame_logic (volatile int *canbase,
 	  }
   }
 
-	switch(PL_Header.port_type) {
+	switch(PL_Header.port_id) {
 		case 0:
 			(counter_can_0)++;
 			//*vlan100_received = counter_vlan100;

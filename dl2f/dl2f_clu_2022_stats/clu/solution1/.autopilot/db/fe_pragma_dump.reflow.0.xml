@@ -1,4 +1,15 @@
 <pragmas>
+<pragma file="dlin.c" line="147" pragmaType="reset" parentfunction="single_lin_process" off="0" variable="single_lin_process.counter_lin_0"/>
+<pragma file="dlin.c" line="149" pragmaType="reset" parentfunction="single_lin_process" off="0" variable="single_lin_process.counter_lin_1"/>
+<pragma file="dlin.c" line="151" pragmaType="reset" parentfunction="single_lin_process" off="0" variable="single_lin_process.counter_lin_2"/>
+<pragma file="dlin.c" line="153" pragmaType="reset" parentfunction="single_lin_process" off="0" variable="single_lin_process.counter_lin_3"/>
+<pragma file="dlin.c" line="155" pragmaType="reset" parentfunction="single_lin_process" off="0" variable="single_lin_process.counter_lin_4"/>
+<pragma file="dlin.c" line="157" pragmaType="reset" parentfunction="single_lin_process" off="0" variable="single_lin_process.counter_lin_5"/>
+<pragma file="dlin.c" line="159" pragmaType="reset" parentfunction="single_lin_process" off="0" variable="single_lin_process.counter_lin_6"/>
+<pragma file="dlin.c" line="161" pragmaType="reset" parentfunction="single_lin_process" off="0" variable="single_lin_process.counter_lin_7"/>
+<pragma file="dlin.c" line="163" pragmaType="reset" parentfunction="single_lin_process" off="0" variable="single_lin_process.counter_lin_8"/>
+<pragma file="dlin.c" line="165" pragmaType="reset" parentfunction="single_lin_process" off="0" variable="single_lin_process.counter_lin_9"/>
+<pragma file="dlin.c" line="167" pragmaType="reset" parentfunction="single_lin_process" off="0" variable="single_lin_process.counter_droped"/>
 <pragma file="clu.c" line="47" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="" bundle="EN" offset="-1" name="" clock="" impl="" register="0"/>
 <pragma file="clu.c" line="50" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="can_ptr" bundle="EN" offset="-1" name="" clock="" impl="" register="0"/>
 <pragma file="clu.c" line="51" pragmaType="interface" parentfunction="clu" mode="m_axi" port="can_ptr" bundle="can_addr" offset="slave" name="" depth="1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
@@ -34,17 +45,6 @@
 <pragma file="clu.c" line="92" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="lin_8_received" bundle="EN" offset="216" name="" clock="" impl="" register="1"/>
 <pragma file="clu.c" line="93" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="lin_9_received" bundle="EN" offset="224" name="" clock="" impl="" register="1"/>
 <pragma file="clu.c" line="94" pragmaType="interface" parentfunction="clu" mode="s_axilite" port="lin_dropped" bundle="EN" offset="232" name="" clock="" impl="" register="1"/>
-<pragma file="dlin.c" line="147" pragmaType="reset" parentfunction="single_lin_process" off="0" variable="single_lin_process.counter_lin_0"/>
-<pragma file="dlin.c" line="149" pragmaType="reset" parentfunction="single_lin_process" off="0" variable="single_lin_process.counter_lin_1"/>
-<pragma file="dlin.c" line="151" pragmaType="reset" parentfunction="single_lin_process" off="0" variable="single_lin_process.counter_lin_2"/>
-<pragma file="dlin.c" line="153" pragmaType="reset" parentfunction="single_lin_process" off="0" variable="single_lin_process.counter_lin_3"/>
-<pragma file="dlin.c" line="155" pragmaType="reset" parentfunction="single_lin_process" off="0" variable="single_lin_process.counter_lin_4"/>
-<pragma file="dlin.c" line="157" pragmaType="reset" parentfunction="single_lin_process" off="0" variable="single_lin_process.counter_lin_5"/>
-<pragma file="dlin.c" line="159" pragmaType="reset" parentfunction="single_lin_process" off="0" variable="single_lin_process.counter_lin_6"/>
-<pragma file="dlin.c" line="161" pragmaType="reset" parentfunction="single_lin_process" off="0" variable="single_lin_process.counter_lin_7"/>
-<pragma file="dlin.c" line="163" pragmaType="reset" parentfunction="single_lin_process" off="0" variable="single_lin_process.counter_lin_8"/>
-<pragma file="dlin.c" line="165" pragmaType="reset" parentfunction="single_lin_process" off="0" variable="single_lin_process.counter_lin_9"/>
-<pragma file="dlin.c" line="167" pragmaType="reset" parentfunction="single_lin_process" off="0" variable="single_lin_process.counter_droped"/>
 <pragma file="can.c" line="153" pragmaType="reset" parentfunction="recvFrame_logic" off="0" variable="recvFrame_logic.counter_can_0"/>
 <pragma file="can.c" line="155" pragmaType="reset" parentfunction="recvFrame_logic" off="0" variable="recvFrame_logic.counter_can_1"/>
 <pragma file="can.c" line="157" pragmaType="reset" parentfunction="recvFrame_logic" off="0" variable="recvFrame_logic.counter_can_2"/>

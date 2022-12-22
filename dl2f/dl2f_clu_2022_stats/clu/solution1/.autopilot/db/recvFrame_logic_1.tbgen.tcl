@@ -301,8 +301,8 @@ set RtlHierarchyInfo {[
 					{"Name" : "can_addr_blk_n_W", "Type" : "RtlSignal"},
 					{"Name" : "can_addr_blk_n_B", "Type" : "RtlSignal"}],
 				"SubConnect" : [
-					{"ID" : "6", "SubInstance" : "grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588", "Port" : "can_addr", "Inst_start_state" : "16", "Inst_end_state" : "15"},
-					{"ID" : "4", "SubInstance" : "grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578", "Port" : "can_addr", "Inst_start_state" : "14", "Inst_end_state" : "15"}]},
+					{"ID" : "4", "SubInstance" : "grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578", "Port" : "can_addr", "Inst_start_state" : "14", "Inst_end_state" : "15"},
+					{"ID" : "6", "SubInstance" : "grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588", "Port" : "can_addr", "Inst_start_state" : "16", "Inst_end_state" : "15"}]},
 			{"Name" : "canbase", "Type" : "None", "Direction" : "I"},
 			{"Name" : "ps_ddr", "Type" : "MAXI", "Direction" : "IO",
 				"SubConnect" : [
@@ -317,7 +317,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "can_3_received", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "can_dropped", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "received_can", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "counter_can_2", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "counter_droped_1", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "internal_can_counter", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "dropped_can_counter", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
@@ -358,7 +358,7 @@ set RtlHierarchyInfo {[
 		"IsBlackBox" : "0",
 		"Port" : [
 			{"Name" : "zext_ln27", "Type" : "None", "Direction" : "I"},
-			{"Name" : "zext_ln237", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln223", "Type" : "None", "Direction" : "I"},
 			{"Name" : "canbase", "Type" : "None", "Direction" : "I"},
 			{"Name" : "can_addr", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
@@ -386,7 +386,7 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "add_ln223_1", "Type" : "None", "Direction" : "I"},
 			{"Name" : "canbase", "Type" : "None", "Direction" : "I"},
-			{"Name" : "zext_ln237", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln223", "Type" : "None", "Direction" : "I"},
 			{"Name" : "can_addr", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "can_addr_blk_n_AR", "Type" : "RtlSignal"},
@@ -419,8 +419,8 @@ set RtlHierarchyInfo {[
 					{"Name" : "ps_ddr_blk_n_W", "Type" : "RtlSignal"},
 					{"Name" : "ps_ddr_blk_n_B", "Type" : "RtlSignal"}],
 				"SubConnect" : [
-					{"ID" : "12", "SubInstance" : "grp_write_ddr_1_Pipeline_2_fu_281", "Port" : "ps_ddr", "Inst_start_state" : "59", "Inst_end_state" : "60"},
-					{"ID" : "10", "SubInstance" : "grp_write_ddr_1_Pipeline_1_fu_272", "Port" : "ps_ddr", "Inst_start_state" : "52", "Inst_end_state" : "53"}]},
+					{"ID" : "10", "SubInstance" : "grp_write_ddr_1_Pipeline_1_fu_272", "Port" : "ps_ddr", "Inst_start_state" : "52", "Inst_end_state" : "53"},
+					{"ID" : "12", "SubInstance" : "grp_write_ddr_1_Pipeline_2_fu_281", "Port" : "ps_ddr", "Inst_start_state" : "59", "Inst_end_state" : "60"}]},
 			{"Name" : "ddr_header", "Type" : "None", "Direction" : "I"},
 			{"Name" : "data", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
@@ -497,25 +497,25 @@ set ArgLastReadFirstWriteLatency {
 		timestamp {Type I LastRead 2 FirstWrite -1}
 		can_0_received {Type O LastRead -1 FirstWrite 29}
 		can_1_received {Type O LastRead -1 FirstWrite 29}
-		can_2_received {Type O LastRead -1 FirstWrite 14}
+		can_2_received {Type O LastRead -1 FirstWrite 29}
 		can_3_received {Type O LastRead -1 FirstWrite 29}
-		can_dropped {Type O LastRead -1 FirstWrite 29}
+		can_dropped {Type O LastRead -1 FirstWrite 14}
 		received_can {Type O LastRead -1 FirstWrite 14}
-		counter_can_2 {Type IO LastRead -1 FirstWrite -1}
+		counter_droped_1 {Type IO LastRead -1 FirstWrite -1}
 		internal_can_counter {Type IO LastRead -1 FirstWrite -1}
 		dropped_can_counter {Type IO LastRead -1 FirstWrite -1}}
 	recvFrame_logic_1_Pipeline_1 {
 		can_frame {Type O LastRead -1 FirstWrite 0}}
 	recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2 {
 		zext_ln27 {Type I LastRead 0 FirstWrite -1}
-		zext_ln237 {Type I LastRead 0 FirstWrite -1}
+		zext_ln223 {Type I LastRead 0 FirstWrite -1}
 		canbase {Type I LastRead 0 FirstWrite -1}
 		can_addr {Type I LastRead 9 FirstWrite -1}
 		can_frame {Type O LastRead -1 FirstWrite 10}}
 	recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1 {
 		add_ln223_1 {Type I LastRead 0 FirstWrite -1}
 		canbase {Type I LastRead 0 FirstWrite -1}
-		zext_ln237 {Type I LastRead 0 FirstWrite -1}
+		zext_ln223 {Type I LastRead 0 FirstWrite -1}
 		can_addr {Type I LastRead 8 FirstWrite -1}
 		can_frame {Type O LastRead -1 FirstWrite 9}}
 	write_ddr_1 {

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'single_lin_process_1'
 ================================================================
-* Date:           Thu Dec 22 10:53:17 2022
+* Date:           Thu Dec 22 11:33:32 2022
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        clu
@@ -628,8 +628,8 @@ The critical path consists of the following:
 
  <State 42>: 1.9ns
 The critical path consists of the following:
-	'load' operation ('counter_lin_0_load', dlin.c:236) on static variable 'counter_lin_0' [169]  (0 ns)
-	'add' operation ('add_ln236', dlin.c:236) [218]  (1.9 ns)
+	'load' operation ('counter_lin_3_load', dlin.c:248) on static variable 'counter_lin_3' [172]  (0 ns)
+	'add' operation ('add_ln248', dlin.c:248) [206]  (1.9 ns)
 
  <State 43>: 7.3ns
 The critical path consists of the following:

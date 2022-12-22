@@ -127,8 +127,8 @@ Args:
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: can.c, Line: 103, Column: 2 }
-Function:        write_ddr
+DebugLoc:        { File: dlin.c, Line: 98, Column: 2 }
+Function:        write_lin_ddr
 Args:            
   - String:          'Sequential '
   - Direction:       read
@@ -147,22 +147,22 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'can.c:103:2'
+  - LoopLoc:         'dlin.c:98:2'
   - String:          ' '
-  - Function:        write_ddr
-    DebugLoc:        { File: can.c, Line: 97, Column: 0 }
+  - Function:        write_lin_ddr
+    DebugLoc:        { File: dlin.c, Line: 92, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: can.c, Line: 126, Column: 3 }
-Function:        write_ddr
+DebugLoc:        { File: dlin.c, Line: 120, Column: 3 }
+Function:        write_lin_ddr
 Args:            
   - String:          'Sequential '
   - Direction:       write
   - String:          ' of length '
-  - Length:          '92'
+  - Length:          '28'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ OldID='
   - String:          load-store-loop.store.6
@@ -176,17 +176,17 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'can.c:126:3'
+  - LoopLoc:         'dlin.c:120:3'
   - String:          ' '
-  - Function:        write_ddr
-    DebugLoc:        { File: can.c, Line: 97, Column: 0 }
+  - Function:        write_lin_ddr
+    DebugLoc:        { File: dlin.c, Line: 92, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
 DebugLoc:        { File: clu.c, Line: 17, Column: 2 }
-Function:        write_ddr
+Function:        write_lin_ddr
 Args:            
   - String:          'Sequential '
   - Direction:       write
@@ -207,15 +207,15 @@ Args:
   - String:          ' '
   - LoopLoc:         'clu.c:17:2'
   - String:          ' '
-  - Function:        write_ddr
-    DebugLoc:        { File: can.c, Line: 97, Column: 0 }
+  - Function:        write_lin_ddr
+    DebugLoc:        { File: dlin.c, Line: 92, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: can.c, Line: 120, Column: 21 }
-Function:        write_ddr
+DebugLoc:        { File: dlin.c, Line: 115, Column: 21 }
+Function:        write_lin_ddr
 Args:            
   - String:          Volatile or Atomic access cannot be transformed
   - String:          ' _XLX_SEP_ '
@@ -225,242 +225,8 @@ Args:
   - String:          ' '
   - BundleName:      ps_ddr
   - String:          ' '
-  - Function:        write_ddr
-    DebugLoc:        { File: can.c, Line: 97, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-inference
-Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: can.c, Line: 168, Column: 15 }
-Function:        recvFrame_logic
-Args:            
-  - String:          Volatile or Atomic access cannot be transformed
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        split.load.5
-  - String:          ' '
-  - ArrayName:       canbase
-  - String:          ' '
-  - BundleName:      can_addr
-  - String:          ' '
-  - Function:        recvFrame_logic
-    DebugLoc:        { File: can.c, Line: 150, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-inference
-Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: can.c, Line: 191, Column: 14 }
-Function:        recvFrame_logic
-Args:            
-  - String:          Volatile or Atomic access cannot be transformed
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        if.end.load.25
-  - String:          ' '
-  - ArrayName:       canbase
-  - String:          ' '
-  - BundleName:      can_addr
-  - String:          ' '
-  - Function:        recvFrame_logic
-    DebugLoc:        { File: can.c, Line: 150, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-inference
-Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: can.c, Line: 225, Column: 14 }
-Function:        recvFrame_logic
-Args:            
-  - String:          Volatile or Atomic access cannot be transformed
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        for.inc.load.10
-  - String:          ' '
-  - ArrayName:       canbase
-  - String:          ' '
-  - BundleName:      can_addr
-  - String:          ' '
-  - Function:        recvFrame_logic
-    DebugLoc:        { File: can.c, Line: 150, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-inference
-Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: can.c, Line: 238, Column: 14 }
-Function:        recvFrame_logic
-Args:            
-  - String:          Volatile or Atomic access cannot be transformed
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        for.inc189.load.8
-  - String:          ' '
-  - ArrayName:       canbase
-  - String:          ' '
-  - BundleName:      can_addr
-  - String:          ' '
-  - Function:        recvFrame_logic
-    DebugLoc:        { File: can.c, Line: 150, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-inference
-Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: can.c, Line: 272, Column: 18 }
-Function:        recvFrame_logic
-Args:            
-  - String:          Volatile or Atomic access cannot be transformed
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        sw.bb198.store.3
-  - String:          ' '
-  - ArrayName:       can_0_received
-  - String:          ' '
-  - BundleName:      ''
-  - String:          ' '
-  - Function:        recvFrame_logic
-    DebugLoc:        { File: can.c, Line: 150, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-inference
-Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: can.c, Line: 273, Column: 18 }
-Function:        recvFrame_logic
-Args:            
-  - String:          Volatile or Atomic access cannot be transformed
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        sw.bb198.store.4
-  - String:          ' '
-  - ArrayName:       can_1_received
-  - String:          ' '
-  - BundleName:      ''
-  - String:          ' '
-  - Function:        recvFrame_logic
-    DebugLoc:        { File: can.c, Line: 150, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-inference
-Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: can.c, Line: 274, Column: 18 }
-Function:        recvFrame_logic
-Args:            
-  - String:          Volatile or Atomic access cannot be transformed
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        sw.bb198.store.5
-  - String:          ' '
-  - ArrayName:       can_2_received
-  - String:          ' '
-  - BundleName:      ''
-  - String:          ' '
-  - Function:        recvFrame_logic
-    DebugLoc:        { File: can.c, Line: 150, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-inference
-Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: can.c, Line: 275, Column: 18 }
-Function:        recvFrame_logic
-Args:            
-  - String:          Volatile or Atomic access cannot be transformed
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        sw.bb198.store.6
-  - String:          ' '
-  - ArrayName:       can_3_received
-  - String:          ' '
-  - BundleName:      ''
-  - String:          ' '
-  - Function:        recvFrame_logic
-    DebugLoc:        { File: can.c, Line: 150, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-inference
-Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: can.c, Line: 276, Column: 15 }
-Function:        recvFrame_logic
-Args:            
-  - String:          Volatile or Atomic access cannot be transformed
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        sw.bb198.store.7
-  - String:          ' '
-  - ArrayName:       can_dropped
-  - String:          ' '
-  - BundleName:      ''
-  - String:          ' '
-  - Function:        recvFrame_logic
-    DebugLoc:        { File: can.c, Line: 150, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-inference
-Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: can.c, Line: 279, Column: 17 }
-Function:        recvFrame_logic
-Args:            
-  - String:          Volatile or Atomic access cannot be transformed
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        sw.bb198.store.11
-  - String:          ' '
-  - ArrayName:       received_can
-  - String:          ' '
-  - BundleName:      ''
-  - String:          ' '
-  - Function:        recvFrame_logic
-    DebugLoc:        { File: can.c, Line: 150, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-inference
-Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: can.c, Line: 281, Column: 12 }
-Function:        recvFrame_logic
-Args:            
-  - String:          Volatile or Atomic access cannot be transformed
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        sw.bb198.load.14
-  - String:          ' '
-  - ArrayName:       canbase
-  - String:          ' '
-  - BundleName:      can_addr
-  - String:          ' '
-  - Function:        recvFrame_logic
-    DebugLoc:        { File: can.c, Line: 150, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-inference
-Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: can.c, Line: 283, Column: 26 }
-Function:        recvFrame_logic
-Args:            
-  - String:          Volatile or Atomic access cannot be transformed
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        sw.bb198.store.18
-  - String:          ' '
-  - ArrayName:       canbase
-  - String:          ' '
-  - BundleName:      can_addr
-  - String:          ' '
-  - Function:        recvFrame_logic
-    DebugLoc:        { File: can.c, Line: 150, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-inference
-Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: can.c, Line: 302, Column: 16 }
-Function:        clu
-Args:            
-  - String:          Volatile or Atomic access cannot be transformed
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        if.then.i.i.load.6
-  - String:          ' '
-  - ArrayName:       can_ptr
-  - String:          ' '
-  - BundleName:      can_addr
-  - String:          ' '
-  - Function:        clu
-    DebugLoc:        { File: clu.c, Line: 43, Column: 0 }
+  - Function:        write_lin_ddr
+    DebugLoc:        { File: dlin.c, Line: 92, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
@@ -841,11 +607,245 @@ Args:
     DebugLoc:        { File: dlin.c, Line: 144, Column: 0 }
   - String:          ' '
 ...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: can.c, Line: 302, Column: 16 }
+Function:        clu
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        if.then.i.i.load.6
+  - String:          ' '
+  - ArrayName:       can_ptr
+  - String:          ' '
+  - BundleName:      can_addr
+  - String:          ' '
+  - Function:        clu
+    DebugLoc:        { File: clu.c, Line: 43, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: can.c, Line: 168, Column: 15 }
+Function:        recvFrame_logic
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        split.load.5
+  - String:          ' '
+  - ArrayName:       canbase
+  - String:          ' '
+  - BundleName:      can_addr
+  - String:          ' '
+  - Function:        recvFrame_logic
+    DebugLoc:        { File: can.c, Line: 150, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: can.c, Line: 191, Column: 14 }
+Function:        recvFrame_logic
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        if.end.load.25
+  - String:          ' '
+  - ArrayName:       canbase
+  - String:          ' '
+  - BundleName:      can_addr
+  - String:          ' '
+  - Function:        recvFrame_logic
+    DebugLoc:        { File: can.c, Line: 150, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: can.c, Line: 225, Column: 14 }
+Function:        recvFrame_logic
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.inc.load.10
+  - String:          ' '
+  - ArrayName:       canbase
+  - String:          ' '
+  - BundleName:      can_addr
+  - String:          ' '
+  - Function:        recvFrame_logic
+    DebugLoc:        { File: can.c, Line: 150, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: can.c, Line: 238, Column: 14 }
+Function:        recvFrame_logic
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.inc189.load.8
+  - String:          ' '
+  - ArrayName:       canbase
+  - String:          ' '
+  - BundleName:      can_addr
+  - String:          ' '
+  - Function:        recvFrame_logic
+    DebugLoc:        { File: can.c, Line: 150, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: can.c, Line: 272, Column: 18 }
+Function:        recvFrame_logic
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        sw.epilog.store.1
+  - String:          ' '
+  - ArrayName:       can_0_received
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        recvFrame_logic
+    DebugLoc:        { File: can.c, Line: 150, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: can.c, Line: 273, Column: 18 }
+Function:        recvFrame_logic
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        sw.epilog.store.3
+  - String:          ' '
+  - ArrayName:       can_1_received
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        recvFrame_logic
+    DebugLoc:        { File: can.c, Line: 150, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: can.c, Line: 274, Column: 18 }
+Function:        recvFrame_logic
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        sw.epilog.store.5
+  - String:          ' '
+  - ArrayName:       can_2_received
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        recvFrame_logic
+    DebugLoc:        { File: can.c, Line: 150, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: can.c, Line: 275, Column: 18 }
+Function:        recvFrame_logic
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        sw.epilog.store.7
+  - String:          ' '
+  - ArrayName:       can_3_received
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        recvFrame_logic
+    DebugLoc:        { File: can.c, Line: 150, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: can.c, Line: 276, Column: 15 }
+Function:        recvFrame_logic
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        sw.epilog.store.9
+  - String:          ' '
+  - ArrayName:       can_dropped
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        recvFrame_logic
+    DebugLoc:        { File: can.c, Line: 150, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: can.c, Line: 279, Column: 17 }
+Function:        recvFrame_logic
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        sw.epilog.store.13
+  - String:          ' '
+  - ArrayName:       received_can
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        recvFrame_logic
+    DebugLoc:        { File: can.c, Line: 150, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: can.c, Line: 281, Column: 12 }
+Function:        recvFrame_logic
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        sw.epilog.load.16
+  - String:          ' '
+  - ArrayName:       canbase
+  - String:          ' '
+  - BundleName:      can_addr
+  - String:          ' '
+  - Function:        recvFrame_logic
+    DebugLoc:        { File: can.c, Line: 150, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: can.c, Line: 283, Column: 26 }
+Function:        recvFrame_logic
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        sw.epilog.store.20
+  - String:          ' '
+  - ArrayName:       canbase
+  - String:          ' '
+  - BundleName:      can_addr
+  - String:          ' '
+  - Function:        recvFrame_logic
+    DebugLoc:        { File: can.c, Line: 150, Column: 0 }
+  - String:          ' '
+...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: dlin.c, Line: 98, Column: 2 }
-Function:        write_lin_ddr
+DebugLoc:        { File: can.c, Line: 103, Column: 2 }
+Function:        write_ddr
 Args:            
   - String:          'Sequential '
   - Direction:       read
@@ -864,22 +864,22 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'dlin.c:98:2'
+  - LoopLoc:         'can.c:103:2'
   - String:          ' '
-  - Function:        write_lin_ddr
-    DebugLoc:        { File: dlin.c, Line: 92, Column: 0 }
+  - Function:        write_ddr
+    DebugLoc:        { File: can.c, Line: 97, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: dlin.c, Line: 120, Column: 3 }
-Function:        write_lin_ddr
+DebugLoc:        { File: can.c, Line: 126, Column: 3 }
+Function:        write_ddr
 Args:            
   - String:          'Sequential '
   - Direction:       write
   - String:          ' of length '
-  - Length:          '28'
+  - Length:          '92'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ OldID='
   - String:          load-store-loop.store.6
@@ -893,17 +893,17 @@ Args:
   - String:          ' '
   - LoopName:        anonymous
   - String:          ' '
-  - LoopLoc:         'dlin.c:120:3'
+  - LoopLoc:         'can.c:126:3'
   - String:          ' '
-  - Function:        write_lin_ddr
-    DebugLoc:        { File: dlin.c, Line: 92, Column: 0 }
+  - Function:        write_ddr
+    DebugLoc:        { File: can.c, Line: 97, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
 DebugLoc:        { File: clu.c, Line: 17, Column: 2 }
-Function:        write_lin_ddr
+Function:        write_ddr
 Args:            
   - String:          'Sequential '
   - Direction:       write
@@ -924,15 +924,15 @@ Args:
   - String:          ' '
   - LoopLoc:         'clu.c:17:2'
   - String:          ' '
-  - Function:        write_lin_ddr
-    DebugLoc:        { File: dlin.c, Line: 92, Column: 0 }
+  - Function:        write_ddr
+    DebugLoc:        { File: can.c, Line: 97, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            NonSimpleMemoryAccess
-DebugLoc:        { File: dlin.c, Line: 115, Column: 21 }
-Function:        write_lin_ddr
+DebugLoc:        { File: can.c, Line: 120, Column: 21 }
+Function:        write_ddr
 Args:            
   - String:          Volatile or Atomic access cannot be transformed
   - String:          ' _XLX_SEP_ '
@@ -941,6 +941,81 @@ Args:
   - ArrayName:       ddr_header
   - String:          ' '
   - BundleName:      ps_ddr
+  - String:          ' '
+  - Function:        write_ddr
+    DebugLoc:        { File: can.c, Line: 97, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: clu.c, Line: 17, Column: 2 }
+Function:        write_lin_ddr
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep7seq
+  - String:          ' '
+  - ArrayName:       ddr_header
+  - String:          ' '
+  - BundleName:      ps_ddr
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'clu.c:17:2'
+  - String:          ' '
+  - Function:        write_lin_ddr
+    DebugLoc:        { File: dlin.c, Line: 92, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: dlin.c, Line: 120, Column: 3 }
+Function:        write_lin_ddr
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       ddr_header
+  - String:          ' '
+  - BundleName:      ps_ddr
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'dlin.c:120:3'
+  - String:          ' '
+  - Function:        write_lin_ddr
+    DebugLoc:        { File: dlin.c, Line: 92, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: dlin.c, Line: 98, Column: 2 }
+Function:        write_lin_ddr
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        ddr_headerseq
+  - String:          ' '
+  - ArrayName:       ddr_header
+  - String:          ' '
+  - BundleName:      ps_ddr
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'dlin.c:98:2'
   - String:          ' '
   - Function:        write_lin_ddr
     DebugLoc:        { File: dlin.c, Line: 92, Column: 0 }
@@ -1019,81 +1094,6 @@ Args:
   - String:          ' '
   - Function:        write_ddr
     DebugLoc:        { File: can.c, Line: 97, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-widen
-Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: clu.c, Line: 17, Column: 2 }
-Function:        write_lin_ddr
-Args:            
-  - String:          'Could not widen since type '
-  - Type:            i8
-  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
-  - Threshold:       '0'
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        scevgep7seq
-  - String:          ' '
-  - ArrayName:       ddr_header
-  - String:          ' '
-  - BundleName:      ps_ddr
-  - String:          ' '
-  - LoopName:        anonymous
-  - String:          ' '
-  - LoopLoc:         'clu.c:17:2'
-  - String:          ' '
-  - Function:        write_lin_ddr
-    DebugLoc:        { File: dlin.c, Line: 92, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-widen
-Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: dlin.c, Line: 120, Column: 3 }
-Function:        write_lin_ddr
-Args:            
-  - String:          'Could not widen since type '
-  - Type:            i8
-  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
-  - Threshold:       '0'
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        scevgepseq
-  - String:          ' '
-  - ArrayName:       ddr_header
-  - String:          ' '
-  - BundleName:      ps_ddr
-  - String:          ' '
-  - LoopName:        anonymous
-  - String:          ' '
-  - LoopLoc:         'dlin.c:120:3'
-  - String:          ' '
-  - Function:        write_lin_ddr
-    DebugLoc:        { File: dlin.c, Line: 92, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-widen
-Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: dlin.c, Line: 98, Column: 2 }
-Function:        write_lin_ddr
-Args:            
-  - String:          'Could not widen since type '
-  - Type:            i8
-  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
-  - Threshold:       '0'
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        ddr_headerseq
-  - String:          ' '
-  - ArrayName:       ddr_header
-  - String:          ' '
-  - BundleName:      ps_ddr
-  - String:          ' '
-  - LoopName:        anonymous
-  - String:          ' '
-  - LoopLoc:         'dlin.c:98:2'
-  - String:          ' '
-  - Function:        write_lin_ddr
-    DebugLoc:        { File: dlin.c, Line: 92, Column: 0 }
   - String:          ' '
 ...
 --- !Passed

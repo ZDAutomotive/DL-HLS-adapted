@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'recvFrame_logic_1'
 ================================================================
-* Date:           Thu Dec 22 10:53:25 2022
+* Date:           Thu Dec 22 11:33:41 2022
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        clu
@@ -103,7 +103,7 @@
     +----------------------------------+----------+----+---+----+------------+------------+
     |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +----------------------------------+----------+----+---+----+------------+------------+
-    |add156_fu_1267_p2                 |         +|   0|  0|  15|          15|          14|
+    |add115_fu_1267_p2                 |         +|   0|  0|  15|          15|          14|
     |add_ln168_1_fu_666_p2             |         +|   0|  0|  32|          32|          32|
     |add_ln168_2_fu_632_p2             |         +|   0|  0|  15|          15|          15|
     |add_ln168_fu_638_p2               |         +|   0|  0|  15|          15|          14|
@@ -112,13 +112,13 @@
     |add_ln214_fu_1256_p2              |         +|   0|  0|   7|           7|           4|
     |add_ln223_1_fu_1346_p2            |         +|   0|  0|   7|           5|           1|
     |add_ln223_fu_1278_p2              |         +|   0|  0|   6|           6|           2|
-    |add_ln259_fu_1298_p2              |         +|   0|  0|  32|          32|           1|
+    |add_ln267_fu_1298_p2              |         +|   0|  0|  32|          32|           1|
     |add_ln278_fu_1315_p2              |         +|   0|  0|  32|          32|           1|
     |add_ln281_fu_1328_p2              |         +|   0|  0|  32|          32|           8|
     |id_can_fu_824_p2                  |         +|   0|  0|   7|           5|           4|
     |and_ln28_fu_978_p2                |       and|   0|  0|   1|           1|           1|
     |ap_predicate_op209_call_state15   |       and|   0|  0|   1|           1|           1|
-    |icmp_ln237_fu_1272_p2             |      icmp|   0|  0|   3|           7|           1|
+    |icmp_ln223_fu_1272_p2             |      icmp|   0|  0|   3|           7|           1|
     |icmp_ln28_fu_973_p2               |      icmp|   0|  0|  12|          32|          32|
     |icmp_ln32_10_fu_1126_p2           |      icmp|   0|  0|  12|          32|          32|
     |icmp_ln32_11_fu_1132_p2           |      icmp|   0|  0|  12|          32|          32|
@@ -211,19 +211,19 @@
     |                                 Name                                | FF | LUT| Bits| Const Bits|
     +---------------------------------------------------------------------+----+----+-----+-----------+
     |NofBytes_reg_1548                                                    |   7|   0|    7|          0|
-    |add156_reg_1553                                                      |  12|   0|   15|          3|
+    |add115_reg_1553                                                      |  12|   0|   15|          3|
     |add_ln168_2_reg_1377                                                 |  12|   0|   15|          3|
     |add_ln223_1_reg_1573                                                 |   5|   0|    5|          0|
     |ap_CS_fsm                                                            |  31|   0|   31|          0|
     |can_addr_addr_2_read_reg_1585                                        |  32|   0|   32|          0|
     |can_addr_addr_2_reg_1578                                             |  32|   0|   32|          0|
-    |counter_can_2                                                        |  32|   0|   32|          0|
+    |counter_droped_1                                                     |  32|   0|   32|          0|
     |frameDLC_reg_1483                                                    |  32|   0|   32|          0|
     |grp_recvFrame_logic_1_Pipeline_1_fu_572_ap_start_reg                 |   1|   0|    1|          0|
     |grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_223_1_fu_588_ap_start_reg  |   1|   0|    1|          0|
     |grp_recvFrame_logic_1_Pipeline_VITIS_LOOP_237_2_fu_578_ap_start_reg  |   1|   0|    1|          0|
     |grp_write_ddr_1_fu_598_ap_start_reg                                  |   1|   0|    1|          0|
-    |icmp_ln237_reg_1559                                                  |   1|   0|    1|          0|
+    |icmp_ln223_reg_1559                                                  |   1|   0|    1|          0|
     |icmp_ln32_10_reg_1515                                                |   1|   0|    1|          0|
     |icmp_ln32_11_reg_1521                                                |   1|   0|    1|          0|
     |icmp_ln32_12_reg_1526                                                |   1|   0|    1|          0|
@@ -617,7 +617,7 @@ State 13 <SV = 12> <Delay = 6.66>
 ST_13 : Operation 172 [1/1] (0.00ns)   --->   "%ddr_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %ddr"   --->   Operation 172 'read' 'ddr_read' <Predicate = true> <Delay = 0.00>
 ST_13 : Operation 173 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %ps_ddr, void @empty_42, i32 0, i32 0, void @empty_43, i32 0, i32 10, void @empty_2, void @empty, void @empty_43, i32 16, i32 16, i32 16, i32 16, void @empty_43, void @empty_43, i32 4294967295, i32 0"   --->   Operation 173 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_13 : Operation 174 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %can_addr, void @empty_42, i32 0, i32 0, void @empty_43, i32 0, i32 1, void @empty_44, void @empty, void @empty_43, i32 16, i32 16, i32 16, i32 16, void @empty_43, void @empty_43, i32 4294967295, i32 0"   --->   Operation 174 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_13 : Operation 175 [1/1] (0.00ns)   --->   "%specreset_ln157 = specreset void @_ssdm_op_SpecReset, i32 %counter_can_2, i64 1, void @empty_43" [can.c:157]   --->   Operation 175 'specreset' 'specreset_ln157' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 175 [1/1] (0.00ns)   --->   "%specreset_ln161 = specreset void @_ssdm_op_SpecReset, i32 %counter_droped_1, i64 1, void @empty_43" [can.c:161]   --->   Operation 175 'specreset' 'specreset_ln161' <Predicate = true> <Delay = 0.00>
 ST_13 : Operation 176 [1/1] (0.00ns) (grouped into LUT with out node select_ln32_7)   --->   "%zext_ln32_2 = zext i3 %select_ln32_5" [can.c:32]   --->   Operation 176 'zext' 'zext_ln32_2' <Predicate = true> <Delay = 0.00>
 ST_13 : Operation 177 [1/1] (0.00ns) (grouped into LUT with out node select_ln32_7)   --->   "%select_ln32_6 = select i1 %icmp_ln32_8, i4 12, i4 8" [can.c:32]   --->   Operation 177 'select' 'select_ln32_6' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_13 : Operation 178 [1/1] (0.00ns) (grouped into LUT with out node select_ln32_7)   --->   "%or_ln32_3 = or i1 %icmp_ln32_8, i1 %icmp_ln32_7" [can.c:32]   --->   Operation 178 'or' 'or_ln32_3' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
@@ -642,26 +642,26 @@ ST_13 : Operation 196 [1/1] (0.00ns)   --->   "%can_frame_addr_18 = getelementpt
 ST_13 : Operation 197 [1/1] (1.75ns)   --->   "%store_ln214 = store i8 %zext_ln214_1, i7 %can_frame_addr_18" [can.c:214]   --->   Operation 197 'store' 'store_ln214' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 92> <RAM>
 ST_13 : Operation 198 [1/1] (0.00ns)   --->   "%can_frame_addr_20 = getelementptr i8 %can_frame, i32 0, i32 19" [can.c:218]   --->   Operation 198 'getelementptr' 'can_frame_addr_20' <Predicate = true> <Delay = 0.00>
 ST_13 : Operation 199 [1/1] (1.75ns)   --->   "%store_ln218 = store i8 %zext_ln214, i7 %can_frame_addr_20" [can.c:218]   --->   Operation 199 'store' 'store_ln218' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 92> <RAM>
-ST_13 : Operation 200 [1/1] (1.53ns)   --->   "%add156 = add i15 %add_ln168_2, i15 8456" [can.c:168]   --->   Operation 200 'add' 'add156' <Predicate = true> <Delay = 1.53> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.53> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_13 : Operation 201 [1/1] (1.06ns)   --->   "%icmp_ln237 = icmp_eq  i7 %NofBytes, i7 0" [can.c:237]   --->   Operation 201 'icmp' 'icmp_ln237' <Predicate = true> <Delay = 1.06> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 200 [1/1] (1.53ns)   --->   "%add115 = add i15 %add_ln168_2, i15 8456" [can.c:168]   --->   Operation 200 'add' 'add115' <Predicate = true> <Delay = 1.53> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.53> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 201 [1/1] (1.06ns)   --->   "%icmp_ln223 = icmp_eq  i7 %NofBytes, i7 0" [can.c:223]   --->   Operation 201 'icmp' 'icmp_ln223' <Predicate = true> <Delay = 1.06> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_13 : Operation 202 [1/1] (0.00ns)   --->   "%br_ln220 = br i1 %tmp_7, void %for.inc189.preheader, void %VITIS_LOOP_223_1" [can.c:220]   --->   Operation 202 'br' 'br_ln220' <Predicate = true> <Delay = 0.00>
-ST_13 : Operation 203 [1/1] (0.00ns)   --->   "%br_ln223 = br i1 %icmp_ln237, void %for.body.lr.ph, void %for.end" [can.c:223]   --->   Operation 203 'br' 'br_ln223' <Predicate = (tmp_7)> <Delay = 0.00>
-ST_13 : Operation 204 [1/1] (1.28ns)   --->   "%add_ln223 = add i6 %trunc_ln27, i6 63" [can.c:223]   --->   Operation 204 'add' 'add_ln223' <Predicate = (tmp_7 & !icmp_ln237)> <Delay = 1.28> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_13 : Operation 205 [1/1] (0.00ns)   --->   "%trunc_ln16 = partselect i4 @_ssdm_op_PartSelect.i4.i6.i32.i32, i6 %add_ln223, i32 2, i32 5" [can.c:223]   --->   Operation 205 'partselect' 'trunc_ln16' <Predicate = (tmp_7 & !icmp_ln237)> <Delay = 0.00>
+ST_13 : Operation 203 [1/1] (0.00ns)   --->   "%br_ln223 = br i1 %icmp_ln223, void %for.body.lr.ph, void %for.end" [can.c:223]   --->   Operation 203 'br' 'br_ln223' <Predicate = (tmp_7)> <Delay = 0.00>
+ST_13 : Operation 204 [1/1] (1.28ns)   --->   "%add_ln223 = add i6 %trunc_ln27, i6 63" [can.c:223]   --->   Operation 204 'add' 'add_ln223' <Predicate = (tmp_7 & !icmp_ln223)> <Delay = 1.28> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 205 [1/1] (0.00ns)   --->   "%trunc_ln16 = partselect i4 @_ssdm_op_PartSelect.i4.i6.i32.i32, i6 %add_ln223, i32 2, i32 5" [can.c:223]   --->   Operation 205 'partselect' 'trunc_ln16' <Predicate = (tmp_7 & !icmp_ln223)> <Delay = 0.00>
 
 State 14 <SV = 13> <Delay = 1.96>
-ST_14 : Operation 206 [2/2] (1.96ns)   --->   "%call_ln214 = call void @recvFrame_logic.1_Pipeline_VITIS_LOOP_237_2, i7 %NofBytes, i15 %add156, i32 %canbase_read, i32 %can_addr, i8 %can_frame" [can.c:214]   --->   Operation 206 'call' 'call_ln214' <Predicate = true> <Delay = 1.96> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_14 : Operation 206 [2/2] (1.96ns)   --->   "%call_ln214 = call void @recvFrame_logic.1_Pipeline_VITIS_LOOP_237_2, i7 %NofBytes, i15 %add115, i32 %canbase_read, i32 %can_addr, i8 %can_frame" [can.c:214]   --->   Operation 206 'call' 'call_ln214' <Predicate = true> <Delay = 1.96> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 15 <SV = 14> <Delay = 1.89>
-ST_15 : Operation 207 [1/2] (0.00ns)   --->   "%call_ln214 = call void @recvFrame_logic.1_Pipeline_VITIS_LOOP_237_2, i7 %NofBytes, i15 %add156, i32 %canbase_read, i32 %can_addr, i8 %can_frame" [can.c:214]   --->   Operation 207 'call' 'call_ln214' <Predicate = (!tmp_7)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_15 : Operation 208 [1/1] (0.00ns)   --->   "%br_ln0 = br void %sw.bb198"   --->   Operation 208 'br' 'br_ln0' <Predicate = (!tmp_7)> <Delay = 0.00>
-ST_15 : Operation 209 [1/2] (0.00ns)   --->   "%call_ln223 = call void @recvFrame_logic.1_Pipeline_VITIS_LOOP_223_1, i5 %add_ln223_1, i32 %canbase_read, i15 %add156, i32 %can_addr, i8 %can_frame" [can.c:223]   --->   Operation 209 'call' 'call_ln223' <Predicate = (tmp_7 & !icmp_ln237)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_15 : Operation 210 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.end"   --->   Operation 210 'br' 'br_ln0' <Predicate = (tmp_7 & !icmp_ln237)> <Delay = 0.00>
-ST_15 : Operation 211 [1/1] (0.00ns)   --->   "%br_ln234 = br void %sw.bb198" [can.c:234]   --->   Operation 211 'br' 'br_ln234' <Predicate = (tmp_7)> <Delay = 0.00>
-ST_15 : Operation 212 [1/1] (0.00ns)   --->   "%counter_can_2_load = load i32 %counter_can_2" [can.c:259]   --->   Operation 212 'load' 'counter_can_2_load' <Predicate = true> <Delay = 0.00>
-ST_15 : Operation 213 [1/1] (1.89ns)   --->   "%add_ln259 = add i32 %counter_can_2_load, i32 1" [can.c:259]   --->   Operation 213 'add' 'add_ln259' <Predicate = true> <Delay = 1.89> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_15 : Operation 214 [1/1] (0.00ns)   --->   "%store_ln259 = store i32 %add_ln259, i32 %counter_can_2" [can.c:259]   --->   Operation 214 'store' 'store_ln259' <Predicate = true> <Delay = 0.00>
-ST_15 : Operation 215 [1/1] (0.00ns)   --->   "%write_ln274 = write void @_ssdm_op_Write.ap_auto.volatile.i32P0A, i32 %can_2_received, i32 %add_ln259" [can.c:274]   --->   Operation 215 'write' 'write_ln274' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 207 [1/2] (0.00ns)   --->   "%call_ln214 = call void @recvFrame_logic.1_Pipeline_VITIS_LOOP_237_2, i7 %NofBytes, i15 %add115, i32 %canbase_read, i32 %can_addr, i8 %can_frame" [can.c:214]   --->   Operation 207 'call' 'call_ln214' <Predicate = (!tmp_7)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_15 : Operation 208 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end192"   --->   Operation 208 'br' 'br_ln0' <Predicate = (!tmp_7)> <Delay = 0.00>
+ST_15 : Operation 209 [1/2] (0.00ns)   --->   "%call_ln223 = call void @recvFrame_logic.1_Pipeline_VITIS_LOOP_223_1, i5 %add_ln223_1, i32 %canbase_read, i15 %add115, i32 %can_addr, i8 %can_frame" [can.c:223]   --->   Operation 209 'call' 'call_ln223' <Predicate = (tmp_7 & !icmp_ln223)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_15 : Operation 210 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.end"   --->   Operation 210 'br' 'br_ln0' <Predicate = (tmp_7 & !icmp_ln223)> <Delay = 0.00>
+ST_15 : Operation 211 [1/1] (0.00ns)   --->   "%br_ln234 = br void %if.end192" [can.c:234]   --->   Operation 211 'br' 'br_ln234' <Predicate = (tmp_7)> <Delay = 0.00>
+ST_15 : Operation 212 [1/1] (0.00ns)   --->   "%counter_droped_1_load = load i32 %counter_droped_1" [can.c:267]   --->   Operation 212 'load' 'counter_droped_1_load' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 213 [1/1] (1.89ns)   --->   "%add_ln267 = add i32 %counter_droped_1_load, i32 1" [can.c:267]   --->   Operation 213 'add' 'add_ln267' <Predicate = true> <Delay = 1.89> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 214 [1/1] (0.00ns)   --->   "%store_ln267 = store i32 %add_ln267, i32 %counter_droped_1" [can.c:267]   --->   Operation 214 'store' 'store_ln267' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 215 [1/1] (0.00ns)   --->   "%write_ln276 = write void @_ssdm_op_Write.ap_auto.volatile.i32P0A, i32 %can_dropped, i32 %add_ln267" [can.c:276]   --->   Operation 215 'write' 'write_ln276' <Predicate = true> <Delay = 0.00>
 ST_15 : Operation 216 [1/1] (0.00ns)   --->   "%internal_can_counter_load = load i32 %internal_can_counter" [can.c:278]   --->   Operation 216 'load' 'internal_can_counter_load' <Predicate = true> <Delay = 0.00>
 ST_15 : Operation 217 [1/1] (1.89ns)   --->   "%add_ln278 = add i32 %internal_can_counter_load, i32 1" [can.c:278]   --->   Operation 217 'add' 'add_ln278' <Predicate = true> <Delay = 1.89> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_15 : Operation 218 [1/1] (0.00ns)   --->   "%store_ln278 = store i32 %add_ln278, i32 %internal_can_counter" [can.c:278]   --->   Operation 218 'store' 'store_ln278' <Predicate = true> <Delay = 0.00>
@@ -672,7 +672,7 @@ ST_15 : Operation 221 [1/1] (0.00ns)   --->   "%trunc_ln17 = partselect i30 @_ss
 State 16 <SV = 13> <Delay = 4.58>
 ST_16 : Operation 222 [1/1] (0.00ns)   --->   "%zext_ln223 = zext i4 %trunc_ln16" [can.c:223]   --->   Operation 222 'zext' 'zext_ln223' <Predicate = true> <Delay = 0.00>
 ST_16 : Operation 223 [1/1] (0.99ns)   --->   "%add_ln223_1 = add i5 %zext_ln223, i5 1" [can.c:223]   --->   Operation 223 'add' 'add_ln223_1' <Predicate = true> <Delay = 0.99> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_16 : Operation 224 [2/2] (3.58ns)   --->   "%call_ln223 = call void @recvFrame_logic.1_Pipeline_VITIS_LOOP_223_1, i5 %add_ln223_1, i32 %canbase_read, i15 %add156, i32 %can_addr, i8 %can_frame" [can.c:223]   --->   Operation 224 'call' 'call_ln223' <Predicate = true> <Delay = 3.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_16 : Operation 224 [2/2] (3.58ns)   --->   "%call_ln223 = call void @recvFrame_logic.1_Pipeline_VITIS_LOOP_223_1, i5 %add_ln223_1, i32 %canbase_read, i15 %add115, i32 %can_addr, i8 %can_frame" [can.c:223]   --->   Operation 224 'call' 'call_ln223' <Predicate = true> <Delay = 3.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 17 <SV = 15> <Delay = 7.30>
 ST_17 : Operation 225 [2/2] (7.30ns)   --->   "%call_ln280 = call void @write_ddr.1, i8 %ps_ddr, i32 %ddr_read, i8 %can_frame, i16 %dropped_can_counter" [can.c:280]   --->   Operation 225 'call' 'call_ln280' <Predicate = true> <Delay = 7.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
@@ -724,8 +724,8 @@ ST_30 : Operation 243 [2/5] (7.30ns)   --->   "%can_addr_addr_4_resp = writeresp
 State 31 <SV = 29> <Delay = 7.30>
 ST_31 : Operation 244 [1/1] (0.00ns)   --->   "%write_ln272 = write void @_ssdm_op_Write.ap_auto.volatile.i32P0A, i32 %can_0_received, i32 0" [can.c:272]   --->   Operation 244 'write' 'write_ln272' <Predicate = true> <Delay = 0.00>
 ST_31 : Operation 245 [1/1] (0.00ns)   --->   "%write_ln273 = write void @_ssdm_op_Write.ap_auto.volatile.i32P0A, i32 %can_1_received, i32 0" [can.c:273]   --->   Operation 245 'write' 'write_ln273' <Predicate = true> <Delay = 0.00>
-ST_31 : Operation 246 [1/1] (0.00ns)   --->   "%write_ln275 = write void @_ssdm_op_Write.ap_auto.volatile.i32P0A, i32 %can_3_received, i32 0" [can.c:275]   --->   Operation 246 'write' 'write_ln275' <Predicate = true> <Delay = 0.00>
-ST_31 : Operation 247 [1/1] (0.00ns)   --->   "%write_ln276 = write void @_ssdm_op_Write.ap_auto.volatile.i32P0A, i32 %can_dropped, i32 0" [can.c:276]   --->   Operation 247 'write' 'write_ln276' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 246 [1/1] (0.00ns)   --->   "%write_ln274 = write void @_ssdm_op_Write.ap_auto.volatile.i32P0A, i32 %can_2_received, i32 0" [can.c:274]   --->   Operation 246 'write' 'write_ln274' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 247 [1/1] (0.00ns)   --->   "%write_ln275 = write void @_ssdm_op_Write.ap_auto.volatile.i32P0A, i32 %can_3_received, i32 0" [can.c:275]   --->   Operation 247 'write' 'write_ln275' <Predicate = true> <Delay = 0.00>
 ST_31 : Operation 248 [1/5] (7.30ns)   --->   "%can_addr_addr_4_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %can_addr_addr_2" [can.c:283]   --->   Operation 248 'writeresp' 'can_addr_addr_4_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 ST_31 : Operation 249 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 249 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
 
@@ -754,7 +754,7 @@ Port [ can_2_received]:  wired=1; compound=0; hidden=0; nouse=0; global=0; stati
 Port [ can_3_received]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
 Port [ can_dropped]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
 Port [ received_can]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
-Port [ counter_can_2]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; IO mode=ap_ovld:ce=0
+Port [ counter_droped_1]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; IO mode=ap_ovld:ce=0
 Port [ internal_can_counter]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; IO mode=ap_ovld:ce=0
 Port [ dropped_can_counter]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
 ---------------- STG Properties END ------------------
@@ -893,7 +893,7 @@ icmp_ln32_14              (icmp          ) [ 00000000000001000000000000000000]
 ddr_read                  (read          ) [ 00000000000000111110000000000000]
 specinterface_ln0         (specinterface ) [ 00000000000000000000000000000000]
 specinterface_ln0         (specinterface ) [ 00000000000000000000000000000000]
-specreset_ln157           (specreset     ) [ 00000000000000000000000000000000]
+specreset_ln161           (specreset     ) [ 00000000000000000000000000000000]
 zext_ln32_2               (zext          ) [ 00000000000000000000000000000000]
 select_ln32_6             (select        ) [ 00000000000000000000000000000000]
 or_ln32_3                 (or            ) [ 00000000000000000000000000000000]
@@ -918,8 +918,8 @@ can_frame_addr_18         (getelementptr ) [ 00000000000000000000000000000000]
 store_ln214               (store         ) [ 00000000000000000000000000000000]
 can_frame_addr_20         (getelementptr ) [ 00000000000000000000000000000000]
 store_ln218               (store         ) [ 00000000000000000000000000000000]
-add156                    (add           ) [ 00000000000000111000000000000000]
-icmp_ln237                (icmp          ) [ 00000000000001111000000000000000]
+add115                    (add           ) [ 00000000000000111000000000000000]
+icmp_ln223                (icmp          ) [ 00000000000001111000000000000000]
 br_ln220                  (br            ) [ 00000000000000000000000000000000]
 br_ln223                  (br            ) [ 00000000000000000000000000000000]
 add_ln223                 (add           ) [ 00000000000000000000000000000000]
@@ -929,10 +929,10 @@ br_ln0                    (br            ) [ 00000000000000000000000000000000]
 call_ln223                (call          ) [ 00000000000000000000000000000000]
 br_ln0                    (br            ) [ 00000000000000000000000000000000]
 br_ln234                  (br            ) [ 00000000000000000000000000000000]
-counter_can_2_load        (load          ) [ 00000000000000000000000000000000]
-add_ln259                 (add           ) [ 00000000000000000000000000000000]
-store_ln259               (store         ) [ 00000000000000000000000000000000]
-write_ln274               (write         ) [ 00000000000000000000000000000000]
+counter_droped_1_load     (load          ) [ 00000000000000000000000000000000]
+add_ln267                 (add           ) [ 00000000000000000000000000000000]
+store_ln267               (store         ) [ 00000000000000000000000000000000]
+write_ln276               (write         ) [ 00000000000000000000000000000000]
 internal_can_counter_load (load          ) [ 00000000000000000000000000000000]
 add_ln278                 (add           ) [ 00000000000000000000000000000000]
 store_ln278               (store         ) [ 00000000000000000000000000000000]
@@ -951,8 +951,8 @@ or_ln282                  (or            ) [ 00000000000000000000000000000000]
 write_ln283               (write         ) [ 00000000000000000000000000000000]
 write_ln272               (write         ) [ 00000000000000000000000000000000]
 write_ln273               (write         ) [ 00000000000000000000000000000000]
+write_ln274               (write         ) [ 00000000000000000000000000000000]
 write_ln275               (write         ) [ 00000000000000000000000000000000]
-write_ln276               (write         ) [ 00000000000000000000000000000000]
 can_addr_addr_4_resp      (writeresp     ) [ 00000000000000000000000000000000]
 ret_ln0                   (ret           ) [ 00000000000000000000000000000000]
 </LifeTime>
@@ -1077,12 +1077,12 @@ ret_ln0                   (ret           ) [ 00000000000000000000000000000000]
 </bind>
 </comp>
 
-<comp id="26" class="1000" name="counter_can_2">
+<comp id="26" class="1000" name="counter_droped_1">
 <pin_list>
 <pin id="27" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="counter_can_2"/></StgValue>
+<StgValue><ssdm name="counter_droped_1"/></StgValue>
 </bind>
 </comp>
 
@@ -2314,7 +2314,7 @@ ret_ln0                   (ret           ) [ 00000000000000000000000000000000]
 </bind>
 </comp>
 
-<comp id="332" class="1004" name="write_ln274_write_fu_332">
+<comp id="332" class="1004" name="write_ln276_write_fu_332">
 <pin_list>
 <pin id="333" dir="0" index="0" bw="0" slack="0"/>
 <pin id="334" dir="0" index="1" bw="32" slack="0"/>
@@ -2323,7 +2323,7 @@ ret_ln0                   (ret           ) [ 00000000000000000000000000000000]
 </pin_list>
 <bind>
 <opcode="write(1151) " fcode="write"/>
-<opset="write_ln274/15 "/>
+<opset="write_ln276/15 "/>
 </bind>
 </comp>
 
@@ -2405,7 +2405,7 @@ ret_ln0                   (ret           ) [ 00000000000000000000000000000000]
 </bind>
 </comp>
 
-<comp id="384" class="1004" name="write_ln275_write_fu_384">
+<comp id="384" class="1004" name="write_ln274_write_fu_384">
 <pin_list>
 <pin id="385" dir="0" index="0" bw="0" slack="0"/>
 <pin id="386" dir="0" index="1" bw="32" slack="0"/>
@@ -2414,11 +2414,11 @@ ret_ln0                   (ret           ) [ 00000000000000000000000000000000]
 </pin_list>
 <bind>
 <opcode="write(1151) " fcode="write"/>
-<opset="write_ln275/31 "/>
+<opset="write_ln274/31 "/>
 </bind>
 </comp>
 
-<comp id="392" class="1004" name="write_ln276_write_fu_392">
+<comp id="392" class="1004" name="write_ln275_write_fu_392">
 <pin_list>
 <pin id="393" dir="0" index="0" bw="0" slack="0"/>
 <pin id="394" dir="0" index="1" bw="32" slack="0"/>
@@ -2427,7 +2427,7 @@ ret_ln0                   (ret           ) [ 00000000000000000000000000000000]
 </pin_list>
 <bind>
 <opcode="write(1151) " fcode="write"/>
-<opset="write_ln276/31 "/>
+<opset="write_ln275/31 "/>
 </bind>
 </comp>
 
@@ -4015,7 +4015,7 @@ ret_ln0                   (ret           ) [ 00000000000000000000000000000000]
 </bind>
 </comp>
 
-<comp id="1267" class="1004" name="add156_fu_1267">
+<comp id="1267" class="1004" name="add115_fu_1267">
 <pin_list>
 <pin id="1268" dir="0" index="0" bw="15" slack="12"/>
 <pin id="1269" dir="0" index="1" bw="15" slack="0"/>
@@ -4023,11 +4023,11 @@ ret_ln0                   (ret           ) [ 00000000000000000000000000000000]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="add156/13 "/>
+<opset="add115/13 "/>
 </bind>
 </comp>
 
-<comp id="1272" class="1004" name="icmp_ln237_fu_1272">
+<comp id="1272" class="1004" name="icmp_ln223_fu_1272">
 <pin_list>
 <pin id="1273" dir="0" index="0" bw="7" slack="0"/>
 <pin id="1274" dir="0" index="1" bw="7" slack="0"/>
@@ -4035,7 +4035,7 @@ ret_ln0                   (ret           ) [ 00000000000000000000000000000000]
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="icmp_ln237/13 "/>
+<opset="icmp_ln223/13 "/>
 </bind>
 </comp>
 
@@ -4065,18 +4065,18 @@ ret_ln0                   (ret           ) [ 00000000000000000000000000000000]
 </bind>
 </comp>
 
-<comp id="1294" class="1004" name="counter_can_2_load_load_fu_1294">
+<comp id="1294" class="1004" name="counter_droped_1_load_load_fu_1294">
 <pin_list>
 <pin id="1295" dir="0" index="0" bw="32" slack="0"/>
 <pin id="1296" dir="1" index="1" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
-<opset="counter_can_2_load/15 "/>
+<opset="counter_droped_1_load/15 "/>
 </bind>
 </comp>
 
-<comp id="1298" class="1004" name="add_ln259_fu_1298">
+<comp id="1298" class="1004" name="add_ln267_fu_1298">
 <pin_list>
 <pin id="1299" dir="0" index="0" bw="32" slack="0"/>
 <pin id="1300" dir="0" index="1" bw="1" slack="0"/>
@@ -4084,11 +4084,11 @@ ret_ln0                   (ret           ) [ 00000000000000000000000000000000]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="add_ln259/15 "/>
+<opset="add_ln267/15 "/>
 </bind>
 </comp>
 
-<comp id="1305" class="1004" name="store_ln259_store_fu_1305">
+<comp id="1305" class="1004" name="store_ln267_store_fu_1305">
 <pin_list>
 <pin id="1306" dir="0" index="0" bw="32" slack="0"/>
 <pin id="1307" dir="0" index="1" bw="32" slack="0"/>
@@ -4096,7 +4096,7 @@ ret_ln0                   (ret           ) [ 00000000000000000000000000000000]
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln259/15 "/>
+<opset="store_ln267/15 "/>
 </bind>
 </comp>
 
@@ -4559,23 +4559,23 @@ ret_ln0                   (ret           ) [ 00000000000000000000000000000000]
 </bind>
 </comp>
 
-<comp id="1553" class="1005" name="add156_reg_1553">
+<comp id="1553" class="1005" name="add115_reg_1553">
 <pin_list>
 <pin id="1554" dir="0" index="0" bw="15" slack="1"/>
 <pin id="1555" dir="1" index="1" bw="15" slack="1"/>
 </pin_list>
 <bind>
-<opset="add156 "/>
+<opset="add115 "/>
 </bind>
 </comp>
 
-<comp id="1559" class="1005" name="icmp_ln237_reg_1559">
+<comp id="1559" class="1005" name="icmp_ln223_reg_1559">
 <pin_list>
 <pin id="1560" dir="0" index="0" bw="1" slack="2"/>
 <pin id="1561" dir="1" index="1" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<opset="icmp_ln237 "/>
+<opset="icmp_ln223 "/>
 </bind>
 </comp>
 
@@ -4668,7 +4668,7 @@ ret_ln0                   (ret           ) [ 00000000000000000000000000000000]
 
 <net id="337"><net_src comp="256" pin="0"/><net_sink comp="332" pin=0"/></net>
 
-<net id="338"><net_src comp="18" pin="0"/><net_sink comp="332" pin=1"/></net>
+<net id="338"><net_src comp="22" pin="0"/><net_sink comp="332" pin=1"/></net>
 
 <net id="344"><net_src comp="256" pin="0"/><net_sink comp="339" pin=0"/></net>
 
@@ -4702,13 +4702,13 @@ ret_ln0                   (ret           ) [ 00000000000000000000000000000000]
 
 <net id="389"><net_src comp="256" pin="0"/><net_sink comp="384" pin=0"/></net>
 
-<net id="390"><net_src comp="20" pin="0"/><net_sink comp="384" pin=1"/></net>
+<net id="390"><net_src comp="18" pin="0"/><net_sink comp="384" pin=1"/></net>
 
 <net id="391"><net_src comp="76" pin="0"/><net_sink comp="384" pin=2"/></net>
 
 <net id="397"><net_src comp="256" pin="0"/><net_sink comp="392" pin=0"/></net>
 
-<net id="398"><net_src comp="22" pin="0"/><net_sink comp="392" pin=1"/></net>
+<net id="398"><net_src comp="20" pin="0"/><net_sink comp="392" pin=1"/></net>
 
 <net id="399"><net_src comp="76" pin="0"/><net_sink comp="392" pin=2"/></net>
 
@@ -5569,11 +5569,11 @@ ret_ln0                   (ret           ) [ 00000000000000000000000000000000]
 	Port: ps_ddr | {17 18 }
 	Port: can_0_received | {31 }
 	Port: can_1_received | {31 }
-	Port: can_2_received | {15 }
+	Port: can_2_received | {31 }
 	Port: can_3_received | {31 }
-	Port: can_dropped | {31 }
+	Port: can_dropped | {15 }
 	Port: received_can | {15 }
-	Port: counter_can_2 | {15 }
+	Port: counter_droped_1 | {15 }
 	Port: internal_can_counter | {15 }
 	Port: dropped_can_counter | {17 18 }
  - Input state : 
@@ -5590,7 +5590,7 @@ ret_ln0                   (ret           ) [ 00000000000000000000000000000000]
 	Port: recvFrame_logic.1 : can_3_received | {}
 	Port: recvFrame_logic.1 : can_dropped | {}
 	Port: recvFrame_logic.1 : received_can | {}
-	Port: recvFrame_logic.1 : counter_can_2 | {15 }
+	Port: recvFrame_logic.1 : counter_droped_1 | {15 }
 	Port: recvFrame_logic.1 : internal_can_counter | {15 }
 	Port: recvFrame_logic.1 : dropped_can_counter | {17 18 }
   - Chain level:
@@ -5693,15 +5693,15 @@ ret_ln0                   (ret           ) [ 00000000000000000000000000000000]
 		zext_ln214_1 : 8
 		store_ln214 : 9
 		store_ln218 : 8
-		icmp_ln237 : 7
+		icmp_ln223 : 7
 		br_ln223 : 8
 		add_ln223 : 8
 		trunc_ln16 : 9
 	State 14
 	State 15
-		add_ln259 : 1
-		store_ln259 : 2
-		write_ln274 : 2
+		add_ln267 : 1
+		store_ln267 : 2
+		write_ln276 : 2
 		add_ln278 : 1
 		store_ln278 : 2
 		write_ln279 : 2
@@ -5748,9 +5748,9 @@ ret_ln0                   (ret           ) [ 00000000000000000000000000000000]
 |          |                   add_ln191_1_fu_719                   |    0    |    0    |    0    |    0    |    32   |    0    |
 |          |                      id_can_fu_824                     |    0    |    0    |    0    |    0    |    7    |    0    |
 |    add   |                    add_ln214_fu_1256                   |    0    |    0    |    0    |    0    |    7    |    0    |
-|          |                     add156_fu_1267                     |    0    |    0    |    0    |    0    |    15   |    0    |
+|          |                     add115_fu_1267                     |    0    |    0    |    0    |    0    |    15   |    0    |
 |          |                    add_ln223_fu_1278                   |    0    |    0    |    0    |    0    |    6    |    0    |
-|          |                    add_ln259_fu_1298                   |    0    |    0    |    0    |    0    |    32   |    0    |
+|          |                    add_ln267_fu_1298                   |    0    |    0    |    0    |    0    |    32   |    0    |
 |          |                    add_ln278_fu_1315                   |    0    |    0    |    0    |    0    |    32   |    0    |
 |          |                    add_ln281_fu_1328                   |    0    |    0    |    0    |    0    |    32   |    0    |
 |          |                   add_ln223_1_fu_1346                  |    0    |    0    |    0    |    0    |    6    |    0    |
@@ -5771,7 +5771,7 @@ ret_ln0                   (ret           ) [ 00000000000000000000000000000000]
 |          |                  icmp_ln32_12_fu_1138                  |    0    |    0    |    0    |    0    |    12   |    0    |
 |          |                  icmp_ln32_13_fu_1144                  |    0    |    0    |    0    |    0    |    12   |    0    |
 |          |                  icmp_ln32_14_fu_1150                  |    0    |    0    |    0    |    0    |    12   |    0    |
-|          |                   icmp_ln237_fu_1272                   |    0    |    0    |    0    |    0    |    3    |    0    |
+|          |                   icmp_ln223_fu_1272                   |    0    |    0    |    0    |    0    |    3    |    0    |
 |----------|--------------------------------------------------------|---------|---------|---------|---------|---------|---------|
 |          |                   select_ln176_fu_888                  |    0    |    0    |    0    |    0    |    2    |    0    |
 |          |                    FrameID_1_fu_893                    |    0    |    0    |    0    |    0    |    29   |    0    |
@@ -5816,13 +5816,13 @@ ret_ln0                   (ret           ) [ 00000000000000000000000000000000]
 |  readreq |                   grp_readreq_fu_290                   |    0    |    0    |    0    |    0    |    0    |    0    |
 |          |                   grp_readreq_fu_303                   |    0    |    0    |    0    |    0    |    0    |    0    |
 |----------|--------------------------------------------------------|---------|---------|---------|---------|---------|---------|
-|          |                write_ln274_write_fu_332                |    0    |    0    |    0    |    0    |    0    |    0    |
+|          |                write_ln276_write_fu_332                |    0    |    0    |    0    |    0    |    0    |    0    |
 |          |                write_ln279_write_fu_339                |    0    |    0    |    0    |    0    |    0    |    0    |
 |          |                write_ln283_write_fu_359                |    0    |    0    |    0    |    0    |    0    |    0    |
 |   write  |                write_ln272_write_fu_368                |    0    |    0    |    0    |    0    |    0    |    0    |
 |          |                write_ln273_write_fu_376                |    0    |    0    |    0    |    0    |    0    |    0    |
-|          |                write_ln275_write_fu_384                |    0    |    0    |    0    |    0    |    0    |    0    |
-|          |                write_ln276_write_fu_392                |    0    |    0    |    0    |    0    |    0    |    0    |
+|          |                write_ln274_write_fu_384                |    0    |    0    |    0    |    0    |    0    |    0    |
+|          |                write_ln275_write_fu_392                |    0    |    0    |    0    |    0    |    0    |    0    |
 |----------|--------------------------------------------------------|---------|---------|---------|---------|---------|---------|
 | writeresp|                  grp_writeresp_fu_346                  |    0    |    0    |    0    |    0    |    0    |    0    |
 |----------|--------------------------------------------------------|---------|---------|---------|---------|---------|---------|
@@ -5903,7 +5903,7 @@ Memories:
 |                             |   FF   |
 +-----------------------------+--------+
 |      NofBytes_reg_1548      |    7   |
-|       add156_reg_1553       |   15   |
+|       add115_reg_1553       |   15   |
 |     add_ln168_2_reg_1377    |   15   |
 |     add_ln223_1_reg_1573    |    5   |
 |   can_addr_addr_1_reg_1429  |   32   |
@@ -5913,7 +5913,7 @@ Memories:
 |    canbase_read_reg_1369    |   32   |
 |      ddr_read_reg_1543      |   32   |
 |      frameDLC_reg_1483      |   32   |
-|     icmp_ln237_reg_1559     |    1   |
+|     icmp_ln223_reg_1559     |    1   |
 |    icmp_ln32_10_reg_1515    |    1   |
 |    icmp_ln32_11_reg_1521    |    1   |
 |    icmp_ln32_12_reg_1526    |    1   |

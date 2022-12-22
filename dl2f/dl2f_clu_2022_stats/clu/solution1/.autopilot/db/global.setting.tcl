@@ -42,9 +42,9 @@ set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xc7z020:-clg400:-2
-set SourceFiles {sc {} c {../../can.c ../../clu.c ../../dlin.c ../../uart.c}}
+set SourceFiles {sc {} c {../../uart.c ../../dlin.c ../../clu.c ../../can.c}}
 set SourceFlags {sc {} c {{} {} {} {}}}
-set DirectiveFile D:/HLS/clu_2022_stats/clu/solution1/solution1.directive
+set DirectiveFile D:/HLS/dl2f/dl2f_clu_2022_stats/clu/solution1/solution1.directive
 set TBFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

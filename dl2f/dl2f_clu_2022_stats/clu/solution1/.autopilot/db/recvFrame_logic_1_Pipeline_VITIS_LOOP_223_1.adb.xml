@@ -109,10 +109,10 @@ newFuncRoot:1 %canIndex = alloca i32 1
 
 <Node id="8" bw="15" op_0_bw="15" op_1_bw="15">
 <![CDATA[
-newFuncRoot:2 %zext_ln237_read = read i15 @_ssdm_op_Read.ap_auto.i15, i15 %zext_ln237
+newFuncRoot:2 %zext_ln223_read = read i15 @_ssdm_op_Read.ap_auto.i15, i15 %zext_ln223
 
 ]]></Node>
-<StgValue><ssdm name="zext_ln237_read"/></StgValue>
+<StgValue><ssdm name="zext_ln223_read"/></StgValue>
 </operation>
 
 <operation id="17" st_id="1" stage="1" lat="1">
@@ -154,10 +154,10 @@ newFuncRoot:4 %add_ln223_1_read = read i5 @_ssdm_op_Read.ap_auto.i5, i5 %add_ln2
 
 <Node id="11" bw="32" op_0_bw="15">
 <![CDATA[
-newFuncRoot:5 %zext_ln237_cast = zext i15 %zext_ln237_read
+newFuncRoot:5 %zext_ln223_cast = zext i15 %zext_ln223_read
 
 ]]></Node>
-<StgValue><ssdm name="zext_ln237_cast"/></StgValue>
+<StgValue><ssdm name="zext_ln223_cast"/></StgValue>
 </operation>
 
 <operation id="20" st_id="1" stage="1" lat="1">
@@ -384,7 +384,7 @@ for.inc.split:5 %add_ln225_1 = add i32 %zext_ln225, i32 %canbase_read
 
 <Node id="30" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.inc.split:6 %add_ln225 = add i32 %add_ln225_1, i32 %zext_ln237_cast
+for.inc.split:6 %add_ln225 = add i32 %add_ln225_1, i32 %zext_ln223_cast
 
 ]]></Node>
 <StgValue><ssdm name="add_ln225"/></StgValue>
@@ -1006,8 +1006,8 @@ for.inc.split:35 %br_ln223 = br void %for.inc
 <port id="101" name="canbase" dir="0" iftype="0">
 <core>NULL</core><StgValue><ssdm name="canbase"/></StgValue>
 </port>
-<port id="102" name="zext_ln237" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="zext_ln237"/></StgValue>
+<port id="102" name="zext_ln223" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="zext_ln223"/></StgValue>
 </port>
 <port id="103" name="can_addr" dir="0" iftype="4">
 <core>NULL</core><StgValue><ssdm name="can_addr"/></StgValue>
@@ -1024,9 +1024,9 @@ for.inc.split:35 %br_ln223 = br void %for.inc
 </dataflow>
 <dataflow id="107" from="StgValue_105" to="canIndex" fromId="105" toId="15">
 </dataflow>
-<dataflow id="109" from="_ssdm_op_Read.ap_auto.i15" to="zext_ln237_read" fromId="108" toId="16">
+<dataflow id="109" from="_ssdm_op_Read.ap_auto.i15" to="zext_ln223_read" fromId="108" toId="16">
 </dataflow>
-<dataflow id="110" from="zext_ln237" to="zext_ln237_read" fromId="102" toId="16">
+<dataflow id="110" from="zext_ln223" to="zext_ln223_read" fromId="102" toId="16">
 </dataflow>
 <dataflow id="112" from="_ssdm_op_Read.ap_auto.i32" to="canbase_read" fromId="111" toId="17">
 </dataflow>
@@ -1036,7 +1036,7 @@ for.inc.split:35 %br_ln223 = br void %for.inc
 </dataflow>
 <dataflow id="116" from="add_ln223_1" to="add_ln223_1_read" fromId="100" toId="18">
 </dataflow>
-<dataflow id="117" from="zext_ln237_read" to="zext_ln237_cast" fromId="16" toId="19">
+<dataflow id="117" from="zext_ln223_read" to="zext_ln223_cast" fromId="16" toId="19">
 </dataflow>
 <dataflow id="119" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="118" toId="20">
 </dataflow>
@@ -1132,7 +1132,7 @@ for.inc.split:35 %br_ln223 = br void %for.inc
 </dataflow>
 <dataflow id="183" from="add_ln225_1" to="add_ln225" fromId="33" toId="34">
 </dataflow>
-<dataflow id="184" from="zext_ln237_cast" to="add_ln225" fromId="19" toId="34">
+<dataflow id="184" from="zext_ln223_cast" to="add_ln225" fromId="19" toId="34">
 </dataflow>
 <dataflow id="186" from="_ssdm_op_PartSelect.i30.i32.i32.i32" to="trunc_ln" fromId="185" toId="35">
 </dataflow>

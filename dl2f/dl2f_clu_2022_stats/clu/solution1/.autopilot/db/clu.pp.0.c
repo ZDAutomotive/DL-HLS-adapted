@@ -549,11 +549,11 @@ __attribute__((sdx_kernel("clu", 0))) void clu (volatile int *can_ptr, volatile 
   int *can_en, char *uart_en, int *lin_en,
   volatile unsigned char *can_ddr, volatile unsigned char *uart_ddr, volatile unsigned char *lin_ddr,
   long long timestamp) {
-#line 20 "D:/HLS/clu_2022_stats/clu/solution1/csynth.tcl"
+#line 20 "D:/HLS/dl2f/dl2f_clu_2022_stats/clu/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=clu
 # 43 "clu.c"
 
-#line 6 "D:/HLS/clu_2022_stats/clu/solution1/directives.tcl"
+#line 6 "D:/HLS/dl2f/dl2f_clu_2022_stats/clu/solution1/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=clu
 # 43 "clu.c"
 

@@ -1,12 +1,12 @@
 ---
-MainSourceFile:  'D:/HLS/clu_2022_stats/clu/solution1/.autopilot/db/can.pp.0.c'
+MainSourceFile:  'D:/HLS/dl2f/dl2f_clu_2022_stats/clu/solution1/.autopilot/db/can.pp.0.c'
 Diagnostics:     
   - DiagnosticName:  xilinx-label-all-loops
     Message:         'Added loop label VITIS_LOOP_223_1:  '
     FileOffset:      223
     FilePath:        can.c
     Replacements:    
-      - FilePath:        'D:\HLS\clu_2022_stats\clu\solution1\.autopilot\db\can.pp.0.c'
+      - FilePath:        'D:\HLS\dl2f\dl2f_clu_2022_stats\clu\solution1\.autopilot\db\can.pp.0.c'
         Offset:          63825
         Length:          0
         ReplacementText: 'VITIS_LOOP_223_1: '
@@ -15,7 +15,7 @@ Diagnostics:
     FileOffset:      237
     FilePath:        can.c
     Replacements:    
-      - FilePath:        'D:\HLS\clu_2022_stats\clu\solution1\.autopilot\db\can.pp.0.c'
+      - FilePath:        'D:\HLS\dl2f\dl2f_clu_2022_stats\clu\solution1\.autopilot\db\can.pp.0.c'
         Offset:          64225
         Length:          0
         ReplacementText: 'VITIS_LOOP_237_2: '
@@ -24,8 +24,8 @@ Diagnostics:
     FileOffset:      335
     FilePath:        can.c
     Replacements:    
-      - FilePath:        'D:\HLS\clu_2022_stats\clu\solution1\.autopilot\db\can.pp.0.c'
-        Offset:          66616
+      - FilePath:        'D:\HLS\dl2f\dl2f_clu_2022_stats\clu\solution1\.autopilot\db\can.pp.0.c'
+        Offset:          66614
         Length:          0
         ReplacementText: 'VITIS_LOOP_335_1: '
 ...
