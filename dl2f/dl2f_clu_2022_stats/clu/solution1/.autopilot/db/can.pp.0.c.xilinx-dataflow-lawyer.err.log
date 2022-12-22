@@ -1,0 +1,7 @@
+passing 'volatile unsigned char *' to parameter of type 'const void *' discards qualifiers
+passing argument to parameter '_Src' here
+passing 'volatile unsigned char *' to parameter of type 'void *' discards qualifiers
+passing argument to parameter '_Dst' here
+passing 'unsigned char *' to parameter of type 'char *' converts between pointers to integer types with different sign
+passing argument to parameter 'data' here
+3 warnings generated.

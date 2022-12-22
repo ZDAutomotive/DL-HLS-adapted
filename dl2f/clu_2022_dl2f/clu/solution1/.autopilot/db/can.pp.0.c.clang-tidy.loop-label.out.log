@@ -1,0 +1,15 @@
+D:\HLS\clu_2022_dl2f\clu\solution1\.autopilot\db\can.pp.0.c:1229:4: warning: Added loop label VITIS_LOOP_205_1:   [xilinx-label-all-loops]
+   for (int Len = 0;Len < Dlc;Len += 4) {
+   ^~~
+   VITIS_LOOP_205_1: 
+D:\HLS\clu_2022_dl2f\clu\solution1\.autopilot\db\can.pp.0.c:1229:4: note: FIX-IT applied suggested code changes
+D:\HLS\clu_2022_dl2f\clu\solution1\.autopilot\db\can.pp.0.c:1243:4: warning: Added loop label VITIS_LOOP_219_2:   [xilinx-label-all-loops]
+   for (int Len = 0;Len < Dlc;Len += 4) {
+   ^~~
+   VITIS_LOOP_219_2: 
+D:\HLS\clu_2022_dl2f\clu\solution1\.autopilot\db\can.pp.0.c:1243:4: note: FIX-IT applied suggested code changes
+D:\HLS\clu_2022_dl2f\clu\solution1\.autopilot\db\can.pp.0.c:1299:2: warning: Added loop label VITIS_LOOP_275_1:   [xilinx-label-all-loops]
+ for (int jj = 0; jj < 12; jj++) CanFd_Recv_Sequential(canbase, ddr, enable, jj, timestamp, received_can);
+ ^~~
+ VITIS_LOOP_275_1: 
+D:\HLS\clu_2022_dl2f\clu\solution1\.autopilot\db\can.pp.0.c:1299:2: note: FIX-IT applied suggested code changes

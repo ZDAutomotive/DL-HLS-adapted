@@ -1,0 +1,9 @@
+passing 'volatile unsigned char *' to parameter of type 'const void *' discards qualifiers
+passing argument to parameter '_Src' here
+passing 'volatile unsigned char *' to parameter of type 'void *' discards qualifiers
+passing argument to parameter '_Dst' here
+passing 'volatile unsigned char *' to parameter of type 'const void *' discards qualifiers
+passing argument to parameter '_Src' here
+passing 'volatile int *' to parameter of type 'volatile unsigned int *' converts between pointers to integer types with different sign
+passing argument to parameter 'linbase' here
+4 warnings generated.

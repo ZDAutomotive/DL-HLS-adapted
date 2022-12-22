@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Port 'clu/m_axi_uart_addr_BUSER' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="clu" solutionName="solution1" date="2022-12-22T10:53:28.399+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'clu/m_axi_uart_addr_BID' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="clu" solutionName="solution1" date="2022-12-22T10:53:28.370+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'clu/m_axi_uart_addr_BRESP' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="clu" solutionName="solution1" date="2022-12-22T10:53:28.352+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'clu/m_axi_uart_addr_BREADY' to 0." projectName="clu" solutionName="solution1" date="2022-12-22T10:53:28.335+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'clu/m_axi_uart_addr_BREADY' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="clu" solutionName="solution1" date="2022-12-22T10:53:28.320+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'clu/m_axi_uart_addr_BVALID' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="clu" solutionName="solution1" date="2022-12-22T10:53:28.306+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'clu/m_axi_uart_addr_RRESP' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="clu" solutionName="solution1" date="2022-12-22T10:53:28.290+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'clu/m_axi_uart_addr_RUSER' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="clu" solutionName="solution1" date="2022-12-22T10:53:28.279+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'clu/m_axi_uart_addr_RID' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="clu" solutionName="solution1" date="2022-12-22T10:53:28.262+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'clu/m_axi_uart_addr_RLAST' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="clu" solutionName="solution1" date="2022-12-22T10:53:28.252+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'clu/m_axi_uart_addr_RDATA' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="clu" solutionName="solution1" date="2022-12-22T10:53:28.228+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'clu/m_axi_uart_addr_RREADY' to 0." projectName="clu" solutionName="solution1" date="2022-12-22T10:53:28.213+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'clu/m_axi_uart_addr_RREADY' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="clu" solutionName="solution1" date="2022-12-22T10:53:28.198+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'clu/m_axi_uart_addr_RVALID' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="clu" solutionName="solution1" date="2022-12-22T10:53:28.183+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'clu/m_axi_uart_addr_ARUSER' to 0." projectName="clu" solutionName="solution1" date="2022-12-22T10:53:28.161+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'clu/m_axi_uart_addr_ARUSER' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="clu" solutionName="solution1" date="2022-12-22T10:53:28.148+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'clu/m_axi_uart_addr_ARREGION' to 0." projectName="clu" solutionName="solution1" date="2022-12-22T10:53:28.131+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'clu/m_axi_uart_addr_ARREGION' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="clu" solutionName="solution1" date="2022-12-22T10:53:28.116+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'clu/m_axi_uart_addr_ARQOS' to 0." projectName="clu" solutionName="solution1" date="2022-12-22T10:53:28.097+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'clu/m_axi_uart_addr_ARQOS' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="clu" solutionName="solution1" date="2022-12-22T10:53:28.079+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'clu/m_axi_uart_addr_ARPROT' to 0." projectName="clu" solutionName="solution1" date="2022-12-22T10:53:28.058+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'clu/m_axi_uart_addr_ARPROT' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="clu" solutionName="solution1" date="2022-12-22T10:53:28.039+0100" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,67 @@
+<dict>
+  <key>main-file</key>
+  <string>D:/HLS/clu_2022_dl2f/clu/solution1/.autopilot/db/uart.pp.0.c</string>
+  <key>diagnostics</key>
+  <array>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>uart.c</string>
+      <key>line</key>
+      <integer>132</integer>
+      <key>column</key>
+      <integer>34</integer>
+      <key>message</key>
+      <string>passing &apos;volatile unsigned char *&apos; to parameter of type &apos;const void *&apos; discards qualifiers</string>
+      <key>ID</key>
+      <integer>4051</integer>
+      <key>WarningOption</key>
+      <string>incompatible-pointer-types-discards-qualifiers</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>note</string>
+      <key>filename</key>
+      <string>D:/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt\x86_64-w64-mingw32\include\string.h</string>
+      <key>line</key>
+      <integer>50</integer>
+      <key>column</key>
+      <integer>95</integer>
+      <key>message</key>
+      <string>passing argument to parameter &apos;_Src&apos; here</string>
+      <key>ID</key>
+      <integer>4414</integer>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>uart.c</string>
+      <key>line</key>
+      <integer>154</integer>
+      <key>column</key>
+      <integer>10</integer>
+      <key>message</key>
+      <string>passing &apos;volatile unsigned char *&apos; to parameter of type &apos;void *&apos; discards qualifiers</string>
+      <key>ID</key>
+      <integer>4051</integer>
+      <key>WarningOption</key>
+      <string>incompatible-pointer-types-discards-qualifiers</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>note</string>
+      <key>filename</key>
+      <string>D:/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt\x86_64-w64-mingw32\include\string.h</string>
+      <key>line</key>
+      <integer>50</integer>
+      <key>column</key>
+      <integer>64</integer>
+      <key>message</key>
+      <string>passing argument to parameter &apos;_Dst&apos; here</string>
+      <key>ID</key>
+      <integer>4414</integer>
+    </dict>
+  </array>
+</dict>

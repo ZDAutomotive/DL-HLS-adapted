@@ -1,0 +1,58 @@
+dlin.c:98:34: warning: passing 'volatile unsigned char *' to parameter of type 'const void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+ memcpy(ringbuffer_header_bytes, ddr_header, 28);
+                                 ^~~~~~~~~~
+D:/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt\x86_64-w64-mingw32\include\string.h:50:95: note: passing argument to parameter '_Src' here
+  void * __attribute__((__cdecl__)) memcpy(void * __restrict__ _Dst,const void * __restrict__ _Src,size_t _Size) ;
+                                                                                              ^
+dlin.c:120:11: warning: passing 'volatile unsigned char *' to parameter of type 'void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+  memcpy( ddr_header + 28 + writeLinIndex * (12 + 16),
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt\x86_64-w64-mingw32\include\string.h:50:64: note: passing argument to parameter '_Dst' here
+  void * __attribute__((__cdecl__)) memcpy(void * __restrict__ _Dst,const void * __restrict__ _Src,size_t _Size) ;
+                                                               ^
+dlin.c:121:5: warning: passing 'volatile unsigned char *' to parameter of type 'const void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    data,
+    ^~~~
+D:/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt\x86_64-w64-mingw32\include\string.h:50:95: note: passing argument to parameter '_Src' here
+  void * __attribute__((__cdecl__)) memcpy(void * __restrict__ _Dst,const void * __restrict__ _Src,size_t _Size) ;
+                                                                                              ^
+dlin.c:147:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=single_lin_process_XLX_SEP_ PragmaOptions=variable = counter_lin_0_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_lin_0
+        ^
+dlin.c:149:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=single_lin_process_XLX_SEP_ PragmaOptions=variable = counter_lin_1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_lin_1
+        ^
+dlin.c:151:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=single_lin_process_XLX_SEP_ PragmaOptions=variable = counter_lin_2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_lin_2
+        ^
+dlin.c:153:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=single_lin_process_XLX_SEP_ PragmaOptions=variable = counter_lin_3_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_lin_3
+        ^
+dlin.c:155:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=single_lin_process_XLX_SEP_ PragmaOptions=variable = counter_lin_4_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_lin_4
+        ^
+dlin.c:157:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=single_lin_process_XLX_SEP_ PragmaOptions=variable = counter_lin_5_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_lin_5
+        ^
+dlin.c:159:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=single_lin_process_XLX_SEP_ PragmaOptions=variable = counter_lin_6_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_lin_6
+        ^
+dlin.c:161:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=single_lin_process_XLX_SEP_ PragmaOptions=variable = counter_lin_7_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_lin_7
+        ^
+dlin.c:163:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=single_lin_process_XLX_SEP_ PragmaOptions=variable = counter_lin_8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_lin_8
+        ^
+dlin.c:165:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=single_lin_process_XLX_SEP_ PragmaOptions=variable = counter_lin_9_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_lin_9
+        ^
+dlin.c:167:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=single_lin_process_XLX_SEP_ PragmaOptions=variable = counter_droped_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS reset variable = counter_droped
+        ^
+dlin.c:376:12: warning: passing 'volatile int *' to parameter of type 'volatile unsigned int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+  dlin_FSM(linbase, ddr, enable_device, lin_nr, timestamp,
+           ^~~~~~~
+dlin.c:303:38: note: passing argument to parameter 'linbase' here
+void dlin_FSM(volatile unsigned int *linbase,
+                                     ^
+15 warnings generated.

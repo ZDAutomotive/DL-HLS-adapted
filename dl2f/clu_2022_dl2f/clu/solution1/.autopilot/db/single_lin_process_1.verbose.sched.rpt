@@ -1,0 +1,622 @@
+
+
+================================================================
+== Vitis HLS Report for 'single_lin_process_1'
+================================================================
+* Date:           Wed Dec 21 16:46:08 2022
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        clu
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  8.100 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       38|        ?|  0.380 us|         ?|   38|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |       28|       28|         1|          -|          -|    28|        no|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 44
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 2 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 25 11 44 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 44 
+25 --> 44 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.29>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%empty = alloca i32 1"   --->   Operation 45 'alloca' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%EN_read = read i4 @_ssdm_op_Read.ap_auto.i4, i4 %EN"   --->   Operation 46 'read' 'EN_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%timestamp_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %timestamp"   --->   Operation 47 'read' 'timestamp_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%ddr_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %ddr"   --->   Operation 48 'read' 'ddr_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%linbase_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %linbase"   --->   Operation 49 'read' 'linbase_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%EN_cast = zext i4 %EN_read"   --->   Operation 50 'zext' 'EN_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %ps_ddr, void @empty_23, i32 0, i32 0, void @empty_25, i32 0, i32 10, void @empty_2, void @empty, void @empty_25, i32 16, i32 16, i32 16, i32 16, void @empty_25, void @empty_25, i32 4294967295, i32 0"   --->   Operation 51 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %lin_addr, void @empty_23, i32 0, i32 0, void @empty_25, i32 0, i32 1, void @empty_1, void @empty, void @empty_25, i32 16, i32 16, i32 16, i32 16, void @empty_25, void @empty_25, i32 4294967295, i32 0"   --->   Operation 52 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%lin_frame = alloca i32 1" [dlin.c:138]   --->   Operation 53 'alloca' 'lin_frame' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_1 : Operation 54 [1/1] (1.29ns)   --->   "%store_ln138 = store i5 0, i5 %empty" [dlin.c:138]   --->   Operation 54 'store' 'store_ln138' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%br_ln138 = br void %memset.loop" [dlin.c:138]   --->   Operation 55 'br' 'br_ln138' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 2.73>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%p_load = load i5 %empty"   --->   Operation 56 'load' 'p_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (0.97ns)   --->   "%exitcond181 = icmp_eq  i5 %p_load, i5 28"   --->   Operation 57 'icmp' 'exitcond181' <Predicate = true> <Delay = 0.97> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%empty_65 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 28, i64 28, i64 28"   --->   Operation 58 'speclooptripcount' 'empty_65' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (1.02ns)   --->   "%empty_66 = add i5 %p_load, i5 1"   --->   Operation 59 'add' 'empty_66' <Predicate = true> <Delay = 1.02> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%br_ln0 = br i1 %exitcond181, void %memset.loop.split, void %split"   --->   Operation 60 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%p_cast = zext i5 %p_load"   --->   Operation 61 'zext' 'p_cast' <Predicate = (!exitcond181)> <Delay = 0.00>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%lin_frame_addr = getelementptr i8 %lin_frame, i32 0, i32 %p_cast"   --->   Operation 62 'getelementptr' 'lin_frame_addr' <Predicate = (!exitcond181)> <Delay = 0.00>
+ST_2 : Operation 63 [1/1] (1.75ns)   --->   "%store_ln0 = store i8 0, i5 %lin_frame_addr"   --->   Operation 63 'store' 'store_ln0' <Predicate = (!exitcond181)> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_2 : Operation 64 [1/1] (1.29ns)   --->   "%store_ln0 = store i5 %empty_66, i5 %empty"   --->   Operation 64 'store' 'store_ln0' <Predicate = (!exitcond181)> <Delay = 1.29>
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%br_ln0 = br void %memset.loop"   --->   Operation 65 'br' 'br_ln0' <Predicate = (!exitcond181)> <Delay = 0.00>
+ST_2 : Operation 66 [1/1] (1.89ns)   --->   "%add_ln81 = add i32 %linbase_read, i32 20" [dlin.c:81]   --->   Operation 66 'add' 'add_ln81' <Predicate = (exitcond181)> <Delay = 1.89> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 67 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i30 @_ssdm_op_PartSelect.i30.i32.i32.i32, i32 %add_ln81, i32 2, i32 31" [dlin.c:81]   --->   Operation 67 'partselect' 'trunc_ln' <Predicate = (exitcond181)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 7.30>
+ST_3 : Operation 68 [1/1] (0.00ns)   --->   "%sext_ln81 = sext i30 %trunc_ln" [dlin.c:81]   --->   Operation 68 'sext' 'sext_ln81' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 69 [1/1] (0.00ns)   --->   "%lin_addr_addr = getelementptr i32 %lin_addr, i32 %sext_ln81" [dlin.c:81]   --->   Operation 69 'getelementptr' 'lin_addr_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 70 [7/7] (7.30ns)   --->   "%lin_addr_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %lin_addr_addr, i32 1" [dlin.c:81]   --->   Operation 70 'readreq' 'lin_addr_load_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 4 <SV = 3> <Delay = 7.30>
+ST_4 : Operation 71 [6/7] (7.30ns)   --->   "%lin_addr_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %lin_addr_addr, i32 1" [dlin.c:81]   --->   Operation 71 'readreq' 'lin_addr_load_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 5 <SV = 4> <Delay = 7.30>
+ST_5 : Operation 72 [5/7] (7.30ns)   --->   "%lin_addr_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %lin_addr_addr, i32 1" [dlin.c:81]   --->   Operation 72 'readreq' 'lin_addr_load_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 6 <SV = 5> <Delay = 7.30>
+ST_6 : Operation 73 [4/7] (7.30ns)   --->   "%lin_addr_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %lin_addr_addr, i32 1" [dlin.c:81]   --->   Operation 73 'readreq' 'lin_addr_load_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 6> <Delay = 7.30>
+ST_7 : Operation 74 [3/7] (7.30ns)   --->   "%lin_addr_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %lin_addr_addr, i32 1" [dlin.c:81]   --->   Operation 74 'readreq' 'lin_addr_load_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 7> <Delay = 7.30>
+ST_8 : Operation 75 [2/7] (7.30ns)   --->   "%lin_addr_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %lin_addr_addr, i32 1" [dlin.c:81]   --->   Operation 75 'readreq' 'lin_addr_load_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 9 <SV = 8> <Delay = 7.30>
+ST_9 : Operation 76 [1/1] (0.00ns)   --->   "%zext_ln140 = zext i4 %EN_read" [dlin.c:140]   --->   Operation 76 'zext' 'zext_ln140' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 77 [1/1] (0.00ns)   --->   "%PLIN_Ctrl_run_state_addr = getelementptr i1 %PLIN_Ctrl_run_state, i32 0, i32 %zext_ln140" [dlin.c:140]   --->   Operation 77 'getelementptr' 'PLIN_Ctrl_run_state_addr' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 78 [2/2] (1.75ns)   --->   "%PLIN_Ctrl_run_state_load = load i4 %PLIN_Ctrl_run_state_addr" [dlin.c:140]   --->   Operation 78 'load' 'PLIN_Ctrl_run_state_load' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 10> <RAM>
+ST_9 : Operation 79 [1/7] (7.30ns)   --->   "%lin_addr_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %lin_addr_addr, i32 1" [dlin.c:81]   --->   Operation 79 'readreq' 'lin_addr_load_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 10 <SV = 9> <Delay = 8.10>
+ST_10 : Operation 80 [1/2] (1.75ns)   --->   "%PLIN_Ctrl_run_state_load = load i4 %PLIN_Ctrl_run_state_addr" [dlin.c:140]   --->   Operation 80 'load' 'PLIN_Ctrl_run_state_load' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 10> <RAM>
+ST_10 : Operation 81 [1/1] (7.30ns)   --->   "%lin_addr_addr_read = read i32 @_ssdm_op_Read.m_axi.volatile.i32P1A, i32 %lin_addr_addr" [dlin.c:81]   --->   Operation 81 'read' 'lin_addr_addr_read' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_10 : Operation 82 [1/1] (0.00ns)   --->   "%trunc_ln140 = trunc i32 %lin_addr_addr_read" [dlin.c:140]   --->   Operation 82 'trunc' 'trunc_ln140' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 83 [1/1] (0.00ns)   --->   "%br_ln140 = br i1 %PLIN_Ctrl_run_state_load, void %if.then, void %if.else15" [dlin.c:140]   --->   Operation 83 'br' 'br_ln140' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 84 [1/1] (0.00ns)   --->   "%br_ln147 = br i1 %trunc_ln140, void %cleanup, void %if.then3" [dlin.c:147]   --->   Operation 84 'br' 'br_ln147' <Predicate = (!PLIN_Ctrl_run_state_load)> <Delay = 0.00>
+ST_10 : Operation 85 [1/1] (1.89ns)   --->   "%add_ln81_1 = add i32 %linbase_read, i32 8" [dlin.c:81]   --->   Operation 85 'add' 'add_ln81_1' <Predicate = (!PLIN_Ctrl_run_state_load & trunc_ln140)> <Delay = 1.89> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 86 [1/1] (0.00ns)   --->   "%trunc_ln81_2 = partselect i30 @_ssdm_op_PartSelect.i30.i32.i32.i32, i32 %add_ln81_1, i32 2, i32 31" [dlin.c:81]   --->   Operation 86 'partselect' 'trunc_ln81_2' <Predicate = (!PLIN_Ctrl_run_state_load & trunc_ln140)> <Delay = 0.00>
+
+State 11 <SV = 10> <Delay = 7.30>
+ST_11 : Operation 87 [1/1] (0.00ns)   --->   "%sext_ln81_1 = sext i30 %trunc_ln81_2" [dlin.c:81]   --->   Operation 87 'sext' 'sext_ln81_1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 88 [1/1] (0.00ns)   --->   "%lin_addr_addr_1 = getelementptr i32 %lin_addr, i32 %sext_ln81_1" [dlin.c:81]   --->   Operation 88 'getelementptr' 'lin_addr_addr_1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 89 [7/7] (7.30ns)   --->   "%lin_addr_load_1_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %lin_addr_addr_1, i32 1" [dlin.c:81]   --->   Operation 89 'readreq' 'lin_addr_load_1_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_11 : Operation 90 [1/1] (1.75ns)   --->   "%store_ln158 = store i1 1, i4 %PLIN_Ctrl_run_state_addr" [dlin.c:158]   --->   Operation 90 'store' 'store_ln158' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 10> <RAM>
+
+State 12 <SV = 11> <Delay = 7.30>
+ST_12 : Operation 91 [6/7] (7.30ns)   --->   "%lin_addr_load_1_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %lin_addr_addr_1, i32 1" [dlin.c:81]   --->   Operation 91 'readreq' 'lin_addr_load_1_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 13 <SV = 12> <Delay = 7.30>
+ST_13 : Operation 92 [5/7] (7.30ns)   --->   "%lin_addr_load_1_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %lin_addr_addr_1, i32 1" [dlin.c:81]   --->   Operation 92 'readreq' 'lin_addr_load_1_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 14 <SV = 13> <Delay = 7.30>
+ST_14 : Operation 93 [4/7] (7.30ns)   --->   "%lin_addr_load_1_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %lin_addr_addr_1, i32 1" [dlin.c:81]   --->   Operation 93 'readreq' 'lin_addr_load_1_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 15 <SV = 14> <Delay = 7.30>
+ST_15 : Operation 94 [3/7] (7.30ns)   --->   "%lin_addr_load_1_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %lin_addr_addr_1, i32 1" [dlin.c:81]   --->   Operation 94 'readreq' 'lin_addr_load_1_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 16 <SV = 15> <Delay = 7.30>
+ST_16 : Operation 95 [2/7] (7.30ns)   --->   "%lin_addr_load_1_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %lin_addr_addr_1, i32 1" [dlin.c:81]   --->   Operation 95 'readreq' 'lin_addr_load_1_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_16 : Operation 96 [1/1] (1.89ns)   --->   "%add_ln87 = add i32 %linbase_read, i32 4" [dlin.c:87]   --->   Operation 96 'add' 'add_ln87' <Predicate = true> <Delay = 1.89> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 97 [1/1] (0.00ns)   --->   "%trunc_ln2 = partselect i30 @_ssdm_op_PartSelect.i30.i32.i32.i32, i32 %add_ln87, i32 2, i32 31" [dlin.c:87]   --->   Operation 97 'partselect' 'trunc_ln2' <Predicate = true> <Delay = 0.00>
+
+State 17 <SV = 16> <Delay = 7.30>
+ST_17 : Operation 98 [1/7] (7.30ns)   --->   "%lin_addr_load_1_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %lin_addr_addr_1, i32 1" [dlin.c:81]   --->   Operation 98 'readreq' 'lin_addr_load_1_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_17 : Operation 99 [1/1] (0.00ns)   --->   "%sext_ln87 = sext i30 %trunc_ln2" [dlin.c:87]   --->   Operation 99 'sext' 'sext_ln87' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 100 [1/1] (0.00ns)   --->   "%lin_addr_addr_2 = getelementptr i32 %lin_addr, i32 %sext_ln87" [dlin.c:87]   --->   Operation 100 'getelementptr' 'lin_addr_addr_2' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 101 [1/1] (7.30ns)   --->   "%lin_addr_addr_2_req = writereq i1 @_ssdm_op_WriteReq.m_axi.i32P1A, i32 %lin_addr_addr_2, i32 1" [dlin.c:87]   --->   Operation 101 'writereq' 'lin_addr_addr_2_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 18 <SV = 17> <Delay = 7.30>
+ST_18 : Operation 102 [1/1] (7.30ns)   --->   "%lin_addr_addr_1_read = read i32 @_ssdm_op_Read.m_axi.volatile.i32P1A, i32 %lin_addr_addr_1" [dlin.c:81]   --->   Operation 102 'read' 'lin_addr_addr_1_read' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_18 : Operation 103 [1/1] (0.00ns)   --->   "%reg_lid = trunc i32 %lin_addr_addr_1_read" [dlin.c:81]   --->   Operation 103 'trunc' 'reg_lid' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 104 [1/1] (0.00ns)   --->   "%store_ln152 = store i6 %reg_lid, i6 %PL_Data" [dlin.c:152]   --->   Operation 104 'store' 'store_ln152' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 105 [1/1] (7.30ns)   --->   "%write_ln87 = write void @_ssdm_op_Write.m_axi.volatile.i32P1A, i32 %lin_addr_addr_2, i32 0, i4 15" [dlin.c:87]   --->   Operation 105 'write' 'write_ln87' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_18 : Operation 106 [1/1] (7.30ns)   --->   "%lin_addr_addr_req = writereq i1 @_ssdm_op_WriteReq.m_axi.i32P1A, i32 %lin_addr_addr, i32 1" [dlin.c:87]   --->   Operation 106 'writereq' 'lin_addr_addr_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 19 <SV = 18> <Delay = 7.30>
+ST_19 : Operation 107 [5/5] (7.30ns)   --->   "%lin_addr_addr_2_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %lin_addr_addr_2" [dlin.c:87]   --->   Operation 107 'writeresp' 'lin_addr_addr_2_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_19 : Operation 108 [1/1] (7.30ns)   --->   "%write_ln87 = write void @_ssdm_op_Write.m_axi.volatile.i32P1A, i32 %lin_addr_addr, i32 59, i4 15" [dlin.c:87]   --->   Operation 108 'write' 'write_ln87' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 20 <SV = 19> <Delay = 7.30>
+ST_20 : Operation 109 [4/5] (7.30ns)   --->   "%lin_addr_addr_2_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %lin_addr_addr_2" [dlin.c:87]   --->   Operation 109 'writeresp' 'lin_addr_addr_2_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_20 : Operation 110 [5/5] (7.30ns)   --->   "%lin_addr_addr_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %lin_addr_addr" [dlin.c:87]   --->   Operation 110 'writeresp' 'lin_addr_addr_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 21 <SV = 20> <Delay = 7.30>
+ST_21 : Operation 111 [3/5] (7.30ns)   --->   "%lin_addr_addr_2_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %lin_addr_addr_2" [dlin.c:87]   --->   Operation 111 'writeresp' 'lin_addr_addr_2_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_21 : Operation 112 [4/5] (7.30ns)   --->   "%lin_addr_addr_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %lin_addr_addr" [dlin.c:87]   --->   Operation 112 'writeresp' 'lin_addr_addr_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 22 <SV = 21> <Delay = 7.30>
+ST_22 : Operation 113 [2/5] (7.30ns)   --->   "%lin_addr_addr_2_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %lin_addr_addr_2" [dlin.c:87]   --->   Operation 113 'writeresp' 'lin_addr_addr_2_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_22 : Operation 114 [3/5] (7.30ns)   --->   "%lin_addr_addr_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %lin_addr_addr" [dlin.c:87]   --->   Operation 114 'writeresp' 'lin_addr_addr_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 23 <SV = 22> <Delay = 7.30>
+ST_23 : Operation 115 [1/5] (7.30ns)   --->   "%lin_addr_addr_2_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %lin_addr_addr_2" [dlin.c:87]   --->   Operation 115 'writeresp' 'lin_addr_addr_2_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_23 : Operation 116 [2/5] (7.30ns)   --->   "%lin_addr_addr_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %lin_addr_addr" [dlin.c:87]   --->   Operation 116 'writeresp' 'lin_addr_addr_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 24 <SV = 23> <Delay = 7.30>
+ST_24 : Operation 117 [1/5] (7.30ns)   --->   "%lin_addr_addr_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %lin_addr_addr" [dlin.c:87]   --->   Operation 117 'writeresp' 'lin_addr_addr_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_24 : Operation 118 [1/1] (0.00ns)   --->   "%br_ln161 = br void %if.end104" [dlin.c:161]   --->   Operation 118 'br' 'br_ln161' <Predicate = true> <Delay = 0.00>
+
+State 25 <SV = 10> <Delay = 2.73>
+ST_25 : Operation 119 [1/1] (0.00ns)   --->   "%tmp = partselect i3 @_ssdm_op_PartSelect.i3.i32.i32.i32, i32 %lin_addr_addr_read, i32 1, i32 3" [dlin.c:164]   --->   Operation 119 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 120 [1/1] (0.98ns)   --->   "%icmp_ln164 = icmp_eq  i3 %tmp, i3 0" [dlin.c:164]   --->   Operation 120 'icmp' 'icmp_ln164' <Predicate = true> <Delay = 0.98> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 121 [1/1] (0.00ns)   --->   "%br_ln164 = br i1 %icmp_ln164, void %if.then19, void %if.end103" [dlin.c:164]   --->   Operation 121 'br' 'br_ln164' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 122 [1/1] (0.00ns)   --->   "%tmp_1 = partselect i2 @_ssdm_op_PartSelect.i2.i32.i32.i32, i32 %lin_addr_addr_read, i32 2, i32 3" [dlin.c:167]   --->   Operation 122 'partselect' 'tmp_1' <Predicate = (!icmp_ln164)> <Delay = 0.00>
+ST_25 : Operation 123 [1/1] (0.50ns)   --->   "%icmp_ln167 = icmp_eq  i2 %tmp_1, i2 0" [dlin.c:167]   --->   Operation 123 'icmp' 'icmp_ln167' <Predicate = (!icmp_ln164)> <Delay = 0.50> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.50> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 124 [1/1] (0.00ns)   --->   "%br_ln167 = br i1 %icmp_ln167, void %if.end102, void %if.then23" [dlin.c:167]   --->   Operation 124 'br' 'br_ln167' <Predicate = (!icmp_ln164)> <Delay = 0.00>
+ST_25 : Operation 125 [1/1] (0.00ns)   --->   "%lshr_ln = partselect i4 @_ssdm_op_PartSelect.i4.i32.i32.i32, i32 %lin_addr_addr_read, i32 4, i32 7" [dlin.c:172]   --->   Operation 125 'partselect' 'lshr_ln' <Predicate = (!icmp_ln164 & icmp_ln167)> <Delay = 0.00>
+ST_25 : Operation 126 [1/1] (1.89ns)   --->   "%add_ln87_1 = add i32 %linbase_read, i32 4" [dlin.c:87]   --->   Operation 126 'add' 'add_ln87_1' <Predicate = (!icmp_ln164 & icmp_ln167)> <Delay = 1.89> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 127 [1/1] (0.00ns)   --->   "%trunc_ln87_1 = partselect i30 @_ssdm_op_PartSelect.i30.i32.i32.i32, i32 %add_ln87_1, i32 2, i32 31" [dlin.c:87]   --->   Operation 127 'partselect' 'trunc_ln87_1' <Predicate = (!icmp_ln164 & icmp_ln167)> <Delay = 0.00>
+ST_25 : Operation 128 [1/1] (0.00ns)   --->   "%internal_lin_counter_load = load i32 %internal_lin_counter" [dlin.c:200]   --->   Operation 128 'load' 'internal_lin_counter_load' <Predicate = (!icmp_ln164 & icmp_ln167)> <Delay = 0.00>
+ST_25 : Operation 129 [1/1] (1.89ns)   --->   "%add_ln200 = add i32 %internal_lin_counter_load, i32 1" [dlin.c:200]   --->   Operation 129 'add' 'add_ln200' <Predicate = (!icmp_ln164 & icmp_ln167)> <Delay = 1.89> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 130 [1/1] (0.00ns)   --->   "%store_ln200 = store i32 %add_ln200, i32 %internal_lin_counter" [dlin.c:200]   --->   Operation 130 'store' 'store_ln200' <Predicate = (!icmp_ln164 & icmp_ln167)> <Delay = 0.00>
+ST_25 : Operation 131 [1/1] (0.00ns)   --->   "%write_ln201 = write void @_ssdm_op_Write.ap_auto.volatile.i32P0A, i32 %received_lin, i32 %add_ln200" [dlin.c:201]   --->   Operation 131 'write' 'write_ln201' <Predicate = (!icmp_ln164 & icmp_ln167)> <Delay = 0.00>
+ST_25 : Operation 132 [1/1] (1.75ns)   --->   "%store_ln203 = store i1 0, i4 %PLIN_Ctrl_run_state_addr" [dlin.c:203]   --->   Operation 132 'store' 'store_ln203' <Predicate = (!icmp_ln164 & icmp_ln167)> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 10> <RAM>
+
+State 26 <SV = 11> <Delay = 7.30>
+ST_26 : Operation 133 [1/1] (0.00ns)   --->   "%sext_ln87_1 = sext i30 %trunc_ln87_1" [dlin.c:87]   --->   Operation 133 'sext' 'sext_ln87_1' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 134 [1/1] (0.00ns)   --->   "%lin_addr_addr_3 = getelementptr i32 %lin_addr, i32 %sext_ln87_1" [dlin.c:87]   --->   Operation 134 'getelementptr' 'lin_addr_addr_3' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 135 [1/1] (7.30ns)   --->   "%lin_addr_addr_3_req = writereq i1 @_ssdm_op_WriteReq.m_axi.i32P1A, i32 %lin_addr_addr_3, i32 1" [dlin.c:87]   --->   Operation 135 'writereq' 'lin_addr_addr_3_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 27 <SV = 12> <Delay = 7.30>
+ST_27 : Operation 136 [1/1] (7.30ns)   --->   "%write_ln87 = write void @_ssdm_op_Write.m_axi.volatile.i32P1A, i32 %lin_addr_addr_3, i32 128, i4 15" [dlin.c:87]   --->   Operation 136 'write' 'write_ln87' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 28 <SV = 13> <Delay = 7.30>
+ST_28 : Operation 137 [5/5] (7.30ns)   --->   "%lin_addr_addr_3_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %lin_addr_addr_3" [dlin.c:87]   --->   Operation 137 'writeresp' 'lin_addr_addr_3_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 29 <SV = 14> <Delay = 7.30>
+ST_29 : Operation 138 [4/5] (7.30ns)   --->   "%lin_addr_addr_3_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %lin_addr_addr_3" [dlin.c:87]   --->   Operation 138 'writeresp' 'lin_addr_addr_3_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 30 <SV = 15> <Delay = 7.30>
+ST_30 : Operation 139 [3/5] (7.30ns)   --->   "%lin_addr_addr_3_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %lin_addr_addr_3" [dlin.c:87]   --->   Operation 139 'writeresp' 'lin_addr_addr_3_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_30 : Operation 140 [1/1] (0.00ns)   --->   "%trunc_ln81_4 = partselect i30 @_ssdm_op_PartSelect.i30.i32.i32.i32, i32 %linbase_read, i32 2, i32 31" [dlin.c:81]   --->   Operation 140 'partselect' 'trunc_ln81_4' <Predicate = true> <Delay = 0.00>
+
+State 31 <SV = 16> <Delay = 7.30>
+ST_31 : Operation 141 [2/5] (7.30ns)   --->   "%lin_addr_addr_3_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %lin_addr_addr_3" [dlin.c:87]   --->   Operation 141 'writeresp' 'lin_addr_addr_3_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 32 <SV = 17> <Delay = 7.30>
+ST_32 : Operation 142 [1/5] (7.30ns)   --->   "%lin_addr_addr_3_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %lin_addr_addr_3" [dlin.c:87]   --->   Operation 142 'writeresp' 'lin_addr_addr_3_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 33 <SV = 18> <Delay = 3.27>
+ST_33 : Operation 143 [1/1] (0.00ns)   --->   "%zext_ln176 = zext i4 %lshr_ln" [dlin.c:176]   --->   Operation 143 'zext' 'zext_ln176' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 144 [1/1] (0.99ns)   --->   "%add_ln176 = add i5 %zext_ln176, i5 1" [dlin.c:176]   --->   Operation 144 'add' 'add_ln176' <Predicate = true> <Delay = 0.99> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 145 [2/2] (2.27ns)   --->   "%call_ln81 = call void @single_lin_process.1_Pipeline_VITIS_LOOP_176_1, i32 %lin_addr, i30 %trunc_ln81_4, i5 %add_ln176, i8 %lin_frame" [dlin.c:81]   --->   Operation 145 'call' 'call_ln81' <Predicate = true> <Delay = 2.27> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 34 <SV = 19> <Delay = 0.00>
+ST_34 : Operation 146 [1/2] (0.00ns)   --->   "%call_ln81 = call void @single_lin_process.1_Pipeline_VITIS_LOOP_176_1, i32 %lin_addr, i30 %trunc_ln81_4, i5 %add_ln176, i8 %lin_frame" [dlin.c:81]   --->   Operation 146 'call' 'call_ln81' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 35 <SV = 20> <Delay = 1.75>
+ST_35 : Operation 147 [1/1] (0.00ns)   --->   "%trunc_ln4 = partselect i8 @_ssdm_op_PartSelect.i8.i64.i32.i32, i64 %timestamp_read, i32 56, i32 63" [dlin.c:182]   --->   Operation 147 'partselect' 'trunc_ln4' <Predicate = true> <Delay = 0.00>
+ST_35 : Operation 148 [1/1] (0.00ns)   --->   "%lin_frame_addr_1 = getelementptr i8 %lin_frame, i32 0, i32 0" [dlin.c:182]   --->   Operation 148 'getelementptr' 'lin_frame_addr_1' <Predicate = true> <Delay = 0.00>
+ST_35 : Operation 149 [1/1] (1.75ns)   --->   "%store_ln182 = store i8 %trunc_ln4, i5 %lin_frame_addr_1" [dlin.c:182]   --->   Operation 149 'store' 'store_ln182' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_35 : Operation 150 [1/1] (0.00ns)   --->   "%trunc_ln5 = partselect i8 @_ssdm_op_PartSelect.i8.i64.i32.i32, i64 %timestamp_read, i32 48, i32 55" [dlin.c:183]   --->   Operation 150 'partselect' 'trunc_ln5' <Predicate = true> <Delay = 0.00>
+ST_35 : Operation 151 [1/1] (0.00ns)   --->   "%lin_frame_addr_2 = getelementptr i8 %lin_frame, i32 0, i32 1" [dlin.c:183]   --->   Operation 151 'getelementptr' 'lin_frame_addr_2' <Predicate = true> <Delay = 0.00>
+ST_35 : Operation 152 [1/1] (1.75ns)   --->   "%store_ln183 = store i8 %trunc_ln5, i5 %lin_frame_addr_2" [dlin.c:183]   --->   Operation 152 'store' 'store_ln183' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_35 : Operation 153 [1/1] (0.00ns)   --->   "%trunc_ln6 = partselect i8 @_ssdm_op_PartSelect.i8.i64.i32.i32, i64 %timestamp_read, i32 40, i32 47" [dlin.c:184]   --->   Operation 153 'partselect' 'trunc_ln6' <Predicate = true> <Delay = 0.00>
+ST_35 : Operation 154 [1/1] (0.00ns)   --->   "%trunc_ln7 = partselect i8 @_ssdm_op_PartSelect.i8.i64.i32.i32, i64 %timestamp_read, i32 32, i32 39" [dlin.c:185]   --->   Operation 154 'partselect' 'trunc_ln7' <Predicate = true> <Delay = 0.00>
+ST_35 : Operation 155 [1/1] (0.00ns)   --->   "%trunc_ln8 = partselect i8 @_ssdm_op_PartSelect.i8.i64.i32.i32, i64 %timestamp_read, i32 24, i32 31" [dlin.c:186]   --->   Operation 155 'partselect' 'trunc_ln8' <Predicate = true> <Delay = 0.00>
+ST_35 : Operation 156 [1/1] (0.00ns)   --->   "%trunc_ln9 = partselect i8 @_ssdm_op_PartSelect.i8.i64.i32.i32, i64 %timestamp_read, i32 16, i32 23" [dlin.c:187]   --->   Operation 156 'partselect' 'trunc_ln9' <Predicate = true> <Delay = 0.00>
+ST_35 : Operation 157 [1/1] (0.00ns)   --->   "%trunc_ln1 = partselect i8 @_ssdm_op_PartSelect.i8.i64.i32.i32, i64 %timestamp_read, i32 8, i32 15" [dlin.c:188]   --->   Operation 157 'partselect' 'trunc_ln1' <Predicate = true> <Delay = 0.00>
+ST_35 : Operation 158 [1/1] (0.00ns)   --->   "%trunc_ln189 = trunc i64 %timestamp_read" [dlin.c:189]   --->   Operation 158 'trunc' 'trunc_ln189' <Predicate = true> <Delay = 0.00>
+
+State 36 <SV = 21> <Delay = 1.75>
+ST_36 : Operation 159 [1/1] (0.00ns)   --->   "%lin_frame_addr_3 = getelementptr i8 %lin_frame, i32 0, i32 2" [dlin.c:184]   --->   Operation 159 'getelementptr' 'lin_frame_addr_3' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 160 [1/1] (1.75ns)   --->   "%store_ln184 = store i8 %trunc_ln6, i5 %lin_frame_addr_3" [dlin.c:184]   --->   Operation 160 'store' 'store_ln184' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_36 : Operation 161 [1/1] (0.00ns)   --->   "%lin_frame_addr_4 = getelementptr i8 %lin_frame, i32 0, i32 3" [dlin.c:185]   --->   Operation 161 'getelementptr' 'lin_frame_addr_4' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 162 [1/1] (1.75ns)   --->   "%store_ln185 = store i8 %trunc_ln7, i5 %lin_frame_addr_4" [dlin.c:185]   --->   Operation 162 'store' 'store_ln185' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+
+State 37 <SV = 22> <Delay = 1.75>
+ST_37 : Operation 163 [1/1] (0.00ns)   --->   "%lin_frame_addr_5 = getelementptr i8 %lin_frame, i32 0, i32 4" [dlin.c:186]   --->   Operation 163 'getelementptr' 'lin_frame_addr_5' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 164 [1/1] (1.75ns)   --->   "%store_ln186 = store i8 %trunc_ln8, i5 %lin_frame_addr_5" [dlin.c:186]   --->   Operation 164 'store' 'store_ln186' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_37 : Operation 165 [1/1] (0.00ns)   --->   "%lin_frame_addr_6 = getelementptr i8 %lin_frame, i32 0, i32 5" [dlin.c:187]   --->   Operation 165 'getelementptr' 'lin_frame_addr_6' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 166 [1/1] (1.75ns)   --->   "%store_ln187 = store i8 %trunc_ln9, i5 %lin_frame_addr_6" [dlin.c:187]   --->   Operation 166 'store' 'store_ln187' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+
+State 38 <SV = 23> <Delay = 1.75>
+ST_38 : Operation 167 [1/1] (0.00ns)   --->   "%lin_frame_addr_7 = getelementptr i8 %lin_frame, i32 0, i32 6" [dlin.c:188]   --->   Operation 167 'getelementptr' 'lin_frame_addr_7' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 168 [1/1] (1.75ns)   --->   "%store_ln188 = store i8 %trunc_ln1, i5 %lin_frame_addr_7" [dlin.c:188]   --->   Operation 168 'store' 'store_ln188' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_38 : Operation 169 [1/1] (0.00ns)   --->   "%lin_frame_addr_8 = getelementptr i8 %lin_frame, i32 0, i32 7" [dlin.c:189]   --->   Operation 169 'getelementptr' 'lin_frame_addr_8' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 170 [1/1] (1.75ns)   --->   "%store_ln189 = store i8 %trunc_ln189, i5 %lin_frame_addr_8" [dlin.c:189]   --->   Operation 170 'store' 'store_ln189' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+
+State 39 <SV = 24> <Delay = 1.75>
+ST_39 : Operation 171 [1/1] (0.00ns)   --->   "%lin_frame_addr_9 = getelementptr i8 %lin_frame, i32 0, i32 8" [dlin.c:190]   --->   Operation 171 'getelementptr' 'lin_frame_addr_9' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 172 [1/1] (1.75ns)   --->   "%store_ln190 = store i8 3, i5 %lin_frame_addr_9" [dlin.c:190]   --->   Operation 172 'store' 'store_ln190' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_39 : Operation 173 [1/1] (0.00ns)   --->   "%lin_frame_addr_10 = getelementptr i8 %lin_frame, i32 0, i32 9" [dlin.c:191]   --->   Operation 173 'getelementptr' 'lin_frame_addr_10' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 174 [1/1] (1.75ns)   --->   "%store_ln191 = store i8 %EN_cast, i5 %lin_frame_addr_10" [dlin.c:191]   --->   Operation 174 'store' 'store_ln191' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+
+State 40 <SV = 25> <Delay = 2.75>
+ST_40 : Operation 175 [1/1] (0.00ns)   --->   "%lin_frame_addr_11 = getelementptr i8 %lin_frame, i32 0, i32 10" [dlin.c:192]   --->   Operation 175 'getelementptr' 'lin_frame_addr_11' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 176 [1/1] (1.75ns)   --->   "%store_ln192 = store i8 0, i5 %lin_frame_addr_11" [dlin.c:192]   --->   Operation 176 'store' 'store_ln192' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_40 : Operation 177 [1/1] (0.99ns)   --->   "%add_ln193 = add i5 %zext_ln176, i5 4" [dlin.c:193]   --->   Operation 177 'add' 'add_ln193' <Predicate = true> <Delay = 0.99> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 178 [1/1] (0.00ns)   --->   "%zext_ln193 = zext i5 %add_ln193" [dlin.c:193]   --->   Operation 178 'zext' 'zext_ln193' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 179 [1/1] (0.00ns)   --->   "%lin_frame_addr_12 = getelementptr i8 %lin_frame, i32 0, i32 11" [dlin.c:193]   --->   Operation 179 'getelementptr' 'lin_frame_addr_12' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 180 [1/1] (1.75ns)   --->   "%store_ln193 = store i8 %zext_ln193, i5 %lin_frame_addr_12" [dlin.c:193]   --->   Operation 180 'store' 'store_ln193' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+
+State 41 <SV = 26> <Delay = 1.75>
+ST_41 : Operation 181 [1/1] (0.00ns)   --->   "%lin_frame_addr_13 = getelementptr i8 %lin_frame, i32 0, i32 12" [dlin.c:195]   --->   Operation 181 'getelementptr' 'lin_frame_addr_13' <Predicate = true> <Delay = 0.00>
+ST_41 : Operation 182 [1/1] (1.75ns)   --->   "%store_ln195 = store i8 0, i5 %lin_frame_addr_13" [dlin.c:195]   --->   Operation 182 'store' 'store_ln195' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_41 : Operation 183 [1/1] (0.00ns)   --->   "%PL_Data_load = load i6 %PL_Data" [dlin.c:196]   --->   Operation 183 'load' 'PL_Data_load' <Predicate = true> <Delay = 0.00>
+ST_41 : Operation 184 [1/1] (0.00ns)   --->   "%zext_ln196 = zext i6 %PL_Data_load" [dlin.c:196]   --->   Operation 184 'zext' 'zext_ln196' <Predicate = true> <Delay = 0.00>
+ST_41 : Operation 185 [1/1] (0.00ns)   --->   "%lin_frame_addr_14 = getelementptr i8 %lin_frame, i32 0, i32 13" [dlin.c:196]   --->   Operation 185 'getelementptr' 'lin_frame_addr_14' <Predicate = true> <Delay = 0.00>
+ST_41 : Operation 186 [1/1] (1.75ns)   --->   "%store_ln196 = store i8 %zext_ln196, i5 %lin_frame_addr_14" [dlin.c:196]   --->   Operation 186 'store' 'store_ln196' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+
+State 42 <SV = 27> <Delay = 1.75>
+ST_42 : Operation 187 [1/1] (0.00ns)   --->   "%zext_ln172 = zext i4 %lshr_ln" [dlin.c:172]   --->   Operation 187 'zext' 'zext_ln172' <Predicate = true> <Delay = 0.00>
+ST_42 : Operation 188 [1/1] (0.00ns)   --->   "%lin_frame_addr_15 = getelementptr i8 %lin_frame, i32 0, i32 14" [dlin.c:197]   --->   Operation 188 'getelementptr' 'lin_frame_addr_15' <Predicate = true> <Delay = 0.00>
+ST_42 : Operation 189 [1/1] (1.75ns)   --->   "%store_ln197 = store i8 0, i5 %lin_frame_addr_15" [dlin.c:197]   --->   Operation 189 'store' 'store_ln197' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+ST_42 : Operation 190 [1/1] (0.00ns)   --->   "%lin_frame_addr_16 = getelementptr i8 %lin_frame, i32 0, i32 15" [dlin.c:198]   --->   Operation 190 'getelementptr' 'lin_frame_addr_16' <Predicate = true> <Delay = 0.00>
+ST_42 : Operation 191 [1/1] (1.75ns)   --->   "%store_ln198 = store i8 %zext_ln172, i5 %lin_frame_addr_16" [dlin.c:198]   --->   Operation 191 'store' 'store_ln198' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 28> <RAM>
+
+State 43 <SV = 28> <Delay = 7.30>
+ST_43 : Operation 192 [2/2] (7.30ns)   --->   "%call_ln202 = call void @write_lin_ddr.1, i8 %ps_ddr, i32 %ddr_read, i8 %lin_frame, i16 %dropped_lin_counter" [dlin.c:202]   --->   Operation 192 'call' 'call_ln202' <Predicate = true> <Delay = 7.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 44 <SV = 29> <Delay = 0.00>
+ST_44 : Operation 193 [1/2] (0.00ns)   --->   "%call_ln202 = call void @write_lin_ddr.1, i8 %ps_ddr, i32 %ddr_read, i8 %lin_frame, i16 %dropped_lin_counter" [dlin.c:202]   --->   Operation 193 'call' 'call_ln202' <Predicate = (PLIN_Ctrl_run_state_load & !icmp_ln164 & icmp_ln167)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_44 : Operation 194 [1/1] (0.00ns)   --->   "%br_ln204 = br void %if.end102" [dlin.c:204]   --->   Operation 194 'br' 'br_ln204' <Predicate = (PLIN_Ctrl_run_state_load & !icmp_ln164 & icmp_ln167)> <Delay = 0.00>
+ST_44 : Operation 195 [1/1] (0.00ns)   --->   "%br_ln205 = br void %if.end103" [dlin.c:205]   --->   Operation 195 'br' 'br_ln205' <Predicate = (PLIN_Ctrl_run_state_load & !icmp_ln164)> <Delay = 0.00>
+ST_44 : Operation 196 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end104"   --->   Operation 196 'br' 'br_ln0' <Predicate = (PLIN_Ctrl_run_state_load)> <Delay = 0.00>
+ST_44 : Operation 197 [1/1] (0.00ns)   --->   "%br_ln207 = br void %cleanup" [dlin.c:207]   --->   Operation 197 'br' 'br_ln207' <Predicate = (trunc_ln140) | (PLIN_Ctrl_run_state_load)> <Delay = 0.00>
+ST_44 : Operation 198 [1/1] (0.00ns)   --->   "%ret_ln207 = ret" [dlin.c:207]   --->   Operation 198 'ret' 'ret_ln207' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1.3ns
+The critical path consists of the following:
+	'alloca' operation ('empty') [12]  (0 ns)
+	'store' operation ('store_ln138', dlin.c:138) of constant 0 on local variable 'empty' [21]  (1.3 ns)
+
+ <State 2>: 2.73ns
+The critical path consists of the following:
+	'load' operation ('p_load') on local variable 'empty' [24]  (0 ns)
+	'add' operation ('empty_66') [27]  (1.02 ns)
+	'store' operation ('store_ln0') of variable 'empty_66' on local variable 'empty' [33]  (1.3 ns)
+	blocking operation 0.414 ns on control path)
+
+ <State 3>: 7.3ns
+The critical path consists of the following:
+	'getelementptr' operation ('lin_addr_addr', dlin.c:81) [42]  (0 ns)
+	bus request operation ('lin_addr_load_req', dlin.c:81) on port 'lin_addr' (dlin.c:81) [43]  (7.3 ns)
+
+ <State 4>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('lin_addr_load_req', dlin.c:81) on port 'lin_addr' (dlin.c:81) [43]  (7.3 ns)
+
+ <State 5>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('lin_addr_load_req', dlin.c:81) on port 'lin_addr' (dlin.c:81) [43]  (7.3 ns)
+
+ <State 6>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('lin_addr_load_req', dlin.c:81) on port 'lin_addr' (dlin.c:81) [43]  (7.3 ns)
+
+ <State 7>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('lin_addr_load_req', dlin.c:81) on port 'lin_addr' (dlin.c:81) [43]  (7.3 ns)
+
+ <State 8>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('lin_addr_load_req', dlin.c:81) on port 'lin_addr' (dlin.c:81) [43]  (7.3 ns)
+
+ <State 9>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('lin_addr_load_req', dlin.c:81) on port 'lin_addr' (dlin.c:81) [43]  (7.3 ns)
+
+ <State 10>: 8.1ns
+The critical path consists of the following:
+	bus read operation ('lin_addr_addr_read', dlin.c:81) on port 'lin_addr' (dlin.c:81) [44]  (7.3 ns)
+	blocking operation 0.8 ns on control path)
+
+ <State 11>: 7.3ns
+The critical path consists of the following:
+	'getelementptr' operation ('lin_addr_addr_1', dlin.c:81) [53]  (0 ns)
+	bus request operation ('lin_addr_load_1_req', dlin.c:81) on port 'lin_addr' (dlin.c:81) [54]  (7.3 ns)
+
+ <State 12>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('lin_addr_load_1_req', dlin.c:81) on port 'lin_addr' (dlin.c:81) [54]  (7.3 ns)
+
+ <State 13>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('lin_addr_load_1_req', dlin.c:81) on port 'lin_addr' (dlin.c:81) [54]  (7.3 ns)
+
+ <State 14>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('lin_addr_load_1_req', dlin.c:81) on port 'lin_addr' (dlin.c:81) [54]  (7.3 ns)
+
+ <State 15>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('lin_addr_load_1_req', dlin.c:81) on port 'lin_addr' (dlin.c:81) [54]  (7.3 ns)
+
+ <State 16>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('lin_addr_load_1_req', dlin.c:81) on port 'lin_addr' (dlin.c:81) [54]  (7.3 ns)
+
+ <State 17>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('lin_addr_load_1_req', dlin.c:81) on port 'lin_addr' (dlin.c:81) [54]  (7.3 ns)
+
+ <State 18>: 7.3ns
+The critical path consists of the following:
+	bus read operation ('lin_addr_addr_1_read', dlin.c:81) on port 'lin_addr' (dlin.c:81) [55]  (7.3 ns)
+
+ <State 19>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('lin_addr_addr_2_resp', dlin.c:87) on port 'lin_addr' (dlin.c:87) [64]  (7.3 ns)
+
+ <State 20>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('lin_addr_addr_2_resp', dlin.c:87) on port 'lin_addr' (dlin.c:87) [64]  (7.3 ns)
+
+ <State 21>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('lin_addr_addr_2_resp', dlin.c:87) on port 'lin_addr' (dlin.c:87) [64]  (7.3 ns)
+
+ <State 22>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('lin_addr_addr_2_resp', dlin.c:87) on port 'lin_addr' (dlin.c:87) [64]  (7.3 ns)
+
+ <State 23>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('lin_addr_addr_2_resp', dlin.c:87) on port 'lin_addr' (dlin.c:87) [64]  (7.3 ns)
+
+ <State 24>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('lin_addr_addr_resp', dlin.c:87) on port 'lin_addr' (dlin.c:87) [67]  (7.3 ns)
+
+ <State 25>: 2.73ns
+The critical path consists of the following:
+	'add' operation ('add_ln87_1', dlin.c:87) [81]  (1.9 ns)
+	blocking operation 0.839 ns on control path)
+
+ <State 26>: 7.3ns
+The critical path consists of the following:
+	'getelementptr' operation ('lin_addr_addr_3', dlin.c:87) [84]  (0 ns)
+	bus request operation ('lin_addr_addr_3_req', dlin.c:87) on port 'lin_addr' (dlin.c:87) [85]  (7.3 ns)
+
+ <State 27>: 7.3ns
+The critical path consists of the following:
+	bus write operation ('write_ln87', dlin.c:87) on port 'lin_addr' (dlin.c:87) [86]  (7.3 ns)
+
+ <State 28>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('lin_addr_addr_3_resp', dlin.c:87) on port 'lin_addr' (dlin.c:87) [87]  (7.3 ns)
+
+ <State 29>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('lin_addr_addr_3_resp', dlin.c:87) on port 'lin_addr' (dlin.c:87) [87]  (7.3 ns)
+
+ <State 30>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('lin_addr_addr_3_resp', dlin.c:87) on port 'lin_addr' (dlin.c:87) [87]  (7.3 ns)
+
+ <State 31>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('lin_addr_addr_3_resp', dlin.c:87) on port 'lin_addr' (dlin.c:87) [87]  (7.3 ns)
+
+ <State 32>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('lin_addr_addr_3_resp', dlin.c:87) on port 'lin_addr' (dlin.c:87) [87]  (7.3 ns)
+
+ <State 33>: 3.27ns
+The critical path consists of the following:
+	'add' operation ('add_ln176', dlin.c:176) [89]  (0.997 ns)
+	'call' operation ('call_ln81', dlin.c:81) to 'single_lin_process.1_Pipeline_VITIS_LOOP_176_1' [91]  (2.28 ns)
+
+ <State 34>: 0ns
+The critical path consists of the following:
+
+ <State 35>: 1.75ns
+The critical path consists of the following:
+	'store' operation ('store_ln182', dlin.c:182) of variable 'trunc_ln4', dlin.c:182 on array 'lin_frame', dlin.c:138 [94]  (1.75 ns)
+
+ <State 36>: 1.75ns
+The critical path consists of the following:
+	'getelementptr' operation ('lin_frame_addr_3', dlin.c:184) [99]  (0 ns)
+	'store' operation ('store_ln184', dlin.c:184) of variable 'trunc_ln6', dlin.c:184 on array 'lin_frame', dlin.c:138 [100]  (1.75 ns)
+
+ <State 37>: 1.75ns
+The critical path consists of the following:
+	'getelementptr' operation ('lin_frame_addr_5', dlin.c:186) [105]  (0 ns)
+	'store' operation ('store_ln186', dlin.c:186) of variable 'trunc_ln8', dlin.c:186 on array 'lin_frame', dlin.c:138 [106]  (1.75 ns)
+
+ <State 38>: 1.75ns
+The critical path consists of the following:
+	'getelementptr' operation ('lin_frame_addr_7', dlin.c:188) [111]  (0 ns)
+	'store' operation ('store_ln188', dlin.c:188) of variable 'trunc_ln1', dlin.c:188 on array 'lin_frame', dlin.c:138 [112]  (1.75 ns)
+
+ <State 39>: 1.75ns
+The critical path consists of the following:
+	'getelementptr' operation ('lin_frame_addr_9', dlin.c:190) [116]  (0 ns)
+	'store' operation ('store_ln190', dlin.c:190) of constant 3 on array 'lin_frame', dlin.c:138 [117]  (1.75 ns)
+
+ <State 40>: 2.75ns
+The critical path consists of the following:
+	'add' operation ('add_ln193', dlin.c:193) [122]  (0.997 ns)
+	'store' operation ('store_ln193', dlin.c:193) of variable 'zext_ln193', dlin.c:193 on array 'lin_frame', dlin.c:138 [125]  (1.75 ns)
+
+ <State 41>: 1.75ns
+The critical path consists of the following:
+	'getelementptr' operation ('lin_frame_addr_13', dlin.c:195) [126]  (0 ns)
+	'store' operation ('store_ln195', dlin.c:195) of constant 0 on array 'lin_frame', dlin.c:138 [127]  (1.75 ns)
+
+ <State 42>: 1.75ns
+The critical path consists of the following:
+	'getelementptr' operation ('lin_frame_addr_15', dlin.c:197) [132]  (0 ns)
+	'store' operation ('store_ln197', dlin.c:197) of constant 0 on array 'lin_frame', dlin.c:138 [133]  (1.75 ns)
+
+ <State 43>: 7.3ns
+The critical path consists of the following:
+	'call' operation ('call_ln202', dlin.c:202) to 'write_lin_ddr.1' [140]  (7.3 ns)
+
+ <State 44>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
