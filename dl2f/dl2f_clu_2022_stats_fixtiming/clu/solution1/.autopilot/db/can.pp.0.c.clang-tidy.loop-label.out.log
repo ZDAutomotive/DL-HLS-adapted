@@ -1,0 +1,15 @@
+D:\HLS\dl2f\dl2f_clu_2022_stats_fixtiming\clu\solution1\.autopilot\db\can.pp.0.c:1271:4: warning: Added loop label VITIS_LOOP_223_1:   [xilinx-label-all-loops]
+   for (int Len = 0;Len < Dlc;Len += 4) {
+   ^~~
+   VITIS_LOOP_223_1: 
+D:\HLS\dl2f\dl2f_clu_2022_stats_fixtiming\clu\solution1\.autopilot\db\can.pp.0.c:1271:4: note: FIX-IT applied suggested code changes
+D:\HLS\dl2f\dl2f_clu_2022_stats_fixtiming\clu\solution1\.autopilot\db\can.pp.0.c:1286:4: warning: Added loop label VITIS_LOOP_238_2:   [xilinx-label-all-loops]
+   for (int Len = 0;Len < Dlc;Len += 4) {
+   ^~~
+   VITIS_LOOP_238_2: 
+D:\HLS\dl2f\dl2f_clu_2022_stats_fixtiming\clu\solution1\.autopilot\db\can.pp.0.c:1286:4: note: FIX-IT applied suggested code changes
+D:\HLS\dl2f\dl2f_clu_2022_stats_fixtiming\clu\solution1\.autopilot\db\can.pp.0.c:1385:2: warning: Added loop label VITIS_LOOP_337_1:   [xilinx-label-all-loops]
+ for (int jj = 0; jj < 12; jj++){
+ ^~~
+ VITIS_LOOP_337_1: 
+D:\HLS\dl2f\dl2f_clu_2022_stats_fixtiming\clu\solution1\.autopilot\db\can.pp.0.c:1385:2: note: FIX-IT applied suggested code changes

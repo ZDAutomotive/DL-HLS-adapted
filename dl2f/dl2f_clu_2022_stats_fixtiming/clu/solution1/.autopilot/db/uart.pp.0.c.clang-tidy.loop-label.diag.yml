@@ -1,0 +1,13 @@
+---
+MainSourceFile:  'D:/HLS/dl2f/dl2f_clu_2022_stats_fixtiming/clu/solution1/.autopilot/db/uart.pp.0.c'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_240_1:  '
+    FileOffset:      240
+    FilePath:        uart.c
+    Replacements:    
+      - FilePath:        'D:\HLS\dl2f\dl2f_clu_2022_stats_fixtiming\clu\solution1\.autopilot\db\uart.pp.0.c'
+        Offset:          64540
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_240_1: '
+...

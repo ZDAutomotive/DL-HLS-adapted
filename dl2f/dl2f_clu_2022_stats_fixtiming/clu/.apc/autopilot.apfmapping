@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="uart.c" path="D:\HLS\dl2f\dl2f_clu_2022_stats_fixtiming\uart.c"/>
+    <originFiles name="dlin.c" path="D:\HLS\dl2f\dl2f_clu_2022_stats_fixtiming\dlin.c"/>
+    <originFiles name="clu.h" path="D:\HLS\dl2f\dl2f_clu_2022_stats_fixtiming\clu.h"/>
+    <originFiles name="clu.c" path="D:\HLS\dl2f\dl2f_clu_2022_stats_fixtiming\clu.c"/>
+    <originFiles name="can.h" path="D:\HLS\dl2f\dl2f_clu_2022_stats_fixtiming\can.h"/>
+    <originFiles name="can.c" path="D:\HLS\dl2f\dl2f_clu_2022_stats_fixtiming\can.c"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

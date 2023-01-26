@@ -1,0 +1,1028 @@
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: clu/can.c, Line: 97, Column: 0 }
+Function:        write_ddr
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          update_write_index
+    DebugLoc:        { File: clu/clu.c, Line: 11, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          write_ddr
+    DebugLoc:        { File: clu/can.c, Line: 97, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: clu/can.c, Line: 145, Column: 0 }
+Function:        recvFrame_logic
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          XCanFd_GetDlc2len
+    DebugLoc:        { File: clu/can.c, Line: 24, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          recvFrame_logic
+    DebugLoc:        { File: clu/can.c, Line: 145, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: clu/can.c, Line: 273, Column: 0 }
+Function:        can
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          CanFd_Recv_Sequential
+    DebugLoc:        { File: clu/can.c, Line: 247, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          can
+    DebugLoc:        { File: clu/can.c, Line: 273, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: clu/dlin.c, Line: 94, Column: 0 }
+Function:        write_lin_ddr
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          update_write_index
+    DebugLoc:        { File: clu/clu.c, Line: 11, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          write_lin_ddr
+    DebugLoc:        { File: clu/dlin.c, Line: 94, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: clu/dlin.c, Line: 135, Column: 0 }
+Function:        single_lin_process
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          write_lin_reg
+    DebugLoc:        { File: clu/dlin.c, Line: 88, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          single_lin_process
+    DebugLoc:        { File: clu/dlin.c, Line: 135, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: clu/dlin.c, Line: 255, Column: 0 }
+Function:        dlin
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          dlin_FSM
+    DebugLoc:        { File: clu/dlin.c, Line: 216, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          dlin
+    DebugLoc:        { File: clu/dlin.c, Line: 255, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: clu/clu.c, Line: 27, Column: 0 }
+Function:        clu
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          can
+    DebugLoc:        { File: clu/can.c, Line: 273, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          clu
+    DebugLoc:        { File: clu/clu.c, Line: 27, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: clu/clu.c, Line: 27, Column: 0 }
+Function:        clu
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          dlin
+    DebugLoc:        { File: clu/dlin.c, Line: 255, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          clu
+    DebugLoc:        { File: clu/clu.c, Line: 27, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: clu/can.c, Line: 103, Column: 2 }
+Function:        write_ddr
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '28'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          load-store-loop3.load.3
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        ddr_headerseq
+  - String:          ' '
+  - ArrayName:       ddr_header
+  - String:          ' '
+  - BundleName:      ps_ddr
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'clu/can.c:103:2'
+  - String:          ' '
+  - Function:        write_ddr
+    DebugLoc:        { File: clu/can.c, Line: 97, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: clu/can.c, Line: 126, Column: 3 }
+Function:        write_ddr
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '92'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          load-store-loop.store.6
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       ddr_header
+  - String:          ' '
+  - BundleName:      ps_ddr
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'clu/can.c:126:3'
+  - String:          ' '
+  - Function:        write_ddr
+    DebugLoc:        { File: clu/can.c, Line: 97, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: clu/clu.c, Line: 18, Column: 2 }
+Function:        write_ddr
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '4'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          load-store-loop.i.store.6
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep7seq
+  - String:          ' '
+  - ArrayName:       ddr_header
+  - String:          ' '
+  - BundleName:      ps_ddr
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'clu/clu.c:18:2'
+  - String:          ' '
+  - Function:        write_ddr
+    DebugLoc:        { File: clu/can.c, Line: 97, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: clu/can.c, Line: 120, Column: 21 }
+Function:        write_ddr
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        if.then.store.5
+  - String:          ' '
+  - ArrayName:       ddr_header
+  - String:          ' '
+  - BundleName:      ps_ddr
+  - String:          ' '
+  - Function:        write_ddr
+    DebugLoc:        { File: clu/can.c, Line: 97, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: clu/can.c, Line: 150, Column: 15 }
+Function:        recvFrame_logic
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        split.load.5
+  - String:          ' '
+  - ArrayName:       canbase
+  - String:          ' '
+  - BundleName:      can_addr
+  - String:          ' '
+  - Function:        recvFrame_logic
+    DebugLoc:        { File: clu/can.c, Line: 145, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: clu/can.c, Line: 173, Column: 14 }
+Function:        recvFrame_logic
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        if.end.load.25
+  - String:          ' '
+  - ArrayName:       canbase
+  - String:          ' '
+  - BundleName:      can_addr
+  - String:          ' '
+  - Function:        recvFrame_logic
+    DebugLoc:        { File: clu/can.c, Line: 145, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: clu/can.c, Line: 209, Column: 13 }
+Function:        recvFrame_logic
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.inc.load.10
+  - String:          ' '
+  - ArrayName:       canbase
+  - String:          ' '
+  - BundleName:      can_addr
+  - String:          ' '
+  - Function:        recvFrame_logic
+    DebugLoc:        { File: clu/can.c, Line: 145, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: clu/can.c, Line: 223, Column: 13 }
+Function:        recvFrame_logic
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.inc189.load.8
+  - String:          ' '
+  - ArrayName:       canbase
+  - String:          ' '
+  - BundleName:      can_addr
+  - String:          ' '
+  - Function:        recvFrame_logic
+    DebugLoc:        { File: clu/can.c, Line: 145, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: clu/can.c, Line: 234, Column: 17 }
+Function:        recvFrame_logic
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        if.end192.store.3
+  - String:          ' '
+  - ArrayName:       received_can
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        recvFrame_logic
+    DebugLoc:        { File: clu/can.c, Line: 145, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: clu/can.c, Line: 236, Column: 12 }
+Function:        recvFrame_logic
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        if.end192.load.6
+  - String:          ' '
+  - ArrayName:       canbase
+  - String:          ' '
+  - BundleName:      can_addr
+  - String:          ' '
+  - Function:        recvFrame_logic
+    DebugLoc:        { File: clu/can.c, Line: 145, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: clu/can.c, Line: 238, Column: 26 }
+Function:        recvFrame_logic
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        if.end192.store.10
+  - String:          ' '
+  - ArrayName:       canbase
+  - String:          ' '
+  - BundleName:      can_addr
+  - String:          ' '
+  - Function:        recvFrame_logic
+    DebugLoc:        { File: clu/can.c, Line: 145, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: clu/can.c, Line: 251, Column: 16 }
+Function:        clu
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        if.then.i.i.load.6
+  - String:          ' '
+  - ArrayName:       can_ptr
+  - String:          ' '
+  - BundleName:      can_addr
+  - String:          ' '
+  - Function:        clu
+    DebugLoc:        { File: clu/clu.c, Line: 27, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: clu/dlin.c, Line: 178, Column: 23 }
+Function:        single_lin_process
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_178_1
+  - String:          ' '
+  - LoopLoc:         'clu/dlin.c:178:23'
+  - String:          ' '
+  - Function:        single_lin_process
+    DebugLoc:        { File: clu/dlin.c, Line: 135, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: clu/dlin.c, Line: 203, Column: 19 }
+Function:        single_lin_process
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.end.store.64
+  - String:          ' '
+  - ArrayName:       received_lin
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        single_lin_process
+    DebugLoc:        { File: clu/dlin.c, Line: 135, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: clu/dlin.c, Line: 89, Column: 29 }
+Function:        single_lin_process
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        if.then23.store.8
+  - String:          ' '
+  - ArrayName:       linbase
+  - String:          ' '
+  - BundleName:      lin_addr
+  - String:          ' '
+  - Function:        single_lin_process
+    DebugLoc:        { File: clu/dlin.c, Line: 135, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: clu/dlin.c, Line: 89, Column: 29 }
+Function:        single_lin_process
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        if.then3.store.8
+  - String:          ' '
+  - ArrayName:       linbase
+  - String:          ' '
+  - BundleName:      lin_addr
+  - String:          ' '
+  - Function:        single_lin_process
+    DebugLoc:        { File: clu/dlin.c, Line: 135, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: clu/dlin.c, Line: 89, Column: 29 }
+Function:        single_lin_process
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        if.then3.store.13
+  - String:          ' '
+  - ArrayName:       linbase
+  - String:          ' '
+  - BundleName:      lin_addr
+  - String:          ' '
+  - Function:        single_lin_process
+    DebugLoc:        { File: clu/dlin.c, Line: 135, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: clu/dlin.c, Line: 83, Column: 24 }
+Function:        read_lin_reg
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        entry.load.7
+  - String:          ' '
+  - ArrayName:       lin_reg
+  - String:          ' '
+  - BundleName:      lin_addr,lin_addr,lin_addr,lin_addr,lin_addr,lin_addr
+  - String:          ' '
+  - Function:        read_lin_reg
+    DebugLoc:        { File: clu/dlin.c, Line: 80, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: clu/dlin.c, Line: 100, Column: 2 }
+Function:        write_lin_ddr
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '28'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          load-store-loop3.load.3
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        ddr_headerseq
+  - String:          ' '
+  - ArrayName:       ddr_header
+  - String:          ' '
+  - BundleName:      ps_ddr
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'clu/dlin.c:100:2'
+  - String:          ' '
+  - Function:        write_lin_ddr
+    DebugLoc:        { File: clu/dlin.c, Line: 94, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: clu/dlin.c, Line: 122, Column: 3 }
+Function:        write_lin_ddr
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '28'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          load-store-loop.store.6
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       ddr_header
+  - String:          ' '
+  - BundleName:      ps_ddr
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'clu/dlin.c:122:3'
+  - String:          ' '
+  - Function:        write_lin_ddr
+    DebugLoc:        { File: clu/dlin.c, Line: 94, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: clu/clu.c, Line: 18, Column: 2 }
+Function:        write_lin_ddr
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '4'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          load-store-loop.i.store.6
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep7seq
+  - String:          ' '
+  - ArrayName:       ddr_header
+  - String:          ' '
+  - BundleName:      ps_ddr
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'clu/clu.c:18:2'
+  - String:          ' '
+  - Function:        write_lin_ddr
+    DebugLoc:        { File: clu/dlin.c, Line: 94, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: clu/dlin.c, Line: 117, Column: 21 }
+Function:        write_lin_ddr
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        if.then.store.5
+  - String:          ' '
+  - ArrayName:       ddr_header
+  - String:          ' '
+  - BundleName:      ps_ddr
+  - String:          ' '
+  - Function:        write_lin_ddr
+    DebugLoc:        { File: clu/dlin.c, Line: 94, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: clu/clu.c, Line: 18, Column: 2 }
+Function:        write_ddr
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep7seq
+  - String:          ' '
+  - ArrayName:       ddr_header
+  - String:          ' '
+  - BundleName:      ps_ddr
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'clu/clu.c:18:2'
+  - String:          ' '
+  - Function:        write_ddr
+    DebugLoc:        { File: clu/can.c, Line: 97, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: clu/can.c, Line: 126, Column: 3 }
+Function:        write_ddr
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       ddr_header
+  - String:          ' '
+  - BundleName:      ps_ddr
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'clu/can.c:126:3'
+  - String:          ' '
+  - Function:        write_ddr
+    DebugLoc:        { File: clu/can.c, Line: 97, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: clu/can.c, Line: 103, Column: 2 }
+Function:        write_ddr
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        ddr_headerseq
+  - String:          ' '
+  - ArrayName:       ddr_header
+  - String:          ' '
+  - BundleName:      ps_ddr
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'clu/can.c:103:2'
+  - String:          ' '
+  - Function:        write_ddr
+    DebugLoc:        { File: clu/can.c, Line: 97, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: clu/clu.c, Line: 18, Column: 2 }
+Function:        write_lin_ddr
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep7seq
+  - String:          ' '
+  - ArrayName:       ddr_header
+  - String:          ' '
+  - BundleName:      ps_ddr
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'clu/clu.c:18:2'
+  - String:          ' '
+  - Function:        write_lin_ddr
+    DebugLoc:        { File: clu/dlin.c, Line: 94, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: clu/dlin.c, Line: 122, Column: 3 }
+Function:        write_lin_ddr
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       ddr_header
+  - String:          ' '
+  - BundleName:      ps_ddr
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'clu/dlin.c:122:3'
+  - String:          ' '
+  - Function:        write_lin_ddr
+    DebugLoc:        { File: clu/dlin.c, Line: 94, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: clu/dlin.c, Line: 100, Column: 2 }
+Function:        write_lin_ddr
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        ddr_headerseq
+  - String:          ' '
+  - ArrayName:       ddr_header
+  - String:          ' '
+  - BundleName:      ps_ddr
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'clu/dlin.c:100:2'
+  - String:          ' '
+  - Function:        write_lin_ddr
+    DebugLoc:        { File: clu/dlin.c, Line: 94, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: clu/can.c, Line: 103, Column: 2 }
+Function:        write_ddr.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '28'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      ps_ddr
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'clu/can.c:103:2'
+  - String:          ' '
+  - Function:        write_ddr.1
+    DebugLoc:        { File: clu/can.c, Line: 97, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: clu/can.c, Line: 103, Column: 2 }
+Function:        write_ddr.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '28'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         'clu/can.c:103:2'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      ps_ddr
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: clu/can.c, Line: 126, Column: 3 }
+Function:        write_ddr.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '92'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      ps_ddr
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'clu/can.c:126:3'
+  - String:          ' '
+  - Function:        write_ddr.1
+    DebugLoc:        { File: clu/can.c, Line: 97, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: clu/can.c, Line: 126, Column: 3 }
+Function:        write_ddr.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '92'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         'clu/can.c:126:3'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      ps_ddr
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: clu/clu.c, Line: 18, Column: 2 }
+Function:        write_ddr.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '4'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      ps_ddr
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'clu/clu.c:18:2'
+  - String:          ' '
+  - Function:        write_ddr.1
+    DebugLoc:        { File: clu/can.c, Line: 97, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: clu/clu.c, Line: 18, Column: 2 }
+Function:        write_ddr.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '4'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         'clu/clu.c:18:2'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      ps_ddr
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: clu/dlin.c, Line: 100, Column: 2 }
+Function:        write_lin_ddr.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '28'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      ps_ddr
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'clu/dlin.c:100:2'
+  - String:          ' '
+  - Function:        write_lin_ddr.1
+    DebugLoc:        { File: clu/dlin.c, Line: 94, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: clu/dlin.c, Line: 100, Column: 2 }
+Function:        write_lin_ddr.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '28'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         'clu/dlin.c:100:2'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      ps_ddr
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: clu/dlin.c, Line: 122, Column: 3 }
+Function:        write_lin_ddr.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '28'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      ps_ddr
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'clu/dlin.c:122:3'
+  - String:          ' '
+  - Function:        write_lin_ddr.1
+    DebugLoc:        { File: clu/dlin.c, Line: 94, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: clu/dlin.c, Line: 122, Column: 3 }
+Function:        write_lin_ddr.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '28'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         'clu/dlin.c:122:3'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      ps_ddr
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: clu/clu.c, Line: 18, Column: 2 }
+Function:        write_lin_ddr.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '4'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      ps_ddr
+  - String:          ' '
+  - LoopName:        anonymous
+  - String:          ' '
+  - LoopLoc:         'clu/clu.c:18:2'
+  - String:          ' '
+  - Function:        write_lin_ddr.1
+    DebugLoc:        { File: clu/dlin.c, Line: 94, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: clu/clu.c, Line: 18, Column: 2 }
+Function:        write_lin_ddr.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '4'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        anonymous
+  - String:          '''('
+  - LoopLoc:         'clu/clu.c:18:2'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      ps_ddr
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

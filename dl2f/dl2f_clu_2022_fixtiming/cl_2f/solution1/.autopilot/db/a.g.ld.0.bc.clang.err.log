@@ -1,0 +1,48 @@
+remark: clu/can.c:97:0: Inlining function 'update_write_index' into 'write_ddr'
+remark: clu/can.c:145:0: Inlining function 'XCanFd_GetDlc2len' into 'recvFrame_logic'
+remark: clu/can.c:273:0: Inlining function 'CanFd_Recv_Sequential' into 'can'
+remark: clu/dlin.c:94:0: Inlining function 'update_write_index' into 'write_lin_ddr'
+remark: clu/dlin.c:135:0: Inlining function 'write_lin_reg' into 'single_lin_process'
+remark: clu/dlin.c:255:0: Inlining function 'dlin_FSM' into 'dlin'
+remark: clu/clu.c:27:0: Inlining function 'can' into 'clu'
+remark: clu/clu.c:27:0: Inlining function 'dlin' into 'clu'
+remark: clu/can.c:103:2: Sequential read of length 28 has been inferred _XLX_SEP_ OldID=load-store-loop3.load.3,  _XLX_SEP_ ddr_headerseq ddr_header ps_ddr anonymous clu/can.c:103:2 write_ddr 
+remark: clu/can.c:126:3: Sequential write of length 92 has been inferred _XLX_SEP_ OldID=load-store-loop.store.6,  _XLX_SEP_ scevgepseq ddr_header ps_ddr anonymous clu/can.c:126:3 write_ddr 
+remark: clu/clu.c:18:2: Sequential write of length 4 has been inferred _XLX_SEP_ OldID=load-store-loop.i.store.6,  _XLX_SEP_ scevgep7seq ddr_header ps_ddr anonymous clu/clu.c:18:2 write_ddr 
+remark: clu/can.c:120:21: Volatile or Atomic access cannot be transformed _XLX_SEP_ if.then.store.5 ddr_header ps_ddr write_ddr 
+remark: clu/can.c:150:15: Volatile or Atomic access cannot be transformed _XLX_SEP_ split.load.5 canbase can_addr recvFrame_logic 
+remark: clu/can.c:173:14: Volatile or Atomic access cannot be transformed _XLX_SEP_ if.end.load.25 canbase can_addr recvFrame_logic 
+remark: clu/can.c:209:13: Volatile or Atomic access cannot be transformed _XLX_SEP_ for.inc.load.10 canbase can_addr recvFrame_logic 
+remark: clu/can.c:223:13: Volatile or Atomic access cannot be transformed _XLX_SEP_ for.inc189.load.8 canbase can_addr recvFrame_logic 
+remark: clu/can.c:234:17: Volatile or Atomic access cannot be transformed _XLX_SEP_ if.end192.store.3 received_can  recvFrame_logic 
+remark: clu/can.c:236:12: Volatile or Atomic access cannot be transformed _XLX_SEP_ if.end192.load.6 canbase can_addr recvFrame_logic 
+remark: clu/can.c:238:26: Volatile or Atomic access cannot be transformed _XLX_SEP_ if.end192.store.10 canbase can_addr recvFrame_logic 
+remark: clu/can.c:251:16: Volatile or Atomic access cannot be transformed _XLX_SEP_ if.then.i.i.load.6 can_ptr can_addr clu 
+remark: clu/dlin.c:178:23: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_178_1 clu/dlin.c:178:23 single_lin_process 
+remark: clu/dlin.c:203:19: Volatile or Atomic access cannot be transformed _XLX_SEP_ for.end.store.64 received_lin  single_lin_process 
+remark: clu/dlin.c:89:29: Volatile or Atomic access cannot be transformed _XLX_SEP_ if.then23.store.8 linbase lin_addr single_lin_process 
+remark: clu/dlin.c:89:29: Volatile or Atomic access cannot be transformed _XLX_SEP_ if.then3.store.8 linbase lin_addr single_lin_process 
+remark: clu/dlin.c:89:29: Volatile or Atomic access cannot be transformed _XLX_SEP_ if.then3.store.13 linbase lin_addr single_lin_process 
+remark: clu/dlin.c:83:24: Volatile or Atomic access cannot be transformed _XLX_SEP_ entry.load.7 lin_reg lin_addr,lin_addr,lin_addr,lin_addr,lin_addr,lin_addr read_lin_reg 
+remark: clu/dlin.c:100:2: Sequential read of length 28 has been inferred _XLX_SEP_ OldID=load-store-loop3.load.3,  _XLX_SEP_ ddr_headerseq ddr_header ps_ddr anonymous clu/dlin.c:100:2 write_lin_ddr 
+remark: clu/dlin.c:122:3: Sequential write of length 28 has been inferred _XLX_SEP_ OldID=load-store-loop.store.6,  _XLX_SEP_ scevgepseq ddr_header ps_ddr anonymous clu/dlin.c:122:3 write_lin_ddr 
+remark: clu/clu.c:18:2: Sequential write of length 4 has been inferred _XLX_SEP_ OldID=load-store-loop.i.store.6,  _XLX_SEP_ scevgep7seq ddr_header ps_ddr anonymous clu/clu.c:18:2 write_lin_ddr 
+remark: clu/dlin.c:117:21: Volatile or Atomic access cannot be transformed _XLX_SEP_ if.then.store.5 ddr_header ps_ddr write_lin_ddr 
+remark: clu/clu.c:18:2: Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 _XLX_SEP_ scevgep7seq ddr_header ps_ddr anonymous clu/clu.c:18:2 write_ddr 
+remark: clu/can.c:126:3: Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 _XLX_SEP_ scevgepseq ddr_header ps_ddr anonymous clu/can.c:126:3 write_ddr 
+remark: clu/can.c:103:2: Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 _XLX_SEP_ ddr_headerseq ddr_header ps_ddr anonymous clu/can.c:103:2 write_ddr 
+remark: clu/clu.c:18:2: Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 _XLX_SEP_ scevgep7seq ddr_header ps_ddr anonymous clu/clu.c:18:2 write_lin_ddr 
+remark: clu/dlin.c:122:3: Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 _XLX_SEP_ scevgepseq ddr_header ps_ddr anonymous clu/dlin.c:122:3 write_lin_ddr 
+remark: clu/dlin.c:100:2: Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 _XLX_SEP_ ddr_headerseq ddr_header ps_ddr anonymous clu/dlin.c:100:2 write_lin_ddr 
+remark: clu/can.c:103:2: Multiple burst reads of length 28 and bit width 8 has been inferred. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. _XLX_SEP_ seq  ps_ddr anonymous clu/can.c:103:2 write_ddr.1 
+remark: clu/can.c:103:2: Multiple burst reads of length 28 and bit width 8 in loop 'anonymous'(clu/can.c:103:2) has been inferred on bundle 'ps_ddr'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+remark: clu/can.c:126:3: Multiple burst writes of length 92 and bit width 8 has been inferred. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. _XLX_SEP_ seq1  ps_ddr anonymous clu/can.c:126:3 write_ddr.1 
+remark: clu/can.c:126:3: Multiple burst writes of length 92 and bit width 8 in loop 'anonymous'(clu/can.c:126:3) has been inferred on bundle 'ps_ddr'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+remark: clu/clu.c:18:2: Multiple burst writes of length 4 and bit width 8 has been inferred. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. _XLX_SEP_ seq2  ps_ddr anonymous clu/clu.c:18:2 write_ddr.1 
+remark: clu/clu.c:18:2: Multiple burst writes of length 4 and bit width 8 in loop 'anonymous'(clu/clu.c:18:2) has been inferred on bundle 'ps_ddr'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+remark: clu/dlin.c:100:2: Multiple burst reads of length 28 and bit width 8 has been inferred. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. _XLX_SEP_ seq  ps_ddr anonymous clu/dlin.c:100:2 write_lin_ddr.1 
+remark: clu/dlin.c:100:2: Multiple burst reads of length 28 and bit width 8 in loop 'anonymous'(clu/dlin.c:100:2) has been inferred on bundle 'ps_ddr'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+remark: clu/dlin.c:122:3: Multiple burst writes of length 28 and bit width 8 has been inferred. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. _XLX_SEP_ seq1  ps_ddr anonymous clu/dlin.c:122:3 write_lin_ddr.1 
+remark: clu/dlin.c:122:3: Multiple burst writes of length 28 and bit width 8 in loop 'anonymous'(clu/dlin.c:122:3) has been inferred on bundle 'ps_ddr'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+remark: clu/clu.c:18:2: Multiple burst writes of length 4 and bit width 8 has been inferred. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. _XLX_SEP_ seq2  ps_ddr anonymous clu/clu.c:18:2 write_lin_ddr.1 
+remark: clu/clu.c:18:2: Multiple burst writes of length 4 and bit width 8 in loop 'anonymous'(clu/clu.c:18:2) has been inferred on bundle 'ps_ddr'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.

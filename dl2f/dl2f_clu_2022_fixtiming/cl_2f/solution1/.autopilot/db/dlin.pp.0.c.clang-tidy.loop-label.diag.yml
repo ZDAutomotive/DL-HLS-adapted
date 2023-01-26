@@ -1,0 +1,22 @@
+---
+MainSourceFile:  'D:/HLS/dl2f/ng-datalogger-hls-master/cl_2f/solution1/.autopilot/db/dlin.pp.0.c'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_178_1:  '
+    FileOffset:      178
+    FilePath:        'D:\HLS\dl2f\ng-datalogger-hls-master\clu\dlin.c'
+    Replacements:    
+      - FilePath:        'D:\HLS\dl2f\ng-datalogger-hls-master\cl_2f\solution1\.autopilot\db\dlin.pp.0.c'
+        Offset:          60872
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_178_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_258_1:  '
+    FileOffset:      258
+    FilePath:        'D:\HLS\dl2f\ng-datalogger-hls-master\clu\dlin.c'
+    Replacements:    
+      - FilePath:        'D:\HLS\dl2f\ng-datalogger-hls-master\cl_2f\solution1\.autopilot\db\dlin.pp.0.c'
+        Offset:          62694
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_258_1: '
+...

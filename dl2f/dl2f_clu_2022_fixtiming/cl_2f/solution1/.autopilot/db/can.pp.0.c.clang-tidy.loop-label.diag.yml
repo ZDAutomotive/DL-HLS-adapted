@@ -1,0 +1,31 @@
+---
+MainSourceFile:  'D:/HLS/dl2f/ng-datalogger-hls-master/cl_2f/solution1/.autopilot/db/can.pp.0.c'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_206_1:  '
+    FileOffset:      206
+    FilePath:        'D:\HLS\dl2f\ng-datalogger-hls-master\clu\can.c'
+    Replacements:    
+      - FilePath:        'D:\HLS\dl2f\ng-datalogger-hls-master\cl_2f\solution1\.autopilot\db\can.pp.0.c'
+        Offset:          62685
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_206_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_221_2:  '
+    FileOffset:      221
+    FilePath:        'D:\HLS\dl2f\ng-datalogger-hls-master\clu\can.c'
+    Replacements:    
+      - FilePath:        'D:\HLS\dl2f\ng-datalogger-hls-master\cl_2f\solution1\.autopilot\db\can.pp.0.c'
+        Offset:          63110
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_221_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_277_1:  '
+    FileOffset:      277
+    FilePath:        'D:\HLS\dl2f\ng-datalogger-hls-master\clu\can.c'
+    Replacements:    
+      - FilePath:        'D:\HLS\dl2f\ng-datalogger-hls-master\cl_2f\solution1\.autopilot\db\can.pp.0.c'
+        Offset:          64617
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_277_1: '
+...

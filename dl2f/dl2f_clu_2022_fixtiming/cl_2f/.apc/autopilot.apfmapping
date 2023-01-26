@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="uart.c" path="D:\HLS\dl2f\ng-datalogger-hls-master\clu\uart.c"/>
+    <originFiles name="dlin.c" path="D:\HLS\dl2f\ng-datalogger-hls-master\clu\dlin.c"/>
+    <originFiles name="clu.c" path="D:\HLS\dl2f\ng-datalogger-hls-master\clu\clu.c"/>
+    <originFiles name="can.h" path="D:\HLS\dl2f\ng-datalogger-hls-master\clu\can.h"/>
+    <originFiles name="can.c" path="D:\HLS\dl2f\ng-datalogger-hls-master\clu\can.c"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

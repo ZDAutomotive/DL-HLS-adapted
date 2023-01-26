@@ -1,0 +1,348 @@
+
+
+================================================================
+== Synthesis Summary Report of 'clu'
+================================================================
++ General Information: 
+    * Date:           Thu Jan 26 10:27:45 2023
+    * Version:        2022.2 (Build 3670227 on Oct 13 2022)
+    * Project:        cl_2f
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-2
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+---------+-----------+-------------+-----+
+    |                       Modules                       | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |      |         |           |             |     |
+    |                       & Loops                       | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF    |     LUT     | URAM|
+    +-----------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+---------+-----------+-------------+-----+
+    |+ clu                                                |     -|  0.00|        -|          -|         -|        -|     -|        no|     -|  1 (~0%)|  5950 (5%)|  11246 (21%)|    -|
+    | o VITIS_LOOP_277_1                                  |     -|  7.30|        -|          -|         -|        -|     -|        no|     -|        -|          -|            -|    -|
+    |  + recvFrame_logic_1                                |     -|  0.00|        -|          -|         -|        -|     -|        no|     -|  1 (~0%)|  1637 (1%)|    3470 (6%)|    -|
+    |   + recvFrame_logic_1_Pipeline_1                    |     -|  4.48|       94|    940.000|         -|       94|     -|        no|     -|        -|    9 (~0%)|     37 (~0%)|    -|
+    |    o Loop 1                                         |     -|  7.30|       92|    920.000|         1|        1|    92|       yes|     -|        -|          -|            -|    -|
+    |   + recvFrame_logic_1_Pipeline_VITIS_LOOP_221_2     |     -|  0.00|        -|          -|         -|        -|     -|        no|     -|        -|  208 (~0%)|    438 (~0%)|    -|
+    |    o VITIS_LOOP_221_2                               |     -|  7.30|        -|          -|        12|        3|     -|       yes|     -|        -|          -|            -|    -|
+    |   + recvFrame_logic_1_Pipeline_VITIS_LOOP_206_1     |     -|  0.00|       57|    570.000|         -|       57|     -|        no|     -|        -|  156 (~0%)|    313 (~0%)|    -|
+    |    o VITIS_LOOP_206_1                               |     -|  7.30|       55|    550.000|        11|        3|    16|       yes|     -|        -|          -|            -|    -|
+    |   + write_ddr_1                                     |     -|  0.00|      247|  2.470e+03|         -|      247|     -|        no|     -|  1 (~0%)|  833 (~0%)|    1354 (2%)|    -|
+    |    + write_ddr_1_Pipeline_1                         |     -|  0.00|       95|    950.000|         -|       95|     -|        no|     -|        -|   20 (~0%)|     58 (~0%)|    -|
+    |     o Loop 1                                        |     -|  7.30|       93|    930.000|         3|        1|    92|       yes|     -|        -|          -|            -|    -|
+    |    + write_ddr_1_Pipeline_2                         |     -|  0.00|        6|     60.000|         -|        6|     -|        no|     -|        -|   14 (~0%)|     71 (~0%)|    -|
+    |     o Loop 1                                        |     -|  7.30|        4|     40.000|         2|        1|     4|       yes|     -|        -|          -|            -|    -|
+    |    o Loop 1                                         |     -|  7.30|       84|    840.000|         3|        -|    28|        no|     -|        -|          -|            -|    -|
+    | o VITIS_LOOP_258_1                                  |     -|  7.30|     3480|  3.480e+04|       348|        -|    10|        no|     -|        -|          -|            -|    -|
+    |  + single_lin_process_1                             |     -|  0.00|      346|  3.460e+03|         -|      346|     -|        no|     -|        -|  1324 (1%)|    2450 (4%)|    -|
+    |   + read_lin_reg_1                                  |     -|  0.00|        8|     80.000|         -|        2|     -|       yes|     -|        -|   37 (~0%)|     87 (~0%)|    -|
+    |   + single_lin_process_1_Pipeline_VITIS_LOOP_178_1  |     -|  0.00|       42|    420.000|         -|       42|     -|        no|     -|        -|  265 (~0%)|    343 (~0%)|    -|
+    |    o VITIS_LOOP_178_1                               |    II|  7.30|       40|    400.000|        11|        2|    16|       yes|     -|        -|          -|            -|    -|
+    |     + read_lin_reg_1                                |     -|  0.00|        8|     80.000|         -|        2|     -|       yes|     -|        -|   37 (~0%)|     87 (~0%)|    -|
+    |   + write_lin_ddr_1                                 |     -|  0.00|      235|  2.350e+03|         -|      235|     -|        no|     -|        -|  757 (~0%)|    1046 (1%)|    -|
+    |    o Loop 1                                         |     -|  7.30|       84|    840.000|         3|        -|    28|        no|     -|        -|          -|            -|    -|
+    |    o Loop 2                                         |     -|  7.30|       84|    840.000|         3|        -|    28|        no|     -|        -|          -|            -|    -|
+    |    o Loop 3                                         |     -|  7.30|        8|     80.000|         2|        -|     4|        no|     -|        -|          -|            -|    -|
+    |   o Loop 1                                          |     -|  7.30|       28|    280.000|         1|        -|    28|        no|     -|        -|          -|            -|    -|
+    +-----------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+---------+-----------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-----------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| Interface       | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
+|                 | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
++-----------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| m_axi_can_addr  | 32 -> 32   | 32            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
+| m_axi_lin_addr  | 32 -> 32   | 32            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
+| m_axi_ps_ddr    | 8 -> 8     | 32            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
+| m_axi_uart_addr | 32 -> 32   | 32            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
++-----------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+
+* S_AXILITE Interfaces
++-----------+------------+---------------+--------+----------+
+| Interface | Data Width | Address Width | Offset | Register |
++-----------+------------+---------------+--------+----------+
+| s_axi_EN  | 32         | 7             | 16     | 0        |
++-----------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++-----------+-------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface | Register          | Offset | Width | Access | Description                      | Bit Fields                                                           |
++-----------+-------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_EN  | CTRL              | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_EN  | GIER              | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_EN  | IP_IER            | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_EN  | IP_ISR            | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_EN  | can_ptr           | 0x10   | 32    | W      | Data signal of can_ptr           |                                                                      |
+| s_axi_EN  | uart_ptr          | 0x18   | 32    | W      | Data signal of uart_ptr          |                                                                      |
+| s_axi_EN  | lin_ptr           | 0x20   | 32    | W      | Data signal of lin_ptr           |                                                                      |
+| s_axi_EN  | received_can      | 0x28   | 32    | R      | Data signal of received_can      |                                                                      |
+| s_axi_EN  | received_can_ctrl | 0x2c   | 32    | R      | Control signal of received_can   | 0=received_can_ap_vld                                                |
+| s_axi_EN  | received_uart     | 0x30   | 32    | W      | Data signal of received_uart     |                                                                      |
+| s_axi_EN  | received_lin      | 0x38   | 32    | R      | Data signal of received_lin      |                                                                      |
+| s_axi_EN  | received_lin_ctrl | 0x3c   | 32    | R      | Control signal of received_lin   | 0=received_lin_ap_vld                                                |
+| s_axi_EN  | can_en            | 0x40   | 32    | W      | Data signal of can_en            |                                                                      |
+| s_axi_EN  | uart_en           | 0x48   | 32    | W      | Data signal of uart_en           |                                                                      |
+| s_axi_EN  | lin_en            | 0x50   | 32    | W      | Data signal of lin_en            |                                                                      |
+| s_axi_EN  | can_ddr           | 0x58   | 32    | W      | Data signal of can_ddr           |                                                                      |
+| s_axi_EN  | uart_ddr          | 0x60   | 32    | W      | Data signal of uart_ddr          |                                                                      |
+| s_axi_EN  | lin_ddr           | 0x68   | 32    | W      | Data signal of lin_ddr           |                                                                      |
++-----------+-------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* Other Ports
++-----------+---------+----------+
+| Interface | Mode    | Bitwidth |
++-----------+---------+----------+
+| timestamp | ap_none | 64       |
++-----------+---------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++---------------+-----------+---------------+
+| Argument      | Direction | Datatype      |
++---------------+-----------+---------------+
+| can_ptr       | inout     | pointer       |
+| uart_ptr      | unused    | pointer       |
+| lin_ptr       | inout     | pointer       |
+| received_can  | out       | pointer       |
+| received_uart | unused    | pointer       |
+| received_lin  | out       | pointer       |
+| can_en        | in        | int*          |
+| uart_en       | unused    | char*         |
+| lin_en        | in        | int*          |
+| can_ddr       | inout     | pointer       |
+| uart_ddr      | inout     | pointer       |
+| lin_ddr       | inout     | pointer       |
+| timestamp     | in        | long long int |
++---------------+-----------+---------------+
+
+* SW-to-HW Mapping
++---------------+-----------------+-----------+----------+---------------------------------------------+
+| Argument      | HW Interface    | HW Type   | HW Usage | HW Info                                     |
++---------------+-----------------+-----------+----------+---------------------------------------------+
+| can_ptr       | m_axi_can_addr  | interface |          |                                             |
+| can_ptr       | s_axi_EN        | register  | offset   | name=can_ptr offset=0x10 range=32           |
+| uart_ptr      | m_axi_uart_addr | interface |          |                                             |
+| uart_ptr      | s_axi_EN        | register  | offset   | name=uart_ptr offset=0x18 range=32          |
+| lin_ptr       | m_axi_lin_addr  | interface |          |                                             |
+| lin_ptr       | s_axi_EN        | register  | offset   | name=lin_ptr offset=0x20 range=32           |
+| received_can  | s_axi_EN        | register  |          | name=received_can offset=0x28 range=32      |
+| received_can  | s_axi_EN        | register  |          | name=received_can_ctrl offset=0x2c range=32 |
+| received_uart | s_axi_EN        | register  |          | name=received_uart offset=0x30 range=32     |
+| received_lin  | s_axi_EN        | register  |          | name=received_lin offset=0x38 range=32      |
+| received_lin  | s_axi_EN        | register  |          | name=received_lin_ctrl offset=0x3c range=32 |
+| can_en        | s_axi_EN        | register  |          | name=can_en offset=0x40 range=32            |
+| uart_en       | s_axi_EN        | register  |          | name=uart_en offset=0x48 range=32           |
+| lin_en        | s_axi_EN        | register  |          | name=lin_en offset=0x50 range=32            |
+| can_ddr       | m_axi_ps_ddr    | interface |          |                                             |
+| can_ddr       | s_axi_EN        | register  | offset   | name=can_ddr offset=0x58 range=32           |
+| uart_ddr      | m_axi_ps_ddr    | interface |          |                                             |
+| uart_ddr      | s_axi_EN        | register  | offset   | name=uart_ddr offset=0x60 range=32          |
+| lin_ddr       | m_axi_ps_ddr    | interface |          |                                             |
+| lin_ddr       | s_axi_EN        | register  | offset   | name=lin_ddr offset=0x68 range=32           |
+| timestamp     | timestamp       | port      |          |                                             |
++---------------+-----------------+-----------+----------+---------------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+-----------+--------+-------+------------------+
+| HW Interface | Loop      | Direction | Length | Width | Location         |
++--------------+-----------+-----------+--------+-------+------------------+
+| m_axi_ps_ddr | anonymous | read      | 28     | 8     | clu/can.c:103:2  |
+| m_axi_ps_ddr | anonymous | write     | 92     | 8     | clu/can.c:126:3  |
+| m_axi_ps_ddr | anonymous | write     | 4      | 8     | clu/clu.c:18:2   |
+| m_axi_ps_ddr | anonymous | read      | 28     | 8     | clu/dlin.c:100:2 |
+| m_axi_ps_ddr | anonymous | write     | 28     | 8     | clu/dlin.c:122:3 |
++--------------+-----------+-----------+--------+-------+------------------+
+
+* Inferred Bursts and Widening Missed
++-------------------------------------------------------------+------------+-----------+------------------------------------------------------------------------------------------------------+------------+-------------------+
+| HW Interface                                                | Variable   | Loop      | Problem                                                                                              | Resolution | Location          |
++-------------------------------------------------------------+------------+-----------+------------------------------------------------------------------------------------------------------+------------+-------------------+
+| m_axi_ps_ddr                                                | ddr_header |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | clu/can.c:120:21  |
+| m_axi_can_addr                                              | canbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | clu/can.c:150:15  |
+| m_axi_can_addr                                              | canbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | clu/can.c:173:14  |
+| m_axi_can_addr                                              | canbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | clu/can.c:209:13  |
+| m_axi_can_addr                                              | canbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | clu/can.c:223:13  |
+| m_axi_can_addr                                              | canbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | clu/can.c:236:12  |
+| m_axi_can_addr                                              | canbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | clu/can.c:238:26  |
+| m_axi_can_addr                                              | can_ptr    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | clu/can.c:251:16  |
+| m_axi_lin_addr                                              | linbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | clu/dlin.c:89:29  |
+| m_axi_lin_addr                                              | linbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | clu/dlin.c:89:29  |
+| m_axi_lin_addr                                              | linbase    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | clu/dlin.c:89:29  |
+| m_axi_lin_addr,lin_addr,lin_addr,lin_addr,lin_addr,lin_addr | lin_reg    |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | clu/dlin.c:83:24  |
+| m_axi_ps_ddr                                                | ddr_header |           | Volatile or Atomic access cannot be transformed                                                      | 214-227    | clu/dlin.c:117:21 |
+| m_axi_ps_ddr                                                | ddr_header | anonymous | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | clu/clu.c:18:2    |
+| m_axi_ps_ddr                                                | ddr_header | anonymous | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | clu/can.c:126:3   |
+| m_axi_ps_ddr                                                | ddr_header | anonymous | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | clu/can.c:103:2   |
+| m_axi_ps_ddr                                                | ddr_header | anonymous | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | clu/clu.c:18:2    |
+| m_axi_ps_ddr                                                | ddr_header | anonymous | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | clu/dlin.c:122:3  |
+| m_axi_ps_ddr                                                | ddr_header | anonymous | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | clu/dlin.c:100:2  |
++-------------------------------------------------------------+------------+-----------+------------------------------------------------------------------------------------------------------+------------+-------------------+
+
+    * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------------------------+-----+--------+-------------+-----+--------+---------+
+| Name                                               | DSP | Pragma | Variable    | Op  | Impl   | Latency |
++----------------------------------------------------+-----+--------+-------------+-----+--------+---------+
+| + clu                                              | 1   |        |             |     |        |         |
+|   lin_nr_2_fu_347_p2                               | -   |        | lin_nr_2    | add | fabric | 0       |
+|   linbase_mod_fu_386_p2                            | -   |        | linbase_mod | add | fabric | 0       |
+|   add_ln277_fu_407_p2                              | -   |        | add_ln277   | add | fabric | 0       |
+|   canaddr_mod_fu_446_p2                            | -   |        | canaddr_mod | add | fabric | 0       |
+|   add_ln251_fu_461_p2                              | -   |        | add_ln251   | add | fabric | 0       |
+|  + single_lin_process_1                            | 0   |        |             |     |        |         |
+|    empty_70_fu_491_p2                              | -   |        | empty_70    | add | fabric | 0       |
+|    grp_fu_454_p2                                   | -   |        | add_ln89    | add | fabric | 0       |
+|    add_ln89_1_fu_525_p2                            | -   |        | add_ln89_1  | add | fabric | 0       |
+|    grp_fu_454_p2                                   | -   |        | add_ln89_2  | add | fabric | 0       |
+|    add_ln195_fu_709_p2                             | -   |        | add_ln195   | add | fabric | 0       |
+|    received_lin                                    | -   |        | add_ln202   | add | fabric | 0       |
+|   + read_lin_reg_1 (grp_read_lin_reg_1_fu_421)     | 0   |        |             |     |        |         |
+|     add_ln83_fu_94_p2                              | -   |        | add_ln83    | add | fabric | 0       |
+|   + single_lin_process_1_Pipeline_VITIS_LOOP_178_1 | 0   |        |             |     |        |         |
+|     add_ln178_fu_122_p2                            | -   |        | add_ln178   | add | fabric | 0       |
+|     add_ln178_1_fu_134_p2                          | -   |        | add_ln178_1 | add | fabric | 0       |
+|    + read_lin_reg_1 (grp_read_lin_reg_1_fu_97)     | 0   |        |             |     |        |         |
+|      add_ln83_fu_94_p2                             | -   |        | add_ln83    | add | fabric | 0       |
+|   + write_lin_ddr_1                                | 0   |        |             |     |        |         |
+|     empty_50_fu_360_p2                             | -   |        | empty_50    | add | fabric | 0       |
+|     grp_fu_403_p0                                  | -   |        | add_ln113   | add | fabric | 0       |
+|     sub_ln122_fu_459_p2                            | -   |        | sub_ln122   | sub | fabric | 0       |
+|     empty_53_fu_507_p2                             | -   |        | empty_53    | add | fabric | 0       |
+|     add_ln18_fu_523_p2                             | -   |        | add_ln18    | add | fabric | 0       |
+|     empty_57_fu_578_p2                             | -   |        | empty_57    | add | fabric | 0       |
+|     add_ln116_fu_611_p2                            | -   |        | add_ln116   | add | fabric | 0       |
+|     add_ln117_1_fu_623_p2                          | -   |        | add_ln117_1 | add | fabric | 0       |
+|     add_ln117_fu_487_p2                            | -   |        | add_ln117   | add | fabric | 0       |
+|  + recvFrame_logic_1                               | 1   |        |             |     |        |         |
+|    add_ln150_2_fu_577_p2                           | -   |        | add_ln150_2 | add | fabric | 0       |
+|    add_ln150_fu_583_p2                             | -   |        | add_ln150   | add | fabric | 0       |
+|    add_ln150_1_fu_611_p2                           | -   |        | add_ln150_1 | add | fabric | 0       |
+|    add_ln173_fu_637_p2                             | -   |        | add_ln173   | add | fabric | 0       |
+|    add_ln173_1_fu_664_p2                           | -   |        | add_ln173_1 | add | fabric | 0       |
+|    id_can_fu_769_p2                                | -   |        | id_can      | add | fabric | 0       |
+|    add_ln197_fu_1201_p2                            | -   |        | add_ln197   | add | fabric | 0       |
+|    add115_fu_1212_p2                               | -   |        | add115      | add | fabric | 0       |
+|    add_ln206_fu_1223_p2                            | -   |        | add_ln206   | add | fabric | 0       |
+|    add_ln206_1_fu_1274_p2                          | -   |        | add_ln206_1 | add | fabric | 0       |
+|    received_can                                    | -   |        | add_ln233   | add | fabric | 0       |
+|    add_ln236_fu_1256_p2                            | -   |        | add_ln236   | add | fabric | 0       |
+|   + recvFrame_logic_1_Pipeline_1                   | 0   |        |             |     |        |         |
+|     empty_73_fu_56_p2                              | -   |        | empty_73    | add | fabric | 0       |
+|   + recvFrame_logic_1_Pipeline_VITIS_LOOP_221_2    | 0   |        |             |     |        |         |
+|     add_ln224_fu_190_p2                            | -   |        | add_ln224   | add | fabric | 0       |
+|     sub_ln224_fu_214_p2                            | -   |        | sub_ln224   | sub | fabric | 0       |
+|     sub_ln224_1_fu_229_p2                          | -   |        | sub_ln224_1 | sub | fabric | 0       |
+|     add_ln223_fu_260_p2                            | -   |        | add_ln223   | add | fabric | 0       |
+|     add_ln225_fu_326_p2                            | -   |        | add_ln225   | add | fabric | 0       |
+|     add_ln226_fu_337_p2                            | -   |        | add_ln226   | add | fabric | 0       |
+|     add_ln227_fu_359_p2                            | -   |        | add_ln227   | add | fabric | 0       |
+|     add_ln228_fu_369_p2                            | -   |        | add_ln228   | add | fabric | 0       |
+|     add_ln229_fu_348_p2                            | -   |        | add_ln229   | add | fabric | 0       |
+|     Len_3_fu_196_p2                                | -   |        | Len_3       | add | fabric | 0       |
+|   + recvFrame_logic_1_Pipeline_VITIS_LOOP_206_1    | 0   |        |             |     |        |         |
+|     DwIndex_2_fu_192_p2                            | -   |        | DwIndex_2   | add | fabric | 0       |
+|     add_ln211_fu_288_p2                            | -   |        | add_ln211   | add | fabric | 0       |
+|     add_ln212_fu_299_p2                            | -   |        | add_ln212   | add | fabric | 0       |
+|     add_ln213_fu_321_p2                            | -   |        | add_ln213   | add | fabric | 0       |
+|     add_ln214_fu_331_p2                            | -   |        | add_ln214   | add | fabric | 0       |
+|     add_ln215_fu_310_p2                            | -   |        | add_ln215   | add | fabric | 0       |
+|   + write_ddr_1                                    | 1   |        |             |     |        |         |
+|     empty_64_fu_323_p2                             | -   |        | empty_64    | add | fabric | 0       |
+|     grp_fu_364_p0                                  | -   |        | add_ln116   | add | fabric | 0       |
+|     mul_32s_8ns_32_1_1_U49                         | 1   |        | mul_ln126   | mul | auto   | 0       |
+|     add_ln18_fu_420_p2                             | -   |        | add_ln18    | add | fabric | 0       |
+|     add_ln119_fu_473_p2                            | -   |        | add_ln119   | add | fabric | 0       |
+|     add_ln120_1_fu_485_p2                          | -   |        | add_ln120_1 | add | fabric | 0       |
+|     add_ln120_fu_393_p2                            | -   |        | add_ln120   | add | fabric | 0       |
+|    + write_ddr_1_Pipeline_1                        | 0   |        |             |     |        |         |
+|      empty_62_fu_97_p2                             | -   |        | empty_62    | add | fabric | 0       |
+|    + write_ddr_1_Pipeline_2                        | 0   |        |             |     |        |         |
+|      empty_60_fu_118_p2                            | -   |        | empty_60    | add | fabric | 0       |
++----------------------------------------------------+-----+--------+-------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++-------------------------------+------+------+--------+-------------------------+---------+------+---------+
+| Name                          | BRAM | URAM | Pragma | Variable                | Storage | Impl | Latency |
++-------------------------------+------+------+--------+-------------------------+---------+------+---------+
+| + clu                         | 0    | 0    |        |                         |         |      |         |
+|  + single_lin_process_1       | 0    | 0    |        |                         |         |      |         |
+|    lin_frame_U                | -    | -    |        | lin_frame               | ram_t2p | auto | 1       |
+|    PLIN_Ctrl_run_state_U      | -    | -    |        | PLIN_Ctrl_run_state     | ram_1p  | auto | 1       |
+|   + write_lin_ddr_1           | 0    | 0    |        |                         |         |      |         |
+|     ringbuffer_header_bytes_U | -    | -    |        | ringbuffer_header_bytes | ram_s2p | auto | 1       |
+|  + recvFrame_logic_1          | 0    | 0    |        |                         |         |      |         |
+|    can_frame_U                | -    | -    |        | can_frame               | ram_t2p | auto | 1       |
+|   + write_ddr_1               | 0    | 0    |        |                         |         |      |         |
+|     ringbuffer_header_bytes_U | -    | -    |        | ringbuffer_header_bytes | ram_s2p | auto | 1       |
++-------------------------------+------+------+--------+-------------------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Ignored Pragmas
++-----------+-------------------------+--------------------------------+-------------------------------------------------------------------------------------------------------------+
+| Type      | Options                 | Location                       | Messages                                                                                                    |
++-----------+-------------------------+--------------------------------+-------------------------------------------------------------------------------------------------------------+
+| interface | port=timestamp register | clu/clu.c:30 in clu, timestamp | '#pragma HLS INTERFACE port=return register' is obsoleted and replaced by '#pragma HLS LATENCY min=1 max=1' |
++-----------+-------------------------+--------------------------------+-------------------------------------------------------------------------------------------------------------+
+
+* Valid Pragma Syntax
++-----------+----------------------------------------------------------------+------------------------------------+
+| Type      | Options                                                        | Location                           |
++-----------+----------------------------------------------------------------+------------------------------------+
+| pipeline  | II=3                                                           | clu/can.c:207 in recvframe_logic   |
+| pipeline  | II=3                                                           | clu/can.c:222 in recvframe_logic   |
+| interface | mode=s_axilite bundle=EN port=return                           | clu/clu.c:31 in clu, return        |
+| interface | mode=s_axilite bundle=EN port=can_ptr                          | clu/clu.c:34 in clu, can_ptr       |
+| interface | mode=m_axi bundle=can_addr depth=1 port=can_ptr offset=slave   | clu/clu.c:35 in clu, can_ptr       |
+| interface | mode=s_axilite bundle=EN port=can_ddr offset=0x58              | clu/clu.c:36 in clu, can_ddr       |
+| interface | mode=m_axi bundle=ps_ddr depth=10 port=can_ddr offset=slave    | clu/clu.c:37 in clu, can_ddr       |
+| interface | mode=s_axilite bundle=EN port=can_en offset=0x40               | clu/clu.c:38 in clu, can_en        |
+| interface | mode=s_axilite bundle=EN port=received_can offset=0x28         | clu/clu.c:39 in clu, received_can  |
+| interface | mode=s_axilite bundle=EN port=uart_ptr                         | clu/clu.c:42 in clu, uart_ptr      |
+| interface | mode=m_axi bundle=uart_addr depth=1 port=uart_ptr offset=slave | clu/clu.c:43 in clu, uart_ptr      |
+| interface | mode=s_axilite bundle=EN port=uart_ddr offset=0x60             | clu/clu.c:44 in clu, uart_ddr      |
+| interface | mode=m_axi bundle=ps_ddr depth=10 port=uart_ddr offset=slave   | clu/clu.c:45 in clu, uart_ddr      |
+| interface | mode=s_axilite bundle=EN port=uart_en offset=0x48              | clu/clu.c:46 in clu, uart_en       |
+| interface | mode=s_axilite bundle=EN port=received_uart offset=0x30        | clu/clu.c:47 in clu, received_uart |
+| interface | mode=s_axilite bundle=EN port=lin_ptr                          | clu/clu.c:50 in clu, lin_ptr       |
+| interface | mode=m_axi bundle=lin_addr depth=1 port=lin_ptr offset=slave   | clu/clu.c:51 in clu, lin_ptr       |
+| interface | mode=s_axilite bundle=EN port=lin_ddr offset=0x68              | clu/clu.c:52 in clu, lin_ddr       |
+| interface | mode=m_axi bundle=ps_ddr depth=10 port=lin_ddr offset=slave    | clu/clu.c:53 in clu, lin_ddr       |
+| interface | mode=s_axilite bundle=EN port=lin_en offset=0x50               | clu/clu.c:54 in clu, lin_en        |
+| interface | mode=s_axilite bundle=EN port=received_lin offset=0x38         | clu/clu.c:55 in clu, received_lin  |
+| pipeline  | II=2                                                           | clu/dlin.c:82 in read_lin_reg      |
++-----------+----------------------------------------------------------------+------------------------------------+
+
+

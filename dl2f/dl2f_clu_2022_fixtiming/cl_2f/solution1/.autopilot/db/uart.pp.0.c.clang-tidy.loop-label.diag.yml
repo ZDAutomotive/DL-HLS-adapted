@@ -1,0 +1,13 @@
+---
+MainSourceFile:  'D:/HLS/dl2f/ng-datalogger-hls-master/cl_2f/solution1/.autopilot/db/uart.pp.0.c'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_240_1:  '
+    FileOffset:      240
+    FilePath:        'D:\HLS\dl2f\ng-datalogger-hls-master\clu\uart.c'
+    Replacements:    
+      - FilePath:        'D:\HLS\dl2f\ng-datalogger-hls-master\cl_2f\solution1\.autopilot\db\uart.pp.0.c'
+        Offset:          63906
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_240_1: '
+...

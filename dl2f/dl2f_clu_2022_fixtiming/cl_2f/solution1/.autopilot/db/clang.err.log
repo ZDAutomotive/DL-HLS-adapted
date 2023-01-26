@@ -1,0 +1,13 @@
+clu/uart.c:132:34: warning: passing 'volatile unsigned char *' to parameter of type 'const void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+ memcpy(ringbuffer_header_bytes, ddr_header, 28);
+                                 ^~~~~~~~~~
+D:/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt\x86_64-w64-mingw32\include\string.h:50:95: note: passing argument to parameter '_Src' here
+  void * __attribute__((__cdecl__)) memcpy(void * __restrict__ _Dst,const void * __restrict__ _Src,size_t _Size) ;
+                                                                                              ^
+clu/uart.c:154:10: warning: passing 'volatile unsigned char *' to parameter of type 'void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+  memcpy(ddr_header + 28 + writeUartIndex * (12 + 192),
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt\x86_64-w64-mingw32\include\string.h:50:64: note: passing argument to parameter '_Dst' here
+  void * __attribute__((__cdecl__)) memcpy(void * __restrict__ _Dst,const void * __restrict__ _Src,size_t _Size) ;
+                                                               ^
+2 warnings generated.
