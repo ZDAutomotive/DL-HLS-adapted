@@ -1,0 +1,28 @@
+List of CLB Tiles
+CLEM_X3Y76
+CLEL_R_X0Y134
+CLEM_R_X41Y131
+CLEL_R_X41Y131
+CLEM_R_X38Y31
+CLEL_R_X35Y21
+CLEL_R_X33Y5
+CLEM_X32Y54
+CLEL_R_X32Y54
+CLEM_X26Y81
+CLEM_X25Y25
+CLEL_R_X25Y25
+CLEM_X23Y69
+CLEL_R_X23Y69
+
+List of Congested Nets
+design_1_i/mac_logger_2/inst/ps_m_axi_U/bus_read/sect_cnt_reg_n_8_[40]
+design_1_i/mac_logger_2/inst/ps_m_axi_U/bus_read/sect_cnt_reg_n_8_[41]
+design_1_i/CHIPDLIN_3/inst/U_DLIN/datao[7]_INST_0_i_14_n_0
+design_1_i/CHIPDLIN_3/inst/U_DLIN/data6[0]
+design_1_i/clu_0/inst/ps_ddr_m_axi_U/bus_write/sect_cnt_reg_n_8_[42]
+design_1_i/clu_0/inst/ps_ddr_m_axi_U/bus_write/sect_cnt_reg_n_8_[44]
+design_1_i/canfd_6/inst/can_inst/tl/bsp/BRS_EN_BTR
+design_1_i/canfd_6/inst/can_inst/tl/bsp/BTL_COUNTER_I_REG[6]_i_10_n_8
+design_1_i/canfd_5/inst/can_inst/ol/ic/IC_REG_TSR_I_D[15]
+design_1_i/canfd_5/inst/can_inst/ol/ic/IC_REG_ISR_TSCNT_OFLW_I_i_8_n_8
+

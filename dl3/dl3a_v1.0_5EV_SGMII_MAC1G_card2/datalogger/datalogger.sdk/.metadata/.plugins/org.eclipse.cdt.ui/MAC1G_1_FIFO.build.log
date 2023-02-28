@@ -1,0 +1,397 @@
+15:07:44 **** Build of configuration Release for project MAC1G_1_FIFO ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/helloworld.o" -I/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:50:
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:565: warning: "XPAR_CANFD_2_DEVICE_ID" redefined
+  565 | #define XPAR_CANFD_2_DEVICE_ID 4U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:537: note: this is the location of the previous definition
+  537 | #define XPAR_CANFD_2_DEVICE_ID 2U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:566: warning: "XPAR_CANFD_2_BASEADDR" redefined
+  566 | #define XPAR_CANFD_2_BASEADDR 0xA0180000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:538: note: this is the location of the previous definition
+  538 | #define XPAR_CANFD_2_BASEADDR 0xA0160000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:584: warning: "XPAR_CANFD_3_DEVICE_ID" redefined
+  584 | #define XPAR_CANFD_3_DEVICE_ID 5U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:556: note: this is the location of the previous definition
+  556 | #define XPAR_CANFD_3_DEVICE_ID 3U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:585: warning: "XPAR_CANFD_3_BASEADDR" redefined
+  585 | #define XPAR_CANFD_3_BASEADDR 0xA0190000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:557: note: this is the location of the previous definition
+  557 | #define XPAR_CANFD_3_BASEADDR 0xA0170000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:603: warning: "XPAR_CANFD_4_DEVICE_ID" redefined
+  603 | #define XPAR_CANFD_4_DEVICE_ID 6U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:575: note: this is the location of the previous definition
+  575 | #define XPAR_CANFD_4_DEVICE_ID 4U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:604: warning: "XPAR_CANFD_4_BASEADDR" redefined
+  604 | #define XPAR_CANFD_4_BASEADDR 0xA01A0000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:576: note: this is the location of the previous definition
+  576 | #define XPAR_CANFD_4_BASEADDR 0xA0180000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:622: warning: "XPAR_CANFD_5_DEVICE_ID" redefined
+  622 | #define XPAR_CANFD_5_DEVICE_ID 7U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:594: note: this is the location of the previous definition
+  594 | #define XPAR_CANFD_5_DEVICE_ID 5U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:623: warning: "XPAR_CANFD_5_BASEADDR" redefined
+  623 | #define XPAR_CANFD_5_BASEADDR 0xA01B0000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:595: note: this is the location of the previous definition
+  595 | #define XPAR_CANFD_5_BASEADDR 0xA0190000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:641: warning: "XPAR_CANFD_6_DEVICE_ID" redefined
+  641 | #define XPAR_CANFD_6_DEVICE_ID 8U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:613: note: this is the location of the previous definition
+  613 | #define XPAR_CANFD_6_DEVICE_ID 6U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:642: warning: "XPAR_CANFD_6_BASEADDR" redefined
+  642 | #define XPAR_CANFD_6_BASEADDR 0xA01C0000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:614: note: this is the location of the previous definition
+  614 | #define XPAR_CANFD_6_BASEADDR 0xA01A0000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:660: warning: "XPAR_CANFD_7_DEVICE_ID" redefined
+  660 | #define XPAR_CANFD_7_DEVICE_ID 9U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:632: note: this is the location of the previous definition
+  632 | #define XPAR_CANFD_7_DEVICE_ID 7U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:661: warning: "XPAR_CANFD_7_BASEADDR" redefined
+  661 | #define XPAR_CANFD_7_BASEADDR 0xA01D0000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:633: note: this is the location of the previous definition
+  633 | #define XPAR_CANFD_7_BASEADDR 0xA01B0000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:679: warning: "XPAR_CANFD_8_DEVICE_ID" redefined
+  679 | #define XPAR_CANFD_8_DEVICE_ID 10U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:651: note: this is the location of the previous definition
+  651 | #define XPAR_CANFD_8_DEVICE_ID 8U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:680: warning: "XPAR_CANFD_8_BASEADDR" redefined
+  680 | #define XPAR_CANFD_8_BASEADDR 0xA01E0000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:652: note: this is the location of the previous definition
+  652 | #define XPAR_CANFD_8_BASEADDR 0xA01C0000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:689: warning: "XPAR_CANFD_10_DEVICE_ID" redefined
+  689 | #define XPAR_CANFD_10_DEVICE_ID 10U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:527: note: this is the location of the previous definition
+  527 | #define XPAR_CANFD_10_DEVICE_ID 2U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:690: warning: "XPAR_CANFD_10_BASEADDR" redefined
+  690 | #define XPAR_CANFD_10_BASEADDR 0xA01E0000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:528: note: this is the location of the previous definition
+  528 | #define XPAR_CANFD_10_BASEADDR 0xA0160000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:698: warning: "XPAR_CANFD_9_DEVICE_ID" redefined
+  698 | #define XPAR_CANFD_9_DEVICE_ID 11U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:670: note: this is the location of the previous definition
+  670 | #define XPAR_CANFD_9_DEVICE_ID 9U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:699: warning: "XPAR_CANFD_9_BASEADDR" redefined
+  699 | #define XPAR_CANFD_9_BASEADDR 0xA01F0000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:671: note: this is the location of the previous definition
+  671 | #define XPAR_CANFD_9_BASEADDR 0xA01D0000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:708: warning: "XPAR_CANFD_11_DEVICE_ID" redefined
+  708 | #define XPAR_CANFD_11_DEVICE_ID 11U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:546: note: this is the location of the previous definition
+  546 | #define XPAR_CANFD_11_DEVICE_ID 3U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:709: warning: "XPAR_CANFD_11_BASEADDR" redefined
+  709 | #define XPAR_CANFD_11_BASEADDR 0xA01F0000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:547: note: this is the location of the previous definition
+  547 | #define XPAR_CANFD_11_BASEADDR 0xA0170000U
+      | 
+In file included from ../src/helloworld.c:56:
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xtime_l.h:65:9: note: #pragma message: For the sleep routines, Global timer is being used
+   65 | #pragma message ("For the sleep routines, Global timer is being used")
+      |         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:337:5: warning: implicit declaration of function 'init_platform' [-Wimplicit-function-declaration]
+  337 |     init_platform();
+      |     ^~~~~~~~~~~~~
+../src/helloworld.c:381:5: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+  381 |     sleep(2);
+      |     ^~~~~
+../src/helloworld.c:448:5: warning: implicit declaration of function 'cleanup_platform' [-Wimplicit-function-declaration]
+  448 |     cleanup_platform();
+      |     ^~~~~~~~~~~~~~~~
+../src/helloworld.c: In function 'init_EthPort':
+../src/helloworld.c:578:2: warning: implicit declaration of function 'AxiEthernetUtilFrameMemClear'; did you mean 'AxiEthernetUtilFrameSetPayloadData'? [-Wimplicit-function-declaration]
+  578 |  AxiEthernetUtilFrameMemClear(pstEthPort->RxFrame);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  AxiEthernetUtilFrameSetPayloadData
+../src/helloworld.c:581:36: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'UINTPTR' {aka 'long unsigned int'} [-Wformat=]
+  581 |     printf("*** MAC Base_addr=0x%08X, FIFO Base_addr=0x%08X, FIFO AXI4BaseAddr=0x%08X\r\n",
+      |                                 ~~~^
+      |                                    |
+      |                                    unsigned int
+      |                                 %08lX
+  582 |       pstEthInstance->Config.BaseAddress, pstFifoInstance->BaseAddress, pstFifoInstance->Axi4BaseAddress);
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                             |
+      |                             UINTPTR {aka long unsigned int}
+../src/helloworld.c:581:59: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'UINTPTR' {aka 'long unsigned int'} [-Wformat=]
+  581 |     printf("*** MAC Base_addr=0x%08X, FIFO Base_addr=0x%08X, FIFO AXI4BaseAddr=0x%08X\r\n",
+      |                                                        ~~~^
+      |                                                           |
+      |                                                           unsigned int
+      |                                                        %08lX
+  582 |       pstEthInstance->Config.BaseAddress, pstFifoInstance->BaseAddress, pstFifoInstance->Axi4BaseAddress);
+      |                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                          |
+      |                                                          UINTPTR {aka long unsigned int}
+../src/helloworld.c:475:16: warning: unused variable 'PhyAddr' [-Wunused-variable]
+  475 | int Status=-1, PhyAddr=0;
+      |                ^~~~~~~
+../src/helloworld.c: In function 'dl_disp_zynq_mac_statistics':
+../src/helloworld.c:788:49: warning: format '%lu' expects argument of type 'long unsigned int', but argument 4 has type 'int' [-Wformat=]
+  788 |             printf(" Stat id#%02d (0x%03X): %08lu(L), %8lu(H)", i, Eth_Stat_baseAddr, data1, data2);
+      |                                             ~~~~^                                     ~~~~~
+      |                                                 |                                     |
+      |                                                 long unsigned int                     int
+      |                                             %08u
+../src/helloworld.c:788:58: warning: format '%lu' expects argument of type 'long unsigned int', but argument 5 has type 'int' [-Wformat=]
+  788 |             printf(" Stat id#%02d (0x%03X): %08lu(L), %8lu(H)", i, Eth_Stat_baseAddr, data1, data2);
+      |                                                       ~~~^                                   ~~~~~
+      |                                                          |                                   |
+      |                                                          long unsigned int                   int
+      |                                                       %8u
+../src/helloworld.c:797:51: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'int' [-Wformat=]
+  797 |     printf("RX Good Frames (0x290):           %08lu\r\n", data1);
+      |                                               ~~~~^       ~~~~~
+      |                                                   |       |
+      |                                                   |       int
+      |                                                   long unsigned int
+      |                                               %08u
+../src/helloworld.c:799:51: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'int' [-Wformat=]
+  799 |     printf("Undersize Frames (0x210):         %08lu\r\n", data1);
+      |                                               ~~~~^       ~~~~~
+      |                                                   |       |
+      |                                                   |       int
+      |                                                   long unsigned int
+      |                                               %08u
+../src/helloworld.c:801:51: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'int' [-Wformat=]
+  801 |     printf("RX Frame CRC error (0x298):       %08lu\r\n", data1);
+      |                                               ~~~~^       ~~~~~
+      |                                                   |       |
+      |                                                   |       int
+      |                                                   long unsigned int
+      |                                               %08u
+../src/helloworld.c:803:51: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'int' [-Wformat=]
+  803 |     printf("Received Bytes (0x200):           %08lu\r\n", data1);
+      |                                               ~~~~^       ~~~~~
+      |                                                   |       |
+      |                                                   |       int
+      |                                                   long unsigned int
+      |                                               %08u
+../src/helloworld.c:807:51: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'int' [-Wformat=]
+  807 |     printf("TX Good Frames (0x2D8):           %08lu\r\n", data1);
+      |                                               ~~~~^       ~~~~~
+      |                                                   |       |
+      |                                                   |       int
+      |                                                   long unsigned int
+      |                                               %08u
+../src/helloworld.c:809:51: warning: format '%lu' expects argument of type 'long unsigned int', but argument 2 has type 'int' [-Wformat=]
+  809 |     printf("Transmitted Bytes (0x208):        %08lu\r\n", data1);
+      |                                               ~~~~^       ~~~~~
+      |                                                   |       |
+      |                                                   |       int
+      |                                                   long unsigned int
+      |                                               %08u
+../src/helloworld.c: In function 'rcv_EthPort_Pkt':
+../src/helloworld.c:822:9: warning: unused variable 'Status' [-Wunused-variable]
+  822 |     int Status=-1;
+      |         ^~~~~~
+../src/helloworld.c: In function 'send_EthPort_Pkt':
+../src/helloworld.c:880:45: warning: pointer targets in passing argument 2 of 'AxiEthernetUtilFrameHdrFormatMAC' differ in signedness [-Wpointer-sign]
+  880 |  AxiEthernetUtilFrameHdrFormatMAC(&TxFrame, AxiEthernetMAC);
+      |                                             ^~~~~~~~~~~~~~
+      |                                             |
+      |                                             u8 * {aka unsigned char *}
+../src/helloworld.c:199:70: note: expected 'char *' but argument is of type 'u8 *' {aka 'unsigned char *'}
+  199 | void AxiEthernetUtilFrameHdrFormatMAC(EthernetFrame *FramePtr, char *DestAddr);
+      |                                                                ~~~~~~^~~~~~~~
+../src/helloworld.c:943:9: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+  943 |         usleep(10);    /* delay ms */
+      |         ^~~~~~
+../src/helloworld.c:869:6: warning: unused variable 'Status' [-Wunused-variable]
+  869 |  int Status=-1, pkt_num=0;
+      |      ^~~~~~
+../src/helloworld.c:862:6: warning: unused variable 'RxFrameLength' [-Wunused-variable]
+  862 |  u32 RxFrameLength=0;
+      |      ^~~~~~~~~~~~~
+../src/helloworld.c: At top level:
+../src/helloworld.c:1263:6: warning: conflicting types for 'AxiEthernetUtilFrameMemClear'
+ 1263 | void AxiEthernetUtilFrameMemClear(EthernetFrame * FramePtr)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:578:2: note: previous implicit declaration of 'AxiEthernetUtilFrameMemClear' was here
+  578 |  AxiEthernetUtilFrameMemClear(pstEthPort->RxFrame);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:456:13: warning: 'zynq_delay' defined but not used [-Wunused-function]
+  456 | static void zynq_delay(int delay_ms)
+      |             ^~~~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/platform.o" -I/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+In file included from ../src/platform.c:33:
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:565: warning: "XPAR_CANFD_2_DEVICE_ID" redefined
+  565 | #define XPAR_CANFD_2_DEVICE_ID 4U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:537: note: this is the location of the previous definition
+  537 | #define XPAR_CANFD_2_DEVICE_ID 2U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:566: warning: "XPAR_CANFD_2_BASEADDR" redefined
+  566 | #define XPAR_CANFD_2_BASEADDR 0xA0180000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:538: note: this is the location of the previous definition
+  538 | #define XPAR_CANFD_2_BASEADDR 0xA0160000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:584: warning: "XPAR_CANFD_3_DEVICE_ID" redefined
+  584 | #define XPAR_CANFD_3_DEVICE_ID 5U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:556: note: this is the location of the previous definition
+  556 | #define XPAR_CANFD_3_DEVICE_ID 3U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:585: warning: "XPAR_CANFD_3_BASEADDR" redefined
+  585 | #define XPAR_CANFD_3_BASEADDR 0xA0190000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:557: note: this is the location of the previous definition
+  557 | #define XPAR_CANFD_3_BASEADDR 0xA0170000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:603: warning: "XPAR_CANFD_4_DEVICE_ID" redefined
+  603 | #define XPAR_CANFD_4_DEVICE_ID 6U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:575: note: this is the location of the previous definition
+  575 | #define XPAR_CANFD_4_DEVICE_ID 4U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:604: warning: "XPAR_CANFD_4_BASEADDR" redefined
+  604 | #define XPAR_CANFD_4_BASEADDR 0xA01A0000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:576: note: this is the location of the previous definition
+  576 | #define XPAR_CANFD_4_BASEADDR 0xA0180000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:622: warning: "XPAR_CANFD_5_DEVICE_ID" redefined
+  622 | #define XPAR_CANFD_5_DEVICE_ID 7U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:594: note: this is the location of the previous definition
+  594 | #define XPAR_CANFD_5_DEVICE_ID 5U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:623: warning: "XPAR_CANFD_5_BASEADDR" redefined
+  623 | #define XPAR_CANFD_5_BASEADDR 0xA01B0000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:595: note: this is the location of the previous definition
+  595 | #define XPAR_CANFD_5_BASEADDR 0xA0190000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:641: warning: "XPAR_CANFD_6_DEVICE_ID" redefined
+  641 | #define XPAR_CANFD_6_DEVICE_ID 8U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:613: note: this is the location of the previous definition
+  613 | #define XPAR_CANFD_6_DEVICE_ID 6U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:642: warning: "XPAR_CANFD_6_BASEADDR" redefined
+  642 | #define XPAR_CANFD_6_BASEADDR 0xA01C0000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:614: note: this is the location of the previous definition
+  614 | #define XPAR_CANFD_6_BASEADDR 0xA01A0000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:660: warning: "XPAR_CANFD_7_DEVICE_ID" redefined
+  660 | #define XPAR_CANFD_7_DEVICE_ID 9U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:632: note: this is the location of the previous definition
+  632 | #define XPAR_CANFD_7_DEVICE_ID 7U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:661: warning: "XPAR_CANFD_7_BASEADDR" redefined
+  661 | #define XPAR_CANFD_7_BASEADDR 0xA01D0000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:633: note: this is the location of the previous definition
+  633 | #define XPAR_CANFD_7_BASEADDR 0xA01B0000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:679: warning: "XPAR_CANFD_8_DEVICE_ID" redefined
+  679 | #define XPAR_CANFD_8_DEVICE_ID 10U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:651: note: this is the location of the previous definition
+  651 | #define XPAR_CANFD_8_DEVICE_ID 8U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:680: warning: "XPAR_CANFD_8_BASEADDR" redefined
+  680 | #define XPAR_CANFD_8_BASEADDR 0xA01E0000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:652: note: this is the location of the previous definition
+  652 | #define XPAR_CANFD_8_BASEADDR 0xA01C0000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:689: warning: "XPAR_CANFD_10_DEVICE_ID" redefined
+  689 | #define XPAR_CANFD_10_DEVICE_ID 10U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:527: note: this is the location of the previous definition
+  527 | #define XPAR_CANFD_10_DEVICE_ID 2U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:690: warning: "XPAR_CANFD_10_BASEADDR" redefined
+  690 | #define XPAR_CANFD_10_BASEADDR 0xA01E0000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:528: note: this is the location of the previous definition
+  528 | #define XPAR_CANFD_10_BASEADDR 0xA0160000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:698: warning: "XPAR_CANFD_9_DEVICE_ID" redefined
+  698 | #define XPAR_CANFD_9_DEVICE_ID 11U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:670: note: this is the location of the previous definition
+  670 | #define XPAR_CANFD_9_DEVICE_ID 9U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:699: warning: "XPAR_CANFD_9_BASEADDR" redefined
+  699 | #define XPAR_CANFD_9_BASEADDR 0xA01F0000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:671: note: this is the location of the previous definition
+  671 | #define XPAR_CANFD_9_BASEADDR 0xA01D0000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:708: warning: "XPAR_CANFD_11_DEVICE_ID" redefined
+  708 | #define XPAR_CANFD_11_DEVICE_ID 11U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:546: note: this is the location of the previous definition
+  546 | #define XPAR_CANFD_11_DEVICE_ID 3U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:709: warning: "XPAR_CANFD_11_BASEADDR" redefined
+  709 | #define XPAR_CANFD_11_BASEADDR 0xA01F0000U
+      | 
+/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:547: note: this is the location of the previous definition
+  547 | #define XPAR_CANFD_11_BASEADDR 0xA0170000U
+      | 
+Finished building: ../src/platform.c
+ 
+Building target: MAC1G_1_FIFO.elf
+Invoking: ARM v8 gcc linker
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bsplib/lib -o "MAC1G_1_FIFO.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: MAC1G_1_FIFO.elf
+ 
+Invoking: ARM v8 Print Size
+aarch64-none-elf-size MAC1G_1_FIFO.elf  |tee "MAC1G_1_FIFO.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 156140	   5122	 808418	 969680	  ecbd0	MAC1G_1_FIFO.elf
+Finished building: MAC1G_1_FIFO.elf.size
+ 
+
+15:07:45 Build Finished (took 644ms)
+

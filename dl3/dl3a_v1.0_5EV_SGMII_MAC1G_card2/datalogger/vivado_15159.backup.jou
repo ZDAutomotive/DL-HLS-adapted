@@ -1,0 +1,53 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Feb 14 15:18:33 2023
+# Process ID: 15159
+# Current directory: /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger
+# Command line: vivado /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.xpr
+# Log file: /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/vivado.log
+# Journal file: /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.xpr
+update_compile_order -fileset sources_1
+open_bd_design {/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+set_property -dict [list CONFIG.SupportLevel {1}] [get_bd_cells axi_ethernet_0]
+delete_bd_objs [get_bd_nets util_ds_buf_0_BUFG_GT_O] [get_bd_nets util_ds_buf_0_BUFG_GT_O] [get_bd_nets axi_ethernet_0_rxoutclk]
+endgroup
+startgroup
+set_property -dict [list CONFIG.SupportLevel {0}] [get_bd_cells axi_ethernet_1]
+delete_bd_objs [get_bd_nets axi_ethernet_0_mmcm_locked_out] [get_bd_nets axi_ethernet_1_userclk_out] [get_bd_nets axi_ethernet_0_userclk2_out] [get_bd_nets axi_ethernet_0_pma_reset_out] [get_bd_nets axi_ethernet_1_gtref_clk_out] [get_bd_intf_nets mgt_clk_0_1]
+endgroup
+connect_bd_net [get_bd_pins axi_ethernet_1/mmcm_locked] [get_bd_pins axi_ethernet_0/mmcm_locked_out]
+connect_bd_net [get_bd_pins axi_ethernet_1/userclk] [get_bd_pins axi_ethernet_0/userclk_out]
+connect_bd_net [get_bd_pins axi_ethernet_0/userclk2_out] [get_bd_pins axi_ethernet_1/userclk2]
+connect_bd_net [get_bd_pins axi_ethernet_1/pma_reset] [get_bd_pins axi_ethernet_0/pma_reset_out]
+connect_bd_net [get_bd_pins axi_ethernet_0/gtref_clk_out] [get_bd_pins axi_ethernet_1/gtref_clk]
+connect_bd_net [get_bd_pins axi_ethernet_2/userclk] [get_bd_pins axi_ethernet_0/userclk_out]
+connect_bd_net [get_bd_pins axi_ethernet_2/userclk2] [get_bd_pins clk_wiz_0/clk_out3]
+disconnect_bd_net /Net1 [get_bd_pins axi_ethernet_2/userclk2]
+connect_bd_net [get_bd_pins axi_ethernet_2/userclk2] [get_bd_pins axi_ethernet_0/userclk2_out]
+connect_bd_intf_net [get_bd_intf_ports mgt_clk_sw0] [get_bd_intf_pins axi_ethernet_0/mgt_clk]
+connect_bd_net [get_bd_pins util_ds_buf_0/BUFG_GT_I] [get_bd_pins axi_ethernet_1/rxoutclk]
+connect_bd_net [get_bd_pins axi_ethernet_1/rxuserclk] [get_bd_pins axi_ethernet_1/rxuserclk2]
+connect_bd_net [get_bd_pins util_ds_buf_0/BUFG_GT_O] [get_bd_pins axi_ethernet_1/rxuserclk]
+connect_bd_net [get_bd_pins axi_ethernet_2/pma_reset] [get_bd_pins axi_ethernet_0/pma_reset_out]
+connect_bd_net [get_bd_pins axi_ethernet_2/gtref_clk] [get_bd_pins axi_ethernet_0/gtref_clk_out]
+connect_bd_net [get_bd_pins axi_ethernet_2/mmcm_locked] [get_bd_pins util_ds_buf_1/BUFG_GT_O]
+disconnect_bd_net /Net [get_bd_pins axi_ethernet_2/mmcm_locked]
+connect_bd_net [get_bd_pins axi_ethernet_2/mmcm_locked] [get_bd_pins axi_ethernet_0/mmcm_locked_out]
+save_bd_design
+regenerate_bd_layout
+set_property location {6 2966 1226} [get_bd_cells axi_ethernet_0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+wait_on_run impl_1
+open_project /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.xpr
+update_compile_order -fileset sources_1
+current_project datalogger
+current_project datalogger(2)
+close_project
+file copy -force /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.runs/impl_1/design_1_wrapper.bit /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger3.bit

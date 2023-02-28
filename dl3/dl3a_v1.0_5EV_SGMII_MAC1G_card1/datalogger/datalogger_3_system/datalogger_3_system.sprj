@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<systemproject:SystemProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" xmlns:systemproject="http://www.xilinx.com/systemproject" name="datalogger_3_system" platform="/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm" platformUID="xilinx:::0.0(custom)" sysConfig="design_1_wrapper" runtime="cpp" rootFSLocation="" linuxImage="" sysroot="">
+  <configuration name="Debug" id="com.xilinx.sdx.system.managedbuilder.debugConfiguration.656726065">
+    <configBuildOptions xsi:type="systemproject:SystemOptions">
+      <applications name="datalogger_3" domainName="standalone_psu_cortexa53_0" domainPrettyName="standalone_psu_cortexa53_0" appBuildConfig="Debug"/>
+      <options xsi:type="sdkproject:SdkOptions" generateSdCard="true"/>
+    </configBuildOptions>
+  </configuration>
+  <configuration name="Release" id="com.xilinx.sdx.system.managedbuilder.releaseConfiguration.173297295">
+    <configBuildOptions xsi:type="systemproject:SystemOptions">
+      <applications name="datalogger_3" domainName="standalone_psu_cortexa53_0" domainPrettyName="standalone_psu_cortexa53_0" appBuildConfig="Release"/>
+      <options xsi:type="sdkproject:SdkOptions" generateSdCard="true"/>
+    </configBuildOptions>
+  </configuration>
+</systemproject:SystemProject>

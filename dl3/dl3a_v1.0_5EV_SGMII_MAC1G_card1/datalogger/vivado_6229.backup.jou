@@ -1,0 +1,89 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Feb 14 09:24:35 2023
+# Process ID: 6229
+# Current directory: /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger
+# Command line: vivado /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.xpr
+# Log file: /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/vivado.log
+# Journal file: /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.xpr
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+wait_on_run impl_1
+reset_run synth_1
+open_bd_design {/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/design_1.bd}
+copy_bd_objs /  [get_bd_cells {util_ds_buf_0}]
+set_property location {10 4947 369} [get_bd_cells util_ds_buf_1]
+connect_bd_net [get_bd_pins sgmii_signal_detect1/dout] [get_bd_pins util_ds_buf_1/BUFG_GT_DIV]
+connect_bd_net [get_bd_pins util_ds_buf_1/BUFG_GT_CLRMASK] [get_bd_pins util_ds_buf_1/BUFG_GT_CLR]
+connect_bd_net [get_bd_pins util_ds_buf_1/BUFG_GT_CEMASK] [get_bd_pins util_ds_buf_1/BUFG_GT_CE]
+connect_bd_net [get_bd_pins util_ds_buf_1/BUFG_GT_CEMASK] [get_bd_pins sgmii_signal_detect/dout]
+startgroup
+connect_bd_net [get_bd_pins util_ds_buf_1/BUFG_GT_CLRMASK] [get_bd_pins sgmii_signal_detect2/dout]
+endgroup
+delete_bd_objs [get_bd_nets axi_ethernet_2_rxoutclk]
+connect_bd_net [get_bd_pins axi_ethernet_2/rxoutclk] [get_bd_pins util_ds_buf_1/BUFG_GT_I]
+connect_bd_net [get_bd_pins axi_ethernet_2/rxuserclk] [get_bd_pins axi_ethernet_2/rxuserclk2]
+connect_bd_net [get_bd_pins axi_ethernet_2/rxuserclk] [get_bd_pins util_ds_buf_1/BUFG_GT_O]
+save_bd_design
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+startgroup
+set_property -dict [list CONFIG.C_BUF_TYPE {BUFG}] [get_bd_cells util_ds_buf_1]
+delete_bd_objs [get_bd_nets axi_ethernet_2_rxoutclk]
+endgroup
+connect_bd_net [get_bd_pins axi_ethernet_2/rxoutclk] [get_bd_pins util_ds_buf_1/BUFG_I]
+connect_bd_net [get_bd_pins util_ds_buf_1/BUFG_O] [get_bd_pins axi_ethernet_2/rxuserclk]
+startgroup
+set_property -dict [list CONFIG.C_BUF_TYPE {BUFG}] [get_bd_cells util_ds_buf_0]
+delete_bd_objs [get_bd_nets axi_ethernet_0_rxoutclk] [get_bd_nets sgmii_signal_detect2_dout] [get_bd_nets sgmii_signal_detect2_dout] [get_bd_nets sgmii_signal_detect1_dout]
+endgroup
+connect_bd_net [get_bd_pins axi_ethernet_0/rxoutclk] [get_bd_pins util_ds_buf_0/BUFG_I]
+connect_bd_net [get_bd_pins util_ds_buf_0/BUFG_O] [get_bd_pins axi_ethernet_0/rxuserclk]
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+wait_on_run impl_1
+report_route_status
+open_run impl_1
+report_route_status
+open_bd_design {/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+set_property -dict [list CONFIG.C_BUF_TYPE {BUFG_GT}] [get_bd_cells util_ds_buf_0]
+delete_bd_objs [get_bd_nets axi_ethernet_0_rxoutclk]
+endgroup
+connect_bd_net [get_bd_pins sgmii_signal_detect2/dout] [get_bd_pins util_ds_buf_0/BUFG_GT_CE]
+connect_bd_net [get_bd_pins sgmii_signal_detect1/dout] [get_bd_pins util_ds_buf_0/BUFG_GT_DIV]
+connect_bd_net [get_bd_pins util_ds_buf_0/BUFG_GT_CEMASK] [get_bd_pins sgmii_signal_detect2/dout]
+disconnect_bd_net /sgmii_signal_detect2_dout [get_bd_pins util_ds_buf_0/BUFG_GT_CE]
+delete_bd_objs [get_bd_nets sgmii_signal_detect2_dout]
+startgroup
+connect_bd_net [get_bd_pins sgmii_signal_detect/dout] [get_bd_pins util_ds_buf_0/BUFG_GT_CE]
+connect_bd_net [get_bd_pins sgmii_signal_detect/dout] [get_bd_pins util_ds_buf_0/BUFG_GT_CEMASK]
+endgroup
+connect_bd_net [get_bd_pins sgmii_signal_detect2/dout] [get_bd_pins util_ds_buf_0/BUFG_GT_CLR]
+connect_bd_net [get_bd_pins util_ds_buf_0/BUFG_GT_CLRMASK] [get_bd_pins sgmii_signal_detect2/dout]
+connect_bd_net [get_bd_pins axi_ethernet_0/rxoutclk] [get_bd_pins util_ds_buf_0/BUFG_GT_I]
+connect_bd_net [get_bd_pins util_ds_buf_0/BUFG_GT_O] [get_bd_pins axi_ethernet_0/rxuserclk]
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+wait_on_run impl_1
+open_bd_design {/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+set_property -dict [list CONFIG.C_BUF_TYPE {BUFG_GT}] [get_bd_cells util_ds_buf_1]
+delete_bd_objs [get_bd_nets axi_ethernet_2_rxoutclk]
+endgroup
+connect_bd_net [get_bd_pins util_ds_buf_1/BUFG_GT_O] [get_bd_pins axi_ethernet_2/rxuserclk]
+connect_bd_net [get_bd_pins axi_ethernet_2/rxoutclk] [get_bd_pins util_ds_buf_1/BUFG_GT_I]
+connect_bd_net [get_bd_pins util_ds_buf_1/BUFG_GT_CE] [get_bd_pins sgmii_signal_detect/dout]
+connect_bd_net [get_bd_pins util_ds_buf_1/BUFG_GT_CEMASK] [get_bd_pins sgmii_signal_detect/dout]
+connect_bd_net [get_bd_pins util_ds_buf_1/BUFG_GT_CLRMASK] [get_bd_pins util_ds_buf_1/BUFG_GT_CLR]
+connect_bd_net [get_bd_pins util_ds_buf_1/BUFG_GT_CLRMASK] [get_bd_pins sgmii_signal_detect2/dout]
+connect_bd_net [get_bd_pins sgmii_signal_detect1/dout] [get_bd_pins util_ds_buf_1/BUFG_GT_DIV]
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20

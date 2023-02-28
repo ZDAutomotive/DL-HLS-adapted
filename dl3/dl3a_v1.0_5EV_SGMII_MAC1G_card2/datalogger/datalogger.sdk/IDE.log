@@ -1,0 +1,396 @@
+18:20:44 INFO  : Launching XSCT server: xsct -n  -interactive /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/temp_xsdb_launch_script.tcl
+18:20:44 INFO  : Registering command handlers for Vitis TCF services
+18:20:47 INFO  : Platform repository initialization has completed.
+18:20:47 INFO  : XSCT server has started successfully.
+18:20:47 INFO  : plnx-install-location is set to ''
+18:20:47 INFO  : Successfully done setting XSCT server connection channel  
+18:20:47 INFO  : Successfully done query RDI_DATADIR 
+18:20:47 INFO  : Successfully done setting workspace for the tool. 
+18:22:30 INFO  : Result from executing command 'getProjects': design_1_wrapper
+18:22:30 INFO  : Result from executing command 'getPlatforms': 
+18:22:30 WARN  : An unexpected exception occurred in the module 'platform project logging'
+18:22:30 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+18:22:42 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+18:22:46 INFO  : Build configuration of 'test1_system' is updated to 'Release'
+18:22:46 INFO  : Build configuration of system project is automatically updated to 'Release'.
+18:23:25 INFO  : Result from executing command 'getProjects': design_1_wrapper
+18:23:25 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+18:23:30 INFO  : Checking for BSP changes to sync application flags for project 'test1'...
+18:25:26 INFO  : Checking for BSP changes to sync application flags for project 'test1'...
+18:25:45 INFO  : Generated template bif file for test1_system
+18:25:58 INFO  : Invoking Bootgen: bootgen -image test1_system.bif -arch zynqmp -o /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/test1_system/_ide/bootimage/BOOT.bin
+18:26:00 INFO  : Bootgen command execution is done.
+11:31:32 INFO  : Result from executing command 'getProjects': design_1_wrapper
+11:31:32 INFO  : Result from executing command 'getPlatforms': 
+11:31:32 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+11:31:43 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+11:40:21 INFO  : Build configuration of 'test1_ps_enet' is updated to 'Release'
+11:40:58 INFO  : Result from executing command 'getProjects': design_1_wrapper
+11:40:58 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+11:41:03 INFO  : Checking for BSP changes to sync application flags for project 'test1_ps_enet'...
+15:32:10 INFO  : Result from executing command 'getProjects': design_1_wrapper
+15:32:10 INFO  : Result from executing command 'getPlatforms': 
+15:32:10 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+15:32:21 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+15:33:11 INFO  : Build configuration of 'test1_system' is updated to 'Release'
+15:33:11 INFO  : Build configuration of system project is automatically updated to 'Release'.
+15:33:47 INFO  : Result from executing command 'getProjects': design_1_wrapper
+15:33:47 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+15:33:52 INFO  : Checking for BSP changes to sync application flags for project 'test1'...
+15:38:03 INFO  : Checking for BSP changes to sync application flags for project 'test1'...
+13:41:45 INFO  : Launching XSCT server: xsct -n  -interactive /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/temp_xsdb_launch_script.tcl
+13:41:48 INFO  : XSCT server has started successfully.
+13:41:48 INFO  : plnx-install-location is set to ''
+13:41:48 INFO  : Successfully done setting XSCT server connection channel  
+13:41:48 INFO  : Successfully done setting workspace for the tool. 
+13:41:49 INFO  : Platform repository initialization has completed.
+13:41:50 INFO  : Registering command handlers for Vitis TCF services
+13:41:50 INFO  : Successfully done query RDI_DATADIR 
+13:43:16 INFO  : Result from executing command 'getProjects': design_1_wrapper;design_2_wrapper
+13:43:16 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+13:43:16 WARN  : An unexpected exception occurred in the module 'platform project logging'
+13:43:16 INFO  : Platform 'design_2_wrapper' is added to custom repositories.
+13:43:27 INFO  : Platform 'design_2_wrapper' is added to custom repositories.
+13:43:32 INFO  : Build configuration of 'test2_system' is updated to 'Release'
+13:43:32 INFO  : Build configuration of system project is automatically updated to 'Release'.
+13:44:11 INFO  : Result from executing command 'getProjects': design_1_wrapper;design_2_wrapper
+13:44:11 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;design_2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_2_wrapper/export/design_2_wrapper/design_2_wrapper.xpfm
+13:44:17 INFO  : Checking for BSP changes to sync application flags for project 'test2'...
+14:03:34 INFO  : Checking for BSP changes to sync application flags for project 'test2'...
+14:05:50 INFO  : Generated template bif file for test2_system
+14:05:59 INFO  : Invoking Bootgen: bootgen -image test2_system.bif -arch zynqmp -o /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/test2_system/_ide/bootimage/BOOT.bin
+14:06:01 INFO  : Bootgen command execution is done.
+10:31:50 INFO  : Launching XSCT server: xsct -n  -interactive /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/temp_xsdb_launch_script.tcl
+10:31:53 INFO  : XSCT server has started successfully.
+10:31:53 INFO  : plnx-install-location is set to ''
+10:31:53 INFO  : Successfully done setting XSCT server connection channel  
+10:31:53 INFO  : Successfully done setting workspace for the tool. 
+10:31:55 INFO  : Platform repository initialization has completed.
+10:31:55 INFO  : Registering command handlers for Vitis TCF services
+10:31:55 INFO  : Successfully done query RDI_DATADIR 
+10:34:03 INFO  : Result from executing command 'getProjects': design_1_wrapper;design_2_wrapper;design_3_wrapper
+10:34:03 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;design_2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_2_wrapper/export/design_2_wrapper/design_2_wrapper.xpfm
+10:34:03 WARN  : An unexpected exception occurred in the module 'platform project logging'
+10:34:04 INFO  : Platform 'design_3_wrapper' is added to custom repositories.
+10:34:14 INFO  : Platform 'design_3_wrapper' is added to custom repositories.
+10:34:22 INFO  : Build configuration of 'test3_system' is updated to 'Release'
+10:34:22 INFO  : Build configuration of system project is automatically updated to 'Release'.
+10:35:00 INFO  : Result from executing command 'getProjects': design_1_wrapper;design_2_wrapper;design_3_wrapper
+10:35:00 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;design_2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_2_wrapper/export/design_2_wrapper/design_2_wrapper.xpfm;design_3_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_3_wrapper/export/design_3_wrapper/design_3_wrapper.xpfm
+10:35:05 INFO  : Checking for BSP changes to sync application flags for project 'test3'...
+14:40:02 INFO  : Build configuration of 'test2_mdio_system' is updated to 'Release'
+14:40:02 INFO  : Build configuration of system project is automatically updated to 'Release'.
+14:40:02 INFO  : Checking for BSP changes to sync application flags for project 'test2_mdio'...
+14:40:29 INFO  : Generated template bif file for test2_mdio_system
+14:40:57 INFO  : Invoking Bootgen: bootgen -image test2_mdio_system.bif -arch zynqmp -o /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/test2_mdio_system/_ide/bootimage/BOOT.bin
+14:40:59 INFO  : Bootgen command execution is done.
+16:22:24 INFO  : Checking for BSP changes to sync application flags for project 'test2_mdio'...
+16:22:33 INFO  : Invoking Bootgen: bootgen -image test2_mdio_system.bif -arch zynqmp -o /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/test2_mdio_system/_ide/bootimage/BOOT.bin -w on
+16:22:35 INFO  : Bootgen command execution is done.
+17:04:03 INFO  : Launching XSCT server: xsct -n  -interactive /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/temp_xsdb_launch_script.tcl
+17:04:06 INFO  : XSCT server has started successfully.
+17:04:06 INFO  : Successfully done setting XSCT server connection channel  
+17:04:06 INFO  : plnx-install-location is set to ''
+17:04:06 INFO  : Successfully done setting workspace for the tool. 
+17:04:07 INFO  : Platform repository initialization has completed.
+17:04:07 INFO  : Registering command handlers for Vitis TCF services
+17:04:07 INFO  : Successfully done query RDI_DATADIR 
+17:07:28 INFO  : Checking for BSP changes to sync application flags for project 'test3'...
+17:07:47 INFO  : Checking for BSP changes to sync application flags for project 'test3'...
+17:07:58 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_3_wrapper/export/design_3_wrapper/hw/design_3_wrapper.xsa is already opened
+
+17:07:58 INFO  : Generated template bif file for test3_system
+17:08:02 INFO  : Invoking Bootgen: bootgen -image test3_system.bif -arch zynqmp -o /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/test3_system/_ide/bootimage/BOOT.bin
+17:08:04 INFO  : Bootgen command execution is done.
+17:15:03 INFO  : Checking for BSP changes to sync application flags for project 'test3'...
+17:15:13 INFO  : Invoking Bootgen: bootgen -image test3_system.bif -arch zynqmp -o /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/test3_system/_ide/bootimage/BOOT.bin -w on
+17:15:14 INFO  : Bootgen command execution is done.
+17:26:21 INFO  : Result from executing command 'getProjects': design_1_wrapper;design_2_wrapper;design_3_wrapper
+17:26:21 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;design_2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_2_wrapper/export/design_2_wrapper/design_2_wrapper.xpfm;design_3_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_3_wrapper/export/design_3_wrapper/design_3_wrapper.xpfm
+17:26:24 INFO  : Checking for BSP changes to sync application flags for project 'test3'...
+17:26:56 INFO  : Invoking Bootgen: bootgen -image test3_system.bif -arch zynqmp -o /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/test3_system/_ide/bootimage/BOOT.bin -w on
+17:26:57 INFO  : Bootgen command execution is done.
+17:32:02 INFO  : Result from executing command 'getProjects': design_1_wrapper;design_2_wrapper;design_3_wrapper
+17:32:02 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;design_2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_2_wrapper/export/design_2_wrapper/design_2_wrapper.xpfm;design_3_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_3_wrapper/export/design_3_wrapper/design_3_wrapper.xpfm
+17:32:05 INFO  : Checking for BSP changes to sync application flags for project 'test3'...
+17:32:24 INFO  : Invoking Bootgen: bootgen -image test3_system.bif -arch zynqmp -o /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/test3_system/_ide/bootimage/BOOT.bin -w on
+17:32:26 INFO  : Bootgen command execution is done.
+13:05:41 INFO  : Launching XSCT server: xsct -n  -interactive /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/temp_xsdb_launch_script.tcl
+13:05:44 INFO  : XSCT server has started successfully.
+13:05:44 INFO  : plnx-install-location is set to ''
+13:05:44 INFO  : Successfully done setting XSCT server connection channel  
+13:05:44 INFO  : Successfully done setting workspace for the tool. 
+13:05:46 INFO  : Platform repository initialization has completed.
+13:05:46 INFO  : Registering command handlers for Vitis TCF services
+13:05:46 INFO  : Successfully done query RDI_DATADIR 
+13:06:13 WARN  : An unexpected exception occurred in the module 'platform project logging'
+13:11:43 INFO  : Result from executing command 'getProjects': design_1_wrapper;design_2_wrapper;design_3_wrapper
+13:11:43 INFO  : Result from executing command 'getPlatforms': design_2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_2_wrapper/export/design_2_wrapper/design_2_wrapper.xpfm;design_3_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_3_wrapper/export/design_3_wrapper/design_3_wrapper.xpfm
+13:11:43 WARN  : An unexpected exception occurred in the module 'platform project logging'
+13:11:43 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+13:11:54 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+13:12:09 INFO  : Build configuration of 'test1_system' is updated to 'Release'
+13:12:09 INFO  : Build configuration of system project is automatically updated to 'Release'.
+13:12:47 INFO  : Result from executing command 'getProjects': design_1_wrapper;design_2_wrapper;design_3_wrapper
+13:12:47 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;design_2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_2_wrapper/export/design_2_wrapper/design_2_wrapper.xpfm;design_3_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_3_wrapper/export/design_3_wrapper/design_3_wrapper.xpfm
+13:12:52 INFO  : Checking for BSP changes to sync application flags for project 'test1'...
+10:44:55 INFO  : Launching XSCT server: xsct -n  -interactive /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/temp_xsdb_launch_script.tcl
+10:44:58 INFO  : XSCT server has started successfully.
+10:44:58 INFO  : plnx-install-location is set to ''
+10:44:58 INFO  : Successfully done setting XSCT server connection channel  
+10:44:58 INFO  : Successfully done setting workspace for the tool. 
+10:44:58 INFO  : Platform repository initialization has completed.
+10:44:59 INFO  : Registering command handlers for Vitis TCF services
+10:45:00 INFO  : Successfully done query RDI_DATADIR 
+10:45:33 WARN  : An unexpected exception occurred in the module 'platform project logging'
+10:45:39 WARN  : An unexpected exception occurred in the module 'platform project logging'
+10:47:43 INFO  : Result from executing command 'getProjects': design_1_wrapper;design_2_wrapper
+10:47:43 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+10:47:43 WARN  : An unexpected exception occurred in the module 'platform project logging'
+10:47:43 INFO  : Platform 'design_2_wrapper' is added to custom repositories.
+10:47:53 INFO  : Platform 'design_2_wrapper' is added to custom repositories.
+10:47:59 INFO  : Build configuration of 'test2_system' is updated to 'Release'
+10:47:59 INFO  : Build configuration of system project is automatically updated to 'Release'.
+10:48:38 INFO  : Result from executing command 'getProjects': design_1_wrapper;design_2_wrapper
+10:48:38 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;design_2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_2_wrapper/export/design_2_wrapper/design_2_wrapper.xpfm
+10:48:43 INFO  : Checking for BSP changes to sync application flags for project 'test2'...
+10:51:59 INFO  : Checking for BSP changes to sync application flags for project 'test2'...
+14:42:15 INFO  : Launching XSCT server: xsct -n  -interactive /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/temp_xsdb_launch_script.tcl
+14:42:18 INFO  : XSCT server has started successfully.
+14:42:18 INFO  : plnx-install-location is set to ''
+14:42:18 INFO  : Successfully done setting XSCT server connection channel  
+14:42:18 INFO  : Successfully done setting workspace for the tool. 
+14:42:19 INFO  : Platform repository initialization has completed.
+14:42:19 INFO  : Registering command handlers for Vitis TCF services
+14:42:19 INFO  : Successfully done query RDI_DATADIR 
+14:43:34 INFO  : Result from executing command 'getProjects': design_1_wrapper;design_2_wrapper;design_3_wrapper
+14:43:34 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;design_2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_2_wrapper/export/design_2_wrapper/design_2_wrapper.xpfm
+14:43:34 WARN  : An unexpected exception occurred in the module 'platform project logging'
+14:43:35 INFO  : Platform 'design_3_wrapper' is added to custom repositories.
+14:43:45 INFO  : Platform 'design_3_wrapper' is added to custom repositories.
+14:44:07 INFO  : Build configuration of 'test3_system' is updated to 'Release'
+14:44:07 INFO  : Build configuration of system project is automatically updated to 'Release'.
+14:44:45 INFO  : Result from executing command 'getProjects': design_1_wrapper;design_2_wrapper;design_3_wrapper
+14:44:45 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;design_2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_2_wrapper/export/design_2_wrapper/design_2_wrapper.xpfm;design_3_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_3_wrapper/export/design_3_wrapper/design_3_wrapper.xpfm
+14:44:49 INFO  : Checking for BSP changes to sync application flags for project 'test3'...
+09:31:06 INFO  : Launching XSCT server: xsct -n  -interactive /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/temp_xsdb_launch_script.tcl
+09:31:09 INFO  : XSCT server has started successfully.
+09:31:09 INFO  : Successfully done setting XSCT server connection channel  
+09:31:09 INFO  : plnx-install-location is set to ''
+09:31:09 INFO  : Successfully done setting workspace for the tool. 
+09:31:10 INFO  : Platform repository initialization has completed.
+09:31:10 INFO  : Registering command handlers for Vitis TCF services
+09:31:10 INFO  : Successfully done query RDI_DATADIR 
+09:32:40 INFO  : Result from executing command 'getProjects': design_1_nosata_wrapper;design_1_wrapper;design_2_wrapper;design_3_wrapper
+09:32:40 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;design_2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_2_wrapper/export/design_2_wrapper/design_2_wrapper.xpfm;design_3_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_3_wrapper/export/design_3_wrapper/design_3_wrapper.xpfm
+09:32:40 WARN  : An unexpected exception occurred in the module 'platform project logging'
+09:32:40 INFO  : Platform 'design_1_nosata_wrapper' is added to custom repositories.
+09:32:54 INFO  : Platform 'design_1_nosata_wrapper' is added to custom repositories.
+09:33:00 INFO  : Build configuration of 'test1_nosata' is updated to 'Release'
+09:33:40 INFO  : Result from executing command 'getProjects': design_1_nosata_wrapper;design_1_wrapper;design_2_wrapper;design_3_wrapper
+09:33:40 INFO  : Result from executing command 'getPlatforms': design_1_nosata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_nosata_wrapper/export/design_1_nosata_wrapper/design_1_nosata_wrapper.xpfm;design_1_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;design_2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_2_wrapper/export/design_2_wrapper/design_2_wrapper.xpfm;design_3_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_3_wrapper/export/design_3_wrapper/design_3_wrapper.xpfm
+09:33:45 INFO  : Checking for BSP changes to sync application flags for project 'test1_nosata'...
+09:35:11 INFO  : Result from executing command 'getProjects': design_1_2xsata_wrapper;design_1_nosata_wrapper;design_1_wrapper;design_2_wrapper;design_3_wrapper
+09:35:11 INFO  : Result from executing command 'getPlatforms': design_1_nosata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_nosata_wrapper/export/design_1_nosata_wrapper/design_1_nosata_wrapper.xpfm;design_1_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;design_2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_2_wrapper/export/design_2_wrapper/design_2_wrapper.xpfm;design_3_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_3_wrapper/export/design_3_wrapper/design_3_wrapper.xpfm
+09:35:11 INFO  : Platform 'design_1_2xsata_wrapper' is added to custom repositories.
+09:35:23 INFO  : Platform 'design_1_2xsata_wrapper' is added to custom repositories.
+09:35:48 INFO  : Build configuration of 'test1_2xsata_system' is updated to 'Release'
+09:35:48 INFO  : Build configuration of system project is automatically updated to 'Release'.
+09:36:26 INFO  : Result from executing command 'getProjects': design_1_2xsata_wrapper;design_1_nosata_wrapper;design_1_wrapper;design_2_wrapper;design_3_wrapper
+09:36:26 INFO  : Result from executing command 'getPlatforms': design_1_2xsata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_2xsata_wrapper/export/design_1_2xsata_wrapper/design_1_2xsata_wrapper.xpfm;design_1_nosata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_nosata_wrapper/export/design_1_nosata_wrapper/design_1_nosata_wrapper.xpfm;design_1_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;design_2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_2_wrapper/export/design_2_wrapper/design_2_wrapper.xpfm;design_3_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_3_wrapper/export/design_3_wrapper/design_3_wrapper.xpfm
+09:36:31 INFO  : Checking for BSP changes to sync application flags for project 'test1_2xsata'...
+11:46:51 INFO  : Result from executing command 'getProjects': design_1_2xsata_wrapper;design_1_nosata_wrapper;design_1_wrapper;design_2_wrapper;design_3_wrapper
+11:46:51 INFO  : Result from executing command 'getPlatforms': design_1_2xsata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_2xsata_wrapper/export/design_1_2xsata_wrapper/design_1_2xsata_wrapper.xpfm;design_1_nosata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_nosata_wrapper/export/design_1_nosata_wrapper/design_1_nosata_wrapper.xpfm;design_1_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;design_2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_2_wrapper/export/design_2_wrapper/design_2_wrapper.xpfm;design_3_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_3_wrapper/export/design_3_wrapper/design_3_wrapper.xpfm
+11:46:55 INFO  : Checking for BSP changes to sync application flags for project 'test1_2xsata'...
+11:47:14 INFO  : Generated template bif file for test1_2xsata_system
+11:47:19 INFO  : Invoking Bootgen: bootgen -image test1_2xsata_system.bif -arch zynqmp -o /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/test1_2xsata_system/_ide/bootimage/BOOT.bin
+11:47:21 INFO  : Bootgen command execution is done.
+09:08:06 INFO  : Launching XSCT server: xsct -n  -interactive /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/temp_xsdb_launch_script.tcl
+09:08:09 INFO  : XSCT server has started successfully.
+09:08:09 INFO  : Successfully done setting XSCT server connection channel  
+09:08:09 INFO  : plnx-install-location is set to ''
+09:08:09 INFO  : Successfully done setting workspace for the tool. 
+09:08:10 INFO  : Platform repository initialization has completed.
+09:08:10 INFO  : Registering command handlers for Vitis TCF services
+09:08:11 INFO  : Successfully done query RDI_DATADIR 
+09:08:57 WARN  : An unexpected exception occurred in the module 'platform project logging'
+09:09:03 WARN  : An unexpected exception occurred in the module 'platform project logging'
+09:09:10 WARN  : An unexpected exception occurred in the module 'platform project logging'
+09:10:29 INFO  : Result from executing command 'getProjects': design_1_2xsata_wrapper;design_1_mac0_sw2_wrapper;design_1_nosata_wrapper
+09:10:29 INFO  : Result from executing command 'getPlatforms': design_1_2xsata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_2xsata_wrapper/export/design_1_2xsata_wrapper/design_1_2xsata_wrapper.xpfm;design_1_nosata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_nosata_wrapper/export/design_1_nosata_wrapper/design_1_nosata_wrapper.xpfm
+09:10:29 WARN  : An unexpected exception occurred in the module 'platform project logging'
+09:10:29 INFO  : Platform 'design_1_mac0_sw2_wrapper' is added to custom repositories.
+09:10:40 INFO  : Platform 'design_1_mac0_sw2_wrapper' is added to custom repositories.
+09:10:47 INFO  : Build configuration of 'test1_mac0_sw2' is updated to 'Release'
+09:11:26 INFO  : Result from executing command 'getProjects': design_1_2xsata_wrapper;design_1_mac0_sw2_wrapper;design_1_nosata_wrapper
+09:11:26 INFO  : Result from executing command 'getPlatforms': design_1_2xsata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_2xsata_wrapper/export/design_1_2xsata_wrapper/design_1_2xsata_wrapper.xpfm;design_1_mac0_sw2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_mac0_sw2_wrapper/export/design_1_mac0_sw2_wrapper/design_1_mac0_sw2_wrapper.xpfm;design_1_nosata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_nosata_wrapper/export/design_1_nosata_wrapper/design_1_nosata_wrapper.xpfm
+09:11:31 INFO  : Checking for BSP changes to sync application flags for project 'test1_mac0_sw2'...
+09:15:58 INFO  : Checking for BSP changes to sync application flags for project 'test1_2xsata'...
+09:39:02 INFO  : Result from executing command 'getProjects': design_1_2xsata_wrapper;design_1_mac0_sw2_wrapper;design_1_nosata_wrapper
+09:39:02 INFO  : Result from executing command 'getPlatforms': design_1_2xsata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_2xsata_wrapper/export/design_1_2xsata_wrapper/design_1_2xsata_wrapper.xpfm;design_1_mac0_sw2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_mac0_sw2_wrapper/export/design_1_mac0_sw2_wrapper/design_1_mac0_sw2_wrapper.xpfm;design_1_nosata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_nosata_wrapper/export/design_1_nosata_wrapper/design_1_nosata_wrapper.xpfm
+09:39:06 INFO  : Checking for BSP changes to sync application flags for project 'test1_mac0_sw2'...
+09:39:42 INFO  : Checking for BSP changes to sync application flags for project 'test1_mac0_sw2'...
+09:40:05 INFO  : Generated template bif file for test1_mac0_sw2_system
+09:40:09 INFO  : Invoking Bootgen: bootgen -image test1_mac0_sw2_system.bif -arch zynqmp -o /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/test1_mac0_sw2_system/_ide/bootimage/BOOT.bin
+09:40:10 INFO  : Bootgen command execution is done.
+09:56:28 INFO  : Checking for BSP changes to sync application flags for project 'test1_mac0_sw2'...
+09:56:42 INFO  : Checking for BSP changes to sync application flags for project 'test1_mac0_sw2'...
+09:56:53 INFO  : Invoking Bootgen: bootgen -image test1_mac0_sw2_system.bif -arch zynqmp -o /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/test1_mac0_sw2_system/_ide/bootimage/BOOT.bin -w on
+09:56:54 INFO  : Bootgen command execution is done.
+10:12:29 INFO  : Checking for BSP changes to sync application flags for project 'test1_mac0_sw2'...
+10:12:39 INFO  : Checking for BSP changes to sync application flags for project 'test1_mac0_sw2'...
+10:13:06 INFO  : Invoking Bootgen: bootgen -image test1_mac0_sw2_system.bif -arch zynqmp -o /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/test1_mac0_sw2_system/_ide/bootimage/BOOT.bin -w on
+10:13:07 INFO  : Bootgen command execution is done.
+11:08:03 INFO  : Result from executing command 'getProjects': design_1_2xsata_wrapper;design_1_mac0_sw2_wrapper;design_1_nosata_wrapper
+11:08:03 INFO  : Result from executing command 'getPlatforms': design_1_2xsata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_2xsata_wrapper/export/design_1_2xsata_wrapper/design_1_2xsata_wrapper.xpfm;design_1_nosata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_nosata_wrapper/export/design_1_nosata_wrapper/design_1_nosata_wrapper.xpfm
+11:08:03 INFO  : Platform 'design_1_mac0_sw2_wrapper' is added to custom repositories.
+11:08:16 INFO  : Platform 'design_1_mac0_sw2_wrapper' is added to custom repositories.
+11:08:34 INFO  : Build configuration of 'sgmii_mac0_sw2' is updated to 'Release'
+11:09:11 INFO  : Result from executing command 'getProjects': design_1_2xsata_wrapper;design_1_mac0_sw2_wrapper;design_1_nosata_wrapper
+11:09:11 INFO  : Result from executing command 'getPlatforms': design_1_2xsata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_2xsata_wrapper/export/design_1_2xsata_wrapper/design_1_2xsata_wrapper.xpfm;design_1_mac0_sw2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_mac0_sw2_wrapper/export/design_1_mac0_sw2_wrapper/design_1_mac0_sw2_wrapper.xpfm;design_1_nosata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_nosata_wrapper/export/design_1_nosata_wrapper/design_1_nosata_wrapper.xpfm
+11:09:16 INFO  : Checking for BSP changes to sync application flags for project 'sgmii_mac0_sw2'...
+15:40:58 INFO  : Launching XSCT server: xsct -n  -interactive /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/temp_xsdb_launch_script.tcl
+15:41:01 INFO  : XSCT server has started successfully.
+15:41:01 INFO  : Successfully done setting XSCT server connection channel  
+15:41:01 INFO  : plnx-install-location is set to ''
+15:41:01 INFO  : Successfully done setting workspace for the tool. 
+15:41:02 INFO  : Platform repository initialization has completed.
+15:41:02 INFO  : Registering command handlers for Vitis TCF services
+15:41:02 INFO  : Successfully done query RDI_DATADIR 
+15:46:46 INFO  : Result from executing command 'getProjects': design_1_2xsata_wrapper;design_1_enet_phy_8_9_10;design_1_mac0_sw2_wrapper;design_1_nosata_wrapper
+15:46:46 INFO  : Result from executing command 'getPlatforms': design_1_2xsata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_2xsata_wrapper/export/design_1_2xsata_wrapper/design_1_2xsata_wrapper.xpfm;design_1_mac0_sw2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_mac0_sw2_wrapper/export/design_1_mac0_sw2_wrapper/design_1_mac0_sw2_wrapper.xpfm;design_1_nosata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_nosata_wrapper/export/design_1_nosata_wrapper/design_1_nosata_wrapper.xpfm
+15:46:46 WARN  : An unexpected exception occurred in the module 'platform project logging'
+15:46:46 INFO  : Platform 'design_1_enet_phy_8_9_10' is added to custom repositories.
+15:46:58 INFO  : Platform 'design_1_enet_phy_8_9_10' is added to custom repositories.
+15:47:06 INFO  : Build configuration of 'enet_phy_8_9_10_system' is updated to 'Release'
+15:47:06 INFO  : Build configuration of system project is automatically updated to 'Release'.
+15:47:45 INFO  : Result from executing command 'getProjects': design_1_2xsata_wrapper;design_1_enet_phy_8_9_10;design_1_mac0_sw2_wrapper;design_1_nosata_wrapper
+15:47:45 INFO  : Result from executing command 'getPlatforms': /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_8_9_10/export/design_1_enet_phy_8_9_10/design_1_enet_phy_8_9_10.xpfm|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_8_9_10/export/design_1_enet_phy_8_9_10/design_1_enet_phy_8_9_10.xpfm;design_1_2xsata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_2xsata_wrapper/export/design_1_2xsata_wrapper/design_1_2xsata_wrapper.xpfm;design_1_mac0_sw2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_mac0_sw2_wrapper/export/design_1_mac0_sw2_wrapper/design_1_mac0_sw2_wrapper.xpfm;design_1_nosata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_nosata_wrapper/export/design_1_nosata_wrapper/design_1_nosata_wrapper.xpfm
+15:47:50 INFO  : Checking for BSP changes to sync application flags for project 'enet_phy_8_9_10'...
+17:45:50 INFO  : Result from executing command 'getProjects': design_1_2xsata_wrapper;design_1_enet_phy_8_9_10;design_1_enet_phy_noixdelay;design_1_mac0_sw2_wrapper;design_1_nosata_wrapper
+17:45:50 INFO  : Result from executing command 'getPlatforms': design_1_2xsata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_2xsata_wrapper/export/design_1_2xsata_wrapper/design_1_2xsata_wrapper.xpfm;design_1_enet_phy_8_9_10|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_8_9_10/export/design_1_enet_phy_8_9_10/design_1_enet_phy_8_9_10.xpfm;design_1_mac0_sw2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_mac0_sw2_wrapper/export/design_1_mac0_sw2_wrapper/design_1_mac0_sw2_wrapper.xpfm;design_1_nosata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_nosata_wrapper/export/design_1_nosata_wrapper/design_1_nosata_wrapper.xpfm
+17:45:50 INFO  : Platform 'design_1_enet_phy_noixdelay' is added to custom repositories.
+17:46:02 INFO  : Platform 'design_1_enet_phy_noixdelay' is added to custom repositories.
+17:46:08 INFO  : Build configuration of 'enet_phy_8_9_10_noixdelay_system' is updated to 'Release'
+17:46:08 INFO  : Build configuration of system project is automatically updated to 'Release'.
+17:46:46 INFO  : Result from executing command 'getProjects': design_1_2xsata_wrapper;design_1_enet_phy_8_9_10;design_1_enet_phy_noixdelay;design_1_mac0_sw2_wrapper;design_1_nosata_wrapper
+17:46:46 INFO  : Result from executing command 'getPlatforms': /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_noixdelay/export/design_1_enet_phy_noixdelay/design_1_enet_phy_noixdelay.xpfm|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_noixdelay/export/design_1_enet_phy_noixdelay/design_1_enet_phy_noixdelay.xpfm;design_1_2xsata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_2xsata_wrapper/export/design_1_2xsata_wrapper/design_1_2xsata_wrapper.xpfm;design_1_enet_phy_8_9_10|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_8_9_10/export/design_1_enet_phy_8_9_10/design_1_enet_phy_8_9_10.xpfm;design_1_mac0_sw2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_mac0_sw2_wrapper/export/design_1_mac0_sw2_wrapper/design_1_mac0_sw2_wrapper.xpfm;design_1_nosata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_nosata_wrapper/export/design_1_nosata_wrapper/design_1_nosata_wrapper.xpfm
+17:46:51 INFO  : Checking for BSP changes to sync application flags for project 'enet_phy_8_9_10_noixdelay'...
+09:21:22 INFO  : Result from executing command 'getProjects': design_1_2xsata_wrapper;design_1_enet_phy_8_9_10;design_1_enet_phy_ixdelay;design_1_enet_phy_noixdelay;design_1_mac0_sw2_wrapper;design_1_nosata_wrapper
+09:21:22 INFO  : Result from executing command 'getPlatforms': design_1_2xsata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_2xsata_wrapper/export/design_1_2xsata_wrapper/design_1_2xsata_wrapper.xpfm;design_1_enet_phy_8_9_10|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_8_9_10/export/design_1_enet_phy_8_9_10/design_1_enet_phy_8_9_10.xpfm;design_1_enet_phy_noixdelay|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_noixdelay/export/design_1_enet_phy_noixdelay/design_1_enet_phy_noixdelay.xpfm;design_1_mac0_sw2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_mac0_sw2_wrapper/export/design_1_mac0_sw2_wrapper/design_1_mac0_sw2_wrapper.xpfm;design_1_nosata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_nosata_wrapper/export/design_1_nosata_wrapper/design_1_nosata_wrapper.xpfm
+09:21:22 INFO  : Platform 'design_1_enet_phy_ixdelay' is added to custom repositories.
+09:21:34 INFO  : Platform 'design_1_enet_phy_ixdelay' is added to custom repositories.
+09:21:39 INFO  : Build configuration of 'enet_phy_8_9_10_ixdelay_system' is updated to 'Release'
+09:21:39 INFO  : Build configuration of system project is automatically updated to 'Release'.
+09:22:17 INFO  : Result from executing command 'getProjects': design_1_2xsata_wrapper;design_1_enet_phy_8_9_10;design_1_enet_phy_ixdelay;design_1_enet_phy_noixdelay;design_1_mac0_sw2_wrapper;design_1_nosata_wrapper
+09:22:17 INFO  : Result from executing command 'getPlatforms': design_1_2xsata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_2xsata_wrapper/export/design_1_2xsata_wrapper/design_1_2xsata_wrapper.xpfm;design_1_enet_phy_8_9_10|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_8_9_10/export/design_1_enet_phy_8_9_10/design_1_enet_phy_8_9_10.xpfm;design_1_enet_phy_ixdelay|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_ixdelay/export/design_1_enet_phy_ixdelay/design_1_enet_phy_ixdelay.xpfm;design_1_enet_phy_noixdelay|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_noixdelay/export/design_1_enet_phy_noixdelay/design_1_enet_phy_noixdelay.xpfm;design_1_mac0_sw2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_mac0_sw2_wrapper/export/design_1_mac0_sw2_wrapper/design_1_mac0_sw2_wrapper.xpfm;design_1_nosata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_nosata_wrapper/export/design_1_nosata_wrapper/design_1_nosata_wrapper.xpfm
+09:22:22 INFO  : Checking for BSP changes to sync application flags for project 'enet_phy_8_9_10_ixdelay'...
+13:45:12 INFO  : Launching XSCT server: xsct -n  -interactive /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/temp_xsdb_launch_script.tcl
+13:45:15 INFO  : XSCT server has started successfully.
+13:45:15 INFO  : plnx-install-location is set to ''
+13:45:15 INFO  : Successfully done setting XSCT server connection channel  
+13:45:15 INFO  : Successfully done setting workspace for the tool. 
+13:45:16 INFO  : Platform repository initialization has completed.
+13:45:16 INFO  : Registering command handlers for Vitis TCF services
+13:45:16 INFO  : Successfully done query RDI_DATADIR 
+14:28:19 INFO  : Launching XSCT server: xsct -n  -interactive /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/temp_xsdb_launch_script.tcl
+14:28:22 INFO  : XSCT server has started successfully.
+14:28:22 INFO  : plnx-install-location is set to ''
+14:28:22 INFO  : Successfully done setting XSCT server connection channel  
+14:28:22 INFO  : Successfully done setting workspace for the tool. 
+14:28:22 INFO  : Platform repository initialization has completed.
+14:28:23 INFO  : Successfully done query RDI_DATADIR 
+14:28:23 INFO  : Registering command handlers for Vitis TCF services
+14:28:44 WARN  : An unexpected exception occurred in the module 'platform project logging'
+14:30:32 INFO  : Result from executing command 'getProjects': design_1_2xsata_wrapper;design_1_enet_phy_8_9_10;design_1_enet_phy_ixdelay;design_1_enet_phy_noixdelay;design_1_mac0_sw2_wrapper;design_psenet_ok
+14:30:33 INFO  : Result from executing command 'getPlatforms': design_1_2xsata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_2xsata_wrapper/export/design_1_2xsata_wrapper/design_1_2xsata_wrapper.xpfm;design_1_enet_phy_8_9_10|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_8_9_10/export/design_1_enet_phy_8_9_10/design_1_enet_phy_8_9_10.xpfm;design_1_enet_phy_ixdelay|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_ixdelay/export/design_1_enet_phy_ixdelay/design_1_enet_phy_ixdelay.xpfm;design_1_enet_phy_noixdelay|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_noixdelay/export/design_1_enet_phy_noixdelay/design_1_enet_phy_noixdelay.xpfm;design_1_mac0_sw2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_mac0_sw2_wrapper/export/design_1_mac0_sw2_wrapper/design_1_mac0_sw2_wrapper.xpfm
+14:30:33 WARN  : An unexpected exception occurred in the module 'platform project logging'
+14:30:33 INFO  : Platform 'design_psenet_ok' is added to custom repositories.
+14:30:43 INFO  : Platform 'design_psenet_ok' is added to custom repositories.
+14:30:49 INFO  : Build configuration of 'enetok_mac_rxtx' is updated to 'Release'
+14:31:28 INFO  : Result from executing command 'getProjects': design_1_2xsata_wrapper;design_1_enet_phy_8_9_10;design_1_enet_phy_ixdelay;design_1_enet_phy_noixdelay;design_1_mac0_sw2_wrapper;design_psenet_ok
+14:31:28 INFO  : Result from executing command 'getPlatforms': design_1_2xsata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_2xsata_wrapper/export/design_1_2xsata_wrapper/design_1_2xsata_wrapper.xpfm;design_1_enet_phy_8_9_10|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_8_9_10/export/design_1_enet_phy_8_9_10/design_1_enet_phy_8_9_10.xpfm;design_1_enet_phy_ixdelay|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_ixdelay/export/design_1_enet_phy_ixdelay/design_1_enet_phy_ixdelay.xpfm;design_1_enet_phy_noixdelay|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_noixdelay/export/design_1_enet_phy_noixdelay/design_1_enet_phy_noixdelay.xpfm;design_1_mac0_sw2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_mac0_sw2_wrapper/export/design_1_mac0_sw2_wrapper/design_1_mac0_sw2_wrapper.xpfm;design_psenet_ok|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_psenet_ok/export/design_psenet_ok/design_psenet_ok.xpfm
+14:31:33 INFO  : Checking for BSP changes to sync application flags for project 'enetok_mac_rxtx'...
+14:40:47 INFO  : Checking for BSP changes to sync application flags for project 'enetok_mac_rxtx'...
+14:43:38 INFO  : Checking for BSP changes to sync application flags for project 'enetok_mac_rxtx'...
+14:44:42 INFO  : Checking for BSP changes to sync application flags for project 'enetok_mac_rxtx'...
+14:44:52 INFO  : Generated template bif file for enetok_mac_rxtx_system
+14:44:57 INFO  : Invoking Bootgen: bootgen -image enetok_mac_rxtx_system.bif -arch zynqmp -o /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/enetok_mac_rxtx_system/_ide/bootimage/BOOT.bin
+14:44:58 INFO  : Bootgen command execution is done.
+18:49:01 INFO  : Launching XSCT server: xsct -n  -interactive /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/temp_xsdb_launch_script.tcl
+18:49:04 INFO  : XSCT server has started successfully.
+18:49:04 INFO  : Successfully done setting XSCT server connection channel  
+18:49:04 INFO  : plnx-install-location is set to ''
+18:49:04 INFO  : Successfully done setting workspace for the tool. 
+18:49:06 INFO  : Registering command handlers for Vitis TCF services
+18:49:06 INFO  : Platform repository initialization has completed.
+18:49:06 INFO  : Successfully done query RDI_DATADIR 
+18:55:38 INFO  : Checking for BSP changes to sync application flags for project 'enetok_mac_rxtx'...
+18:56:13 INFO  : Checking for BSP changes to sync application flags for project 'enetok_mac_rxtx'...
+18:56:56 INFO  : Invoking Bootgen: bootgen -image enetok_mac_rxtx_system.bif -arch zynqmp -o /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/enetok_mac_rxtx_system/_ide/bootimage/BOOT.bin -w on
+18:56:58 INFO  : Bootgen command execution is done.
+19:03:25 INFO  : Invoking Bootgen: bootgen -image enetok_mac_rxtx_system.bif -arch zynqmp -o /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/enetok_mac_rxtx_system/_ide/bootimage/BOOT.bin -w on
+19:03:27 INFO  : Bootgen command execution is done.
+15:41:41 INFO  : Launching XSCT server: xsct -n  -interactive /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/temp_xsdb_launch_script.tcl
+15:41:44 INFO  : XSCT server has started successfully.
+15:41:44 INFO  : Successfully done setting XSCT server connection channel  
+15:41:44 INFO  : plnx-install-location is set to ''
+15:41:44 INFO  : Successfully done setting workspace for the tool. 
+15:41:45 INFO  : Registering command handlers for Vitis TCF services
+15:41:45 INFO  : Platform repository initialization has completed.
+15:41:46 INFO  : Successfully done query RDI_DATADIR 
+15:44:19 INFO  : Result from executing command 'getProjects': design_1_2xsata_wrapper;design_1_enet_phy_8_9_10;design_1_enet_phy_ixdelay;design_1_enet_phy_noixdelay;design_1_mac0_sw2_wrapper;design_psenet_ok
+15:44:19 INFO  : Result from executing command 'getPlatforms': design_1_2xsata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_2xsata_wrapper/export/design_1_2xsata_wrapper/design_1_2xsata_wrapper.xpfm;design_1_enet_phy_8_9_10|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_8_9_10/export/design_1_enet_phy_8_9_10/design_1_enet_phy_8_9_10.xpfm;design_1_enet_phy_ixdelay|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_ixdelay/export/design_1_enet_phy_ixdelay/design_1_enet_phy_ixdelay.xpfm;design_1_enet_phy_noixdelay|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_noixdelay/export/design_1_enet_phy_noixdelay/design_1_enet_phy_noixdelay.xpfm;design_1_mac0_sw2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_mac0_sw2_wrapper/export/design_1_mac0_sw2_wrapper/design_1_mac0_sw2_wrapper.xpfm;design_psenet_ok|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_psenet_ok/export/design_psenet_ok/design_psenet_ok.xpfm
+15:44:23 INFO  : Checking for BSP changes to sync application flags for project 'enetok_mac_rxtx'...
+15:44:56 INFO  : Result from executing command 'getProjects': design_1_2xsata_wrapper;design_1_enet_phy_8_9_10;design_1_enet_phy_ixdelay;design_1_enet_phy_noixdelay;design_1_mac0_sw2_wrapper;design_psenet_ok
+15:44:56 INFO  : Result from executing command 'getPlatforms': design_1_2xsata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_2xsata_wrapper/export/design_1_2xsata_wrapper/design_1_2xsata_wrapper.xpfm;design_1_enet_phy_8_9_10|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_8_9_10/export/design_1_enet_phy_8_9_10/design_1_enet_phy_8_9_10.xpfm;design_1_enet_phy_ixdelay|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_ixdelay/export/design_1_enet_phy_ixdelay/design_1_enet_phy_ixdelay.xpfm;design_1_enet_phy_noixdelay|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_noixdelay/export/design_1_enet_phy_noixdelay/design_1_enet_phy_noixdelay.xpfm;design_1_mac0_sw2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_mac0_sw2_wrapper/export/design_1_mac0_sw2_wrapper/design_1_mac0_sw2_wrapper.xpfm;design_psenet_ok|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_psenet_ok/export/design_psenet_ok/design_psenet_ok.xpfm
+15:45:11 INFO  : Checking for BSP changes to sync application flags for project 'enetok_mac_rxtx'...
+15:45:30 INFO  : Invoking Bootgen: bootgen -image enetok_mac_rxtx_system.bif -arch zynqmp -o /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/enetok_mac_rxtx_system/_ide/bootimage/BOOT.bin -w on
+15:45:31 INFO  : Bootgen command execution is done.
+09:42:56 INFO  : Launching XSCT server: xsct -n  -interactive /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/temp_xsdb_launch_script.tcl
+09:42:59 INFO  : XSCT server has started successfully.
+09:42:59 INFO  : Successfully done setting XSCT server connection channel  
+09:42:59 INFO  : plnx-install-location is set to ''
+09:42:59 INFO  : Successfully done setting workspace for the tool. 
+09:43:00 INFO  : Platform repository initialization has completed.
+09:43:00 INFO  : Registering command handlers for Vitis TCF services
+09:43:01 INFO  : Successfully done query RDI_DATADIR 
+09:43:43 WARN  : An unexpected exception occurred in the module 'platform project logging'
+09:43:48 WARN  : An unexpected exception occurred in the module 'platform project logging'
+09:43:53 WARN  : An unexpected exception occurred in the module 'platform project logging'
+09:43:58 WARN  : An unexpected exception occurred in the module 'platform project logging'
+09:44:03 WARN  : An unexpected exception occurred in the module 'platform project logging'
+09:44:09 WARN  : An unexpected exception occurred in the module 'platform project logging'
+10:57:56 INFO  : Launching XSCT server: xsct -n  -interactive /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/temp_xsdb_launch_script.tcl
+10:57:57 INFO  : Registering command handlers for Vitis TCF services
+10:57:59 INFO  : XSCT server has started successfully.
+10:57:59 INFO  : plnx-install-location is set to ''
+10:57:59 INFO  : Successfully done setting XSCT server connection channel  
+10:58:00 INFO  : Successfully done setting workspace for the tool. 
+10:58:00 INFO  : Successfully done query RDI_DATADIR 
+10:58:00 INFO  : Platform repository initialization has completed.
+14:58:16 INFO  : Launching XSCT server: xsct -n  -interactive /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/temp_xsdb_launch_script.tcl
+14:58:17 INFO  : Registering command handlers for Vitis TCF services
+14:58:19 INFO  : XSCT server has started successfully.
+14:58:19 INFO  : Successfully done setting XSCT server connection channel  
+14:58:20 INFO  : plnx-install-location is set to ''
+14:58:20 INFO  : Successfully done setting workspace for the tool. 
+14:58:20 INFO  : Successfully done query RDI_DATADIR 
+14:58:20 INFO  : Platform repository initialization has completed.
+15:06:03 INFO  : Result from executing command 'getProjects': design_1_wrapper
+15:06:03 INFO  : Result from executing command 'getPlatforms': design_1_2xsata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_2xsata_wrapper/export/design_1_2xsata_wrapper/design_1_2xsata_wrapper.xpfm;design_1_enet_phy_8_9_10|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_8_9_10/export/design_1_enet_phy_8_9_10/design_1_enet_phy_8_9_10.xpfm;design_1_enet_phy_ixdelay|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_ixdelay/export/design_1_enet_phy_ixdelay/design_1_enet_phy_ixdelay.xpfm;design_1_enet_phy_noixdelay|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_noixdelay/export/design_1_enet_phy_noixdelay/design_1_enet_phy_noixdelay.xpfm;design_1_mac0_sw2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_mac0_sw2_wrapper/export/design_1_mac0_sw2_wrapper/design_1_mac0_sw2_wrapper.xpfm;design_psenet_ok|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_psenet_ok/export/design_psenet_ok/design_psenet_ok.xpfm
+15:06:03 WARN  : An unexpected exception occurred in the module 'platform project logging'
+15:06:04 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+15:06:17 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+15:06:50 INFO  : Build configuration of 'MAC1G_1_FIFO_system' is updated to 'Release'
+15:06:50 INFO  : Build configuration of system project is automatically updated to 'Release'.
+15:07:30 INFO  : Result from executing command 'getProjects': design_1_wrapper
+15:07:30 INFO  : Result from executing command 'getPlatforms': design_1_2xsata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_2xsata_wrapper/export/design_1_2xsata_wrapper/design_1_2xsata_wrapper.xpfm;design_1_enet_phy_8_9_10|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_8_9_10/export/design_1_enet_phy_8_9_10/design_1_enet_phy_8_9_10.xpfm;design_1_enet_phy_ixdelay|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_ixdelay/export/design_1_enet_phy_ixdelay/design_1_enet_phy_ixdelay.xpfm;design_1_enet_phy_noixdelay|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_noixdelay/export/design_1_enet_phy_noixdelay/design_1_enet_phy_noixdelay.xpfm;design_1_mac0_sw2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_mac0_sw2_wrapper/export/design_1_mac0_sw2_wrapper/design_1_mac0_sw2_wrapper.xpfm;design_1_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;design_psenet_ok|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_psenet_ok/export/design_psenet_ok/design_psenet_ok.xpfm
+15:07:34 INFO  : Checking for BSP changes to sync application flags for project 'MAC1G_1_FIFO'...
+15:09:20 INFO  : Generated template bif file for MAC1G_1_FIFO_system
+15:09:36 INFO  : Invoking Bootgen: bootgen -image MAC1G_1_FIFO_system.bif -arch zynqmp -o /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/MAC1G_1_FIFO_system/_ide/bootimage/BOOT.bin
+15:09:38 INFO  : Bootgen command execution is done.
+13:28:07 INFO  : Result from executing command 'getProjects': design_1_wrapper;design_1_wrapper_1
+13:28:07 INFO  : Result from executing command 'getPlatforms': design_1_2xsata_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_2xsata_wrapper/export/design_1_2xsata_wrapper/design_1_2xsata_wrapper.xpfm;design_1_enet_phy_8_9_10|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_8_9_10/export/design_1_enet_phy_8_9_10/design_1_enet_phy_8_9_10.xpfm;design_1_enet_phy_ixdelay|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_ixdelay/export/design_1_enet_phy_ixdelay/design_1_enet_phy_ixdelay.xpfm;design_1_enet_phy_noixdelay|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_enet_phy_noixdelay/export/design_1_enet_phy_noixdelay/design_1_enet_phy_noixdelay.xpfm;design_1_mac0_sw2_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_1_mac0_sw2_wrapper/export/design_1_mac0_sw2_wrapper/design_1_mac0_sw2_wrapper.xpfm;design_1_wrapper|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.sdk/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;design_psenet_ok|/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_psenet_ok/export/design_psenet_ok/design_psenet_ok.xpfm
+13:28:07 INFO  : Platform 'design_1_wrapper_1' is added to custom repositories.
+13:28:20 INFO  : Platform 'design_1_wrapper_1' is added to custom repositories.

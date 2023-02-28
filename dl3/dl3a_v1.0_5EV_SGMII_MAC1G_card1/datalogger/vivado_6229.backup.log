@@ -1,0 +1,668 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Feb 14 09:24:35 2023
+# Process ID: 6229
+# Current directory: /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger
+# Command line: vivado /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.xpr
+# Log file: /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/vivado.log
+# Journal file: /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/12-FPGA/20_DL3_HLS/timestamp/timestamp'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/12-FPGA/20_DL3_HLS/clu_2022'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/12-FPGA/20_DL3_HLS/maclogger_2022_30port_64bit'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:16 . Memory (MB): peak = 7347.492 ; gain = 67.137 ; free physical = 4911 ; free virtual = 7791
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+[Tue Feb 14 09:35:25 2023] Launched synth_1...
+Run output will be captured here: /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.runs/synth_1/runme.log
+[Tue Feb 14 09:35:26 2023] Launched impl_1...
+Run output will be captured here: /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.runs/impl_1/runme.log
+reset_run synth_1
+open_bd_design {/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/design_1.bd}
+Reading block design file </export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/design_1.bd>...
+Adding component instance block -- user.org:user:CHIPDLIN:1.02 - CHIPDLIN_0
+Adding component instance block -- user.org:user:CHIPDLIN:1.02 - CHIPDLIN_1
+Adding component instance block -- user.org:user:CHIPDLIN:1.02 - CHIPDLIN_2
+Adding component instance block -- user.org:user:CHIPDLIN:1.02 - CHIPDLIN_3
+Adding component instance block -- user.org:user:CHIPDLIN:1.02 - CHIPDLIN_4
+Adding component instance block -- user.org:user:CHIPDLIN:1.02 - CHIPDLIN_5
+Adding component instance block -- user.org:user:CHIPDLIN:1.02 - CHIPDLIN_6
+Adding component instance block -- user.org:user:CHIPDLIN:1.02 - CHIPDLIN_7
+Adding component instance block -- xilinx.com:ip:axi_fifo_mm_s:4.2 - axi_ethernet_sw0_fifo
+Adding component instance block -- xilinx.com:ip:axi_ethernet:7.2 - axi_ethernet_1
+Adding component instance block -- xilinx.com:ip:axi_fifo_mm_s:4.2 - axi_ethernet_sw1_fifo
+Adding component instance block -- xilinx.com:ip:axi_ethernet:7.2 - axi_ethernet_2
+Adding component instance block -- xilinx.com:ip:axi_fifo_mm_s:4.2 - axi_ethernet_sw2_fifo
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps8_1_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_xc_lin_ipcore
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_xc_canfd_ipcore
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:canfd:3.0 - canfd_0
+Adding component instance block -- xilinx.com:ip:canfd:3.0 - canfd_1
+Adding component instance block -- xilinx.com:ip:canfd:3.0 - canfd_2
+Adding component instance block -- xilinx.com:ip:canfd:3.0 - canfd_5
+Adding component instance block -- xilinx.com:ip:canfd:3.0 - canfd_6
+Adding component instance block -- xilinx.com:ip:canfd:3.0 - canfd_7
+Adding component instance block -- xilinx.com:ip:canfd:3.0 - canfd_8
+Adding component instance block -- xilinx.com:ip:canfd:3.0 - canfd_9
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_canfd
+Adding component instance block -- xilinx.com:ip:gmii_to_rgmii:4.1 - gmii_to_rgmii_0
+Adding component instance block -- xilinx.com:ip:gmii_to_rgmii:4.1 - gmii_to_rgmii_1
+Adding component instance block -- xilinx.com:ip:gmii_to_rgmii:4.1 - gmii_to_rgmii_2
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_sw_mac_100M
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps8_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps8_0_100M
+Adding component instance block -- xilinx.com:ip:zynq_ultra_ps_e:3.3 - zynq_ultra_ps_e_0
+Adding component instance block -- xilinx.com:ip:canfd:3.0 - canfd_10
+Adding component instance block -- xilinx.com:ip:canfd:3.0 - canfd_11
+Adding component instance block -- xilinx.com:ip:canfd:3.0 - canfd_3
+Adding component instance block -- xilinx.com:ip:canfd:3.0 - canfd_4
+Adding component instance block -- xilinx.com:ip:axi_uart16550:2.0 - axi_uart16550_0
+Adding component instance block -- xilinx.com:ip:axi_uart16550:2.0 - axi_uart16550_1
+Adding component instance block -- xilinx.com:ip:axi_uart16550:2.0 - axi_uart16550_2
+Adding component instance block -- xilinx.com:ip:axi_uart16550:2.0 - axi_uart16550_3
+Adding component instance block -- xilinx.com:ip:axi_uart16550:2.0 - axi_uart16550_4
+Adding component instance block -- xilinx.com:ip:axi_uart16550:2.0 - axi_uart16550_5
+Adding component instance block -- xilinx.com:ip:axi_uart16550:2.0 - axi_uart16550_6
+Adding component instance block -- xilinx.com:ip:axi_uart16550:2.0 - axi_uart16550_7
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_xc_uart_ipcore
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_uartlite:2.0 - axi_uartlite_0
+Adding component instance block -- xilinx.com:ip:axi_uartlite:2.0 - axi_uartlite_1
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - sgmii_signal_detect
+Adding component instance block -- xilinx.com:hls:timestamp:1.0 - timestamp_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_xc_ps_clu
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_xc_ps_mac
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- user.org:user:CHIPDLIN:1.02 - CHIPDLIN_8
+Adding component instance block -- user.org:user:CHIPDLIN:1.02 - CHIPDLIN_9
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_xc_mac2_ipcore
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_xc_mac0_ipcore
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_xc_mac1_ipcore
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_clu_ipcore
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_fifo_mm_s:4.2 - axi_ethernet_sw2_fifo1
+Adding component instance block -- xilinx.com:ip:axi_fifo_mm_s:4.2 - axi_ethernet_sw1_fifo1
+Adding component instance block -- xilinx.com:ip:axi_fifo_mm_s:4.2 - axi_ethernet_sw0_fifo1
+Adding component instance block -- user.org:user:CHIPDLIN:1.02 - CHIPDLIN_10
+Adding component instance block -- user.org:user:CHIPDLIN:1.02 - CHIPDLIN_11
+Adding component instance block -- xilinx.com:hls:clu:1.0 - clu_0
+Adding component instance block -- xilinx.com:hls:mac_logger:1.0 - mac_logger_2
+Adding component instance block -- xilinx.com:hls:mac_logger:1.0 - mac_logger_1
+Adding component instance block -- xilinx.com:hls:mac_logger:1.0 - mac_logger_0
+Adding component instance block -- xilinx.com:ip:axi_ethernet:7.2 - axi_ethernet_0
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.1 - util_ds_buf_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - sgmii_signal_detect1
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - sgmii_signal_detect2
+Excluding slave segment /axi_ethernet_2/s_axi/Reg0 from address space /mac_logger_2/Data_m_axi_mac_fifo.
+Excluding slave segment /axi_ethernet_sw2_fifo/S_AXI/Mem0 from address space /mac_logger_2/Data_m_axi_mac_fifo.
+Excluding slave segment /axi_ethernet_1/s_axi/Reg0 from address space /mac_logger_1/Data_m_axi_mac_fifo.
+Excluding slave segment /axi_ethernet_sw1_fifo/S_AXI/Mem0 from address space /mac_logger_1/Data_m_axi_mac_fifo.
+Excluding slave segment /axi_ethernet_0/s_axi/Reg0 from address space /mac_logger_0/Data_m_axi_mac_fifo.
+Excluding slave segment /axi_ethernet_sw0_fifo/S_AXI/Mem0 from address space /mac_logger_0/Data_m_axi_mac_fifo.
+Successfully read diagram <design_1> from block design file </export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 8172.895 ; gain = 0.000 ; free physical = 11139 ; free virtual = 12920
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+copy_bd_objs /  [get_bd_cells {util_ds_buf_0}]
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+set_property location {10 4947 369} [get_bd_cells util_ds_buf_1]
+connect_bd_net [get_bd_pins sgmii_signal_detect1/dout] [get_bd_pins util_ds_buf_1/BUFG_GT_DIV]
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+connect_bd_net [get_bd_pins util_ds_buf_1/BUFG_GT_CLRMASK] [get_bd_pins util_ds_buf_1/BUFG_GT_CLR]
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+connect_bd_net [get_bd_pins util_ds_buf_1/BUFG_GT_CEMASK] [get_bd_pins util_ds_buf_1/BUFG_GT_CE]
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+connect_bd_net [get_bd_pins util_ds_buf_1/BUFG_GT_CEMASK] [get_bd_pins sgmii_signal_detect/dout]
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+startgroup
+connect_bd_net [get_bd_pins util_ds_buf_1/BUFG_GT_CLRMASK] [get_bd_pins sgmii_signal_detect2/dout]
+endgroup
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+delete_bd_objs [get_bd_nets axi_ethernet_2_rxoutclk]
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+connect_bd_net [get_bd_pins axi_ethernet_2/rxoutclk] [get_bd_pins util_ds_buf_1/BUFG_GT_I]
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+connect_bd_net [get_bd_pins axi_ethernet_2/rxuserclk] [get_bd_pins axi_ethernet_2/rxuserclk2]
+connect_bd_net [get_bd_pins axi_ethernet_2/rxuserclk] [get_bd_pins util_ds_buf_1/BUFG_GT_O]
+save_bd_design
+Wrote  : </export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_canfd clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_canfd clk_wiz propagate
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_1_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM1_FPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_1_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM1_FPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_xc_ps_clu/s00_couplers/auto_us/M_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_xc_ps_clu/s00_couplers/auto_us/M_AXI(0)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP1_FPD(1) and /axi_xc_ps_mac/xbar/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP1_FPD(1) and /axi_xc_ps_mac/xbar/M00_AXI(0)
+WARNING: [BD 41-927] Following properties on pin /clu_0/ap_clk have been updated from connected ip, but BD cell '/clu_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 99999985 
+Please resolve any mismatches by directly setting properties on BD cell </clu_0> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /mac_logger_2/ap_clk have been updated from connected ip, but BD cell '/mac_logger_2' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 99999985 
+Please resolve any mismatches by directly setting properties on BD cell </mac_logger_2> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /mac_logger_1/ap_clk have been updated from connected ip, but BD cell '/mac_logger_1' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 99999985 
+Please resolve any mismatches by directly setting properties on BD cell </mac_logger_1> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /mac_logger_0/ap_clk have been updated from connected ip, but BD cell '/mac_logger_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 99999985 
+Please resolve any mismatches by directly setting properties on BD cell </mac_logger_0> to completely resolve these warnings.
+Wrote  : </export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_clu/s00_couplers/auto_us/s_axi_arlock'(1) to pin: '/axi_xc_ps_clu/s00_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_clu/s00_couplers/auto_us/s_axi_awlock'(1) to pin: '/axi_xc_ps_clu/s00_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s00_couplers/auto_us/s_axi_arlock'(1) to pin: '/axi_xc_ps_mac/s00_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s00_couplers/auto_us/s_axi_awlock'(1) to pin: '/axi_xc_ps_mac/s00_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s01_couplers/auto_us/s_axi_arlock'(1) to pin: '/axi_xc_ps_mac/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s01_couplers/auto_us/s_axi_awlock'(1) to pin: '/axi_xc_ps_mac/s01_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s02_couplers/auto_us/s_axi_arlock'(1) to pin: '/axi_xc_ps_mac/s02_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s02_couplers/auto_us/s_axi_awlock'(1) to pin: '/axi_xc_ps_mac/s02_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/xbar/m_axi_rid'(2) to pin: '/axi_xc_ps_mac/m00_couplers/S_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/xbar/m_axi_bid'(2) to pin: '/axi_xc_ps_mac/m00_couplers/S_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_mac2_ipcore/s01_couplers/auto_pc/s_axi_arlock'(1) to pin: '/axi_xc_mac2_ipcore/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_mac0_ipcore/s01_couplers/auto_pc/s_axi_arlock'(1) to pin: '/axi_xc_mac0_ipcore/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_mac1_ipcore/s01_couplers/auto_pc/s_axi_arlock'(1) to pin: '/axi_xc_mac1_ipcore/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_clu_ipcore/s01_couplers/auto_pc/s_axi_arlock'(1) to pin: '/axi_clu_ipcore/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_clu_ipcore/s01_couplers/auto_pc/s_axi_awlock'(1) to pin: '/axi_clu_ipcore/s01_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp3_awid'(6) to pin: '/axi_xc_ps_mac/M00_AXI_awid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp3_arid'(6) to pin: '/axi_xc_ps_mac/M00_AXI_arid'(2) - Only lower order bits will be connected.
+VHDL Output written to : /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_clu/s00_couplers/auto_us/s_axi_arlock'(1) to pin: '/axi_xc_ps_clu/s00_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_clu/s00_couplers/auto_us/s_axi_awlock'(1) to pin: '/axi_xc_ps_clu/s00_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s00_couplers/auto_us/s_axi_arlock'(1) to pin: '/axi_xc_ps_mac/s00_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s00_couplers/auto_us/s_axi_awlock'(1) to pin: '/axi_xc_ps_mac/s00_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s01_couplers/auto_us/s_axi_arlock'(1) to pin: '/axi_xc_ps_mac/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s01_couplers/auto_us/s_axi_awlock'(1) to pin: '/axi_xc_ps_mac/s01_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s02_couplers/auto_us/s_axi_arlock'(1) to pin: '/axi_xc_ps_mac/s02_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s02_couplers/auto_us/s_axi_awlock'(1) to pin: '/axi_xc_ps_mac/s02_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/xbar/m_axi_rid'(2) to pin: '/axi_xc_ps_mac/m00_couplers/S_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/xbar/m_axi_bid'(2) to pin: '/axi_xc_ps_mac/m00_couplers/S_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_mac2_ipcore/s01_couplers/auto_pc/s_axi_arlock'(1) to pin: '/axi_xc_mac2_ipcore/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_mac0_ipcore/s01_couplers/auto_pc/s_axi_arlock'(1) to pin: '/axi_xc_mac0_ipcore/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_mac1_ipcore/s01_couplers/auto_pc/s_axi_arlock'(1) to pin: '/axi_xc_mac1_ipcore/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_clu_ipcore/s01_couplers/auto_pc/s_axi_arlock'(1) to pin: '/axi_clu_ipcore/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_clu_ipcore/s01_couplers/auto_pc/s_axi_awlock'(1) to pin: '/axi_clu_ipcore/s01_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp3_awid'(6) to pin: '/axi_xc_ps_mac/M00_AXI_awid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp3_arid'(6) to pin: '/axi_xc_ps_mac/M00_AXI_arid'(2) - Only lower order bits will be connected.
+VHDL Output written to : /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+Exporting to file /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernet_3_0/bd_0/hw_handoff/design_1_axi_ethernet_3_0.hwh
+Generated Block Design Tcl file /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernet_3_0/bd_0/hw_handoff/design_1_axi_ethernet_3_0_bd.tcl
+Generated Hardware Definition File /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernet_3_0/bd_0/synth/design_1_axi_ethernet_3_0.hwdef
+Exporting to file /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernet_4_0/bd_0/hw_handoff/design_1_axi_ethernet_4_0.hwh
+Generated Block Design Tcl file /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernet_4_0/bd_0/hw_handoff/design_1_axi_ethernet_4_0_bd.tcl
+Generated Hardware Definition File /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernet_4_0/bd_0/synth/design_1_axi_ethernet_4_0.hwdef
+Exporting to file /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/hw_handoff/design_1_axi_ethernet_0_0.hwh
+Generated Block Design Tcl file /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/hw_handoff/design_1_axi_ethernet_0_0_bd.tcl
+Generated Hardware Definition File /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/synth/design_1_axi_ethernet_0_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ds_buf_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_1_axi_periph/s00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_xc_ps_clu/s00_couplers/auto_us .
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_xc_ps_mac/s00_couplers/auto_us .
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_xc_ps_mac/s01_couplers/auto_us .
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_xc_ps_mac/s02_couplers/auto_us .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_xc_mac2_ipcore/s01_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_xc_mac0_ipcore/s01_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_xc_mac1_ipcore/s01_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_clu_ipcore/s01_couplers/auto_pc .
+Exporting to file /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+ERROR: [Common 17-179] Fork failed: Cannot allocate memory
+ERROR: [Common 17-179] Fork failed: Cannot allocate memory
+ERROR: [Common 17-70] Application Exception: Fork failed.
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+startgroup
+set_property -dict [list CONFIG.C_BUF_TYPE {BUFG}] [get_bd_cells util_ds_buf_1]
+WARNING: [BD 41-1684] Pin /util_ds_buf_1/BUFG_GT_I is now disabled. All connections to this pin have been removed. 
+WARNING: [BD 41-1684] Pin /util_ds_buf_1/BUFG_GT_CE is now disabled. All connections to this pin have been removed. 
+WARNING: [BD 41-1684] Pin /util_ds_buf_1/BUFG_GT_CEMASK is now disabled. All connections to this pin have been removed. 
+WARNING: [BD 41-1684] Pin /util_ds_buf_1/BUFG_GT_CLR is now disabled. All connections to this pin have been removed. 
+WARNING: [BD 41-1684] Pin /util_ds_buf_1/BUFG_GT_CLRMASK is now disabled. All connections to this pin have been removed. 
+WARNING: [BD 41-1684] Pin /util_ds_buf_1/BUFG_GT_DIV is now disabled. All connections to this pin have been removed. 
+WARNING: [BD 41-1684] Pin /util_ds_buf_1/BUFG_GT_O is now disabled. All connections to this pin have been removed. 
+delete_bd_objs [get_bd_nets axi_ethernet_2_rxoutclk]
+endgroup
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+connect_bd_net [get_bd_pins axi_ethernet_2/rxoutclk] [get_bd_pins util_ds_buf_1/BUFG_I]
+connect_bd_net [get_bd_pins util_ds_buf_1/BUFG_O] [get_bd_pins axi_ethernet_2/rxuserclk]
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+startgroup
+set_property -dict [list CONFIG.C_BUF_TYPE {BUFG}] [get_bd_cells util_ds_buf_0]
+WARNING: [BD 41-1684] Pin /util_ds_buf_0/BUFG_GT_I is now disabled. All connections to this pin have been removed. 
+WARNING: [BD 41-1684] Pin /util_ds_buf_0/BUFG_GT_CE is now disabled. All connections to this pin have been removed. 
+WARNING: [BD 41-1684] Pin /util_ds_buf_0/BUFG_GT_CEMASK is now disabled. All connections to this pin have been removed. 
+WARNING: [BD 41-1684] Pin /util_ds_buf_0/BUFG_GT_CLR is now disabled. All connections to this pin have been removed. 
+WARNING: [BD 41-1684] Pin /util_ds_buf_0/BUFG_GT_CLRMASK is now disabled. All connections to this pin have been removed. 
+WARNING: [BD 41-1684] Pin /util_ds_buf_0/BUFG_GT_DIV is now disabled. All connections to this pin have been removed. 
+WARNING: [BD 41-1684] Pin /util_ds_buf_0/BUFG_GT_O is now disabled. All connections to this pin have been removed. 
+delete_bd_objs [get_bd_nets axi_ethernet_0_rxoutclk] [get_bd_nets sgmii_signal_detect2_dout] [get_bd_nets sgmii_signal_detect2_dout] [get_bd_nets sgmii_signal_detect1_dout]
+endgroup
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+connect_bd_net [get_bd_pins axi_ethernet_0/rxoutclk] [get_bd_pins util_ds_buf_0/BUFG_I]
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+connect_bd_net [get_bd_pins util_ds_buf_0/BUFG_O] [get_bd_pins axi_ethernet_0/rxuserclk]
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+save_bd_design
+Wrote  : </export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_canfd clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_canfd clk_wiz propagate
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_1_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM1_FPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_1_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM1_FPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_xc_ps_clu/s00_couplers/auto_us/M_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_xc_ps_clu/s00_couplers/auto_us/M_AXI(0)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP1_FPD(1) and /axi_xc_ps_mac/xbar/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP1_FPD(1) and /axi_xc_ps_mac/xbar/M00_AXI(0)
+WARNING: [BD 41-927] Following properties on pin /clu_0/ap_clk have been updated from connected ip, but BD cell '/clu_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 99999985 
+Please resolve any mismatches by directly setting properties on BD cell </clu_0> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /mac_logger_2/ap_clk have been updated from connected ip, but BD cell '/mac_logger_2' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 99999985 
+Please resolve any mismatches by directly setting properties on BD cell </mac_logger_2> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /mac_logger_1/ap_clk have been updated from connected ip, but BD cell '/mac_logger_1' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 99999985 
+Please resolve any mismatches by directly setting properties on BD cell </mac_logger_1> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /mac_logger_0/ap_clk have been updated from connected ip, but BD cell '/mac_logger_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 99999985 
+Please resolve any mismatches by directly setting properties on BD cell </mac_logger_0> to completely resolve these warnings.
+Wrote  : </export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/design_1.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_clu/s00_couplers/auto_us/s_axi_arlock'(1) to pin: '/axi_xc_ps_clu/s00_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_clu/s00_couplers/auto_us/s_axi_awlock'(1) to pin: '/axi_xc_ps_clu/s00_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s00_couplers/auto_us/s_axi_arlock'(1) to pin: '/axi_xc_ps_mac/s00_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s00_couplers/auto_us/s_axi_awlock'(1) to pin: '/axi_xc_ps_mac/s00_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s01_couplers/auto_us/s_axi_arlock'(1) to pin: '/axi_xc_ps_mac/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s01_couplers/auto_us/s_axi_awlock'(1) to pin: '/axi_xc_ps_mac/s01_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s02_couplers/auto_us/s_axi_arlock'(1) to pin: '/axi_xc_ps_mac/s02_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s02_couplers/auto_us/s_axi_awlock'(1) to pin: '/axi_xc_ps_mac/s02_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/xbar/m_axi_rid'(2) to pin: '/axi_xc_ps_mac/m00_couplers/S_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/xbar/m_axi_bid'(2) to pin: '/axi_xc_ps_mac/m00_couplers/S_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_mac2_ipcore/s01_couplers/auto_pc/s_axi_arlock'(1) to pin: '/axi_xc_mac2_ipcore/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_mac0_ipcore/s01_couplers/auto_pc/s_axi_arlock'(1) to pin: '/axi_xc_mac0_ipcore/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_mac1_ipcore/s01_couplers/auto_pc/s_axi_arlock'(1) to pin: '/axi_xc_mac1_ipcore/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_clu_ipcore/s01_couplers/auto_pc/s_axi_arlock'(1) to pin: '/axi_clu_ipcore/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_clu_ipcore/s01_couplers/auto_pc/s_axi_awlock'(1) to pin: '/axi_clu_ipcore/s01_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp3_awid'(6) to pin: '/axi_xc_ps_mac/M00_AXI_awid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp3_arid'(6) to pin: '/axi_xc_ps_mac/M00_AXI_arid'(2) - Only lower order bits will be connected.
+VHDL Output written to : /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_clu/s00_couplers/auto_us/s_axi_arlock'(1) to pin: '/axi_xc_ps_clu/s00_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_clu/s00_couplers/auto_us/s_axi_awlock'(1) to pin: '/axi_xc_ps_clu/s00_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s00_couplers/auto_us/s_axi_arlock'(1) to pin: '/axi_xc_ps_mac/s00_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s00_couplers/auto_us/s_axi_awlock'(1) to pin: '/axi_xc_ps_mac/s00_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s01_couplers/auto_us/s_axi_arlock'(1) to pin: '/axi_xc_ps_mac/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s01_couplers/auto_us/s_axi_awlock'(1) to pin: '/axi_xc_ps_mac/s01_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s02_couplers/auto_us/s_axi_arlock'(1) to pin: '/axi_xc_ps_mac/s02_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s02_couplers/auto_us/s_axi_awlock'(1) to pin: '/axi_xc_ps_mac/s02_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/xbar/m_axi_rid'(2) to pin: '/axi_xc_ps_mac/m00_couplers/S_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/xbar/m_axi_bid'(2) to pin: '/axi_xc_ps_mac/m00_couplers/S_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_mac2_ipcore/s01_couplers/auto_pc/s_axi_arlock'(1) to pin: '/axi_xc_mac2_ipcore/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_mac0_ipcore/s01_couplers/auto_pc/s_axi_arlock'(1) to pin: '/axi_xc_mac0_ipcore/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_mac1_ipcore/s01_couplers/auto_pc/s_axi_arlock'(1) to pin: '/axi_xc_mac1_ipcore/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_clu_ipcore/s01_couplers/auto_pc/s_axi_arlock'(1) to pin: '/axi_clu_ipcore/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_clu_ipcore/s01_couplers/auto_pc/s_axi_awlock'(1) to pin: '/axi_clu_ipcore/s01_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp3_awid'(6) to pin: '/axi_xc_ps_mac/M00_AXI_awid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp3_arid'(6) to pin: '/axi_xc_ps_mac/M00_AXI_arid'(2) - Only lower order bits will be connected.
+VHDL Output written to : /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+Exporting to file /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernet_3_0/bd_0/hw_handoff/design_1_axi_ethernet_3_0.hwh
+Generated Block Design Tcl file /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernet_3_0/bd_0/hw_handoff/design_1_axi_ethernet_3_0_bd.tcl
+Generated Hardware Definition File /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernet_3_0/bd_0/synth/design_1_axi_ethernet_3_0.hwdef
+Exporting to file /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernet_4_0/bd_0/hw_handoff/design_1_axi_ethernet_4_0.hwh
+Generated Block Design Tcl file /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernet_4_0/bd_0/hw_handoff/design_1_axi_ethernet_4_0_bd.tcl
+Generated Hardware Definition File /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernet_4_0/bd_0/synth/design_1_axi_ethernet_4_0.hwdef
+Exporting to file /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/hw_handoff/design_1_axi_ethernet_0_0.hwh
+Generated Block Design Tcl file /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/hw_handoff/design_1_axi_ethernet_0_0_bd.tcl
+Generated Hardware Definition File /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/synth/design_1_axi_ethernet_0_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ds_buf_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ds_buf_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_1_axi_periph/s00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_xc_ps_clu/s00_couplers/auto_us .
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_xc_ps_mac/s00_couplers/auto_us .
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_xc_ps_mac/s01_couplers/auto_us .
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_xc_ps_mac/s02_couplers/auto_us .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_xc_mac2_ipcore/s01_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_xc_mac0_ipcore/s01_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_xc_mac1_ipcore/s01_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_clu_ipcore/s01_couplers/auto_pc .
+Exporting to file /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Tue Feb 14 10:06:10 2023] Launched synth_1...
+Run output will be captured here: /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.runs/synth_1/runme.log
+[Tue Feb 14 10:06:10 2023] Launched impl_1...
+Run output will be captured here: /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:04:29 ; elapsed = 00:03:48 . Memory (MB): peak = 8377.719 ; gain = 64.000 ; free physical = 744 ; free virtual = 9991
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+report_route_status
+ERROR: [Common 17-53] User Exception: No open design. Please open an elaborated, synthesized or implemented design before executing this command.
+open_run impl_1
+INFO: [Device 21-403] Loading part xczu5ev-sfvc784-2-i
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 8442.906 ; gain = 0.000 ; free physical = 3677 ; free virtual = 7154
+INFO: [Netlist 29-17] Analyzing 6132 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 9398.312 ; gain = 211.812 ; free physical = 2758 ; free virtual = 6277
+Restored from archive | CPU: 11.780000 secs | Memory: 193.950684 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 9398.312 ; gain = 211.812 ; free physical = 2758 ; free virtual = 6277
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 9741.168 ; gain = 0.000 ; free physical = 2394 ; free virtual = 5947
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1111 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  DSP48E2 => DSP48E2 (inverted pins: RSTA) (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 12 instances
+  DSP48E2 => DSP48E2 (inverted pins: RSTB) (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 6 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 50 instances
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 10 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 240 instances
+  RAM16X1D => RAM32X1S (RAMS32): 192 instances
+  RAM16X1S => RAM32X1S (RAMS32): 210 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 39 instances
+  RAM64M8 => RAM64M8 (RAMD64E(x8)): 87 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 264 instances
+
+open_run: Time (s): cpu = 00:01:49 ; elapsed = 00:01:43 . Memory (MB): peak = 10030.461 ; gain = 1652.742 ; free physical = 2107 ; free virtual = 5685
+open_report: Time (s): cpu = 00:00:59 ; elapsed = 00:00:12 . Memory (MB): peak = 11047.500 ; gain = 731.035 ; free physical = 1134 ; free virtual = 4855
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+report_route_status
+Design Route Status
+                                               :      # nets :
+   ------------------------------------------- : ----------- :
+   # of logical nets.......................... :      270687 :
+       # of nets not needing routing.......... :       91596 :
+           # of internally routed nets........ :       88911 :
+           # of nets with no loads............ :        2685 :
+       # of routable nets..................... :      179091 :
+           # of unrouted nets................. :           2 :
+           # of fully routed nets............. :      179089 :
+       # of nets with routing errors.......... :           0 :
+   ------------------------------------------- : ----------- :
+
+open_bd_design {/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+set_property -dict [list CONFIG.C_BUF_TYPE {BUFG_GT}] [get_bd_cells util_ds_buf_0]
+WARNING: [BD 41-1684] Pin /util_ds_buf_0/BUFG_I is now disabled. All connections to this pin have been removed. 
+WARNING: [BD 41-1684] Pin /util_ds_buf_0/BUFG_O is now disabled. All connections to this pin have been removed. 
+delete_bd_objs [get_bd_nets axi_ethernet_0_rxoutclk]
+endgroup
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+connect_bd_net [get_bd_pins sgmii_signal_detect2/dout] [get_bd_pins util_ds_buf_0/BUFG_GT_CE]
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+connect_bd_net [get_bd_pins sgmii_signal_detect1/dout] [get_bd_pins util_ds_buf_0/BUFG_GT_DIV]
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+connect_bd_net [get_bd_pins util_ds_buf_0/BUFG_GT_CEMASK] [get_bd_pins sgmii_signal_detect2/dout]
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+disconnect_bd_net /sgmii_signal_detect2_dout [get_bd_pins util_ds_buf_0/BUFG_GT_CE]
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+delete_bd_objs [get_bd_nets sgmii_signal_detect2_dout]
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+startgroup
+connect_bd_net [get_bd_pins sgmii_signal_detect/dout] [get_bd_pins util_ds_buf_0/BUFG_GT_CE]
+connect_bd_net [get_bd_pins sgmii_signal_detect/dout] [get_bd_pins util_ds_buf_0/BUFG_GT_CEMASK]
+endgroup
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+connect_bd_net [get_bd_pins sgmii_signal_detect2/dout] [get_bd_pins util_ds_buf_0/BUFG_GT_CLR]
+connect_bd_net [get_bd_pins util_ds_buf_0/BUFG_GT_CLRMASK] [get_bd_pins sgmii_signal_detect2/dout]
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+connect_bd_net [get_bd_pins axi_ethernet_0/rxoutclk] [get_bd_pins util_ds_buf_0/BUFG_GT_I]
+connect_bd_net [get_bd_pins util_ds_buf_0/BUFG_GT_O] [get_bd_pins axi_ethernet_0/rxuserclk]
+save_bd_design
+Wrote  : </export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_canfd clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_canfd clk_wiz propagate
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_1_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM1_FPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_1_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM1_FPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_xc_ps_clu/s00_couplers/auto_us/M_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_xc_ps_clu/s00_couplers/auto_us/M_AXI(0)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP1_FPD(1) and /axi_xc_ps_mac/xbar/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP1_FPD(1) and /axi_xc_ps_mac/xbar/M00_AXI(0)
+WARNING: [BD 41-927] Following properties on pin /clu_0/ap_clk have been updated from connected ip, but BD cell '/clu_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 99999985 
+Please resolve any mismatches by directly setting properties on BD cell </clu_0> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /mac_logger_2/ap_clk have been updated from connected ip, but BD cell '/mac_logger_2' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 99999985 
+Please resolve any mismatches by directly setting properties on BD cell </mac_logger_2> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /mac_logger_1/ap_clk have been updated from connected ip, but BD cell '/mac_logger_1' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 99999985 
+Please resolve any mismatches by directly setting properties on BD cell </mac_logger_1> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /mac_logger_0/ap_clk have been updated from connected ip, but BD cell '/mac_logger_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 99999985 
+Please resolve any mismatches by directly setting properties on BD cell </mac_logger_0> to completely resolve these warnings.
+Wrote  : </export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/design_1.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_clu/s00_couplers/auto_us/s_axi_arlock'(1) to pin: '/axi_xc_ps_clu/s00_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_clu/s00_couplers/auto_us/s_axi_awlock'(1) to pin: '/axi_xc_ps_clu/s00_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s00_couplers/auto_us/s_axi_arlock'(1) to pin: '/axi_xc_ps_mac/s00_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s00_couplers/auto_us/s_axi_awlock'(1) to pin: '/axi_xc_ps_mac/s00_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s01_couplers/auto_us/s_axi_arlock'(1) to pin: '/axi_xc_ps_mac/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s01_couplers/auto_us/s_axi_awlock'(1) to pin: '/axi_xc_ps_mac/s01_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s02_couplers/auto_us/s_axi_arlock'(1) to pin: '/axi_xc_ps_mac/s02_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s02_couplers/auto_us/s_axi_awlock'(1) to pin: '/axi_xc_ps_mac/s02_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/xbar/m_axi_rid'(2) to pin: '/axi_xc_ps_mac/m00_couplers/S_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/xbar/m_axi_bid'(2) to pin: '/axi_xc_ps_mac/m00_couplers/S_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_mac2_ipcore/s01_couplers/auto_pc/s_axi_arlock'(1) to pin: '/axi_xc_mac2_ipcore/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_mac0_ipcore/s01_couplers/auto_pc/s_axi_arlock'(1) to pin: '/axi_xc_mac0_ipcore/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_mac1_ipcore/s01_couplers/auto_pc/s_axi_arlock'(1) to pin: '/axi_xc_mac1_ipcore/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_clu_ipcore/s01_couplers/auto_pc/s_axi_arlock'(1) to pin: '/axi_clu_ipcore/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_clu_ipcore/s01_couplers/auto_pc/s_axi_awlock'(1) to pin: '/axi_clu_ipcore/s01_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp3_awid'(6) to pin: '/axi_xc_ps_mac/M00_AXI_awid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp3_arid'(6) to pin: '/axi_xc_ps_mac/M00_AXI_arid'(2) - Only lower order bits will be connected.
+VHDL Output written to : /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_clu/s00_couplers/auto_us/s_axi_arlock'(1) to pin: '/axi_xc_ps_clu/s00_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_clu/s00_couplers/auto_us/s_axi_awlock'(1) to pin: '/axi_xc_ps_clu/s00_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s00_couplers/auto_us/s_axi_arlock'(1) to pin: '/axi_xc_ps_mac/s00_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s00_couplers/auto_us/s_axi_awlock'(1) to pin: '/axi_xc_ps_mac/s00_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s01_couplers/auto_us/s_axi_arlock'(1) to pin: '/axi_xc_ps_mac/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s01_couplers/auto_us/s_axi_awlock'(1) to pin: '/axi_xc_ps_mac/s01_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s02_couplers/auto_us/s_axi_arlock'(1) to pin: '/axi_xc_ps_mac/s02_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/s02_couplers/auto_us/s_axi_awlock'(1) to pin: '/axi_xc_ps_mac/s02_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/xbar/m_axi_rid'(2) to pin: '/axi_xc_ps_mac/m00_couplers/S_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_ps_mac/xbar/m_axi_bid'(2) to pin: '/axi_xc_ps_mac/m00_couplers/S_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_mac2_ipcore/s01_couplers/auto_pc/s_axi_arlock'(1) to pin: '/axi_xc_mac2_ipcore/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_mac0_ipcore/s01_couplers/auto_pc/s_axi_arlock'(1) to pin: '/axi_xc_mac0_ipcore/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_xc_mac1_ipcore/s01_couplers/auto_pc/s_axi_arlock'(1) to pin: '/axi_xc_mac1_ipcore/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_clu_ipcore/s01_couplers/auto_pc/s_axi_arlock'(1) to pin: '/axi_clu_ipcore/s01_couplers/S_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_clu_ipcore/s01_couplers/auto_pc/s_axi_awlock'(1) to pin: '/axi_clu_ipcore/s01_couplers/S_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp3_awid'(6) to pin: '/axi_xc_ps_mac/M00_AXI_awid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp3_arid'(6) to pin: '/axi_xc_ps_mac/M00_AXI_arid'(2) - Only lower order bits will be connected.
+VHDL Output written to : /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+Exporting to file /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernet_3_0/bd_0/hw_handoff/design_1_axi_ethernet_3_0.hwh
+Generated Block Design Tcl file /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernet_3_0/bd_0/hw_handoff/design_1_axi_ethernet_3_0_bd.tcl
+Generated Hardware Definition File /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernet_3_0/bd_0/synth/design_1_axi_ethernet_3_0.hwdef
+Exporting to file /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernet_4_0/bd_0/hw_handoff/design_1_axi_ethernet_4_0.hwh
+Generated Block Design Tcl file /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernet_4_0/bd_0/hw_handoff/design_1_axi_ethernet_4_0_bd.tcl
+Generated Hardware Definition File /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernet_4_0/bd_0/synth/design_1_axi_ethernet_4_0.hwdef
+Exporting to file /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/hw_handoff/design_1_axi_ethernet_0_0.hwh
+Generated Block Design Tcl file /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/hw_handoff/design_1_axi_ethernet_0_0_bd.tcl
+Generated Hardware Definition File /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ip/design_1_axi_ethernet_0_0/bd_0/synth/design_1_axi_ethernet_0_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ds_buf_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_1_axi_periph/s00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_xc_ps_clu/s00_couplers/auto_us .
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_xc_ps_mac/s00_couplers/auto_us .
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_xc_ps_mac/s01_couplers/auto_us .
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_xc_ps_mac/s02_couplers/auto_us .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_xc_mac2_ipcore/s01_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_xc_mac0_ipcore/s01_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_xc_mac1_ipcore/s01_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_clu_ipcore/s01_couplers/auto_pc .
+Exporting to file /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Tue Feb 14 11:15:45 2023] Launched synth_1...
+Run output will be captured here: /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.runs/synth_1/runme.log
+[Tue Feb 14 11:15:45 2023] Launched impl_1...
+Run output will be captured here: /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:05:08 ; elapsed = 00:03:47 . Memory (MB): peak = 11836.883 ; gain = 0.000 ; free physical = 770 ; free virtual = 4640
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+open_bd_design {/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+set_property -dict [list CONFIG.C_BUF_TYPE {BUFG_GT}] [get_bd_cells util_ds_buf_1]
+WARNING: [BD 41-1684] Pin /util_ds_buf_1/BUFG_I is now disabled. All connections to this pin have been removed. 
+WARNING: [BD 41-1684] Pin /util_ds_buf_1/BUFG_O is now disabled. All connections to this pin have been removed. 
+delete_bd_objs [get_bd_nets axi_ethernet_2_rxoutclk]
+endgroup
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+connect_bd_net [get_bd_pins util_ds_buf_1/BUFG_GT_O] [get_bd_pins axi_ethernet_2/rxuserclk]
+connect_bd_net [get_bd_pins axi_ethernet_2/rxoutclk] [get_bd_pins util_ds_buf_1/BUFG_GT_I]
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+connect_bd_net [get_bd_pins util_ds_buf_1/BUFG_GT_CE] [get_bd_pins sgmii_signal_detect/dout]
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+connect_bd_net [get_bd_pins util_ds_buf_1/BUFG_GT_CEMASK] [get_bd_pins sgmii_signal_detect/dout]
+connect_bd_net [get_bd_pins util_ds_buf_1/BUFG_GT_CLRMASK] [get_bd_pins util_ds_buf_1/BUFG_GT_CLR]
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+connect_bd_net [get_bd_pins util_ds_buf_1/BUFG_GT_CLRMASK] [get_bd_pins sgmii_signal_detect2/dout]
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+connect_bd_net [get_bd_pins sgmii_signal_detect1/dout] [get_bd_pins util_ds_buf_1/BUFG_GT_DIV]
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+save_bd_design
+Wrote  : </export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_rxoutclk/datalogger/datalogger.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+INFO: [Common 17-365] Interrupt caught but 'launch_runs' cannot be canceled. Please wait for command to finish.

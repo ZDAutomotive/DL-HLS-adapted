@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="datalogger3" location="/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger3" platform="/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm" platformUID="xilinx:::0.0(custom)" systemProject="datalogger3_system" sysConfig="design_1_wrapper" runtime="cpp" cpu="standalone_psu_cortexa53_0" cpuInstance="psu_cortexa53_0" os="standalone" mssSignature="92f35bae00d15a6634b0a3139b764ebf">
+  <configuration name="Debug" id="xilinx.gnu.arm.a53.exe.debug.1858763008" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.arm.a53.exe.release.1739883856">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

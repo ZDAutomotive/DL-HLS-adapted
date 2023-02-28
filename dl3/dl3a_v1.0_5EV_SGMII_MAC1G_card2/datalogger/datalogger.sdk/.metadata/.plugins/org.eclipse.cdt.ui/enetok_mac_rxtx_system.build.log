@@ -1,0 +1,10 @@
+15:45:22 **** Build of configuration Release for project enetok_mac_rxtx_system ****
+make all 
+Generating bif file for the system project
+Executing command '::scw::generate_bif -xpfm /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_psenet_ok/export/design_psenet_ok/design_psenet_ok.xpfm -domains standalone_psu_cortexa53_0 -bifpath /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/enetok_mac_rxtx_system/Release/system.bif' on XSCT
+sdcard_gen --xpfm /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/design_psenet_ok/export/design_psenet_ok/design_psenet_ok.xpfm --sys_config design_psenet_ok --bif /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/enetok_mac_rxtx_system/Release/system.bif --bitstream /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/enetok_mac_rxtx/_ide/bitstream/design_psenet_ok.bit --elf /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/enetok_mac_rxtx/Release/enetok_mac_rxtx.elf,psu_cortexa53_0
+creating BOOT.BIN using /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/enetok_mac_rxtx/_ide/bitstream/design_psenet_ok.bit
+Running /tools/Xilinx/Vitis/2020.2/bin/bootgen -arch zynqmp -image /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_16CAN/datalogger/datalogger.sdk/enetok_mac_rxtx_system/Release/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+15:45:31 Build Finished (took 8s.323ms)
+

@@ -1,0 +1,125 @@
+timestamp=[2022-11-03 10:13:42], mode=WORKBENCH_START, duration=0:00:05.372, duration_ms=5372, data={}
+timestamp=[2022-11-03 10:13:43], mode=WORKBENCH_UI_INIT, duration=0:00:00.375, duration_ms=375, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2022-11-03 10:13:46], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:02.946, duration_ms=2946, data={}
+timestamp=[2022-11-03 10:15:15], mode=APP_CREATION, duration=0:00:28.802, duration_ms=28802, data={name=datalogger3, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger3/export/datalogger3/datalogger3.xpfm, application_type=application}
+timestamp=[2022-11-03 10:17:57], mode=APP_CREATION, duration=0:00:28.047, duration_ms=28047, data={name=datalogger3, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=design_1_wrapper, application_type=application}
+timestamp=[2022-11-03 10:19:01], mode=PLATFORM_GENERATION, duration=0:00:45.096, duration_ms=45096, data={name=design_1_wrapper}
+timestamp=[2022-11-03 10:19:12], mode=BUILD, duration=0:00:00.405, duration_ms=405, data={name=datalogger3, configuration=Release, clean_build=false}
+timestamp=[2022-11-03 16:06:59], mode=APP_CREATION, duration=0:00:26.333, duration_ms=26333, data={name=datalogger3, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=design_1_wrapper, application_type=application}
+timestamp=[2022-11-03 16:07:52], mode=PLATFORM_GENERATION, duration=0:00:43.773, duration_ms=43773, data={name=design_1_wrapper}
+timestamp=[2022-11-03 16:08:03], mode=BUILD, duration=0:00:00.397, duration_ms=397, data={name=datalogger3, configuration=Release, clean_build=false}
+timestamp=[2022-11-03 16:31:12], mode=APP_CREATION, duration=0:00:26.342, duration_ms=26342, data={name=datalogger3, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=design_1_wrapper, application_type=application}
+timestamp=[2022-11-03 16:32:16], mode=PLATFORM_GENERATION, duration=0:00:43.805, duration_ms=43805, data={name=design_1_wrapper}
+timestamp=[2022-11-03 16:32:28], mode=BUILD, duration=0:00:00.395, duration_ms=395, data={name=datalogger3, configuration=Release, clean_build=false}
+timestamp=[2022-11-03 18:06:03], mode=APP_CREATION, duration=0:00:27.734, duration_ms=27734, data={name=datalogger3, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=design_1_wrapper, application_type=application}
+timestamp=[2022-11-03 18:07:14], mode=PLATFORM_GENERATION, duration=0:00:43.648, duration_ms=43648, data={name=design_1_wrapper}
+timestamp=[2022-11-03 18:07:24], mode=BUILD, duration=0:00:00.399, duration_ms=399, data={name=datalogger3, configuration=Release, clean_build=false}
+timestamp=[2022-11-04 17:01:50], mode=APP_CREATION, duration=0:00:26.658, duration_ms=26658, data={name=datalogger3, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=design_1_wrapper, application_type=application}
+timestamp=[2022-11-04 17:04:00], mode=PLATFORM_GENERATION, duration=0:00:44.462, duration_ms=44462, data={name=design_1_wrapper}
+timestamp=[2022-11-04 17:04:11], mode=BUILD, duration=0:00:00.396, duration_ms=396, data={name=datalogger3, configuration=Release, clean_build=false}
+timestamp=[2022-11-07 12:14:10], mode=APP_CREATION, duration=0:00:27.366, duration_ms=27366, data={name=datalogger3, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=design_1_wrapper, application_type=application}
+timestamp=[2022-11-07 12:15:02], mode=PLATFORM_GENERATION, duration=0:00:43.983, duration_ms=43983, data={name=design_1_wrapper}
+timestamp=[2022-11-07 12:15:15], mode=BUILD, duration=0:00:00.394, duration_ms=394, data={name=datalogger3, configuration=Release, clean_build=false}
+timestamp=[2022-11-07 14:27:56], mode=APP_CREATION, duration=0:00:27.743, duration_ms=27743, data={name=datalogger3, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=design_1_wrapper, application_type=application}
+timestamp=[2022-11-07 14:29:05], mode=PLATFORM_GENERATION, duration=0:00:43.620, duration_ms=43620, data={name=design_1_wrapper}
+timestamp=[2022-11-07 14:29:15], mode=BUILD, duration=0:00:00.396, duration_ms=396, data={name=datalogger3, configuration=Release, clean_build=false}
+timestamp=[2022-11-07 15:41:59], mode=APP_CREATION, duration=0:00:27.347, duration_ms=27347, data={name=datalogger3, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=design_1_wrapper, application_type=application}
+timestamp=[2022-11-07 15:42:54], mode=PLATFORM_GENERATION, duration=0:00:44.057, duration_ms=44057, data={name=design_1_wrapper}
+timestamp=[2022-11-07 15:43:05], mode=BUILD, duration=0:00:00.446, duration_ms=446, data={name=datalogger3, configuration=Release, clean_build=false}
+timestamp=[2022-11-08 10:01:42], mode=APP_CREATION, duration=0:00:29.664, duration_ms=29664, data={name=datalogger3, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=design_1_wrapper, application_type=application}
+timestamp=[2022-11-08 10:02:37], mode=PLATFORM_GENERATION, duration=0:00:44.573, duration_ms=44573, data={name=design_1_wrapper}
+timestamp=[2022-11-08 10:02:49], mode=BUILD, duration=0:00:00.452, duration_ms=452, data={name=datalogger3, configuration=Release, clean_build=false}
+timestamp=[2022-11-08 13:32:06], mode=APP_CREATION, duration=0:00:19.604, duration_ms=19604, data={name=datalogger3, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=design_1_wrapper, application_type=application}
+timestamp=[2022-11-08 13:33:32], mode=PLATFORM_GENERATION, duration=0:00:44.047, duration_ms=44047, data={name=design_1_wrapper}
+timestamp=[2022-11-08 13:33:43], mode=BUILD, duration=0:00:00.406, duration_ms=406, data={name=datalogger3, configuration=Release, clean_build=false}
+timestamp=[2022-11-09 10:43:43], mode=APP_CREATION, duration=0:00:23.206, duration_ms=23206, data={name=datalogger3, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=design_1_wrapper, application_type=application}
+timestamp=[2022-11-09 10:44:35], mode=PLATFORM_GENERATION, duration=0:00:45.128, duration_ms=45128, data={name=design_1_wrapper}
+timestamp=[2022-11-09 10:44:50], mode=BUILD, duration=0:00:00.405, duration_ms=405, data={name=datalogger3, configuration=Release, clean_build=false}
+timestamp=[2022-11-09 11:31:12], mode=APP_CREATION, duration=0:00:28.766, duration_ms=28766, data={name=datalogger3, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=design_1_wrapper, application_type=application}
+timestamp=[2022-11-09 11:32:12], mode=PLATFORM_GENERATION, duration=0:00:44.313, duration_ms=44313, data={name=design_1_wrapper}
+timestamp=[2022-11-09 11:32:23], mode=BUILD, duration=0:00:00.452, duration_ms=452, data={name=datalogger3, configuration=Release, clean_build=false}
+timestamp=[2022-11-09 13:57:37], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.032, duration_ms=32, data={}
+timestamp=[2022-11-09 13:57:38], mode=WORKBENCH_START, duration=0:00:09.363, duration_ms=9363, data={}
+timestamp=[2022-11-09 13:57:39], mode=WORKBENCH_UI_INIT, duration=0:00:01.597, duration_ms=1597, data={editors_count=2, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,datalogger3,datalogger3_system,design_1_wrapper}
+timestamp=[2022-11-09 14:00:17], mode=APP_CREATION, duration=0:00:29.578, duration_ms=29578, data={name=datalogger3, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=design_1_wrapper, application_type=application}
+timestamp=[2022-11-09 14:01:13], mode=PLATFORM_GENERATION, duration=0:00:44.365, duration_ms=44365, data={name=design_1_wrapper}
+timestamp=[2022-11-09 14:01:26], mode=BUILD, duration=0:00:00.404, duration_ms=404, data={name=datalogger3, configuration=Release, clean_build=false}
+timestamp=[2022-11-09 15:57:32], mode=APP_CREATION, duration=0:00:27.190, duration_ms=27190, data={name=datalogger3, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=design_1_wrapper, application_type=application}
+timestamp=[2022-11-09 15:58:25], mode=PLATFORM_GENERATION, duration=0:00:44.415, duration_ms=44415, data={name=design_1_wrapper}
+timestamp=[2022-11-09 15:58:36], mode=BUILD, duration=0:00:00.403, duration_ms=403, data={name=datalogger3, configuration=Release, clean_build=false}
+timestamp=[2022-11-10 09:55:57], mode=APP_CREATION, duration=0:00:28.198, duration_ms=28198, data={name=datalogger3, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=design_1_wrapper, application_type=application}
+timestamp=[2022-11-10 09:56:51], mode=PLATFORM_GENERATION, duration=0:00:44.077, duration_ms=44077, data={name=design_1_wrapper}
+timestamp=[2022-11-10 09:57:02], mode=BUILD, duration=0:00:00.451, duration_ms=451, data={name=datalogger3, configuration=Release, clean_build=false}
+timestamp=[2022-11-10 13:19:23], mode=APP_CREATION, duration=0:00:26.959, duration_ms=26959, data={name=datalogger3, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=design_1_wrapper, application_type=application}
+timestamp=[2022-11-10 13:20:19], mode=PLATFORM_GENERATION, duration=0:00:44.088, duration_ms=44088, data={name=design_1_wrapper}
+timestamp=[2022-11-10 13:20:29], mode=BUILD, duration=0:00:00.402, duration_ms=402, data={name=datalogger3, configuration=Release, clean_build=false}
+timestamp=[2022-11-11 09:44:13], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.043, duration_ms=43, data={}
+timestamp=[2022-11-11 09:44:14], mode=WORKBENCH_START, duration=0:00:09.338, duration_ms=9338, data={}
+timestamp=[2022-11-11 09:44:15], mode=WORKBENCH_UI_INIT, duration=0:00:01.558, duration_ms=1558, data={editors_count=2, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,datalogger3,datalogger3_system,design_1_wrapper}
+timestamp=[2022-11-11 09:47:15], mode=APP_CREATION, duration=0:00:29.446, duration_ms=29446, data={name=datalogger3, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=design_1_wrapper, application_type=application}
+timestamp=[2022-11-11 09:48:28], mode=PLATFORM_GENERATION, duration=0:00:43.863, duration_ms=43863, data={name=design_1_wrapper}
+timestamp=[2022-11-11 09:48:40], mode=BUILD, duration=0:00:00.404, duration_ms=404, data={name=datalogger3, configuration=Release, clean_build=false}
+timestamp=[2022-11-15 16:15:53], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.060, duration_ms=60, data={}
+timestamp=[2022-11-15 16:15:53], mode=WORKBENCH_START, duration=0:00:09.972, duration_ms=9972, data={}
+timestamp=[2022-11-15 16:15:55], mode=WORKBENCH_UI_INIT, duration=0:00:01.741, duration_ms=1741, data={editors_count=2, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,datalogger3,datalogger3_system,design_1_wrapper}
+timestamp=[2022-11-15 16:18:59], mode=APP_CREATION, duration=0:00:33.037, duration_ms=33037, data={name=datalogger3, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=design_1_wrapper, application_type=application}
+timestamp=[2022-11-15 16:19:56], mode=PLATFORM_GENERATION, duration=0:00:46.740, duration_ms=46740, data={name=design_1_wrapper}
+timestamp=[2022-11-15 16:20:07], mode=BUILD, duration=0:00:00.406, duration_ms=406, data={name=datalogger3, configuration=Release, clean_build=false}
+timestamp=[2022-11-22 10:30:01], mode=APP_CREATION, duration=0:00:17.089, duration_ms=17089, data={name=datalogger3, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=design_1_wrapper, application_type=application}
+timestamp=[2022-12-01 13:31:05], mode=WORKBENCH_START, duration=0:00:05.685, duration_ms=5685, data={}
+timestamp=[2022-12-01 13:31:06], mode=WORKBENCH_UI_INIT, duration=0:00:00.630, duration_ms=630, data={editors_count=2, platform_editors_count=0, projects_count=4, platform_projects_count=0, active_platform_editor=false, projects=RemoteSystemsTempFiles,datalogger3,datalogger3_system,design_1_wrapper}
+timestamp=[2022-12-01 13:31:08], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:03.439, duration_ms=3439, data={}
+timestamp=[2022-12-01 13:34:02], mode=APP_CREATION, duration=0:00:30.183, duration_ms=30183, data={name=datalogger3_double_fifo, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=design_1_wrapper_1, application_type=application}
+timestamp=[2022-12-01 13:35:02], mode=PLATFORM_GENERATION, duration=0:00:45.118, duration_ms=45118, data={name=design_1_wrapper_1}
+timestamp=[2022-12-01 13:35:12], mode=BUILD, duration=0:00:00.410, duration_ms=410, data={name=datalogger3_double_fifo, configuration=Release, clean_build=false}
+timestamp=[2022-12-19 17:12:54], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.057, duration_ms=57, data={}
+timestamp=[2022-12-19 17:12:55], mode=WORKBENCH_START, duration=0:00:08.371, duration_ms=8371, data={}
+timestamp=[2022-12-19 17:12:56], mode=WORKBENCH_UI_INIT, duration=0:00:01.608, duration_ms=1608, data={editors_count=4, platform_editors_count=0, projects_count=7, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,datalogger3,datalogger3_double_fifo,datalogger3_double_fifo_system,datalogger3_system,design_1_wrapper,design_1_wrapper_1}
+timestamp=[2022-12-19 17:16:24], mode=WORKBENCH_START, duration=0:00:04.858, duration_ms=4858, data={}
+timestamp=[2022-12-19 17:16:25], mode=WORKBENCH_UI_INIT, duration=0:00:00.436, duration_ms=436, data={editors_count=0, platform_editors_count=0, projects_count=4, platform_projects_count=0, active_platform_editor=false, projects=RemoteSystemsTempFiles,datalogger3,datalogger3_system,design_1_wrapper}
+timestamp=[2022-12-19 17:16:27], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:02.661, duration_ms=2661, data={}
+timestamp=[2022-12-19 17:19:26], mode=WORKBENCH_START, duration=0:00:05.007, duration_ms=5007, data={}
+timestamp=[2022-12-19 17:19:26], mode=WORKBENCH_UI_INIT, duration=0:00:00.524, duration_ms=524, data={editors_count=0, platform_editors_count=0, projects_count=4, platform_projects_count=0, active_platform_editor=false, projects=RemoteSystemsTempFiles,datalogger3,datalogger3_system,design_1_wrapper}
+timestamp=[2022-12-19 17:19:29], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:02.793, duration_ms=2793, data={}
+timestamp=[2022-12-19 17:25:58], mode=APP_CREATION, duration=0:00:30.109, duration_ms=30109, data={name=datalogger3_2fifo_pinned_64bit, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=design_1_wrapper_1, application_type=application}
+timestamp=[2022-12-19 17:26:56], mode=PLATFORM_GENERATION, duration=0:00:44.969, duration_ms=44969, data={name=design_1_wrapper_1}
+timestamp=[2022-12-19 17:27:07], mode=BUILD, duration=0:00:00.406, duration_ms=406, data={name=datalogger3_2fifo_pinned_64bit, configuration=Release, clean_build=false}
+timestamp=[2022-12-23 14:43:56], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.074, duration_ms=74, data={}
+timestamp=[2022-12-23 14:43:57], mode=WORKBENCH_START, duration=0:00:08.894, duration_ms=8894, data={}
+timestamp=[2022-12-23 14:43:58], mode=WORKBENCH_UI_INIT, duration=0:00:01.718, duration_ms=1718, data={editors_count=2, platform_editors_count=0, projects_count=7, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,datalogger3,datalogger3_2fifo_pinned_64bit,datalogger3_2fifo_pinned_64bit_system,datalogger3_system,design_1_wrapper,design_1_wrapper_1}
+timestamp=[2022-12-23 14:49:44], mode=APP_CREATION, duration=0:00:31.673, duration_ms=31673, data={name=datalogger3_2fifo_pinned_64bit, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=design_1_wrapper, application_type=application}
+timestamp=[2022-12-23 14:50:41], mode=PLATFORM_GENERATION, duration=0:00:49.040, duration_ms=49040, data={name=design_1_wrapper}
+timestamp=[2022-12-23 14:50:52], mode=BUILD, duration=0:00:00.359, duration_ms=359, data={name=datalogger3_2fifo_pinned_64bit, configuration=Release, clean_build=false}
+timestamp=[2023-01-10 16:39:05], mode=WORKBENCH_START, duration=0:00:05.174, duration_ms=5174, data={}
+timestamp=[2023-01-10 16:39:06], mode=WORKBENCH_UI_INIT, duration=0:00:00.646, duration_ms=646, data={editors_count=2, platform_editors_count=0, projects_count=4, platform_projects_count=0, active_platform_editor=false, projects=RemoteSystemsTempFiles,datalogger3_2fifo_pinned_64bit,datalogger3_2fifo_pinned_64bit_system,design_1_wrapper}
+timestamp=[2023-01-10 16:39:08], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:03.212, duration_ms=3212, data={}
+timestamp=[2023-01-10 16:40:43], mode=APP_CREATION, duration=0:00:30.512, duration_ms=30512, data={name=datalogger3, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=design_1_wrapper, application_type=application}
+timestamp=[2023-01-10 16:41:55], mode=PLATFORM_GENERATION, duration=0:00:44.908, duration_ms=44908, data={name=design_1_wrapper}
+timestamp=[2023-01-10 16:42:06], mode=BUILD, duration=0:00:00.404, duration_ms=404, data={name=datalogger3, configuration=Release, clean_build=false}
+timestamp=[2023-01-11 13:24:26], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.042, duration_ms=42, data={}
+timestamp=[2023-01-11 13:24:26], mode=WORKBENCH_START, duration=0:00:08.310, duration_ms=8310, data={}
+timestamp=[2023-01-11 13:24:28], mode=WORKBENCH_UI_INIT, duration=0:00:01.502, duration_ms=1502, data={editors_count=2, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,datalogger3,datalogger3_system,design_1_wrapper}
+timestamp=[2023-01-31 11:02:55], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.033, duration_ms=33, data={}
+timestamp=[2023-01-31 11:02:55], mode=WORKBENCH_START, duration=0:00:08.958, duration_ms=8958, data={}
+timestamp=[2023-01-31 11:02:56], mode=WORKBENCH_UI_INIT, duration=0:00:01.544, duration_ms=1544, data={editors_count=2, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,datalogger3,datalogger3_system,design_1_wrapper}
+timestamp=[2023-01-31 11:06:31], mode=APP_CREATION, duration=0:00:29.658, duration_ms=29658, data={name=datalogger_3, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=design_1_wrapper, application_type=application}
+timestamp=[2023-01-31 11:07:24], mode=PLATFORM_GENERATION, duration=0:00:45.661, duration_ms=45661, data={name=design_1_wrapper}
+timestamp=[2023-01-31 11:07:34], mode=BUILD, duration=0:00:00.401, duration_ms=401, data={name=datalogger_3, configuration=Release, clean_build=false}
+timestamp=[2023-02-03 11:25:39], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.050, duration_ms=50, data={}
+timestamp=[2023-02-03 11:25:40], mode=WORKBENCH_START, duration=0:00:09.072, duration_ms=9072, data={}
+timestamp=[2023-02-03 11:25:41], mode=WORKBENCH_UI_INIT, duration=0:00:01.555, duration_ms=1555, data={editors_count=2, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,datalogger_3,datalogger_3_system,design_1_wrapper}
+timestamp=[2023-02-03 11:28:02], mode=APP_CREATION, duration=0:00:29.393, duration_ms=29393, data={name=datalogger_3, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=design_1_wrapper, application_type=application}
+timestamp=[2023-02-03 11:28:55], mode=PLATFORM_GENERATION, duration=0:00:45.647, duration_ms=45647, data={name=design_1_wrapper}
+timestamp=[2023-02-03 11:29:07], mode=BUILD, duration=0:00:00.399, duration_ms=399, data={name=datalogger_3, configuration=Release, clean_build=false}
+timestamp=[2023-02-13 16:10:15], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.104, duration_ms=104, data={}
+timestamp=[2023-02-13 16:10:16], mode=WORKBENCH_START, duration=0:00:11.764, duration_ms=11764, data={}
+timestamp=[2023-02-13 16:10:18], mode=WORKBENCH_UI_INIT, duration=0:00:01.956, duration_ms=1956, data={editors_count=2, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,datalogger_3,datalogger_3_system,design_1_wrapper}
+timestamp=[2023-02-14 14:02:23], mode=APP_CREATION, duration=0:00:32.123, duration_ms=32123, data={name=datalogger_3, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=design_1_wrapper, application_type=application}
+timestamp=[2023-02-14 14:03:17], mode=PLATFORM_GENERATION, duration=0:00:46.867, duration_ms=46867, data={name=design_1_wrapper}
+timestamp=[2023-02-14 14:03:29], mode=BUILD, duration=0:00:00.414, duration_ms=414, data={name=datalogger_3, configuration=Release, clean_build=false}
+timestamp=[2023-02-17 13:55:56], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.049, duration_ms=49, data={}
+timestamp=[2023-02-17 13:55:56], mode=WORKBENCH_START, duration=0:00:08.937, duration_ms=8937, data={}
+timestamp=[2023-02-17 13:55:58], mode=WORKBENCH_UI_INIT, duration=0:00:01.536, duration_ms=1536, data={editors_count=2, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,datalogger_3,datalogger_3_system,design_1_wrapper}
+timestamp=[2023-02-17 13:59:02], mode=APP_CREATION, duration=0:00:29.645, duration_ms=29645, data={name=datalogger_3, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=design_1_wrapper, application_type=application}
+timestamp=[2023-02-17 14:00:56], mode=PLATFORM_GENERATION, duration=0:00:45.473, duration_ms=45473, data={name=design_1_wrapper}
+timestamp=[2023-02-17 14:01:07], mode=BUILD, duration=0:00:00.404, duration_ms=404, data={name=datalogger_3, configuration=Release, clean_build=false}

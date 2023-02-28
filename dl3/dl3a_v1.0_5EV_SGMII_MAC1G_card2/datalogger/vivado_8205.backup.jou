@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Feb 28 10:50:22 2023
+# Process ID: 8205
+# Current directory: /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_card2/datalogger
+# Command line: vivado /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_card2/datalogger/datalogger.xpr
+# Log file: /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_card2/datalogger/vivado.log
+# Journal file: /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_card2/datalogger/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G_card2/datalogger/datalogger.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+wait_on_run impl_1
+reset_run synth_1

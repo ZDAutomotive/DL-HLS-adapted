@@ -1,0 +1,151 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Feb 16 15:00:47 2023
+# Process ID: 2714
+# Current directory: /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger
+# Command line: vivado /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.xpr
+# Log file: /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/vivado.log
+# Journal file: /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/12-FPGA/20_DL3_HLS/timestamp/timestamp'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/12-FPGA/20_DL3_HLS/clu_2022'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/12-FPGA/20_DL3_HLS/maclogger_2022_30port_64bit'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:29 ; elapsed = 00:00:15 . Memory (MB): peak = 7403.500 ; gain = 72.141 ; free physical = 5066 ; free virtual = 19345
+open_bd_design {/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.srcs/sources_1/bd/design_1/design_1.bd}
+Reading block design file </export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.srcs/sources_1/bd/design_1/design_1.bd>...
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+Adding component instance block -- user.org:user:CHIPDLIN:1.02 - CHIPDLIN_0
+Adding component instance block -- user.org:user:CHIPDLIN:1.02 - CHIPDLIN_1
+Adding component instance block -- user.org:user:CHIPDLIN:1.02 - CHIPDLIN_2
+Adding component instance block -- user.org:user:CHIPDLIN:1.02 - CHIPDLIN_3
+Adding component instance block -- user.org:user:CHIPDLIN:1.02 - CHIPDLIN_4
+Adding component instance block -- user.org:user:CHIPDLIN:1.02 - CHIPDLIN_5
+Adding component instance block -- user.org:user:CHIPDLIN:1.02 - CHIPDLIN_6
+Adding component instance block -- user.org:user:CHIPDLIN:1.02 - CHIPDLIN_7
+Adding component instance block -- xilinx.com:ip:axi_fifo_mm_s:4.2 - axi_ethernet_sw0_fifo
+Adding component instance block -- xilinx.com:ip:axi_ethernet:7.2 - axi_ethernet_1
+Adding component instance block -- xilinx.com:ip:axi_fifo_mm_s:4.2 - axi_ethernet_sw1_fifo
+Adding component instance block -- xilinx.com:ip:axi_ethernet:7.2 - axi_ethernet_2
+Adding component instance block -- xilinx.com:ip:axi_fifo_mm_s:4.2 - axi_ethernet_sw2_fifo
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps8_1_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_xc_lin_ipcore
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_xc_canfd_ipcore
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:canfd:3.0 - canfd_0
+Adding component instance block -- xilinx.com:ip:canfd:3.0 - canfd_1
+Adding component instance block -- xilinx.com:ip:canfd:3.0 - canfd_2
+Adding component instance block -- xilinx.com:ip:canfd:3.0 - canfd_5
+Adding component instance block -- xilinx.com:ip:canfd:3.0 - canfd_6
+Adding component instance block -- xilinx.com:ip:canfd:3.0 - canfd_7
+Adding component instance block -- xilinx.com:ip:canfd:3.0 - canfd_8
+Adding component instance block -- xilinx.com:ip:canfd:3.0 - canfd_9
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_canfd
+Adding component instance block -- xilinx.com:ip:gmii_to_rgmii:4.1 - gmii_to_rgmii_0
+Adding component instance block -- xilinx.com:ip:gmii_to_rgmii:4.1 - gmii_to_rgmii_1
+Adding component instance block -- xilinx.com:ip:gmii_to_rgmii:4.1 - gmii_to_rgmii_2
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_sw_mac_100M
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps8_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps8_0_100M
+Adding component instance block -- xilinx.com:ip:zynq_ultra_ps_e:3.3 - zynq_ultra_ps_e_0
+Adding component instance block -- xilinx.com:ip:canfd:3.0 - canfd_10
+Adding component instance block -- xilinx.com:ip:canfd:3.0 - canfd_11
+Adding component instance block -- xilinx.com:ip:canfd:3.0 - canfd_3
+Adding component instance block -- xilinx.com:ip:canfd:3.0 - canfd_4
+Adding component instance block -- xilinx.com:ip:axi_uart16550:2.0 - axi_uart16550_0
+Adding component instance block -- xilinx.com:ip:axi_uart16550:2.0 - axi_uart16550_1
+Adding component instance block -- xilinx.com:ip:axi_uart16550:2.0 - axi_uart16550_2
+Adding component instance block -- xilinx.com:ip:axi_uart16550:2.0 - axi_uart16550_3
+Adding component instance block -- xilinx.com:ip:axi_uart16550:2.0 - axi_uart16550_4
+Adding component instance block -- xilinx.com:ip:axi_uart16550:2.0 - axi_uart16550_5
+Adding component instance block -- xilinx.com:ip:axi_uart16550:2.0 - axi_uart16550_6
+Adding component instance block -- xilinx.com:ip:axi_uart16550:2.0 - axi_uart16550_7
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_xc_uart_ipcore
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_uartlite:2.0 - axi_uartlite_0
+Adding component instance block -- xilinx.com:ip:axi_uartlite:2.0 - axi_uartlite_1
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - sgmii_signal_detect
+Adding component instance block -- xilinx.com:hls:timestamp:1.0 - timestamp_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_xc_ps_clu
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_xc_ps_mac
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- user.org:user:CHIPDLIN:1.02 - CHIPDLIN_8
+Adding component instance block -- user.org:user:CHIPDLIN:1.02 - CHIPDLIN_9
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_xc_mac2_ipcore
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_xc_mac0_ipcore
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_xc_mac1_ipcore
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_clu_ipcore
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_fifo_mm_s:4.2 - axi_ethernet_sw2_fifo1
+Adding component instance block -- xilinx.com:ip:axi_fifo_mm_s:4.2 - axi_ethernet_sw1_fifo1
+Adding component instance block -- xilinx.com:ip:axi_fifo_mm_s:4.2 - axi_ethernet_sw0_fifo1
+Adding component instance block -- user.org:user:CHIPDLIN:1.02 - CHIPDLIN_10
+Adding component instance block -- user.org:user:CHIPDLIN:1.02 - CHIPDLIN_11
+Adding component instance block -- xilinx.com:hls:clu:1.0 - clu_0
+Adding component instance block -- xilinx.com:hls:mac_logger:1.0 - mac_logger_2
+Adding component instance block -- xilinx.com:hls:mac_logger:1.0 - mac_logger_1
+Adding component instance block -- xilinx.com:hls:mac_logger:1.0 - mac_logger_0
+Adding component instance block -- xilinx.com:ip:axi_ethernet:7.2 - axi_ethernet_0
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.1 - util_ds_buf_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - sgmii_signal_detect1
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - sgmii_signal_detect2
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.1 - util_ds_buf_1
+Excluding slave segment /axi_ethernet_2/s_axi/Reg0 from address space /mac_logger_2/Data_m_axi_mac_fifo.
+Excluding slave segment /axi_ethernet_sw2_fifo/S_AXI/Mem0 from address space /mac_logger_2/Data_m_axi_mac_fifo.
+Excluding slave segment /axi_ethernet_1/s_axi/Reg0 from address space /mac_logger_1/Data_m_axi_mac_fifo.
+Excluding slave segment /axi_ethernet_sw1_fifo/S_AXI/Mem0 from address space /mac_logger_1/Data_m_axi_mac_fifo.
+Excluding slave segment /axi_ethernet_0/s_axi/Reg0 from address space /mac_logger_0/Data_m_axi_mac_fifo.
+Excluding slave segment /axi_ethernet_sw0_fifo/S_AXI/Mem0 from address space /mac_logger_0/Data_m_axi_mac_fifo.
+Successfully read diagram <design_1> from block design file </export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:06 . Memory (MB): peak = 8255.047 ; gain = 829.539 ; free physical = 4937 ; free virtual = 19227
+update_compile_order -fileset sources_1
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [axi_eth_rule-354] Checking if the object is present to enable block automation :1:
+INFO: [Coretcl 2-12] '/axi_uart16550_0/S_AXI' selected.
+INFO: [Coretcl 2-12] '/axi_uart16550_4/S_AXI' selected.
+INFO: [Coretcl 2-12] '/axi_uartlite_0/S_AXI' selected.
+INFO: [Coretcl 2-12] '/axi_uart16550_0/S_AXI' selected.
+INFO: [Coretcl 2-12] '/axi_uart16550_0/S_AXI' selected.
+INFO: [Coretcl 2-12] '/axi_uart16550_1/S_AXI' selected.
+INFO: [Coretcl 2-12] '/axi_uart16550_7/S_AXI' selected.
+INFO: [Coretcl 2-12] '/axi_uartlite_0/S_AXI' selected.
+INFO: [Coretcl 2-12] '/axi_uartlite_1/S_AXI' selected.
+regenerate_bd_layout
+file copy -force /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger.runs/impl_1/design_1_wrapper.bit /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/datalogger3.bit
+write_hw_platform -fixed -include_bit -force -file /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/design_1_wrapper.xsa
+INFO: [Vivado 12-4895] Creating Hardware Platform: /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/design_1_wrapper.xsa ...
+INFO: [Hsi 55-2053] elapsed time for repository (/tools/Xilinx/Vivado/2020.2/data/embeddedsw) loading 0 seconds
+INFO: [Vivado 12-12467] The Hardware Platform can be used for Hardware
+INFO: [Vivado 12-4896] Successfully created Hardware Platform: /export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3a_v1.0_5EV_SGMII_MAC1G/datalogger/design_1_wrapper.xsa
+write_hw_platform: Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 9285.852 ; gain = 0.000 ; free physical = 4264 ; free virtual = 24478
+INFO: [Coretcl 2-12] '/mac_logger_0/s_axi_axilites' selected.
+INFO: [Coretcl 2-12] '/mac_logger_1/s_axi_axilites' selected.
+INFO: [Coretcl 2-12] '/mac_logger_2/s_axi_axilites' selected.
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 17 14:43:59 2023...

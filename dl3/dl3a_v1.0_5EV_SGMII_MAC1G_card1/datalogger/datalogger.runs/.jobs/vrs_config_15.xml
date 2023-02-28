@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="bd_929b_mac_0_synth_1" LaunchDir="/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3_v1.0_3EG_MAC/datalogger/datalogger.runs/bd_929b_mac_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="bd_52ca_mac_0_synth_1" LaunchDir="/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3_v1.0_3EG_MAC/datalogger/datalogger.runs/bd_52ca_mac_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3_v1.0_3EG_MAC/datalogger/datalogger.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="bd_929b_mac_0_synth_1"/>
+		<Parent Id="bd_52ca_mac_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3_v1.0_3EG_MAC/datalogger/datalogger.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="route_design">
+		<Parent Id="synth_1"/>
+		<Parent Id="bd_929b_mac_0_synth_1"/>
+		<Parent Id="bd_52ca_mac_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

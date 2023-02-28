@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_1_axi_ethernet_2_0_synth_1" LaunchDir="/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3_v1.0_3EG/datalogger/datalogger.runs/design_1_axi_ethernet_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="bd_523a_util_vector_logic_0_0_synth_1"/>
+		<Parent Id="bd_523a_mac_0_synth_1"/>
+		<Parent Id="bd_523a_eth_buf_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axi_ethernet_3_0_synth_1" LaunchDir="/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3_v1.0_3EG/datalogger/datalogger.runs/design_1_axi_ethernet_3_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="bd_926b_mac_0_synth_1"/>
+		<Parent Id="bd_926b_eth_buf_0_synth_1"/>
+		<Parent Id="bd_926b_util_vector_logic_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axi_ethernet_4_0_synth_1" LaunchDir="/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3_v1.0_3EG/datalogger/datalogger.runs/design_1_axi_ethernet_4_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="bd_53da_mac_0_synth_1"/>
+		<Parent Id="bd_53da_util_vector_logic_0_0_synth_1"/>
+		<Parent Id="bd_53da_eth_buf_0_synth_1"/>
+	</Run>
+	<Run Id="bd_926b_mac_0_synth_1" LaunchDir="/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3_v1.0_3EG/datalogger/datalogger.runs/bd_926b_mac_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="bd_523a_util_vector_logic_0_0_synth_1" LaunchDir="/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3_v1.0_3EG/datalogger/datalogger.runs/bd_523a_util_vector_logic_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="bd_926b_eth_buf_0_synth_1" LaunchDir="/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3_v1.0_3EG/datalogger/datalogger.runs/bd_926b_eth_buf_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="bd_523a_mac_0_synth_1" LaunchDir="/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3_v1.0_3EG/datalogger/datalogger.runs/bd_523a_mac_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="bd_926b_util_vector_logic_0_0_synth_1" LaunchDir="/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3_v1.0_3EG/datalogger/datalogger.runs/bd_926b_util_vector_logic_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="bd_523a_util_vector_logic_0_0_synth_1"/>
+	</Run>
+	<Run Id="bd_53da_mac_0_synth_1" LaunchDir="/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3_v1.0_3EG/datalogger/datalogger.runs/bd_53da_mac_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="bd_523a_eth_buf_0_synth_1" LaunchDir="/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3_v1.0_3EG/datalogger/datalogger.runs/bd_523a_eth_buf_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="bd_926b_eth_buf_0_synth_1"/>
+	</Run>
+	<Run Id="bd_53da_util_vector_logic_0_0_synth_1" LaunchDir="/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3_v1.0_3EG/datalogger/datalogger.runs/bd_53da_util_vector_logic_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="bd_523a_util_vector_logic_0_0_synth_1"/>
+	</Run>
+	<Run Id="bd_53da_eth_buf_0_synth_1" LaunchDir="/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3_v1.0_3EG/datalogger/datalogger.runs/bd_53da_eth_buf_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="bd_926b_eth_buf_0_synth_1"/>
+	</Run>
+	<Run Id="synth_1" LaunchDir="/export/zd-fs/00_shared_folder/projects/02-NG-Datalogger/20-Baseline/13.proj_dl3_v1r1/fpga/dl3_v1.0_3EG/datalogger/datalogger.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="design_1_axi_ethernet_2_0_synth_1"/>
+		<Parent Id="design_1_axi_ethernet_3_0_synth_1"/>
+		<Parent Id="design_1_axi_ethernet_4_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+
